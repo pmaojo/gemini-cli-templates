@@ -1,13 +1,16 @@
 {
-  "name": "example-project",
+  "name": "ml-demo-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "ML Pipeline Demo - Built with Gemini CLI Templates (ml-engineer agent)",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "train": "node src/train.js",
+    "serve": "node src/serve.js",
+    "predict": "node src/predict.js",
+    "monitor": "node src/monitor.js",
+    "demo": "npm run train && npm run serve"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module"
+  "keywords": ["ml", "gemini", "demo"],
+  "author": "Gemini CLI Templates",
+  "license": "MIT"
 }

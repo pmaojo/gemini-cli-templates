@@ -1,0 +1,26 @@
+{
+  "weights": {
+    "sqft": 173.7767692188423,
+    "bedrooms": 10692.496055397114,
+    "bathrooms": 15853.37472375893,
+    "age": -1288.493837677643
+  },
+  "bias": 49993.48488035286,
+  "metadata": {
+    "version": "1.0.0",
+    "trainedAt": "2026-01-03T12:03:48.128Z",
+    "dataVersion": "1.0.0",
+    "samplesCount": 8,
+    "features": [
+      "sqft",
+      "bedrooms",
+      "bathrooms",
+      "age"
+    ],
+    "metrics": {
+      "finalRMSE": 32120.049244421472,
+      "trainingTimeMs": 6,
+      "epochs": 1000
+    }
+  }
+}
