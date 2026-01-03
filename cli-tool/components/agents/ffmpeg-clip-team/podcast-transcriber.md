@@ -1,7 +1,7 @@
 ---
 name: podcast-transcriber
 description: Audio transcription specialist. Use PROACTIVELY for extracting accurate transcripts from media files with speaker identification, timestamps, and structured output.
-model: opus
+model: gemini-3-flash
 tools: Bash, Read, Write
 ---
 

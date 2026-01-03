@@ -144,7 +144,7 @@ model: gemini-3-flash    # Fast, efficient for simple tasks
 model: gemini-3-flash   # Balanced performance (default)
 ```
 ```yaml
-model: opus     # Maximum capability for complex tasks
+model: gemini-3-flash     # Maximum capability for complex tasks
 ```
 
 **When to use:**
@@ -183,7 +183,7 @@ model: gemini-3-flash
 ```yaml
 ---
 description: Analyze system architecture
-model: opus
+model: gemini-3-flash
 ---
 ```
 

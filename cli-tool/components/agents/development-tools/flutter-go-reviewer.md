@@ -33,7 +33,7 @@ description: |
   assistant: "I'll use the flutter-go-reviewer agent to review this refactoring"
   </example>
 tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, KillBash, ListMcpResourcesTool, ReadMcpResourceTool
-model: opus
+model: gemini-3-flash
 color: purple
 ---
 
