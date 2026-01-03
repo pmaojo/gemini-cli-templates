@@ -1,22 +1,22 @@
 /* Terminal theme CSS based on Gemini CLI Analytics dashboard */
 :root {
     /* Dark theme colors (terminal style) */
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
-    --bg-tertiary: #21262d;
-    --border-primary: #30363d;
-    --border-secondary: #21262d;
-    --border-color: #30363d;
-    --text-primary: #c9d1d9;
-    --text-secondary: #7d8590;
-    --text-accent: #1a73e8;
-    --text-success: #3fb950;
-    --text-warning: #4285f4;
-    --text-error: #f85149;
-    --text-info: #a5d6ff;
-    --accent-color: #d97706;
-    --shadow-primary: rgba(0, 0, 0, 0.4);
-    --shadow-secondary: rgba(1, 4, 9, 0.85);
+    --bg-primary: #0b0e14;
+    --bg-secondary: #0f172a;
+    --bg-tertiary: #1e293b;
+    --border-primary: #334155;
+    --border-secondary: #1e293b;
+    --border-color: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-accent: #38bdf8; /* Gemini Cyan/Blue */
+    --text-success: #10b981;
+    --text-warning: #f59e0b;
+    --text-error: #ef4444;
+    --text-info: #7dd3fc;
+    --accent-color: #0ea5e9;
+    --shadow-primary: rgba(0, 0, 0, 0.5);
+    --shadow-secondary: rgba(0, 0, 0, 0.7);
 }
 
 /* Reset and base styles */
@@ -1946,7 +1946,13 @@ body {
     font-size: 0.9rem;
     font-family: inherit;
     outline: none;
-    placeholder-color: var(--text-secondary);
+}
+
+.terminal-search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.terminal-search-input {
     caret-color: transparent; /* Hide default caret */
 }
 
@@ -2299,12 +2305,13 @@ body {
     margin-bottom: 2rem;
 }
 
+
 .unified-grid.templates-mode {
-    /* Template specific styles if needed */
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .unified-grid.components-mode {
-    /* Component specific styles if needed */
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* Plugin Cards */
@@ -3499,7 +3506,8 @@ body {
     background: var(--bg-primary);
     color: var(--text-accent);
 }
-
+@media (max-width: 768px) {
+    .unified-filter-bar {
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
