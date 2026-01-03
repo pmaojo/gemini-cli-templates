@@ -739,17 +739,32 @@ async function installIndividualSetting(settingName, targetDir, options) {
   try {
     // Support both category/setting-name and direct setting-name formats
     let githubUrl;
+    let response;
+    
     if (settingName.includes('/')) {
       // Category/setting format: permissions/allow-npm-commands
       githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
+      console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
+      response = await fetch(githubUrl);
     } else {
-      // Direct setting format: allow-npm-commands
-      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
+      // Direct setting format: disable-telemetry
+      // Try common category subdirectories
+      const categories = ['api', 'authentication', 'cleanup', 'environment', 'git', 'global', 'mcp', 'model', 'partnerships', 'permissions', 'statusline'];
+      console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
+      
+      for (const category of categories) {
+        githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/settings/${category}/${settingName}.json`;
+        response = await fetch(githubUrl);
+        if (response.ok) break;
+      }
+      
+      // Fallback to root settings folder
+      if (!response || !response.ok) {
+        githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
+        response = await fetch(githubUrl);
+      }
     }
     
-    console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
-    
-    const response = await fetch(githubUrl);
     if (!response.ok) {
       if (response.status === 404) {
         console.log(chalk.red(`❌ Setting "${settingName}" not found`));
