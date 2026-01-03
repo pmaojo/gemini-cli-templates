@@ -103,7 +103,7 @@ Add configuration using YAML frontmatter:
 ---
 description: Review code for security issues
 allowed-tools: Read, Grep, Bash(git:*)
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 Review this code for security vulnerabilities...
@@ -152,7 +152,7 @@ allowed-tools: Read, Write, Edit, Bash(git:*)
 
 ```yaml
 ---
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 ```
 

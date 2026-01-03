@@ -49,7 +49,7 @@ Provide specific feedback with file and line references.
 ---
 description: Review code for security vulnerabilities
 allowed-tools: Read, Grep
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 Perform comprehensive security review checking for:
@@ -284,7 +284,7 @@ Present as structured comparison report.
 ---
 description: Quick fix for common issues
 argument-hint: [issue-description]
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 Quickly fix: $ARGUMENTS
@@ -320,7 +320,7 @@ Provide code changes with file paths and line numbers.
 ---
 description: Research best practices for topic
 argument-hint: [topic]
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 Research best practices for: $ARGUMENTS
@@ -462,7 +462,7 @@ Process $1 to $2 with $3...
 
 ```markdown
 ---
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 Quick simple task...

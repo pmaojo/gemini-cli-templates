@@ -10,7 +10,7 @@ YAML frontmatter is optional metadata at the start of command files:
 ---
 description: Brief description
 allowed-tools: Read, Write
-model: gemini-2.0-flash
+model: gemini-3-flash
 argument-hint: [arg1] [arg2]
 ---
 
@@ -138,10 +138,10 @@ allowed-tools: "*"
 
 **Examples:**
 ```yaml
-model: gemini-2.0-flash    # Fast, efficient for simple tasks
+model: gemini-3-flash    # Fast, efficient for simple tasks
 ```
 ```yaml
-model: gemini-2.0-flash   # Balanced performance (default)
+model: gemini-3-flash   # Balanced performance (default)
 ```
 ```yaml
 model: opus     # Maximum capability for complex tasks
@@ -158,7 +158,7 @@ model: opus     # Maximum capability for complex tasks
 ```yaml
 ---
 description: Format code file
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 ```
 
@@ -170,7 +170,7 @@ model: gemini-2.0-flash
 ```yaml
 ---
 description: Review code changes
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 ```
 
@@ -370,7 +370,7 @@ All common fields:
 description: Deploy application to environment
 argument-hint: [app-name] [environment] [version]
 allowed-tools: Bash(kubectl:*), Bash(helm:*), Read
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 Deploy $1 to $2 environment using version $3
@@ -422,7 +422,7 @@ Type "APPROVED" to confirm deployment.
 ---
 description: Missing quote
 allowed-tools: Read, Write
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---  # ❌ Missing closing quote above
 ```
 

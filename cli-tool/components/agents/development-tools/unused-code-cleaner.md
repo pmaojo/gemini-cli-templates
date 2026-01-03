@@ -2,7 +2,7 @@
 name: unused-code-cleaner
 description: Detects and removes unused code (imports, functions, classes) across multiple languages. Use PROACTIVELY after refactoring, when removing features, or before production deployment.
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: gemini-2.0-flash
+model: gemini-3-flash
 color: orange
 ---
 

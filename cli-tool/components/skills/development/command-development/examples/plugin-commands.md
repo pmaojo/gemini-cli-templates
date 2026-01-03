@@ -59,7 +59,7 @@ Review the analysis output and provide:
 description: Complete code audit using plugin suite
 argument-hint: [directory]
 allowed-tools: Bash(*)
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 Running complete audit on $1:

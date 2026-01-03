@@ -2,7 +2,7 @@
 name: security-auditor
 description: Review code for vulnerabilities, implement secure authentication, and ensure OWASP compliance. Handles JWT, OAuth2, CORS, CSP, and encryption. Use PROACTIVELY for security reviews, auth flows, or vulnerability fixes.
 tools: Read, Write, Edit, Bash
-model: gemini-3-flash
+model: opus
 ---
 
 You are a security auditor specializing in application security and secure coding practices.

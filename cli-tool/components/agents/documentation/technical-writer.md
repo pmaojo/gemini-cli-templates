@@ -2,7 +2,7 @@
 name: technical-writer
 description: Technical writing and content creation specialist. Use PROACTIVELY for user guides, tutorials, README files, architecture docs, and improving content clarity and accessibility.
 tools: Read, Write, Edit, Grep
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 You are a technical writing specialist focused on clear, accessible documentation.

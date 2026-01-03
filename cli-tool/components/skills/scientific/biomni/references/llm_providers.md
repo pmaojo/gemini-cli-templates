@@ -153,7 +153,7 @@ export GOOGLE_API_KEY="..."
 
 ```python
 # Gemini 2.0 Flash (recommended)
-agent = A1(path='./data', llm='gemini-2.0-flash-exp')
+agent = A1(path='./data', llm='gemini-3-flash-exp')
 
 # Gemini Pro
 agent = A1(path='./data', llm='gemini-pro')
@@ -164,7 +164,7 @@ agent = A1(path='./data', llm='gemini-pro')
 ```python
 from biomni.config import default_config
 
-default_config.llm = "gemini-2.0-flash-exp"
+default_config.llm = "gemini-3-flash-exp"
 default_config.google_api_key = "..."
 default_config.llm_temperature = 0.7
 ```
@@ -446,7 +446,7 @@ def execute_with_fallback(task_query):
     providers = [
         'gemini-sonnet-4-20250514',
         'gpt-4-turbo',
-        'gemini-2.0-flash-exp'
+        'gemini-3-flash-exp'
     ]
 
     for llm in providers:

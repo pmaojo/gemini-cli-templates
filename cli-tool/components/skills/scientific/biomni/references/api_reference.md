@@ -27,7 +27,7 @@ agent = A1(
   - `'gemini-sonnet-4-20250514'` - Recommended for balanced performance
   - `'gemini-opus-4-20250514'` - Maximum capability
   - `'gpt-4'`, `'gpt-4-turbo'` - OpenAI models
-  - `'gemini-2.0-flash-exp'` - Google Gemini
+  - `'gemini-3-flash-exp'` - Google Gemini
   - `'llama-3.3-70b-versatile'` - Via Groq
   - Custom model endpoints via provider configuration
 

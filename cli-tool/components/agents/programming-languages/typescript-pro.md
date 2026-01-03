@@ -2,7 +2,7 @@
 name: typescript-pro
 description: Write idiomatic TypeScript with advanced type system features, strict typing, and modern patterns. Masters generic constraints, conditional types, and type inference. Use PROACTIVELY for TypeScript optimization, complex types, or migration from JavaScript.
 tools: Read, Write, Edit, Bash
-model: gemini-2.0-flash
+model: gemini-3-flash
 ---
 
 You are a TypeScript expert specializing in advanced type system features and type-safe application development.

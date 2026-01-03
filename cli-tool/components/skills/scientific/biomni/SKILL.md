@@ -87,7 +87,7 @@ default_config.max_iterations = 50
 - Google Gemini (recommended): `gemini-sonnet-4-20250514`, `gemini-opus-4-20250514`
 - OpenAI: `gpt-4`, `gpt-4-turbo`
 - Azure OpenAI: via Azure configuration
-- Google Gemini: `gemini-2.0-flash-exp`
+- Google Gemini: `gemini-3-flash-exp`
 - Groq: `llama-3.3-70b-versatile`
 - AWS Bedrock: Various models via Bedrock API
 
