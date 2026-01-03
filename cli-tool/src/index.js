@@ -1087,17 +1087,32 @@ async function installIndividualHook(hookName, targetDir, options) {
   try {
     // Support both category/hook-name and direct hook-name formats
     let githubUrl;
+    let response;
+    
     if (hookName.includes('/')) {
       // Category/hook format: pre-tool/backup-before-edit
       githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
+      console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
+      response = await fetch(githubUrl);
     } else {
       // Direct hook format: backup-before-edit
-      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
+      // Try common category subdirectories
+      const categories = ['automation', 'development-tools', 'git', 'git-workflow', 'performance', 'post-tool', 'pre-tool', 'security', 'testing'];
+      console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
+      
+      for (const category of categories) {
+        githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/hooks/${category}/${hookName}.json`;
+        response = await fetch(githubUrl);
+        if (response.ok) break;
+      }
+      
+      // Fallback to root hooks folder
+      if (!response || !response.ok) {
+        githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
+        response = await fetch(githubUrl);
+      }
     }
     
-    console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
-    
-    const response = await fetch(githubUrl);
     if (!response.ok) {
       if (response.status === 404) {
         console.log(chalk.red(`❌ Hook "${hookName}" not found`));
