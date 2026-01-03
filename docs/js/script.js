@@ -564,12 +564,12 @@ function showContributeModal() {
 
 Please help me create:
 - A new [LANGUAGE/FRAMEWORK] template
-- All necessary configuration files (CLAUDE.md, .gemini/, .mcp.json)
+- All necessary configuration files (GEMINI.md, .gemini/, .mcp.json)
 - Update cli-tool/src/templates.js with the new configuration
 - Include appropriate hooks and commands for this technology
 
 The template should follow the existing patterns in the repository and include:
-1. CLAUDE.md with language/framework-specific guidelines
+1. GEMINI.md with language/framework-specific guidelines
 2. .gemini/commands/ with relevant development commands
 3. .mcp.json with appropriate MCP configurations
 4. Update templates.js with the new template definition
