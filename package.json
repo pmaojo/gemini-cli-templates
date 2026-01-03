@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'Build complete'",
+    "build": "rm -rf dist && cp -r docs dist",
     "start": "vercel dev",
     "test": "echo 'No tests specified'",
     "agent:security-auditor": "security-auditor 'Security audit covering codebase, dependencies, and deployment configuration'",
