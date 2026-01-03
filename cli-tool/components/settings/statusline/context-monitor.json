@@ -2,6 +2,6 @@
   "description": "Real-time Gemini CLI context usage monitor with visual progress bars, color-coded alerts, session analytics (cost, duration, lines changed), and auto-compact warnings. Tracks conversation context consumption and provides visual feedback to prevent session interruptions.",
   "statusLine": {
     "type": "command",
-    "command": "python3 .claude/scripts/context-monitor.py"
+    "command": "python3 .gemini/scripts/context-monitor.py"
   }
 }

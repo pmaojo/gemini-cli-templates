@@ -141,7 +141,7 @@ class PluginPageManager {
             .join('');
 
         // Update installation commands
-        document.getElementById('installPluginCmd').textContent = `/plugin install ${plugin.name}@gemini-code-templates`;
+        document.getElementById('installPluginCmd').textContent = `/plugin install ${plugin.name}@gemini-cli-templates`;
 
         // Render components sections
         this.renderComponents(plugin);
@@ -205,7 +205,7 @@ class PluginPageManager {
 
         return componentNames.map((name, index) => {
             const formattedName = this.formatComponentName(name);
-            const installCommand = `npx gemini-code-templates@latest --${componentType} ${name}`;
+            const installCommand = `npx gemini-cli-templates@latest --${componentType} ${name}`;
 
             return `
                 <li class="component-item" data-index="${index}">

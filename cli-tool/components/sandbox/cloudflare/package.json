@@ -1,5 +1,5 @@
 {
-  "name": "cloudflare-claude-sandbox",
+  "name": "cloudflare-gemini-sandbox",
   "version": "1.0.0",
   "description": "Cloudflare Workers sandbox for executing Gemini CLI with AI-powered code generation",
   "type": "module",
@@ -17,7 +17,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@Google-ai/claude-agent-sdk": "^0.1.23",
+    "@Google-ai/gemini-agent-sdk": "^0.1.23",
     "@cloudflare/sandbox": "^0.1.0",
     "node-fetch": "^3.3.2"
   },
@@ -38,7 +38,7 @@
     "cloudflare",
     "workers",
     "sandbox",
-    "claude",
+    "gemini",
     "Google",
     "ai",
     "code-execution",
@@ -49,6 +49,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Googles/claude-code-templates"
+    "url": "https://github.com/Googles/gemini-code-templates"
   }
 }

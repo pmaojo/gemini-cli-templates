@@ -1,7 +1,7 @@
 {
   "name": "claude-code-templates",
   "version": "1.21.14",
-  "description": "Component templates and tracking system for Claude Code",
+  "description": "Component templates and tracking system for Gemini CLI",
   "main": "cli-tool/src/index.js",
   "bin": {
     "claude-code-templates": "cli-tool/bin/create-claude-config.js",
@@ -43,6 +43,6 @@
     "tracking",
     "analytics"
   ],
-  "author": "Claude Code Templates",
+  "author": "Gemini CLI Templates",
   "license": "MIT"
 }

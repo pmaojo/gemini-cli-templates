@@ -2,7 +2,7 @@
   "mcpServers": {
     "typescript-sdk": {
       "name": "TypeScript SDK",
-      "description": "Official Anthropic SDK for building MCP servers and clients in JS/TS",
+      "description": "Official Google SDK for building MCP servers and clients in JS/TS",
       "command": "node",
       "args": ["path/to/ts-sdk-server.js"],
       "env": {}

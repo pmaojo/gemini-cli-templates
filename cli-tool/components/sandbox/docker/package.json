@@ -1,21 +1,21 @@
 {
-  "name": "claude-code-docker-sandbox",
+  "name": "gemini-code-docker-sandbox",
   "version": "1.0.0",
-  "description": "Docker sandbox for Gemini CLI execution with Claude Agent SDK",
+  "description": "Docker sandbox for Gemini CLI execution with Gemini Agent SDK",
   "main": "docker-launcher.js",
   "type": "module",
   "scripts": {
-    "build": "docker build -t claude-sandbox .",
-    "clean": "docker rmi claude-sandbox || true"
+    "build": "docker build -t gemini-sandbox .",
+    "clean": "docker rmi gemini-sandbox || true"
   },
   "dependencies": {
-    "@Google-ai/claude-agent-sdk": "^0.1.30"
+    "@Google-ai/gemini-agent-sdk": "^0.1.30"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "keywords": [
-    "claude",
+    "gemini",
     "docker",
     "sandbox",
     "ai",

@@ -556,13 +556,13 @@ class WorkflowManager {
         }
         
         // Method 1: Full command with embedded YAML
-        const fullCommand = `npx gemini-code-templates@latest ${commandParts.join(' ')} --workflow ${encodedYaml}`;
+        const fullCommand = `npx gemini-cli-templates@latest ${commandParts.join(' ')} --workflow ${encodedYaml}`;
         
         // Method 2: Components only command (without embedded YAML) 
         // Remove prompt from components-only command since YAML isn't included
         const componentsParts = commandParts.filter(part => !part.startsWith('--prompt'));
         const componentsOnlyCommand = componentsParts.length > 0 ? 
-            `npx gemini-code-templates@latest ${componentsParts.join(' ')}` : 
+            `npx gemini-cli-templates@latest ${componentsParts.join(' ')}` : 
             '# No components to install';
         
         // Create a short hash for reference

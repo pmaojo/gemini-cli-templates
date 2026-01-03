@@ -29,7 +29,7 @@ python scripts/generate_components_json.py
 
 ### Deployment
 - Site is automatically deployed to GitHub Pages when changes are pushed to `docs/` directory
-- Deployed at: https://aitmpl.com (davila7.github.io/gemini-code-templates)
+- Deployed at: https://aitmpl.com (davila7.github.io/gemini-cli-templates)
 - Vercel configuration in `vercel.json` for routing
 
 ## Architecture
@@ -211,7 +211,7 @@ function generateCartCommand(cart) {
   if (cart.agents.length) flags.push(...cart.agents.map(a => `--agent ${a}`));
   if (cart.commands.length) flags.push(...cart.commands.map(c => `--command ${c}`));
   // ... other types
-  return `npx gemini-code-templates@latest ${flags.join(' ')} --yes`;
+  return `npx gemini-cli-templates@latest ${flags.join(' ')} --yes`;
 }
 ```
 

@@ -1,5 +1,5 @@
 {
-  "description": "Restrict Claude to read-only operations for code review and analysis. Prevents any file modifications or command executions, making it safe for exploring unfamiliar codebases or conducting security audits.",
+  "description": "Restrict Gemini to read-only operations for code review and analysis. Prevents any file modifications or command executions, making it safe for exploring unfamiliar codebases or conducting security audits.",
   "permissions": {
     "allow": [
       "Read(**/*)",

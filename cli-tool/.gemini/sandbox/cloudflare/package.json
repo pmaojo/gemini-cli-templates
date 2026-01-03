@@ -1,7 +1,7 @@
 {
   "name": "cloudflare-claude-sandbox",
   "version": "1.0.0",
-  "description": "Cloudflare Workers sandbox for executing Claude Code with AI-powered code generation",
+  "description": "Cloudflare Workers sandbox for executing Gemini Code with AI-powered code generation",
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
@@ -45,7 +45,7 @@
     "durable-objects",
     "edge-computing"
   ],
-  "author": "Claude Code Templates",
+  "author": "Gemini Code Templates",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -299,7 +299,7 @@ class CartManager {
 
     // Update generated command
     updateCommand() {
-        let command = 'npx gemini-code-templates@latest';
+        let command = 'npx gemini-cli-templates@latest';
         
         if (this.cart.agents.length > 0) {
             const agentPaths = this.cart.agents.map(item => this.getCleanPath(item.path)).join(',');

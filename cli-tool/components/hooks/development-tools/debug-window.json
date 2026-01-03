@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": ".claude/hooks/debug-window.sh"
+            "command": ".gemini/hooks/debug-window.sh"
           }
         ]
       }

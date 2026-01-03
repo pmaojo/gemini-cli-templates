@@ -1,7 +1,7 @@
 // GitHub repository configuration
 const GITHUB_CONFIG = {
     owner: 'davila7',
-    repo: 'gemini-code-templates',
+    repo: 'gemini-cli-templates',
     branch: 'main',
     templatesPath: 'cli-tool/src/templates.js'
 };
@@ -129,7 +129,7 @@ function generateTemplateCards() {
         const baseCard = createTemplateCard(languageKey, languageData, 'none', {
             name: languageData.name,
             icon: getFrameworkIcon(languageKey),
-            command: `npx gemini-code-templates@latest --template=${languageKey} --yes`
+            command: `npx gemini-cli-templates@latest --template=${languageKey} --yes`
         });
         grid.appendChild(baseCard);
         
@@ -139,7 +139,7 @@ function generateTemplateCards() {
                 const frameworkCard = createTemplateCard(languageKey, languageData, frameworkKey, {
                     name: frameworkData.name,
                     icon: getFrameworkIcon(frameworkKey),
-                    command: `npx gemini-code-templates@latest --template=${languageKey} --yes`
+                    command: `npx gemini-cli-templates@latest --template=${languageKey} --yes`
                 });
                 grid.appendChild(frameworkCard);
             });
@@ -527,10 +527,10 @@ function showContributeModal() {
                             <div class="step-number-contrib">1</div>
                             <div class="step-content-contrib">
                                 <h4>Fork the Repository</h4>
-                                <p>Go to the <a href="https://github.com/davila7/gemini-code-templates" target="_blank">main repository</a> and click "Fork" to create your own copy.</p>
+                                <p>Go to the <a href="https://github.com/pmaojo/Gemini-cli-templates" target="_blank">main repository</a> and click "Fork" to create your own copy.</p>
                                 <div class="step-command">
-                                    <code>git clone https://github.com/YOUR_USERNAME/gemini-code-templates.git</code>
-                                    <button class="copy-btn" onclick="copyToClipboard('git clone https://github.com/YOUR_USERNAME/gemini-code-templates.git')">Copy</button>
+                                    <code>git clone https://github.com/YOUR_USERNAME/gemini-cli-templates.git</code>
+                                    <button class="copy-btn" onclick="copyToClipboard('git clone https://github.com/YOUR_USERNAME/gemini-cli-templates.git')">Copy</button>
                                 </div>
                             </div>
                         </div>
@@ -560,7 +560,7 @@ function showContributeModal() {
                                 <div class="gemini-prompt">
                                     <h5>📋 Gemini CLI Prompt:</h5>
                                     <div class="prompt-text">
-                                        <pre>I want to contribute a new template to the gemini-code-templates repository. 
+                                        <pre>I want to contribute a new template to the gemini-cli-templates repository. 
 
 Please help me create:
 - A new [LANGUAGE/FRAMEWORK] template
@@ -625,7 +625,7 @@ Please analyze the existing templates in the repository first to understand the 
                     <div class="contribute-footer">
                         <div class="help-section">
                             <h4>Need Help?</h4>
-                            <p>Check out <a href="https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a> or open an issue on GitHub.</p>
+                            <p>Check out <a href="https://github.com/pmaojo/Gemini-cli-templates/blob/main/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a> or open an issue on GitHub.</p>
                         </div>
                     </div>
                 </div>
@@ -836,7 +836,7 @@ function getFileType(filename) {
 
 // Generate GitHub folder URL for templates
 function getGithubFolderUrl(languageKey, frameworkKey) {
-    const baseUrl = 'https://github.com/davila7/gemini-code-templates/tree/main/cli-tool/templates';
+    const baseUrl = 'https://github.com/pmaojo/Gemini-cli-templates/tree/main/cli-tool/templates';
     
     if (frameworkKey === 'none' || !frameworkKey) {
         // Base language template
@@ -849,7 +849,7 @@ function getGithubFolderUrl(languageKey, frameworkKey) {
 
 // Generate GitHub file URL for individual files
 function getGithubFileUrl(languageKey, frameworkKey, filePath) {
-    const baseUrl = 'https://github.com/davila7/gemini-code-templates/blob/main/cli-tool/templates';
+    const baseUrl = 'https://github.com/pmaojo/Gemini-cli-templates/blob/main/cli-tool/templates';
     return `${baseUrl}/${filePath}`;
 }
 
@@ -1504,15 +1504,15 @@ function createComponentCard(component) {
 // Generate install command for component
 function generateInstallCommand(component) {
     if (component.type === 'agent') {
-        return `npx gemini-code-templates@latest --agent=${component.name} --yes`;
+        return `npx gemini-cli-templates@latest --agent=${component.name} --yes`;
     } else if (component.type === 'command') {
-        return `npx gemini-code-templates@latest --command=${component.name} --yes`;
+        return `npx gemini-cli-templates@latest --command=${component.name} --yes`;
     } else if (component.type === 'mcp') {
         // Remove .json extension from MCP names for the command
         const mcpName = component.name.replace(/\.json$/, '');
-        return `npx gemini-code-templates@latest --mcp=${mcpName} --yes`;
+        return `npx gemini-cli-templates@latest --mcp=${mcpName} --yes`;
     }
-    return `npx gemini-code-templates@latest`;
+    return `npx gemini-cli-templates@latest`;
 }
 
 
@@ -1618,7 +1618,7 @@ function showComponentContributeModal(type) {
                                 <h4>Follow the Pattern</h4>
                                 <p>Check existing ${type} in the repository to understand the structure and conventions.</p>
                                 <div class="step-command">
-                                    <a href="https://github.com/davila7/gemini-code-templates/tree/main/cli-tool/components/${type}" target="_blank" class="github-folder-link">
+                                    <a href="https://github.com/pmaojo/Gemini-cli-templates/tree/main/cli-tool/components/${type}" target="_blank" class="github-folder-link">
                                         📁 View existing ${type}
                                     </a>
                                 </div>

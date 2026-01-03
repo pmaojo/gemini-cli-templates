@@ -490,7 +490,7 @@ class ComponentPageManager {
             }
 
             // Fallback: try to fetch marketplace.json directly from components/.gemini-plugin/
-            const marketplaceResponse = await fetch('https://raw.githubusercontent.com/davila7/gemini-code-templates/main/cli-tool/components/.gemini-plugin/marketplace.json');
+            const marketplaceResponse = await fetch('https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/.gemini-plugin/marketplace.json');
             if (marketplaceResponse.ok) {
                 this.componentsMarketplace = await marketplaceResponse.json();
                 console.log('Loaded components marketplace from GitHub:', this.componentsMarketplace);
@@ -507,7 +507,7 @@ class ComponentPageManager {
 
     renderInstallationSection() {
         const componentPath = this.getCleanPath();
-        const basicInstallCommand = `npx gemini-code-templates@latest --${this.component.type}=${componentPath} --yes`;
+        const basicInstallCommand = `npx gemini-cli-templates@latest --${this.component.type}=${componentPath} --yes`;
 
         // Update basic installation command
         const basicInstallElement = document.getElementById('basicInstallCommand');
@@ -531,7 +531,7 @@ class ComponentPageManager {
 
     renderGlobalAgentSection(componentPath) {
         const globalAgentSection = document.getElementById('globalAgentSection');
-        const globalAgentCommand = `npx gemini-code-templates@latest --create-agent ${componentPath}`;
+        const globalAgentCommand = `npx gemini-cli-templates@latest --create-agent ${componentPath}`;
         const globalUsageCommand = `${componentPath.split('/').pop()} "your prompt here"`;
 
         const globalAgentCommandElement = document.getElementById('globalAgentCommand');
@@ -553,9 +553,9 @@ class ComponentPageManager {
         const cloudSandboxSection = document.getElementById('cloudSandboxSection');
 
         // Update all sandbox command examples with the component path
-        const e2bSandboxCommand = `npx gemini-code-templates@latest --sandbox e2b --agent=${componentPath} --prompt "your development task"`;
-        const cloudflareSandboxCommand = `npx gemini-code-templates@latest --sandbox cloudflare --agent=${componentPath} --prompt "your development task"`;
-        const dockerSandboxCommand = `npx gemini-code-templates@latest --sandbox docker --agent=${componentPath} --prompt "your development task"`;
+        const e2bSandboxCommand = `npx gemini-cli-templates@latest --sandbox e2b --agent=${componentPath} --prompt "your development task"`;
+        const cloudflareSandboxCommand = `npx gemini-cli-templates@latest --sandbox cloudflare --agent=${componentPath} --prompt "your development task"`;
+        const dockerSandboxCommand = `npx gemini-cli-templates@latest --sandbox docker --agent=${componentPath} --prompt "your development task"`;
 
         const e2bSandboxCommandElement = document.getElementById('e2bSandboxCommand');
         const cloudflareSandboxCommandElement = document.getElementById('cloudflareSandboxCommand');
@@ -784,7 +784,7 @@ class ComponentPageManager {
     }
 
     generateGitHubURL() {
-        let githubUrl = 'https://github.com/davila7/gemini-code-templates/';
+        let githubUrl = 'https://github.com/pmaojo/Gemini-cli-templates/';
         
         if (this.component.type === 'template') {
             githubUrl += `tree/main/cli-tool/templates/${this.component.folderPath || ''}`;
