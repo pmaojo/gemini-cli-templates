@@ -83,8 +83,8 @@ git commit -m "chore(release): bump version to ${ARGUMENTS#v}
 - Updated package.json version
 - Generated CHANGELOG.md from commits
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with Gemini CLI
+Co-Authored-By: Gemini <noreply@Google.com>"
 
 # Push to remote with tracking
 git push -u origin release/$ARGUMENTS
@@ -322,7 +322,7 @@ Target: main
 5. Monitor for issues
 
 ---
-🤖 Generated with Claude Code
+🤖 Generated with Gemini CLI
 EOF
 )" \
   --base main \

@@ -1,19 +1,19 @@
 # Sub agents
 
-> Create and use specialized AI sub agents in Claude Code for task-specific workflows and improved context management.
+> Create and use specialized AI sub agents in Gemini Code for task-specific workflows and improved context management.
 
-Custom sub agents in Claude Code are specialized AI assistants that can be invoked to handle specific types of tasks. They enable more efficient problem-solving by providing task-specific configurations with customized system prompts, tools and a separate context window.
+Custom sub agents in Gemini Code are specialized AI assistants that can be invoked to handle specific types of tasks. They enable more efficient problem-solving by providing task-specific configurations with customized system prompts, tools and a separate context window.
 
 ## What are sub agents?
 
-Sub agents are pre-configured AI personalities that Claude Code can delegate tasks to. Each sub agent:
+Sub agents are pre-configured AI personalities that Gemini Code can delegate tasks to. Each sub agent:
 
 * Has a specific purpose and expertise area
 * Uses its own context window separate from the main conversation
 * Can be configured with specific tools it's allowed to use
 * Includes a custom system prompt that guides its behavior
 
-When Claude Code encounters a task that matches a sub agent's expertise, it can delegate that task to the specialized sub agent, which works independently and returns results.
+When Gemini Code encounters a task that matches a sub agent's expertise, it can delegate that task to the specialized sub agent, which works independently and returns results.
 
 ## Key benefits
 
@@ -53,15 +53,15 @@ To create your first sub agent:
   </Step>
 
   <Step title="Define the sub agent">
-    * **Recommended**: Generate with Claude first, then customize to make it yours
+    * **Recommended**: Generate with Gemini first, then customize to make it yours
     * Describe your subagent in detail and when it should be used
     * Select the tools you want to grant access to (or leave blank to inherit all tools)
     * The interface shows all available tools, making selection easy
-    * If you're generating with Claude, you can also edit the system prompt in your own editor by pressing `e`
+    * If you're generating with Gemini, you can also edit the system prompt in your own editor by pressing `e`
   </Step>
 
   <Step title="Save and use">
-    Your sub agent is now available! Claude will use it automatically when appropriate, or you can invoke it explicitly:
+    Your sub agent is now available! Gemini will use it automatically when appropriate, or you can invoke it explicitly:
 
     ```
     > Use the code-reviewer sub agent to check my recent changes
@@ -77,8 +77,8 @@ Sub agents are stored as Markdown files with YAML frontmatter in two possible lo
 
 | Type                   | Location            | Scope                         | Priority |
 | :--------------------- | :------------------ | :---------------------------- | :------- |
-| **Project sub agents** | `.claude/agents/`   | Available in current project  | Highest  |
-| **User sub agents**    | `~/.claude/agents/` | Available across all projects | Lower    |
+| **Project sub agents** | `.gemini/agents/`   | Available in current project  | Highest  |
+| **User sub agents**    | `~/.gemini/agents/` | Available across all projects | Lower    |
 
 When sub agent names conflict, project-level sub agents take precedence over user-level sub agents.
 
@@ -111,7 +111,7 @@ the sub agent should follow.
 
 ### Available tools
 
-Sub agents can be granted access to any of Claude Code's internal tools. See the [tools documentation](/en/docs/claude-code/settings#tools-available-to-claude) for a complete list of available tools.
+Sub agents can be granted access to any of Gemini Code's internal tools. See the [tools documentation](/en/docs/gemini-code/settings#tools-available-to-gemini) for a complete list of available tools.
 
 <Tip>
   **Recommended:** Use the `/agents` command to modify tool access - it provides an interactive interface that lists all available tools, including any connected MCP server tools, making it easier to select the ones you need.
@@ -149,16 +149,16 @@ You can also manage sub agents by working directly with their files:
 
 ```bash
 # Create a project sub agent
-mkdir -p .claude/agents
+mkdir -p .gemini/agents
 echo '---
 name: test-runner
 description: Use proactively to run tests and fix failures
 ---
 
-You are a test automation expert. When you see code changes, proactively run the appropriate tests. If tests fail, analyze the failures and fix them while preserving the original test intent.' > .claude/agents/test-runner.md
+You are a test automation expert. When you see code changes, proactively run the appropriate tests. If tests fail, analyze the failures and fix them while preserving the original test intent.' > .gemini/agents/test-runner.md
 
 # Create a user sub agent
-mkdir -p ~/.claude/agents
+mkdir -p ~/.gemini/agents
 # ... create sub agent file
 ```
 
@@ -166,7 +166,7 @@ mkdir -p ~/.claude/agents
 
 ### Automatic delegation
 
-Claude Code proactively delegates tasks based on:
+Gemini Code proactively delegates tasks based on:
 
 * The task description in your request
 * The `description` field in sub agent configurations
@@ -293,7 +293,7 @@ Always ensure queries are efficient and cost-effective.
 
 ## Best practices
 
-* **Start with Claude-generated agents**: We highly recommend generating your initial sub agent with Claude and then iterating on it to make it personally yours. This approach gives you the best results - a solid foundation that you can customize to your specific needs.
+* **Start with Gemini-generated agents**: We highly recommend generating your initial sub agent with Gemini and then iterating on it to make it personally yours. This approach gives you the best results - a solid foundation that you can customize to your specific needs.
 
 * **Design focused sub agents**: Create sub agents with single, clear responsibilities rather than trying to make one sub agent do everything. This improves performance and makes sub agents more predictable.
 
@@ -315,7 +315,7 @@ For complex workflows, you can chain multiple sub agents:
 
 ### Dynamic sub agent selection
 
-Claude Code intelligently selects sub agents based on context. Make your `description` fields specific and action-oriented for best results.
+Gemini Code intelligently selects sub agents based on context. Make your `description` fields specific and action-oriented for best results.
 
 ## Performance considerations
 
@@ -324,6 +324,6 @@ Claude Code intelligently selects sub agents based on context. Make your `descri
 
 ## Related documentation
 
-* [Slash commands](/en/docs/claude-code/slash-commands) - Learn about other built-in commands
-* [Settings](/en/docs/claude-code/settings) - Configure Claude Code behavior
-* [Hooks](/en/docs/claude-code/hooks) - Automate workflows with event handlers
+* [Slash commands](/en/docs/gemini-code/slash-commands) - Learn about other built-in commands
+* [Settings](/en/docs/gemini-code/settings) - Configure Gemini Code behavior
+* [Hooks](/en/docs/gemini-code/hooks) - Automate workflows with event handlers

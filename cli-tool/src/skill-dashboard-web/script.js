@@ -378,7 +378,7 @@ function updateEmptyState() {
     description.textContent = 'No skills match your current filters or search.';
     clearBtn.style.display = 'inline-block';
   } else {
-    description.textContent = 'No skills installed. Add skills to ~/.claude/skills or .claude/skills';
+    description.textContent = 'No skills installed. Add skills to ~/.gemini/skills or .gemini/skills';
     clearBtn.style.display = 'none';
   }
 }

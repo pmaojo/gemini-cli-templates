@@ -8,7 +8,7 @@ const chalk = require('chalk');
  */
 async function testConsoleBridge() {
   console.log(chalk.blue('🧪 Testing Console Bridge Integration'));
-  console.log(chalk.gray('This will monitor running Claude Code processes and enable web-based interaction'));
+  console.log(chalk.gray('This will monitor running Gemini CLI processes and enable web-based interaction'));
   console.log('');
   
   // Create console bridge instance
@@ -34,8 +34,8 @@ async function testConsoleBridge() {
     console.log(chalk.yellow('💡 Instructions:'));
     console.log('  1. Open your analytics dashboard (npm run analytics:start)');
     console.log('  2. Navigate to the Agents page');
-    console.log('  3. The console interaction panel should appear when Claude Code prompts are detected');
-    console.log('  4. Run Claude Code in another terminal to test interaction');
+    console.log('  3. The console interaction panel should appear when Gemini CLI prompts are detected');
+    console.log('  4. Run Gemini CLI in another terminal to test interaction');
     console.log('');
     console.log(chalk.gray('Press Ctrl+C to stop the bridge'));
     

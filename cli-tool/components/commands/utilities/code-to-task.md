@@ -8,16 +8,16 @@ This command scans your codebase for TODO/FIXME comments, technical debt markers
 ## Usage
 ```bash
 # Scan entire codebase for TODOs and create tasks
-claude "Create tasks from all TODO comments in the codebase"
+gemini "Create tasks from all TODO comments in the codebase"
 
 # Scan specific directory or module
-claude "Find TODOs in src/api and create Linear tasks"
+gemini "Find TODOs in src/api and create Linear tasks"
 
 # Create tasks from specific patterns
-claude "Create tasks for all deprecated functions"
+gemini "Create tasks for all deprecated functions"
 
 # Generate technical debt report
-claude "Analyze technical debt in the project and create improvement tasks"
+gemini "Analyze technical debt in the project and create improvement tasks"
 ```
 
 ## Instructions
@@ -558,19 +558,19 @@ https://linear.app/yourteam/project/q1-technical-debt-cleanup
 Define project-specific patterns:
 ```bash
 # Add custom markers to scan
-claude "Scan for REVIEW, QUESTION, and ASSUMPTION comments"
+gemini "Scan for REVIEW, QUESTION, and ASSUMPTION comments"
 ```
 
 ### Integration with CI/CD
 ```bash
 # Fail build if critical TODOs found
-claude "Check for SECURITY or FIXME comments and exit with error if found"
+gemini "Check for SECURITY or FIXME comments and exit with error if found"
 ```
 
 ### Scheduled Scans
 ```bash
 # Weekly technical debt report
-claude "Generate weekly technical debt report and create tasks for new items"
+gemini "Generate weekly technical debt report and create tasks for new items"
 ```
 
 ## Tips

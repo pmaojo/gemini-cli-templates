@@ -1,45 +1,45 @@
-# Complete Guide to Claude Code Hooks
+# Complete Guide to Gemini Code Hooks
 
-This guide teaches you how to create and configure custom hooks for Claude Code to automate workflows, validate operations, and enhance your development experience.
+This guide teaches you how to create and configure custom hooks for Gemini Code to automate workflows, validate operations, and enhance your development experience.
 
-## What are Claude Code Hooks?
+## What are Gemini Code Hooks?
 
-Hooks are automated scripts that execute at specific points during Claude Code sessions. Each hook:
+Hooks are automated scripts that execute at specific points during Gemini Code sessions. Each hook:
 
 - **Responds to specific events** like tool usage, prompt submission, or session start/end
 - **Can validate, modify, or block operations** based on your criteria
 - **Executes shell commands automatically** with access to session data
 - **Integrates seamlessly with your development workflow**
-- **Provides fine-grained control** over Claude's behavior
+- **Provides fine-grained control** over Gemini's behavior
 
 ## Key Benefits
 
 ### 🔄 Automated Workflows
-Execute custom scripts automatically when specific events occur during Claude Code sessions.
+Execute custom scripts automatically when specific events occur during Gemini Code sessions.
 
 ### 🛡️ Enhanced Security
 Validate and block potentially dangerous operations before they execute.
 
 ### 📊 Session Monitoring
-Track usage patterns, log operations, and gather analytics from your Claude Code sessions.
+Track usage patterns, log operations, and gather analytics from your Gemini Code sessions.
 
 ### 🔧 Custom Validation
-Implement project-specific rules and requirements that Claude must follow.
+Implement project-specific rules and requirements that Gemini must follow.
 
 ### ⚡ Real-time Feedback
-Provide immediate feedback to Claude based on the results of operations.
+Provide immediate feedback to Gemini based on the results of operations.
 
 ## Hook Configuration
 
 ### Configuration Files
 
-Hooks are configured in your Claude Code settings files with the following priority order:
+Hooks are configured in your Gemini Code settings files with the following priority order:
 
 | Type | Location | Scope | Usage |
 |------|----------|-------|--------|
-| **User Settings** | `~/.claude/settings.json` | All projects | Personal hooks across all projects |
-| **Project Settings** | `.claude/settings.json` | Current project | Shared team hooks (committed to repo) |
-| **Local Project Settings** | `.claude/settings.local.json` | Current project | Personal project hooks (not committed) |
+| **User Settings** | `~/.gemini/settings.json` | All projects | Personal hooks across all projects |
+| **Project Settings** | `.gemini/settings.json` | Current project | Shared team hooks (committed to repo) |
+| **Local Project Settings** | `.gemini/settings.local.json` | Current project | Personal project hooks (not committed) |
 | **Enterprise Settings** | Managed by policy | Organization | Company-wide hooks and policies |
 
 *When there are conflicts, settings files lower in the list take precedence.*
@@ -70,11 +70,11 @@ Each hook is defined using event-based configuration:
 ### Configuration Elements
 
 #### Event Names
-- **PreToolUse**: Before Claude executes a tool
-- **PostToolUse**: After Claude executes a tool successfully
+- **PreToolUse**: Before Gemini executes a tool
+- **PostToolUse**: After Gemini executes a tool successfully
 - **UserPromptSubmit**: When user submits a prompt
-- **Notification**: When Claude Code sends notifications
-- **Stop**: When Claude finishes responding
+- **Notification**: When Gemini Code sends notifications
+- **Stop**: When Gemini finishes responding
 - **SubagentStop**: When a subagent completes
 - **SessionStart**: When a session begins or resumes
 - **SessionEnd**: When a session terminates
@@ -155,7 +155,7 @@ For tool-based events (PreToolUse, PostToolUse):
 
 ### UserPromptSubmit
 
-**Purpose**: Process or validate user prompts before Claude sees them
+**Purpose**: Process or validate user prompts before Gemini sees them
 **Common Use Cases**: Adding context, blocking sensitive prompts, prompt transformation
 
 **Input Data**:
@@ -185,13 +185,13 @@ For tool-based events (PreToolUse, PostToolUse):
 ```
 
 **Matchers**:
-- `startup` - Normal Claude Code startup
+- `startup` - Normal Gemini Code startup
 - `resume` - Resumed from `--resume`, `--continue`, or `/resume`
 - `clear` - After `/clear` command
 
 ### Stop and SubagentStop
 
-**Purpose**: Control whether Claude can finish responding or trigger additional actions
+**Purpose**: Control whether Gemini can finish responding or trigger additional actions
 **Common Use Cases**: Automated testing, continuous workflows, quality checks
 
 **Input Data**:
@@ -226,10 +226,10 @@ For tool-based events (PreToolUse, PostToolUse):
 
 **Exit Code 0**: Success
 - For most hooks: stdout shown to user in transcript mode (Ctrl+R)
-- For UserPromptSubmit and SessionStart: stdout added as context for Claude
+- For UserPromptSubmit and SessionStart: stdout added as context for Gemini
 
 **Exit Code 2**: Blocking error
-- Blocks the operation and shows stderr to Claude for automated handling
+- Blocks the operation and shows stderr to Gemini for automated handling
 - Behavior varies by hook type (see reference table below)
 
 **Other Exit Codes**: Non-blocking error
@@ -239,10 +239,10 @@ For tool-based events (PreToolUse, PostToolUse):
 
 | Hook Event | Behavior |
 |------------|----------|
-| `PreToolUse` | Blocks tool execution, shows stderr to Claude |
-| `PostToolUse` | Shows stderr to Claude (tool already executed) |
+| `PreToolUse` | Blocks tool execution, shows stderr to Gemini |
+| `PostToolUse` | Shows stderr to Gemini (tool already executed) |
 | `UserPromptSubmit` | Blocks prompt, erases it, shows stderr to user only |
-| `Stop`/`SubagentStop` | Blocks stopping, shows stderr to Claude |
+| `Stop`/`SubagentStop` | Blocks stopping, shows stderr to Gemini |
 | `Notification` | Shows stderr to user only |
 | `SessionStart`/`SessionEnd`/`PreCompact` | Shows stderr to user only |
 
@@ -278,7 +278,7 @@ For sophisticated control, hooks can return structured JSON:
   "reason": "Code style violations detected",
   "hookSpecificOutput": {
     "hookEventName": "PostToolUse",
-    "additionalContext": "Additional context for Claude"
+    "additionalContext": "Additional context for Gemini"
   }
 }
 ```
@@ -318,7 +318,7 @@ For sophisticated control, hooks can return structured JSON:
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/format-code.sh",
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/format-code.sh",
             "timeout": 30
           }
         ]
@@ -385,7 +385,7 @@ echo "✅ Code formatting complete"
         "hooks": [
           {
             "type": "command", 
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/validate-bash.py"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/validate-bash.py"
           }
         ]
       }
@@ -395,7 +395,7 @@ echo "✅ Code formatting complete"
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/check-sensitive.py"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/check-sensitive.py"
           }
         ]
       }
@@ -511,7 +511,7 @@ except Exception as e:
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/load-context.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/load-context.sh"
           }
         ]
       }
@@ -595,7 +595,7 @@ echo -e "\n✅ Project context loaded successfully"
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/auto-test.sh",
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/auto-test.sh",
             "timeout": 120
           }
         ]
@@ -648,10 +648,10 @@ if test_output=$(run_tests); then
     echo "✅ Tests passed"
     echo "$test_output"
 else
-    echo "❌ Tests failed - informing Claude"
+    echo "❌ Tests failed - informing Gemini"
     echo "Test failures detected in modified code:" >&2
     echo "$test_output" >&2
-    exit 2  # This will show the error to Claude
+    exit 2  # This will show the error to Gemini
 fi
 ```
 
@@ -666,7 +666,7 @@ fi
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/protect-files.py"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/protect-files.py"
           }
         ]
       }
@@ -765,7 +765,7 @@ except Exception as e:
 
 ### Understanding MCP Tools in Hooks
 
-Claude Code hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/claude-code/mcp) tools. MCP tools follow the naming pattern `mcp__<server>__<tool>`:
+Gemini Code hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/gemini-code/mcp) tools. MCP tools follow the naming pattern `mcp__<server>__<tool>`:
 
 - `mcp__github__create_issue` - GitHub MCP server's issue creation tool
 - `mcp__database__execute_query` - Database MCP server's query tool
@@ -782,7 +782,7 @@ Claude Code hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/c
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/log-github-operations.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/log-github-operations.sh"
           }
         ]
       },
@@ -791,7 +791,7 @@ Claude Code hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/c
         "hooks": [
           {
             "type": "command", 
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/validate-destructive-mcp.py"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/validate-destructive-mcp.py"
           }
         ]
       }
@@ -843,7 +843,7 @@ except Exception as e:
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/coordinate-tools.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/coordinate-tools.sh"
           }
         ]
       }
@@ -865,8 +865,8 @@ file_path=$(echo "$input" | jq -r '.tool_input.file_path')
 tool_name=$(echo "$input" | jq -r '.tool_name')
 
 # Create a coordination log
-mkdir -p .claude/logs
-echo "$(date): $tool_name - $file_path" >> .claude/logs/tool-coordination.log
+mkdir -p .gemini/logs
+echo "$(date): $tool_name - $file_path" >> .gemini/logs/tool-coordination.log
 
 # Trigger related actions based on file type
 case "$file_path" in
@@ -905,7 +905,7 @@ import sqlite3
 from datetime import datetime
 import os
 
-DATABASE = os.path.expanduser('~/.claude/analytics.db')
+DATABASE = os.path.expanduser('~/.gemini/analytics.db')
 
 def init_db():
     """Initialize analytics database"""
@@ -977,7 +977,7 @@ except Exception as e:
 ### 1. Hook Design Principles
 - **Single Responsibility**: Each hook should have one clear purpose
 - **Fail Gracefully**: Use exit code 0 for non-critical failures to avoid blocking operations
-- **Be Fast**: Keep hook execution time minimal to avoid slowing down Claude
+- **Be Fast**: Keep hook execution time minimal to avoid slowing down Gemini
 - **Idempotent**: Hooks should be safe to run multiple times with the same input
 
 ### 2. Error Handling
@@ -989,7 +989,7 @@ import logging
 
 # Set up logging
 logging.basicConfig(
-    filename=os.path.expanduser('~/.claude/hooks.log'),
+    filename=os.path.expanduser('~/.gemini/hooks.log'),
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -1037,7 +1037,7 @@ def validate_input(input_data):
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/configurable-hook.py --config=$CLAUDE_PROJECT_DIR/.claude/hook-config.json"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/configurable-hook.py --config=$CLAUDE_PROJECT_DIR/.gemini/hook-config.json"
           }
         ]
       }
@@ -1050,7 +1050,7 @@ def validate_input(input_data):
 
 ### Security Best Practices
 
-1. **Input Sanitization**: Always validate and sanitize inputs from Claude Code
+1. **Input Sanitization**: Always validate and sanitize inputs from Gemini Code
 2. **Path Security**: Check for directory traversal attacks (`../` patterns)
 3. **Command Injection**: Never pass user input directly to shell commands
 4. **File Permissions**: Use minimal required permissions for hook scripts
@@ -1127,10 +1127,10 @@ except Exception as e:
 
 ### Debug Mode
 
-Use `claude --debug` to see detailed hook execution:
+Use `gemini --debug` to see detailed hook execution:
 
 ```bash
-claude --debug
+gemini --debug
 ```
 
 Debug output includes:
@@ -1145,7 +1145,7 @@ Test hooks independently:
 
 ```bash
 # Test hook script directly
-echo '{"session_id":"test","hook_event_name":"PreToolUse","tool_name":"Write","tool_input":{"file_path":"test.txt"}}' | ./.claude/hooks/your-hook.py
+echo '{"session_id":"test","hook_event_name":"PreToolUse","tool_name":"Write","tool_input":{"file_path":"test.txt"}}' | ./.gemini/hooks/your-hook.py
 
 # Test JSON output
 echo '{"session_id":"test"}' | python3 -c "
@@ -1169,7 +1169,7 @@ print(json.dumps({'continue': True, 'systemMessage': 'Test successful'}))
 ### Community Hooks
 
 Share and discover hooks with the community:
-- [Claude Code Hooks Repository](https://github.com/anthropic/claude-code-hooks) (example)
+- [Gemini Code Hooks Repository](https://github.com/google/gemini-code-hooks) (example)
 - Project-specific hook collections
 - Team-shared hook libraries
 
@@ -1236,14 +1236,14 @@ if __name__ == "__main__":
 
 ## Conclusion
 
-Claude Code hooks provide powerful automation capabilities that can significantly enhance your development workflow. With hooks, you can:
+Gemini Code hooks provide powerful automation capabilities that can significantly enhance your development workflow. With hooks, you can:
 
 - **Automate repetitive tasks** like code formatting and testing
 - **Enhance security** through validation and monitoring  
-- **Customize Claude's behavior** to match your team's requirements
+- **Customize Gemini's behavior** to match your team's requirements
 - **Integrate with external tools** and services
 - **Monitor and analyze** your development patterns
 
 Start with simple hooks and gradually build more sophisticated automation as you become comfortable with the system. Remember to prioritize security, test thoroughly, and document your hooks for team collaboration.
 
-For more examples and community resources, see the [Claude Code documentation](/en/docs/claude-code) and join the community discussions.
+For more examples and community resources, see the [Gemini Code documentation](/en/docs/gemini-code) and join the community discussions.

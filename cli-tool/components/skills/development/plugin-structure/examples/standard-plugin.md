@@ -6,7 +6,7 @@ A well-structured plugin with commands, agents, and skills.
 
 ```
 code-quality/
-├── .claude-plugin/
+├── .gemini-plugin/
 │   └── plugin.json
 ├── commands/
 │   ├── lint.md
@@ -36,7 +36,7 @@ code-quality/
 
 ## File Contents
 
-### .claude-plugin/plugin.json
+### .gemini-plugin/plugin.json
 
 ```json
 {
@@ -508,7 +508,7 @@ exit 0
 ### Running Commands
 
 ```
-$ claude
+$ gemini
 > /lint
 Running linter checks...
 

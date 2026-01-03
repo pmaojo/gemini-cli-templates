@@ -1,6 +1,6 @@
-# Testing Guide for claude-code-templates
+# Testing Guide for gemini-code-templates
 
-This guide explains how to test the `claude-code-templates` CLI tool before publishing.
+This guide explains how to test the `gemini-code-templates` CLI tool before publishing.
 
 ## Quick Start
 
@@ -73,27 +73,27 @@ make uninstall-dev
 npm link
 
 # Test different scenarios manually
-claude-code-templates --help
-claude-code-templates --version
-claude-code-templates --dry-run
-claude-code-templates --language javascript-typescript --framework react --yes
-claude-code-templates --language common --yes
+gemini-code-templates --help
+gemini-code-templates --version
+gemini-code-templates --dry-run
+gemini-code-templates --language javascript-typescript --framework react --yes
+gemini-code-templates --language common --yes
 
 # Test in different directories
 mkdir test-project && cd test-project
-claude-code-templates --language javascript-typescript --framework vue --yes
+gemini-code-templates --language javascript-typescript --framework vue --yes
 ls -la  # Check created files
 
 # Cleanup
-npm unlink -g claude-code-templates
+npm unlink -g gemini-code-templates
 ```
 
 ### 4. **Direct Node Execution**
 
 ```bash
 # Test without installing globally
-node bin/create-claude-config.js --help
-node bin/create-claude-config.js --dry-run --language javascript-typescript --framework react --yes
+node bin/create-gemini-config.js --help
+node bin/create-gemini-config.js --dry-run --language javascript-typescript --framework react --yes
 ```
 
 ## Test Coverage
@@ -104,7 +104,7 @@ node bin/create-claude-config.js --dry-run --language javascript-typescript --fr
 - ✅ **Help & Version**: Basic commands respond correctly
 - ✅ **Language Support**: JavaScript/TypeScript, Common, Python, Rust, Go
 - ✅ **Framework Support**: React, Vue, Angular, Node.js, None
-- ✅ **File Creation**: CLAUDE.md, .claude directory, settings.json
+- ✅ **File Creation**: CLAUDE.md, .gemini directory, settings.json
 - ✅ **Framework Commands**: Framework-specific commands are created
 - ✅ **Dry Run Mode**: Preview mode works without creating files
 - ✅ **Error Handling**: Invalid languages/frameworks are rejected
@@ -148,7 +148,7 @@ make pre-publish
 
 ### Manual Verification Steps:
 
-1. **Interactive Flow**: Start `claude-code-templates` without flags and go through the full interactive setup
+1. **Interactive Flow**: Start `gemini-code-templates` without flags and go through the full interactive setup
 2. **Error Scenarios**: Test invalid inputs and edge cases
 3. **File Content**: Verify that created files have correct content
 4. **Framework Detection**: Test in projects with existing package.json files
@@ -190,8 +190,8 @@ npm run build      # If applicable
 ### Production Testing
 ```bash
 # Test published version
-npx claude-code-templates@latest --version
-npx claude-code-templates@latest --help
+npx gemini-code-templates@latest --version
+npx gemini-code-templates@latest --help
 ```
 
 ## Debugging Tests
@@ -199,22 +199,22 @@ npx claude-code-templates@latest --help
 ### Verbose Output
 ```bash
 # Add verbose flag to see detailed output
-claude-code-templates --language javascript-typescript --framework react --dry-run --yes --verbose
+gemini-code-templates --language javascript-typescript --framework react --dry-run --yes --verbose
 ```
 
 ### Test Specific Scenarios
 ```bash
 # Create isolated test environment
-mkdir /tmp/test-claude && cd /tmp/test-claude
-claude-code-templates --language javascript-typescript --framework react --yes
-ls -la .claude/commands/
+mkdir /tmp/test-gemini && cd /tmp/test-gemini
+gemini-code-templates --language javascript-typescript --framework react --yes
+ls -la .gemini/commands/
 cat CLAUDE.md
 ```
 
 ### Check Generated Files
 ```bash
 # Verify file content
-find .claude -name "*.md" -exec echo "=== {} ===" \; -exec cat {} \;
+find .gemini -name "*.md" -exec echo "=== {} ===" \; -exec cat {} \;
 ```
 
 ## Common Issues & Solutions
@@ -230,7 +230,7 @@ npm config set prefix ~/.npm-global
 ### Command Not Found
 ```bash
 # If linked command isn't found
-which claude-code-templates
+which gemini-code-templates
 echo $PATH
 # May need to add npm global bin to PATH
 ```

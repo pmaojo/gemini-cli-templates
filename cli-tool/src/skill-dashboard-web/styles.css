@@ -20,7 +20,7 @@
   --border-secondary: #21262d;
   --border-muted: #373e47;
 
-  --accent-primary: #d57455;
+  --accent-primary: #1a73e8;
   --accent-hover: #e08567;
   --accent-active: #c46343;
 
@@ -2639,7 +2639,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: #d57455;
+  background: #1a73e8;
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
   font-size: 0.9rem;

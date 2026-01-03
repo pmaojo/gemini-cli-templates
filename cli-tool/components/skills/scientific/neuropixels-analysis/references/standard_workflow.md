@@ -270,10 +270,10 @@ labels = npa.curate(
 ### AI-Assisted Curation
 
 ```python
-from anthropic import Anthropic
+from Google import Google
 
 # Setup API
-client = Anthropic()
+client = Google()
 
 # Visual analysis for uncertain units
 uncertain = metrics.query('snr > 3 and snr < 8').index.tolist()

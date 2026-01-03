@@ -108,7 +108,7 @@ Use this checklist to ensure the DevOps IaC Engineer Skill is properly deployed 
 **Make Skill Available**
 - [ ] Upload all files to skill repository/system
 - [ ] Verify file structure matches expected format
-- [ ] Test that Claude can access all files
+- [ ] Test that Gemini can access all files
 - [ ] Confirm skill appears in available skills list
 
 **Team Onboarding**

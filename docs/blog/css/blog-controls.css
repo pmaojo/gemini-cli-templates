@@ -24,7 +24,7 @@
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    color: #d57455;
+    color: #1a73e8;
     pointer-events: none;
     z-index: 1;
 }
@@ -43,7 +43,7 @@
 
 .blog-search-input:focus {
     outline: none;
-    border-color: #d57455;
+    border-color: #1a73e8;
     background: rgba(213, 116, 85, 0.1);
     box-shadow: 0 0 0 3px rgba(213, 116, 85, 0.1);
 }
@@ -62,7 +62,7 @@
     border-radius: 4px;
     padding: 0.375rem;
     cursor: pointer;
-    color: #d57455;
+    color: #1a73e8;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +88,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #d57455;
+    color: #1a73e8;
     font-size: 0.9rem;
     font-weight: 500;
     white-space: nowrap;
@@ -115,13 +115,13 @@
 }
 
 .sort-select:hover {
-    border-color: #d57455;
+    border-color: #1a73e8;
     background-color: rgba(213, 116, 85, 0.08);
 }
 
 .sort-select:focus {
     outline: none;
-    border-color: #d57455;
+    border-color: #1a73e8;
     box-shadow: 0 0 0 3px rgba(213, 116, 85, 0.1);
 }
 

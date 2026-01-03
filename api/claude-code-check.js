@@ -3,10 +3,10 @@
 
 import { neon } from '@neondatabase/serverless';
 import axios from 'axios';
-import { parseVersionChangelog, formatForDiscord, generateSummary } from './_parser-claude.js';
+import { parseVersionChangelog, formatForDiscord, generateSummary } from './_parser-gemini.js';
 
-const NPM_PACKAGE = '@anthropic-ai/claude-code';
-const CHANGELOG_URL = 'https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md';
+const NPM_PACKAGE = '@google-ai/gemini-code';
+const CHANGELOG_URL = 'https://raw.githubusercontent.com/googles/gemini-code/main/CHANGELOG.md';
 
 // Obtener la última versión de NPM
 async function getLatestNPMVersion() {
@@ -27,13 +27,13 @@ async function sendToDiscord(versionData, parsed, formatted, summary) {
   }
 
   const embed = {
-    title: `🚀 Claude Code ${versionData.version} Released`,
-    description: `A new version of Claude Code is available with **${summary.total} changes**!`,
+    title: `🚀 Gemini Code ${versionData.version} Released`,
+    description: `A new version of Gemini Code is available with **${summary.total} changes**!`,
     url: versionData.githubUrl,
     color: 0x8B5CF6, // Purple
     fields: [],
     footer: {
-      text: 'Claude Code Changelog Monitor',
+      text: 'Gemini Code Changelog Monitor',
       icon_url: 'https://avatars.githubusercontent.com/u/100788936?s=200&v=4'
     },
     timestamp: new Date().toISOString()
@@ -78,7 +78,7 @@ async function sendToDiscord(versionData, parsed, formatted, summary) {
   // Installation
   embed.fields.push({
     name: '📦 Installation',
-    value: `\`\`\`bash\nnpm install -g @anthropic-ai/claude-code@${versionData.version}\n\`\`\``,
+    value: `\`\`\`bash\nnpm install -g @google-ai/gemini-code@${versionData.version}\n\`\`\``,
     inline: false
   });
 
@@ -90,8 +90,8 @@ async function sendToDiscord(versionData, parsed, formatted, summary) {
   });
 
   const payload = {
-    username: 'Claude Code Monitor',
-    avatar_url: 'https://raw.githubusercontent.com/anthropics/claude-code/main/assets/icon.png',
+    username: 'Gemini Code Monitor',
+    avatar_url: 'https://raw.githubusercontent.com/googles/gemini-code/main/assets/icon.png',
     embeds: [embed]
   };
 
@@ -113,7 +113,7 @@ export default async function handler(req, res) {
   try {
     const sql = neon(process.env.NEON_DATABASE_URL);
 
-    console.log('🔍 Checking for new Claude Code version...');
+    console.log('🔍 Checking for new Gemini Code version...');
 
     // 1. Obtener última versión de NPM
     const latestVersion = await getLatestNPMVersion();
@@ -122,7 +122,7 @@ export default async function handler(req, res) {
     // 2. Verificar si ya fue procesada
     const existing = await sql`
       SELECT id, discord_notified
-      FROM claude_code_versions
+      FROM gemini_code_versions
       WHERE version = ${latestVersion.version}
     `;
 
@@ -162,7 +162,7 @@ export default async function handler(req, res) {
     const summary = generateSummary(parsed.changes);
 
     // 6. Guardar en base de datos
-    const githubUrl = `https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
+    const githubUrl = `https://github.com/googles/gemini-code/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
 
     const versionData = {
       version: latestVersion.version,
@@ -181,7 +181,7 @@ export default async function handler(req, res) {
     } else {
       // Crear nueva entrada
       const insertResult = await sql`
-        INSERT INTO claude_code_versions (
+        INSERT INTO gemini_code_versions (
           version,
           published_at,
           changelog_content,
@@ -205,7 +205,7 @@ export default async function handler(req, res) {
     // 7. Guardar cambios individuales
     for (const change of parsed.changes) {
       await sql`
-        INSERT INTO claude_code_changes (
+        INSERT INTO gemini_code_changes (
           version_id,
           change_type,
           description,
@@ -244,7 +244,7 @@ export default async function handler(req, res) {
 
     // 10. Marcar como notificada
     await sql`
-      UPDATE claude_code_versions
+      UPDATE gemini_code_versions
       SET discord_notified = true, discord_notification_sent_at = NOW()
       WHERE id = ${versionId}
     `;

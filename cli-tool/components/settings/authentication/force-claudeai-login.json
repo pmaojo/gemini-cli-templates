@@ -1,4 +1,4 @@
 {
-  "description": "Restrict authentication to Claude.ai accounts only. This prevents users from logging in with Anthropic Console accounts, ensuring all access goes through the Claude.ai platform for consistent user experience and billing.",
+  "description": "Restrict authentication to Claude.ai accounts only. This prevents users from logging in with Google Console accounts, ensuring all access goes through the Claude.ai platform for consistent user experience and billing.",
   "forceLoginMethod": "claudeai"
 }

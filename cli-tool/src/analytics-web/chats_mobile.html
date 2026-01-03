@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code Analytics - Chats</title>
+    <title>Gemini CLI Analytics - Chats</title>
     <style>
         * {
             box-sizing: border-box;
@@ -971,7 +971,7 @@
             transition: all 0.2s ease;
         }
 
-        /* Working states - Green (Claude is actively working) */
+        /* Working states - Green (Gemini is actively working) */
         .state-working { 
             background: rgba(40, 167, 69, 0.15); 
             color: #28a745; 
@@ -1871,10 +1871,10 @@
             <div class="chat-header">
                 <div class="chat-header-content">
                     <div class="header-left">
-                        <h1 class="chat-title">Claude Code Chats</h1>
+                        <h1 class="chat-title">Gemini CLI Chats</h1>
                     </div>
                     <div class="header-center">
-                        <button class="header-btn" id="githubBtn" title="Star on GitHub" onclick="window.open('https://github.com/davila7/claude-code-templates', '_blank')">
+                        <button class="header-btn" id="githubBtn" title="Star on GitHub" onclick="window.open('https://github.com/davila7/gemini-cli-templates', '_blank')">
                             ⭐️ on Github
                         </button>
                     </div>
@@ -2055,7 +2055,7 @@
                 </div>
                 <div class="header-center">
                     <div class="action-buttons-group" style="display: none;" id="actionButtonsGroup">
-                        <button class="action-btn resume-btn" id="resumeConversation" onclick="resumeConversationWithClaude()">
+                        <button class="action-btn resume-btn" id="resumeConversation" onclick="resumeConversationWithGemini()">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
@@ -2148,7 +2148,7 @@
                 <h3 class="modal-title">Resume Conversation</h3>
             </div>
             <p class="modal-description">
-                To resume this conversation in Claude Code, copy and run the following command in your terminal:
+                To resume this conversation in Gemini CLI, copy and run the following command in your terminal:
             </p>
             <div class="modal-command" id="modalCommand">
                 <!-- Command will be inserted here -->
@@ -2169,13 +2169,13 @@
             </div>
             <div style="padding: 20px;">
                 <p class="modal-description" style="margin-bottom: 16px; line-height: 1.5;">
-                    Download this conversation as a <strong>Markdown context file</strong> that Claude Code can read to continue your work.
+                    Download this conversation as a <strong>Markdown context file</strong> that Gemini CLI can read to continue your work.
                 </p>
 
                 <div style="background: rgba(59, 130, 246, 0.08); border-left: 3px solid #3b82f6; padding: 12px; border-radius: 6px; margin-bottom: 16px;">
                     <h4 style="color: #3b82f6; margin: 0 0 8px 0; font-size: 14px;">📋 What's included</h4>
                     <p style="margin: 0; font-size: 13px; color: var(--text-secondary); line-height: 1.4;">
-                        Full conversation history (last <strong>100 messages</strong>) formatted for Claude Code to understand
+                        Full conversation history (last <strong>100 messages</strong>) formatted for Gemini CLI to understand
                     </p>
                 </div>
 
@@ -2187,12 +2187,12 @@
 
                     <div style="margin-bottom: 10px;">
                         <p style="margin: 0 0 4px 0; font-size: 12px; font-weight: 600; color: #10b981;">Option 1: Start with context loaded</p>
-                        <code style="display: block; background: rgba(0,0,0,0.5); padding: 8px; border-radius: 4px; font-size: 12px; color: #e5e7eb; overflow-x: auto; white-space: nowrap;">claude "read @context-file.md and continue"</code>
+                        <code style="display: block; background: rgba(0,0,0,0.5); padding: 8px; border-radius: 4px; font-size: 12px; color: #e5e7eb; overflow-x: auto; white-space: nowrap;">gemini "read @context-file.md and continue"</code>
                     </div>
 
                     <div>
                         <p style="margin: 0 0 4px 0; font-size: 12px; font-weight: 600; color: #10b981;">Option 2: In interactive mode</p>
-                        <code style="display: block; background: rgba(0,0,0,0.5); padding: 8px; border-radius: 4px; font-size: 12px; color: #e5e7eb; overflow-x: auto; white-space: nowrap;">claude</code>
+                        <code style="display: block; background: rgba(0,0,0,0.5); padding: 8px; border-radius: 4px; font-size: 12px; color: #e5e7eb; overflow-x: auto; white-space: nowrap;">gemini</code>
                         <code style="display: block; background: rgba(0,0,0,0.5); padding: 8px; border-radius: 4px; font-size: 12px; color: #e5e7eb; overflow-x: auto; white-space: nowrap; margin-top: 4px;">> @context-file.md continue with the task</code>
                     </div>
                 </div>
@@ -2316,7 +2316,7 @@
                         </h4>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
                             <div>
-                                <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">Claude Executing</div>
+                                <div style="font-size: 12px; color: var(--text-secondary); margin-bottom: 4px;">Gemini Executing</div>
                                 <div style="font-size: 18px; font-weight: 600; color: #3b82f6;" id="analyticsWaitTime">-</div>
                                 <div style="font-size: 11px; color: var(--text-secondary); margin-top: 2px;" id="analyticsWaitPercent">-</div>
                             </div>
@@ -2637,7 +2637,7 @@
                         <div class="no-conversations">
                             <div class="no-conversations-icon">💬</div>
                             <h3>No sessions found</h3>
-                            <p>Start a session with Claude Code to see it here</p>
+                            <p>Start a session with Gemini CLI to see it here</p>
                         </div>
                     `;
                     return;
@@ -4176,8 +4176,8 @@
                     'inactive': '○ Inactive',
                     
                     // Detailed states from StateCalculator
-                    'Claude Code working...': '⚡ Working',
-                    'Claude Code finishing...': '✓ Finishing',
+                    'Gemini CLI working...': '⚡ Working',
+                    'Gemini CLI finishing...': '✓ Finishing',
                     'Active session': '● Active',
                     'Active conversation': '● Active',
                     'Recently active': '◉ Recent',
@@ -4188,8 +4188,8 @@
                     'No messages': '○ Empty',
                     
                     // Fallback for exact matches
-                    'Claude Code working': '⚡ Working',
-                    'Claude Code': '⚡ Working',
+                    'Gemini CLI working': '⚡ Working',
+                    'Gemini CLI': '⚡ Working',
                     'working': '⚡ Working',
                     'working...': '⚡ Working',
                     'recent': '◉ Recent',
@@ -4203,7 +4203,7 @@
                 
                 // Try partial matches for complex states with icons
                 const stateLower = state.toLowerCase();
-                if (stateLower.includes('working') || stateLower.includes('claude')) {
+                if (stateLower.includes('working') || stateLower.includes('gemini')) {
                     return '⚡ Working';
                 }
                 if (stateLower.includes('active')) {
@@ -4236,7 +4236,7 @@
                 // Generate appropriate CSS class based on state
                 const stateLower = (state || '').toLowerCase();
                 
-                if (stateLower.includes('working') || stateLower.includes('claude')) {
+                if (stateLower.includes('working') || stateLower.includes('gemini')) {
                     return 'state-working';
                 }
                 if (stateLower.includes('active') || stateLower.includes('recent')) {
@@ -4456,11 +4456,11 @@
                 
                 // Analyze message patterns to determine status
                 if (lastMessage.role === 'user') {
-                    // Last message is from user - Claude should be working
+                    // Last message is from user - Gemini should be working
                     if (timeDiff < 2) {
-                        this.updateStatus('working', 'Claude Code is working...', 'Processing your request');
+                        this.updateStatus('working', 'Gemini CLI is working...', 'Processing your request');
                     } else if (timeDiff < 10) {
-                        this.updateStatus('working', 'Claude Code is thinking...', `Started ${Math.round(timeDiff)}m ago`);
+                        this.updateStatus('working', 'Gemini CLI is thinking...', `Started ${Math.round(timeDiff)}m ago`);
                     } else {
                         this.updateStatus('waiting', 'Waiting for response', `User input ${Math.round(timeDiff)}m ago`);
                     }
@@ -4473,7 +4473,7 @@
                     if (hasTools) {
                         // Assistant used tools - might still be working
                         if (timeDiff < 1) {
-                            this.updateStatus('working', 'Claude Code executing tools...', 'Running commands');
+                            this.updateStatus('working', 'Gemini CLI executing tools...', 'Running commands');
                         } else if (timeDiff < 5) {
                             this.updateStatus('working', 'Processing tool results...', `Tools executed ${Math.round(timeDiff)}m ago`);
                         } else {
@@ -4482,7 +4482,7 @@
                     } else {
                         // Regular assistant message
                         if (timeDiff < 5) {
-                            this.updateStatus('ready', 'Claude Code ready', 'Waiting for user input');
+                            this.updateStatus('ready', 'Gemini CLI ready', 'Waiting for user input');
                         } else if (timeDiff < 60) {
                             this.updateStatus('ready', 'Ready', `Response sent ${Math.round(timeDiff)}m ago`);
                         } else if (timeDiff < 1440) { // 24 hours
@@ -4756,8 +4756,8 @@
             }
         }
 
-        // Global function to resume conversation with Claude Code
-        function resumeConversationWithClaude() {
+        // Global function to resume conversation with Gemini CLI
+        function resumeConversationWithGemini() {
             const resumeBtn = document.getElementById('resumeConversation');
             const conversationId = resumeBtn.getAttribute('data-conversation-id');
 
@@ -4773,7 +4773,7 @@
         function showResumeModal(conversationId) {
             const modal = document.getElementById('resumeModal');
             const modalCommand = document.getElementById('modalCommand');
-            const command = `claude --resume ${conversationId}`;
+            const command = `gemini --resume ${conversationId}`;
 
             // Set the command in the modal
             modalCommand.textContent = command;

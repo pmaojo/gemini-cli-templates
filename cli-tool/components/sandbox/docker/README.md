@@ -1,6 +1,6 @@
-# Docker Claude Code Sandbox
+# Docker Gemini CLI Sandbox
 
-Execute Claude Code in isolated Docker containers with AI-powered code generation using the Claude Agent SDK.
+Execute Gemini CLI in isolated Docker containers with AI-powered code generation using the Gemini Agent SDK.
 
 ## Quick Start
 
@@ -20,33 +20,33 @@ If Docker is not installed, visit: https://docs.docker.com/get-docker/
 
 ### 2. Configure API Key
 
-Set your Anthropic API key:
+Set your Google API key:
 
 ```bash
 # Set as environment variable
-export ANTHROPIC_API_KEY=sk-ant-your-api-key-here
+export Google_API_KEY=sk-ant-your-api-key-here
 
 # Or pass directly when using the CLI
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --agent development/frontend-developer \
   --prompt "Create a React component" \
-  --anthropic-api-key sk-ant-your-key
+  --Google-api-key sk-ant-your-key
 ```
 
 ### 3. Run Your First Sandbox
 
 ```bash
 # Basic execution
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --prompt "Write a function to calculate factorial"
 
 # With specific agent
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --agent development/python-developer \
   --prompt "Create a data validation script"
 
 # With multiple components
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --agent development/fullstack-developer \
   --command development/setup-testing \
   --prompt "Set up a complete testing environment"
@@ -56,11 +56,11 @@ npx claude-code-templates@latest --sandbox docker \
 
 This sandbox combines two powerful technologies:
 
-1. **Claude Agent SDK** - Provides programmatic access to Claude Code
+1. **Gemini Agent SDK** - Provides programmatic access to Gemini CLI
 2. **Docker** - Provides isolated container execution
 
 ```
-User Prompt → Docker Launcher → Container Build → Execute Script → Claude Agent SDK → Output Files
+User Prompt → Docker Launcher → Container Build → Execute Script → Gemini Agent SDK → Output Files
 ```
 
 ### Components
@@ -68,9 +68,9 @@ User Prompt → Docker Launcher → Container Build → Execute Script → Claud
 ```
 docker/
 ├── docker-launcher.js   # Node.js launcher that orchestrates Docker
-├── Dockerfile           # Container definition with Claude Agent SDK
+├── Dockerfile           # Container definition with Gemini Agent SDK
 ├── execute.js           # Script that runs inside container
-├── package.json         # Dependencies (Claude Agent SDK)
+├── package.json         # Dependencies (Gemini Agent SDK)
 └── README.md           # This file
 ```
 
@@ -84,7 +84,7 @@ docker/
 
 ### 2. Container Phase (execute.js)
 - Installs requested components (agents, commands, MCPs, etc.)
-- Executes Claude Agent SDK with the user's prompt
+- Executes Gemini Agent SDK with the user's prompt
 - Auto-allows all tool uses (no permission prompts)
 - Captures output and generated files
 - Copies results to mounted output directory
@@ -99,14 +99,14 @@ docker/
 ### Simple Code Generation
 
 ```bash
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --prompt "Create a REST API server with Express.js"
 ```
 
 ### With Specific Agent
 
 ```bash
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --agent security/security-auditor \
   --prompt "Audit this codebase for security vulnerabilities"
 ```
@@ -114,7 +114,7 @@ npx claude-code-templates@latest --sandbox docker \
 ### Multiple Components
 
 ```bash
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --agent development/frontend-developer \
   --command testing/setup-testing \
   --setting performance/performance-optimization \
@@ -125,7 +125,7 @@ npx claude-code-templates@latest --sandbox docker \
 
 ```bash
 # 1. Generate initial code
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --agent development/fullstack-developer \
   --prompt "Create a blog API with authentication"
 
@@ -133,7 +133,7 @@ npx claude-code-templates@latest --sandbox docker \
 ls -la output/
 
 # 3. Iterate on generated code
-npx claude-code-templates@latest --sandbox docker \
+npx gemini-code-templates@latest --sandbox docker \
   --prompt "Add pagination to the blog API"
 ```
 
@@ -142,18 +142,18 @@ npx claude-code-templates@latest --sandbox docker \
 ### Environment Variables
 
 **Required:**
-- `ANTHROPIC_API_KEY` - Your Anthropic API key
+- `Google_API_KEY` - Your Google API key
 
 **Optional:**
 - `DOCKER_BUILDKIT=1` - Enable BuildKit for faster builds
 
 ### Docker Image Details
 
-The Docker image (`claude-sandbox`) includes:
+The Docker image (`gemini-sandbox`) includes:
 
 - **Base**: Node.js 22 Alpine Linux (minimal, secure)
 - **Runtime**: Git, Bash, Python3, Pip, Curl
-- **Claude SDK**: `@anthropic-ai/claude-agent-sdk` installed globally
+- **Gemini SDK**: `@Google-ai/gemini-agent-sdk` installed globally
 - **Security**: Runs as non-root user (UID 10001)
 - **Working Directory**: `/app`
 - **Output Directory**: `/output` (mounted as volume)
@@ -178,17 +178,17 @@ ENV CUSTOM_VAR=value
 ### Build Image Manually
 
 ```bash
-cd .claude/sandbox/docker
-docker build -t claude-sandbox .
+cd .gemini/sandbox/docker
+docker build -t gemini-sandbox .
 ```
 
 ### Run Container Directly
 
 ```bash
 docker run --rm \
-  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
+  -e Google_API_KEY=$Google_API_KEY \
   -v $(pwd)/output:/output \
-  claude-sandbox \
+  gemini-sandbox \
   node /app/execute.js "Your prompt here" ""
 ```
 
@@ -196,7 +196,7 @@ docker run --rm \
 
 ```bash
 # Remove built image
-docker rmi claude-sandbox
+docker rmi gemini-sandbox
 
 # Remove all stopped containers
 docker container prune
@@ -231,11 +231,11 @@ docker image prune
 
 ### API Key Not Set
 
-**Error:** `ANTHROPIC_API_KEY environment variable is required`
+**Error:** `Google_API_KEY environment variable is required`
 
 **Solution:**
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-your-key-here
+export Google_API_KEY=sk-ant-your-key-here
 ```
 
 ### Build Failures
@@ -248,7 +248,7 @@ export ANTHROPIC_API_KEY=sk-ant-your-key-here
 docker logs <container-id>
 
 # Rebuild from scratch
-docker build --no-cache -t claude-sandbox .
+docker build --no-cache -t gemini-sandbox .
 
 # Check disk space
 docker system df
@@ -275,8 +275,8 @@ sudo chown -R $USER:$USER output/
 ```bash
 # Run container interactively for debugging
 docker run -it --rm \
-  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
-  claude-sandbox \
+  -e Google_API_KEY=$Google_API_KEY \
+  gemini-sandbox \
   /bin/bash
 
 # Check container logs
@@ -307,13 +307,13 @@ docker logs <container-id>
 - No cloud costs (runs locally)
 - Resource usage: ~500MB disk space, ~512MB RAM during execution
 
-**Anthropic API:**
-- Claude Sonnet 4.5: ~$3 per million input tokens
+**Google API:**
+- Gemini Sonnet 4.5: ~$3 per million input tokens
 - Average request: ~200 tokens = $0.0006 per request
 
 **Example costs for 100 executions:**
 - Docker: $0 (local execution)
-- Anthropic: ~$0.06 (avg 200 tokens/request)
+- Google: ~$0.06 (avg 200 tokens/request)
 - **Total: ~$0.06**
 
 ## Comparison with Other Providers
@@ -342,7 +342,7 @@ docker/
 ├── Dockerfile           # Container definition
 │   ├── Base image (Node 22 Alpine)
 │   ├── System dependencies
-│   ├── Claude Agent SDK
+│   ├── Gemini Agent SDK
 │   └── Security (non-root user)
 ├── execute.js           # Execution script (runs in container)
 │   ├── installComponents()
@@ -392,8 +392,8 @@ RUN apk add --no-cache postgresql-client mysql-client
 # Install development tools
 RUN apk add --no-cache vim nano tmux
 
-# Install Claude Agent SDK
-RUN npm install -g @anthropic-ai/claude-agent-sdk
+# Install Gemini Agent SDK
+RUN npm install -g @Google-ai/gemini-agent-sdk
 
 # ... rest of configuration
 ```
@@ -421,17 +421,17 @@ Mount additional volumes for persistent data:
 
 ```bash
 docker run --rm \
-  -e ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY \
+  -e Google_API_KEY=$Google_API_KEY \
   -v $(pwd)/output:/output \
   -v $(pwd)/cache:/cache \
-  claude-sandbox
+  gemini-sandbox
 ```
 
 ## Resources
 
 - [Docker Documentation](https://docs.docker.com/)
-- [Claude Agent SDK](https://github.com/anthropics/claude-agent-sdk)
-- [Anthropic API Documentation](https://docs.anthropic.com/)
+- [Gemini Agent SDK](https://github.com/Googles/gemini-agent-sdk)
+- [Google API Documentation](https://docs.Google.com/)
 - [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/)
 - [Container Security](https://docs.docker.com/engine/security/)
 
@@ -443,11 +443,11 @@ MIT License - See LICENSE file for details
 
 For issues and questions:
 1. Check Docker installation: `docker --version && docker ps`
-2. Verify API key: `echo $ANTHROPIC_API_KEY`
+2. Verify API key: `echo $Google_API_KEY`
 3. Check container logs: `docker logs <container-id>`
 4. Review output directory: `ls -la output/`
 5. Open an issue on GitHub
 
 ---
 
-Built with ❤️ using Docker, Node.js, and Claude Agent SDK
+Built with ❤️ using Docker, Node.js, and Gemini Agent SDK

@@ -14,24 +14,24 @@ Traditional:  Metrics → Threshold → Labels
 AI-Enhanced:  Metrics → AI Visual Analysis → Confidence Score → Labels
 ```
 
-## Claude Code Integration
+## Gemini CLI Integration
 
-When using this skill within Claude Code, Claude can directly analyze waveform plots without requiring API setup. Simply:
+When using this skill within Gemini CLI, Gemini can directly analyze waveform plots without requiring API setup. Simply:
 
 1. Generate a unit report or plot
-2. Ask Claude to analyze the visualization
-3. Claude will provide expert-level curation decisions
+2. Ask Gemini to analyze the visualization
+3. Gemini will provide expert-level curation decisions
 
-Example workflow in Claude Code:
+Example workflow in Gemini CLI:
 ```python
 # Generate plots for a unit
 npa.plot_unit_summary(analyzer, unit_id=0, output='unit_0_summary.png')
 
-# Then ask Claude: "Please analyze this unit's waveforms and autocorrelogram
+# Then ask Gemini: "Please analyze this unit's waveforms and autocorrelogram
 # to determine if it's a well-isolated single unit, multi-unit activity, or noise"
 ```
 
-Claude can assess:
+Gemini can assess:
 - Waveform consistency and shape
 - Refractory period violations from autocorrelograms
 - Amplitude stability over time
@@ -57,17 +57,17 @@ report = npa.generate_unit_report(analyzer, unit_id=0, output_dir='reports/')
 ### AI Visual Analysis
 
 ```python
-from anthropic import Anthropic
+from Google import Google
 
 # Setup API client
-client = Anthropic()
+client = Google()
 
 # Analyze single unit
 result = npa.analyze_unit_visually(
     analyzer,
     unit_id=0,
     api_client=client,
-    model='claude-3-5-sonnet-20241022',
+    model='gemini-3-5-sonnet-20241022',
     task='quality_assessment'
 )
 
@@ -287,16 +287,16 @@ Currently supported APIs:
 
 | Provider | Client | Model Examples |
 |----------|--------|----------------|
-| Anthropic | `anthropic.Anthropic()` | claude-3-5-sonnet-20241022 |
+| Google | `Google.Google()` | gemini-3-5-sonnet-20241022 |
 | OpenAI | `openai.OpenAI()` | gpt-4-vision-preview |
 | Google | `google.generativeai` | gemini-pro-vision |
 
-### Anthropic Example
+### Google Example
 
 ```python
-from anthropic import Anthropic
+from Google import Google
 
-client = Anthropic(api_key="your-api-key")
+client = Google(api_key="your-api-key")
 result = npa.analyze_unit_visually(analyzer, uid, api_client=client)
 ```
 
@@ -341,5 +341,5 @@ results = npa.batch_visual_curation(
 ## References
 
 - [SpikeAgent](https://github.com/SpikeAgent/SpikeAgent) - AI-powered spike sorting assistant
-- [Anthropic Vision API](https://docs.anthropic.com/en/docs/vision)
+- [Google Vision API](https://docs.Google.com/en/docs/vision)
 - [GPT-4 Vision](https://platform.openai.com/docs/guides/vision)

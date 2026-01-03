@@ -55,7 +55,7 @@ Comprehensive skill for writing clinical reports including case reports, diagnos
 ### Generate a Template
 
 ```bash
-cd .claude/skills/clinical-reports/scripts
+cd .gemini/skills/clinical-reports/scripts
 python generate_report_template.py
 
 # Or specify type directly
@@ -232,5 +232,5 @@ For issues or questions about the clinical-reports skill:
 
 ## License
 
-Part of the Claude Scientific Writer project. See main LICENSE file.
+Part of the Gemini Scientific Writer project. See main LICENSE file.
 

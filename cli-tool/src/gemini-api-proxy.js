@@ -5,11 +5,11 @@ const os = require('os');
 const { v4: uuidv4 } = require('uuid');
 const chalk = require('chalk');
 
-class ClaudeAPIProxy {
+class GeminiAPIProxy {
   constructor() {
     this.app = express();
     this.port = 3335;
-    this.claudeDir = path.join(os.homedir(), '.claude');
+    this.geminiDir = path.join(os.homedir(), '.gemini');
     
     // Store active sessions and conversation contexts
     this.activeSessions = new Map();
@@ -45,7 +45,7 @@ class ClaudeAPIProxy {
       }
     });
     
-    // Send message to Claude (main endpoint)
+    // Send message to Gemini (main endpoint)
     this.app.post('/api/send-message', async (req, res) => {
       try {
         const { sessionId, message, projectPath } = req.body;
@@ -54,7 +54,7 @@ class ClaudeAPIProxy {
           return res.status(400).json({ error: 'sessionId and message are required' });
         }
         
-        const result = await this.sendMessageToClaude(sessionId, message, projectPath);
+        const result = await this.sendMessageToGemini(sessionId, message, projectPath);
         res.json(result);
         
       } catch (error) {
@@ -77,7 +77,7 @@ class ClaudeAPIProxy {
   }
   
   async getActiveSessions() {
-    const projectsDir = path.join(this.claudeDir, 'projects');
+    const projectsDir = path.join(this.geminiDir, 'projects');
     
     if (!(await fs.pathExists(projectsDir))) {
       return [];
@@ -166,7 +166,7 @@ class ClaudeAPIProxy {
     return '[No content]';
   }
   
-  async sendMessageToClaude(sessionId, messageContent, projectPath) {
+  async sendMessageToGemini(sessionId, messageContent, projectPath) {
     console.log(chalk.blue(`📤 Sending message to session ${sessionId}`));
     
     // Find the conversation file
@@ -179,7 +179,7 @@ class ClaudeAPIProxy {
     // Get conversation context
     const context = await this.getConversationContext(conversationFile);
     
-    // Create user message in Claude Code format
+    // Create user message in Gemini CLI format
     const userMessage = this.createUserMessage(messageContent, context, sessionId);
     
     // Append to JSONL file
@@ -187,21 +187,21 @@ class ClaudeAPIProxy {
     
     console.log(chalk.green(`✅ Message sent to ${conversationFile}`));
     
-    // Try to notify Claude Code process about the file change
-    await this.notifyClaudeProcess();
+    // Try to notify Gemini CLI process about the file change
+    await this.notifyGeminiProcess();
     
-    // TODO: Monitor for Claude Code response
+    // TODO: Monitor for Gemini CLI response
     
     return {
       success: true,
       messageId: userMessage.uuid,
       sessionId,
-      message: 'Message sent to Claude Code conversation'
+      message: 'Message sent to Gemini CLI conversation'
     };
   }
   
   async findConversationFile(sessionId, projectPath) {
-    const projectsDir = path.join(this.claudeDir, 'projects');
+    const projectsDir = path.join(this.geminiDir, 'projects');
     
     // If projectPath provided, look there first
     if (projectPath) {
@@ -330,8 +330,8 @@ class ClaudeAPIProxy {
   start() {
     return new Promise((resolve) => {
       this.server = this.app.listen(this.port, () => {
-        console.log(chalk.green(`🌉 Claude API Proxy running on http://localhost:${this.port}`));
-        console.log(chalk.blue(`📡 Ready to intercept and send messages to Claude Code`));
+        console.log(chalk.green(`🌉 Gemini API Proxy running on http://localhost:${this.port}`));
+        console.log(chalk.blue(`📡 Ready to intercept and send messages to Gemini CLI`));
         resolve();
       });
     });
@@ -340,94 +340,94 @@ class ClaudeAPIProxy {
   stop() {
     if (this.server) {
       this.server.close();
-      console.log(chalk.yellow(`🔌 Claude API Proxy stopped`));
+      console.log(chalk.yellow(`🔌 Gemini API Proxy stopped`));
     }
   }
 }
 
-module.exports = ClaudeAPIProxy;
+module.exports = GeminiAPIProxy;
 
-// Method to notify Claude Code process
-ClaudeAPIProxy.prototype.notifyClaudeProcess = async function() {
+// Method to notify Gemini CLI process
+GeminiAPIProxy.prototype.notifyGeminiProcess = async function() {
   try {
-    console.log(chalk.blue('🔔 Attempting to activate Claude Code process...'));
+    console.log(chalk.blue('🔔 Attempting to activate Gemini CLI process...'));
     
-    // Method 1: Find Claude Code process and try to send input
+    // Method 1: Find Gemini CLI process and try to send input
     const { exec, spawn } = require('child_process');
     
-    // First, find Claude Code processes
-    exec('ps aux | grep "claude"', (error, stdout, stderr) => {
+    // First, find Gemini CLI processes
+    exec('ps aux | grep "gemini"', (error, stdout, stderr) => {
       if (stdout) {
-        const claudeProcesses = stdout.split('\n')
-          .filter(line => line.includes('claude') && !line.includes('grep'))
-          .filter(line => !line.includes('claude-code-templates')); // Exclude our dashboard
+        const geminiProcesses = stdout.split('\n')
+          .filter(line => line.includes('gemini') && !line.includes('grep'))
+          .filter(line => !line.includes('gemini-cli-templates')); // Exclude our dashboard
         
-        console.log(chalk.blue(`🔍 Found ${claudeProcesses.length} Claude process(es)`));
+        console.log(chalk.blue(`🔍 Found ${geminiProcesses.length} Gemini process(es)`));
         
-        claudeProcesses.forEach(processLine => {
+        geminiProcesses.forEach(processLine => {
           const pid = processLine.trim().split(/\s+/)[1];
           console.log(chalk.gray(`  - PID ${pid}: ${processLine.substring(0, 100)}...`));
         });
       }
     });
     
-    // Method 2: Try to write to the Claude Code terminal using applescript (macOS)
+    // Method 2: Try to write to the Gemini CLI terminal using applescript (macOS)
     if (process.platform === 'darwin') {
       this.tryAppleScriptNotification();
     }
     
     // Method 3: Try sending wake-up signal
     try {
-      exec('pkill -SIGUSR1 claude', () => {});
+      exec('pkill -SIGUSR1 gemini', () => {});
     } catch (e) {/* ignore */}
     
   } catch (error) {
-    console.log(chalk.gray('🔕 Could not notify Claude Code process'));
+    console.log(chalk.gray('🔕 Could not notify Gemini CLI process'));
   }
 };
 
-// Try to use AppleScript to send input to Claude Code terminal
-ClaudeAPIProxy.prototype.tryAppleScriptNotification = function() {
+// Try to use AppleScript to send input to Gemini CLI terminal
+GeminiAPIProxy.prototype.tryAppleScriptNotification = function() {
   try {
     const { exec } = require('child_process');
     
-    // This AppleScript tries to find Terminal/iTerm with Claude Code and send a key
+    // This AppleScript tries to find Terminal/iTerm with Gemini CLI and send a key
     const appleScript = `
       tell application "System Events"
-        set claudeFound to false
+        set geminiFound to false
         try
           -- Try Terminal first
           tell application "Terminal"
             repeat with w in windows
               repeat with t in tabs of w
-                if (custom title of t contains "claude" or name of t contains "claude") then
-                  set claudeFound to true
+                if (custom title of t contains "gemini" or name of t contains "gemini") then
+                  set geminiFound to true
                   set frontmost to true
                   do script "" in t  -- Send empty command to wake up
                   exit repeat
                 end if
               end repeat
-              if claudeFound then exit repeat
+              if geminiFound then exit repeat
             end repeat
           end tell
         end try
         
-        if not claudeFound then
+        if not geminiFound then
           try
             -- Try iTerm2
             tell application "iTerm"
               repeat with w in windows
                 repeat with t in tabs of w
                   tell current session of t
-                    if (name contains "claude") then
-                      set claudeFound to true
+                    if (name contains "gemini") then
+                      set geminiFound to true
                       select
                       write text ""
                       exit repeat
                     end if
                   end tell
                 end repeat
-                if claudeFound then exit repeat
+                if geminiFound then exit repeat
               end repeat
             end tell
           end try
@@ -450,7 +450,7 @@ ClaudeAPIProxy.prototype.tryAppleScriptNotification = function() {
 
 // If run directly
 if (require.main === module) {
-  const proxy = new ClaudeAPIProxy();
+  const proxy = new GeminiAPIProxy();
   proxy.start();
   
   process.on('SIGINT', () => {

@@ -1,5 +1,5 @@
 {
-  "description": "Send Slack notifications when Claude Code encounters long-running operations or when tools take significant time. Helps monitor productivity and catch potential issues. Requires SLACK_WEBHOOK_URL environment variable.",
+  "description": "Send Slack notifications when Gemini CLI encounters long-running operations or when tools take significant time. Helps monitor productivity and catch potential issues. Requires SLACK_WEBHOOK_URL environment variable.",
   "hooks": {
     "PreToolUse": [
       {
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [[ -n \"$SLACK_WEBHOOK_URL\" ]]; then MESSAGE='{\"blocks\":[{\"type\":\"header\",\"text\":{\"type\":\"plain_text\",\"text\":\"🔔 Claude Code Notification\"}},{\"type\":\"section\",\"fields\":[{\"type\":\"mrkdwn\",\"text\":\"*📁 Project:*\\n'\"$(basename \"$(pwd)\")\"'\"},{\"type\":\"mrkdwn\",\"text\":\"*⏰ Time:*\\n'\"$(date '+%H:%M:%S')\"'\"},{\"type\":\"mrkdwn\",\"text\":\"*💬 Status:*\\nWaiting for user input or permission\"}]}]}'; curl -s -X POST \"$SLACK_WEBHOOK_URL\" -H \"Content-type: application/json\" -d \"$MESSAGE\" >/dev/null 2>&1; fi"
+            "command": "if [[ -n \"$SLACK_WEBHOOK_URL\" ]]; then MESSAGE='{\"blocks\":[{\"type\":\"header\",\"text\":{\"type\":\"plain_text\",\"text\":\"🔔 Gemini CLI Notification\"}},{\"type\":\"section\",\"fields\":[{\"type\":\"mrkdwn\",\"text\":\"*📁 Project:*\\n'\"$(basename \"$(pwd)\")\"'\"},{\"type\":\"mrkdwn\",\"text\":\"*⏰ Time:*\\n'\"$(date '+%H:%M:%S')\"'\"},{\"type\":\"mrkdwn\",\"text\":\"*💬 Status:*\\nWaiting for user input or permission\"}]}]}'; curl -s -X POST \"$SLACK_WEBHOOK_URL\" -H \"Content-type: application/json\" -d \"$MESSAGE\" >/dev/null 2>&1; fi"
           }
         ]
       }

@@ -84,29 +84,29 @@ Error: Container not ready. Please wait 2-3 minutes after deployment.
    curl http://localhost:8787
    ```
 
-### Problem: "Anthropic API key not set"
+### Problem: "Google API key not set"
 **Symptoms**:
 ```
-Error: ANTHROPIC_API_KEY is required
+Error: Google_API_KEY is required
 ```
 
 **Solutions**:
 1. **Set as Wrangler secret (Production)**:
    ```bash
-   npx wrangler secret put ANTHROPIC_API_KEY
+   npx wrangler secret put Google_API_KEY
    # Paste your key when prompted
    ```
 
 2. **Set in .dev.vars (Local Development)**:
    ```bash
    # Create .dev.vars file:
-   echo "ANTHROPIC_API_KEY=sk-ant-your-key-here" > .dev.vars
+   echo "Google_API_KEY=sk-ant-your-key-here" > .dev.vars
    ```
 
 3. **Verify secret is set**:
    ```bash
    npx wrangler secret list
-   # Should show ANTHROPIC_API_KEY
+   # Should show Google_API_KEY
    ```
 
 ### Problem: "Sandbox execution timeout"
@@ -133,7 +133,7 @@ Error: Sandbox execution exceeded 30 second timeout
 3. **Break into smaller tasks**:
    ```bash
    # Instead of complex operations, break into steps
-   npx claude-code-templates --sandbox cloudflare \
+   npx gemini-code-templates --sandbox cloudflare \
      --prompt "Step 1: Create data structure"
    ```
 
@@ -190,9 +190,9 @@ Memory Usage: 45MB / 128MB
 [14:32:16] ✓ Worker is responding
 [14:32:16] ℹ    Status: 200 OK
 
-[14:32:17] ℹ 🤖 Starting code generation with Claude...
+[14:32:17] ℹ 🤖 Starting code generation with Gemini...
 [14:32:19] ✓ Code generated in 2147ms
-[14:32:19] ℹ    Model: claude-sonnet-4-5-20250929
+[14:32:19] ℹ    Model: gemini-sonnet-4-5-20250929
 [14:32:19] ℹ    Tokens used: 156 in, 89 out
 [14:32:19] ℹ    Code length: 234 characters
 
@@ -218,13 +218,13 @@ Status: Success ✓
 
 ### 1. Code Generation Issues
 ```bash
-# Use monitor to see exact Claude API interaction
+# Use monitor to see exact Gemini API interaction
 node monitor.ts "Complex prompt that might fail"
 
 # Look for:
 # - Token usage (may hit limits)
 # - Generated code preview
-# - Model used (should be claude-sonnet-4-5)
+# - Model used (should be gemini-sonnet-4-5)
 ```
 
 ### 2. Sandbox Execution Problems
@@ -245,7 +245,7 @@ node launcher.ts "Test prompt"
 node monitor.ts "Your prompt"
 
 # Compare metrics:
-# - Code Generation Time (Claude API)
+# - Code Generation Time (Gemini API)
 # - Sandbox Execution Time (Cloudflare)
 # - Total Round Trip Time
 ```
@@ -272,7 +272,7 @@ vars = { DEBUG = "true" }
 
 # Or in .dev.vars for local development
 DEBUG=true
-ANTHROPIC_API_KEY=your_key
+Google_API_KEY=your_key
 ```
 
 ### Custom Timeouts:
@@ -296,7 +296,7 @@ npx wrangler deploy --verbose
 
 ### Before Reporting an Issue:
 - [ ] Cloudflare Workers account active (Paid plan if using Durable Objects)
-- [ ] Anthropic API key valid and has credits
+- [ ] Google API key valid and has credits
 - [ ] Worker deployed successfully (`npx wrangler deploy`)
 - [ ] Waited 2-3 minutes after first deployment
 - [ ] Containers provisioned (`npx wrangler containers list`)
@@ -320,7 +320,7 @@ npx wrangler deploy --verbose
 
 ### 1. Minimize Code Generation Time
 ```typescript
-// Be specific to reduce Claude's thinking time
+// Be specific to reduce Gemini's thinking time
 const prompt = `Generate a single Python function to calculate factorial.
 Use recursion. Include only the function, no tests.`;
 ```

@@ -32,10 +32,10 @@ describe('Analytics System Integration', () => {
 
   describe('Backend Integration', () => {
     it('should load and analyze conversation data correctly', async () => {
-      const ClaudeAnalytics = require('../../src/analytics');
+      const GeminiAnalytics = require('../../src/analytics');
       
-      const analytics = new ClaudeAnalytics();
-      analytics.claudeDir = testDataDir;
+      const analytics = new GeminiAnalytics();
+      analytics.geminiDir = testDataDir;
       
       // Mock the setup methods to avoid actual server startup
       analytics.setupWebServer = jest.fn();
@@ -212,13 +212,13 @@ describe('Analytics System Integration', () => {
 
   describe('End-to-End Analytics Flow', () => {
     it('should process conversation changes end-to-end', async () => {
-      const ClaudeAnalytics = require('../../src/analytics');
-      const analytics = new ClaudeAnalytics();
+      const GeminiAnalytics = require('../../src/analytics');
+      const analytics = new GeminiAnalytics();
       
       // Mock server setup
       analytics.setupWebServer = jest.fn();
       analytics.setupFileWatchers = jest.fn();
-      analytics.claudeDir = testDataDir;
+      analytics.geminiDir = testDataDir;
       
       // Initialize analytics
       await analytics.loadInitialData();

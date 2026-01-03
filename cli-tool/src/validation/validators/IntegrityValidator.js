@@ -18,7 +18,7 @@ class IntegrityValidator extends BaseValidator {
     super();
 
     // Path to store component hashes (relative to project)
-    this.HASH_REGISTRY_PATH = '.claude/security/component-hashes.json';
+    this.HASH_REGISTRY_PATH = '.gemini/security/component-hashes.json';
   }
 
   /**

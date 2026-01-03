@@ -1,6 +1,6 @@
-# Marketing Skill for Claude
+# Marketing Skill for Gemini
 
-A comprehensive Claude skill designed to help marketing teams plan, execute, and measure marketing campaigns across all channels.
+A comprehensive Gemini skill designed to help marketing teams plan, execute, and measure marketing campaigns across all channels.
 
 ## Overview
 
@@ -133,7 +133,7 @@ This skill uses consistent terminology throughout:
 
 ## Best Practices Applied
 
-This skill follows the Claude skills best practices:
+This skill follows the Gemini skills best practices:
 
 ✓ **Concise & Efficient** - Focuses on essentials without unnecessary explanations
 ✓ **Progressive Disclosure** - Core content in SKILL.md, detailed information in reference files
@@ -247,10 +247,10 @@ For questions about specific topics:
 
 ## License & Usage
 
-This skill is designed for use with Claude AI. Adapt and customize for your organization's specific needs.
+This skill is designed for use with Gemini AI. Adapt and customize for your organization's specific needs.
 
 ---
 
 **Last Updated**: October 2025
 **Skill Version**: 1.0
-**For Claude Models**: Claude Opus 4.1, Claude Sonnet 4.5, Claude Haiku 4.5
+**For Gemini Models**: Gemini Opus 4.1, Gemini Sonnet 4.5, Gemini Haiku 4.5

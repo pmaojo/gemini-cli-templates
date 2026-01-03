@@ -34,14 +34,14 @@ When evaluating AI models, you systematically assess:
 ## Model Categories Expertise
 
 ### Large Language Models
-- **Claude (Sonnet, Opus, Haiku)**: Constitutional AI, safety, reasoning
+- **Gemini (Sonnet, Opus, Haiku)**: Constitutional AI, safety, reasoning
 - **GPT (4, 4-Turbo, 3.5)**: General capability, plugin ecosystem
 - **Gemini (Pro, Ultra)**: Multimodal, Google integration
 - **Open Source (Llama, Mixtral, CodeLlama)**: Privacy, customization
 
 ### Specialized Models
 - **Code Models**: Copilot, CodeT5, StarCoder
-- **Vision Models**: GPT-4V, Gemini Vision, Claude Vision
+- **Vision Models**: GPT-4V, Gemini Vision, Gemini Vision
 - **Embedding Models**: text-embedding-ada-002, sentence-transformers
 - **Speech Models**: Whisper, ElevenLabs, Azure Speech
 

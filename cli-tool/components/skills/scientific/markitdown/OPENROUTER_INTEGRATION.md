@@ -8,7 +8,7 @@ This MarkItDown skill has been configured to use **OpenRouter** instead of direc
 
 ### Benefits
 
-1. **Multiple Model Access**: Access GPT-4, Claude, Gemini, and 100+ other models through one API
+1. **Multiple Model Access**: Access GPT-4, Gemini, Gemini, and 100+ other models through one API
 2. **No Vendor Lock-in**: Switch between models without code changes
 3. **Competitive Pricing**: Often better rates than going direct
 4. **Simple Migration**: OpenAI-compatible API means minimal code changes
@@ -18,8 +18,8 @@ This MarkItDown skill has been configured to use **OpenRouter** instead of direc
 
 | Model | Provider | Use Case | Vision Support |
 |-------|----------|----------|----------------|
-| `anthropic/claude-sonnet-4.5` | Anthropic | **Recommended** - Best overall for scientific analysis | ✅ |
-| `anthropic/claude-opus-4.5` | Anthropic | Excellent technical analysis | ✅ |
+| `Google/gemini-sonnet-4.5` | Google | **Recommended** - Best overall for scientific analysis | ✅ |
+| `Google/gemini-opus-4.5` | Google | Excellent technical analysis | ✅ |
 | `openai/gpt-4o` | OpenAI | Strong vision understanding | ✅ |
 | `openai/gpt-4-vision` | OpenAI | GPT-4 with vision | ✅ |
 | `google/gemini-pro-vision` | Google | Cost-effective option | ✅ |
@@ -64,7 +64,7 @@ client = OpenAI(
 # Create MarkItDown with AI support
 md = MarkItDown(
     llm_client=client,
-    llm_model="anthropic/claude-sonnet-4.5"  # Choose your model
+    llm_model="Google/gemini-sonnet-4.5"  # Choose your model
 )
 
 # Convert with AI-enhanced descriptions
@@ -104,22 +104,22 @@ python scripts/convert_with_ai.py --list-prompts
 ```bash
 # For scientific papers - use advanced vision model for technical analysis
 python scripts/convert_with_ai.py research.pdf output.md \
-  --model anthropic/claude-sonnet-4.5 \
+  --model Google/gemini-sonnet-4.5 \
   --prompt-type scientific
 
 # For presentations - use advanced vision model
 python scripts/convert_with_ai.py slides.pptx output.md \
-  --model anthropic/claude-sonnet-4.5 \
+  --model Google/gemini-sonnet-4.5 \
   --prompt-type presentation
 
 # For data visualizations - use advanced vision model
 python scripts/convert_with_ai.py charts.pdf output.md \
-  --model anthropic/claude-sonnet-4.5 \
+  --model Google/gemini-sonnet-4.5 \
   --prompt-type data_viz
 
 # For medical images - use advanced vision model for detailed analysis
 python scripts/convert_with_ai.py xray.jpg output.md \
-  --model anthropic/claude-sonnet-4.5 \
+  --model Google/gemini-sonnet-4.5 \
   --prompt-type medical
 ```
 
@@ -141,7 +141,7 @@ client = OpenAI(
 # Use advanced vision model for image descriptions
 md = MarkItDown(
     llm_client=client,
-    llm_model="anthropic/claude-sonnet-4.5"
+    llm_model="Google/gemini-sonnet-4.5"
 )
 
 result = md.convert("document.pptx")
@@ -166,21 +166,21 @@ def convert_with_best_model(filepath):
         # Use advanced vision model for technical PDFs
         md = MarkItDown(
             llm_client=client,
-            llm_model="anthropic/claude-sonnet-4.5",
+            llm_model="Google/gemini-sonnet-4.5",
             llm_prompt="Describe scientific figures with technical precision"
         )
     elif filepath.endswith('.pptx'):
         # Use advanced vision model for presentations
         md = MarkItDown(
             llm_client=client,
-            llm_model="anthropic/claude-sonnet-4.5",
+            llm_model="Google/gemini-sonnet-4.5",
             llm_prompt="Describe slide content and visual elements"
         )
     else:
         # Use advanced vision model as default
         md = MarkItDown(
             llm_client=client,
-            llm_model="anthropic/claude-sonnet-4.5"
+            llm_model="Google/gemini-sonnet-4.5"
         )
     
     return md.convert(filepath)
@@ -212,7 +212,7 @@ Be precise and use scientific terminology.
 
 md_scientific = MarkItDown(
     llm_client=client,
-    llm_model="anthropic/claude-sonnet-4.5",
+    llm_model="Google/gemini-sonnet-4.5",
     llm_prompt=scientific_prompt
 )
 
@@ -227,7 +227,7 @@ Describe this image comprehensively:
 
 md_visual = MarkItDown(
     llm_client=client,
-    llm_model="anthropic/claude-sonnet-4.5",
+    llm_model="Google/gemini-sonnet-4.5",
     llm_prompt=visual_prompt
 )
 ```
@@ -236,7 +236,7 @@ md_visual = MarkItDown(
 
 ### For Scientific Content
 
-**Recommended: anthropic/claude-sonnet-4.5**
+**Recommended: Google/gemini-sonnet-4.5**
 - Excellent at technical analysis
 - Superior reasoning capabilities
 - Best at understanding scientific figures
@@ -250,7 +250,7 @@ md_visual = MarkItDown(
 
 ### For Presentations
 
-**Recommended: anthropic/claude-sonnet-4.5**
+**Recommended: Google/gemini-sonnet-4.5**
 - Superior vision capabilities
 - Excellent at understanding slide layouts
 - Fast and reliable
@@ -326,11 +326,11 @@ Here's a complete workflow using OpenRouter:
 # 1. Set up API key
 export OPENROUTER_API_KEY="sk-or-v1-your-key-here"
 
-# 2. Convert a scientific paper with Claude
+# 2. Convert a scientific paper with Gemini
 python scripts/convert_with_ai.py \
   research_paper.pdf \
   output.md \
-  --model anthropic/claude-opus-4.5 \
+  --model Google/gemini-opus-4.5 \
   --prompt-type scientific
 
 # 3. Convert presentation with GPT-4o

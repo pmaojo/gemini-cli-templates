@@ -1,6 +1,6 @@
 # API - Vercel Serverless Functions
 
-Critical infrastructure for claude-code-templates component ecosystem.
+Critical infrastructure for gemini-code-templates component ecosystem.
 
 ## ⚠️ CRITICAL ENDPOINTS
 
@@ -10,7 +10,7 @@ These endpoints are essential for component download metrics. **DO NOT BREAK THE
 
 Tracks every component installation from the CLI tool.
 
-**Used by**: `cli-tool/bin/create-claude-config.js`
+**Used by**: `cli-tool/bin/create-gemini-config.js`
 
 **Called on**: Every `--agent`, `--command`, `--mcp`, `--hook`, `--setting`, `--skill` installation
 
@@ -22,13 +22,13 @@ Discord bot for component discovery and search.
 
 **Features**: `/search`, `/info`, `/install`, `/popular`, `/random`
 
-### `/api/claude-code-check` 🟢
+### `/api/gemini-code-check` 🟢
 
-Monitors Claude Code releases and sends Discord notifications.
+Monitors Gemini Code releases and sends Discord notifications.
 
 **Frequency**: Every 4 hours (Vercel Cron)
 
-**Database**: Neon (claude_code_versions, claude_code_changes)
+**Database**: Neon (gemini_code_versions, gemini_code_changes)
 
 ## 🧪 Testing
 
@@ -79,11 +79,11 @@ vercel --prod
 ```
 api/
 ├── track-download-supabase.js       # Component download tracking (CRITICAL)
-├── claude-code-check.js             # Claude Code changelog monitor
-├── _parser-claude.js                # Changelog parser utility
+├── gemini-code-check.js             # Gemini Code changelog monitor
+├── _parser-gemini.js                # Changelog parser utility
 ├── discord/
 │   └── interactions.js              # Discord bot handler
-├── claude-code-monitor/
+├── gemini-code-monitor/
 │   ├── README.md                    # Detailed docs
 │   ├── check-version.js             # Version checker
 │   ├── discord-notifier.js          # Discord notifications
@@ -168,7 +168,7 @@ ORDER BY downloads DESC;
 **Neon**:
 ```sql
 SELECT version, published_at, discord_notified
-FROM claude_code_versions
+FROM gemini_code_versions
 ORDER BY published_at DESC;
 ```
 

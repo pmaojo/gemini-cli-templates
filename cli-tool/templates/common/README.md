@@ -1,12 +1,12 @@
-# Common Claude Code Templates
+# Common Gemini Code Templates
 
 This folder contains language-agnostic templates and configurations that can be used across different programming languages and project types.
 
 ## What's Included
 
 ### Core Files
-- `CLAUDE.md` - Base configuration for Claude Code with universal best practices
-- `.claude/commands/` - Custom commands for common development tasks
+- `CLAUDE.md` - Base configuration for Gemini Code with universal best practices
+- `.gemini/commands/` - Custom commands for common development tasks
 
 ### Common Custom Commands
 - `git-workflow.md` - Git operations and workflow automation
@@ -20,18 +20,18 @@ This folder contains language-agnostic templates and configurations that can be 
 Copy the entire `common/` folder contents to your project root:
 
 ```bash
-cp -r claude-code-templates/common/* your-project/
+cp -r gemini-code-templates/common/* your-project/
 ```
 
 ### For Existing Projects
-Merge the relevant files with your existing Claude Code configuration:
+Merge the relevant files with your existing Gemini Code configuration:
 
 ```bash
 # Copy custom commands
-cp -r claude-code-templates/common/.claude/commands/* your-project/.claude/commands/
+cp -r gemini-code-templates/common/.gemini/commands/* your-project/.gemini/commands/
 
 # Review and merge CLAUDE.md content
-cat claude-code-templates/common/CLAUDE.md >> your-project/CLAUDE.md
+cat gemini-code-templates/common/CLAUDE.md >> your-project/CLAUDE.md
 ```
 
 ## Customization
@@ -69,11 +69,11 @@ For projects using multiple programming languages:
 
 ```bash
 # Copy common base
-cp -r claude-code-templates/common/* your-project/
+cp -r gemini-code-templates/common/* your-project/
 
 # Add language-specific configurations
-cp -r claude-code-templates/javascript-typescript/.claude/commands/* your-project/.claude/commands/
-cp -r claude-code-templates/python/.claude/commands/* your-project/.claude/commands/
+cp -r gemini-code-templates/javascript-typescript/.gemini/commands/* your-project/.gemini/commands/
+cp -r gemini-code-templates/python/.gemini/commands/* your-project/.gemini/commands/
 ```
 
 ### Team Standardization
@@ -88,7 +88,7 @@ Organizations can use this as a base template and customize it for their specifi
 
 - **Start Simple**: Begin with the common template and add complexity as needed
 - **Document Changes**: Keep track of customizations in your project's documentation
-- **Regular Updates**: Periodically review and update your Claude Code configuration
+- **Regular Updates**: Periodically review and update your Gemini Code configuration
 - **Team Alignment**: Ensure all team members understand the custom commands and workflows
 
 ## Contributing

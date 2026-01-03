@@ -4,7 +4,7 @@ const os = require('os');
 
 /**
  * Year in Review 2025 Analyzer
- * Generates comprehensive yearly statistics for Claude Code usage in 2025
+ * Generates comprehensive yearly statistics for Gemini CLI usage in 2025
  */
 class YearInReview2025 {
   constructor() {
@@ -16,10 +16,10 @@ class YearInReview2025 {
   /**
    * Generate complete 2025 year in review statistics
    * @param {Array} allConversations - All conversations from analytics
-   * @param {string} claudeDir - Claude directory path for subagent analysis
+   * @param {string} geminiDir - Gemini directory path for subagent analysis
    * @returns {Object} Complete year in review data
    */
-  async generateYearInReview(allConversations, claudeDir) {
+  async generateYearInReview(allConversations, geminiDir) {
     // Filter conversations from 2025
     const conversations2025 = this.filterConversations2025(allConversations);
 
@@ -33,7 +33,7 @@ class YearInReview2025 {
       this.analyzeCommands(),
       this.analyzeSkills(),
       this.analyzeMCPs(),
-      claudeDir ? this.analyzeSubagents(claudeDir) : { subagents: [], total: 0 }
+      geminiDir ? this.analyzeSubagents(geminiDir) : { subagents: [], total: 0 }
     ]);
 
     // Calculate all statistics
@@ -177,12 +177,12 @@ class YearInReview2025 {
 
     // Map common model names
     const nameMap = {
-      'claude-3-5-sonnet': 'Claude 3.5 Sonnet',
-      'claude-3-sonnet': 'Claude 3 Sonnet',
-      'claude-3-opus': 'Claude 3 Opus',
-      'claude-3-haiku': 'Claude 3 Haiku',
-      'claude-sonnet-4-5-20250929': 'Claude 4.5 Sonnet',
-      'claude-opus-4-5-20251101': 'Claude Opus 4.5'
+      'gemini-3-5-gemini-2.0-flash': 'Gemini 3.5 Sonnet',
+      'gemini-3-gemini-2.0-flash': 'Gemini 3 Sonnet',
+      'gemini-3-opus': 'Gemini 3 Opus',
+      'gemini-3-gemini-2.0-flash': 'Gemini 3 Haiku',
+      'gemini-gemini-2.0-flash-4-5-20250929': 'Gemini 4.5 Sonnet',
+      'gemini-opus-4-5-20251101': 'Gemini Opus 4.5'
     };
 
     return nameMap[modelName] || modelName;
@@ -563,7 +563,7 @@ class YearInReview2025 {
   }
 
   /**
-   * Detect installed components from .claude directory
+   * Detect installed components from .gemini directory
    * @returns {Promise<Array>} List of component installations
    */
   async detectInstalledComponents() {
@@ -573,12 +573,12 @@ class YearInReview2025 {
     const path = require('path');
 
     try {
-      const claudeDir = path.join(os.homedir(), '.claude');
-      const localDir = path.join(claudeDir, 'local');
+      const geminiDir = path.join(os.homedir(), '.gemini');
+      const localDir = path.join(geminiDir, 'local');
 
       // Check if local directory exists
       if (await fs.pathExists(localDir)) {
-        const settings = await fs.readJSON(path.join(claudeDir, 'settings.json')).catch(() => ({}));
+        const settings = await fs.readJSON(path.join(geminiDir, 'settings.json')).catch(() => ({}));
 
         // Extract MCPs from settings
         if (settings.mcpServers) {
@@ -657,7 +657,7 @@ class YearInReview2025 {
     const path = require('path');
 
     try {
-      const historyPath = path.join(os.homedir(), '.claude', 'history.jsonl');
+      const historyPath = path.join(os.homedir(), '.gemini', 'history.jsonl');
       if (!await fs.pathExists(historyPath)) {
         return { commands: [], total: 0, events: [] };
       }
@@ -720,7 +720,7 @@ class YearInReview2025 {
     const path = require('path');
 
     try {
-      const skillsPath = path.join(os.homedir(), '.claude', 'skills');
+      const skillsPath = path.join(os.homedir(), '.gemini', 'skills');
       if (!await fs.pathExists(skillsPath)) {
         return { skills: [], total: 0, events: [] };
       }
@@ -770,7 +770,7 @@ class YearInReview2025 {
     const path = require('path');
 
     try {
-      const settingsPath = path.join(os.homedir(), '.claude', 'settings.json');
+      const settingsPath = path.join(os.homedir(), '.gemini', 'settings.json');
       if (!await fs.pathExists(settingsPath)) {
         return { mcps: [], total: 0, events: [] };
       }
@@ -814,15 +814,15 @@ class YearInReview2025 {
 
   /**
    * Analyze subagent usage
-   * @param {string} claudeDir - Claude directory path
+   * @param {string} geminiDir - Gemini directory path
    * @returns {Promise<Object>} Subagents data
    */
-  async analyzeSubagents(claudeDir) {
+  async analyzeSubagents(geminiDir) {
     const fs = require('fs-extra');
     const path = require('path');
 
     try {
-      const projectsDir = path.join(claudeDir, 'projects');
+      const projectsDir = path.join(geminiDir, 'projects');
       if (!await fs.pathExists(projectsDir)) {
         return { subagents: [], total: 0, events: [] };
       }

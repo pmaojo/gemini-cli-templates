@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Safety Features
 
-`claude-code-templates` is designed with several safety features to ensure that your project and data are protected during the setup and configuration process.
+`gemini-code-templates` is designed with several safety features to ensure that your project and data are protected during the setup and configuration process.
 
 -   **Automatic Backups**: Existing files are automatically backed up before any changes are made, allowing you to revert to a previous state if needed.
 -   **Confirmation Required**: The CLI always asks for your confirmation before making significant changes to your project (unless the `--yes` flag is used), giving you full control over the process.

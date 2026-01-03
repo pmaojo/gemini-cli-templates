@@ -55,7 +55,7 @@ class AgentAnalytics {
               <span class="title-icon">🤖</span>
               Agent Usage Analytics
             </h2>
-            <p class="analytics-subtitle">Specialized Claude Code agent usage patterns and workflow insights</p>
+            <p class="analytics-subtitle">Specialized Gemini CLI agent usage patterns and workflow insights</p>
           </div>
           
           <!-- Date Filter Controls -->
@@ -408,7 +408,7 @@ class AgentAnalytics {
           label: 'Agent Invocations',
           data: hourlyData.map(h => h.count),
           backgroundColor: 'rgba(217, 116, 85, 0.6)',
-          borderColor: '#d57455',
+          borderColor: '#1a73e8',
           borderWidth: 1,
           borderRadius: 4
         }]
@@ -584,12 +584,12 @@ class AgentAnalytics {
         <div class="no-data-content">
           <div class="no-data-icon">🤖</div>
           <h3>No Agent Usage Data</h3>
-          <p>No specialized Claude Code agents have been used yet.</p>
+          <p>No specialized Gemini CLI agents have been used yet.</p>
           <div class="agent-types">
             <h4>Available Agent Types:</h4>
             <ul>
               <li><strong>general-purpose:</strong> Multi-step tasks and research</li>
-              <li><strong>claude-code-best-practices:</strong> Workflow optimization</li>
+              <li><strong>gemini-code-best-practices:</strong> Workflow optimization</li>
               <li><strong>docusaurus-expert:</strong> Documentation management</li>
             </ul>
           </div>

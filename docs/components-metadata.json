@@ -59,12 +59,12 @@
       "color": "#10a37f",
       "website": "https://openai.com"
     },
-    "anthropic": {
-      "name": "Anthropic",
-      "description": "Claude AI integration and constitutional AI development",
+    "google": {
+      "name": "Google",
+      "description": "Gemini AI integration and constitutional AI development",
       "logo": "🧠",
       "color": "#d97706",
-      "website": "https://anthropic.com"
+      "website": "https://google.com"
     },
     "stripe": {
       "name": "Stripe",

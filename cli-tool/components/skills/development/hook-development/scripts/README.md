@@ -28,7 +28,7 @@ cd my-plugin
 
 ## test-hook.sh
 
-Tests individual hook scripts with sample input before deploying to Claude Code.
+Tests individual hook scripts with sample input before deploying to Gemini CLI.
 
 **Usage:**
 ```bash
@@ -122,9 +122,9 @@ Checks hook scripts for common issues and best practices violations.
    ./validate-hook-schema.sh my-plugin/hooks/hooks.json
    ```
 
-7. **Test in Claude Code**
+7. **Test in Gemini CLI**
    ```bash
-   claude --debug
+   gemini --debug
    ```
 
 ## Tips

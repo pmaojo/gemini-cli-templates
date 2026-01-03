@@ -121,8 +121,8 @@ Modify hook behavior based on project configuration:
 cd "$CLAUDE_PROJECT_DIR" || exit 1
 
 # Read project-specific config
-if [ -f ".claude-hooks-config.json" ]; then
-  strict_mode=$(jq -r '.strict_mode' .claude-hooks-config.json)
+if [ -f ".gemini-hooks-config.json" ]; then
+  strict_mode=$(jq -r '.strict_mode' .gemini-hooks-config.json)
 
   if [ "$strict_mode" = "true" ]; then
     # Apply strict validation
@@ -134,7 +134,7 @@ if [ -f ".claude-hooks-config.json" ]; then
 fi
 ```
 
-**Example .claude-hooks-config.json:**
+**Example .gemini-hooks-config.json:**
 ```json
 {
   "strict_mode": true,
@@ -355,7 +355,7 @@ tool_name=$(echo "$input" | jq -r '.tool_name')
 timestamp=$(date -Iseconds)
 
 # Append to audit log
-echo "$timestamp | $USER | $tool_name | $input" >> ~/.claude/audit.log
+echo "$timestamp | $USER | $tool_name | $input" >> ~/.gemini/audit.log
 
 exit 0
 ```

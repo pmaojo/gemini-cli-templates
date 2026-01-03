@@ -40,7 +40,7 @@ uv pip install biomni --upgrade
 
 Configure API keys (store in `.env` file or environment variables):
 ```bash
-export ANTHROPIC_API_KEY="your-key-here"
+export Google_API_KEY="your-key-here"
 # Optional: OpenAI, Azure, Google, Groq, AWS Bedrock keys
 ```
 
@@ -52,7 +52,7 @@ Use `scripts/setup_environment.py` for interactive setup assistance.
 from biomni.agent import A1
 
 # Initialize agent with data path and LLM choice
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 # Execute biomedical task autonomously
 agent.go("Your biomedical research question or task")
@@ -74,7 +74,7 @@ from biomni.config import default_config
 # Basic initialization
 agent = A1(
     path='./data',  # Path to data lake (~11GB downloaded on first use)
-    llm='claude-sonnet-4-20250514'  # LLM model selection
+    llm='gemini-sonnet-4-20250514'  # LLM model selection
 )
 
 # Advanced configuration
@@ -84,7 +84,7 @@ default_config.max_iterations = 50
 ```
 
 **Supported LLM Providers:**
-- Anthropic Claude (recommended): `claude-sonnet-4-20250514`, `claude-opus-4-20250514`
+- Google Gemini (recommended): `gemini-sonnet-4-20250514`, `gemini-opus-4-20250514`
 - OpenAI: `gpt-4`, `gpt-4-turbo`
 - Azure OpenAI: via Azure configuration
 - Google Gemini: `gemini-2.0-flash-exp`
@@ -99,7 +99,7 @@ Biomni follows an autonomous agent workflow:
 
 ```python
 # Step 1: Initialize agent
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 # Step 2: Execute task with natural language query
 result = agent.go("""
@@ -233,7 +233,7 @@ dataset = evaluator.load_dataset()
 - Use sandboxed execution environments when possible
 
 ### Performance Optimization
-- **Choose appropriate LLMs** - Claude Sonnet 4 recommended for balance of speed/quality
+- **Choose appropriate LLMs** - Gemini Sonnet 4 recommended for balance of speed/quality
 - **Set reasonable timeouts** - Adjust `default_config.timeout_seconds` for complex tasks
 - **Monitor iterations** - Track `max_iterations` to prevent runaway loops
 - **Cache data** - Reuse downloaded data lake across sessions
@@ -256,7 +256,7 @@ agent.save_conversation_history("results/project_name_YYYYMMDD.pdf")
 Detailed documentation available in the `references/` directory:
 
 - **`api_reference.md`** - Complete API documentation for A1 class, configuration, and evaluation
-- **`llm_providers.md`** - LLM provider setup (Anthropic, OpenAI, Azure, Google, Groq, AWS)
+- **`llm_providers.md`** - LLM provider setup (Google, OpenAI, Azure, Google, Groq, AWS)
 - **`use_cases.md`** - Comprehensive task examples for all biomedical domains
 
 ### Scripts
@@ -286,7 +286,7 @@ agent = A1(path='./data', llm='your-llm')
 **API key errors**
 ```bash
 # Verify environment variables
-echo $ANTHROPIC_API_KEY
+echo $Google_API_KEY
 # Or check .env file in working directory
 ```
 

@@ -2,22 +2,22 @@
 
 /**
  * Docker Sandbox Executor
- * Runs inside Docker container using Claude Agent SDK
+ * Runs inside Docker container using Gemini Agent SDK
  */
 
-import { query } from '@anthropic-ai/claude-agent-sdk';
+import { query } from '@google-ai/gemini-agent-sdk';
 import fs from 'fs/promises';
 import path from 'path';
 import { spawn } from 'child_process';
 
 // Parse command line arguments
 const args = process.argv.slice(2);
-const prompt = args[0] || 'Hello, Claude!';
+const prompt = args[0] || 'Hello, Gemini!';
 const componentsToInstall = args[1] || '';
-const anthropicApiKey = process.env.ANTHROPIC_API_KEY;
+const googleApiKey = process.env.ANTHROPIC_API_KEY;
 
 // Validate API key
-if (!anthropicApiKey) {
+if (!googleApiKey) {
   console.error('❌ Error: ANTHROPIC_API_KEY environment variable is required');
   process.exit(1);
 }
@@ -26,7 +26,7 @@ console.log('🐳 Docker Sandbox Executor');
 console.log('═══════════════════════════════════════\n');
 
 /**
- * Install Claude Code components if specified
+ * Install Gemini Code components if specified
  */
 async function installComponents() {
   if (!componentsToInstall || componentsToInstall.trim() === '') {
@@ -37,7 +37,7 @@ async function installComponents() {
   console.log(`   Components: ${componentsToInstall}\n`);
 
   return new Promise((resolve) => {
-    const installCmd = `npx claude-code-templates@latest ${componentsToInstall} --yes`;
+    const installCmd = `npx gemini-code-templates@latest ${componentsToInstall} --yes`;
 
     const child = spawn('sh', ['-c', installCmd], {
       stdio: 'inherit',
@@ -62,11 +62,11 @@ async function installComponents() {
 }
 
 /**
- * Execute Claude Code query using Agent SDK
+ * Execute Gemini Code query using Agent SDK
  */
 async function executeQuery() {
   try {
-    console.log('🤖 Executing Claude Code...');
+    console.log('🤖 Executing Gemini Code...');
     console.log(`   Prompt: "${prompt.substring(0, 80)}${prompt.length > 80 ? '...' : ''}"\n`);
     console.log('─'.repeat(60));
     console.log('📝 CLAUDE OUTPUT:');
@@ -79,8 +79,8 @@ async function executeQuery() {
     const generator = query({
       prompt: enhancedPrompt,
       options: {
-        apiKey: anthropicApiKey,
-        model: 'claude-sonnet-4-5',
+        apiKey: googleApiKey,
+        model: 'gemini-sonnet-4-5',
         permissionMode: 'bypassPermissions',  // Auto-allow all tool uses
       }
     });
@@ -229,7 +229,7 @@ async function main() {
       process.exit(1);
     }
 
-    // Step 2: Execute Claude query
+    // Step 2: Execute Gemini query
     const executeSuccess = await executeQuery();
     if (!executeSuccess) {
       console.error('❌ Query execution failed');

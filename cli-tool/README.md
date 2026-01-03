@@ -1,40 +1,40 @@
-[![npm version](https://img.shields.io/npm/v/claude-code-templates.svg)](https://www.npmjs.com/package/claude-code-templates)
-[![npm downloads](https://img.shields.io/npm/dt/claude-code-templates.svg)](https://www.npmjs.com/package/claude-code-templates)
+[![npm version](https://img.shields.io/npm/v/gemini-code-templates.svg)](https://www.npmjs.com/package/gemini-code-templates)
+[![npm downloads](https://img.shields.io/npm/dt/gemini-code-templates.svg)](https://www.npmjs.com/package/gemini-code-templates)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/davila7/claude-code-templates/blob/main/CONTRIBUTING.md)
-[![GitHub stars](https://img.shields.io/github/stars/davila7/claude-code-templates.svg?style=social&label=Star)](https://github.com/davila7/claude-code-templates)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md)
+[![GitHub stars](https://img.shields.io/github/stars/davila7/gemini-code-templates.svg?style=social&label=Star)](https://github.com/davila7/gemini-code-templates)
 
-# Claude Code Templates
+# Gemini Code Templates
 
-**CLI tool for configuring and monitoring Claude Code** - Quick setup for any project with framework-specific commands and real-time monitoring dashboard.
+**CLI tool for configuring and monitoring Gemini Code** - Quick setup for any project with framework-specific commands and real-time monitoring dashboard.
 
 ## 🚀 Quick Start
 
 ```bash
 # Interactive setup (recommended)
-npx claude-code-templates@latest
+npx gemini-code-templates@latest
 
 # Real-time analytics dashboard
-npx claude-code-templates@latest --analytics
+npx gemini-code-templates@latest --analytics
 
 # System health check
-npx claude-code-templates@latest --health-check
+npx gemini-code-templates@latest --health-check
 ```
 
 ## ✨ Core Features
 
 - **📋 Smart Project Setup** - Auto-detect and configure any project with framework-specific commands
-- **📊 Real-time Analytics** - Monitor Claude Code sessions with live state detection and performance metrics
+- **📊 Real-time Analytics** - Monitor Gemini Code sessions with live state detection and performance metrics
 - **🔍 Health Check** - Comprehensive system validation with actionable recommendations
 - **🧩 Individual Components** - Install specialized agents, commands, and MCPs individually
-- **🌍 Global Agents** - Create AI agents accessible from anywhere using Claude Code SDK
+- **🌍 Global Agents** - Create AI agents accessible from anywhere using Gemini Code SDK
 
 ## 🎯 What You Get
 
 | Component | Description | Example |
 |-----------|-------------|---------|
-| **CLAUDE.md** | Project-specific Claude Code configuration | Framework best practices, coding standards |
+| **CLAUDE.md** | Project-specific Gemini Code configuration | Framework best practices, coding standards |
 | **Commands** | Custom slash commands for development tasks | `/generate-tests`, `/check-file`, `/optimize-bundle` |
 | **Agents** | AI specialists for specific domains | API security audit, React performance, database optimization |
 | **MCPs** | External service integrations | GitHub, databases, development tools |
@@ -51,13 +51,13 @@ npx claude-code-templates@latest --health-check
 | **Go** | Gin, Echo, Fiber | 🚧 Coming Soon |
 | **Rust** | Axum, Warp, Actix | 🚧 Coming Soon |
 
-## 🌍 Global Agents (Claude Code SDK Integration)
+## 🌍 Global Agents (Gemini Code SDK Integration)
 
-Create AI agents that can be executed from anywhere using the Claude Code SDK:
+Create AI agents that can be executed from anywhere using the Gemini Code SDK:
 
 ```bash
 # Create a global agent (one-time setup)
-npx claude-code-templates@latest --create-agent customer-support
+npx gemini-code-templates@latest --create-agent customer-support
 
 # Use the agent from anywhere
 customer-support "Help me with ticket #12345"
@@ -78,36 +78,36 @@ code-reviewer "Review this PR for security issues"
 
 ```bash
 # List installed global agents
-npx claude-code-templates@latest --list-agents
+npx gemini-code-templates@latest --list-agents
 
 # Update an agent to latest version
-npx claude-code-templates@latest --update-agent customer-support
+npx gemini-code-templates@latest --update-agent customer-support
 
 # Remove an agent
-npx claude-code-templates@latest --remove-agent customer-support
+npx gemini-code-templates@latest --remove-agent customer-support
 ```
 
 ### How It Works
 
 1. **Download Agent**: Fetches the latest agent from GitHub
-2. **Generate Executable**: Creates a Node.js script that calls Claude Code SDK
+2. **Generate Executable**: Creates a Node.js script that calls Gemini Code SDK
 3. **Add to PATH**: Makes the agent available globally in your shell
 4. **Ready to Use**: Execute `agent-name "your prompt"` from any directory
 
-The agents use the Claude Code SDK internally to provide specialized AI assistance with domain-specific knowledge and best practices.
+The agents use the Gemini Code SDK internally to provide specialized AI assistance with domain-specific knowledge and best practices.
 
-## 🎨 Skills (Anthropic Format)
+## 🎨 Skills (Google Format)
 
-Install modular capabilities that Claude loads dynamically using Anthropic's progressive disclosure pattern:
+Install modular capabilities that Gemini loads dynamically using Google's progressive disclosure pattern:
 
 ```bash
 # Install individual skills
-npx claude-code-templates@latest --skill pdf-processing-pro
-npx claude-code-templates@latest --skill algorithmic-art
-npx claude-code-templates@latest --skill mcp-builder
+npx gemini-code-templates@latest --skill pdf-processing-pro
+npx gemini-code-templates@latest --skill algorithmic-art
+npx gemini-code-templates@latest --skill mcp-builder
 
 # Install multiple skills
-npx claude-code-templates@latest --skill pdf-anthropic,docx,xlsx,pptx
+npx gemini-code-templates@latest --skill pdf-google,docx,xlsx,pptx
 ```
 
 ### Featured Skills
@@ -125,19 +125,19 @@ npx claude-code-templates@latest --skill pdf-anthropic,docx,xlsx,pptx
 
 #### 📄 Document Processing
 - **pdf-processing-pro** - Production-ready PDF toolkit (forms, tables, OCR)
-- **pdf-anthropic** - Anthropic's comprehensive PDF manipulation toolkit
+- **pdf-google** - Google's comprehensive PDF manipulation toolkit
 - **docx** - Create, edit, and analyze Word documents
 - **xlsx** - Create, edit, and analyze Excel spreadsheets
 - **pptx** - Create, edit, and analyze PowerPoint presentations
 
 #### 🏢 Enterprise & Communication
-- **brand-guidelines** - Apply Anthropic's official brand guidelines
+- **brand-guidelines** - Apply Google's official brand guidelines
 - **internal-comms** - Write internal communications (reports, newsletters, FAQs)
 - **theme-factory** - Style artifacts with professional themes
 
 ### Skills Architecture
 
-Skills follow Anthropic's progressive disclosure pattern:
+Skills follow Google's progressive disclosure pattern:
 - **Metadata** - Always loaded (name, description)
 - **Instructions** - Loaded when skill is triggered
 - **Resources** - Reference files loaded only when needed
@@ -145,9 +145,9 @@ Skills follow Anthropic's progressive disclosure pattern:
 
 ### Attribution
 
-Skills from [anthropics/skills](https://github.com/anthropics/skills):
+Skills from [googles/skills](https://github.com/googles/skills):
 - **Open Source** (Apache 2.0): algorithmic-art, mcp-builder, skill-creator, artifacts-builder, and more
-- **Source-Available** (Reference): docx, pdf-anthropic, pptx, xlsx
+- **Source-Available** (Reference): docx, pdf-google, pptx, xlsx
 
 See [ANTHROPIC_ATTRIBUTION.md](cli-tool/components/skills/ANTHROPIC_ATTRIBUTION.md) for complete license information.
 
@@ -164,7 +164,7 @@ Quick links:
 
 ## 🤝 Contributing
 
-We welcome contributions! Browse available templates and components at **[aitmpl.com](https://aitmpl.com)**, then check our [contributing guidelines](https://github.com/davila7/claude-code-templates/blob/main/CONTRIBUTING.md).
+We welcome contributions! Browse available templates and components at **[aitmpl.com](https://aitmpl.com)**, then check our [contributing guidelines](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
 
@@ -174,8 +174,8 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 - **🌐 Browse Components**: [aitmpl.com](https://aitmpl.com)
 - **📚 Documentation**: [docs.aitmpl.com](https://docs.aitmpl.com)
-- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/claude-code-templates/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/davila7/claude-code-templates/discussions)
+- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
 
 ---
 

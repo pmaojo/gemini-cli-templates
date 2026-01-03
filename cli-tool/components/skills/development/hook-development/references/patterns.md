@@ -1,6 +1,6 @@
 # Common Hook Patterns
 
-This reference provides common, proven patterns for implementing Claude Code hooks. Use these patterns as starting points for typical hook use cases.
+This reference provides common, proven patterns for implementing Gemini CLI hooks. Use these patterns as starting points for typical hook use cases.
 
 ## Pattern 1: Security Validation
 
@@ -295,7 +295,7 @@ rm .enable-security-scan
 - Project-specific validation that's opt-in
 - Performance-intensive checks only when needed
 
-**Note:** Must restart Claude Code after creating/removing flag files for hooks to recognize changes.
+**Note:** Must restart Gemini CLI after creating/removing flag files for hooks to recognize changes.
 
 ## Pattern 10: Configuration-Driven Hooks
 
@@ -303,7 +303,7 @@ Use JSON configuration to control hook behavior:
 
 ```bash
 #!/bin/bash
-CONFIG_FILE="$CLAUDE_PROJECT_DIR/.claude/my-plugin.local.json"
+CONFIG_FILE="$CLAUDE_PROJECT_DIR/.gemini/my-plugin.local.json"
 
 # Read configuration
 if [ -f "$CONFIG_FILE" ]; then
@@ -330,7 +330,7 @@ if [ "$file_size" -gt "$max_file_size" ]; then
 fi
 ```
 
-**Configuration file (.claude/my-plugin.local.json):**
+**Configuration file (.gemini/my-plugin.local.json):**
 ```json
 {
   "strictMode": true,

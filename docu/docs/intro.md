@@ -2,15 +2,15 @@
 sidebar_position: 1
 ---
 
-# Claude Code Templates
+# Gemini Code Templates
 
-**Claude Code Templates** is an open-source CLI tool that configures Claude Code projects and provides specialized components to enhance your AI-powered development workflow.
+**Gemini Code Templates** is an open-source CLI tool that configures Gemini Code projects and provides specialized components to enhance your AI-powered development workflow.
 
-Browse over 500 components at **[aitmpl.com](https://aitmpl.com)** or contribute to the project on **[GitHub](https://github.com/davila7/claude-code-templates)**.
+Browse over 500 components at **[aitmpl.com](https://aitmpl.com)** or contribute to the project on **[GitHub](https://github.com/davila7/gemini-code-templates)**.
 
 ## What does this CLI do?
 
-Simplifies Claude Code usage through:
+Simplifies Gemini Code usage through:
 
 - **🔍 Pre-configured components**: Over 500 agents, commands, and configurations ready to use
 - **📦 Automatic installation**: Complete project setup or individual components  
@@ -20,13 +20,13 @@ Simplifies Claude Code usage through:
 
 ### Interactive Installation
 ```bash
-npx claude-code-templates@latest
+npx gemini-code-templates@latest
 ```
 
 ### Specific Component
 ```bash
-npx claude-code-templates@latest --agent performance-testing/react-performance-optimization
-npx claude-code-templates@latest --command testing/generate-tests
+npx gemini-code-templates@latest --agent performance-testing/react-performance-optimization
+npx gemini-code-templates@latest --command testing/generate-tests
 ```
 
 ## Next Steps

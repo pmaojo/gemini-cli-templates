@@ -29,18 +29,18 @@ function estimateTokens(text) {
 }
 
 /**
- * Analyzes existing Claude Code commands in the current project
+ * Analyzes existing Gemini CLI commands in the current project
  * @param {string} targetDir - Directory to analyze (default: current directory)
  * @returns {Array} Array of command analysis results
  */
 async function analyzeCommands(targetDir = process.cwd()) {
-  const commandsDir = path.join(targetDir, '.claude', 'commands');
+  const commandsDir = path.join(targetDir, '.gemini', 'commands');
   
-  // Check if .claude/commands directory exists
+  // Check if .gemini/commands directory exists
   if (!fs.existsSync(commandsDir)) {
     return {
       exists: false,
-      message: 'No .claude/commands directory found in current project'
+      message: 'No .gemini/commands directory found in current project'
     };
   }
 
@@ -52,7 +52,7 @@ async function analyzeCommands(targetDir = process.cwd()) {
       return {
         exists: true,
         commands: [],
-        message: 'No command files (.md) found in .claude/commands directory'
+        message: 'No command files (.md) found in .gemini/commands directory'
       };
     }
 
@@ -105,7 +105,7 @@ async function analyzeCommands(targetDir = process.cwd()) {
  * @param {Object} analysis - Result from analyzeCommands()
  */
 function displayCommandStats(analysis) {
-  console.log(chalk.cyan('\n📊 Claude Code Command Analysis'));
+  console.log(chalk.cyan('\n📊 Gemini CLI Command Analysis'));
   
   // Calculate header width dynamically
   const headerWidth = analysis.commands.length > 0 ? 
@@ -115,8 +115,8 @@ function displayCommandStats(analysis) {
 
   if (!analysis.exists) {
     console.log(chalk.yellow('⚠️  ' + analysis.message));
-    console.log(chalk.blue('\n💡 Run the setup first: npx claude-code-templates'));
-    return false; // Indicate no .claude directory
+    console.log(chalk.blue('\n💡 Run the setup first: npx gemini-cli-templates'));
+    return false; // Indicate no .gemini directory
   }
 
   if (analysis.error) {
@@ -188,47 +188,47 @@ function displayCommandStats(analysis) {
 }
 
 /**
- * Prompts user to setup Claude Code Templates when no commands are found
+ * Prompts user to setup Gemini CLI Templates when no commands are found
  * @param {string} targetDir - Project directory
  */
 async function promptSetupWhenNoCommands(targetDir) {
   const inquirer = require('inquirer');
   
-  console.log(chalk.cyan('\n🚀 Claude Code Templates Setup'));
-  console.log(chalk.gray('No Claude Code commands found in this project. You can set up Claude Code Templates to get started.'));
+  console.log(chalk.cyan('\n🚀 Gemini CLI Templates Setup'));
+  console.log(chalk.gray('No Gemini CLI commands found in this project. You can set up Gemini CLI Templates to get started.'));
   
   try {
     const { setupNow } = await inquirer.prompt([{
       type: 'confirm',
       name: 'setupNow',
-      message: 'Would you like to start the Claude Code Templates setup now?',
+      message: 'Would you like to start the Gemini CLI Templates setup now?',
       default: true,
       prefix: chalk.blue('🤖')
     }]);
 
     if (!setupNow) {
-      console.log(chalk.yellow('⏭️  Setup skipped. Run "npx claude-code-templates" anytime to set up your project.'));
+      console.log(chalk.yellow('⏭️  Setup skipped. Run "npx gemini-cli-templates" anytime to set up your project.'));
       return false;
     }
 
-    console.log(chalk.blue('\n🚀 Starting Claude Code Templates setup...'));
+    console.log(chalk.blue('\n🚀 Starting Gemini CLI Templates setup...'));
     console.log(chalk.gray('This will guide you through language and framework selection.\n'));
 
     // Import and run the main setup function
-    const createClaudeConfig = require('./index');
-    await createClaudeConfig({ directory: targetDir });
+    const createGeminiConfig = require('./index');
+    await createGeminiConfig({ directory: targetDir });
     
     return true;
 
   } catch (error) {
     console.error(chalk.red('Error during setup:'), error.message);
-    console.log(chalk.blue('💡 You can run setup manually with: npx claude-code-templates'));
+    console.log(chalk.blue('💡 You can run setup manually with: npx gemini-cli-templates'));
     return false;
   }
 }
 
 /**
- * Prompts user for command optimization and executes Claude Code if approved
+ * Prompts user for command optimization and executes Gemini CLI if approved
  * @param {Object} analysis - Result from analyzeCommands()
  * @param {string} targetDir - Project directory
  */
@@ -240,13 +240,13 @@ async function promptCommandOptimization(analysis, targetDir) {
   const inquirer = require('inquirer');
   
   console.log(chalk.cyan('\n🔧 Command Optimization'));
-  console.log(chalk.gray('Claude Code can analyze your commands and suggest improvements based on your project structure.'));
+  console.log(chalk.gray('Gemini CLI can analyze your commands and suggest improvements based on your project structure.'));
   
   try {
     const { optimize } = await inquirer.prompt([{
       type: 'confirm',
       name: 'optimize',
-      message: 'Would you like Claude Code to review and optimize your commands?',
+      message: 'Would you like Gemini CLI to review and optimize your commands?',
       default: true,
       prefix: chalk.blue('🤖')
     }]);
@@ -256,57 +256,57 @@ async function promptCommandOptimization(analysis, targetDir) {
       return;
     }
 
-    console.log(chalk.blue('\n🚀 Starting Claude Code command optimization...'));
+    console.log(chalk.blue('\n🚀 Starting Gemini CLI command optimization...'));
     console.log(chalk.gray('This will analyze your project structure and suggest command improvements.\n'));
 
-    // Create optimization prompt for Claude
+    // Create optimization prompt for Gemini
     const optimizationPrompt = createOptimizationPrompt(analysis, targetDir);
     
-    // Execute Claude Code with optimization prompt
-    const claudeCommand = `claude "${optimizationPrompt.replace(/"/g, '\\"')}"`;
+    // Execute Gemini CLI with optimization prompt
+    const geminiCommand = `gemini "${optimizationPrompt.replace(/"/g, '\\"')}"`;
     
-    const claudeProcess = spawn('sh', ['-c', claudeCommand], {
+    const geminiProcess = spawn('sh', ['-c', geminiCommand], {
       cwd: targetDir,
       stdio: 'inherit'
     });
 
-    claudeProcess.on('error', (error) => {
+    geminiProcess.on('error', (error) => {
       if (error.code === 'ENOENT') {
-        console.log(chalk.yellow('\n⚠️  Claude Code CLI not found in PATH.'));
-        console.log(chalk.blue('💡 To run optimization manually later, use: claude "Analyze and optimize .claude/commands/ based on project structure"'));
+        console.log(chalk.yellow('\n⚠️  Gemini CLI CLI not found in PATH.'));
+        console.log(chalk.blue('💡 To run optimization manually later, use: gemini "Analyze and optimize .gemini/commands/ based on project structure"'));
       } else {
-        console.error(chalk.red('Error running Claude Code optimization:'), error.message);
+        console.error(chalk.red('Error running Gemini CLI optimization:'), error.message);
       }
     });
 
-    claudeProcess.on('close', (code) => {
+    geminiProcess.on('close', (code) => {
       if (code === 0) {
-        console.log(chalk.green('\n✅ Claude Code optimization completed successfully!'));
+        console.log(chalk.green('\n✅ Gemini CLI optimization completed successfully!'));
       } else if (code !== null) {
-        console.log(chalk.yellow(`\n⚠️  Claude Code optimization exited with code ${code}`));
+        console.log(chalk.yellow(`\n⚠️  Gemini CLI optimization exited with code ${code}`));
       }
     });
 
   } catch (error) {
     console.error(chalk.red('Error during optimization setup:'), error.message);
-    console.log(chalk.blue('💡 You can run optimization manually with: claude "Analyze .claude/commands/ directory"'));
+    console.log(chalk.blue('💡 You can run optimization manually with: gemini "Analyze .gemini/commands/ directory"'));
   }
 }
 
 /**
- * Creates detailed optimization prompt for Claude Code
+ * Creates detailed optimization prompt for Gemini CLI
  * @param {Object} analysis - Command analysis results
  * @param {string} targetDir - Project directory
- * @returns {string} Formatted prompt for Claude
+ * @returns {string} Formatted prompt for Gemini
  */
 function createOptimizationPrompt(analysis, targetDir) {
   const commandList = analysis.commands.map(cmd => `- ${cmd.name}.md (${cmd.lines} lines)`).join('\n');
   
-  return `Analyze and optimize the Claude Code commands in this project:
+  return `Analyze and optimize the Gemini CLI commands in this project:
 
 1. **Review project structure**: Use LS to examine the current project (package.json, src/, etc.) and identify technologies/frameworks used
 
-2. **Analyze existing commands**: Review all files in .claude/commands/ directory:
+2. **Analyze existing commands**: Review all files in .gemini/commands/ directory:
 ${commandList}
 
 3. **Command optimization**:
@@ -315,7 +315,7 @@ ${commandList}
    - Recommend missing commands that would be useful for this project
    - Update command content to match project's specific setup and dependencies
 
-4. **Make improvements**: If you find commands that need updates or see missing useful commands, implement the changes directly to the .claude/commands/ files
+4. **Make improvements**: If you find commands that need updates or see missing useful commands, implement the changes directly to the .gemini/commands/ files
 
 Focus on making the commands as useful and specific as possible for this project's actual setup and development workflow.`;
 }

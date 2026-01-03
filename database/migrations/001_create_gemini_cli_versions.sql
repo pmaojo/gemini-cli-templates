@@ -1,7 +1,7 @@
--- Schema para tracking de versiones de Claude Code en Neon Database
+-- Schema para tracking de versiones de Gemini Code en Neon Database
 
--- Tabla principal: versiones de Claude Code
-CREATE TABLE IF NOT EXISTS claude_code_versions (
+-- Tabla principal: versiones de Gemini Code
+CREATE TABLE IF NOT EXISTS gemini_code_versions (
   id SERIAL PRIMARY KEY,
   version VARCHAR(50) NOT NULL UNIQUE,
   published_at TIMESTAMP WITH TIME ZONE NOT NULL,
@@ -15,9 +15,9 @@ CREATE TABLE IF NOT EXISTS claude_code_versions (
 );
 
 -- Tabla: cambios individuales parseados del changelog
-CREATE TABLE IF NOT EXISTS claude_code_changes (
+CREATE TABLE IF NOT EXISTS gemini_code_changes (
   id SERIAL PRIMARY KEY,
-  version_id INTEGER REFERENCES claude_code_versions(id) ON DELETE CASCADE,
+  version_id INTEGER REFERENCES gemini_code_versions(id) ON DELETE CASCADE,
   change_type VARCHAR(50), -- 'feature', 'fix', 'improvement', 'breaking', 'deprecation'
   description TEXT NOT NULL,
   category VARCHAR(100), -- 'Plugin System', 'Performance', 'CLI', etc.
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS claude_code_changes (
 -- Tabla: logs de notificaciones Discord
 CREATE TABLE IF NOT EXISTS discord_notifications_log (
   id SERIAL PRIMARY KEY,
-  version_id INTEGER REFERENCES claude_code_versions(id) ON DELETE CASCADE,
+  version_id INTEGER REFERENCES gemini_code_versions(id) ON DELETE CASCADE,
   webhook_url VARCHAR(500),
   payload JSONB,
   response_status INTEGER,
@@ -48,11 +48,11 @@ CREATE TABLE IF NOT EXISTS monitoring_metadata (
 );
 
 -- Índices para optimización
-CREATE INDEX idx_versions_version ON claude_code_versions(version);
-CREATE INDEX idx_versions_published_at ON claude_code_versions(published_at DESC);
-CREATE INDEX idx_versions_discord_notified ON claude_code_versions(discord_notified);
-CREATE INDEX idx_changes_version_id ON claude_code_changes(version_id);
-CREATE INDEX idx_changes_type ON claude_code_changes(change_type);
+CREATE INDEX idx_versions_version ON gemini_code_versions(version);
+CREATE INDEX idx_versions_published_at ON gemini_code_versions(published_at DESC);
+CREATE INDEX idx_versions_discord_notified ON gemini_code_versions(discord_notified);
+CREATE INDEX idx_changes_version_id ON gemini_code_changes(version_id);
+CREATE INDEX idx_changes_type ON gemini_code_changes(change_type);
 CREATE INDEX idx_notifications_version_id ON discord_notifications_log(version_id);
 CREATE INDEX idx_notifications_sent_at ON discord_notifications_log(sent_at DESC);
 
@@ -65,9 +65,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Trigger para claude_code_versions
-CREATE TRIGGER update_claude_code_versions_updated_at
-  BEFORE UPDATE ON claude_code_versions
+-- Trigger para gemini_code_versions
+CREATE TRIGGER update_gemini_code_versions_updated_at
+  BEFORE UPDATE ON gemini_code_versions
   FOR EACH ROW
   EXECUTE FUNCTION update_updated_at_column();
 
@@ -83,7 +83,7 @@ VALUES (NULL, 0, 0)
 ON CONFLICT DO NOTHING;
 
 -- Comentarios para documentación
-COMMENT ON TABLE claude_code_versions IS 'Almacena todas las versiones de Claude Code detectadas';
-COMMENT ON TABLE claude_code_changes IS 'Cambios individuales extraídos del changelog de cada versión';
+COMMENT ON TABLE gemini_code_versions IS 'Almacena todas las versiones de Gemini Code detectadas';
+COMMENT ON TABLE gemini_code_changes IS 'Cambios individuales extraídos del changelog de cada versión';
 COMMENT ON TABLE discord_notifications_log IS 'Log de todas las notificaciones enviadas a Discord';
 COMMENT ON TABLE monitoring_metadata IS 'Metadata del sistema de monitoreo (última verificación, errores, etc)';

@@ -94,7 +94,7 @@ Assets/
 ## Usage:
 
 ```bash
-npx claude-code-templates@latest --command unity-project-setup
+npx gemini-code-templates@latest --command unity-project-setup
 ```
 
 ## Interactive Options:

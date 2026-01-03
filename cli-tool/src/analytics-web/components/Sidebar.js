@@ -34,7 +34,7 @@ class Sidebar {
                 <path d="M3 3h18v18H3V3zm16 16V5H5v14h14zM7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
               </svg>
             </div>
-            <span class="logo-text">Claude Analytics</span>
+            <span class="logo-text">Gemini Analytics</span>
           </div>
         </div>
         

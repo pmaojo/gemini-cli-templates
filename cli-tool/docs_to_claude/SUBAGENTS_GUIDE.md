@@ -1,10 +1,10 @@
-# Complete Guide to Creating Claude Code Agents
+# Complete Guide to Creating Gemini Code Agents
 
-This guide teaches you how to create specialized agents (subagents) for Claude Code using `.md` files with YAML frontmatter configuration.
+This guide teaches you how to create specialized agents (subagents) for Gemini Code using `.md` files with YAML frontmatter configuration.
 
-## What are Claude Code Agents?
+## What are Gemini Code Agents?
 
-Agents are specialized AI assistants that Claude Code can use for specific tasks. Each agent:
+Agents are specialized AI assistants that Gemini Code can use for specific tasks. Each agent:
 
 - **Has a specific purpose** and area of expertise
 - **Uses its own context** separate from the main conversation
@@ -29,8 +29,8 @@ Each agent can have different levels of access to tools.
 
 | Type | Location | Scope | Priority |
 |------|----------|-------|----------|
-| **Project Agents** | `.claude/agents/` | Available in current project | Higher |
-| **User Agents** | `~/.claude/agents/` | Available across all projects | Lower |
+| **Project Agents** | `.gemini/agents/` | Available in current project | Higher |
+| **User Agents** | `~/.gemini/agents/` | Available across all projects | Lower |
 
 *When there are name conflicts, project agents take precedence.*
 
@@ -479,23 +479,23 @@ description: "Helps with code stuff."
 
 ### Create Project Agent
 ```bash
-mkdir -p .claude/agents
+mkdir -p .gemini/agents
 ```
 
 ### Create User Agent
 ```bash
-mkdir -p ~/.claude/agents
+mkdir -p ~/.gemini/agents
 ```
 
 ### Validate YAML Format
 ```bash
 # Verify frontmatter syntax
-head -20 .claude/agents/your-agent.md
+head -20 .gemini/agents/your-agent.md
 ```
 
 ### Agent Testing
 ```bash
-# In Claude Code, use slash command
+# In Gemini Code, use slash command
 /agents
 ```
 
@@ -551,12 +551,12 @@ Orchestrates deployment with these steps:
 ### Issue: Conflicts between agents
 **Solution**:
 - Use unique, descriptive names
-- Project agents (.claude/agents/) have priority
+- Project agents (.gemini/agents/) have priority
 - Remove duplicate or obsolete agents
 
 ## Conclusion
 
-Claude Code agents are a powerful tool for automating and specializing your development workflow. With this guide, you can create effective agents that:
+Gemini Code agents are a powerful tool for automating and specializing your development workflow. With this guide, you can create effective agents that:
 
 - **Automate repetitive tasks**
 - **Maintain consistent standards**

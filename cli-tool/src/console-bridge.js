@@ -5,7 +5,7 @@ const EventEmitter = require('events');
 const fs = require('fs');
 
 /**
- * ConsoleBridge - Bridges Claude Code console interactions with WebSocket
+ * ConsoleBridge - Bridges Gemini CLI console interactions with WebSocket
  * Intercepts stdin/stdout to enable web-based interactions
  */
 class ConsoleBridge extends EventEmitter {
@@ -23,12 +23,12 @@ class ConsoleBridge extends EventEmitter {
     this.interactionQueue = [];
     this.isProcessingInteraction = false;
     
-    // Pattern recognition for Claude Code prompts
+    // Pattern recognition for Gemini CLI prompts
     this.promptPatterns = [
       /Do you want to proceed\?/,
       /\s*❯\s*1\.\s*Yes/,
       /\s*2\.\s*Yes,\s*and\s*(add|don't ask)/,
-      /\s*3\.\s*No,\s*and\s*tell\s*Claude/,
+      /\s*3\.\s*No,\s*and\s*tell\s*Gemini/,
       /Choose an option \(1-\d+\):/,
       /Enter your choice:/,
       /Please provide input:/
@@ -108,26 +108,26 @@ class ConsoleBridge extends EventEmitter {
   }
 
   /**
-   * Setup monitoring of Claude Code processes
+   * Setup monitoring of Gemini CLI processes
    */
   setupProcessMonitoring() {
-    // Monitor for new Claude Code processes
+    // Monitor for new Gemini CLI processes
     setInterval(() => {
-      this.scanForClaudeProcesses();
+      this.scanForGeminiProcesses();
     }, 5000);
 
     // Initial scan
-    this.scanForClaudeProcesses();
+    this.scanForGeminiProcesses();
   }
 
   /**
-   * Scan for running Claude Code processes
+   * Scan for running Gemini CLI processes
    */
-  async scanForClaudeProcesses() {
+  async scanForGeminiProcesses() {
     try {
       const { exec } = require('child_process');
       
-      exec('ps aux | grep -E "claude[^-]|Claude" | grep -v grep', (error, stdout) => {
+      exec('ps aux | grep -E "gemini[^-]|Gemini" | grep -v grep', (error, stdout) => {
         if (error) return;
         
         const processes = stdout.split('\n')
@@ -141,37 +141,37 @@ class ConsoleBridge extends EventEmitter {
             };
           })
           .filter(proc => 
-            proc.command.includes('claude') && 
-            !proc.command.includes('claude-code-templates') &&
+            proc.command.includes('gemini') && 
+            !proc.command.includes('gemini-cli-templates') &&
             !proc.command.includes('grep')
           );
 
         if (processes.length > 0) {
-          this.debug('Found Claude processes:', processes);
+          this.debug('Found Gemini processes:', processes);
           
-          // Attempt to attach to the most likely Claude Code process
-          const claudeProcess = processes.find(p => 
-            p.command.includes('claude') && 
+          // Attempt to attach to the most likely Gemini CLI process
+          const geminiProcess = processes.find(p => 
+            p.command.includes('gemini') && 
             !p.command.includes('Helper') &&
             !p.command.includes('.app')
           );
           
-          if (claudeProcess && claudeProcess.pid !== this.attachedPid) {
-            this.attemptProcessAttachment(claudeProcess.pid);
+          if (geminiProcess && geminiProcess.pid !== this.attachedPid) {
+            this.attemptProcessAttachment(geminiProcess.pid);
           }
         }
       });
     } catch (error) {
-      this.debug('Error scanning for Claude processes:', error);
+      this.debug('Error scanning for Gemini processes:', error);
     }
   }
 
   /**
-   * Attempt to attach to a Claude Code process
+   * Attempt to attach to a Gemini CLI process
    */
   async attemptProcessAttachment(pid) {
     try {
-      this.debug(`Attempting to attach to Claude process ${pid}`);
+      this.debug(`Attempting to attach to Gemini process ${pid}`);
       
       // Get terminal device for this process
       const terminalInfo = await this.getProcessTerminal(pid);
@@ -183,7 +183,7 @@ class ConsoleBridge extends EventEmitter {
       this.attachedPid = pid;
       this.terminalDevice = terminalInfo.tty;
       
-      console.log(chalk.green(`✅ Attached to Claude Code process ${pid} on ${terminalInfo.tty}`));
+      console.log(chalk.green(`✅ Attached to Gemini CLI process ${pid} on ${terminalInfo.tty}`));
       
       // Start monitoring terminal output
       await this.startTerminalMonitoring(terminalInfo.tty);
@@ -234,7 +234,7 @@ class ConsoleBridge extends EventEmitter {
       
       // Use script command to capture terminal output
       // This creates a typescript of the terminal session
-      const logFile = `/tmp/claude-terminal-${this.attachedPid}.log`;
+      const logFile = `/tmp/gemini-terminal-${this.attachedPid}.log`;
       
       // Monitor using tail -f approach on the terminal device (if readable)
       this.startTerminalPolling(ttyPath, logFile);
@@ -279,7 +279,7 @@ class ConsoleBridge extends EventEmitter {
   }
 
   /**
-   * Monitor the Claude Code process status for changes
+   * Monitor the Gemini CLI process status for changes
    */
   monitorProcessStatus() {
     if (!this.attachedPid) return;
@@ -287,7 +287,7 @@ class ConsoleBridge extends EventEmitter {
     exec(`ps -p ${this.attachedPid} -o state,time,command`, (error, stdout) => {
       if (error) {
         // Process might have ended
-        console.log(chalk.yellow('🔄 Monitored Claude Code process ended'));
+        console.log(chalk.yellow('🔄 Monitored Gemini CLI process ended'));
         this.attachedPid = null;
         return;
       }
@@ -315,7 +315,7 @@ class ConsoleBridge extends EventEmitter {
     const recentLines = lines.slice(-10); // Last 10 lines
     const fullText = recentLines.join('\n');
     
-    // Check for Claude Code prompt patterns
+    // Check for Gemini CLI prompt patterns
     for (const pattern of this.promptPatterns) {
       if (pattern.test(fullText)) {
         console.log(chalk.yellow('🎯 Potential prompt detected in terminal output!'));
@@ -330,7 +330,7 @@ class ConsoleBridge extends EventEmitter {
 
   /**
    * Simulate prompt detection (placeholder for actual implementation)
-   * In reality, this would intercept actual Claude Code output
+   * In reality, this would intercept actual Gemini CLI output
    */
   simulatePromptDetection() {
     // This is a simulation - in reality we'd parse actual output
@@ -339,12 +339,12 @@ class ConsoleBridge extends EventEmitter {
         this.handleDetectedPrompt(`Read file
 
   Search(pattern: "(?:Yes|No|yes|no)(?:,\\s*and\\s*don't\\s*ask\\s*again)?", path:
-  "../../../../../../../.claude/projects/-Users-username-Projects-project-name", include: "*.jsonl")
+  "../../../../../../../.gemini/projects/-Users-username-Projects-project-name", include: "*.jsonl")
 
 Do you want to proceed?
 ❯ 1. Yes
-  2. Yes, and add ~/.claude/projects/-Users-username-Projects-project-name as a working directory for this session
-  3. No, and tell Claude what to do differently (esc)`);
+  2. Yes, and add ~/.gemini/projects/-Users-username-Projects-project-name as a working directory for this session
+  3. No, and tell Gemini what to do differently (esc)`);
       }
       
       // Continue simulation
@@ -353,10 +353,10 @@ Do you want to proceed?
   }
 
   /**
-   * Handle detected prompt from Claude Code
+   * Handle detected prompt from Gemini CLI
    */
   handleDetectedPrompt(promptText) {
-    //console.log(chalk.yellow('🤖 Claude Code prompt detected:'));
+    //console.log(chalk.yellow('🤖 Gemini CLI prompt detected:'));
     //console.log(chalk.gray(promptText));
     
     const interaction = this.parsePrompt(promptText);
@@ -364,7 +364,7 @@ Do you want to proceed?
     if (interaction) {
       this.currentInteraction = {
         ...interaction,
-        id: 'claude-prompt-' + Date.now(),
+        id: 'gemini-prompt-' + Date.now(),
         timestamp: new Date().toISOString()
       };
       
@@ -379,7 +379,7 @@ Do you want to proceed?
   }
 
   /**
-   * Parse Claude Code prompt text into structured interaction
+   * Parse Gemini CLI prompt text into structured interaction
    */
   parsePrompt(promptText) {
     const lines = promptText.split('\n').map(line => line.trim());
@@ -443,19 +443,19 @@ Do you want to proceed?
     if (data.type === 'console_response' && this.currentInteraction) {
       console.log(chalk.green('📱 Received response from web interface:'), data.data);
       
-      // In a real implementation, this would send the response to Claude Code
-      this.sendResponseToClaudeCode(data.data);
+      // In a real implementation, this would send the response to Gemini CLI
+      this.sendResponseToGeminiCLI(data.data);
       
       this.currentInteraction = null;
     }
   }
 
   /**
-   * Send response back to Claude Code process
+   * Send response back to Gemini CLI process
    * This attempts to write directly to the terminal device
    */
-  sendResponseToClaudeCode(response) {
-    console.log(chalk.blue('🔄 Sending response to Claude Code...'));
+  sendResponseToGeminiCLI(response) {
+    console.log(chalk.blue('🔄 Sending response to Gemini CLI...'));
     
     if (!this.attachedPid || !this.terminalDevice) {
       console.warn(chalk.yellow('⚠️ No attached process - falling back to simulation'));
@@ -553,11 +553,11 @@ Do you want to proceed?
   simulateResponse(response) {
     if (response.type === 'choice') {
       const choiceNumber = response.value + 1;
-      console.log(chalk.gray(`[Simulated] Sending "${choiceNumber}" to Claude Code stdin`));
+      console.log(chalk.gray(`[Simulated] Sending "${choiceNumber}" to Gemini CLI stdin`));
     } else if (response.type === 'text') {
-      console.log(chalk.gray(`[Simulated] Sending "${response.value}" to Claude Code stdin`));
+      console.log(chalk.gray(`[Simulated] Sending "${response.value}" to Gemini CLI stdin`));
     } else if (response.type === 'cancel') {
-      console.log(chalk.gray('[Simulated] Sending ESC to Claude Code stdin'));
+      console.log(chalk.gray('[Simulated] Sending ESC to Gemini CLI stdin'));
     }
   }
 

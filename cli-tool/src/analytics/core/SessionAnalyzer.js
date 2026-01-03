@@ -1,6 +1,6 @@
 /**
  * SessionAnalyzer - Extracts session timing, token usage, and plan information
- * Tracks Claude Max plan session limits and usage patterns
+ * Tracks Gemini Max plan session limits and usage patterns
  */
 const chalk = require('chalk');
 
@@ -11,7 +11,7 @@ class SessionAnalyzer {
     this.RESET_HOURS = [1, 7, 13, 19];
     this.MONTHLY_SESSION_LIMIT = 50;
     
-    // Plan-specific usage information (Claude uses complexity-based limits, not fixed message counts)
+    // Plan-specific usage information (Gemini uses complexity-based limits, not fixed message counts)
     this.PLAN_LIMITS = {
       'free': {
         name: 'Free Plan',
@@ -47,16 +47,16 @@ class SessionAnalyzer {
   /**
    * Analyze all conversations to extract session information
    * @param {Array} conversations - Array of conversation objects with parsed messages
-   * @param {Object} claudeSessionInfo - Real Claude session information from statsig files
+   * @param {Object} geminiSessionInfo - Real Gemini session information from statsig files
    * @returns {Object} Session analysis data
    */
-  analyzeSessionData(conversations, claudeSessionInfo = null) {
+  analyzeSessionData(conversations, geminiSessionInfo = null) {
     let sessions, currentSession;
     
-    if (claudeSessionInfo && claudeSessionInfo.hasSession) {
-      // Use real Claude session information
-      sessions = this.extractSessionsFromClaudeInfo(conversations, claudeSessionInfo);
-      currentSession = this.getCurrentActiveSessionFromClaudeInfo(sessions, claudeSessionInfo);
+    if (geminiSessionInfo && geminiSessionInfo.hasSession) {
+      // Use real Gemini session information
+      sessions = this.extractSessionsFromGeminiInfo(conversations, geminiSessionInfo);
+      currentSession = this.getCurrentActiveSessionFromGeminiInfo(sessions, geminiSessionInfo);
     } else {
       // Fallback to old logic
       sessions = this.extractSessions(conversations);
@@ -75,7 +75,7 @@ class SessionAnalyzer {
       userPlan,
       limits: limits,
       warnings: this.generateWarnings(currentSession, monthlyUsage, userPlan),
-      claudeSessionInfo
+      geminiSessionInfo
     };
   }
 
@@ -89,7 +89,7 @@ class SessionAnalyzer {
     // If we have token usage data, use it for more accurate weighting
     if (message.usage && message.usage.input_tokens) {
       // Average user message is ~200 English sentences = ~3000-4000 tokens
-      // But Claude Code messages tend to be shorter, so we use ~500 tokens as average
+      // But Gemini CLI messages tend to be shorter, so we use ~500 tokens as average
       const AVERAGE_MESSAGE_TOKENS = 500;
       const inputTokens = message.usage.input_tokens || 0;
       const cacheTokens = message.usage.cache_creation_input_tokens || 0;
@@ -253,7 +253,7 @@ class SessionAnalyzer {
         // Calculate additional properties
         const now = new Date();
         session.duration = windowEnd - currentWindowStart;
-        // Only count USER messages for session limits (Claude Code only counts prompts, not responses)
+        // Only count USER messages for session limits (Gemini CLI only counts prompts, not responses)
         const userMessages = windowMessages.filter(msg => msg.role === 'user');
         
         // Calculate session usage with message complexity weighting
@@ -297,12 +297,12 @@ class SessionAnalyzer {
 
 
   /**
-   * Extract sessions based on real Claude session information
+   * Extract sessions based on real Gemini session information
    * @param {Array} conversations - Array of conversation objects
-   * @param {Object} claudeSessionInfo - Real Claude session information
+   * @param {Object} geminiSessionInfo - Real Gemini session information
    * @returns {Array} Array of session objects
    */
-  extractSessionsFromClaudeInfo(conversations, claudeSessionInfo) {
+  extractSessionsFromGeminiInfo(conversations, geminiSessionInfo) {
     // Get all messages from all conversations
     const allMessages = [];
     
@@ -329,13 +329,13 @@ class SessionAnalyzer {
     // Sort all messages by timestamp
     allMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
 
-    // Create current session based on Claude's actual session window
-    const sessionStartTime = new Date(claudeSessionInfo.startTime);
-    const sessionEndTime = new Date(claudeSessionInfo.sessionLimit.nextResetTime);
+    // Create current session based on Gemini's actual session window
+    const sessionStartTime = new Date(geminiSessionInfo.startTime);
+    const sessionEndTime = new Date(geminiSessionInfo.sessionLimit.nextResetTime);
     const now = new Date();
     
-    // Find the first user message that occurred AT OR AFTER the Claude session started
-    // This handles cases where a conversation was ongoing when Claude session reset
+    // Find the first user message that occurred AT OR AFTER the Gemini session started
+    // This handles cases where a conversation was ongoing when Gemini session reset
     const firstMessageAfterSessionStart = allMessages.find(msg => {
       const msgTime = new Date(msg.timestamp);
       return msg.role === 'user' && msgTime >= sessionStartTime;
@@ -346,7 +346,7 @@ class SessionAnalyzer {
       effectiveSessionStart = new Date(firstMessageAfterSessionStart.timestamp);
     }
     
-    // Filter messages that are within the current Claude session window AND after the effective session start
+    // Filter messages that are within the current Gemini session window AND after the effective session start
     const currentSessionMessages = allMessages.filter(msg => {
       const msgTime = new Date(msg.timestamp);
       return msgTime >= effectiveSessionStart && msgTime < sessionEndTime;
@@ -400,7 +400,7 @@ class SessionAnalyzer {
 
     // Create the current session object
     const session = {
-      id: `claude_session_${claudeSessionInfo.sessionId.substring(0, 8)}`,
+      id: `gemini_session_${geminiSessionInfo.sessionId.substring(0, 8)}`,
       startTime: effectiveSessionStart,
       endTime: sessionEndTime,
       messages: currentSessionMessages,
@@ -413,7 +413,7 @@ class SessionAnalyzer {
       },
       conversations: [...new Set(currentSessionMessages.map(msg => msg.conversationId))],
       serviceTier: null,
-      isActive: now >= sessionStartTime && now < sessionEndTime && !claudeSessionInfo.estimatedTimeRemaining.isExpired
+      isActive: now >= sessionStartTime && now < sessionEndTime && !geminiSessionInfo.estimatedTimeRemaining.isExpired
     };
 
     // Calculate token usage for this session
@@ -440,32 +440,32 @@ class SessionAnalyzer {
     session.usageDetails = sessionUsage;
     session.conversationCount = session.conversations.length;
     
-    // Use Claude's actual time remaining
-    session.timeRemaining = Math.max(0, claudeSessionInfo.estimatedTimeRemaining.ms);
-    session.actualDuration = claudeSessionInfo.sessionDuration.ms;
-    session.duration = claudeSessionInfo.sessionLimit.ms;
+    // Use Gemini's actual time remaining
+    session.timeRemaining = Math.max(0, geminiSessionInfo.estimatedTimeRemaining.ms);
+    session.actualDuration = geminiSessionInfo.sessionDuration.ms;
+    session.duration = geminiSessionInfo.sessionLimit.ms;
     
     return [session];
   }
 
   /**
-   * Get current active session based on Claude session info
+   * Get current active session based on Gemini session info
    * @param {Array} sessions - Array of session objects
-   * @param {Object} claudeSessionInfo - Real Claude session information
+   * @param {Object} geminiSessionInfo - Real Gemini session information
    * @returns {Object|null} Current active session or null
    */
-  getCurrentActiveSessionFromClaudeInfo(sessions, claudeSessionInfo) {
+  getCurrentActiveSessionFromGeminiInfo(sessions, geminiSessionInfo) {
     if (sessions.length === 0) return null;
     
     const now = Date.now();
     const RECENT_ACTIVITY_THRESHOLD = 5 * 60 * 1000; // 5 minutes
     
     // Check if there's recent activity - sessions can be renewed at reset time
-    const timeSinceLastUpdate = now - claudeSessionInfo.lastUpdate;
+    const timeSinceLastUpdate = now - geminiSessionInfo.lastUpdate;
     const hasRecentActivity = timeSinceLastUpdate < RECENT_ACTIVITY_THRESHOLD;
     
     // Session is active if not expired OR has recent activity (session was renewed)
-    if (!claudeSessionInfo.estimatedTimeRemaining.isExpired || hasRecentActivity) {
+    if (!geminiSessionInfo.estimatedTimeRemaining.isExpired || hasRecentActivity) {
       return sessions[0];
     }
     
@@ -593,7 +593,7 @@ class SessionAnalyzer {
         });
       }
 
-      // Note: We don't warn about message counts since Claude uses complexity-based limits
+      // Note: We don't warn about message counts since Gemini uses complexity-based limits
       // that can't be accurately predicted from simple message counts
     }
 
@@ -655,7 +655,7 @@ class SessionAnalyzer {
     // Ensure limits exist, fallback to standard plan
     const planLimits = limits || this.PLAN_LIMITS['standard'];
     
-    // Calculate only user messages (Claude only counts prompts toward limits)
+    // Calculate only user messages (Gemini only counts prompts toward limits)
     const userMessages = currentSession.messages ? currentSession.messages.filter(msg => msg.role === 'user') : [];
     const userMessageCount = userMessages.length;
     

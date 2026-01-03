@@ -12,14 +12,14 @@ class PluginDashboard {
     this.port = 3336;
     this.httpServer = null;
     this.homeDir = os.homedir();
-    this.claudeDir = path.join(this.homeDir, '.claude');
-    this.settingsFile = path.join(this.claudeDir, 'settings.json');
+    this.geminiDir = path.join(this.homeDir, '.gemini');
+    this.settingsFile = path.join(this.geminiDir, 'settings.json');
   }
 
   async initialize() {
-    // Check if Claude directory exists
-    if (!(await fs.pathExists(this.claudeDir))) {
-      throw new Error(`Claude Code directory not found at ${this.claudeDir}`);
+    // Check if Gemini directory exists
+    if (!(await fs.pathExists(this.geminiDir))) {
+      throw new Error(`Gemini CLI directory not found at ${this.geminiDir}`);
     }
 
     // Load plugin data
@@ -29,7 +29,7 @@ class PluginDashboard {
 
   async loadPluginData() {
     try {
-      // Read Claude settings to get marketplace and plugin info
+      // Read Gemini settings to get marketplace and plugin info
       const settings = await this.readSettings();
 
       // Load marketplaces
@@ -80,7 +80,7 @@ class PluginDashboard {
 
     try {
       // Read known_marketplaces.json from plugins directory
-      const knownMarketplacesFile = path.join(this.claudeDir, 'plugins', 'known_marketplaces.json');
+      const knownMarketplacesFile = path.join(this.geminiDir, 'plugins', 'known_marketplaces.json');
 
       if (!(await fs.pathExists(knownMarketplacesFile))) {
         console.warn(chalk.yellow('Warning: known_marketplaces.json not found'));
@@ -96,7 +96,7 @@ class PluginDashboard {
         const marketplaceInfo = await this.loadMarketplaceDetails(name, config);
 
         // Check if marketplace is enabled (exists in the filesystem)
-        const marketplacePath = path.join(this.claudeDir, 'plugins', 'marketplaces', name);
+        const marketplacePath = path.join(this.geminiDir, 'plugins', 'marketplaces', name);
         const enabled = await fs.pathExists(marketplacePath);
 
         marketplaces.push({
@@ -127,8 +127,8 @@ class PluginDashboard {
   async loadMarketplaceDetails(name, config) {
     try {
       // Try to read marketplace.json from the marketplace source
-      const marketplacePath = path.join(this.claudeDir, 'plugins', 'marketplaces', name);
-      const marketplaceJsonPath = path.join(marketplacePath, '.claude-plugin', 'marketplace.json');
+      const marketplacePath = path.join(this.geminiDir, 'plugins', 'marketplaces', name);
+      const marketplaceJsonPath = path.join(marketplacePath, '.gemini-plugin', 'marketplace.json');
 
       if (await fs.pathExists(marketplaceJsonPath)) {
         const content = await fs.readFile(marketplaceJsonPath, 'utf8');
@@ -152,7 +152,7 @@ class PluginDashboard {
     if (source.source === 'github') return 'GitHub';
     if (source.source === 'git') return 'Git';
     // Support both 'local' and 'directory' for filesystem-based marketplaces
-    // 'directory' is used by Claude Code, 'local' for legacy compatibility
+    // 'directory' is used by Gemini CLI, 'local' for legacy compatibility
     if (source.source === 'local' || source.source === 'directory') return 'Local';
     if (source.source === 'url') return 'URL';
     return 'Unknown';
@@ -160,7 +160,7 @@ class PluginDashboard {
 
   async loadInstalledPlugins() {
     const plugins = [];
-    const pluginsMarketplacesDir = path.join(this.claudeDir, 'plugins', 'marketplaces');
+    const pluginsMarketplacesDir = path.join(this.geminiDir, 'plugins', 'marketplaces');
 
     try {
       if (!(await fs.pathExists(pluginsMarketplacesDir))) {
@@ -176,8 +176,8 @@ class PluginDashboard {
 
         if (!stat.isDirectory()) continue;
 
-        // Check if this is a marketplace directory (contains .claude-plugin/marketplace.json)
-        const marketplaceJsonPath = path.join(marketplacePath, '.claude-plugin', 'marketplace.json');
+        // Check if this is a marketplace directory (contains .gemini-plugin/marketplace.json)
+        const marketplaceJsonPath = path.join(marketplacePath, '.gemini-plugin', 'marketplace.json');
 
         if (await fs.pathExists(marketplaceJsonPath)) {
           // Load plugins from marketplace.json
@@ -197,7 +197,7 @@ class PluginDashboard {
             if (!pluginStat.isDirectory()) continue;
 
             // Read plugin.json
-            const pluginJsonPath = path.join(pluginPath, '.claude-plugin', 'plugin.json');
+            const pluginJsonPath = path.join(pluginPath, '.gemini-plugin', 'plugin.json');
 
             if (await fs.pathExists(pluginJsonPath)) {
               const pluginJson = JSON.parse(await fs.readFile(pluginJsonPath, 'utf8'));
@@ -234,7 +234,7 @@ class PluginDashboard {
     const plugins = [];
 
     try {
-      const marketplaceJsonPath = path.join(marketplacePath, '.claude-plugin', 'marketplace.json');
+      const marketplaceJsonPath = path.join(marketplacePath, '.gemini-plugin', 'marketplace.json');
       const content = await fs.readFile(marketplaceJsonPath, 'utf8');
       const marketplaceData = JSON.parse(content);
 
@@ -259,7 +259,7 @@ class PluginDashboard {
             ? path.join(marketplacePath, pluginDef.source)
             : marketplacePath;
 
-          // Check if plugin has inline component definitions (claude-code-templates style)
+          // Check if plugin has inline component definitions (gemini-cli-templates style)
           if (pluginDef.agents || pluginDef.commands || pluginDef.mcpServers) {
             components = {
               agents: pluginDef.agents ? pluginDef.agents.length : 0,
@@ -268,7 +268,7 @@ class PluginDashboard {
               mcps: pluginDef.mcpServers ? pluginDef.mcpServers.length : 0
             };
           }
-          // Otherwise, try to count from source directory (claude-code-plugins style)
+          // Otherwise, try to count from source directory (gemini-code-plugins style)
           else if (typeof pluginDef.source === 'string') {
             if (await fs.pathExists(pluginSourcePath)) {
               components = await this.countPluginComponents(pluginSourcePath);
@@ -398,7 +398,7 @@ class PluginDashboard {
 
     try {
       // Load user-level agents
-      const userAgentsDir = path.join(this.claudeDir, 'agents');
+      const userAgentsDir = path.join(this.geminiDir, 'agents');
       if (await fs.pathExists(userAgentsDir)) {
         const agentFiles = await fs.readdir(userAgentsDir);
         for (const file of agentFiles.filter(f => f.endsWith('.md'))) {
@@ -412,7 +412,7 @@ class PluginDashboard {
       }
 
       // Load user-level commands
-      const userCommandsDir = path.join(this.claudeDir, 'commands');
+      const userCommandsDir = path.join(this.geminiDir, 'commands');
       if (await fs.pathExists(userCommandsDir)) {
         const commandFiles = await fs.readdir(userCommandsDir);
         for (const file of commandFiles.filter(f => f.endsWith('.md'))) {
@@ -426,7 +426,7 @@ class PluginDashboard {
       }
 
       // Load user-level hooks
-      const userHooksFile = path.join(this.claudeDir, 'hooks', 'hooks.json');
+      const userHooksFile = path.join(this.geminiDir, 'hooks', 'hooks.json');
       if (await fs.pathExists(userHooksFile)) {
         const hooksData = JSON.parse(await fs.readFile(userHooksFile, 'utf8'));
         for (const [event, hooks] of Object.entries(hooksData.hooks || {})) {
@@ -443,7 +443,7 @@ class PluginDashboard {
       }
 
       // Load user-level MCPs
-      const userMcpFile = path.join(this.claudeDir, '.mcp.json');
+      const userMcpFile = path.join(this.geminiDir, '.mcp.json');
       if (await fs.pathExists(userMcpFile)) {
         const mcpData = JSON.parse(await fs.readFile(userMcpFile, 'utf8'));
         for (const [name, config] of Object.entries(mcpData.mcpServers || {})) {
@@ -662,7 +662,7 @@ class PluginDashboard {
 }
 
 async function runPluginDashboard(options = {}) {
-  console.log(chalk.blue('🔌 Starting Claude Code Plugin Dashboard...'));
+  console.log(chalk.blue('🔌 Starting Gemini CLI Plugin Dashboard...'));
 
   const dashboard = new PluginDashboard(options);
 

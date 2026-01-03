@@ -142,7 +142,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Project Name',
-  description: 'Generated with Claude Code Next.js scaffolding',
+  description: 'Generated with Gemini CLI Next.js scaffolding',
 };
 
 export default function RootLayout({
@@ -166,7 +166,7 @@ export default function Home() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
         <h1 className="text-4xl font-bold">Welcome to Your Next.js App</h1>
         <p className="mt-4 text-lg">
-          Built with Claude Code scaffolding
+          Built with Gemini CLI scaffolding
         </p>
       </div>
     </main>

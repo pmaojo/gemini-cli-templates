@@ -51,7 +51,7 @@ class PluginPageManager {
             this.renderRelatedPlugins();
 
             // Update page title
-            document.title = `${this.formatPluginName(this.pluginData.name)} - Claude Code Templates`;
+            document.title = `${this.formatPluginName(this.pluginData.name)} - Gemini CLI Templates`;
 
             // Setup keyboard listeners
             this.setupKeyboardListeners();
@@ -132,7 +132,7 @@ class PluginPageManager {
         document.getElementById('pluginName').textContent = this.formatPluginName(plugin.name);
         document.getElementById('pluginDescription').textContent = plugin.description;
         document.getElementById('pluginVersion').textContent = `v${plugin.version}`;
-        document.getElementById('pluginAuthor').textContent = plugin.author || 'Claude Code Templates';
+        document.getElementById('pluginAuthor').textContent = plugin.author || 'Gemini CLI Templates';
 
         // Render keywords
         const keywordsContainer = document.getElementById('pluginKeywords');
@@ -141,7 +141,7 @@ class PluginPageManager {
             .join('');
 
         // Update installation commands
-        document.getElementById('installPluginCmd').textContent = `/plugin install ${plugin.name}@claude-code-templates`;
+        document.getElementById('installPluginCmd').textContent = `/plugin install ${plugin.name}@gemini-code-templates`;
 
         // Render components sections
         this.renderComponents(plugin);
@@ -205,7 +205,7 @@ class PluginPageManager {
 
         return componentNames.map((name, index) => {
             const formattedName = this.formatComponentName(name);
-            const installCommand = `npx claude-code-templates@latest --${componentType} ${name}`;
+            const installCommand = `npx gemini-code-templates@latest --${componentType} ${name}`;
 
             return `
                 <li class="component-item" data-index="${index}">

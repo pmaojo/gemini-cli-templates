@@ -20,7 +20,7 @@ graph TD
 ### 2.1 Entry Point & Branding
 - **Binary Name:** `gemini-templates`
 - **Package Name:** `@google/gemini-cli-templates` (Proposed) or `gemini-cli-templates`.
-- **Theme:** Use Google's color palette (Blue/White/Multi-color) for CLI output (replacing Anthropic's specific styling).
+- **Theme:** Use Google's color palette (Blue/White/Multi-color) for CLI output (replacing Google's specific styling).
 
 ### 2.2 Component Installation Logic
 The `installComponent` function in `src/index.js` will be refactored to handle Gemini targets.
@@ -38,13 +38,13 @@ The `installComponent` function in `src/index.js` will be refactored to handle G
 - **Strategy:** Append or replace sections in `GEMINI.md`.
 
 #### B. Commands (Slash Commands)
-*Old:* Added to `CLAUDE.md` or `.claude/commands`.
+*Old:* Added to `CLAUDE.md` or `.gemini/commands`.
 *New:* Gemini Custom Commands.
 - **Location:** `~/.gemini/extensions/` or `GEMINI.md` (Research confirms `GEMINI.md` can define context, but executable commands might need specific extension handling).
 - **Fallback:** If executable commands aren't easily defined in markdown, we will generate simple shell scripts or alias definitions compatible with Gemini's execution environment.
 
 #### C. MCPs (Integrations)
-*Old:* `.claude/config.json` (`mcpServers` key).
+*Old:* `.gemini/config.json` (`mcpServers` key).
 *New:* `~/.gemini/settings.json`.
 - **Format:**
   ```json
@@ -62,9 +62,9 @@ The `installComponent` function in `src/index.js` will be refactored to handle G
 ### 2.3 Migration & Conversion Engine
 To handle the "Cool Solution" (Native Conversion), we will implement a **Transformation Pipeline**:
 
-1.  **Source:** Read existing `claude-code-templates` markdown file.
+1.  **Source:** Read existing `gemini-code-templates` markdown file.
 2.  **Transform:**
-    - `RegexReplace`: `s/Claude/Gemini/g`, `s/Anthropic/Google/g`.
+    - `RegexReplace`: `s/Gemini/Gemini/g`, `s/Google/Google/g`.
     - `ContextAwareReplace`: Identify "Project Overview" blocks and retitle to "Context".
 3.  **Output:** Write to destination (user's project).
 
@@ -75,13 +75,13 @@ To handle the "Cool Solution" (Native Conversion), we will implement a **Transfo
 ### 3.1 Process Monitoring
 - **Target:** `process.name == 'gemini'` (or node process running the cli).
 - **Log Parsing:** Gemini CLI uses standard I/O. We will need to attach to or tail the terminal buffer if possible, or rely on polling system state.
-- *Assumption:* The existing "screenshot/OCR" or "terminal hook" approach used for Claude might need adjustment. If the current analytics uses file watching (`conversation.json`), we must find the equivalent `~/.gemini/history` or similar.
+- *Assumption:* The existing "screenshot/OCR" or "terminal hook" approach used for Gemini might need adjustment. If the current analytics uses file watching (`conversation.json`), we must find the equivalent `~/.gemini/history` or similar.
     - *Research needed:* Does Gemini CLI log history to a file?
     - *Fallback:* Monitor the `GEMINI.md` last access time or strictly process up-time.
 
 ### 3.2 Dashboard (Frontend)
 - **Visuals:** Rebrand headers, icons, and empty states.
-- **Terminology:** "Claude is thinking" -> "Gemini is generating".
+- **Terminology:** "Gemini is thinking" -> "Gemini is generating".
 
 ## 4. Directory Structure Changes
 

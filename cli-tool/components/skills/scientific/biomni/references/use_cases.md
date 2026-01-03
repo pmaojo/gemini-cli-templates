@@ -24,7 +24,7 @@ Comprehensive examples demonstrating biomni across biomedical research domains.
 ```python
 from biomni.agent import A1
 
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Design a genome-wide CRISPR knockout screen to identify genes regulating
@@ -97,7 +97,7 @@ Tasks:
 **Task:** Analyze single-cell RNA-seq data and annotate cell populations.
 
 ```python
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Analyze single-cell RNA-seq dataset from human PBMC sample.
@@ -187,7 +187,7 @@ Analysis:
 **Task:** Predict ADMET properties for drug candidates.
 
 ```python
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Predict ADMET properties for these drug candidates:
@@ -284,7 +284,7 @@ Workflow:
 **Task:** Interpret GWAS results and identify causal genes.
 
 ```python
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Analyze GWAS summary statistics for Type 2 Diabetes.
@@ -369,7 +369,7 @@ Provide pathogenicity classification (benign, likely benign, VUS, likely pathoge
 **Task:** Diagnose rare genetic disease from whole exome sequencing.
 
 ```python
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Analyze whole exome sequencing (WES) data for rare disease diagnosis.
@@ -496,7 +496,7 @@ Generate patient-friendly report with actionable recommendations.
 ### Example 1: AlphaFold Structure Analysis
 
 ```python
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Analyze AlphaFold structure prediction for novel protein.
@@ -578,7 +578,7 @@ Generate network visualization and interaction details.
 ### Example 1: Systematic Literature Review
 
 ```python
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Perform systematic literature review on CRISPR base editing applications.
@@ -672,7 +672,7 @@ Generate structured summary suitable for research planning.
 ### Example 1: Multi-Omics Disease Analysis
 
 ```python
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 result = agent.go("""
 Integrate multi-omics data to understand disease mechanism.

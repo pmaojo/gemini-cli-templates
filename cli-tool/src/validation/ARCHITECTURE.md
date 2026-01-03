@@ -1,7 +1,7 @@
 # Security Audit System Architecture
 
 ## Overview
-This document outlines the security validation system for Claude Code Templates components (agents, commands, MCPs, settings, hooks).
+This document outlines the security validation system for Gemini CLI Templates components (agents, commands, MCPs, settings, hooks).
 
 ## Industry Standards Reference
 
@@ -99,22 +99,22 @@ const DANGEROUS_PATTERNS = [
 
 ```bash
 # Validate all components in the repository
-npx create-claude-config --security-audit
+npx create-gemini-config --security-audit
 
 # Validate specific component type
-npx create-claude-config --security-audit --agent frontend-developer
+npx create-gemini-config --security-audit --agent frontend-developer
 
 # Validate specific file
-npx create-claude-config --security-audit --file ./components/agents/frontend-developer.md
+npx create-gemini-config --security-audit --file ./components/agents/frontend-developer.md
 
 # Validate with verbose output
-npx create-claude-config --security-audit --verbose
+npx create-gemini-config --security-audit --verbose
 
 # Generate security report (JSON)
-npx create-claude-config --security-audit --output report.json
+npx create-gemini-config --security-audit --output report.json
 
 # Validate in CI/CD mode (exit 1 on errors)
-npx create-claude-config --security-audit --ci
+npx create-gemini-config --security-audit --ci
 ```
 
 ### Output Format
@@ -130,7 +130,7 @@ npx create-claude-config --security-audit --ci
    ├─ Semantic: PASS
    ├─ References: PASS
    ├─ Integrity: PASS (sha256: a3f2...)
-   └─ Provenance: PASS (author: claude-code-templates)
+   └─ Provenance: PASS (author: gemini-cli-templates)
 
 ⚠️  backend-api-specialist.md
    ├─ Structural: PASS
@@ -219,8 +219,8 @@ jobs:
         "hash": "sha256:a3f2e1d4...",
         "version": "1.0.0",
         "provenance": {
-          "author": "claude-code-templates",
-          "repository": "https://github.com/danimesq/claude-code-templates",
+          "author": "gemini-cli-templates",
+          "repository": "https://github.com/danimesq/gemini-cli-templates",
           "commit": "43dd5f9",
           "verifiedAuthor": false
         },
@@ -306,4 +306,4 @@ npm run test:integration -- validation
 
 ## Security Contact
 For security concerns, please open an issue at:
-https://github.com/danimesq/claude-code-templates/security
+https://github.com/danimesq/gemini-cli-templates/security

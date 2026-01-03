@@ -7,8 +7,8 @@ const path = require('path');
  * Extracted from monolithic analytics.js for better maintainability
  */
 class ConversationAnalyzer {
-  constructor(claudeDir, dataCache = null) {
-    this.claudeDir = claudeDir;
+  constructor(geminiDir, dataCache = null) {
+    this.geminiDir = geminiDir;
     this.dataCache = dataCache;
     this.data = {
       conversations: [],
@@ -26,7 +26,7 @@ class ConversationAnalyzer {
    * @returns {Promise<Object>} Complete analyzed data
    */
   async loadInitialData(stateCalculator, processDetector) {
-    console.log(chalk.yellow('📊 Analyzing Claude Code data...'));
+    console.log(chalk.yellow('📊 Analyzing Gemini CLI data...'));
 
     try {
       // Load conversation files
@@ -37,10 +37,10 @@ class ConversationAnalyzer {
       const projects = await this.loadActiveProjects();
       this.data.activeProjects = projects;
 
-      // Detect active Claude processes and enrich data
+      // Detect active Gemini processes and enrich data
       const enrichmentResult = await processDetector.enrichWithRunningProcesses(
         this.data.conversations, 
-        this.claudeDir, 
+        this.geminiDir, 
         stateCalculator
       );
       this.data.conversations = enrichmentResult.conversations;
@@ -57,7 +57,7 @@ class ConversationAnalyzer {
 
       return this.data;
     } catch (error) {
-      console.error(chalk.red('Error loading Claude data:'), error.message);
+      console.error(chalk.red('Error loading Gemini data:'), error.message);
       throw error;
     }
   }
@@ -92,8 +92,8 @@ class ConversationAnalyzer {
         return files;
       };
 
-      const jsonlFiles = await findJsonlFiles(this.claudeDir);
-      console.log(`🔥 ConversationAnalyzer found ${jsonlFiles.length} JSONL files in ${this.claudeDir}`);
+      const jsonlFiles = await findJsonlFiles(this.geminiDir);
+      console.log(`🔥 ConversationAnalyzer found ${jsonlFiles.length} JSONL files in ${this.geminiDir}`);
       
 
       for (const filePath of jsonlFiles) {
@@ -150,17 +150,17 @@ class ConversationAnalyzer {
   }
 
   /**
-   * Load active Claude projects from directory structure
+   * Load active Gemini projects from directory structure
    * @returns {Promise<Array>} Array of project objects
    */
   async loadActiveProjects() {
     const projects = [];
 
     try {
-      const files = await fs.readdir(this.claudeDir);
+      const files = await fs.readdir(this.geminiDir);
 
       for (const file of files) {
-        const filePath = path.join(this.claudeDir, file);
+        const filePath = path.join(this.geminiDir, file);
         const stats = await fs.stat(filePath);
 
         if (stats.isDirectory() && !file.startsWith('.')) {
@@ -437,13 +437,13 @@ class ConversationAnalyzer {
   }
 
   /**
-   * Extract project name from Claude directory file path using settings.json
+   * Extract project name from Gemini directory file path using settings.json
    * @param {string} filePath - Full path to conversation file
    * @returns {Promise<string|null>} Project name or null
    */
   async extractProjectFromPath(filePath) {
     // Extract project name from file path like:
-    // /Users/user/.claude/projects/-Users-user-Projects-MyProject/conversation.jsonl
+    // /Users/user/.gemini/projects/-Users-user-Projects-MyProject/conversation.jsonl
     const pathParts = filePath.split('/');
     const projectIndex = pathParts.findIndex(part => part === 'projects');
 
@@ -688,9 +688,9 @@ class ConversationAnalyzer {
     const avgTokensPerConversation = totalConversations > 0 ? Math.round(totalTokens / totalConversations) : 0;
     const totalFileSize = conversations.reduce((sum, conv) => sum + conv.fileSize, 0);
 
-    // Calculate real Claude sessions (5-hour periods)
-    const claudeSessionsResult = await this.calculateClaudeSessions(conversations);
-    const claudeSessions = claudeSessionsResult?.total || 0;
+    // Calculate real Gemini sessions (5-hour periods)
+    const geminiSessionsResult = await this.calculateGeminiSessions(conversations);
+    const geminiSessions = geminiSessionsResult?.total || 0;
 
     return {
       totalConversations,
@@ -701,35 +701,35 @@ class ConversationAnalyzer {
       totalFileSize: this.formatBytes(totalFileSize),
       dataSize: this.formatBytes(totalFileSize), // Alias for original dashboard compatibility
       lastActivity: conversations.length > 0 ? conversations[0].lastModified : null,
-      claudeSessions,
-      claudeSessionsDetail: claudeSessions > 0 ? `${claudeSessions} session${claudeSessions > 1 ? 's' : ''}` : 'no sessions',
-      claudeSessionsFullData: claudeSessionsResult, // Keep full session data for detailed analysis
+      geminiSessions,
+      geminiSessionsDetail: geminiSessions > 0 ? `${geminiSessions} session${geminiSessions > 1 ? 's' : ''}` : 'no sessions',
+      geminiSessionsFullData: geminiSessionsResult, // Keep full session data for detailed analysis
     };
   }
 
   /**
-   * Calculate Claude usage sessions based on 5-hour periods with caching
+   * Calculate Gemini usage sessions based on 5-hour periods with caching
    * @param {Array} conversations - Array of conversation objects
    * @returns {Promise<Object>} Session statistics
    */
-  async calculateClaudeSessions(conversations) {
+  async calculateGeminiSessions(conversations) {
     if (this.dataCache) {
       const dependencies = conversations.map(conv => conv.filePath);
       return await this.dataCache.getCachedComputation(
         'sessions',
-        () => this.computeClaudeSessions(conversations),
+        () => this.computeGeminiSessions(conversations),
         dependencies
       );
     }
-    return this.computeClaudeSessions(conversations);
+    return this.computeGeminiSessions(conversations);
   }
 
   /**
-   * Compute Claude usage sessions (internal method)
+   * Compute Gemini usage sessions (internal method)
    * @param {Array} conversations - Array of conversation objects
    * @returns {Promise<Object>} Session statistics
    */
-  async computeClaudeSessions(conversations) {
+  async computeGeminiSessions(conversations) {
     // Collect all message timestamps across all conversations
     const allMessages = [];
 

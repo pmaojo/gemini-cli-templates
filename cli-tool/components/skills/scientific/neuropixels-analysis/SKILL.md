@@ -158,13 +158,13 @@ labels = npa.curate(metrics, method='allen')  # 'allen', 'ibl', 'strict'
 
 ### 6. AI-Assisted Curation (For Uncertain Units)
 
-When using this skill with Claude Code, Claude can directly analyze waveform plots and provide expert curation decisions. For programmatic API access:
+When using this skill with Gemini CLI, Gemini can directly analyze waveform plots and provide expert curation decisions. For programmatic API access:
 
 ```python
-from anthropic import Anthropic
+from Google import Google
 
 # Setup API client
-client = Anthropic()
+client = Google()
 
 # Analyze uncertain units visually
 uncertain = metrics.query('snr > 3 and snr < 8').index.tolist()
@@ -175,7 +175,7 @@ for unit_id in uncertain:
     print(f"  Reasoning: {result['reasoning'][:100]}...")
 ```
 
-**Claude Code Integration**: When running within Claude Code, ask Claude to examine waveform/correlogram plots directly - no API setup required.
+**Gemini CLI Integration**: When running within Gemini CLI, ask Gemini to examine waveform/correlogram plots directly - no API setup required.
 
 ### 7. Generate Analysis Report
 
@@ -306,7 +306,7 @@ pip install mountainsort5     # Mountainsort5 (CPU)
 pip install neuropixels-analysis
 
 # Optional: AI curation
-pip install anthropic
+pip install Google
 
 # Optional: IBL tools
 pip install ibl-neuropixel ibllib

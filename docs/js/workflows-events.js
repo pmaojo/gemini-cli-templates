@@ -556,13 +556,13 @@ class WorkflowManager {
         }
         
         // Method 1: Full command with embedded YAML
-        const fullCommand = `npx claude-code-templates@latest ${commandParts.join(' ')} --workflow ${encodedYaml}`;
+        const fullCommand = `npx gemini-code-templates@latest ${commandParts.join(' ')} --workflow ${encodedYaml}`;
         
         // Method 2: Components only command (without embedded YAML) 
         // Remove prompt from components-only command since YAML isn't included
         const componentsParts = commandParts.filter(part => !part.startsWith('--prompt'));
         const componentsOnlyCommand = componentsParts.length > 0 ? 
-            `npx claude-code-templates@latest ${componentsParts.join(' ')}` : 
+            `npx gemini-code-templates@latest ${componentsParts.join(' ')}` : 
             '# No components to install';
         
         // Create a short hash for reference
@@ -674,14 +674,14 @@ agents:
 ${agents.map((agentData, i) => `  - agent: ${i + 1}
     type: ${agentData.agent.type}
     name: "${agentData.agent.name}"
-    path: "${agentData.agent.type === 'mcp' ? `.mcp.json#${agentData.agent.name}` : `.claude/${agentData.agent.type}s/${agentData.agent.path}`}"
+    path: "${agentData.agent.type === 'mcp' ? `.mcp.json#${agentData.agent.name}` : `.gemini/${agentData.agent.type}s/${agentData.agent.path}`}"
     category: "${agentData.agent.category}"
     description: "${agentData.agent.description}"
     tasks:${(agentData.subItems && agentData.subItems.length > 0) ? agentData.subItems.map((subItem, j) => `
       - task: ${j + 1}
         type: ${subItem.type}
         name: "${subItem.name}"
-        path: "${subItem.type === 'mcp' ? `.mcp.json#${subItem.name}` : `.claude/${subItem.type}s/${subItem.path}`}"
+        path: "${subItem.type === 'mcp' ? `.mcp.json#${subItem.name}` : `.gemini/${subItem.type}s/${subItem.path}`}"
         category: "${subItem.category}"
         description: "${subItem.description}"`).join('') : `
       - task: 1
@@ -695,11 +695,11 @@ execution:
   sequence: "agent-by-agent"
   
 components:
-  agents: [${agents.filter(a => a.agent.type === 'agent').map(a => `".claude/agents/${a.agent.path}"`).join(', ')}]
-  commands: [${[...agents.filter(a => a.agent.type === 'command').map(a => `".claude/commands/${a.agent.path}"`), ...agents.flatMap(a => (a.subItems || []).filter(s => s.type === 'command').map(s => `".claude/commands/${s.path}`))].join(', ')}]
+  agents: [${agents.filter(a => a.agent.type === 'agent').map(a => `".gemini/agents/${a.agent.path}"`).join(', ')}]
+  commands: [${[...agents.filter(a => a.agent.type === 'command').map(a => `".gemini/commands/${a.agent.path}"`), ...agents.flatMap(a => (a.subItems || []).filter(s => s.type === 'command').map(s => `".gemini/commands/${s.path}`))].join(', ')}]
   mcps: [${[...agents.filter(a => a.agent.type === 'mcp').map(a => `".mcp.json#${a.agent.name}"`), ...agents.flatMap(a => (a.subItems || []).filter(s => s.type === 'mcp').map(s => `".mcp.json#${s.name}`))].join(', ')}]
 
-# Instructions for Claude Code:
+# Instructions for Gemini CLI:
 # This hierarchical workflow contains ${agents.length} agents with their assigned tasks.
 # Each agent should be loaded first, then its associated commands and MCPs should be executed in sequence.`;
     }

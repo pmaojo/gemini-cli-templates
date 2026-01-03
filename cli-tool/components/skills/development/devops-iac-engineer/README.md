@@ -1,6 +1,6 @@
-# DevOps IaC Engineer Skill for Claude
+# DevOps IaC Engineer Skill for Gemini
 
-A comprehensive Claude skill designed to help DevOps teams implement infrastructure as code, manage cloud platforms, deploy containerized applications, and maintain reliable production systems.
+A comprehensive Gemini skill designed to help DevOps teams implement infrastructure as code, manage cloud platforms, deploy containerized applications, and maintain reliable production systems.
 
 ## Overview
 
@@ -221,10 +221,10 @@ For questions about specific topics:
 
 ## License & Usage
 
-This skill is designed for use with Claude AI. Adapt and customize for your organization's specific needs.
+This skill is designed for use with Gemini AI. Adapt and customize for your organization's specific needs.
 
 ---
 
 **Last Updated**: October 2025
 **Skill Version**: 1.0
-**For Claude Models**: Claude Opus 4.1, Claude Sonnet 4.5, Claude Haiku 4.5
+**For Gemini Models**: Gemini Opus 4.1, Gemini Sonnet 4.5, Gemini Haiku 4.5

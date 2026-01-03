@@ -1,6 +1,6 @@
-# Claude Code Templates - Modular Architecture
+# Gemini Code Templates - Modular Architecture
 
-This document provides detailed technical documentation for the modular architecture implementation of the Claude Code Templates analytics dashboard.
+This document provides detailed technical documentation for the modular architecture implementation of the Gemini Code Templates analytics dashboard.
 
 ## Overview
 
@@ -69,7 +69,7 @@ const quickState = stateCalculator.quickStateCalculation(conversation, processes
 ```
 
 #### ProcessDetector.js
-Manages detection and monitoring of running Claude Code processes.
+Manages detection and monitoring of running Gemini Code processes.
 
 **Key Features:**
 - Cross-platform process detection (macOS, Linux, Windows)
@@ -80,8 +80,8 @@ Manages detection and monitoring of running Claude Code processes.
 **API:**
 ```javascript
 const detector = new ProcessDetector();
-const processes = await detector.getRunningClaudeProcesses();
-const enriched = await detector.enrichWithRunningProcesses(conversations, claudeDir, stateCalculator);
+const processes = await detector.getRunningGeminiProcesses();
+const enriched = await detector.enrichWithRunningProcesses(conversations, geminiDir, stateCalculator);
 ```
 
 #### ConversationAnalyzer.js
@@ -95,7 +95,7 @@ Handles conversation file parsing, analysis, and data extraction.
 
 **API:**
 ```javascript
-const analyzer = new ConversationAnalyzer(claudeDir, dataCache);
+const analyzer = new ConversationAnalyzer(geminiDir, dataCache);
 const data = await analyzer.loadInitialData(stateCalculator, processDetector);
 const conversations = await analyzer.analyzeConversations(files, stateCalculator);
 ```
@@ -112,7 +112,7 @@ Provides real-time file system monitoring with efficient change detection.
 **API:**
 ```javascript
 const watcher = new FileWatcher();
-watcher.setupFileWatchers(claudeDir, dataRefreshCallback, processRefreshCallback, dataCache);
+watcher.setupFileWatchers(geminiDir, dataRefreshCallback, processRefreshCallback, dataCache);
 watcher.pause(); // Pause monitoring
 watcher.resume(); // Resume monitoring
 ```

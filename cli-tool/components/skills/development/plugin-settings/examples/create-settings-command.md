@@ -5,7 +5,7 @@ allowed-tools: ["Write", "AskUserQuestion"]
 
 # Create Plugin Settings
 
-This command helps users create a `.claude/my-plugin.local.md` settings file.
+This command helps users create a `.gemini/my-plugin.local.md` settings file.
 
 ## Steps
 
@@ -63,7 +63,7 @@ Extract answers from AskUserQuestion result:
 
 ### Step 3: Create Settings File
 
-Use Write tool to create `.claude/my-plugin.local.md`:
+Use Write tool to create `.gemini/my-plugin.local.md`:
 
 ```markdown
 ---
@@ -77,16 +77,16 @@ notify_on_errors: true
 
 Your plugin is configured with <mode> validation mode.
 
-To modify settings, edit this file and restart Claude Code.
+To modify settings, edit this file and restart Gemini CLI.
 ```
 
 ### Step 4: Inform User
 
 Tell the user:
-- Settings file created at `.claude/my-plugin.local.md`
+- Settings file created at `.gemini/my-plugin.local.md`
 - Current configuration summary
 - How to edit manually if needed
-- Reminder: Restart Claude Code for changes to take effect
+- Reminder: Restart Gemini CLI for changes to take effect
 - Settings file is gitignored (won't be committed)
 
 ## Implementation Notes

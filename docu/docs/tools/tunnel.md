@@ -4,13 +4,13 @@ sidebar_position: 5
 
 # Cloudflare Tunnel
 
-Secure remote access to your Claude Code tools from anywhere.
+Secure remote access to your Gemini Code tools from anywhere.
 
 ## Launch Commands
 
 ### With Chats
 ```bash
-npx claude-code-templates@latest --chats --tunnel
+npx gemini-code-templates@latest --chats --tunnel
 ```
 
 ## How It Works
@@ -30,7 +30,7 @@ npx claude-code-templates@latest --chats --tunnel
 ping cloudflare.com
 
 # Verify tool is running locally first
-npx claude-code-templates@latest --chats
+npx gemini-code-templates@latest --chats
 ```
 
 ---

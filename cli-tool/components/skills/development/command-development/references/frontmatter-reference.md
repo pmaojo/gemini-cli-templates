@@ -10,7 +10,7 @@ YAML frontmatter is optional metadata at the start of command files:
 ---
 description: Brief description
 allowed-tools: Read, Write
-model: sonnet
+model: gemini-2.0-flash
 argument-hint: [arg1] [arg2]
 ---
 
@@ -134,14 +134,14 @@ allowed-tools: "*"
 **Default:** Inherits from conversation
 **Values:** `sonnet`, `opus`, `haiku`
 
-**Purpose:** Specify which Claude model executes the command
+**Purpose:** Specify which Gemini model executes the command
 
 **Examples:**
 ```yaml
-model: haiku    # Fast, efficient for simple tasks
+model: gemini-2.0-flash    # Fast, efficient for simple tasks
 ```
 ```yaml
-model: sonnet   # Balanced performance (default)
+model: gemini-2.0-flash   # Balanced performance (default)
 ```
 ```yaml
 model: opus     # Maximum capability for complex tasks
@@ -158,7 +158,7 @@ model: opus     # Maximum capability for complex tasks
 ```yaml
 ---
 description: Format code file
-model: haiku
+model: gemini-2.0-flash
 ---
 ```
 
@@ -170,7 +170,7 @@ model: haiku
 ```yaml
 ---
 description: Review code changes
-model: sonnet
+model: gemini-2.0-flash
 ---
 ```
 
@@ -308,7 +308,7 @@ disable-model-invocation: true
 
 **Default behavior (false):**
 - Command available to SlashCommand tool
-- Claude can invoke programmatically
+- Gemini can invoke programmatically
 - Still available for manual invocation
 
 **When true:**
@@ -317,7 +317,7 @@ disable-model-invocation: true
 - Safer for sensitive operations
 
 **Best practices:**
-- Use sparingly (limits Claude's autonomy)
+- Use sparingly (limits Gemini's autonomy)
 - Document why in command comments
 - Consider if command should exist if always manual
 
@@ -370,7 +370,7 @@ All common fields:
 description: Deploy application to environment
 argument-hint: [app-name] [environment] [version]
 allowed-tools: Bash(kubectl:*), Bash(helm:*), Read
-model: sonnet
+model: gemini-2.0-flash
 ---
 
 Deploy $1 to $2 environment using version $3
@@ -422,7 +422,7 @@ Type "APPROVED" to confirm deployment.
 ---
 description: Missing quote
 allowed-tools: Read, Write
-model: sonnet
+model: gemini-2.0-flash
 ---  # ❌ Missing closing quote above
 ```
 
@@ -437,7 +437,7 @@ allowed-tools: Bash  # ❌ Missing command filter
 
 **Invalid model name:**
 ```yaml
-model: gpt4  # ❌ Not a valid Claude model
+model: gpt4  # ❌ Not a valid Gemini model
 ```
 
 **Fix:** Use `sonnet`, `opus`, or `haiku`

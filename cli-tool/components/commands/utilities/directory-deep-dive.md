@@ -31,4 +31,4 @@ Analyze directory structure and purpose
 
 ## Credit
 
-This command is based on the work of Thomas Landgraf: https://thomaslandgraf.substack.com/p/claude-codes-memory-working-with
+This command is based on the work of Thomas Landgraf: https://thomaslandgraf.substack.com/p/gemini-codes-memory-working-with

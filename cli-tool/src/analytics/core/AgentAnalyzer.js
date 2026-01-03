@@ -1,5 +1,5 @@
 /**
- * AgentAnalyzer - Analyzes Claude Code specialized agent usage patterns
+ * AgentAnalyzer - Analyzes Gemini CLI specialized agent usage patterns
  * Extracts agent invocation data, usage frequency, and workflow patterns
  */
 const chalk = require('chalk');
@@ -8,7 +8,7 @@ const path = require('path');
 
 class AgentAnalyzer {
   constructor() {
-    // Known Claude Code specialized agents
+    // Known Gemini CLI specialized agents
     this.AGENT_TYPES = {
       'general-purpose': {
         name: 'General Purpose',
@@ -16,10 +16,10 @@ class AgentAnalyzer {
         color: '#3fb950',
         icon: '🔧'
       },
-      'claude-code-best-practices': {
-        name: 'Claude Code Best Practices',
+      'gemini-code-best-practices': {
+        name: 'Gemini CLI Best Practices',
         description: 'Workflow optimization and setup guidance',
-        color: '#f97316',
+        color: '#4285f4',
         icon: '⚡'
       },
       'docusaurus-expert': {

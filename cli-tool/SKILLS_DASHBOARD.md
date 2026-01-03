@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Skills Dashboard provides an elegant, modern interface to view and explore Claude Code Skills with an interactive progressive context loading visualization.
+The Skills Dashboard provides an elegant, modern interface to view and explore Gemini Code Skills with an interactive progressive context loading visualization.
 
 ## Features
 
@@ -73,7 +73,7 @@ Between each layer, animated flow arrows show:
 npm start -- --skills-manager
 
 # Or globally
-npx claude-code-templates --skills-manager
+npx gemini-code-templates --skills-manager
 
 # Opens browser at http://localhost:3337
 ```
@@ -98,7 +98,7 @@ npx claude-code-templates --skills-manager
 
 ### Backend (`src/skill-dashboard.js`)
 - Express server on port 3337
-- Scans `~/.claude/skills/` and `.claude/skills/`
+- Scans `~/.gemini/skills/` and `.gemini/skills/`
 - Parses YAML frontmatter
 - Categorizes files by loading strategy
 - Provides REST API endpoints
@@ -154,7 +154,7 @@ Comprehensive skill with:
 
 ### Progressive Loading Strategy
 
-The visualization mirrors Claude Code's actual loading behavior:
+The visualization mirrors Gemini Code's actual loading behavior:
 1. **Main Context**: Loaded when skill is invoked
 2. **Skill Discovery**: Loaded when referenced in conversation
 3. **Progressive**: Accessed/executed directly as needed
@@ -239,7 +239,7 @@ Potential improvements:
 
 ## Credits
 
-Built with ❤️ for Claude Code Templates
+Built with ❤️ for Gemini Code Templates
 - Modern CSS Grid layout
 - Vanilla JavaScript for maximum performance
 - Inspired by VSCode file explorer
@@ -249,4 +249,4 @@ Built with ❤️ for Claude Code Templates
 
 **Version**: 1.0.0  
 **Port**: 3337  
-**License**: Same as claude-code-templates
+**License**: Same as gemini-code-templates

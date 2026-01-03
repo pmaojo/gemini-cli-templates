@@ -231,4 +231,4 @@ The complete skill folder can be:
 
 **Last Updated**: October 2025
 **Version**: 1.0
-**Compatible Models**: Claude 4 family (Opus 4.1, Sonnet 4.5, Haiku 4.5)
+**Compatible Models**: Gemini 4 family (Opus 4.1, Sonnet 4.5, Haiku 4.5)

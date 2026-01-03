@@ -69,8 +69,8 @@ class DashboardPage {
       const demoData = {
         summary: {
           totalConversations: 0,
-          claudeSessions: 0,
-          claudeSessionsDetail: 'no sessions',
+          geminiSessions: 0,
+          geminiSessionsDetail: 'no sessions',
           totalTokens: 0,
           activeProjects: 0,
           dataSize: '0 MB'
@@ -180,7 +180,7 @@ class DashboardPage {
             <!-- Sessions Card -->
             <div class="metric-card">
               <div class="metric-primary">
-                <span class="metric-primary-value" id="claudeSessions">0</span>
+                <span class="metric-primary-value" id="geminiSessions">0</span>
                 <span class="metric-primary-label">Total Sessions</span>
               </div>
               <div class="metric-secondary">
@@ -400,8 +400,8 @@ class DashboardPage {
     const headerContainer = this.container.querySelector('#dashboard-header-container');
     if (headerContainer && typeof HeaderComponent !== 'undefined') {
       this.headerComponent = new HeaderComponent(headerContainer, {
-        title: 'Claude Code Analytics Dashboard',
-        subtitle: 'Real-time monitoring and analytics for Claude Code sessions',
+        title: 'Gemini CLI Analytics Dashboard',
+        subtitle: 'Real-time monitoring and analytics for Gemini CLI sessions',
         version: 'v1.13.2', // Fallback version
         showVersionBadge: true,
         showLastUpdate: true,
@@ -579,7 +579,7 @@ class DashboardPage {
             datasets: [{
               label: 'Tokens',
               data: [],
-              borderColor: '#d57455',
+              borderColor: '#1a73e8',
               backgroundColor: 'rgba(213, 116, 85, 0.1)',
               tension: 0.4,
               fill: true
@@ -604,7 +604,7 @@ class DashboardPage {
             datasets: [{
               data: [],
               backgroundColor: [
-                '#d57455', '#3fb950', '#f97316', '#a5d6ff', 
+                '#1a73e8', '#3fb950', '#4285f4', '#a5d6ff', 
                 '#f85149', '#7d8590', '#ffd33d', '#bf91f3'
               ],
               borderWidth: 0
@@ -676,7 +676,7 @@ class DashboardPage {
           enabled: true,
           mode: 'nearest',
           backgroundColor: '#161b22',
-          titleColor: '#d57455',
+          titleColor: '#1a73e8',
           bodyColor: '#c9d1d9',
           borderColor: '#30363d',
           borderWidth: 1,
@@ -739,7 +739,7 @@ class DashboardPage {
         tooltip: {
           enabled: true,
           backgroundColor: '#161b22',
-          titleColor: '#d57455',
+          titleColor: '#1a73e8',
           bodyColor: '#c9d1d9',
           borderColor: '#30363d',
           borderWidth: 1,
@@ -784,7 +784,7 @@ class DashboardPage {
           enabled: true,
           mode: 'nearest',
           backgroundColor: '#161b22',
-          titleColor: '#d57455',
+          titleColor: '#1a73e8',
           bodyColor: '#c9d1d9',
           borderColor: '#30363d',
           borderWidth: 1,
@@ -843,7 +843,7 @@ class DashboardPage {
     const activities = [
       {
         type: 'session_start',
-        message: 'New Claude Code session started',
+        message: 'New Gemini CLI session started',
         timestamp: new Date(),
         icon: '🚀'
       },
@@ -964,8 +964,8 @@ class DashboardPage {
       const demoData = {
         summary: {
           totalConversations: 0,
-          claudeSessions: 0,
-          claudeSessionsDetail: 'no sessions',
+          geminiSessions: 0,
+          geminiSessionsDetail: 'no sessions',
           totalTokens: 0,
           activeProjects: 0,
           dataSize: '0 MB'
@@ -1037,11 +1037,11 @@ class DashboardPage {
 
     // Update primary metrics
     const totalConversations = this.container.querySelector('#totalConversations');
-    const claudeSessions = this.container.querySelector('#claudeSessions');
+    const geminiSessions = this.container.querySelector('#geminiSessions');
     const totalTokens = this.container.querySelector('#totalTokens');
 
     if (totalConversations) totalConversations.textContent = summary.totalConversations?.toLocaleString() || '0';
-    if (claudeSessions) claudeSessions.textContent = summary.claudeSessions?.toLocaleString() || '0';
+    if (geminiSessions) geminiSessions.textContent = summary.geminiSessions?.toLocaleString() || '0';
     if (totalTokens) totalTokens.textContent = summary.totalTokens?.toLocaleString() || '0';
 
     // Update conversation secondary metrics
@@ -1058,8 +1058,8 @@ class DashboardPage {
     const sessionsWeek = this.container.querySelector('#sessionsWeek');
     const activeProjects = this.container.querySelector('#activeProjects');
 
-    if (sessionsMonth) sessionsMonth.textContent = Math.max(1, Math.floor((summary.claudeSessions || 0) * 0.3)).toLocaleString();
-    if (sessionsWeek) sessionsWeek.textContent = Math.max(1, Math.floor((summary.claudeSessions || 0) * 0.1)).toLocaleString();
+    if (sessionsMonth) sessionsMonth.textContent = Math.max(1, Math.floor((summary.geminiSessions || 0) * 0.3)).toLocaleString();
+    if (sessionsWeek) sessionsWeek.textContent = Math.max(1, Math.floor((summary.geminiSessions || 0) * 0.1)).toLocaleString();
     if (activeProjects) activeProjects.textContent = summary.activeProjects?.toLocaleString() || '0';
 
     // Update token secondary metrics
@@ -1665,8 +1665,8 @@ class DashboardPage {
         borderColor: [
           '#3fb950',
           '#58a6ff',
-          '#f97316', 
-          '#d57455'
+          '#4285f4', 
+          '#1a73e8'
         ],
         borderWidth: 2
       }]
@@ -1762,7 +1762,7 @@ class DashboardPage {
         labels: ['Input Tokens', 'Output Tokens', 'Cache Creation', 'Cache Read'],
         datasets: [{
           data: chartData,
-          backgroundColor: ['#3fb950', '#58a6ff', '#f97316', '#d57455'],
+          backgroundColor: ['#3fb950', '#58a6ff', '#4285f4', '#1a73e8'],
           borderColor: '#0d1117',
           borderWidth: 2
         }]
@@ -1854,11 +1854,11 @@ class DashboardPage {
         }, {
           label: 'Cache Usage',
           data: dailyTokens.cacheTokens,
-          borderColor: '#f97316',
+          borderColor: '#4285f4',
           backgroundColor: 'rgba(249, 115, 22, 0.1)',
           fill: false,
           tension: 0.3,
-          pointBackgroundColor: '#f97316',
+          pointBackgroundColor: '#4285f4',
           pointBorderColor: '#ffffff',
           pointBorderWidth: 2,
           pointRadius: 3,

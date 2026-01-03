@@ -1,6 +1,6 @@
-# Cloudflare Claude Code Sandbox
+# Cloudflare Gemini CLI Sandbox
 
-Execute Claude Code in isolated Cloudflare Workers sandboxes with AI-powered code generation.
+Execute Gemini CLI in isolated Cloudflare Workers sandboxes with AI-powered code generation.
 
 ## Quick Start
 
@@ -12,10 +12,10 @@ npm install
 ### 2. Configure API Key
 ```bash
 # For local development, create .dev.vars:
-echo "ANTHROPIC_API_KEY=your-api-key-here" > .dev.vars
+echo "Google_API_KEY=your-api-key-here" > .dev.vars
 
 # For production, use wrangler secrets:
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 ```
 
 ### 3. Local Development
@@ -47,12 +47,12 @@ curl -X POST https://your-worker.your-subdomain.workers.dev/execute \
 
 This sandbox combines three powerful technologies:
 
-1. **Claude AI** (Anthropic) - Generates executable code from natural language
+1. **Gemini AI** (Google) - Generates executable code from natural language
 2. **Cloudflare Workers** - Runs at the edge for global low-latency access
 3. **Sandbox SDK** - Provides isolated container execution
 
 ```
-User Question → Cloudflare Worker → Claude AI → Generated Code → Sandbox → Results
+User Question → Cloudflare Worker → Gemini AI → Generated Code → Sandbox → Results
 ```
 
 ## API Reference
@@ -93,7 +93,7 @@ Check worker health status.
 {
   "status": "healthy",
   "timestamp": "2025-10-19T12:00:00.000Z",
-  "worker": "cloudflare-claude-sandbox"
+  "worker": "cloudflare-gemini-sandbox"
 }
 ```
 
@@ -163,12 +163,12 @@ curl -X POST http://localhost:8787/execute \
 
 **Local Development (.dev.vars):**
 ```bash
-ANTHROPIC_API_KEY=sk-ant-your-key-here
+Google_API_KEY=sk-ant-your-key-here
 ```
 
 **Production (Wrangler Secrets):**
 ```bash
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 ```
 
 ### Wrangler Configuration
@@ -205,12 +205,12 @@ docker ps
 ### API Key Not Set
 For local development:
 ```bash
-echo "ANTHROPIC_API_KEY=your-key" > .dev.vars
+echo "Google_API_KEY=your-key" > .dev.vars
 ```
 
 For production:
 ```bash
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 ```
 
 ### View Logs
@@ -244,20 +244,20 @@ npx wrangler tail --format=pretty
 - Free tier: 100,000 requests/day (limited Durable Objects)
 - Paid plan ($5/month): 10M requests/month + unlimited Durable Objects
 
-**Anthropic API:**
-- Claude Sonnet 4.5: ~$3 per million input tokens
+**Google API:**
+- Gemini Sonnet 4.5: ~$3 per million input tokens
 - Average request: ~200 tokens = $0.0006 per request
 
 **Example costs for 10,000 requests/month:**
 - Cloudflare: $5/month (paid plan)
-- Anthropic: ~$6/month (avg 200 tokens/request)
+- Google: ~$6/month (avg 200 tokens/request)
 - **Total: ~$11/month**
 
 ## Development
 
 ### Project Structure
 ```
-cloudflare-claude-sandbox/
+cloudflare-gemini-sandbox/
 ├── src/
 │   └── index.ts           # Worker source code
 ├── launcher.ts            # CLI launcher tool
@@ -281,7 +281,7 @@ cloudflare-claude-sandbox/
 
 - [Cloudflare Sandbox SDK](https://developers.cloudflare.com/sandbox/)
 - [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers/)
-- [Anthropic API Documentation](https://docs.anthropic.com/)
+- [Google API Documentation](https://docs.Google.com/)
 - [Wrangler CLI Reference](https://developers.cloudflare.com/workers/wrangler/)
 
 ## License
@@ -298,4 +298,4 @@ For issues and questions:
 
 ---
 
-Built with ❤️ using Cloudflare Workers, Claude AI, and the Sandbox SDK
+Built with ❤️ using Cloudflare Workers, Gemini AI, and the Sandbox SDK

@@ -129,17 +129,17 @@ function getAgentsForLanguageAndFramework(language, framework) {
 }
 
 /**
- * Install selected agents to the project's .claude/agents directory
+ * Install selected agents to the project's .gemini/agents directory
  * @param {Array} selectedAgents - Array of agent names to install
  * @param {string} projectPath - Project directory path
  * @returns {Promise<boolean>} Success status
  */
 async function installAgents(selectedAgents, projectPath = process.cwd()) {
   try {
-    const claudeDir = path.join(projectPath, '.claude');
-    const agentsDir = path.join(claudeDir, 'agents');
+    const geminiDir = path.join(projectPath, '.gemini');
+    const agentsDir = path.join(geminiDir, 'agents');
     
-    // Create .claude/agents directory if it doesn't exist
+    // Create .gemini/agents directory if it doesn't exist
     await fs.ensureDir(agentsDir);
     
     let installedCount = 0;
@@ -165,8 +165,8 @@ async function installAgents(selectedAgents, projectPath = process.cwd()) {
     }
     
     if (installedCount > 0) {
-      console.log(chalk.green(`\n🎉 Successfully installed ${installedCount} agent(s) to .claude/agents/`));
-      console.log(chalk.blue('   You can now use these agents in your Claude Code conversations!'));
+      console.log(chalk.green(`\n🎉 Successfully installed ${installedCount} agent(s) to .gemini/agents/`));
+      console.log(chalk.blue('   You can now use these agents in your Gemini CLI conversations!'));
       return true;
     } else {
       console.log(chalk.yellow('⚠️  No agents were installed'));
@@ -186,7 +186,7 @@ async function installAgents(selectedAgents, projectPath = process.cwd()) {
  */
 async function getInstalledAgents(projectPath = process.cwd()) {
   try {
-    const agentsDir = path.join(projectPath, '.claude', 'agents');
+    const agentsDir = path.join(projectPath, '.gemini', 'agents');
     
     if (!(await fs.pathExists(agentsDir))) {
       return [];

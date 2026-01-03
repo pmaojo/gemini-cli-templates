@@ -1,7 +1,7 @@
 # Analytics State Detection System
 
 ## Overview
-This document describes how the Claude Code Analytics Dashboard determines and displays conversation states in real-time.
+This document describes how the Gemini Code Analytics Dashboard determines and displays conversation states in real-time.
 
 ## State Detection Flow
 
@@ -20,7 +20,7 @@ For each conversation, the system:
 
 1. **Checks for Running Process**:
    - If `conversation.runningProcess` exists, uses `StateCalculator.quickStateCalculation()`
-   - Returns states like: "Claude Code working...", "Awaiting user input...", "User typing..."
+   - Returns states like: "Gemini Code working...", "Awaiting user input...", "User typing..."
 
 2. **Falls back to Basic Heuristics** (for conversations without active processes):
    ```javascript
@@ -42,7 +42,7 @@ For each conversation, the system:
 The StateCalculator determines detailed conversation states based on:
 
 #### Primary Factors:
-- **Running Process**: Whether there's an active Claude Code process
+- **Running Process**: Whether there's an active Gemini Code process
 - **Last Message Role**: 'user' vs 'assistant'
 - **Message Timing**: Time since last message
 - **File Activity**: File modification time
@@ -51,10 +51,10 @@ The StateCalculator determines detailed conversation states based on:
 #### State Categories:
 
 **Active Process States**:
-- `"Claude Code working..."` - User just sent message or recent file activity
-- `"Awaiting user input..."` - Claude responded and waiting for user
+- `"Gemini Code working..."` - User just sent message or recent file activity
+- `"Awaiting user input..."` - Gemini responded and waiting for user
 - `"User typing..."` - User hasn't responded for a while
-- `"Awaiting response..."` - User sent message but Claude hasn't responded
+- `"Awaiting response..."` - User sent message but Gemini hasn't responded
 
 **Inactive Process States**:
 - `"Recently active"` - Modified within 5 minutes
@@ -70,7 +70,7 @@ The frontend maps backend states to display labels and CSS classes:
 ```javascript
 // Label mapping
 const stateLabels = {
-  'Claude Code working...': 'Working',
+  'Gemini Code working...': 'Working',
   'Awaiting user input...': 'Awaiting input',
   'User typing...': 'Typing',
   'Awaiting response...': 'Awaiting response',
@@ -83,7 +83,7 @@ const stateLabels = {
 
 // CSS class mapping
 const stateClasses = {
-  'Claude Code working...': 'status-active',
+  'Gemini Code working...': 'status-active',
   'Awaiting user input...': 'status-waiting',
   'User typing...': 'status-typing',
   'Awaiting response...': 'status-pending',
@@ -180,4 +180,4 @@ curl -s "http://localhost:3333/api/conversations?page=0&limit=1" | jq '.paginati
 - `AgentsPage.getStateLabel()` - Display label mapping
 - `DataService.getConversationStates()` - API communication
 
-This system provides real-time visibility into Claude Code conversation states, helping users understand what's happening across all their active sessions.
+This system provides real-time visibility into Gemini Code conversation states, helping users understand what's happening across all their active sessions.

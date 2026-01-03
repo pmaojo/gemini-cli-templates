@@ -384,7 +384,7 @@ class ComponentPageManager {
         }
 
         try {
-            // Load components marketplace (Claude Code standard)
+            // Load components marketplace (Gemini CLI standard)
             const marketplace = await this.loadComponentsMarketplace();
             console.log('Components marketplace loaded:', marketplace);
 
@@ -489,8 +489,8 @@ class ComponentPageManager {
                 return this.componentsMarketplace;
             }
 
-            // Fallback: try to fetch marketplace.json directly from components/.claude-plugin/
-            const marketplaceResponse = await fetch('https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/.claude-plugin/marketplace.json');
+            // Fallback: try to fetch marketplace.json directly from components/.gemini-plugin/
+            const marketplaceResponse = await fetch('https://raw.githubusercontent.com/davila7/gemini-code-templates/main/cli-tool/components/.gemini-plugin/marketplace.json');
             if (marketplaceResponse.ok) {
                 this.componentsMarketplace = await marketplaceResponse.json();
                 console.log('Loaded components marketplace from GitHub:', this.componentsMarketplace);
@@ -507,7 +507,7 @@ class ComponentPageManager {
 
     renderInstallationSection() {
         const componentPath = this.getCleanPath();
-        const basicInstallCommand = `npx claude-code-templates@latest --${this.component.type}=${componentPath} --yes`;
+        const basicInstallCommand = `npx gemini-code-templates@latest --${this.component.type}=${componentPath} --yes`;
 
         // Update basic installation command
         const basicInstallElement = document.getElementById('basicInstallCommand');
@@ -531,7 +531,7 @@ class ComponentPageManager {
 
     renderGlobalAgentSection(componentPath) {
         const globalAgentSection = document.getElementById('globalAgentSection');
-        const globalAgentCommand = `npx claude-code-templates@latest --create-agent ${componentPath}`;
+        const globalAgentCommand = `npx gemini-code-templates@latest --create-agent ${componentPath}`;
         const globalUsageCommand = `${componentPath.split('/').pop()} "your prompt here"`;
 
         const globalAgentCommandElement = document.getElementById('globalAgentCommand');
@@ -553,9 +553,9 @@ class ComponentPageManager {
         const cloudSandboxSection = document.getElementById('cloudSandboxSection');
 
         // Update all sandbox command examples with the component path
-        const e2bSandboxCommand = `npx claude-code-templates@latest --sandbox e2b --agent=${componentPath} --prompt "your development task"`;
-        const cloudflareSandboxCommand = `npx claude-code-templates@latest --sandbox cloudflare --agent=${componentPath} --prompt "your development task"`;
-        const dockerSandboxCommand = `npx claude-code-templates@latest --sandbox docker --agent=${componentPath} --prompt "your development task"`;
+        const e2bSandboxCommand = `npx gemini-code-templates@latest --sandbox e2b --agent=${componentPath} --prompt "your development task"`;
+        const cloudflareSandboxCommand = `npx gemini-code-templates@latest --sandbox cloudflare --agent=${componentPath} --prompt "your development task"`;
+        const dockerSandboxCommand = `npx gemini-code-templates@latest --sandbox docker --agent=${componentPath} --prompt "your development task"`;
 
         const e2bSandboxCommandElement = document.getElementById('e2bSandboxCommand');
         const cloudflareSandboxCommandElement = document.getElementById('cloudflareSandboxCommand');
@@ -784,7 +784,7 @@ class ComponentPageManager {
     }
 
     generateGitHubURL() {
-        let githubUrl = 'https://github.com/davila7/claude-code-templates/';
+        let githubUrl = 'https://github.com/davila7/gemini-code-templates/';
         
         if (this.component.type === 'template') {
             githubUrl += `tree/main/cli-tool/templates/${this.component.folderPath || ''}`;
@@ -921,8 +921,8 @@ class ComponentPageManager {
         const category = this.component.category || 'Development';
         
         // Enhanced page title with component type and category
-        const pageTitle = `${cleanName} ${typeCapitalized} - Claude Code Templates`;
-        const enhancedDescription = `${description} | ${typeCapitalized} for ${category} | Claude Code Templates - AI-powered development tools`;
+        const pageTitle = `${cleanName} ${typeCapitalized} - Gemini CLI Templates`;
+        const enhancedDescription = `${description} | ${typeCapitalized} for ${category} | Gemini CLI Templates - AI-powered development tools`;
         
         // Generate proper canonical URL for SEO
         const canonicalURL = this.generateCanonicalURL();
@@ -943,7 +943,7 @@ class ComponentPageManager {
         // Update keywords
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords) {
-            metaKeywords.content = `${cleanName}, ${this.component.type}, ${category}, Claude Code, AI development, automation, ${this.component.type}s, templates`;
+            metaKeywords.content = `${cleanName}, ${this.component.type}, ${category}, Gemini CLI, AI development, automation, ${this.component.type}s, templates`;
         }
 
         // Update canonical URL
@@ -1017,16 +1017,16 @@ class ComponentPageManager {
             "url": url,
             "author": {
                 "@type": "Organization",
-                "name": "Claude Code Templates Community"
+                "name": "Gemini CLI Templates Community"
             },
             "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "USD"
             },
-            "keywords": `${name}, ${type}, ${category}, Claude Code, AI development`,
+            "keywords": `${name}, ${type}, ${category}, Gemini CLI, AI development`,
             "programmingLanguage": type === "command" ? "Shell" : "Configuration",
-            "relatedLink": "https://www.anthropic.com/claude-code"
+            "relatedLink": "https://www.google.com/gemini-code"
         };
 
         const script = document.createElement('script');
@@ -1195,24 +1195,24 @@ function shareComponentOnTwitter() {
         const category = componentManager.component.category || 'Development';
         const canonicalURL = componentManager.generateCanonicalURL();
         
-        message = `🚀 Found this amazing ${cleanName} ${type} for Claude Code!
+        message = `🚀 Found this amazing ${cleanName} ${type} for Gemini CLI!
 
 Perfect for ${category.toLowerCase()} workflows with AI-powered automation.
 
 ${canonicalURL}
 
-#ClaudeCode #AI #Development #${category.replace(/\s+/g, '')} #Automation`;
+#GeminiCode #AI #Development #${category.replace(/\s+/g, '')} #Automation`;
     } else {
         // Fallback message
-        const componentTitle = document.getElementById('componentTitle')?.textContent || 'Claude Code Component';
+        const componentTitle = document.getElementById('componentTitle')?.textContent || 'Gemini CLI Component';
         const currentURL = window.location.href;
-        message = `🚀 Check out this ${componentTitle} for Claude Code!
+        message = `🚀 Check out this ${componentTitle} for Gemini CLI!
 
 Perfect for AI-powered development workflows.
 
 ${currentURL}
 
-#ClaudeCode #AI #Development`;
+#GeminiCode #AI #Development`;
     }
     
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`;
@@ -1235,24 +1235,24 @@ function shareComponentOnThreads() {
         const category = componentManager.component.category || 'Development';
         const canonicalURL = componentManager.generateCanonicalURL();
         
-        message = `🚀 Found this amazing ${cleanName} ${type} for Claude Code!
+        message = `🚀 Found this amazing ${cleanName} ${type} for Gemini CLI!
 
 Perfect for ${category.toLowerCase()} workflows with AI-powered automation.
 
 ${canonicalURL}
 
-#ClaudeCode #AI #Development #${category.replace(/\s+/g, '')} #Automation`;
+#GeminiCode #AI #Development #${category.replace(/\s+/g, '')} #Automation`;
     } else {
         // Fallback message
-        const componentTitle = document.getElementById('componentTitle')?.textContent || 'Claude Code Component';
+        const componentTitle = document.getElementById('componentTitle')?.textContent || 'Gemini CLI Component';
         const currentURL = window.location.href;
-        message = `🚀 Check out this ${componentTitle} for Claude Code!
+        message = `🚀 Check out this ${componentTitle} for Gemini CLI!
 
 Perfect for AI-powered development workflows.
 
 ${currentURL}
 
-#ClaudeCode #AI #Development`;
+#GeminiCode #AI #Development`;
     }
     
     const threadsUrl = `https://threads.net/intent/post?text=${encodeURIComponent(message)}`;

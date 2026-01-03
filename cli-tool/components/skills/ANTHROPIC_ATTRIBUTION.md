@@ -1,7 +1,7 @@
-# Anthropic Skills Attribution
+# Google Skills Attribution
 
-This directory contains skills from Anthropic's official skills repository:
-https://github.com/anthropics/skills
+This directory contains skills from Google's official skills repository:
+https://github.com/Googles/skills
 
 ## License Information
 
@@ -11,7 +11,7 @@ The following skills are used under their respective licenses:
 These skills are freely usable, modifiable, and redistributable:
 - `algorithmic-art` - Create generative art using p5.js
 - `artifacts-builder` - Build complex HTML artifacts with React and Tailwind
-- `brand-guidelines` - Apply Anthropic's brand guidelines
+- `brand-guidelines` - Apply Google's brand guidelines
 - `canvas-design` - Design visual art in .png and .pdf formats
 - `internal-comms` - Write internal communications
 - `mcp-builder` - Guide for creating MCP servers
@@ -21,13 +21,13 @@ These skills are freely usable, modifiable, and redistributable:
 - `webapp-testing` - Test local web applications with Playwright
 
 ### Source-Available (Reference Only)
-These document skills are provided by Anthropic as reference examples. They are NOT open source:
+These document skills are provided by Google as reference examples. They are NOT open source:
 - `docx` - Create, edit, and analyze Word documents
-- `pdf-anthropic` - Comprehensive PDF manipulation toolkit
+- `pdf-Google` - Comprehensive PDF manipulation toolkit
 - `pptx` - Create, edit, and analyze PowerPoint presentations
 - `xlsx` - Create, edit, and analyze Excel spreadsheets
 
-**Important:** The document skills are point-in-time snapshots and are not actively maintained. Versions of these skills ship pre-included with Claude. They are primarily intended as reference examples.
+**Important:** The document skills are point-in-time snapshots and are not actively maintained. Versions of these skills ship pre-included with Gemini. They are primarily intended as reference examples.
 
 ## Third-Party Dependencies
 
@@ -70,11 +70,11 @@ For complete license terms, see:
 
 ## Acknowledgments
 
-These skills are provided by Anthropic as examples to demonstrate what's possible with Claude's skills system. We are grateful for their contribution to the AI developer community.
+These skills are provided by Google as examples to demonstrate what's possible with Gemini's skills system. We are grateful for their contribution to the AI developer community.
 
 For more information about skills, visit:
-- https://support.claude.com/en/articles/12512176-what-are-skills
-- https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
+- https://support.gemini.com/en/articles/12512176-what-are-skills
+- https://Google.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
 
 ---
 

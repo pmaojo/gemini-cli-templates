@@ -31,13 +31,13 @@ function loadEnvFile() {
         Object.assign(process.env, envVars);
         
         const hasE2B = !!process.env.E2B_API_KEY;
-        const hasAnthropic = !!process.env.ANTHROPIC_API_KEY;
+        const hasGoogle = !!process.env.ANTHROPIC_API_KEY;
         
         console.log(chalk.green('✅ Environment variables loaded:'));
         console.log(chalk.gray(`   • E2B_API_KEY: ${hasE2B ? 'Found' : 'Missing'}`));
-        console.log(chalk.gray(`   • ANTHROPIC_API_KEY: ${hasAnthropic ? 'Found' : 'Missing'}`));
+        console.log(chalk.gray(`   • ANTHROPIC_API_KEY: ${hasGoogle ? 'Found' : 'Missing'}`));
         
-        return hasE2B && hasAnthropic;
+        return hasE2B && hasGoogle;
     } else {
         console.log(chalk.yellow('⚠️  No .env file found in:'), chalk.gray(envPath));
         return false;
@@ -211,7 +211,7 @@ app.post('/api/install-agent', async (req, res) => {
         console.log(chalk.blue('🔧 Installing agent:'), chalk.cyan(agentName));
         
         // Use the CLI tool to install the agent
-        const child = spawn('npx', ['claude-code-templates@latest', '--agent', agentName, '--yes'], {
+        const child = spawn('npx', ['gemini-cli-templates@latest', '--agent', agentName, '--yes'], {
             cwd: process.cwd(),
             stdio: ['pipe', 'pipe', 'pipe'],
             shell: true
@@ -266,9 +266,9 @@ app.post('/api/install-agent', async (req, res) => {
 });
 
 async function checkAndInstallAgent(agentName, task) {
-    // Check if agent exists in .claude directory
-    const claudeDir = path.join(process.cwd(), '.claude');
-    const agentPath = path.join(claudeDir, 'agents', `${agentName}.md`);
+    // Check if agent exists in .gemini directory
+    const geminiDir = path.join(process.cwd(), '.gemini');
+    const agentPath = path.join(geminiDir, 'agents', `${agentName}.md`);
     
     if (fs.existsSync(agentPath)) {
         return true; // Agent already exists
@@ -277,7 +277,7 @@ async function checkAndInstallAgent(agentName, task) {
     task.output.push(`🔧 Agent ${agentName} not found locally. Installing...`);
     
     return new Promise((resolve, reject) => {
-        const child = spawn('npx', ['claude-code-templates@latest', '--agent', agentName, '--yes'], {
+        const child = spawn('npx', ['gemini-cli-templates@latest', '--agent', agentName, '--yes'], {
             cwd: process.cwd(),
             stdio: ['pipe', 'pipe', 'pipe'],
             shell: true
@@ -375,7 +375,7 @@ async function executeE2BTask(task) {
                     task.progress = 40;
                 } else if (line.includes('Installing')) {
                     task.progress = 60;
-                } else if (line.includes('Executing Claude Code')) {
+                } else if (line.includes('Executing Gemini CLI')) {
                     task.progress = 80;
                 } else if (line.includes('Downloaded:')) {
                     task.progress = 95;
@@ -410,10 +410,10 @@ async function executeE2BTask(task) {
                 
                 // Check if it's an API key error
                 const outputText = task.output.join(' ');
-                if (outputText.includes('E2B API key is required') || outputText.includes('Anthropic API key is required')) {
+                if (outputText.includes('E2B API key is required') || outputText.includes('Google API key is required')) {
                     task.output.push('❌ Missing API keys! Please add E2B_API_KEY and ANTHROPIC_API_KEY to your .env file');
                     task.output.push('🔑 Get E2B key: https://e2b.dev/dashboard');
-                    task.output.push('🔑 Get Anthropic key: https://console.anthropic.com');
+                    task.output.push('🔑 Get Google key: https://console.google.com');
                 } else {
                     task.output.push(`❌ Process exited with code: ${code}`);
                 }
@@ -436,7 +436,7 @@ async function executeE2BTask(task) {
 
 async function executeLocalTask(task) {
     try {
-        task.output.push('🖥️  Executing Claude Code locally...');
+        task.output.push('🖥️  Executing Gemini CLI locally...');
         task.progress = 10;
         
         // Check and install agent if needed
@@ -452,7 +452,7 @@ async function executeLocalTask(task) {
             task.progress = 15;
         }
         
-        task.output.push('🔍 Checking if Claude Code CLI is available...');
+        task.output.push('🔍 Checking if Gemini CLI CLI is available...');
         
         // For local execution, we'll include the agent in the prompt if specified
         let finalPrompt = task.prompt;
@@ -460,25 +460,25 @@ async function executeLocalTask(task) {
             finalPrompt = `As a ${task.agent.replace('-', ' ')}, ${task.prompt}`;
         }
         
-        // Execute Claude Code locally with just the prompt
-        const child = spawn('claude', [finalPrompt], {
+        // Execute Gemini CLI locally with just the prompt
+        const child = spawn('gemini', [finalPrompt], {
             cwd: process.cwd(),
             stdio: ['ignore', 'pipe', 'pipe'], // Ignore stdin to prevent hanging
             env: {
                 ...process.env,
                 PATH: process.env.PATH
             },
-            shell: true, // Use shell to find claude command
+            shell: true, // Use shell to find gemini command
             timeout: 300000 // 5 minute timeout
         });
         
-        task.output.push('🚀 Claude Code execution started');
+        task.output.push('🚀 Gemini CLI execution started');
         task.progress = 30;
         
         // Set up timeout to prevent hanging
         const executionTimeout = setTimeout(() => {
             task.output.push('⏰ Execution timeout reached (5 minutes)');
-            task.output.push('💡 This might indicate Claude Code is waiting for input or has hung');
+            task.output.push('💡 This might indicate Gemini CLI is waiting for input or has hung');
             task.status = 'failed';
             task.endTime = new Date();
             child.kill('SIGTERM');
@@ -517,17 +517,17 @@ async function executeLocalTask(task) {
                 task.status = 'completed';
                 task.endTime = new Date();
                 task.progress = 100;
-                task.output.push('✅ Claude Code execution completed successfully!');
+                task.output.push('✅ Gemini CLI execution completed successfully!');
                 task.output.push('📂 Files were created/modified in your current directory');
             } else {
                 task.status = 'failed';
                 task.endTime = new Date();
                 
                 const outputText = task.output.join(' ');
-                if (outputText.includes('claude: command not found') || outputText.includes('not recognized')) {
-                    task.output.push('❌ Claude Code CLI not found!');
-                    task.output.push('💡 Please install Claude Code CLI first:');
-                    task.output.push('🔗 Visit: https://claude.ai/code');
+                if (outputText.includes('gemini: command not found') || outputText.includes('not recognized')) {
+                    task.output.push('❌ Gemini CLI CLI not found!');
+                    task.output.push('💡 Please install Gemini CLI CLI first:');
+                    task.output.push('🔗 Visit: https://gemini.ai/code');
                 } else {
                     task.output.push(`❌ Process exited with code: ${code}`);
                 }
@@ -542,10 +542,10 @@ async function executeLocalTask(task) {
             task.endTime = new Date();
             
             if (error.code === 'ENOENT') {
-                task.output.push('❌ Claude Code CLI not found in PATH!');
-                task.output.push('💡 Please install Claude Code CLI first:');
-                task.output.push('🔗 Visit: https://claude.ai/code');
-                task.output.push('🔗 Documentation: https://docs.anthropic.com/claude-code');
+                task.output.push('❌ Gemini CLI CLI not found in PATH!');
+                task.output.push('💡 Please install Gemini CLI CLI first:');
+                task.output.push('🔗 Visit: https://gemini.ai/code');
+                task.output.push('🔗 Documentation: https://docs.google.com/gemini-code');
             } else {
                 task.output.push(`❌ Execution error: ${error.message}`);
             }
@@ -560,7 +560,7 @@ async function executeLocalTask(task) {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(chalk.blue('\\n🎨 Claude Code Studio Server'));
+    console.log(chalk.blue('\\n🎨 Gemini CLI Studio Server'));
     console.log(chalk.cyan('═══════════════════════════════════════'));
     console.log(chalk.green(`🚀 Server running on http://localhost:${PORT}`));
     console.log(chalk.gray('💡 Local and cloud execution interface ready'));

@@ -55,7 +55,7 @@ Navigate to your messy invoice folder:
 cd ~/Desktop/receipts-to-sort
 ```
 
-Then ask Claude Code:
+Then ask Gemini CLI:
 ```
 Organize these invoices for taxes
 ```

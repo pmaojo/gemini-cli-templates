@@ -6,8 +6,8 @@ class HeaderComponent {
   constructor(container, options = {}) {
     this.container = container;
     this.options = {
-      title: options.title || 'Claude Code Analytics Dashboard',
-      subtitle: options.subtitle || 'Real-time monitoring and analytics for Claude Code sessions',
+      title: options.title || 'Gemini CLI Analytics Dashboard',
+      subtitle: options.subtitle || 'Real-time monitoring and analytics for Gemini CLI sessions',
       showVersionBadge: options.showVersionBadge !== false,
       showLastUpdate: options.showLastUpdate !== false,
       showThemeSwitch: options.showThemeSwitch !== false,
@@ -61,7 +61,7 @@ class HeaderComponent {
               </div>
             ` : ''}
             ${this.options.showGitHubLink ? `
-              <a href="https://github.com/davila7/claude-code-templates" target="_blank" class="github-link" title="Star on GitHub">
+              <a href="https://github.com/davila7/gemini-cli-templates" target="_blank" class="github-link" title="Star on GitHub">
                 <span class="github-icon">⭐</span>
                 Star on GitHub
               </a>
@@ -130,7 +130,7 @@ class HeaderComponent {
   initializeTheme() {
     if (!this.options.showThemeSwitch) return;
 
-    const savedTheme = localStorage.getItem('claude-analytics-theme') || 'dark';
+    const savedTheme = localStorage.getItem('gemini-analytics-theme') || 'dark';
     const body = document.body;
     const headerThumb = this.container.querySelector('#header-theme-switch-thumb');
     const headerIcon = headerThumb?.querySelector('.theme-switch-icon');
@@ -176,7 +176,7 @@ class HeaderComponent {
       globalIcon.textContent = newTheme === 'light' ? '☀️' : '🌙';
     }
     
-    localStorage.setItem('claude-analytics-theme', newTheme);
+    localStorage.setItem('gemini-analytics-theme', newTheme);
   }
 
   /**

@@ -133,7 +133,7 @@ class TrackingService {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'User-Agent': `claude-code-templates/${trackingData.environment?.cli_version || 'unknown'}`
+                    'User-Agent': `gemini-cli-templates/${trackingData.environment?.cli_version || 'unknown'}`
                 },
                 body: JSON.stringify(payload),
                 signal: signal
@@ -263,7 +263,7 @@ class TrackingService {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'User-Agent': `claude-code-templates/${payload.cliVersion}`
+                    'User-Agent': `gemini-cli-templates/${payload.cliVersion}`
                 },
                 body: JSON.stringify(payload),
                 signal: controller.signal

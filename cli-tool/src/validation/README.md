@@ -1,6 +1,6 @@
 # Security Validation System
 
-Comprehensive security validation for Claude Code Templates components based on industry standards (npm 2025, PyPI, GitHub Package Registry, SLSA Framework).
+Comprehensive security validation for Gemini CLI Templates components based on industry standards (npm 2025, PyPI, GitHub Package Registry, SLSA Framework).
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ npm run security-audit:json
 ### Example Output
 
 ```
-🔒 Claude Code Templates - Security Audit
+🔒 Gemini CLI Templates - Security Audit
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📁 Scanning components directory...
@@ -80,7 +80,7 @@ Validates component structure, format, and metadata.
 - ✅ File size limits (< 100KB)
 - ✅ UTF-8 encoding
 - ✅ Valid tool names (Read, Write, Edit, Bash, Glob, Grep, *)
-- ✅ Valid model names (sonnet, opus, haiku)
+- ✅ Valid model names (gemini-2.0-flash, opus, gemini-2.0-flash)
 - ✅ Section count (< 20 sections)
 
 **Error Codes:** `STRUCT_E001` - `STRUCT_E010`
@@ -92,7 +92,7 @@ Ensures components haven't been tampered with.
 
 **Checks:**
 - ✅ Generate SHA256 hash
-- ✅ Track hash in registry (`.claude/security/component-hashes.json`)
+- ✅ Track hash in registry (`.gemini/security/component-hashes.json`)
 - ✅ Detect content changes
 - ✅ Validate semantic versioning
 
@@ -399,14 +399,14 @@ validatorScore = max(0, 100 - (errors * 25) - (warnings * 5))
    tools:
      - Read
      - Write
-   model: sonnet
+   model: gemini-2.0-flash
    ---
    ```
 
 2. **Avoid Dangerous Patterns:**
    - Don't include executable shell commands
    - No hardcoded credentials or API keys
-   - Avoid instructing Claude to ignore security rules
+   - Avoid instructing Gemini to ignore security rules
    - Use HTTPS URLs only
 
 3. **Keep Components Concise:**
@@ -428,7 +428,7 @@ validatorScore = max(0, 100 - (errors * 25) - (warnings * 5))
 
 2. **Monitor Hash Changes:**
    - Unexpected hash changes indicate tampering
-   - Review `.claude/security/component-hashes.json`
+   - Review `.gemini/security/component-hashes.json`
 
 3. **Update Validation Rules:**
    - Add new dangerous patterns to SemanticValidator
@@ -486,7 +486,7 @@ npm run security-audit
 **Issue:** Hash registry conflicts
 ```bash
 # Solution: Clear and regenerate
-rm -rf .claude/security/component-hashes.json
+rm -rf .gemini/security/component-hashes.json
 npm run security-audit
 ```
 

@@ -1,4 +1,4 @@
-/* Terminal theme CSS based on Claude Code Analytics dashboard */
+/* Terminal theme CSS based on Gemini CLI Analytics dashboard */
 :root {
     /* Dark theme colors (terminal style) */
     --bg-primary: #0d1117;
@@ -9,9 +9,9 @@
     --border-color: #30363d;
     --text-primary: #c9d1d9;
     --text-secondary: #7d8590;
-    --text-accent: #d57455;
+    --text-accent: #1a73e8;
     --text-success: #3fb950;
-    --text-warning: #f97316;
+    --text-warning: #4285f4;
     --text-error: #f85149;
     --text-info: #a5d6ff;
     --accent-color: #d97706;
@@ -1657,7 +1657,7 @@ body {
     font-family: inherit;
 }
 
-.claude-prompt {
+.gemini-prompt {
     background: var(--bg-primary);
     border: 1px solid var(--border-secondary);
     border-radius: 8px;
@@ -1665,7 +1665,7 @@ body {
     margin: 15px 0;
 }
 
-.claude-prompt h5 {
+.gemini-prompt h5 {
     color: var(--text-accent);
     font-size: 0.9rem;
     font-weight: 500;
@@ -1797,7 +1797,7 @@ body {
         padding: 12px;
     }
     
-    .claude-prompt {
+    .gemini-prompt {
         padding: 15px;
     }
     
@@ -3824,7 +3824,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
-    background: linear-gradient(135deg, var(--text-accent), #f97316);
+    background: linear-gradient(135deg, var(--text-accent), #4285f4);
     color: var(--bg-primary);
     text-decoration: none;
     border-radius: 6px;
@@ -3837,7 +3837,7 @@ body {
 .stats-detail-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(213, 116, 85, 0.3);
-    background: linear-gradient(135deg, #f97316, var(--text-accent));
+    background: linear-gradient(135deg, #4285f4, var(--text-accent));
 }
 
 .stats-detail-btn svg {

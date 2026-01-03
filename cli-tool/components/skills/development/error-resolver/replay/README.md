@@ -16,7 +16,7 @@ The replay system records successful error resolutions for future reference, ena
 3. Analyze & Resolve
        |
        v
-4. Record Solution ---------> .claude/error-solutions/
+4. Record Solution ---------> .gemini/error-solutions/
        |
        v
 5. Future Benefit
@@ -26,7 +26,7 @@ The replay system records successful error resolutions for future reference, ena
 
 ```
 project/
-└── .claude/
+└── .gemini/
     └── error-solutions/
         ├── nodejs-module-not-found-express.yaml
         ├── react-hydration-mismatch-date.yaml
@@ -48,8 +48,8 @@ Record a solution when:
 
 1. Copy the template:
 ```bash
-mkdir -p .claude/error-solutions
-cp solution-template.yaml .claude/error-solutions/<error-signature>.yaml
+mkdir -p .gemini/error-solutions
+cp solution-template.yaml .gemini/error-solutions/<error-signature>.yaml
 ```
 
 2. Fill in the details:
@@ -133,7 +133,7 @@ Pattern: nodejs-module-not-found-*
 
 ```bash
 # Find matching solutions
-ls .claude/error-solutions/ | grep "nodejs-module-not-found"
+ls .gemini/error-solutions/ | grep "nodejs-module-not-found"
 ```
 
 ### 3. Check Match Quality
@@ -214,7 +214,7 @@ react-*.yaml
 1. **Version Control**
    ```bash
    # Add to git
-   git add .claude/error-solutions/
+   git add .gemini/error-solutions/
    git commit -m "Add error solution: nodejs-module-not-found-express"
    ```
 

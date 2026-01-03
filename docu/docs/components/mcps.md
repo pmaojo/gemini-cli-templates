@@ -4,24 +4,24 @@ sidebar_position: 5
 
 # MCPs (Model Context Protocol)
 
-External service integrations that extend Claude Code with real-time data access. Browse and install from **[aitmpl.com](https://aitmpl.com)**.
+External service integrations that extend Gemini Code with real-time data access. Browse and install from **[aitmpl.com](https://aitmpl.com)**.
 
 ## 🔌 What are MCPs?
 
-MCPs connect Claude Code to external services, databases, and APIs. They provide real-time access to live data and services during conversations.
+MCPs connect Gemini Code to external services, databases, and APIs. They provide real-time access to live data and services during conversations.
 
 ## Installation
 
 ### 📦 Basic Installation
-Install this component locally in your project. Works with your existing Claude Code setup.
+Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx claude-code-templates@latest --mcp database/supabase --yes
+npx gemini-code-templates@latest --mcp database/supabase --yes
 ```
 
 ### Multiple MCPs
 ```bash
-npx claude-code-templates@latest --mcp database/supabase,development/github-integration --yes
+npx gemini-code-templates@latest --mcp database/supabase,development/github-integration --yes
 ```
 
 ## ⚙️ Configuration
@@ -55,7 +55,7 @@ MCPs provide real-time data access:
 
 ## 📁 MCP Categories
 
-Browse MCPs by integration type to connect Claude Code with external services:
+Browse MCPs by integration type to connect Gemini Code with external services:
 
 ### Database Integrations
 Connect to databases and data sources for real-time data access. Examples: `supabase` for Supabase integration, `postgresql-integration` for PostgreSQL access, `mongodb-integration` for MongoDB queries.

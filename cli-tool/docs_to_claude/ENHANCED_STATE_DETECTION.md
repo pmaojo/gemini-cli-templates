@@ -6,8 +6,8 @@
 
 **Flujo Optimizado:**
 ```javascript
-Mensaje del Usuario aparece en WebSocket → INMEDIATAMENTE "Claude Code working..."
-Mensaje de Claude aparece en WebSocket → Analizar contenido → Estado específico
+Mensaje del Usuario aparece en WebSocket → INMEDIATAMENTE "Gemini Code working..."
+Mensaje de Gemini aparece en WebSocket → Analizar contenido → Estado específico
 ```
 
 **Ventajas:**
@@ -43,15 +43,15 @@ Si no hay nuevo mensaje del usuario → "User typing..."
 ### Flujo 1: Usuario Envía Mensaje
 ```
 1. Usuario escribe y envía mensaje
-2. Mensaje aparece vía WebSocket → INMEDIATAMENTE "Claude Code working..."
-3. Claude responde con herramientas → "Executing tools..." / "Analyzing code..."
+2. Mensaje aparece vía WebSocket → INMEDIATAMENTE "Gemini Code working..."
+3. Gemini responde con herramientas → "Executing tools..." / "Analyzing code..."
 4. Herramientas completan → "Analyzing results..."
-5. Claude responde con texto → Análisis de contenido → Estado final
+5. Gemini responde con texto → Análisis de contenido → Estado final
 ```
 
 ### Flujo 2: Detección de Escritura
 ```
-1. Claude termina de responder → Estado basado en contenido
+1. Gemini termina de responder → Estado basado en contenido
 2. Timer de 30s se activa
 3. Si no llega mensaje del usuario → "User typing..."
 4. Al llegar mensaje del usuario → Reinicia el ciclo
@@ -67,8 +67,8 @@ Si no hay nuevo mensaje del usuario → "User typing..."
 ## 💡 Beneficios Clave
 
 ### Para el Usuario:
-1. **Feedback Instantáneo**: Sabe inmediatamente cuando Claude empieza a trabajar
-2. **Estados Específicos**: Entiende exactamente qué está haciendo Claude
+1. **Feedback Instantáneo**: Sabe inmediatamente cuando Gemini empieza a trabajar
+2. **Estados Específicos**: Entiende exactamente qué está haciendo Gemini
 3. **Detección de Escritura**: El sistema reconoce cuando está pensando/escribiendo
 
 ### Técnicos:
@@ -79,8 +79,8 @@ Si no hay nuevo mensaje del usuario → "User typing..."
 ## 🧪 Casos de Prueba
 
 ### Test 1: Usuario Envía Mensaje
-- ✅ Banner cambia inmediatamente a "Claude Code working..."
-- ✅ Si Claude usa herramientas, estado cambia a "Executing tools..."
+- ✅ Banner cambia inmediatamente a "Gemini Code working..."
+- ✅ Si Gemini usa herramientas, estado cambia a "Executing tools..."
 - ✅ Al completarse, cambia a estado basado en respuesta
 
 ### Test 2: Herramientas Específicas  
@@ -89,19 +89,19 @@ Si no hay nuevo mensaje del usuario → "User typing..."
 - ✅ `webfetch` → "Fetching data..."
 
 ### Test 3: Estados Contextuales
-- ✅ Mensajes con "let me", "i'll" → "Claude Code working..."
+- ✅ Mensajes con "let me", "i'll" → "Gemini Code working..."
 - ✅ Mensajes con "completed" → "Task completed"
 - ✅ Mensajes con "?" → "Awaiting user input..."
 
 ### Test 4: Detección de Escritura
-- ✅ Después de respuesta de Claude, esperar 30s → "User typing..."
-- ✅ Al enviar mensaje, inmediatamente → "Claude Code working..."
+- ✅ Después de respuesta de Gemini, esperar 30s → "User typing..."
+- ✅ Al enviar mensaje, inmediatamente → "Gemini Code working..."
 
 ## 🔍 Debugging y Logs
 
 ### Logs Añadidos:
 ```javascript
-console.log('⚡ User message detected - Claude starting work immediately');
+console.log('⚡ User message detected - Gemini starting work immediately');
 console.log('🤖 Assistant message detected - state: ${intelligentState}');
 console.log('🔧 Tools detected: ${toolNames} - showing execution state');
 console.log('✍️ Potential user typing detected for ${conversationId}');

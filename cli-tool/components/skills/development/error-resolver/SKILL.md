@@ -150,7 +150,7 @@ After resolving an error, record it:
 
 ```bash
 # Create solution record in project
-mkdir -p .claude/error-solutions
+mkdir -p .gemini/error-solutions
 
 # Solution file format: [error-type]-[hash].yaml
 ```
@@ -158,7 +158,7 @@ mkdir -p .claude/error-solutions
 ### Solution Record Format
 
 ```yaml
-# .claude/error-solutions/[error-signature].yaml
+# .gemini/error-solutions/[error-signature].yaml
 id: "nodejs-module-not-found-express"
 created: "2024-01-15T10:30:00Z"
 updated: "2024-01-20T14:22:00Z"
@@ -204,7 +204,7 @@ metadata:
 
 When encountering an error:
 1. Generate error signature from the error message
-2. Search `.claude/error-solutions/` for matching patterns
+2. Search `.gemini/error-solutions/` for matching patterns
 3. If found, apply the recorded solution
 4. If new, proceed with full analysis and record the solution
 
@@ -290,7 +290,7 @@ Create the smallest code that reproduces the error:
 4. That's your minimal repro case
 
 ### Pattern 3: Rubber Duck Debugging
-Explain the problem out loud (or to Claude):
+Explain the problem out loud (or to Gemini):
 1. What should happen?
 2. What actually happens?
 3. What changed recently?

@@ -1,11 +1,11 @@
-// Vercel Function: Monitor de Claude Code Changelog
+// Vercel Function: Monitor de Gemini Code Changelog
 // Se activa con webhooks de NPM o puede ser llamado manualmente
 
 import { neon } from '@neondatabase/serverless';
 import axios from 'axios';
 
-const NPM_PACKAGE = '@anthropic-ai/claude-code';
-const CHANGELOG_URL = 'https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md';
+const NPM_PACKAGE = '@google-ai/gemini-code';
+const CHANGELOG_URL = 'https://raw.githubusercontent.com/googles/gemini-code/main/CHANGELOG.md';
 
 // Inicializar cliente de Neon
 function getNeonClient() {
@@ -37,7 +37,7 @@ async function getLatestNPMVersion() {
 async function isVersionProcessed(sql, version) {
   const result = await sql`
     SELECT id, discord_notified
-    FROM claude_code_versions
+    FROM gemini_code_versions
     WHERE version = ${version}
   `;
   return result.length > 0 ? result[0] : null;
@@ -48,7 +48,7 @@ async function saveVersion(sql, versionData) {
   const { version, publishedAt, npmUrl, changelogContent, githubUrl } = versionData;
 
   const result = await sql`
-    INSERT INTO claude_code_versions (
+    INSERT INTO gemini_code_versions (
       version,
       published_at,
       changelog_content,
@@ -102,7 +102,7 @@ export default async function handler(req, res) {
   try {
     const sql = getNeonClient();
 
-    console.log('🔍 Checking for new Claude Code version...');
+    console.log('🔍 Checking for new Gemini Code version...');
 
     // Obtener última versión de NPM
     const latestVersion = await getLatestNPMVersion();
@@ -147,7 +147,7 @@ export default async function handler(req, res) {
     const fullChangelog = changelogResponse.data;
 
     // Guardar la nueva versión (sin parsear aún)
-    const githubUrl = `https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
+    const githubUrl = `https://github.com/googles/gemini-code/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
 
     const savedVersion = await saveVersion(sql, {
       version: latestVersion.version,

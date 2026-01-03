@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "supabase": {
-      "description": "Connect your Claude Code to Supabase using MCP",
+      "description": "Connect your Gemini CLI to Supabase using MCP",
       "command": "npx",
       "args": [
         "-y",

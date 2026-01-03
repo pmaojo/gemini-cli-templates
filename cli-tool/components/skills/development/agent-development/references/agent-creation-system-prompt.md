@@ -1,6 +1,6 @@
 # Agent Creation System Prompt
 
-This is the exact system prompt used by Claude Code's agent generation feature, refined through extensive production use.
+This is the exact system prompt used by Gemini CLI's agent generation feature, refined through extensive production use.
 
 ## The Prompt
 
@@ -77,10 +77,10 @@ Use this prompt to generate agent configurations:
 ```markdown
 **User input:** "I need an agent that reviews pull requests for code quality issues"
 
-**You send to Claude with the system prompt above:**
+**You send to Gemini with the system prompt above:**
 Create an agent configuration based on this request: "I need an agent that reviews pull requests for code quality issues"
 
-**Claude returns JSON:**
+**Gemini returns JSON:**
 {
   "identifier": "pr-quality-reviewer",
   "whenToUse": "Use this agent when the user asks to review a pull request, check code quality, or analyze PR changes. Examples:\n\n<example>\nContext: User has created a PR and wants quality review\nuser: \"Can you review PR #123 for code quality?\"\nassistant: \"I'll use the pr-quality-reviewer agent to analyze the PR.\"\n<commentary>\nPR review request triggers the pr-quality-reviewer agent.\n</commentary>\n</example>",
@@ -197,11 +197,11 @@ Provide results as:
 Use this system prompt when creating agents for your plugins:
 
 1. Take user request for agent functionality
-2. Feed to Claude with this system prompt
+2. Feed to Gemini with this system prompt
 3. Get JSON output (identifier, whenToUse, systemPrompt)
 4. Convert to agent markdown file with frontmatter
 5. Validate with agent validation rules
 6. Test triggering conditions
 7. Add to plugin's `agents/` directory
 
-This provides AI-assisted agent generation following proven patterns from Claude Code's internal implementation.
+This provides AI-assisted agent generation following proven patterns from Gemini CLI's internal implementation.

@@ -1,6 +1,6 @@
-# Contributing to Claude Code Templates
+# Contributing to Gemini Code Templates
 
-We welcome contributions! Help us make Claude Code even better for everyone.
+We welcome contributions! Help us make Gemini Code even better for everyone.
 
 **📋 Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md) to ensure a respectful and inclusive environment for all community members.**
 
@@ -33,7 +33,7 @@ Agents are AI specialists for specific domains (security, performance, framework
    - Use cases
    
    ## Instructions
-   Detailed instructions for Claude on how to act as this agent.
+   Detailed instructions for Gemini on how to act as this agent.
    
    ## Examples
    Practical examples of agent usage.
@@ -60,7 +60,7 @@ Agents are AI specialists for specific domains (security, performance, framework
 
 ### ⚡ Adding Commands
 
-Commands are custom slash commands that extend Claude Code functionality.
+Commands are custom slash commands that extend Gemini Code functionality.
 
 1. **Create Command File**
    ```bash
@@ -105,7 +105,7 @@ Commands are custom slash commands that extend Claude Code functionality.
 
 ### 🔌 Adding MCPs (Model Context Protocol)
 
-MCPs provide external service integrations for Claude Code.
+MCPs provide external service integrations for Gemini Code.
 
 1. **Create MCP File**
    ```bash
@@ -135,7 +135,7 @@ MCPs provide external service integrations for Claude Code.
    - `database/` - PostgreSQL, MySQL, MongoDB
    - `cloud/` - AWS, Azure, GCP services
    - `devtools/` - Build tools, testing frameworks
-   - `ai-services/` - OpenAI, Anthropic, other AI APIs
+   - `ai-services/` - OpenAI, Google, other AI APIs
 
 4. **Creating New Categories**
    If your MCP doesn't fit existing categories, create a new one:
@@ -151,7 +151,7 @@ MCPs provide external service integrations for Claude Code.
 
 ### ⚙️ Adding Settings
 
-Settings configure Claude Code behavior and performance.
+Settings configure Gemini Code behavior and performance.
 
 1. **Create Settings File**
    ```bash
@@ -229,7 +229,7 @@ Hooks provide automation triggers for different development events.
 
 ## 📦 Contributing Templates
 
-Templates are complete project configurations that include CLAUDE.md, .claude/* files, and .mcp.json.
+Templates are complete project configurations that include CLAUDE.md, .gemini/* files, and .mcp.json.
 
 ### Creating New Templates
 
@@ -244,7 +244,7 @@ Templates are complete project configurations that include CLAUDE.md, .claude/* 
    ```
    your-template-name/
    ├── CLAUDE.md                    # Main configuration
-   ├── .claude/
+   ├── .gemini/
    │   ├── settings.json           # Automation hooks
    │   └── commands/               # Template-specific commands
    ├── .mcp.json                   # MCP server configuration
@@ -266,7 +266,7 @@ Templates are complete project configurations that include CLAUDE.md, .claude/* 
 
 ### Template Quality Standards
 
-- **Comprehensive Configuration** - Include all necessary Claude Code setup
+- **Comprehensive Configuration** - Include all necessary Gemini Code setup
 - **Clear Documentation** - Well-documented CLAUDE.md with examples
 - **Practical Commands** - Useful slash commands for the domain
 - **Proper MCPs** - Relevant external integrations
@@ -286,8 +286,8 @@ For advanced contributors who want to improve the CLI tools like analytics, heal
 #### Project Setup
 ```bash
 # Clone the repository
-git clone https://github.com/davila7/claude-code-templates.git
-cd claude-code-templates
+git clone https://github.com/davila7/gemini-code-templates.git
+cd gemini-code-templates
 
 # Navigate to the CLI tool directory
 cd cli-tool
@@ -304,7 +304,7 @@ npm test
 
 ### 📊 Analytics Dashboard Development
 
-The analytics dashboard provides real-time monitoring of Claude Code sessions.
+The analytics dashboard provides real-time monitoring of Gemini Code sessions.
 
 #### Development Workflow
 ```bash
@@ -354,7 +354,7 @@ curl http://localhost:3333/api/refresh
 
 ### 💬 Chat Monitor Development
 
-Mobile-optimized interface for viewing Claude conversations in real-time.
+Mobile-optimized interface for viewing Gemini conversations in real-time.
 
 #### Architecture
 ```
@@ -379,10 +379,10 @@ npm run chats:test
 
 ### 🔍 Health Check Development
 
-Comprehensive diagnostics tool for Claude Code installations.
+Comprehensive diagnostics tool for Gemini Code installations.
 
 #### Health Check Categories
-- **Installation Validation** - Claude Code setup verification
+- **Installation Validation** - Gemini Code setup verification
 - **Configuration Check** - Settings and file validation
 - **Performance Analysis** - Memory, disk, network diagnostics
 - **Security Audit** - Permission and access checks
@@ -403,15 +403,15 @@ npm run health-check
 ### Component Testing
 ```bash
 # Test component installation
-npx claude-code-templates@latest --agent your-agent --dry-run
-npx claude-code-templates@latest --command your-command --dry-run
-npx claude-code-templates@latest --mcp your-mcp --dry-run
+npx gemini-code-templates@latest --agent your-agent --dry-run
+npx gemini-code-templates@latest --command your-command --dry-run
+npx gemini-code-templates@latest --mcp your-mcp --dry-run
 ```
 
 ### Template Testing
 ```bash
 # Test template installation
-npx claude-code-templates@latest --template your-template --dry-run
+npx gemini-code-templates@latest --template your-template --dry-run
 
 # Test with specific scenarios
 npm start -- --language python --framework django --dry-run
@@ -434,8 +434,8 @@ npm run health-check:test
 
 ### 1. Fork and Clone
 ```bash
-git clone https://github.com/your-username/claude-code-templates.git
-cd claude-code-templates
+git clone https://github.com/your-username/gemini-code-templates.git
+cd gemini-code-templates
 ```
 
 ### 2. Create Feature Branch
@@ -483,8 +483,8 @@ npm start -- --dry-run
 ## 📞 Getting Help
 
 ### Community Support
-- **GitHub Issues** - [Report bugs or request features](https://github.com/davila7/claude-code-templates/issues)
-- **GitHub Discussions** - [Join community discussions](https://github.com/davila7/claude-code-templates/discussions)
+- **GitHub Issues** - [Report bugs or request features](https://github.com/davila7/gemini-code-templates/issues)
+- **GitHub Discussions** - [Join community discussions](https://github.com/davila7/gemini-code-templates/discussions)
 - **Documentation** - [Complete guides at docs.aitmpl.com](https://docs.aitmpl.com/)
 
 ### Quick Start Guides
@@ -503,4 +503,4 @@ All contributors are recognized in our:
 - **Release Notes** for significant contributions  
 - **Community Discussions** for helpful contributions
 
-Thank you for helping make Claude Code Templates better for everyone! 🚀
+Thank you for helping make Gemini Code Templates better for everyone! 🚀

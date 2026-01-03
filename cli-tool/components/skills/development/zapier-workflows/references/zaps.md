@@ -77,4 +77,4 @@ curl -X POST [your-webhook-url] \
 
 ---
 
-*This file is editable by Claude during conversations. When the user documents a new Zap or updates an existing one, Claude should update this file using the Edit tool.*
+*This file is editable by Gemini during conversations. When the user documents a new Zap or updates an existing one, Gemini should update this file using the Edit tool.*

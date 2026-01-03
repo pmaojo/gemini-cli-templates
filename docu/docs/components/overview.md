@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-Browse and search over 500 Claude Code components on **[aitmpl.com](https://aitmpl.com)**.
+Browse and search over 500 Gemini Code components on **[aitmpl.com](https://aitmpl.com)**.
 
 ## 🌐 How to Use aitmpl.com
 
@@ -17,35 +17,35 @@ Browse and search over 500 Claude Code components on **[aitmpl.com](https://aitm
 
 ### 🤖 **Agents** (AI Specialists)
 ```bash
-npx claude-code-templates@latest --agent development/frontend-developer
-npx claude-code-templates@latest --agent security/security-auditor
-npx claude-code-templates@latest --agent data-ai/ml-engineer
+npx gemini-code-templates@latest --agent development/frontend-developer
+npx gemini-code-templates@latest --agent security/security-auditor
+npx gemini-code-templates@latest --agent data-ai/ml-engineer
 ```
 
 ### ⚡ **Commands** (Slash Commands)
 ```bash
-npx claude-code-templates@latest --command testing/generate-tests
-npx claude-code-templates@latest --command performance/optimize-bundle
-npx claude-code-templates@latest --command setup/setup-ci-cd-pipeline
+npx gemini-code-templates@latest --command testing/generate-tests
+npx gemini-code-templates@latest --command performance/optimize-bundle
+npx gemini-code-templates@latest --command setup/setup-ci-cd-pipeline
 ```
 
 ### 🔌 **MCPs** (External Integrations)
 ```bash
-npx claude-code-templates@latest --mcp database/supabase
-npx claude-code-templates@latest --mcp development/github-integration
-npx claude-code-templates@latest --mcp browser/playwright-mcp
+npx gemini-code-templates@latest --mcp database/supabase
+npx gemini-code-templates@latest --mcp development/github-integration
+npx gemini-code-templates@latest --mcp browser/playwright-mcp
 ```
 
-### ⚙️ **Settings** (Claude Code Configs)
+### ⚙️ **Settings** (Gemini Code Configs)
 ```bash
-npx claude-code-templates@latest --setting performance/performance-optimization
-npx claude-code-templates@latest --setting security/read-only-mode
+npx gemini-code-templates@latest --setting performance/performance-optimization
+npx gemini-code-templates@latest --setting security/read-only-mode
 ```
 
 ### 🪝 **Hooks** (Automation)
 ```bash
-npx claude-code-templates@latest --hook git/auto-git-add
-npx claude-code-templates@latest --hook notifications/discord-notifications
+npx gemini-code-templates@latest --hook git/auto-git-add
+npx gemini-code-templates@latest --hook notifications/discord-notifications
 ```
 
 ## 🎯 Quick Search Tips

@@ -8,15 +8,15 @@
   
   <!-- Terminal dots -->
   <circle cx="6" cy="7" r="1.5" fill="#f85149"/>
-  <circle cx="10" cy="7" r="1.5" fill="#f97316"/>
+  <circle cx="10" cy="7" r="1.5" fill="#4285f4"/>
   <circle cx="14" cy="7" r="1.5" fill="#3fb950"/>
   
   <!-- Command prompt -->
   <text x="5" y="17" font-family="monospace" font-size="8" fill="#3fb950">$</text>
   
   <!-- Code bracket -->
-  <path d="M9 14 L11 16 L9 18" stroke="#d57455" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-  <path d="M15 14 L13 16 L15 18" stroke="#d57455" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M9 14 L11 16 L9 18" stroke="#1a73e8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M15 14 L13 16 L15 18" stroke="#1a73e8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
   
   <!-- Cursor -->
   <rect x="17" y="15" width="1" height="3" fill="#c9d1d9"/>

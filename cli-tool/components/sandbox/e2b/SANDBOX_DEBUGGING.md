@@ -5,7 +5,7 @@
 ### 1. Launcher Principal con Logging Mejorado
 **Archivo**: `e2b-launcher.py`
 - Logging detallado de cada paso
-- Verificación de instalación de Claude Code
+- Verificación de instalación de Gemini CLI
 - Monitoreo de permisos y ambiente
 - Timeouts extendidos para operaciones largas
 - Descarga automática de archivos generados
@@ -37,26 +37,26 @@ Para testing sin API keys válidos, crea un archivo demo que simule el flujo com
 
 2. **Usar el monitor para ver qué consume tiempo**:
    ```bash
-   python e2b-monitor.py "Your prompt here" "" your_e2b_key your_anthropic_key
+   python e2b-monitor.py "Your prompt here" "" your_e2b_key your_Google_key
    ```
 
-### Problema: "Claude not found"
+### Problema: "Gemini not found"
 **Síntomas**:
 ```
-❌ Claude not found, checking PATH...
+❌ Gemini not found, checking PATH...
 ```
 
 **Debugging Steps**:
 1. **Verificar template correcto**:
    ```python
-   template="anthropic-claude-code"  # Debe ser exactamente este
+   template="Google-gemini-code"  # Debe ser exactamente este
    ```
 
 2. **Verificar instalación en sandbox**:
    ```bash
    # El launcher ejecuta automáticamente:
-   which claude
-   claude --version
+   which gemini
+   gemini --version
    echo $PATH
    ```
 
@@ -88,7 +88,7 @@ Para testing sin API keys válidos, crea un archivo demo que simule el flujo com
 **Debugging**:
 1. **Verificar formato de API key**:
    - E2B keys: formato específico de E2B
-   - Anthropic keys: empiezan con "sk-ant-"
+   - Google keys: empiezan con "sk-ant-"
 
 2. **Verificar permisos**:
    - Verificar que la key tenga permisos de sandbox
@@ -98,7 +98,7 @@ Para testing sin API keys válidos, crea un archivo demo que simule el flujo com
 
 ### Comando Básico:
 ```bash
-python e2b-monitor.py "Create a React app" "" your_e2b_key your_anthropic_key
+python e2b-monitor.py "Create a React app" "" your_e2b_key your_Google_key
 ```
 
 ### Output del Monitor:
@@ -111,7 +111,7 @@ python e2b-monitor.py "Create a React app" "" your_e2b_key your_anthropic_key
 [14:32:17] INFO:   Mem:           2.0Gi       512Mi       1.5Gi
 [14:32:18] INFO: 📁 Initial file system state
 [14:32:18] INFO: Current directory: /home/user
-[14:32:19] INFO: 🤖 Executing Claude Code with monitoring
+[14:32:19] INFO: 🤖 Executing Gemini CLI with monitoring
 [14:32:19] INFO: Starting monitored execution: echo 'Create a React app'...
 [14:32:22] INFO: Command completed in 3.45 seconds
 [14:32:22] INFO: Exit code: 0
@@ -140,7 +140,7 @@ El launcher automáticamente descarga archivos generados:
 ```
 [14:33:20] INFO: Top processes:
 [14:33:20] INFO:   USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-[14:33:20] INFO:   user      1234  5.2  2.1  98765 43210 pts/0    S+   14:32   0:01 claude
+[14:33:20] INFO:   user      1234  5.2  2.1  98765 43210 pts/0    S+   14:32   0:01 gemini
 ```
 
 ## 🛠 Configuración Avanzada
@@ -148,7 +148,7 @@ El launcher automáticamente descarga archivos generados:
 ### Variables de Ambiente Útiles:
 ```bash
 export E2B_DEBUG=1                    # Debug mode
-export ANTHROPIC_API_KEY=your_key     # Claude API key  
+export Google_API_KEY=your_key     # Gemini API key  
 export E2B_API_KEY=your_key          # E2B API key
 ```
 
@@ -163,10 +163,10 @@ sbx.set_timeout(3600)               # 1 hora máximo
 
 ### Antes de Reportar un Issue:
 - [ ] API keys válidos y con permisos correctos
-- [ ] Template correcto: "anthropic-claude-code"
+- [ ] Template correcto: "Google-gemini-code"
 - [ ] Timeout suficiente para la operación
 - [ ] Ejecutar con el monitor para logs detallados
-- [ ] Verificar que Claude Code esté instalado en sandbox
+- [ ] Verificar que Gemini CLI esté instalado en sandbox
 - [ ] Revisar permisos de escritura en directorio
 - [ ] Comprobar memoria/recursos disponibles
 
@@ -183,11 +183,11 @@ sbx.set_timeout(3600)               # 1 hora máximo
 El launcher descarga automáticamente todos los archivos generados:
 - HTML, CSS, JS, TS, TSX, Python, JSON, Markdown
 - Se guardan en directorio local `./e2b-output/`
-- Excluye archivos internos de Claude Code
+- Excluye archivos internos de Gemini CLI
 - Preserva nombres de archivo originales
 
 ### Logging Detallado
-- Verificación de instalación de Claude Code
+- Verificación de instalación de Gemini CLI
 - Monitoreo de permisos y ambiente del sandbox
 - Tracking de exit codes y output length
 - Timestamps para análisis de performance
@@ -195,7 +195,7 @@ El launcher descarga automáticamente todos los archivos generados:
 ### Timeouts Inteligentes
 - 10 minutos timeout inicial para creación
 - 15 minutos total extendido automáticamente
-- 5 minutos timeout para ejecución de Claude Code
+- 5 minutos timeout para ejecución de Gemini CLI
 - Timeouts cortos para verificaciones (5-10 segundos)
 
 ---

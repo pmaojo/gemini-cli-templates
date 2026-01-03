@@ -1,4 +1,4 @@
-// Search functionality for Claude Code Templates
+// Search functionality for Gemini CLI Templates
 let searchActive = false;
 let searchResults = [];
 let allComponents = {};
@@ -536,7 +536,7 @@ function generateComponentCard(component, category) {
     if (componentPath.endsWith('.md') || componentPath.endsWith('.json')) {
         componentPath = componentPath.replace(/\.(md|json)$/, '');
     }
-    const installCommand = `npx claude-code-templates@latest --${component.type}=${componentPath} --yes`;
+    const installCommand = `npx gemini-code-templates@latest --${component.type}=${componentPath} --yes`;
     
     const typeConfig = {
         agent: { icon: '🤖', color: '#ff6b6b' },
@@ -629,7 +629,7 @@ function generateInstallCommand(component, category) {
         categoryParam = category.slice(0, -1); // 'setting' or 'hook'
     }
     
-    return `npx claude-code-templates@latest --${categoryParam}=${name} --yes`;
+    return `npx gemini-code-templates@latest --${categoryParam}=${name} --yes`;
 }
 
 /**

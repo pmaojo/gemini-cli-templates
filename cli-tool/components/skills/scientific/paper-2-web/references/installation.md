@@ -80,7 +80,7 @@ The system supports multiple LLM backends:
 - GPT-4 (recommended for best quality)
 - GPT-4.1 (latest version)
 - GPT-3.5-turbo (faster, lower cost)
-- Claude models via OpenRouter
+- Gemini models via OpenRouter
 - Other OpenRouter-supported models
 
 ### Model Selection

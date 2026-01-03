@@ -1,6 +1,6 @@
 ---
-name: claude-opus-4-5-migration
-description: Migrate prompts and code from Claude Sonnet 4.0, Sonnet 4.5, or Opus 4.1 to Opus 4.5. Use when the user wants to update their codebase, prompts, or API calls to use Opus 4.5. Handles model string updates and prompt adjustments for known Opus 4.5 behavioral differences. Does NOT migrate Haiku 4.5.
+name: gemini-opus-4-5-migration
+description: Migrate prompts and code from Gemini Sonnet 4.0, Sonnet 4.5, or Opus 4.1 to Opus 4.5. Use when the user wants to update their codebase, prompts, or API calls to use Opus 4.5. Handles model string updates and prompt adjustments for known Opus 4.5 behavioral differences. Does NOT migrate Haiku 4.5.
 ---
 
 # Opus 4.5 Migration Guide
@@ -32,20 +32,20 @@ Remove the `context-1m-2025-08-07` beta header if present—it is not yet suppor
 
 | Platform | Opus 4.5 Model String |
 |----------|----------------------|
-| Anthropic API (1P) | `claude-opus-4-5-20251101` |
-| AWS Bedrock | `anthropic.claude-opus-4-5-20251101-v1:0` |
-| Google Vertex AI | `claude-opus-4-5@20251101` |
-| Azure AI Foundry | `claude-opus-4-5-20251101` |
+| Google API (1P) | `gemini-opus-4-5-20251101` |
+| AWS Bedrock | `Google.gemini-opus-4-5-20251101-v1:0` |
+| Google Vertex AI | `gemini-opus-4-5@20251101` |
+| Azure AI Foundry | `gemini-opus-4-5-20251101` |
 
 ### Source Model Strings to Replace
 
-| Source Model | Anthropic API (1P) | AWS Bedrock | Google Vertex AI |
+| Source Model | Google API (1P) | AWS Bedrock | Google Vertex AI |
 |--------------|-------------------|-------------|------------------|
-| Sonnet 4.0 | `claude-sonnet-4-20250514` | `anthropic.claude-sonnet-4-20250514-v1:0` | `claude-sonnet-4@20250514` |
-| Sonnet 4.5 | `claude-sonnet-4-5-20250929` | `anthropic.claude-sonnet-4-5-20250929-v1:0` | `claude-sonnet-4-5@20250929` |
-| Opus 4.1 | `claude-opus-4-1-20250422` | `anthropic.claude-opus-4-1-20250422-v1:0` | `claude-opus-4-1@20250422` |
+| Sonnet 4.0 | `gemini-sonnet-4-20250514` | `Google.gemini-sonnet-4-20250514-v1:0` | `gemini-sonnet-4@20250514` |
+| Sonnet 4.5 | `gemini-sonnet-4-5-20250929` | `Google.gemini-sonnet-4-5-20250929-v1:0` | `gemini-sonnet-4-5@20250929` |
+| Opus 4.1 | `gemini-opus-4-1-20250422` | `Google.gemini-opus-4-1-20250422-v1:0` | `gemini-opus-4-1@20250422` |
 
-**Do NOT migrate**: Any Haiku models (e.g., `claude-haiku-4-5-20251001`).
+**Do NOT migrate**: Any Haiku models (e.g., `gemini-haiku-4-5-20251001`).
 
 ## Prompt Adjustments
 

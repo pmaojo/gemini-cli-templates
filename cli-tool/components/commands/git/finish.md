@@ -98,8 +98,8 @@ git merge --no-ff feature/$NAME -m "Merge feature/$NAME into develop
 
 $(git log develop..feature/$NAME --oneline)
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with Gemini CLI
+Co-Authored-By: Gemini <noreply@Google.com>"
 
 # Push to remote
 git push origin develop
@@ -155,8 +155,8 @@ git merge --no-ff release/$VERSION -m "Merge release/$VERSION into main
 Release notes:
 $(cat CHANGELOG.md | sed -n "/## \[$VERSION\]/,/## \[/p" | head -n -1)
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with Gemini CLI
+Co-Authored-By: Gemini <noreply@Google.com>"
 
 # Create tag on main (unless --no-tag)
 git tag -a $VERSION -m "Release $VERSION
@@ -171,8 +171,8 @@ git checkout develop
 git pull origin develop
 git merge --no-ff release/$VERSION -m "Merge release/$VERSION back into develop
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with Gemini CLI
+Co-Authored-By: Gemini <noreply@Google.com>"
 
 # Push develop
 git push origin develop
@@ -234,8 +234,8 @@ git merge --no-ff hotfix/$NAME -m "Merge hotfix/$NAME into main
 
 Critical fix for: $NAME
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with Gemini CLI
+Co-Authored-By: Gemini <noreply@Google.com>"
 
 # Create tag on main (unless --no-tag)
 git tag -a $NEW_VERSION -m "Hotfix $NEW_VERSION: $NAME
@@ -250,8 +250,8 @@ git checkout develop
 git pull origin develop
 git merge --no-ff hotfix/$NAME -m "Merge hotfix/$NAME back into develop
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with Gemini CLI
+Co-Authored-By: Gemini <noreply@Google.com>"
 
 # Push develop
 git push origin develop

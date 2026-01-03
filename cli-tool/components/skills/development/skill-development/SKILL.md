@@ -1,18 +1,18 @@
 ---
 name: Skill Development
-description: This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Claude Code plugins.
+description: This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Gemini CLI plugins.
 version: 0.1.0
 ---
 
-# Skill Development for Claude Code Plugins
+# Skill Development for Gemini CLI Plugins
 
-This skill provides guidance for creating effective skills for Claude Code plugins.
+This skill provides guidance for creating effective skills for Gemini CLI plugins.
 
 ## About Skills
 
-Skills are modular, self-contained packages that extend Claude's capabilities by providing
+Skills are modular, self-contained packages that extend Gemini's capabilities by providing
 specialized knowledge, workflows, and tools. Think of them as "onboarding guides" for specific
-domains or tasks—they transform Claude from a general-purpose agent into a specialized agent
+domains or tasks—they transform Gemini from a general-purpose agent into a specialized agent
 equipped with procedural knowledge that no model can fully possess.
 
 ### What Skills Provide
@@ -41,7 +41,7 @@ skill-name/
 
 #### SKILL.md (required)
 
-**Metadata Quality:** The `name` and `description` in YAML frontmatter determine when Claude will use the skill. Be specific about what the skill does and when to use it. Use the third-person (e.g. "This skill should be used when..." instead of "Use this skill when...").
+**Metadata Quality:** The `name` and `description` in YAML frontmatter determine when Gemini will use the skill. Be specific about what the skill does and when to use it. Use the third-person (e.g. "This skill should be used when..." instead of "Use this skill when...").
 
 #### Bundled Resources (optional)
 
@@ -52,27 +52,27 @@ Executable code (Python/Bash/etc.) for tasks that require deterministic reliabil
 - **When to include**: When the same code is being rewritten repeatedly or deterministic reliability is needed
 - **Example**: `scripts/rotate_pdf.py` for PDF rotation tasks
 - **Benefits**: Token efficient, deterministic, may be executed without loading into context
-- **Note**: Scripts may still need to be read by Claude for patching or environment-specific adjustments
+- **Note**: Scripts may still need to be read by Gemini for patching or environment-specific adjustments
 
 ##### References (`references/`)
 
-Documentation and reference material intended to be loaded as needed into context to inform Claude's process and thinking.
+Documentation and reference material intended to be loaded as needed into context to inform Gemini's process and thinking.
 
-- **When to include**: For documentation that Claude should reference while working
+- **When to include**: For documentation that Gemini should reference while working
 - **Examples**: `references/finance.md` for financial schemas, `references/mnda.md` for company NDA template, `references/policies.md` for company policies, `references/api_docs.md` for API specifications
 - **Use cases**: Database schemas, API documentation, domain knowledge, company policies, detailed workflow guides
-- **Benefits**: Keeps SKILL.md lean, loaded only when Claude determines it's needed
+- **Benefits**: Keeps SKILL.md lean, loaded only when Gemini determines it's needed
 - **Best practice**: If files are large (>10k words), include grep search patterns in SKILL.md
 - **Avoid duplication**: Information should live in either SKILL.md or references files, not both. Prefer references files for detailed information unless it's truly core to the skill—this keeps SKILL.md lean while making information discoverable without hogging the context window. Keep only essential procedural instructions and workflow guidance in SKILL.md; move detailed reference material, schemas, and examples to references files.
 
 ##### Assets (`assets/`)
 
-Files not intended to be loaded into context, but rather used within the output Claude produces.
+Files not intended to be loaded into context, but rather used within the output Gemini produces.
 
 - **When to include**: When the skill needs files that will be used in the final output
 - **Examples**: `assets/logo.png` for brand assets, `assets/slides.pptx` for PowerPoint templates, `assets/frontend-template/` for HTML/React boilerplate, `assets/font.ttf` for typography
 - **Use cases**: Templates, images, icons, boilerplate code, fonts, sample documents that get copied or modified
-- **Benefits**: Separates output resources from documentation, enables Claude to use files without loading them into context
+- **Benefits**: Separates output resources from documentation, enables Gemini to use files without loading them into context
 
 ### Progressive Disclosure Design Principle
 
@@ -80,7 +80,7 @@ Skills use a three-level loading system to manage context efficiently:
 
 1. **Metadata (name + description)** - Always in context (~100 words)
 2. **SKILL.md body** - When skill triggers (<5k words)
-3. **Bundled resources** - As needed by Claude (Unlimited*)
+3. **Bundled resources** - As needed by Gemini (Unlimited*)
 
 *Unlimited because scripts can be executed without reading into context window.
 
@@ -127,7 +127,7 @@ Example: When building a `big-query` skill to handle queries like "How many user
 1. Querying BigQuery requires re-discovering the table schemas and relationships each time
 2. A `references/schema.md` file documenting the table schemas would be helpful to store in the skill
 
-**For Claude Code plugins:** When building a hooks skill, the analysis shows:
+**For Gemini CLI plugins:** When building a hooks skill, the analysis shows:
 1. Developers repeatedly need to validate hooks.json and test hook scripts
 2. `scripts/validate-hook-schema.sh` and `scripts/test-hook.sh` utilities would be helpful
 3. `references/patterns.md` for detailed hook patterns to avoid bloating SKILL.md
@@ -136,7 +136,7 @@ To establish the skill's contents, analyze each concrete example to create a lis
 
 ### Step 3: Create Skill Structure
 
-For Claude Code plugins, create the skill directory structure:
+For Gemini CLI plugins, create the skill directory structure:
 
 ```bash
 mkdir -p plugin-name/skills/skill-name/{references,examples,scripts}
@@ -147,7 +147,7 @@ touch plugin-name/skills/skill-name/SKILL.md
 
 ### Step 4: Edit the Skill
 
-When editing the (newly-created or existing) skill, remember that the skill is being created for another instance of Claude to use. Focus on including information that would be beneficial and non-obvious to Claude. Consider what procedural knowledge, domain-specific details, or reusable assets would help another Claude instance execute these tasks more effectively.
+When editing the (newly-created or existing) skill, remember that the skill is being created for another instance of Gemini to use. Focus on including information that would be beneficial and non-obvious to Gemini. Consider what procedural knowledge, domain-specific details, or reusable assets would help another Gemini instance execute these tasks more effectively.
 
 #### Start with Reusable Skill Contents
 
@@ -185,7 +185,7 @@ To complete SKILL.md body, answer the following questions:
 
 1. What is the purpose of the skill, in a few sentences?
 2. When should the skill be used? (Include this in frontmatter description with specific triggers)
-3. In practice, how should Claude use the skill? All reusable skill contents developed above should be referenced so that Claude knows how to use them.
+3. In practice, how should Gemini use the skill? All reusable skill contents developed above should be referenced so that Gemini knows how to use them.
 
 **Keep SKILL.md lean:** Target 1,500-2,000 words for the body. Move detailed content to references/:
 - Detailed patterns → `references/patterns.md`
@@ -254,7 +254,7 @@ Plugin skills live in the plugin's `skills/` directory:
 
 ```
 my-plugin/
-├── .claude-plugin/
+├── .gemini-plugin/
 │   └── plugin.json
 ├── commands/
 ├── agents/
@@ -268,7 +268,7 @@ my-plugin/
 
 ### Auto-Discovery
 
-Claude Code automatically discovers skills:
+Gemini CLI automatically discovers skills:
 - Scans `skills/` directory
 - Finds subdirectories containing `SKILL.md`
 - Loads skill metadata (name + description) always
@@ -305,7 +305,7 @@ Study the skills in this plugin as examples of best practices:
 **agent-development skill:**
 - Strong triggers: "create an agent", "agent frontmatter", etc.
 - Focused SKILL.md (1,438 words)
-- References include the AI generation prompt from Claude Code
+- References include the AI generation prompt from Gemini CLI
 - Complete agent examples
 
 **plugin-settings skill:**
@@ -408,7 +408,7 @@ Validate values before use.
 **Incorrect:**
 ```
 You can parse the frontmatter...
-Claude should extract fields...
+Gemini should extract fields...
 The user might validate values...
 ```
 
@@ -518,7 +518,7 @@ Use the grep tool to search for patterns.
 [No mention of references/ or examples/]
 ```
 
-**Why bad:** Claude doesn't know references exist
+**Why bad:** Gemini doesn't know references exist
 
 ✅ **Good:**
 ```markdown
@@ -536,7 +536,7 @@ Use the grep tool to search for patterns.
 - **`examples/script.sh`** - Working example
 ```
 
-**Why good:** Claude knows where to find additional information
+**Why good:** Gemini knows where to find additional information
 
 ## Quick Reference
 

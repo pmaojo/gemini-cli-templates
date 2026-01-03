@@ -60,7 +60,7 @@ Built by [Kanaeru Labs](https://www.kanaeru.ai) while building Kanaeru AI, these
 
 ✅ **Zero Dependencies**
 - Works in ANY repo type (Python, Rust, Go, JavaScript, etc.)
-- Uses only Claude's built-in tools (Read, Write, Bash, Glob, WebFetch)
+- Uses only Gemini's built-in tools (Read, Write, Bash, Glob, WebFetch)
 - No Node.js/npm required (except for Vercel Analytics)
 
 ✅ **Multi-Language Support**
@@ -186,8 +186,8 @@ Content distribution is a major bottleneck for developer bloggers and technical 
 - **Media attachment** - LinkedIn API complexity
 - **Syndication setup** - Dev.to RSS configuration
 
-Growth Kit automates all of this with Claude Code's built-in capabilities.
+Growth Kit automates all of this with Gemini CLI's built-in capabilities.
 
 ---
 
-**We believe these commands will be valuable to the Claude Code community and help developers share their technical content more effectively.**
+**We believe these commands will be valuable to the Gemini CLI community and help developers share their technical content more effectively.**

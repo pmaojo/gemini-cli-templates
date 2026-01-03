@@ -10,7 +10,7 @@ Capture and integrate session learnings into project memory and knowledge base: 
 
 ## Current Learning Context
 
-- Session duration: Current Claude Code session learning opportunities
+- Session duration: Current Gemini CLI session learning opportunities
 - Memory files: !`find . -name "CLAUDE*.md" | wc -l` available memory files for knowledge integration
 - Project complexity: Assessment of project structure and documentation completeness
 - Learning patterns: Identification of knowledge gaps and correction opportunities

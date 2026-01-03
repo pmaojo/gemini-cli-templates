@@ -1,23 +1,23 @@
-# Claude Code Data Structure Documentation
+# Gemini Code Data Structure Documentation
 
 ## Overview
-This document provides comprehensive information about the data structures and formats found in the `.claude` directory, used by Claude Code and the Analytics Dashboard.
+This document provides comprehensive information about the data structures and formats found in the `.gemini` directory, used by Gemini Code and the Analytics Dashboard.
 
 ## Directory Structure
 
 ```
-~/.claude/
+~/.gemini/
 ├── projects/                    # Project-specific conversations
 │   ├── -Users-user-Project1/
 │   │   ├── conversation.jsonl   # Main conversation file
 │   │   └── settings.json        # Project settings
 │   └── -Users-user-Project2/
 │       └── conversation.jsonl
-├── desktop/                     # Claude Desktop app data
+├── desktop/                     # Gemini Desktop app data
 ├── statsig/                     # Analytics and feature flags
 │   ├── logs/
 │   └── user_overrides.json
-└── settings.json               # Global Claude Code settings
+└── settings.json               # Global Gemini Code settings
 ```
 
 ## JSONL Conversation Format
@@ -59,7 +59,7 @@ Each conversation is stored in a JSONL (JSON Lines) file where each line represe
     "id": "msg_016xDLMzLsNRmD5PsdEjPu3N",
     "type": "message",
     "role": "assistant",
-    "model": "claude-sonnet-4-20250514",
+    "model": "gemini-sonnet-4-20250514",
     "content": [
       {
         "type": "text",
@@ -132,7 +132,7 @@ Each conversation is stored in a JSONL (JSON Lines) file where each line represe
 | `timestamp` | ISO String | When the message was created | `"2025-07-01T19:06:05.237Z"` |
 | `type` | String | Message type: `"user"` or `"assistant"` | `"user"` |
 | `sessionId` | String | Session identifier for the conversation | `"ae93d7b5-1c54-4578-b208-603b48a88c5e"` |
-| `version` | String | Claude Code version that created this message | `"1.0.35"` |
+| `version` | String | Gemini Code version that created this message | `"1.0.35"` |
 | `cwd` | String | Current working directory when message was sent | `"/Users/user/project"` |
 | `userType` | String | Type of user: `"external"` (CLI) or other | `"external"` |
 | `isSidechain` | Boolean | Whether this is a sidechain conversation | `false` |
@@ -144,7 +144,7 @@ Each conversation is stored in a JSONL (JSON Lines) file where each line represe
 | `role` | String | `"user"` or `"assistant"` | `"assistant"` |
 | `id` | String | Message ID (assistant messages only) | `"msg_016xDLMzLsNRmD5PsdEjPu3N"` |
 | `type` | String | Always `"message"` for assistant messages | `"message"` |
-| `model` | String | AI model used (assistant messages only) | `"claude-sonnet-4-20250514"` |
+| `model` | String | AI model used (assistant messages only) | `"gemini-sonnet-4-20250514"` |
 | `content` | String/Array | Message content (string for user, array for assistant) | See content formats below |
 | `stop_reason` | String/null | Why the assistant stopped generating | `null`, `"end_turn"`, `"max_tokens"` |
 | `stop_sequence` | String/null | Stop sequence that triggered end | `null` |
@@ -314,7 +314,7 @@ parentUuid: null    parentUuid: A        parentUuid: B   parentUuid: C
 ## Common Patterns and Edge Cases
 
 ### User Confirmation Messages
-User responses to Claude's prompts often appear as simple strings:
+User responses to Gemini's prompts often appear as simple strings:
 ```json
 {
   "message": {
@@ -387,9 +387,9 @@ With this data structure, the dashboard could be extended to show:
 
 ### Directory Monitoring
 Watch for changes in:
-- `~/.claude/projects/*/conversation.jsonl` - New messages
-- `~/.claude/projects/` - New projects
-- `~/.claude/settings.json` - Setting changes
+- `~/.gemini/projects/*/conversation.jsonl` - New messages
+- `~/.gemini/projects/` - New projects
+- `~/.gemini/settings.json` - Setting changes
 
 ### File Reading Strategies
 1. **Tail Reading**: Read only new lines from JSONL files
@@ -397,4 +397,4 @@ Watch for changes in:
 3. **Chunk Processing**: Process large files in smaller chunks
 4. **Incremental Updates**: Track file modification times
 
-This documentation provides a complete reference for working with Claude Code data structures and can be updated as new formats or features are discovered.
+This documentation provides a complete reference for working with Gemini Code data structures and can be updated as new formats or features are discovered.

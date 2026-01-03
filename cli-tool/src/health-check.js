@@ -7,14 +7,14 @@ const ora = require('ora');
 const boxen = require('boxen');
 
 /**
- * Health Check module for Claude Code CLI
+ * Health Check module for Gemini CLI CLI
  * Validates system requirements, configuration, and project setup
  */
 class HealthChecker {
   constructor() {
     this.results = {
       system: [],
-      claudeCode: [],
+      geminiCode: [],
       project: [],
       agents: [],
       commands: [],
@@ -36,8 +36,8 @@ class HealthChecker {
     await this.checkSystemRequirementsWithSpinner();
     await this.sleep(3000);
     
-    // Claude Code configuration check
-    await this.checkClaudeCodeSetupWithSpinner();
+    // Gemini CLI configuration check
+    await this.checkGeminiCLISetupWithSpinner();
     await this.sleep(3000);
     
     // Project configuration check
@@ -104,35 +104,35 @@ class HealthChecker {
   }
 
   /**
-   * Check Claude Code setup with spinner and immediate results
+   * Check Gemini CLI setup with spinner and immediate results
    */
-  async checkClaudeCodeSetupWithSpinner() {
+  async checkGeminiCLISetupWithSpinner() {
     console.log(chalk.cyan('\n┌─────────────────────┐'));
     console.log(chalk.cyan('│  CLAUDE CODE SETUP  │'));
     console.log(chalk.cyan('└─────────────────────┘'));
     
     // Installation check
-    const installSpinner = ora('Checking Claude Code Installation...').start();
-    const installInfo = this.checkClaudeCodeInstallation();
-    this.addResult('claudeCode', 'Installation', installInfo.status, installInfo.message);
+    const installSpinner = ora('Checking Gemini CLI Installation...').start();
+    const installInfo = this.checkGeminiCLIInstallation();
+    this.addResult('geminiCode', 'Installation', installInfo.status, installInfo.message);
     installSpinner.succeed(`${this.getStatusIcon(installInfo.status)} Installation         │ ${installInfo.message}`);
 
     // Authentication check (this one can take time)
     const authSpinner = ora('Verifying Authentication...').start();
     const authInfo = this.checkAuthentication();
-    this.addResult('claudeCode', 'Authentication', authInfo.status, authInfo.message);
+    this.addResult('geminiCode', 'Authentication', authInfo.status, authInfo.message);
     authSpinner.succeed(`${this.getStatusIcon(authInfo.status)} Authentication       │ ${authInfo.message}`);
 
     // Auto-updates check
     const updateSpinner = ora('Checking Auto-updates...').start();
     const updateInfo = this.checkAutoUpdates();
-    this.addResult('claudeCode', 'Auto-updates', updateInfo.status, updateInfo.message);
+    this.addResult('geminiCode', 'Auto-updates', updateInfo.status, updateInfo.message);
     updateSpinner.succeed(`${this.getStatusIcon(updateInfo.status)} Auto-updates         │ ${updateInfo.message}`);
 
     // Permissions check
     const permissionSpinner = ora('Checking Permissions...').start();
     const permissionInfo = this.checkPermissions();
-    this.addResult('claudeCode', 'Permissions', permissionInfo.status, permissionInfo.message);
+    this.addResult('geminiCode', 'Permissions', permissionInfo.status, permissionInfo.message);
     permissionSpinner.succeed(`${this.getStatusIcon(permissionInfo.status)} Permissions          │ ${permissionInfo.message}`);
   }
 
@@ -363,24 +363,24 @@ class HealthChecker {
     try {
       const https = require('https');
       return new Promise((resolve) => {
-        const req = https.get('https://api.anthropic.com', { timeout: 5000 }, (res) => {
+        const req = https.get('https://api.google.com', { timeout: 5000 }, (res) => {
           resolve({
             status: 'pass',
-            message: 'Connected to Anthropic API'
+            message: 'Connected to Google API'
           });
         });
         
         req.on('error', () => {
           resolve({
             status: 'fail',
-            message: 'Cannot reach Anthropic API'
+            message: 'Cannot reach Google API'
           });
         });
         
         req.on('timeout', () => {
           resolve({
             status: 'warn',
-            message: 'Slow connection to Anthropic API'
+            message: 'Slow connection to Google API'
           });
         });
       });
@@ -418,10 +418,10 @@ class HealthChecker {
     }
   }
 
-  checkClaudeCodeInstallation() {
+  checkGeminiCLIInstallation() {
     try {
-      // Try to find claude-code package
-      const packagePath = path.join(process.cwd(), 'node_modules', '@anthropic-ai', 'claude-code');
+      // Try to find gemini-code package
+      const packagePath = path.join(process.cwd(), 'node_modules', '@google-ai', 'gemini-code');
       if (fs.existsSync(packagePath)) {
         const packageJson = require(path.join(packagePath, 'package.json'));
         return {
@@ -432,7 +432,7 @@ class HealthChecker {
       
       // Check global installation
       try {
-        const output = execSync('claude --version', { encoding: 'utf8', stdio: 'pipe' });
+        const output = execSync('gemini --version', { encoding: 'utf8', stdio: 'pipe' });
         return {
           status: 'pass',
           message: `${output.trim()} (globally installed)`
@@ -440,7 +440,7 @@ class HealthChecker {
       } catch (error) {
         return {
           status: 'fail',
-          message: 'Claude Code CLI not found'
+          message: 'Gemini CLI CLI not found'
         };
       }
     } catch (error) {
@@ -454,16 +454,16 @@ class HealthChecker {
   checkAuthentication() {
     const homeDir = os.homedir();
     
-    // Check for Claude Code OAuth authentication in ~/.claude.json
-    const claudeJsonPath = path.join(homeDir, '.claude.json');
+    // Check for Gemini CLI OAuth authentication in ~/.gemini.json
+    const geminiJsonPath = path.join(homeDir, '.gemini.json');
     
     try {
-      if (fs.existsSync(claudeJsonPath)) {
-        const claudeConfig = JSON.parse(fs.readFileSync(claudeJsonPath, 'utf8'));
+      if (fs.existsSync(geminiJsonPath)) {
+        const geminiConfig = JSON.parse(fs.readFileSync(geminiJsonPath, 'utf8'));
         
         // Check for OAuth authentication
-        if (claudeConfig.oauthAccount && claudeConfig.oauthAccount.accountUuid) {
-          const email = claudeConfig.oauthAccount.emailAddress || 'OAuth user';
+        if (geminiConfig.oauthAccount && geminiConfig.oauthAccount.accountUuid) {
+          const email = geminiConfig.oauthAccount.emailAddress || 'OAuth user';
           return {
             status: 'pass',
             message: `Authenticated via OAuth (${email})`
@@ -471,7 +471,7 @@ class HealthChecker {
         }
         
         // Check for API key authentication
-        if (claudeConfig.apiKey) {
+        if (geminiConfig.apiKey) {
           return {
             status: 'pass',
             message: 'Authenticated via API key'
@@ -487,9 +487,9 @@ class HealthChecker {
         };
       }
       
-      // Try to check if we can make a simple claude command
+      // Try to check if we can make a simple gemini command
       try {
-        execSync('claude --version', { 
+        execSync('gemini --version', { 
           encoding: 'utf8', 
           stdio: 'pipe',
           timeout: 3000 
@@ -497,19 +497,19 @@ class HealthChecker {
         
         return {
           status: 'warn',
-          message: 'Claude CLI available but authentication not configured'
+          message: 'Gemini CLI available but authentication not configured'
         };
       } catch (cliError) {
         return {
           status: 'fail',
-          message: 'Claude CLI not available or not authenticated'
+          message: 'Gemini CLI not available or not authenticated'
         };
       }
       
     } catch (error) {
       // If we can't read the config file, check if CLI is at least installed
       try {
-        execSync('claude --version', { 
+        execSync('gemini --version', { 
           encoding: 'utf8', 
           stdio: 'pipe',
           timeout: 3000 
@@ -517,19 +517,19 @@ class HealthChecker {
         
         return {
           status: 'warn',
-          message: 'Claude CLI available but authentication not verified'
+          message: 'Gemini CLI available but authentication not verified'
         };
       } catch (cliError) {
         return {
           status: 'fail',
-          message: 'Claude CLI not available or authentication check failed'
+          message: 'Gemini CLI not available or authentication check failed'
         };
       }
     }
   }
 
   checkAutoUpdates() {
-    // This is a placeholder - actual implementation would check Claude's update settings
+    // This is a placeholder - actual implementation would check Gemini's update settings
     return {
       status: 'pass',
       message: 'Auto-updates assumed enabled'
@@ -538,20 +538,20 @@ class HealthChecker {
 
   checkPermissions() {
     const homeDir = os.homedir();
-    const claudeDir = path.join(homeDir, '.claude');
+    const geminiDir = path.join(homeDir, '.gemini');
     
     try {
-      if (fs.existsSync(claudeDir)) {
-        const stats = fs.statSync(claudeDir);
-        const isWritable = fs.access(claudeDir, fs.constants.W_OK);
+      if (fs.existsSync(geminiDir)) {
+        const stats = fs.statSync(geminiDir);
+        const isWritable = fs.access(geminiDir, fs.constants.W_OK);
         return {
           status: 'pass',
-          message: 'Claude directory permissions OK'
+          message: 'Gemini directory permissions OK'
         };
       } else {
         return {
           status: 'warn',
-          message: 'Claude directory not found'
+          message: 'Gemini directory not found'
         };
       }
     } catch (error) {
@@ -594,18 +594,18 @@ class HealthChecker {
 
   checkConfigurationFiles() {
     const currentDir = process.cwd();
-    const claudeDir = path.join(currentDir, '.claude');
+    const geminiDir = path.join(currentDir, '.gemini');
     
-    if (fs.existsSync(claudeDir)) {
-      const files = fs.readdirSync(claudeDir);
+    if (fs.existsSync(geminiDir)) {
+      const files = fs.readdirSync(geminiDir);
       return {
         status: 'pass',
-        message: `Found .claude/ directory with ${files.length} files`
+        message: `Found .gemini/ directory with ${files.length} files`
       };
     } else {
       return {
         status: 'warn',
-        message: 'No .claude/ directory found'
+        message: 'No .gemini/ directory found'
       };
     }
   }
@@ -729,13 +729,13 @@ class HealthChecker {
 
   checkProjectCommands() {
     const currentDir = process.cwd();
-    const commandsDir = path.join(currentDir, '.claude', 'commands');
+    const commandsDir = path.join(currentDir, '.gemini', 'commands');
     
     if (fs.existsSync(commandsDir)) {
       const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.md'));
       return {
         status: 'pass',
-        message: `${commands.length} commands found in .claude/commands/`
+        message: `${commands.length} commands found in .gemini/commands/`
       };
     } else {
       return {
@@ -747,13 +747,13 @@ class HealthChecker {
 
   checkPersonalCommands() {
     const homeDir = os.homedir();
-    const commandsDir = path.join(homeDir, '.claude', 'commands');
+    const commandsDir = path.join(homeDir, '.gemini', 'commands');
     
     if (fs.existsSync(commandsDir)) {
       const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.md'));
       return {
         status: 'pass',
-        message: `${commands.length} commands found in ~/.claude/commands/`
+        message: `${commands.length} commands found in ~/.gemini/commands/`
       };
     } else {
       return {
@@ -765,7 +765,7 @@ class HealthChecker {
 
   checkCommandSyntax() {
     const currentDir = process.cwd();
-    const commandsDir = path.join(currentDir, '.claude', 'commands');
+    const commandsDir = path.join(currentDir, '.gemini', 'commands');
     
     if (!fs.existsSync(commandsDir)) {
       return {
@@ -802,13 +802,13 @@ class HealthChecker {
 
   checkProjectAgents() {
     const currentDir = process.cwd();
-    const agentsDir = path.join(currentDir, '.claude', 'agents');
+    const agentsDir = path.join(currentDir, '.gemini', 'agents');
     
     if (fs.existsSync(agentsDir)) {
       const agents = this.countAgentsRecursively(agentsDir);
       return {
         status: 'pass',
-        message: `${agents} agents found in .claude/agents/`
+        message: `${agents} agents found in .gemini/agents/`
       };
     } else {
       return {
@@ -820,13 +820,13 @@ class HealthChecker {
 
   checkPersonalAgents() {
     const homeDir = os.homedir();
-    const agentsDir = path.join(homeDir, '.claude', 'agents');
+    const agentsDir = path.join(homeDir, '.gemini', 'agents');
     
     if (fs.existsSync(agentsDir)) {
       const agents = this.countAgentsRecursively(agentsDir);
       return {
         status: 'pass',
-        message: `${agents} agents found in ~/.claude/agents/`
+        message: `${agents} agents found in ~/.gemini/agents/`
       };
     } else {
       return {
@@ -857,7 +857,7 @@ class HealthChecker {
 
   checkAgentSyntax() {
     const currentDir = process.cwd();
-    const agentsDir = path.join(currentDir, '.claude', 'agents');
+    const agentsDir = path.join(currentDir, '.gemini', 'agents');
     
     if (!fs.existsSync(agentsDir)) {
       return {
@@ -925,7 +925,7 @@ class HealthChecker {
 
   checkUserHooks() {
     const homeDir = os.homedir();
-    const settingsPath = path.join(homeDir, '.claude', 'settings.json');
+    const settingsPath = path.join(homeDir, '.gemini', 'settings.json');
     
     if (fs.existsSync(settingsPath)) {
       try {
@@ -933,12 +933,12 @@ class HealthChecker {
         const hooks = settings.hooks || [];
         return {
           status: 'pass',
-          message: `${hooks.length} hooks configured in ~/.claude/settings.json`
+          message: `${hooks.length} hooks configured in ~/.gemini/settings.json`
         };
       } catch (error) {
         return {
           status: 'fail',
-          message: 'Invalid JSON in ~/.claude/settings.json'
+          message: 'Invalid JSON in ~/.gemini/settings.json'
         };
       }
     } else {
@@ -951,7 +951,7 @@ class HealthChecker {
 
   checkProjectHooks() {
     const currentDir = process.cwd();
-    const settingsPath = path.join(currentDir, '.claude', 'settings.json');
+    const settingsPath = path.join(currentDir, '.gemini', 'settings.json');
     
     if (fs.existsSync(settingsPath)) {
       try {
@@ -959,12 +959,12 @@ class HealthChecker {
         const hooks = settings.hooks || [];
         return {
           status: 'pass',
-          message: `${hooks.length} hooks configured in .claude/settings.json`
+          message: `${hooks.length} hooks configured in .gemini/settings.json`
         };
       } catch (error) {
         return {
           status: 'fail',
-          message: 'Invalid JSON in .claude/settings.json'
+          message: 'Invalid JSON in .gemini/settings.json'
         };
       }
     } else {
@@ -977,7 +977,7 @@ class HealthChecker {
 
   checkLocalHooks() {
     const currentDir = process.cwd();
-    const settingsPath = path.join(currentDir, '.claude', 'settings.local.json');
+    const settingsPath = path.join(currentDir, '.gemini', 'settings.local.json');
     
     if (fs.existsSync(settingsPath)) {
       try {
@@ -985,12 +985,12 @@ class HealthChecker {
         const hooks = settings.hooks || [];
         return {
           status: 'pass',
-          message: `${hooks.length} hooks configured in .claude/settings.local.json`
+          message: `${hooks.length} hooks configured in .gemini/settings.local.json`
         };
       } catch (error) {
         return {
           status: 'fail',
-          message: 'Invalid JSON syntax in .claude/settings.local.json'
+          message: 'Invalid JSON syntax in .gemini/settings.local.json'
         };
       }
     } else {
@@ -1003,9 +1003,9 @@ class HealthChecker {
 
   checkHookCommands() {
     const hookSettingsFiles = [
-      path.join(os.homedir(), '.claude', 'settings.json'),
-      path.join(process.cwd(), '.claude', 'settings.json'),
-      path.join(process.cwd(), '.claude', 'settings.local.json')
+      path.join(os.homedir(), '.gemini', 'settings.json'),
+      path.join(process.cwd(), '.gemini', 'settings.json'),
+      path.join(process.cwd(), '.gemini', 'settings.local.json')
     ];
     
     let totalHooks = 0;
@@ -1109,12 +1109,12 @@ class HealthChecker {
 
   checkUserSettings() {
     const homeDir = os.homedir();
-    const userSettingsPath = path.join(homeDir, '.claude', 'settings.json');
+    const userSettingsPath = path.join(homeDir, '.gemini', 'settings.json');
     
     if (!fs.existsSync(userSettingsPath)) {
       return {
         status: 'warn',
-        message: 'No user settings found (~/.claude/settings.json)'
+        message: 'No user settings found (~/.gemini/settings.json)'
       };
     }
     
@@ -1131,19 +1131,19 @@ class HealthChecker {
     } catch (error) {
       return {
         status: 'fail',
-        message: 'Invalid JSON in ~/.claude/settings.json'
+        message: 'Invalid JSON in ~/.gemini/settings.json'
       };
     }
   }
 
   checkProjectSettings() {
     const currentDir = process.cwd();
-    const projectSettingsPath = path.join(currentDir, '.claude', 'settings.json');
+    const projectSettingsPath = path.join(currentDir, '.gemini', 'settings.json');
     
     if (!fs.existsSync(projectSettingsPath)) {
       return {
         status: 'warn',
-        message: 'No project settings found (.claude/settings.json)'
+        message: 'No project settings found (.gemini/settings.json)'
       };
     }
     
@@ -1160,19 +1160,19 @@ class HealthChecker {
     } catch (error) {
       return {
         status: 'fail',
-        message: 'Invalid JSON in .claude/settings.json'
+        message: 'Invalid JSON in .gemini/settings.json'
       };
     }
   }
 
   checkLocalSettings() {
     const currentDir = process.cwd();
-    const localSettingsPath = path.join(currentDir, '.claude', 'settings.local.json');
+    const localSettingsPath = path.join(currentDir, '.gemini', 'settings.local.json');
     
     if (!fs.existsSync(localSettingsPath)) {
       return {
         status: 'warn',
-        message: 'No local settings found (.claude/settings.local.json)'
+        message: 'No local settings found (.gemini/settings.local.json)'
       };
     }
     
@@ -1189,7 +1189,7 @@ class HealthChecker {
     } catch (error) {
       return {
         status: 'fail',
-        message: 'Invalid JSON in .claude/settings.local.json'
+        message: 'Invalid JSON in .gemini/settings.local.json'
       };
     }
   }
@@ -1337,7 +1337,7 @@ class HealthChecker {
     // Add recommendations based on results
     const allResults = [
       ...this.results.system,
-      ...this.results.claudeCode,
+      ...this.results.geminiCode,
       ...this.results.project,
       ...this.results.agents,
       ...this.results.commands,
@@ -1355,7 +1355,7 @@ class HealthChecker {
         } else if (result.check === 'Agent Syntax' && result.message.includes('frontmatter')) {
           recommendations.push('Add proper frontmatter (name, description) to agent files');
         } else if (result.check === 'Project Agents' && result.message.includes('No project agents directory')) {
-          recommendations.push('Create .claude/agents/ directory to organize your custom agents');
+          recommendations.push('Create .gemini/agents/ directory to organize your custom agents');
         } else if (result.check === 'Project MCP Config' && result.message.includes('No project MCP configuration')) {
           recommendations.push('Create .mcp.json file to configure MCP servers for your project');
         } else if (result.check === 'MCP Config Syntax' && result.message.includes('Invalid JSON')) {
@@ -1363,7 +1363,7 @@ class HealthChecker {
         } else if (result.check === 'MCP Config Syntax' && result.message.includes('Missing command')) {
           recommendations.push('Add missing command fields to MCP server configurations');
         } else if (result.check === 'Local Hooks' && result.message.includes('Invalid JSON')) {
-          recommendations.push('Fix JSON syntax error in .claude/settings.local.json');
+          recommendations.push('Fix JSON syntax error in .gemini/settings.local.json');
         }
       }
     });

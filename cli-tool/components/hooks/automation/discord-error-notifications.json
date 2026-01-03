@@ -1,5 +1,5 @@
 {
-  "description": "Send Discord notifications when Claude Code encounters long-running operations or when tools take significant time. Helps monitor productivity and catch potential issues with rich embeds. Requires DISCORD_WEBHOOK_URL environment variable.",
+  "description": "Send Discord notifications when Gemini CLI encounters long-running operations or when tools take significant time. Helps monitor productivity and catch potential issues with rich embeds. Requires DISCORD_WEBHOOK_URL environment variable.",
   "hooks": {
     "PreToolUse": [
       {
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [[ -n \"$DISCORD_WEBHOOK_URL\" ]]; then MESSAGE='{\"embeds\":[{\"title\":\"🔔 Claude Code Notification\",\"color\":3066993,\"fields\":[{\"name\":\"📁 Project\",\"value\":\"'\"$(basename \"$(pwd)\")\"'\",\"inline\":true},{\"name\":\"⏰ Time\",\"value\":\"'\"$(date '+%H:%M:%S')\"'\",\"inline\":true},{\"name\":\"💬 Status\",\"value\":\"Waiting for user input or permission\",\"inline\":false}],\"timestamp\":\"'\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"'\"}]}'; curl -s -X POST \"$DISCORD_WEBHOOK_URL\" -H \"Content-Type: application/json\" -d \"$MESSAGE\" >/dev/null 2>&1; fi"
+            "command": "if [[ -n \"$DISCORD_WEBHOOK_URL\" ]]; then MESSAGE='{\"embeds\":[{\"title\":\"🔔 Gemini CLI Notification\",\"color\":3066993,\"fields\":[{\"name\":\"📁 Project\",\"value\":\"'\"$(basename \"$(pwd)\")\"'\",\"inline\":true},{\"name\":\"⏰ Time\",\"value\":\"'\"$(date '+%H:%M:%S')\"'\",\"inline\":true},{\"name\":\"💬 Status\",\"value\":\"Waiting for user input or permission\",\"inline\":false}],\"timestamp\":\"'\"$(date -u +%Y-%m-%dT%H:%M:%S.000Z)\"'\"}]}'; curl -s -X POST \"$DISCORD_WEBHOOK_URL\" -H \"Content-Type: application/json\" -d \"$MESSAGE\" >/dev/null 2>&1; fi"
           }
         ]
       }

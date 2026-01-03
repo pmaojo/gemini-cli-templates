@@ -4,7 +4,7 @@
       "name": "frontend-developer",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "development",
       "keywords": ["frontend", "react", "typescript", "ui", "responsive", "accessibility"],
@@ -15,7 +15,7 @@
       "name": "backend-architect",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "development",
       "keywords": ["backend", "api", "microservices", "database", "architecture", "scalability"],
@@ -26,7 +26,7 @@
       "name": "fullstack-developer",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "development",
       "keywords": ["fullstack", "frontend", "backend", "database", "api", "typescript"],
@@ -37,7 +37,7 @@
       "name": "devops-engineer",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "devops",
       "keywords": ["devops", "ci-cd", "infrastructure", "kubernetes", "docker", "terraform"],
@@ -48,7 +48,7 @@
       "name": "mobile-developer",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "mobile",
       "keywords": ["mobile", "react-native", "flutter", "ios", "android", "cross-platform"],
@@ -59,7 +59,7 @@
       "name": "ios-developer",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "mobile",
       "keywords": ["ios", "swift", "swiftui", "uikit", "core-data", "xcode"],
@@ -70,7 +70,7 @@
       "name": "ui-ux-designer",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "design",
       "keywords": ["ui", "ux", "design", "wireframes", "prototyping", "accessibility"],
@@ -81,7 +81,7 @@
       "name": "cli-ui-designer",
       "version": "1.0.0",
       "author": {
-        "name": "Claude Code Templates Team"
+        "name": "Gemini CLI Templates Team"
       },
       "category": "design",
       "keywords": ["cli", "terminal", "ui", "command-line", "design", "web"],

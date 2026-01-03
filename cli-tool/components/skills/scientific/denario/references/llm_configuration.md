@@ -17,7 +17,7 @@ Denario requires API credentials from supported LLM providers to power its multi
 
 ### Other Providers
 - Any LLM compatible with AG2/LangGraph frameworks
-- Anthropic Claude (via compatible interfaces)
+- Google Gemini (via compatible interfaces)
 - Azure OpenAI
 - Custom model endpoints
 

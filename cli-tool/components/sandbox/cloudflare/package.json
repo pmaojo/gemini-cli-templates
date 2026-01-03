@@ -1,7 +1,7 @@
 {
   "name": "cloudflare-claude-sandbox",
   "version": "1.0.0",
-  "description": "Cloudflare Workers sandbox for executing Claude Code with AI-powered code generation",
+  "description": "Cloudflare Workers sandbox for executing Gemini CLI with AI-powered code generation",
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
@@ -17,7 +17,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@anthropic-ai/claude-agent-sdk": "^0.1.23",
+    "@Google-ai/claude-agent-sdk": "^0.1.23",
     "@cloudflare/sandbox": "^0.1.0",
     "node-fetch": "^3.3.2"
   },
@@ -39,16 +39,16 @@
     "workers",
     "sandbox",
     "claude",
-    "anthropic",
+    "Google",
     "ai",
     "code-execution",
     "durable-objects",
     "edge-computing"
   ],
-  "author": "Claude Code Templates",
+  "author": "Gemini CLI Templates",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anthropics/claude-code-templates"
+    "url": "https://github.com/Googles/claude-code-templates"
   }
 }

@@ -13,15 +13,15 @@ Hooks are automation scripts that trigger actions when specific events occur in 
 ## Installation
 
 ### 📦 Basic Installation
-Install this component locally in your project. Works with your existing Claude Code setup.
+Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx claude-code-templates@latest --hook git/auto-git-add --yes
+npx gemini-code-templates@latest --hook git/auto-git-add --yes
 ```
 
 ### Multiple Hooks
 ```bash
-npx claude-code-templates@latest --hook notifications/discord-notifications,git/smart-commit --yes
+npx gemini-code-templates@latest --hook notifications/discord-notifications,git/smart-commit --yes
 ```
 
 ## ⚙️ Hook Configuration
@@ -54,10 +54,10 @@ Hooks trigger on various events:
 ### Enable/Disable Hooks
 ```bash
 # Disable a hook
-echo '{"enabled": false}' > .claude/hooks/discord-notifications.json
+echo '{"enabled": false}' > .gemini/hooks/discord-notifications.json
 
 # Re-enable a hook
-echo '{"enabled": true}' > .claude/hooks/discord-notifications.json
+echo '{"enabled": true}' > .gemini/hooks/discord-notifications.json
 ```
 
 ## 📁 Hook Categories

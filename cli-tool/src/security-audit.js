@@ -76,7 +76,7 @@ async function main() {
   const jsonOutput = args.includes('--json');
   const outputFile = args.find(arg => arg.startsWith('--output='))?.split('=')[1];
 
-  console.log(chalk.blue('\n🔒 Claude Code Templates - Security Audit\n'));
+  console.log(chalk.blue('\n🔒 Gemini CLI Templates - Security Audit\n'));
   console.log(chalk.gray('━'.repeat(60)));
 
   // Determine components directory

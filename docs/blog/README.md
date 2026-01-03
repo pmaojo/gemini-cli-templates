@@ -55,7 +55,7 @@ Para agregar un nuevo artículo al blog, simplemente edita el archivo `blog-arti
 | Campo | Tipo | Descripción | Ejemplo |
 |-------|------|-------------|---------|
 | `id` | string | Identificador único del artículo | `"supabase-integration"` |
-| `title` | string | Título completo del artículo | `"Claude Code + Supabase Integration"` |
+| `title` | string | Título completo del artículo | `"Gemini CLI + Supabase Integration"` |
 | `description` | string | Descripción breve (1-2 líneas) | `"Learn how to integrate..."` |
 | `url` | string | URL completa del artículo | `"https://medium.com/@..."` |
 | `image` | string | URL de la imagen de portada | `"https://www.aitmpl.com/blog/assets/..."` |
@@ -170,14 +170,14 @@ Luego abre: `http://localhost:8000`
   "articles": [
     {
       "id": "my-new-article",
-      "title": "Amazing New Feature in Claude Code",
+      "title": "Amazing New Feature in Gemini CLI",
       "description": "Discover how to use the latest feature that will revolutionize your workflow.",
       "url": "https://medium.com/@dan.avila7/amazing-new-feature-12345",
       "image": "https://www.aitmpl.com/blog/assets/new-feature-cover.png",
       "category": "Development",
       "publishDate": "2025-02-10",
       "readTime": "6 min read",
-      "tags": ["Claude Code", "Productivity", "Automation"],
+      "tags": ["Gemini CLI", "Productivity", "Automation"],
       "difficulty": "intermediate",
       "order": 1
     }

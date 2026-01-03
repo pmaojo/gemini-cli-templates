@@ -227,47 +227,47 @@ function displayMCPStats(analysis) {
 async function runMCPStats(options) {
   const targetDir = options.directory || process.cwd();
   
-  console.log(chalk.blue('🔌 Claude Code MCP Server Analysis'));
+  console.log(chalk.blue('🔌 Gemini CLI MCP Server Analysis'));
   console.log(chalk.gray(`Target directory: ${targetDir}`));
 
   const analysis = await analyzeMCPServers(targetDir);
   
   if (!analysis) {
     console.log(chalk.yellow('\n💡 No MCP servers found.'));
-    console.log(chalk.gray('Would you like to set up Claude Code Templates to add MCP servers?'));
+    console.log(chalk.gray('Would you like to set up Gemini CLI Templates to add MCP servers?'));
     
     const { setupMCP } = await inquirer.prompt([{
       type: 'confirm',
       name: 'setupMCP',
-      message: 'Set up MCP servers with Claude Code Templates?',
+      message: 'Set up MCP servers with Gemini CLI Templates?',
       default: true
     }]);
 
     if (setupMCP) {
-      console.log(chalk.blue('\n🚀 Starting Claude Code Templates setup...'));
+      console.log(chalk.blue('\n🚀 Starting Gemini CLI Templates setup...'));
       
       // Import and run the main setup
-      const createClaudeConfig = require('./index');
-      await createClaudeConfig({ ...options, directory: targetDir });
+      const createGeminiConfig = require('./index');
+      await createGeminiConfig({ ...options, directory: targetDir });
     }
     return;
   }
 
   displayMCPStats(analysis);
 
-  // Ask if user wants Claude Code to review and optimize MCP configuration
+  // Ask if user wants Gemini CLI to review and optimize MCP configuration
   console.log(chalk.blue('\n🤖 Optimization Opportunity'));
-  console.log(chalk.gray('Claude Code can analyze your MCP server configuration and suggest optimizations.'));
+  console.log(chalk.gray('Gemini CLI can analyze your MCP server configuration and suggest optimizations.'));
   
   const { optimizeMCP } = await inquirer.prompt([{
     type: 'confirm',
     name: 'optimizeMCP',
-    message: 'Would you like Claude Code to review and optimize your MCP server configuration?',
+    message: 'Would you like Gemini CLI to review and optimize your MCP server configuration?',
     default: true
   }]);
 
   if (optimizeMCP) {
-    console.log(chalk.blue('\n🔍 Launching Claude Code for MCP optimization...'));
+    console.log(chalk.blue('\n🔍 Launching Gemini CLI for MCP optimization...'));
     
     // Prepare the optimization prompt
     const mcpSummary = `I have ${analysis.totalServers} MCP servers configured in my .mcp.json file:
@@ -292,22 +292,22 @@ Please review my MCP server configuration and suggest optimizations for:
 
 Consider my project structure and development needs to suggest the most beneficial MCP server setup.`;
 
-    const claudeCommand = `claude "${mcpSummary}"`;
+    const geminiCommand = `gemini "${mcpSummary}"`;
     
     try {
-      const child = spawn('sh', ['-c', claudeCommand], {
+      const child = spawn('sh', ['-c', geminiCommand], {
         stdio: 'inherit',
         cwd: targetDir
       });
 
       child.on('error', (error) => {
-        console.error(chalk.red('❌ Error launching Claude Code:'), error.message);
-        console.log(chalk.yellow('💡 Make sure Claude Code is installed: npm install -g @anthropic-ai/claude-code'));
+        console.error(chalk.red('❌ Error launching Gemini CLI:'), error.message);
+        console.log(chalk.yellow('💡 Make sure Gemini CLI is installed: npm install -g @google-ai/gemini-code'));
       });
 
     } catch (error) {
-      console.error(chalk.red('❌ Error launching Claude Code:'), error.message);
-      console.log(chalk.yellow('💡 Make sure Claude Code is installed and accessible.'));
+      console.error(chalk.red('❌ Error launching Gemini CLI:'), error.message);
+      console.log(chalk.yellow('💡 Make sure Gemini CLI is installed and accessible.'));
     }
   } else {
     console.log(chalk.gray('\n✅ MCP analysis complete. You can run this command again anytime to re-analyze your MCP configuration.'));

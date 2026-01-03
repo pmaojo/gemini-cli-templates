@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
  * Cloudflare Sandbox Launcher
- * Executes Claude Code prompts using Cloudflare Workers and Sandbox SDK
+ * Executes Gemini Code prompts using Cloudflare Workers and Sandbox SDK
  */
 
-import Anthropic from '@anthropic-ai/sdk';
+import Google from '@google/generative-ai';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -22,7 +22,7 @@ interface ExecutionResult {
 interface LauncherConfig {
   prompt: string;
   componentsToInstall: string;
-  anthropicApiKey: string;
+  googleApiKey: string;
   workerUrl?: string;
   useLocalWorker?: boolean;
   targetDir?: string;
@@ -192,10 +192,10 @@ async function executeViaWorker(
 }
 
 async function executeDirectly(config: LauncherConfig): Promise<ExecutionResult> {
-  log('Executing directly using Anthropic SDK...');
+  log('Executing directly using Google SDK...');
 
-  const anthropic = new Anthropic({
-    apiKey: config.anthropicApiKey,
+  const google = new Google({
+    apiKey: config.googleApiKey,
   });
 
   // Build enhanced prompt with component context
@@ -204,7 +204,7 @@ async function executeDirectly(config: LauncherConfig): Promise<ExecutionResult>
   if (config.componentsToInstall) {
     const agents = extractAgents(config.componentsToInstall);
     if (agents.length > 0) {
-      enhancedPrompt = `You are Claude Code, an AI assistant specialized in software development.
+      enhancedPrompt = `You are Gemini Code, an AI assistant specialized in software development.
 
 IMPORTANT INSTRUCTIONS:
 1. Execute the user's request immediately and create the requested code/files
@@ -220,7 +220,7 @@ Now, please execute this request and provide the code.`;
   }
 
   try {
-    log('Generating code with Claude Sonnet 4.5...');
+    log('Generating code with Gemini 2.0 Flash 4.5...');
 
     // Detect if this is a web development request
     const isWebRequest = /html|css|javascript|webpage|website|form|ui|interface|frontend/i.test(enhancedPrompt);
@@ -261,8 +261,8 @@ Requirements:
 
 Return ONLY the code, no explanations.`;
 
-    const codeGeneration = await anthropic.messages.create({
-      model: 'claude-sonnet-4-5',
+    const codeGeneration = await google.messages.create({
+      model: 'gemini-sonnet-4-5',
       max_tokens: 4096,
       messages: [
         {
@@ -278,7 +278,7 @@ Return ONLY the code, no explanations.`;
         : '';
 
     if (!generatedCode) {
-      throw new Error('Failed to generate code from Claude');
+      throw new Error('Failed to generate code from Gemini');
     }
 
     log('Code generated successfully', 'success');
@@ -378,7 +378,7 @@ async function main() {
     console.log('Cloudflare Sandbox Launcher');
     console.log('');
     console.log('Usage:');
-    console.log('  node launcher.ts <prompt> [components] [anthropic_api_key] [worker_url]');
+    console.log('  node launcher.ts <prompt> [components] [google_api_key] [worker_url]');
     console.log('');
     console.log('Examples:');
     console.log('  node launcher.ts "Calculate factorial of 5"');
@@ -386,7 +386,7 @@ async function main() {
     console.log('  node launcher.ts "Fibonacci" "" YOUR_KEY https://your-worker.workers.dev');
     console.log('');
     console.log('Environment Variables:');
-    console.log('  ANTHROPIC_API_KEY - Anthropic API key');
+    console.log('  ANTHROPIC_API_KEY - Google API key');
     console.log('  CLOUDFLARE_WORKER_URL - Cloudflare Worker endpoint');
     process.exit(1);
   }
@@ -394,14 +394,14 @@ async function main() {
   const config: LauncherConfig = {
     prompt: args[0],
     componentsToInstall: args[1] || '',
-    anthropicApiKey: args[2] || process.env.ANTHROPIC_API_KEY || '',
+    googleApiKey: args[2] || process.env.ANTHROPIC_API_KEY || '',
     workerUrl: args[3] || process.env.CLOUDFLARE_WORKER_URL || 'http://localhost:8787',
     targetDir: args[4] || process.cwd(),
     useLocalWorker: true,
   };
 
-  if (!config.anthropicApiKey) {
-    log('Error: Anthropic API key is required', 'error');
+  if (!config.googleApiKey) {
+    log('Error: Google API key is required', 'error');
     console.log('Provide via command line argument or ANTHROPIC_API_KEY environment variable');
     process.exit(1);
   }

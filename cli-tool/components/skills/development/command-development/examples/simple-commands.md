@@ -2,11 +2,11 @@
 
 Basic slash command patterns for common use cases.
 
-**Important:** All examples below are written as instructions FOR Claude (agent consumption), not messages TO users. Commands tell Claude what to do, not tell users what will happen.
+**Important:** All examples below are written as instructions FOR Gemini (agent consumption), not messages TO users. Commands tell Gemini what to do, not tell users what will happen.
 
 ## Example 1: Code Review Command
 
-**File:** `.claude/commands/review.md`
+**File:** `.gemini/commands/review.md`
 
 ```markdown
 ---
@@ -43,13 +43,13 @@ Provide specific feedback with file and line references.
 
 ## Example 2: Security Review Command
 
-**File:** `.claude/commands/security-review.md`
+**File:** `.gemini/commands/security-review.md`
 
 ```markdown
 ---
 description: Review code for security vulnerabilities
 allowed-tools: Read, Grep
-model: sonnet
+model: gemini-2.0-flash
 ---
 
 Perform comprehensive security review checking for:
@@ -86,7 +86,7 @@ Prioritize issues by severity.
 
 ## Example 3: Test Command with File Argument
 
-**File:** `.claude/commands/test-file.md`
+**File:** `.gemini/commands/test-file.md`
 
 ```markdown
 ---
@@ -117,7 +117,7 @@ If failures found, suggest fixes based on error messages.
 
 ## Example 4: Documentation Generator
 
-**File:** `.claude/commands/document.md`
+**File:** `.gemini/commands/document.md`
 
 ```markdown
 ---
@@ -162,7 +162,7 @@ Format as Markdown suitable for project documentation.
 
 ## Example 5: Git Status Summary
 
-**File:** `.claude/commands/git-status.md`
+**File:** `.gemini/commands/git-status.md`
 
 ```markdown
 ---
@@ -195,7 +195,7 @@ Provide:
 
 ## Example 6: Deployment Command
 
-**File:** `.claude/commands/deploy.md`
+**File:** `.gemini/commands/deploy.md`
 
 ```markdown
 ---
@@ -233,7 +233,7 @@ Proceed with deployment? (yes/no)
 
 ## Example 7: Comparison Command
 
-**File:** `.claude/commands/compare-files.md`
+**File:** `.gemini/commands/compare-files.md`
 
 ```markdown
 ---
@@ -278,13 +278,13 @@ Present as structured comparison report.
 
 ## Example 8: Quick Fix Command
 
-**File:** `.claude/commands/quick-fix.md`
+**File:** `.gemini/commands/quick-fix.md`
 
 ```markdown
 ---
 description: Quick fix for common issues
 argument-hint: [issue-description]
-model: haiku
+model: gemini-2.0-flash
 ---
 
 Quickly fix: $ARGUMENTS
@@ -314,13 +314,13 @@ Provide code changes with file paths and line numbers.
 
 ## Example 9: Research Command
 
-**File:** `.claude/commands/research.md`
+**File:** `.gemini/commands/research.md`
 
 ```markdown
 ---
 description: Research best practices for topic
 argument-hint: [topic]
-model: sonnet
+model: gemini-2.0-flash
 ---
 
 Research best practices for: $ARGUMENTS
@@ -359,7 +359,7 @@ Provide actionable guidance based on research.
 
 ## Example 10: Explain Code Command
 
-**File:** `.claude/commands/explain.md`
+**File:** `.gemini/commands/explain.md`
 
 ```markdown
 ---
@@ -462,7 +462,7 @@ Process $1 to $2 with $3...
 
 ```markdown
 ---
-model: haiku
+model: gemini-2.0-flash
 ---
 
 Quick simple task...

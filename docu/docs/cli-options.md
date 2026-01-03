@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # CLI Options Reference
 
-This section provides a comprehensive reference of all available command-line options for `claude-code-templates`.
+This section provides a comprehensive reference of all available command-line options for `gemini-code-templates`.
 
 ## Template and Component Options
 
@@ -51,31 +51,31 @@ This section provides a comprehensive reference of all available command-line op
 ### Modern Template Installation (Recommended)
 ```bash
 # Install React template with all components
-npx claude-code-templates@latest --template=react --yes
+npx gemini-code-templates@latest --template=react --yes
 
 # Install Python template with all components
-npx claude-code-templates@latest --template=python --yes
+npx gemini-code-templates@latest --template=python --yes
 
 # Install Node.js template with all components
-npx claude-code-templates@latest --template=nodejs --yes
+npx gemini-code-templates@latest --template=nodejs --yes
 ```
 
 ### Individual Component Installation
 ```bash
 # Install specific agent
-npx claude-code-templates@latest --agent=react-performance --yes
+npx gemini-code-templates@latest --agent=react-performance --yes
 
 # Install specific command
-npx claude-code-templates@latest --command=check-file --yes
+npx gemini-code-templates@latest --command=check-file --yes
 
 # Install specific MCP
-npx claude-code-templates@latest --mcp=github-integration --yes
+npx gemini-code-templates@latest --mcp=github-integration --yes
 ```
 
 ### Legacy Syntax (Still Supported)
 ```bash
 # Old syntax - still works but deprecated
-npx claude-code-templates@latest --language=javascript-typescript --framework=react --yes
+npx gemini-code-templates@latest --language=javascript-typescript --framework=react --yes
 ```
 
 ## GitHub Download System

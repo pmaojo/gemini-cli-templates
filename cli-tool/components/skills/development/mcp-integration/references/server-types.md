@@ -1,6 +1,6 @@
 # MCP Server Types: Deep Dive
 
-Complete reference for all MCP server types supported in Claude Code plugins.
+Complete reference for all MCP server types supported in Gemini CLI plugins.
 
 ## stdio (Standard Input/Output)
 
@@ -37,10 +37,10 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 
 ### Process Lifecycle
 
-1. **Startup**: Claude Code spawns process with `command` and `args`
+1. **Startup**: Gemini CLI spawns process with `command` and `args`
 2. **Communication**: JSON-RPC messages via stdin/stdout
-3. **Lifecycle**: Process runs for entire Claude Code session
-4. **Shutdown**: Process terminated when Claude Code exits
+3. **Lifecycle**: Process runs for entire Gemini CLI session
+4. **Shutdown**: Process terminated when Gemini CLI exits
 
 ### Use Cases
 
@@ -91,7 +91,7 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 - Check command exists and is executable
 - Verify file paths are correct
 - Check permissions
-- Review `claude --debug` logs
+- Review `gemini --debug` logs
 
 **Communication fails:**
 - Ensure server uses stdin/stdout correctly
@@ -150,7 +150,7 @@ Connect to hosted MCP servers via HTTP with server-sent events for streaming. Be
 }
 ```
 
-Claude Code handles OAuth flow:
+Gemini CLI handles OAuth flow:
 1. User prompted to authenticate on first use
 2. Opens browser for OAuth flow
 3. Tokens stored securely

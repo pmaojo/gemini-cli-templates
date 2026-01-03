@@ -256,7 +256,7 @@ When migrating hooks:
 
 ```
 my-plugin/
-├── .claude-plugin/plugin.json
+├── .gemini-plugin/plugin.json
 ├── hooks/hooks.json
 └── scripts/
     ├── validate-bash.sh
@@ -268,7 +268,7 @@ my-plugin/
 
 ```
 my-plugin/
-├── .claude-plugin/plugin.json
+├── .gemini-plugin/plugin.json
 ├── hooks/hooks.json      # Now uses prompt hooks
 └── scripts/              # Archive or delete
     └── archive/

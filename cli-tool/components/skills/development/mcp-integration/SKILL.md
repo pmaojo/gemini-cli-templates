@@ -1,14 +1,14 @@
 ---
 name: MCP Integration
-description: This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use .mcp.json", "set up Model Context Protocol", "connect external service", mentions "${CLAUDE_PLUGIN_ROOT} with MCP", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Claude Code plugins for external tool and service integration.
+description: This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use .mcp.json", "set up Model Context Protocol", "connect external service", mentions "${CLAUDE_PLUGIN_ROOT} with MCP", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Gemini CLI plugins for external tool and service integration.
 version: 0.1.0
 ---
 
-# MCP Integration for Claude Code Plugins
+# MCP Integration for Gemini CLI Plugins
 
 ## Overview
 
-Model Context Protocol (MCP) enables Claude Code plugins to integrate with external services and APIs by providing structured tool access. Use MCP integration to expose external service capabilities as tools within Claude Code.
+Model Context Protocol (MCP) enables Gemini CLI plugins to integrate with external services and APIs by providing structured tool access. Use MCP integration to expose external service capabilities as tools within Gemini CLI.
 
 **Key capabilities:**
 - Connect to external services (databases, APIs, file systems)
@@ -88,9 +88,9 @@ Execute local MCP servers as child processes. Best for local tools and custom se
 - NPM-packaged MCP servers
 
 **Process management:**
-- Claude Code spawns and manages the process
+- Gemini CLI spawns and manages the process
 - Communicates via stdin/stdout
-- Terminates when Claude Code exits
+- Terminates when Gemini CLI exits
 
 ### SSE (Server-Sent Events)
 
@@ -115,7 +115,7 @@ Connect to hosted MCP servers with OAuth support. Best for cloud services.
 **Authentication:**
 - OAuth flows handled automatically
 - User prompted on first use
-- Tokens managed by Claude Code
+- Tokens managed by Gemini CLI
 
 ### HTTP (REST API)
 
@@ -242,7 +242,7 @@ Use `/mcp` command to see all servers including plugin-provided ones.
 
 ### OAuth (SSE/HTTP)
 
-OAuth handled automatically by Claude Code:
+OAuth handled automatically by Gemini CLI:
 
 ```json
 {
@@ -425,10 +425,10 @@ for id in task_ids:
 ### Local Testing
 
 1. Configure MCP server in `.mcp.json`
-2. Install plugin locally (`.claude-plugin/`)
+2. Install plugin locally (`.gemini-plugin/`)
 3. Run `/mcp` to verify server appears
 4. Test tool calls in commands
-5. Check `claude --debug` logs for connection issues
+5. Check `gemini --debug` logs for connection issues
 
 ### Validation Checklist
 
@@ -445,7 +445,7 @@ for id in task_ids:
 ### Enable Debug Logging
 
 ```bash
-claude --debug
+gemini --debug
 ```
 
 Look for:
@@ -466,7 +466,7 @@ Look for:
 - Verify server connected successfully
 - Check tool names match exactly
 - Run `/mcp` to see available tools
-- Restart Claude Code after config changes
+- Restart Gemini CLI after config changes
 
 **Authentication failing:**
 - Clear cached auth tokens
@@ -533,9 +533,9 @@ Working examples in `examples/`:
 ### External Resources
 
 - **Official MCP Docs**: https://modelcontextprotocol.io/
-- **Claude Code MCP Docs**: https://docs.claude.com/en/docs/claude-code/mcp
+- **Gemini CLI MCP Docs**: https://docs.gemini.com/en/docs/gemini-code/mcp
 - **MCP SDK**: @modelcontextprotocol/sdk
-- **Testing**: Use `claude --debug` and `/mcp` command
+- **Testing**: Use `gemini --debug` and `/mcp` command
 
 ## Implementation Workflow
 

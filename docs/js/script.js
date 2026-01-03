@@ -1,7 +1,7 @@
 // GitHub repository configuration
 const GITHUB_CONFIG = {
     owner: 'davila7',
-    repo: 'claude-code-templates',
+    repo: 'gemini-code-templates',
     branch: 'main',
     templatesPath: 'cli-tool/src/templates.js'
 };
@@ -129,7 +129,7 @@ function generateTemplateCards() {
         const baseCard = createTemplateCard(languageKey, languageData, 'none', {
             name: languageData.name,
             icon: getFrameworkIcon(languageKey),
-            command: `npx claude-code-templates@latest --template=${languageKey} --yes`
+            command: `npx gemini-code-templates@latest --template=${languageKey} --yes`
         });
         grid.appendChild(baseCard);
         
@@ -139,7 +139,7 @@ function generateTemplateCards() {
                 const frameworkCard = createTemplateCard(languageKey, languageData, frameworkKey, {
                     name: frameworkData.name,
                     icon: getFrameworkIcon(frameworkKey),
-                    command: `npx claude-code-templates@latest --template=${languageKey} --yes`
+                    command: `npx gemini-code-templates@latest --template=${languageKey} --yes`
                 });
                 grid.appendChild(frameworkCard);
             });
@@ -519,7 +519,7 @@ function showContributeModal() {
                 </div>
                 <div class="modal-body">
                     <div class="contribute-intro">
-                        <p>Help expand Claude Code Templates by contributing new languages or frameworks! Follow these steps to submit your contribution:</p>
+                        <p>Help expand Gemini CLI Templates by contributing new languages or frameworks! Follow these steps to submit your contribution:</p>
                     </div>
                     
                     <div class="contribute-steps">
@@ -527,10 +527,10 @@ function showContributeModal() {
                             <div class="step-number-contrib">1</div>
                             <div class="step-content-contrib">
                                 <h4>Fork the Repository</h4>
-                                <p>Go to the <a href="https://github.com/davila7/claude-code-templates" target="_blank">main repository</a> and click "Fork" to create your own copy.</p>
+                                <p>Go to the <a href="https://github.com/davila7/gemini-code-templates" target="_blank">main repository</a> and click "Fork" to create your own copy.</p>
                                 <div class="step-command">
-                                    <code>git clone https://github.com/YOUR_USERNAME/claude-code-templates.git</code>
-                                    <button class="copy-btn" onclick="copyToClipboard('git clone https://github.com/YOUR_USERNAME/claude-code-templates.git')">Copy</button>
+                                    <code>git clone https://github.com/YOUR_USERNAME/gemini-code-templates.git</code>
+                                    <button class="copy-btn" onclick="copyToClipboard('git clone https://github.com/YOUR_USERNAME/gemini-code-templates.git')">Copy</button>
                                 </div>
                             </div>
                         </div>
@@ -555,22 +555,22 @@ function showContributeModal() {
                         <div class="contribute-step">
                             <div class="step-number-contrib">3</div>
                             <div class="step-content-contrib">
-                                <h4>Use Claude Code to Generate the Template</h4>
-                                <p>Copy this prompt and use it with Claude Code to automatically generate the template structure:</p>
-                                <div class="claude-prompt">
-                                    <h5>📋 Claude Code Prompt:</h5>
+                                <h4>Use Gemini CLI to Generate the Template</h4>
+                                <p>Copy this prompt and use it with Gemini CLI to automatically generate the template structure:</p>
+                                <div class="gemini-prompt">
+                                    <h5>📋 Gemini CLI Prompt:</h5>
                                     <div class="prompt-text">
-                                        <pre>I want to contribute a new template to the claude-code-templates repository. 
+                                        <pre>I want to contribute a new template to the gemini-code-templates repository. 
 
 Please help me create:
 - A new [LANGUAGE/FRAMEWORK] template
-- All necessary configuration files (CLAUDE.md, .claude/, .mcp.json)
+- All necessary configuration files (CLAUDE.md, .gemini/, .mcp.json)
 - Update cli-tool/src/templates.js with the new configuration
 - Include appropriate hooks and commands for this technology
 
 The template should follow the existing patterns in the repository and include:
 1. CLAUDE.md with language/framework-specific guidelines
-2. .claude/commands/ with relevant development commands
+2. .gemini/commands/ with relevant development commands
 3. .mcp.json with appropriate MCP configurations
 4. Update templates.js with the new template definition
 
@@ -625,7 +625,7 @@ Please analyze the existing templates in the repository first to understand the 
                     <div class="contribute-footer">
                         <div class="help-section">
                             <h4>Need Help?</h4>
-                            <p>Check out <a href="https://github.com/davila7/claude-code-templates/blob/main/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a> or open an issue on GitHub.</p>
+                            <p>Check out <a href="https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md" target="_blank">CONTRIBUTING.md</a> or open an issue on GitHub.</p>
                         </div>
                     </div>
                 </div>
@@ -829,14 +829,14 @@ setInterval(loadDownloadStatistics, 10 * 60 * 1000);
 function getFileType(filename) {
     if (filename.endsWith('.md')) return 'Documentation';
     if (filename.endsWith('.json')) return 'Configuration';
-    if (filename.includes('.claude')) return 'Commands';
+    if (filename.includes('.gemini')) return 'Commands';
     if (filename.includes('commands')) return 'Commands';
     return 'Configuration';
 }
 
 // Generate GitHub folder URL for templates
 function getGithubFolderUrl(languageKey, frameworkKey) {
-    const baseUrl = 'https://github.com/davila7/claude-code-templates/tree/main/cli-tool/templates';
+    const baseUrl = 'https://github.com/davila7/gemini-code-templates/tree/main/cli-tool/templates';
     
     if (frameworkKey === 'none' || !frameworkKey) {
         // Base language template
@@ -849,7 +849,7 @@ function getGithubFolderUrl(languageKey, frameworkKey) {
 
 // Generate GitHub file URL for individual files
 function getGithubFileUrl(languageKey, frameworkKey, filePath) {
-    const baseUrl = 'https://github.com/davila7/claude-code-templates/blob/main/cli-tool/templates';
+    const baseUrl = 'https://github.com/davila7/gemini-code-templates/blob/main/cli-tool/templates';
     return `${baseUrl}/${filePath}`;
 }
 
@@ -1504,15 +1504,15 @@ function createComponentCard(component) {
 // Generate install command for component
 function generateInstallCommand(component) {
     if (component.type === 'agent') {
-        return `npx claude-code-templates@latest --agent=${component.name} --yes`;
+        return `npx gemini-code-templates@latest --agent=${component.name} --yes`;
     } else if (component.type === 'command') {
-        return `npx claude-code-templates@latest --command=${component.name} --yes`;
+        return `npx gemini-code-templates@latest --command=${component.name} --yes`;
     } else if (component.type === 'mcp') {
         // Remove .json extension from MCP names for the command
         const mcpName = component.name.replace(/\.json$/, '');
-        return `npx claude-code-templates@latest --mcp=${mcpName} --yes`;
+        return `npx gemini-code-templates@latest --mcp=${mcpName} --yes`;
     }
-    return `npx claude-code-templates@latest`;
+    return `npx gemini-code-templates@latest`;
 }
 
 
@@ -1539,7 +1539,7 @@ function formatComponentName(name) {
 
 // Get component description
 function getComponentDescription(component) {
-    return `A component of type '${component.type}' for Claude Code.`;
+    return `A component of type '${component.type}' for Gemini CLI.`;
 }
 
 // Show component details modal
@@ -1570,7 +1570,7 @@ function showComponentContributeModal(type) {
         },
         commands: { 
             name: 'Command', 
-            description: 'Custom slash command for Claude Code',
+            description: 'Custom slash command for Gemini CLI',
             example: 'optimize-bundle',
             structure: '- Command description and usage\n- Task breakdown\n- Process steps\n- Best practices and examples'
         },
@@ -1593,7 +1593,7 @@ function showComponentContributeModal(type) {
                 </div>
                 <div class="modal-body">
                     <div class="contribute-intro">
-                        <p>Help expand Claude Code by contributing a new ${config.name.toLowerCase()}! Follow these steps:</p>
+                        <p>Help expand Gemini CLI by contributing a new ${config.name.toLowerCase()}! Follow these steps:</p>
                     </div>
                     
                     <div class="contribute-steps">
@@ -1618,7 +1618,7 @@ function showComponentContributeModal(type) {
                                 <h4>Follow the Pattern</h4>
                                 <p>Check existing ${type} in the repository to understand the structure and conventions.</p>
                                 <div class="step-command">
-                                    <a href="https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/${type}" target="_blank" class="github-folder-link">
+                                    <a href="https://github.com/davila7/gemini-code-templates/tree/main/cli-tool/components/${type}" target="_blank" class="github-folder-link">
                                         📁 View existing ${type}
                                     </a>
                                 </div>
@@ -1629,7 +1629,7 @@ function showComponentContributeModal(type) {
                             <div class="step-number-contrib">3</div>
                             <div class="step-content-contrib">
                                 <h4>Test Your Component</h4>
-                                <p>Ensure your ${config.name.toLowerCase()} works correctly with Claude Code.</p>
+                                <p>Ensure your ${config.name.toLowerCase()} works correctly with Gemini CLI.</p>
                                 <div class="step-command">
                                     <code>cd cli-tool && npm test</code>
                                     <button class="copy-btn" onclick="copyToClipboard('cd cli-tool && npm test')">Copy</button>

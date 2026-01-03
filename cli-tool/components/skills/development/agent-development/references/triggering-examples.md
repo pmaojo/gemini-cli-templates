@@ -10,11 +10,11 @@ The standard format for triggering examples:
 <example>
 Context: [Describe the situation - what led to this interaction]
 user: "[Exact user message or request]"
-assistant: "[How Claude should respond before triggering]"
+assistant: "[How Gemini should respond before triggering]"
 <commentary>
 [Explanation of why this agent should be triggered in this scenario]
 </commentary>
-assistant: "[How Claude triggers the agent - usually 'I'll use the [agent-name] agent...']"
+assistant: "[How Gemini triggers the agent - usually 'I'll use the [agent-name] agent...']"
 </example>
 ```
 
@@ -60,7 +60,7 @@ Example 3: user: "Look over my changes"
 
 ### Assistant Response (Before Triggering)
 
-**Purpose:** Show what Claude says before launching the agent
+**Purpose:** Show what Gemini says before launching the agent
 
 **Good responses:**
 ```
@@ -106,7 +106,7 @@ test quality and coverage before continuing.
 
 ### Assistant Response (Triggering)
 
-**Purpose:** Show how Claude invokes the agent
+**Purpose:** Show how Gemini invokes the agent
 
 **Standard pattern:**
 ```
@@ -476,7 +476,7 @@ Revise examples to show only correct triggering scenarios.
 - Provide clear context for each example
 - Explain reasoning in commentary
 - Vary user message phrasing
-- Show Claude using Agent tool
+- Show Gemini using Agent tool
 
 ❌ **DON'T:**
 - Use generic, vague examples

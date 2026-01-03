@@ -18,7 +18,7 @@ let workflowState = {
 // GitHub API configuration
 const GITHUB_CONFIG = {
     owner: 'davila7',
-    repo: 'claude-code-templates',
+    repo: 'gemini-code-templates',
     branch: 'main'
 };
 
@@ -413,7 +413,7 @@ function generateWorkflowYAML() {
 }
 
 function showGenerateModal(hash, yaml) {
-    document.getElementById('workflowCommand').textContent = `npx claude-code-templates@latest --workflow:#${hash}`;
+    document.getElementById('workflowCommand').textContent = `npx gemini-code-templates@latest --workflow:#${hash}`;
     document.getElementById('yamlContent').textContent = yaml;
     document.getElementById('generateModal').style.display = 'block';
 }
@@ -505,7 +505,7 @@ function formatComponentName(name) {
 }
 
 function generateInstallCommand(component) {
-    return `npx claude-code-templates@latest --${component.type} "${component.path}"`;
+    return `npx gemini-code-templates@latest --${component.type} "${component.path}"`;
 }
 
 function getComponentDescription(component) {
@@ -530,7 +530,7 @@ function getComponentDescription(component) {
 }
 
 function viewOnGitHub(path) {
-    const url = `https://github.com/davila7/claude-code-templates/tree/main/${path}`;
+    const url = `https://github.com/davila7/gemini-code-templates/tree/main/${path}`;
     window.open(url, '_blank');
 }
 

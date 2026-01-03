@@ -1,6 +1,6 @@
 # Jekyll configuration for GitHub Pages
-title: Claude Code Templates
-description: Browse and install Claude Code configuration templates for different languages and frameworks
+title: Gemini CLI Templates
+description: Browse and install Gemini CLI configuration templates for different languages and frameworks
 baseurl: ""
 url: "https://aitmpl.com"
 
@@ -28,7 +28,7 @@ plugins:
   - jekyll-sitemap
 
 # Repository information
-repository: davila7/claude-code-templates
+repository: davila7/gemini-code-templates
 
 # Social media and SEO
 twitter:

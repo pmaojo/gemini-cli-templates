@@ -251,37 +251,37 @@ Analyze synchronization status between GitHub and Linear. When checking synchron
 ### Basic Status Check
 ```bash
 # Get current sync status
-claude sync-status
+gemini sync-status
 
 # Detailed status with history
-claude sync-status --detailed
+gemini sync-status --detailed
 
 # Check specific sync types
-claude sync-status --type="issue-to-linear"
+gemini sync-status --type="issue-to-linear"
 ```
 
 ### Health Monitoring
 ```bash
 # Run health check
-claude sync-status --health-check
+gemini sync-status --health-check
 
 # Continuous monitoring
-claude sync-status --monitor --interval=5m
+gemini sync-status --monitor --interval=5m
 
 # Generate diagnostic report
-claude sync-status --diagnostics
+gemini sync-status --diagnostics
 ```
 
 ### Troubleshooting
 ```bash
 # Check for sync issues
-claude sync-status --check-issues
+gemini sync-status --check-issues
 
 # Verify specific items
-claude sync-status --verify="gh-123,ABC-456"
+gemini sync-status --verify="gh-123,ABC-456"
 
 # Queue management
-claude sync-status --queue --clear-failed
+gemini sync-status --queue --clear-failed
 ```
 
 ## Output Format

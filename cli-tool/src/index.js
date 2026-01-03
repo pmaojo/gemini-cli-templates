@@ -67,7 +67,7 @@ async function showMainMenu() {
     message: 'What would you like to do?',
     choices: [
       {
-        name: '📊 Analytics Dashboard - Monitor your Claude Code usage and sessions',
+        name: '📊 Analytics Dashboard - Monitor your Gemini CLI usage and sessions',
         value: 'analytics',
         short: 'Analytics Dashboard'
       },
@@ -77,17 +77,17 @@ async function showMainMenu() {
         short: 'Chats Mobile'
       },
       {
-        name: '🤖 Agents Dashboard - View and analyze Claude conversations with agent tools',
+        name: '🤖 Agents Dashboard - View and analyze Gemini conversations with agent tools',
         value: 'agents',
         short: 'Agents Dashboard'
       },
       {
-        name: '⚙️ Project Setup - Configure Claude Code for your project',
+        name: '⚙️ Project Setup - Configure Gemini CLI for your project',
         value: 'setup',
         short: 'Project Setup'
       },
       {
-        name: '🔍 Health Check - Verify your Claude Code setup and configuration',
+        name: '🔍 Health Check - Verify your Gemini CLI setup and configuration',
         value: 'health',
         short: 'Health Check'
       }
@@ -96,21 +96,21 @@ async function showMainMenu() {
   }]);
   
   if (initialChoice.action === 'analytics') {
-    console.log(chalk.blue('📊 Launching Claude Code Analytics Dashboard...'));
+    console.log(chalk.blue('📊 Launching Gemini CLI Analytics Dashboard...'));
     trackingService.trackAnalyticsDashboard({ page: 'dashboard', source: 'interactive_menu' });
     await runAnalytics({});
     return;
   }
   
   if (initialChoice.action === 'chats') {
-    console.log(chalk.blue('💬 Launching Claude Code Mobile Chats...'));
+    console.log(chalk.blue('💬 Launching Gemini CLI Mobile Chats...'));
     trackingService.trackAnalyticsDashboard({ page: 'chats-mobile', source: 'interactive_menu' });
     await startChatsMobile({});
     return;
   }
   
   if (initialChoice.action === 'agents') {
-    console.log(chalk.blue('🤖 Launching Claude Code Agents Dashboard...'));
+    console.log(chalk.blue('🤖 Launching Gemini CLI Agents Dashboard...'));
     trackingService.trackAnalyticsDashboard({ page: 'agents', source: 'interactive_menu' });
     await runAnalytics({ openTo: 'agents' });
     return;
@@ -130,7 +130,7 @@ async function showMainMenu() {
     if (healthResult.runSetup) {
       console.log(chalk.blue('⚙️  Starting Project Setup...'));
       // Continue with setup flow
-      return await createClaudeConfig({});
+      return await createGeminiConfig({});
     } else {
       console.log(chalk.green('👍 Health check completed. Returning to main menu...'));
       return await showMainMenu();
@@ -138,11 +138,11 @@ async function showMainMenu() {
   }
   
   // Continue with setup if user chose 'setup'
-  console.log(chalk.blue('⚙️  Setting up Claude Code configuration...'));
-  return await createClaudeConfig({ setupFromMenu: true });
+  console.log(chalk.blue('⚙️  Setting up Gemini CLI configuration...'));
+  return await createGeminiConfig({ setupFromMenu: true });
 }
 
-async function createClaudeConfig(options = {}) {
+async function createGeminiConfig(options = {}) {
   const targetDir = options.directory || process.cwd();
   
   // Validate --tunnel usage
@@ -156,9 +156,9 @@ async function createClaudeConfig(options = {}) {
     return;
   }
   
-  // Handle Claude Code Studio launch
+  // Handle Gemini CLI Studio launch
   if (options.studio) {
-    await launchClaudeCodeStudio(options, targetDir);
+    await launchGeminiCLIStudio(options, targetDir);
     return;
   }
 
@@ -293,15 +293,15 @@ async function createClaudeConfig(options = {}) {
 
   // Handle session clone (download and import shared session)
   if (options.cloneSession) {
-    console.log(chalk.blue('📥 Cloning shared Claude Code session...'));
+    console.log(chalk.blue('📥 Cloning shared Gemini CLI session...'));
 
     try {
       const os = require('os');
       const homeDir = os.homedir();
-      const claudeDir = path.join(homeDir, '.claude');
+      const geminiDir = path.join(homeDir, '.gemini');
 
       // Initialize ConversationAnalyzer and SessionSharing
-      const conversationAnalyzer = new ConversationAnalyzer(claudeDir);
+      const conversationAnalyzer = new ConversationAnalyzer(geminiDir);
       const sessionSharing = new SessionSharing(conversationAnalyzer);
 
       // Clone the session (cloneSession method handles all console output)
@@ -358,7 +358,7 @@ async function createClaudeConfig(options = {}) {
   if (!shouldRunSetup && !options.setupFromMenu && !options.yes && !options.language && !options.framework && !options.dryRun) {
     return await showMainMenu();
   } else {
-    console.log(chalk.blue('🚀 Setting up Claude Code configuration...'));
+    console.log(chalk.blue('🚀 Setting up Gemini CLI configuration...'));
   }
   
   console.log(chalk.gray(`Target directory: ${targetDir}`));
@@ -404,7 +404,7 @@ async function createClaudeConfig(options = {}) {
 
   // Handle analytics option from onboarding
   if (config.analytics) {
-    console.log(chalk.blue('📊 Launching Claude Code Analytics Dashboard...'));
+    console.log(chalk.blue('📊 Launching Gemini CLI Analytics Dashboard...'));
     await runAnalytics(options);
     return;
   }
@@ -426,7 +426,7 @@ async function createClaudeConfig(options = {}) {
   
   // Install selected agents
   if (config.agents && config.agents.length > 0) {
-    console.log(chalk.blue('🤖 Installing Claude Code agents...'));
+    console.log(chalk.blue('🤖 Installing Gemini CLI agents...'));
     await installAgents(config.agents, targetDir);
   }
   
@@ -453,11 +453,11 @@ async function createClaudeConfig(options = {}) {
   }
   
   // Show success message
-  console.log(chalk.green('✅ Claude Code configuration setup complete!'));
+  console.log(chalk.green('✅ Gemini CLI configuration setup complete!'));
   console.log(chalk.cyan('📚 Next steps:'));
-  console.log(chalk.white('  1. Review the generated CLAUDE.md file'));
+  console.log(chalk.white('  1. Review the generated GEMINI.md file'));
   console.log(chalk.white('  2. Customize the configuration for your project'));
-  console.log(chalk.white('  3. Start using Claude Code with: claude'));
+  console.log(chalk.white('  3. Start using Gemini CLI with: gemini'));
   console.log('');
   console.log(chalk.blue('🌐 View all available templates at: https://aitmpl.com/'));
   console.log(chalk.blue('📖 Read the complete documentation at: https://docs.aitmpl.com/'));
@@ -509,10 +509,10 @@ async function installIndividualAgent(agentName, targetDir, options) {
     let githubUrl;
     if (agentName.includes('/')) {
       // Category/agent format: deep-research-team/academic-researcher
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/agents/${agentName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     } else {
       // Direct agent format: api-security-audit
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/agents/${agentName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -529,11 +529,11 @@ async function installIndividualAgent(agentName, targetDir, options) {
     
     const agentContent = await response.text();
     
-    // Create .claude/agents directory if it doesn't exist
-    const agentsDir = path.join(targetDir, '.claude', 'agents');
+    // Create .gemini/agents directory if it doesn't exist
+    const agentsDir = path.join(targetDir, '.gemini', 'agents');
     await fs.ensureDir(agentsDir);
     
-    // Write the agent file - always to flat .claude/agents directory
+    // Write the agent file - always to flat .gemini/agents directory
     let fileName;
     if (agentName.includes('/')) {
       const [category, filename] = agentName.split('/');
@@ -574,10 +574,10 @@ async function installIndividualCommand(commandName, targetDir, options) {
     let githubUrl;
     if (commandName.includes('/')) {
       // Category/command format: security/vulnerability-scan
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/commands/${commandName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
     } else {
       // Direct command format: check-file
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/commands/${commandName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -594,11 +594,11 @@ async function installIndividualCommand(commandName, targetDir, options) {
     
     const commandContent = await response.text();
     
-    // Create .claude/commands directory if it doesn't exist
-    const commandsDir = path.join(targetDir, '.claude', 'commands');
+    // Create .gemini/commands directory if it doesn't exist
+    const commandsDir = path.join(targetDir, '.gemini', 'commands');
     await fs.ensureDir(commandsDir);
     
-    // Write the command file - always to flat .claude/commands directory
+    // Write the command file - always to flat .gemini/commands directory
     let fileName;
     if (commandName.includes('/')) {
       const [category, filename] = commandName.split('/');
@@ -640,10 +640,10 @@ async function installIndividualMCP(mcpName, targetDir, options) {
     let githubUrl;
     if (mcpName.includes('/')) {
       // Category/mcp format: database/mysql-integration
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/mcps/${mcpName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
     } else {
       // Direct mcp format: web-fetch
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/mcps/${mcpName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -726,10 +726,10 @@ async function installIndividualSetting(settingName, targetDir, options) {
     let githubUrl;
     if (settingName.includes('/')) {
       // Category/setting format: permissions/allow-npm-commands
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/settings/${settingName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
     } else {
       // Direct setting format: allow-npm-commands
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/settings/${settingName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -738,7 +738,7 @@ async function installIndividualSetting(settingName, targetDir, options) {
     if (!response.ok) {
       if (response.status === 404) {
         console.log(chalk.red(`❌ Setting "${settingName}" not found`));
-        console.log(chalk.yellow('Available settings: enable-telemetry, disable-telemetry, allow-npm-commands, deny-sensitive-files, use-sonnet, use-haiku, retention-7-days, retention-90-days'));
+        console.log(chalk.yellow('Available settings: enable-telemetry, disable-telemetry, allow-npm-commands, deny-sensitive-files, use-gemini-2.0-flash, use-gemini-2.0-flash, retention-7-days, retention-90-days'));
         console.log(chalk.yellow('Available statuslines: statusline/context-monitor'));
         return;
       }
@@ -764,7 +764,7 @@ async function installIndividualSetting(settingName, targetDir, options) {
         const pythonResponse = await fetch(pythonUrl);
         if (pythonResponse.ok) {
           const pythonContent = await pythonResponse.text();
-          additionalFiles['.claude/scripts/' + pythonFileName] = {
+          additionalFiles['.gemini/scripts/' + pythonFileName] = {
             content: pythonContent,
             executable: true
           };
@@ -796,15 +796,15 @@ async function installIndividualSetting(settingName, targetDir, options) {
         message: 'Where would you like to install this setting? (Select one or more)',
         choices: [
           {
-            name: '🏠 User settings (~/.claude/settings.json) - Applies to all projects',
+            name: '🏠 User settings (~/.gemini/settings.json) - Applies to all projects',
             value: 'user'
           },
           {
-            name: '📁 Project settings (.claude/settings.json) - Shared with team',
+            name: '📁 Project settings (.gemini/settings.json) - Shared with team',
             value: 'project'
           },
           {
-            name: '⚙️  Local settings (.claude/settings.local.json) - Personal, not committed',
+            name: '⚙️  Local settings (.gemini/settings.local.json) - Personal, not committed',
             value: 'local',
             checked: true // Default selection
           },
@@ -846,15 +846,15 @@ async function installIndividualSetting(settingName, targetDir, options) {
         
         if (platform === 'darwin') {
           // macOS
-          currentTargetDir = '/Library/Application Support/ClaudeCode';
+          currentTargetDir = '/Library/Application Support/GeminiCLI';
           settingsFile = 'managed-settings.json';
         } else if (platform === 'linux' || (process.platform === 'win32' && process.env.WSL_DISTRO_NAME)) {
           // Linux and WSL
-          currentTargetDir = '/etc/claude-code';
+          currentTargetDir = '/etc/gemini-code';
           settingsFile = 'managed-settings.json';
         } else if (platform === 'win32') {
           // Windows
-          currentTargetDir = 'C:\\ProgramData\\ClaudeCode';
+          currentTargetDir = 'C:\\ProgramData\\GeminiCLI';
           settingsFile = 'managed-settings.json';
         } else {
           console.log(chalk.yellow('⚠️  Platform not supported for enterprise settings. Using user settings instead.'));
@@ -868,11 +868,11 @@ async function installIndividualSetting(settingName, targetDir, options) {
       }
       
       // Determine target directory and file based on selection
-      const claudeDir = path.join(currentTargetDir, '.claude');
-      const targetSettingsFile = path.join(claudeDir, settingsFile);
+      const geminiDir = path.join(currentTargetDir, '.gemini');
+      const targetSettingsFile = path.join(geminiDir, settingsFile);
       let existingConfig = {};
       
-      // For enterprise settings, create directory structure directly (not under .claude)
+      // For enterprise settings, create directory structure directly (not under .gemini)
       if (settingsFile === 'managed-settings.json') {
         // Ensure enterprise directory exists (requires admin privileges)
         try {
@@ -883,8 +883,8 @@ async function installIndividualSetting(settingName, targetDir, options) {
           continue; // Skip this location and continue with others
         }
       } else {
-        // Ensure .claude directory exists for regular settings
-        await fs.ensureDir(claudeDir);
+        // Ensure .gemini directory exists for regular settings
+        await fs.ensureDir(geminiDir);
       }
       
       // Read existing configuration
@@ -1059,10 +1059,10 @@ async function installIndividualHook(hookName, targetDir, options) {
     let githubUrl;
     if (hookName.includes('/')) {
       // Category/hook format: pre-tool/backup-before-edit
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/hooks/${hookName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
     } else {
       // Direct hook format: backup-before-edit
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/hooks/${hookName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -1095,7 +1095,7 @@ async function installIndividualHook(hookName, targetDir, options) {
       const pythonResponse = await fetch(pythonUrl);
       if (pythonResponse.ok) {
         const pythonContent = await pythonResponse.text();
-        additionalFiles[`.claude/hooks/${hookBaseName}.py`] = {
+        additionalFiles[`.gemini/hooks/${hookBaseName}.py`] = {
           content: pythonContent,
           executable: true
         };
@@ -1120,15 +1120,15 @@ async function installIndividualHook(hookName, targetDir, options) {
         message: 'Where would you like to install this hook? (Select one or more)',
         choices: [
           {
-            name: '🏠 User settings (~/.claude/settings.json) - Applies to all projects',
+            name: '🏠 User settings (~/.gemini/settings.json) - Applies to all projects',
             value: 'user'
           },
           {
-            name: '📁 Project settings (.claude/settings.json) - Shared with team',
+            name: '📁 Project settings (.gemini/settings.json) - Shared with team',
             value: 'project'
           },
           {
-            name: '⚙️  Local settings (.claude/settings.local.json) - Personal, not committed',
+            name: '⚙️  Local settings (.gemini/settings.local.json) - Personal, not committed',
             value: 'local',
             checked: true // Default selection
           },
@@ -1170,15 +1170,15 @@ async function installIndividualHook(hookName, targetDir, options) {
         
         if (platform === 'darwin') {
           // macOS
-          currentTargetDir = '/Library/Application Support/ClaudeCode';
+          currentTargetDir = '/Library/Application Support/GeminiCLI';
           settingsFile = 'managed-settings.json';
         } else if (platform === 'linux' || (process.platform === 'win32' && process.env.WSL_DISTRO_NAME)) {
           // Linux and WSL
-          currentTargetDir = '/etc/claude-code';
+          currentTargetDir = '/etc/gemini-code';
           settingsFile = 'managed-settings.json';
         } else if (platform === 'win32') {
           // Windows
-          currentTargetDir = 'C:\\ProgramData\\ClaudeCode';
+          currentTargetDir = 'C:\\ProgramData\\GeminiCLI';
           settingsFile = 'managed-settings.json';
         } else {
           console.log(chalk.yellow('⚠️  Platform not supported for enterprise settings. Using user settings instead.'));
@@ -1192,11 +1192,11 @@ async function installIndividualHook(hookName, targetDir, options) {
       }
       
       // Determine target directory and file based on selection
-      const claudeDir = path.join(currentTargetDir, '.claude');
-      const targetSettingsFile = path.join(claudeDir, settingsFile);
+      const geminiDir = path.join(currentTargetDir, '.gemini');
+      const targetSettingsFile = path.join(geminiDir, settingsFile);
       let existingConfig = {};
       
-      // For enterprise settings, create directory structure directly (not under .claude)
+      // For enterprise settings, create directory structure directly (not under .gemini)
       if (settingsFile === 'managed-settings.json') {
         // Ensure enterprise directory exists (requires admin privileges)
         try {
@@ -1207,8 +1207,8 @@ async function installIndividualHook(hookName, targetDir, options) {
           continue; // Skip this location and continue with others
         }
       } else {
-        // Ensure .claude directory exists for regular settings
-        await fs.ensureDir(claudeDir);
+        // Ensure .gemini directory exists for regular settings
+        await fs.ensureDir(geminiDir);
       }
       
       // Read existing configuration
@@ -1225,7 +1225,7 @@ async function installIndividualHook(hookName, targetDir, options) {
       const conflicts = [];
       
       // For the new array format, we'll allow appending rather than conflict detection
-      // This is because Claude Code's array format naturally supports multiple hooks
+      // This is because Gemini CLI's array format naturally supports multiple hooks
       // Conflicts are less likely and generally hooks can coexist
       
       // Ask user about conflicts if any exist
@@ -1257,14 +1257,14 @@ async function installIndividualHook(hookName, targetDir, options) {
         mergedConfig.hooks = {};
       }
       
-      // Merge hook configurations properly (Claude Code expects arrays)
+      // Merge hook configurations properly (Gemini CLI expects arrays)
       if (hookConfig.hooks) {
         Object.keys(hookConfig.hooks).forEach(hookType => {
           if (!mergedConfig.hooks[hookType]) {
             // If hook type doesn't exist, just copy the array
             mergedConfig.hooks[hookType] = hookConfig.hooks[hookType];
           } else {
-            // If hook type exists, append to the array (Claude Code format)
+            // If hook type exists, append to the array (Gemini CLI format)
             if (Array.isArray(hookConfig.hooks[hookType])) {
               // New format: array of hook objects
               if (!Array.isArray(mergedConfig.hooks[hookType])) {
@@ -1275,7 +1275,7 @@ async function installIndividualHook(hookName, targetDir, options) {
               mergedConfig.hooks[hookType] = mergedConfig.hooks[hookType].concat(hookConfig.hooks[hookType]);
             } else {
               // Old format compatibility: convert to new format
-              console.log(chalk.yellow(`⚠️  Converting old hook format to new Claude Code format for ${hookType}`));
+              console.log(chalk.yellow(`⚠️  Converting old hook format to new Gemini CLI format for ${hookType}`));
               if (!Array.isArray(mergedConfig.hooks[hookType])) {
                 mergedConfig.hooks[hookType] = [];
               }
@@ -1429,14 +1429,14 @@ async function getAvailableAgentsFromGitHub() {
     
     // If aitmpl.com API fails, try GitHub API as secondary fallback
     console.log(chalk.yellow('⚠️  Falling back to GitHub API...'));
-    const response = await fetch('https://api.github.com/repos/davila7/claude-code-templates/contents/cli-tool/components/agents');
+    const response = await fetch('https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents');
     if (!response.ok) {
       // Check for rate limit error
       if (response.status === 403) {
         const responseText = await response.text();
         if (responseText.includes('rate limit')) {
           console.log(chalk.red('❌ GitHub API rate limit exceeded'));
-          console.log(chalk.yellow('💡 Install locally with: npm install -g claude-code-templates'));
+          console.log(chalk.yellow('💡 Install locally with: npm install -g gemini-cli-templates'));
           
           // Return comprehensive fallback list
           return [
@@ -1473,7 +1473,7 @@ async function getAvailableAgentsFromGitHub() {
       } else if (item.type === 'dir') {
         // Category directory, fetch its contents
         try {
-          const categoryResponse = await fetch(`https://api.github.com/repos/davila7/claude-code-templates/contents/cli-tool/components/agents/${item.name}`);
+          const categoryResponse = await fetch(`https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents/${item.name}`);
           if (categoryResponse.ok) {
             const categoryContents = await categoryResponse.json();
             for (const categoryItem of categoryContents) {
@@ -1516,7 +1516,7 @@ async function installIndividualSkill(skillName, targetDir, options) {
     const skillBaseName = skillName.includes('/') ? skillName.split('/').pop() : skillName;
 
     // Use GitHub API to download ALL files and directories for the skill
-    const githubApiUrl = `https://api.github.com/repos/davila7/claude-code-templates/contents/cli-tool/components/skills/${skillName}`;
+    const githubApiUrl = `https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/skills/${skillName}`;
 
     console.log(chalk.gray(`📥 Downloading skill from GitHub (main branch)...`));
 
@@ -1528,7 +1528,7 @@ async function installIndividualSkill(skillName, targetDir, options) {
         const response = await fetch(apiUrl, {
           headers: {
             'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'claude-code-templates'
+            'User-Agent': 'gemini-cli-templates'
           }
         });
 
@@ -1555,7 +1555,7 @@ async function installIndividualSkill(skillName, targetDir, options) {
                 const fileContent = await fileResponse.text();
                 const isExecutable = item.name.endsWith('.py') || item.name.endsWith('.sh');
 
-                const targetPath = `.claude/skills/${skillBaseName}/${itemPath}`;
+                const targetPath = `.gemini/skills/${skillBaseName}/${itemPath}`;
                 downloadedFiles[targetPath] = {
                   content: fileContent,
                   executable: isExecutable
@@ -1586,14 +1586,14 @@ async function installIndividualSkill(skillName, targetDir, options) {
     }
 
     // Check if SKILL.md was downloaded (required)
-    const skillMdPath = `.claude/skills/${skillBaseName}/SKILL.md`;
+    const skillMdPath = `.gemini/skills/${skillBaseName}/SKILL.md`;
     if (!downloadedFiles[skillMdPath]) {
       console.log(chalk.red(`❌ SKILL.md not found in skill directory`));
       return false;
     }
 
-    // Create .claude/skills/skill-name directory (Anthropic standard structure)
-    const skillsDir = path.join(targetDir, '.claude', 'skills');
+    // Create .gemini/skills/skill-name directory (Google standard structure)
+    const skillsDir = path.join(targetDir, '.gemini', 'skills');
     await fs.ensureDir(skillsDir);
 
     // Write all downloaded files
@@ -1710,15 +1710,15 @@ async function installMultipleComponents(options, targetDir) {
         message: 'Where would you like to install the configuration components? (Select one or more)',
         choices: [
           {
-            name: '🏠 User settings (~/.claude/settings.json) - Applies to all projects',
+            name: '🏠 User settings (~/.gemini/settings.json) - Applies to all projects',
             value: 'user'
           },
           {
-            name: '📁 Project settings (.claude/settings.json) - Shared with team',
+            name: '📁 Project settings (.gemini/settings.json) - Shared with team',
             value: 'project'
           },
           {
-            name: '⚙️  Local settings (.claude/settings.local.json) - Personal, not committed',
+            name: '⚙️  Local settings (.gemini/settings.local.json) - Personal, not committed',
             value: 'local',
             checked: true // Default selection
           },
@@ -1805,7 +1805,7 @@ async function installMultipleComponents(options, targetDir) {
         }
         
         // Save YAML to workflows directory
-        const workflowsDir = path.join(targetDir, '.claude', 'workflows');
+        const workflowsDir = path.join(targetDir, '.gemini', 'workflows');
         const workflowFile = path.join(workflowsDir, `${workflowName}.yaml`);
         
         await fs.ensureDir(workflowsDir);
@@ -1827,11 +1827,11 @@ async function installMultipleComponents(options, targetDir) {
       console.log(chalk.red(`\n❌ No components were installed successfully.`));
       return; // Exit early if nothing was installed
     }
-    console.log(chalk.cyan(`📁 Components installed to: .claude/`));
+    console.log(chalk.cyan(`📁 Components installed to: .gemini/`));
     
     if (options.yaml) {
-      console.log(chalk.cyan(`📄 Workflow file created in: .claude/workflows/`));
-      console.log(chalk.cyan(`🚀 Use the workflow file with Claude Code to execute the complete setup`));
+      console.log(chalk.cyan(`📄 Workflow file created in: .gemini/workflows/`));
+      console.log(chalk.cyan(`🚀 Use the workflow file with Gemini CLI to execute the complete setup`));
     }
     
     // Note: Individual components are already tracked separately in their installation functions
@@ -1982,17 +1982,17 @@ async function installWorkflow(workflowHash, targetDir, options) {
       yamlContent = generateWorkflowYAML(workflowData);
     }
     
-    const workflowsDir = path.join(targetDir, '.claude', 'workflows');
+    const workflowsDir = path.join(targetDir, '.gemini', 'workflows');
     const workflowFile = path.join(workflowsDir, `${workflowData.name.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.yaml`);
     
-    // Ensure .claude/workflows directory exists
+    // Ensure .gemini/workflows directory exists
     await fs.ensureDir(workflowsDir);
     await fs.writeFile(workflowFile, yamlContent, 'utf8');
     
     console.log(chalk.green(`\n✅ Workflow "${workflowData.name}" installed successfully!`));
-    console.log(chalk.cyan(`📁 Components installed to: .claude/`));
+    console.log(chalk.cyan(`📁 Components installed to: .gemini/`));
     console.log(chalk.cyan(`📄 Workflow file: ${path.relative(targetDir, workflowFile)}`));
-    console.log(chalk.cyan(`🚀 Use the workflow file with Claude Code to execute the complete workflow`));
+    console.log(chalk.cyan(`🚀 Use the workflow file with Gemini CLI to execute the complete workflow`));
     
     // Track successful workflow installation
     trackingService.trackDownload('workflow', hash, {
@@ -2169,8 +2169,8 @@ async function installComponentFromWorkflow(componentData, type, targetDir, opti
     let fileName = componentData.name;
     
     if (type === 'agent') {
-      // Create .claude/agents directory if it doesn't exist
-      const agentsDir = path.join(targetDir, '.claude', 'agents');
+      // Create .gemini/agents directory if it doesn't exist
+      const agentsDir = path.join(targetDir, '.gemini', 'agents');
       await fs.ensureDir(agentsDir);
       
       // For agents, handle category subdirectories
@@ -2183,8 +2183,8 @@ async function installComponentFromWorkflow(componentData, type, targetDir, opti
       }
       
     } else if (type === 'command') {
-      // Create .claude/commands directory if it doesn't exist
-      const commandsDir = path.join(targetDir, '.claude', 'commands');
+      // Create .gemini/commands directory if it doesn't exist
+      const commandsDir = path.join(targetDir, '.gemini', 'commands');
       await fs.ensureDir(commandsDir);
       targetPath = path.join(commandsDir, `${fileName}.md`);
       
@@ -2260,14 +2260,14 @@ function generateWorkflowYAML(workflowData) {
 # 📋 INSTRUCTIONS FOR CLAUDE CODE
 #═══════════════════════════════════════════════════════════════════════════════
 #
-# This is a WORKFLOW EXECUTION FILE for Claude Code. When you encounter this file,
+# This is a WORKFLOW EXECUTION FILE for Gemini CLI. When you encounter this file,
 # you should execute it as a complete automated workflow. Here's how:
 #
 # 🎯 EXECUTION BEHAVIOR:
 # 1. READ this entire YAML file to understand the workflow structure
 # 2. EXECUTE each step in the exact order listed below (sequential mode)
 # 3. For AGENTS: Use the agent specified to perform the task described
-# 4. For COMMANDS: Execute the Claude Code command as specified
+# 4. For COMMANDS: Execute the Gemini CLI command as specified
 # 5. For MCPs: Ensure the MCP server is available and use it as needed
 # 6. STOP if any step fails (on_error: stop)
 # 7. PROVIDE progress updates after each step completion
@@ -2279,7 +2279,7 @@ function generateWorkflowYAML(workflowData) {
 # - Continue to next step
 #
 # 💡 IMPORTANT NOTES:
-# - All components are already installed in .claude/ directories
+# - All components are already installed in .gemini/ directories
 # - Each step builds upon the previous ones
 # - Follow the descriptions exactly as specified
 # - Use confirmation_required: true for user approval before starting
@@ -2305,8 +2305,8 @@ ${workflowData.steps.map((step, index) => `  - step: ${index + 1}
     description: "${step.description}"
     
     # CLAUDE CODE INSTRUCTIONS FOR THIS STEP:
-    claude_instructions: |
-      Execute this step using the ${step.type} located at .claude/${step.type}s/${step.name}.${step.type === 'mcp' ? 'json' : 'md'}
+    gemini_instructions: |
+      Execute this step using the ${step.type} located at .gemini/${step.type}s/${step.name}.${step.type === 'mcp' ? 'json' : 'md'}
       Task: ${step.description}
       ${step.type === 'agent' ? 'Use this agent to perform the specified task with full context from previous steps.' : ''}
       ${step.type === 'command' ? 'Execute this command with appropriate parameters based on workflow context.' : ''}
@@ -2344,7 +2344,7 @@ components:
 # 🤖 CLAUDE CODE INTEGRATION SETTINGS
 #═══════════════════════════════════════════════════════════════════════════════
 
-claudecode:
+geminicode:
   workflow_mode: true         # Enable workflow execution mode
   auto_execute: false         # Require user confirmation before starting
   confirmation_required: true # Ask user before each step
@@ -2356,7 +2356,7 @@ claudecode:
     When executing this workflow:
     
     1. 🎯 PREPARATION PHASE:
-       - Confirm all components are installed in .claude/ directories
+       - Confirm all components are installed in .gemini/ directories
        - Verify user wants to execute this workflow
        - Explain what will happen in each step
     
@@ -2395,16 +2395,16 @@ ${workflowData.steps.map((step, index) => `# ${index + 1}. ${step.description} (
 }
 
 /**
- * Handle prompt execution in Claude Code
+ * Handle prompt execution in Gemini CLI
  */
 async function handlePromptExecution(prompt, targetDir) {
   console.log(chalk.blue('\n🎯 Prompt execution requested...'));
   
-  // Ask user if they want to execute the prompt in Claude Code
+  // Ask user if they want to execute the prompt in Gemini CLI
   const { shouldExecute } = await inquirer.prompt([{
     type: 'confirm',
     name: 'shouldExecute',
-    message: `Do you want to execute this prompt in Claude Code?\n${chalk.cyan(`"${prompt}"`)}`,
+    message: `Do you want to execute this prompt in Gemini CLI?\n${chalk.cyan(`"${prompt}"`)}`,
     default: true
   }]);
   
@@ -2413,40 +2413,40 @@ async function handlePromptExecution(prompt, targetDir) {
     return;
   }
   
-  console.log(chalk.blue('🚀 Preparing to launch Claude Code with your prompt...'));
+  console.log(chalk.blue('🚀 Preparing to launch Gemini CLI with your prompt...'));
   
   try {
-    // Check if claude command is available in PATH
+    // Check if gemini command is available in PATH
     const { spawn } = require('child_process');
     const open = require('open');
     
-    // First try to execute claude command directly
-    const claudeProcess = spawn('claude', [prompt], {
+    // First try to execute gemini command directly
+    const geminiProcess = spawn('gemini', [prompt], {
       cwd: targetDir,
       stdio: ['inherit', 'inherit', 'inherit'],
       shell: true
     });
     
-    claudeProcess.on('error', async (error) => {
+    geminiProcess.on('error', async (error) => {
       if (error.code === 'ENOENT') {
-        // Claude command not found, try alternative approaches
-        console.log(chalk.yellow('⚠️  Claude Code CLI not found in PATH.'));
+        // Gemini command not found, try alternative approaches
+        console.log(chalk.yellow('⚠️  Gemini CLI CLI not found in PATH.'));
         console.log(chalk.blue('💡 Alternative ways to execute your prompt:'));
-        console.log(chalk.gray('   1. Install Claude Code CLI: https://claude.ai/code'));
-        console.log(chalk.gray('   2. Copy and paste this prompt in Claude Code interface:'));
+        console.log(chalk.gray('   1. Install Gemini CLI CLI: https://gemini.ai/code'));
+        console.log(chalk.gray('   2. Copy and paste this prompt in Gemini CLI interface:'));
         console.log(chalk.cyan(`\n   "${prompt}"\n`));
         
-        // Ask if user wants to open Claude Code web interface
+        // Ask if user wants to open Gemini CLI web interface
         const { openWeb } = await inquirer.prompt([{
           type: 'confirm',
           name: 'openWeb',
-          message: 'Would you like to open Claude Code in your browser?',
+          message: 'Would you like to open Gemini CLI in your browser?',
           default: true
         }]);
         
         if (openWeb) {
-          await open('https://claude.ai/code');
-          console.log(chalk.green('✅ Claude Code opened in your browser!'));
+          await open('https://gemini.ai/code');
+          console.log(chalk.green('✅ Gemini CLI opened in your browser!'));
           console.log(chalk.cyan(`Don't forget to paste your prompt: "${prompt}"`));
         }
       } else {
@@ -2454,25 +2454,25 @@ async function handlePromptExecution(prompt, targetDir) {
       }
     });
     
-    claudeProcess.on('close', (code) => {
+    geminiProcess.on('close', (code) => {
       if (code === 0) {
-        console.log(chalk.green('✅ Claude Code executed successfully!'));
+        console.log(chalk.green('✅ Gemini CLI executed successfully!'));
       } else if (code !== null) {
-        console.log(chalk.yellow(`⚠️  Claude Code exited with code ${code}`));
+        console.log(chalk.yellow(`⚠️  Gemini CLI exited with code ${code}`));
       }
     });
     
   } catch (error) {
     console.log(chalk.red(`❌ Error executing prompt: ${error.message}`));
-    console.log(chalk.blue('💡 You can manually execute this prompt in Claude Code:'));
+    console.log(chalk.blue('💡 You can manually execute this prompt in Gemini CLI:'));
     console.log(chalk.cyan(`"${prompt}"`));
   }
 }
 
-async function launchClaudeCodeStudio(options, targetDir) {
-  console.log(chalk.blue('\n🎨 Claude Code Studio'));
+async function launchGeminiCLIStudio(options, targetDir) {
+  console.log(chalk.blue('\n🎨 Gemini CLI Studio'));
   console.log(chalk.cyan('═══════════════════════════════════════'));
-  console.log(chalk.white('🚀 Starting Claude Code Studio interface...'));
+  console.log(chalk.white('🚀 Starting Gemini CLI Studio interface...'));
   console.log(chalk.gray('💡 This interface supports both local and cloud execution'));
   
   const { spawn } = require('child_process');
@@ -2489,7 +2489,7 @@ async function launchClaudeCodeStudio(options, targetDir) {
   setTimeout(async () => {
     try {
       await open('http://localhost:3444');
-      console.log(chalk.green('✅ Claude Code Studio launched at http://localhost:3444'));
+      console.log(chalk.green('✅ Gemini CLI Studio launched at http://localhost:3444'));
       console.log(chalk.gray('💡 Choose between Local Machine or E2B Cloud execution'));
     } catch (error) {
       console.log(chalk.yellow('💡 Please manually open: http://localhost:3444'));
@@ -2498,7 +2498,7 @@ async function launchClaudeCodeStudio(options, targetDir) {
   
   // Handle process cleanup
   process.on('SIGINT', () => {
-    console.log(chalk.yellow('\n🛑 Shutting down Claude Code Studio...'));
+    console.log(chalk.yellow('\n🛑 Shutting down Gemini CLI Studio...'));
     serverProcess.kill();
     process.exit(0);
   });
@@ -2507,7 +2507,7 @@ async function launchClaudeCodeStudio(options, targetDir) {
 }
 
 async function executeSandbox(options, targetDir) {
-  const { sandbox, command, mcp, setting, hook, e2bApiKey, anthropicApiKey, yes } = options;
+  const { sandbox, command, mcp, setting, hook, e2bApiKey, googleApiKey, yes } = options;
   let { agent, prompt } = options;
 
   // Validate sandbox provider
@@ -2578,7 +2578,7 @@ async function executeSandbox(options, targetDir) {
     console.log(chalk.blue('\n📝 Project Requirements'));
     console.log(chalk.cyan('═══════════════════════════════════════'));
     console.log(chalk.gray('Describe what you want to create in detail. The more specific you are,'));
-    console.log(chalk.gray('the better Claude Code will understand your requirements.\n'));
+    console.log(chalk.gray('the better Gemini CLI will understand your requirements.\n'));
     
     const inquirer = require('inquirer');
     
@@ -2629,7 +2629,7 @@ async function executeSandbox(options, targetDir) {
   }
   
   // Check for API keys based on sandbox provider
-  const anthropicKey = anthropicApiKey || process.env.ANTHROPIC_API_KEY;
+  const googleKey = googleApiKey || process.env.ANTHROPIC_API_KEY;
 
   if (sandbox === 'e2b') {
     const e2bKey = e2bApiKey || process.env.E2B_API_KEY;
@@ -2643,48 +2643,48 @@ async function executeSandbox(options, targetDir) {
       return;
     }
 
-    if (!anthropicKey) {
-      console.log(chalk.red('❌ Error: Anthropic API key is required'));
+    if (!googleKey) {
+      console.log(chalk.red('❌ Error: Google API key is required'));
       console.log(chalk.yellow('💡 Options:'));
       console.log(chalk.gray('   1. Set environment variable: ANTHROPIC_API_KEY=your_key'));
-      console.log(chalk.gray('   2. Use CLI parameter: --anthropic-api-key your_key'));
-      console.log(chalk.blue('   Get your key at: https://console.anthropic.com'));
+      console.log(chalk.gray('   2. Use CLI parameter: --google-api-key your_key'));
+      console.log(chalk.blue('   Get your key at: https://console.google.com'));
       return;
     }
 
     // Execute E2B sandbox
-    await executeE2BSandbox({ sandbox, agent, prompt, command, mcp, setting, hook, e2bKey, anthropicKey }, targetDir);
+    await executeE2BSandbox({ sandbox, agent, prompt, command, mcp, setting, hook, e2bKey, googleKey }, targetDir);
 
   } else if (sandbox === 'cloudflare') {
-    if (!anthropicKey) {
-      console.log(chalk.red('❌ Error: Anthropic API key is required for Cloudflare sandbox'));
+    if (!googleKey) {
+      console.log(chalk.red('❌ Error: Google API key is required for Cloudflare sandbox'));
       console.log(chalk.yellow('💡 Options:'));
       console.log(chalk.gray('   1. Set environment variable: ANTHROPIC_API_KEY=your_key'));
-      console.log(chalk.gray('   2. Use CLI parameter: --anthropic-api-key your_key'));
-      console.log(chalk.blue('   Get your key at: https://console.anthropic.com'));
+      console.log(chalk.gray('   2. Use CLI parameter: --google-api-key your_key'));
+      console.log(chalk.blue('   Get your key at: https://console.google.com'));
       return;
     }
 
     // Execute Cloudflare sandbox
-    await executeCloudflareSandbox({ sandbox, agent, prompt, command, mcp, setting, hook, anthropicKey }, targetDir);
+    await executeCloudflareSandbox({ sandbox, agent, prompt, command, mcp, setting, hook, googleKey }, targetDir);
 
   } else if (sandbox === 'docker') {
-    if (!anthropicKey) {
-      console.log(chalk.red('❌ Error: Anthropic API key is required for Docker sandbox'));
+    if (!googleKey) {
+      console.log(chalk.red('❌ Error: Google API key is required for Docker sandbox'));
       console.log(chalk.yellow('💡 Options:'));
       console.log(chalk.gray('   1. Set environment variable: ANTHROPIC_API_KEY=your_key'));
-      console.log(chalk.gray('   2. Use CLI parameter: --anthropic-api-key your_key'));
-      console.log(chalk.blue('   Get your key at: https://console.anthropic.com'));
+      console.log(chalk.gray('   2. Use CLI parameter: --google-api-key your_key'));
+      console.log(chalk.blue('   Get your key at: https://console.google.com'));
       return;
     }
 
     // Execute Docker sandbox
-    await executeDockerSandbox({ sandbox, agent, prompt, command, mcp, setting, hook, anthropicKey, yes: options.yes }, targetDir);
+    await executeDockerSandbox({ sandbox, agent, prompt, command, mcp, setting, hook, googleKey, yes: options.yes }, targetDir);
   }
 }
 
 async function executeCloudflareSandbox(options, targetDir) {
-  const { agent, command, mcp, setting, hook, prompt, anthropicKey } = options;
+  const { agent, command, mcp, setting, hook, prompt, googleKey } = options;
 
   console.log(chalk.blue('\n☁️  Cloudflare Sandbox Execution'));
   console.log(chalk.cyan('═══════════════════════════════════════'));
@@ -2705,7 +2705,7 @@ async function executeCloudflareSandbox(options, targetDir) {
   console.log(chalk.white(`💭 Prompt: ${chalk.cyan('"' + truncatedPrompt + '"')}`));
   console.log(chalk.white(`🌐 Provider: ${chalk.green('Cloudflare Workers')}`));
   console.log(chalk.gray('\n🔧 Execution details:'));
-  console.log(chalk.gray('   • Uses Claude AI for code generation'));
+  console.log(chalk.gray('   • Uses Gemini AI for code generation'));
   console.log(chalk.gray('   • Executes in isolated Cloudflare sandbox'));
   console.log(chalk.gray('   • Global edge deployment for low latency\n'));
 
@@ -2728,8 +2728,8 @@ async function executeCloudflareSandbox(options, targetDir) {
 
     const spinner = ora('Installing Cloudflare sandbox component...').start();
 
-    // Create .claude/sandbox/cloudflare directory
-    const sandboxDir = path.join(targetDir, '.claude', 'sandbox', 'cloudflare');
+    // Create .gemini/sandbox/cloudflare directory
+    const sandboxDir = path.join(targetDir, '.gemini', 'sandbox', 'cloudflare');
     await fs.ensureDir(sandboxDir);
 
     // Copy Cloudflare component files
@@ -2838,7 +2838,7 @@ async function executeCloudflareSandbox(options, targetDir) {
               launcherPath,
               prompt,
               componentsToInstall.trim(),
-              anthropicKey,
+              googleKey,
               'http://localhost:8787', // Local dev server URL
               targetDir // Project root directory for file output
             ], {
@@ -2847,7 +2847,7 @@ async function executeCloudflareSandbox(options, targetDir) {
               timeout: 300000, // 5 minutes
               env: {
                 ...process.env,
-                ANTHROPIC_API_KEY: anthropicKey
+                ANTHROPIC_API_KEY: googleKey
               }
             });
 
@@ -2895,7 +2895,7 @@ async function executeCloudflareSandbox(options, targetDir) {
 }
 
 async function executeDockerSandbox(options, targetDir) {
-  const { agent, command, mcp, setting, hook, prompt, anthropicKey, yes } = options;
+  const { agent, command, mcp, setting, hook, prompt, googleKey, yes } = options;
 
   console.log(chalk.blue('\n🐳 Docker Sandbox Execution'));
   console.log(chalk.cyan('═══════════════════════════════════════'));
@@ -2916,7 +2916,7 @@ async function executeDockerSandbox(options, targetDir) {
   console.log(chalk.white(`💭 Prompt: ${chalk.cyan('"' + truncatedPrompt + '"')}`));
   console.log(chalk.white(`🐳 Provider: ${chalk.green('Docker Local')}`));
   console.log(chalk.gray('\n🔧 Execution details:'));
-  console.log(chalk.gray('   • Uses Claude Agent SDK for execution'));
+  console.log(chalk.gray('   • Uses Gemini Agent SDK for execution'));
   console.log(chalk.gray('   • Executes in isolated Docker container'));
   console.log(chalk.gray('   • Local execution with full filesystem access\n'));
 
@@ -2942,8 +2942,8 @@ async function executeDockerSandbox(options, targetDir) {
 
     const spinner = ora('Installing Docker sandbox component...').start();
 
-    // Create .claude/sandbox/docker directory
-    const sandboxDir = path.join(targetDir, '.claude', 'sandbox', 'docker');
+    // Create .gemini/sandbox/docker directory
+    const sandboxDir = path.join(targetDir, '.gemini', 'sandbox', 'docker');
     await fs.ensureDir(sandboxDir);
 
     // Copy Docker component files
@@ -3052,7 +3052,7 @@ async function executeDockerSandbox(options, targetDir) {
         stdio: 'inherit',
         env: {
           ...process.env,
-          ANTHROPIC_API_KEY: anthropicKey
+          ANTHROPIC_API_KEY: googleKey
         }
       });
 
@@ -3088,7 +3088,7 @@ async function executeDockerSandbox(options, targetDir) {
 }
 
 async function executeE2BSandbox(options, targetDir) {
-  const { agent, prompt, command, mcp, setting, hook, e2bKey, anthropicKey } = options;
+  const { agent, prompt, command, mcp, setting, hook, e2bKey, googleKey } = options;
 
   // Sandbox execution confirmation
   console.log(chalk.blue('\n☁️ E2B Sandbox Execution'));
@@ -3136,8 +3136,8 @@ async function executeE2BSandbox(options, targetDir) {
     // Install E2B sandbox component
     const spinner = ora('Installing E2B sandbox component...').start();
     
-    // Create .claude/sandbox directory
-    const sandboxDir = path.join(targetDir, '.claude', 'sandbox');
+    // Create .gemini/sandbox directory
+    const sandboxDir = path.join(targetDir, '.gemini', 'sandbox');
     await fs.ensureDir(sandboxDir);
     
     // Copy E2B component files from the installed package
@@ -3171,7 +3171,7 @@ async function executeE2BSandbox(options, targetDir) {
         // Fallback to downloading from GitHub if not found locally
         console.log(chalk.gray('📥 Downloading E2B component files from GitHub...'));
         
-        const baseUrl = 'https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/sandbox/e2b';
+        const baseUrl = 'https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/sandbox/e2b';
         
         // Download launcher script
         const launcherResponse = await fetch(`${baseUrl}/e2b-launcher.py`);
@@ -3282,7 +3282,7 @@ async function executeE2BSandbox(options, targetDir) {
           if (hook) componentsToInstall += ` --hook ${hook}`;
           
           // Execute sandbox
-          console.log(chalk.blue('🚀 Launching E2B sandbox with Claude Code...'));
+          console.log(chalk.blue('🚀 Launching E2B sandbox with Gemini CLI...'));
           console.log(chalk.gray(`📝 Prompt: "${prompt.substring(0, 100)}${prompt.length > 100 ? '...' : ''}"`));
           console.log(chalk.cyan('⏱️  Extended timeout: 15 minutes for complex operations'));
           
@@ -3300,7 +3300,7 @@ async function executeE2BSandbox(options, targetDir) {
               prompt,
               componentsToInstall.trim(),
               e2bKey,
-              anthropicKey
+              googleKey
             ], {
               cwd: targetDir, // Run from user's current directory to download files there
               stdio: 'inherit',
@@ -3308,7 +3308,7 @@ async function executeE2BSandbox(options, targetDir) {
               env: { 
                 ...process.env,
                 E2B_API_KEY: e2bKey,
-                ANTHROPIC_API_KEY: anthropicKey
+                ANTHROPIC_API_KEY: googleKey
               }
             });
             
@@ -3367,7 +3367,7 @@ async function executeE2BSandbox(options, targetDir) {
               } else {
                 console.log(chalk.red(`❌ Error executing sandbox: ${error.message}`));
                 console.log(chalk.yellow('💡 Make sure you have set E2B_API_KEY and ANTHROPIC_API_KEY environment variables'));
-                console.log(chalk.gray('   Create a .env file in the .claude/sandbox directory with your API keys'));
+                console.log(chalk.gray('   Create a .env file in the .gemini/sandbox directory with your API keys'));
               }
               reject(error);
             });
@@ -3402,4 +3402,4 @@ async function executeE2BSandbox(options, targetDir) {
   }
 }
 
-module.exports = { createClaudeConfig, showMainMenu };
+module.exports = { createGeminiConfig, showMainMenu };

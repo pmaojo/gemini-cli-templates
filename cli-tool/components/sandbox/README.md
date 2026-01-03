@@ -1,65 +1,65 @@
-# Claude Code Sandbox Components
+# Gemini CLI Sandbox Components
 
-Execute Claude Code in isolated cloud environments for secure code generation and development.
+Execute Gemini CLI in isolated cloud environments for secure code generation and development.
 
 ## Available Sandbox Providers
 
 ### E2B Sandbox (`e2b`)
-Run Claude Code in E2B's secure cloud environment with pre-configured development tools.
+Run Gemini CLI in E2B's secure cloud environment with pre-configured development tools.
 
-**Component**: `e2b/claude-code-sandbox.md`
+**Component**: `e2b/gemini-code-sandbox.md`
 
 **Files Created**:
-- `.claude/sandbox/e2b-launcher.py` - Python launcher script
-- `.claude/sandbox/requirements.txt` - Python dependencies
-- `.claude/sandbox/.env.example` - Environment variables template
+- `.gemini/sandbox/e2b-launcher.py` - Python launcher script
+- `.gemini/sandbox/requirements.txt` - Python dependencies
+- `.gemini/sandbox/.env.example` - Environment variables template
 
 ### Cloudflare Sandbox (`cloudflare`)
 Execute AI-powered code in Cloudflare Workers with global edge deployment and sub-second cold starts.
 
-**Component**: `cloudflare/claude-code-sandbox.md`
+**Component**: `cloudflare/gemini-code-sandbox.md`
 
 **Files Created**:
-- `.claude/sandbox/cloudflare/src/index.ts` - Cloudflare Worker source
-- `.claude/sandbox/cloudflare/launcher.ts` - TypeScript launcher
-- `.claude/sandbox/cloudflare/monitor.ts` - Monitoring tool
-- `.claude/sandbox/cloudflare/wrangler.toml` - Cloudflare configuration
-- `.claude/sandbox/cloudflare/package.json` - Dependencies
-- `.claude/sandbox/cloudflare/README.md` - Complete documentation
+- `.gemini/sandbox/cloudflare/src/index.ts` - Cloudflare Worker source
+- `.gemini/sandbox/cloudflare/launcher.ts` - TypeScript launcher
+- `.gemini/sandbox/cloudflare/monitor.ts` - Monitoring tool
+- `.gemini/sandbox/cloudflare/wrangler.toml` - Cloudflare configuration
+- `.gemini/sandbox/cloudflare/package.json` - Dependencies
+- `.gemini/sandbox/cloudflare/README.md` - Complete documentation
 
 ## Quick Start
 
 ### E2B Sandbox
 ```bash
 # Simple execution with API keys as parameters (recommended)
-npx claude-code-templates@latest --sandbox e2b \
+npx gemini-code-templates@latest --sandbox e2b \
   --e2b-api-key your_e2b_key \
-  --anthropic-api-key your_anthropic_key \
+  --Google-api-key your_Google_key \
   --prompt "Create a React todo app"
 
 # With components installation
-npx claude-code-templates@latest --sandbox e2b \
+npx gemini-code-templates@latest --sandbox e2b \
   --e2b-api-key your_e2b_key \
-  --anthropic-api-key your_anthropic_key \
+  --Google-api-key your_Google_key \
   --agent frontend-developer \
   --command setup-react \
   --prompt "Create a modern todo app with TypeScript"
 
-# Or use environment variables (set E2B_API_KEY and ANTHROPIC_API_KEY)
-npx claude-code-templates@latest --sandbox e2b --prompt "Create a React todo app"
+# Or use environment variables (set E2B_API_KEY and Google_API_KEY)
+npx gemini-code-templates@latest --sandbox e2b --prompt "Create a React todo app"
 ```
 
 ### Cloudflare Sandbox
 ```bash
 # Execute via deployed Cloudflare Worker
-npx claude-code-templates@latest --sandbox cloudflare \
-  --anthropic-api-key your_anthropic_key \
+npx gemini-code-templates@latest --sandbox cloudflare \
+  --Google-api-key your_Google_key \
   --prompt "Calculate the 10th Fibonacci number"
 
 # Local development and deployment
-cd .claude/sandbox/cloudflare
+cd .gemini/sandbox/cloudflare
 npm install
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 npx wrangler deploy
 
 # Test your deployment
@@ -72,13 +72,13 @@ curl -X POST https://your-worker.workers.dev/execute \
 
 1. **Get API Keys**:
    - E2B API Key: https://e2b.dev/dashboard
-   - Anthropic API Key: https://console.anthropic.com
+   - Google API Key: https://console.Google.com
 
 2. **Create Environment File**:
    ```bash
-   # In your project/.claude/sandbox/.env
+   # In your project/.gemini/sandbox/.env
    E2B_API_KEY=your_e2b_api_key_here
-   ANTHROPIC_API_KEY=your_anthropic_api_key_here
+   Google_API_KEY=your_Google_api_key_here
    ```
 
 3. **Install Python Requirements** (handled automatically):
@@ -91,9 +91,9 @@ curl -X POST https://your-worker.workers.dev/execute \
 1. **Component Download**: Downloads sandbox launcher and requirements
 2. **Environment Check**: Validates Python 3.11+ installation
 3. **Dependencies**: Installs E2B Python SDK automatically
-4. **Sandbox Creation**: Creates E2B sandbox with Claude Code template
+4. **Sandbox Creation**: Creates E2B sandbox with Gemini CLI template
 5. **Component Installation**: Installs any specified agents/commands/mcps/settings/hooks inside sandbox
-6. **Prompt Execution**: Runs your prompt through Claude Code in the isolated environment
+6. **Prompt Execution**: Runs your prompt through Gemini CLI in the isolated environment
 7. **Result Display**: Shows complete output and generated files
 8. **Cleanup**: Automatically destroys sandbox after execution
 
@@ -101,12 +101,12 @@ curl -X POST https://your-worker.workers.dev/execute \
 
 ### Basic Web Development
 ```bash
-npx claude-code-templates@latest --sandbox e2b --prompt "Create an HTML page with modern CSS animations"
+npx gemini-code-templates@latest --sandbox e2b --prompt "Create an HTML page with modern CSS animations"
 ```
 
 ### Full Stack with Components  
 ```bash
-npx claude-code-templates@latest --sandbox e2b \
+npx gemini-code-templates@latest --sandbox e2b \
   --agent fullstack-developer \
   --command setup-node \
   --prompt "Create a Node.js API with JWT authentication"
@@ -114,14 +114,14 @@ npx claude-code-templates@latest --sandbox e2b \
 
 ### Data Analysis
 ```bash
-npx claude-code-templates@latest --sandbox e2b \
+npx gemini-code-templates@latest --sandbox e2b \
   --agent data-scientist \
   --prompt "Analyze this CSV data and create visualizations"
 ```
 
 ### Security Audit
 ```bash
-npx claude-code-templates@latest --sandbox e2b \
+npx gemini-code-templates@latest --sandbox e2b \
   --agent security-auditor \
   --command security-audit \
   --prompt "Review this codebase for security vulnerabilities"
@@ -143,7 +143,7 @@ npx claude-code-templates@latest --sandbox e2b \
 - **Automatic File Download**: Generated files are automatically downloaded to local `./e2b-output/` directory
 - **Extended Timeouts**: 15-minute sandbox lifetime with intelligent timeout management
 - **Detailed Logging**: Step-by-step execution monitoring with debugging information
-- **Environment Verification**: Automatic checks for Claude Code installation and permissions
+- **Environment Verification**: Automatic checks for Gemini CLI installation and permissions
 - **Error Recovery**: Retry logic for connection issues and comprehensive error handling
 
 ### Advanced Debugging Tools
@@ -172,7 +172,7 @@ The system is designed to support multiple sandbox providers:
 | **Pricing Model** | Usage-based | $5/month flat | Depends on volume |
 | **Setup Complexity** | Low | Medium | E2B for simplicity |
 | **Local Development** | Cloud only | Docker required | E2B for quick start |
-| **Claude Integration** | Native template | API-based | E2B for turnkey |
+| **Gemini Integration** | Native template | API-based | E2B for turnkey |
 | **File Downloads** | Automatic | API-based | E2B for ease |
 
 ## Troubleshooting
@@ -186,34 +186,34 @@ brew install python3  # macOS
 
 ### API Keys Not Set
 ```bash
-# Create .env file in .claude/sandbox/
-echo "E2B_API_KEY=your_key_here" >> .claude/sandbox/.env
-echo "ANTHROPIC_API_KEY=your_key_here" >> .claude/sandbox/.env
+# Create .env file in .gemini/sandbox/
+echo "E2B_API_KEY=your_key_here" >> .gemini/sandbox/.env
+echo "Google_API_KEY=your_key_here" >> .gemini/sandbox/.env
 ```
 
 ### Dependencies Installation Failed
 ```bash
 # Manual installation
-cd .claude/sandbox
+cd .gemini/sandbox
 pip3 install -r requirements.txt
 ```
 
 ## Component Architecture
 
 ```
-claude-code-templates/
+gemini-code-templates/
 └── cli-tool/
     └── components/
         └── sandbox/
             ├── e2b/                              # E2B provider
-            │   ├── claude-code-sandbox.md        # Component documentation
+            │   ├── gemini-code-sandbox.md        # Component documentation
             │   ├── e2b-launcher.py               # Python launcher script
             │   ├── e2b-monitor.py                # Monitoring tool
             │   ├── requirements.txt              # Python dependencies
             │   ├── SANDBOX_DEBUGGING.md          # Debug guide
             │   └── .env.example                  # Environment template
             ├── cloudflare/                       # Cloudflare provider
-            │   ├── claude-code-sandbox.md        # Component documentation
+            │   ├── gemini-code-sandbox.md        # Component documentation
             │   ├── src/
             │   │   └── index.ts                  # Worker source code
             │   ├── launcher.ts                   # TypeScript launcher
@@ -230,7 +230,7 @@ claude-code-templates/
             └── README.md                         # This file
 ```
 
-The sandbox system integrates seamlessly with the existing Claude Code Templates component architecture, allowing any combination of agents, commands, MCPs, settings, and hooks to be installed and used within the secure sandbox environment.
+The sandbox system integrates seamlessly with the existing Gemini CLI Templates component architecture, allowing any combination of agents, commands, MCPs, settings, and hooks to be installed and used within the secure sandbox environment.
 
 ## Choosing the Right Sandbox
 
@@ -240,7 +240,7 @@ The sandbox system integrates seamlessly with the existing Claude Code Templates
 - ✅ Quick setup with minimal configuration
 - ✅ Multiple programming languages
 - ✅ Automatic file downloads
-- ✅ Native Claude Code integration
+- ✅ Native Gemini CLI integration
 
 ### Use Cloudflare when you need:
 - ✅ Sub-second cold starts

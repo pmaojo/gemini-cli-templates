@@ -13,17 +13,17 @@ Agents are specialized AI assistants that understand specific domains and provid
 ## Installation
 
 ### 📦 Basic Installation
-Install this component locally in your project. Works with your existing Claude Code setup.
+Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx claude-code-templates@latest --agent development/frontend-developer --yes
+npx gemini-code-templates@latest --agent development/frontend-developer --yes
 ```
 
-### 🌍 Global Agent (Claude Code SDK)
+### 🌍 Global Agent (Gemini Code SDK)
 Create a global AI agent accessible from anywhere with zero configuration. Perfect for automation and CI/CD workflows.
 
 ```bash
-npx claude-code-templates@latest --create-agent development/frontend-developer
+npx gemini-code-templates@latest --create-agent development/frontend-developer
 ```
 
 After installation, use from anywhere:
@@ -33,22 +33,22 @@ frontend-developer "your prompt here"
 
 ✅ Works in scripts, CI/CD, npm tasks  
 ✅ Auto-detects project context  
-✅ Powered by Claude Code SDK
+✅ Powered by Gemini Code SDK
 
 ### ☁️ Run in E2B Sandbox (Cloud Execution)
-**NEW** Execute Claude Code with this component in an isolated cloud environment using E2B. Perfect for testing complex projects without affecting your local system.
+**NEW** Execute Gemini Code with this component in an isolated cloud environment using E2B. Perfect for testing complex projects without affecting your local system.
 
 #### 🔑 Setup API Keys
 Add to your `.env` file:
 ```bash
-ANTHROPIC_API_KEY=your_anthropic_key_here
-# Required for Claude Code access
+ANTHROPIC_API_KEY=your_google_key_here
+# Required for Gemini Code access
 E2B_API_KEY=your_e2b_key_here
 ```
-[Get Anthropic API Key](https://console.anthropic.com/) | [Get E2B API Key](https://e2b.dev/)
+[Get Google API Key](https://console.google.com/) | [Get E2B API Key](https://e2b.dev/)
 
 ```bash
-npx claude-code-templates@latest --sandbox e2b --agent development/frontend-developer --prompt "your development task"
+npx gemini-code-templates@latest --sandbox e2b --agent development/frontend-developer --prompt "your development task"
 ```
 
 ☁️ Isolated cloud environment  
@@ -58,7 +58,7 @@ npx claude-code-templates@latest --sandbox e2b --agent development/frontend-deve
 **Requirements:**
 • Valid E2B API key  
 • Internet connection  
-• Claude Code v1.0.0+
+• Gemini Code v1.0.0+
 
 ## 📁 Agent Categories
 

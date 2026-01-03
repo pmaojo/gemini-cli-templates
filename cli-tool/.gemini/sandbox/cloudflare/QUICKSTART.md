@@ -1,11 +1,11 @@
 # Cloudflare Sandbox Quick Start Guide
 
-Get your Cloudflare Claude Code Sandbox running in under 5 minutes.
+Get your Cloudflare Gemini Code Sandbox running in under 5 minutes.
 
 ## Prerequisites Checklist
 
 - [ ] Cloudflare account (sign up at https://dash.cloudflare.com/sign-up)
-- [ ] Anthropic API key (get from https://console.anthropic.com/)
+- [ ] Google API key (get from https://console.google.com/)
 - [ ] Node.js 16.17.0+ installed
 - [ ] Docker installed and running (for local development)
 
@@ -15,14 +15,14 @@ Perfect if you want to skip local testing and deploy directly.
 
 ### Step 1: Install Dependencies
 ```bash
-cd .claude/sandbox/cloudflare
+cd .gemini/sandbox/cloudflare
 npm install
 ```
 
 ### Step 2: Set API Key
 ```bash
 npx wrangler secret put ANTHROPIC_API_KEY
-# Paste your Anthropic API key when prompted
+# Paste your Google API key when prompted
 ```
 
 ### Step 3: Deploy
@@ -67,14 +67,14 @@ Perfect if you want to test locally before deploying.
 
 ### Step 1: Install Dependencies
 ```bash
-cd .claude/sandbox/cloudflare
+cd .gemini/sandbox/cloudflare
 npm install
 ```
 
 ### Step 2: Create Local Environment File
 ```bash
 cp .dev.vars.example .dev.vars
-# Edit .dev.vars and add your Anthropic API key
+# Edit .dev.vars and add your Google API key
 ```
 
 ### Step 3: Start Docker
@@ -125,7 +125,7 @@ Perfect if you prefer command-line interaction.
 
 ### Step 1: Setup (same as above)
 ```bash
-cd .claude/sandbox/cloudflare
+cd .gemini/sandbox/cloudflare
 npm install
 npx wrangler secret put ANTHROPIC_API_KEY
 npx wrangler deploy
@@ -136,7 +136,7 @@ npx wrangler deploy
 # Execute a prompt
 node launcher.ts "What is 2 to the power of 10?" \
   "" \
-  your_anthropic_key \
+  your_google_key \
   https://your-worker.workers.dev
 ```
 
@@ -144,7 +144,7 @@ node launcher.ts "What is 2 to the power of 10?" \
 ```bash
 # Get detailed execution metrics
 node monitor.ts "Calculate factorial of 5" \
-  your_anthropic_key \
+  your_google_key \
   https://your-worker.workers.dev
 ```
 
@@ -248,9 +248,9 @@ See the main [README.md](./README.md) for:
 
 - **Documentation**: [README.md](./README.md)
 - **Debugging**: [SANDBOX_DEBUGGING.md](./SANDBOX_DEBUGGING.md)
-- **Component Info**: [claude-code-sandbox.md](./claude-code-sandbox.md)
+- **Component Info**: [gemini-code-sandbox.md](./gemini-code-sandbox.md)
 - **Cloudflare Docs**: https://developers.cloudflare.com/sandbox/
-- **Anthropic Docs**: https://docs.anthropic.com/
+- **Google Docs**: https://docs.google.com/
 
 ---
 
@@ -264,4 +264,4 @@ See the main [README.md](./README.md) for:
 
 ---
 
-**You're all set! Start executing code with Claude AI on Cloudflare's edge network.**
+**You're all set! Start executing code with Gemini AI on Cloudflare's edge network.**

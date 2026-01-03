@@ -425,7 +425,7 @@ class DataService {
       return await this.cachedFetch('/api/version', 300000); // Cache for 5 minutes
     } catch (error) {
       console.error('Error fetching version:', error);
-      return { version: '1.13.2', name: 'claude-code-templates' }; // Fallback
+      return { version: '1.13.2', name: 'gemini-cli-templates' }; // Fallback
     }
   }
 

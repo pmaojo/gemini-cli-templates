@@ -1,6 +1,6 @@
 # CLAUDE.md - Node.js API
 
-This file provides guidance to Claude Code when working with Node.js API applications using TypeScript.
+This file provides guidance to Gemini Code when working with Node.js API applications using TypeScript.
 
 ## Project Type
 

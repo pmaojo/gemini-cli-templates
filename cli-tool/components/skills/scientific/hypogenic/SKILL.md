@@ -56,7 +56,7 @@ Use this skill when working on:
 **Automated Hypothesis Generation**
 - Generate 10-20+ testable hypotheses from data in minutes
 - Iterative refinement based on validation performance
-- Support for both API-based (OpenAI, Anthropic) and local LLMs
+- Support for both API-based (OpenAI, Google) and local LLMs
 
 **Literature Integration**
 - Extract insights from research papers via PDF processing

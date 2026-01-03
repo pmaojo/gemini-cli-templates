@@ -1,5 +1,5 @@
 {
-  "description": "Send Telegram notifications when Claude Code encounters long-running operations or when tools take significant time. Helps monitor productivity and catch potential issues. Requires TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID environment variables.",
+  "description": "Send Telegram notifications when Gemini CLI encounters long-running operations or when tools take significant time. Helps monitor productivity and catch potential issues. Requires TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID environment variables.",
   "hooks": {
     "PreToolUse": [
       {
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [[ -n \"$TELEGRAM_BOT_TOKEN\" && -n \"$TELEGRAM_CHAT_ID\" ]]; then MESSAGE=\"🔔 <b>Claude Code Notification</b>%0A📁 Project: $(basename \"$(pwd)\")%0A⏰ Time: $(date '+%H:%M:%S')%0A💬 Status: Waiting for user input or permission\"; curl -s -X POST \"https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage\" -d \"chat_id=$TELEGRAM_CHAT_ID\" -d \"text=$MESSAGE\" -d \"parse_mode=HTML\" >/dev/null 2>&1; fi"
+            "command": "if [[ -n \"$TELEGRAM_BOT_TOKEN\" && -n \"$TELEGRAM_CHAT_ID\" ]]; then MESSAGE=\"🔔 <b>Gemini CLI Notification</b>%0A📁 Project: $(basename \"$(pwd)\")%0A⏰ Time: $(date '+%H:%M:%S')%0A💬 Status: Waiting for user input or permission\"; curl -s -X POST \"https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage\" -d \"chat_id=$TELEGRAM_CHAT_ID\" -d \"text=$MESSAGE\" -d \"parse_mode=HTML\" >/dev/null 2>&1; fi"
           }
         ]
       }

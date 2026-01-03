@@ -8,25 +8,25 @@ Custom slash commands that automate development workflows. Browse and install fr
 
 ## ⚡ What are Commands?
 
-Commands are custom slash commands for Claude Code that automate common development tasks. Type `/command-name` in Claude Code to execute them.
+Commands are custom slash commands for Gemini Code that automate common development tasks. Type `/command-name` in Gemini Code to execute them.
 
 ## Installation
 
 ### 📦 Basic Installation
-Install this component locally in your project. Works with your existing Claude Code setup.
+Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx claude-code-templates@latest --command testing/generate-tests --yes
+npx gemini-code-templates@latest --command testing/generate-tests --yes
 ```
 
 ### Multiple Commands
 ```bash
-npx claude-code-templates@latest --command setup/setup-testing,performance/optimize-bundle --yes
+npx gemini-code-templates@latest --command setup/setup-testing,performance/optimize-bundle --yes
 ```
 
 ## 💡 Usage After Installation
 
-Once installed, use commands in Claude Code:
+Once installed, use commands in Gemini Code:
 ```
 /generate-tests
 /optimize-bundle

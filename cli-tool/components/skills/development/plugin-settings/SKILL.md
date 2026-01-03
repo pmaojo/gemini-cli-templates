@@ -1,17 +1,17 @@
 ---
 name: Plugin Settings
-description: This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md files", "plugin state files", "read YAML frontmatter", "per-project plugin settings", or wants to make plugin behavior configurable. Documents the .claude/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.
+description: This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md files", "plugin state files", "read YAML frontmatter", "per-project plugin settings", or wants to make plugin behavior configurable. Documents the .gemini/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.
 version: 0.1.0
 ---
 
-# Plugin Settings Pattern for Claude Code Plugins
+# Plugin Settings Pattern for Gemini CLI Plugins
 
 ## Overview
 
-Plugins can store user-configurable settings and state in `.claude/plugin-name.local.md` files within the project directory. This pattern uses YAML frontmatter for structured configuration and markdown content for prompts or additional context.
+Plugins can store user-configurable settings and state in `.gemini/plugin-name.local.md` files within the project directory. This pattern uses YAML frontmatter for structured configuration and markdown content for prompts or additional context.
 
 **Key characteristics:**
-- File location: `.claude/plugin-name.local.md` in project root
+- File location: `.gemini/plugin-name.local.md` in project root
 - Structure: YAML frontmatter + markdown body
 - Purpose: Per-project plugin configuration and state
 - Usage: Read from hooks, commands, and agents
@@ -35,13 +35,13 @@ list_setting: ["item1", "item2"]
 This markdown body can contain:
 - Task descriptions
 - Additional instructions
-- Prompts to feed back to Claude
+- Prompts to feed back to Gemini
 - Documentation or notes
 ```
 
 ### Example: Plugin State File
 
-**.claude/my-plugin.local.md:**
+**.gemini/my-plugin.local.md:**
 ```markdown
 ---
 enabled: true
@@ -68,7 +68,7 @@ Contact @team-lead with questions.
 set -euo pipefail
 
 # Define state file path
-STATE_FILE=".claude/my-plugin.local.md"
+STATE_FILE=".gemini/my-plugin.local.md"
 
 # Quick exit if file doesn't exist
 if [[ ! -f "$STATE_FILE" ]]; then
@@ -109,7 +109,7 @@ allowed-tools: ["Read", "Bash"]
 # Process Command
 
 Steps:
-1. Check if settings exist at `.claude/my-plugin.local.md`
+1. Check if settings exist at `.gemini/my-plugin.local.md`
 2. Read configuration using Read tool
 3. Parse YAML frontmatter to extract settings
 4. Apply settings to processing logic
@@ -126,7 +126,7 @@ name: configured-agent
 description: Agent that adapts to project settings
 ---
 
-Check for plugin settings at `.claude/my-plugin.local.md`.
+Check for plugin settings at `.gemini/my-plugin.local.md`.
 If present, parse YAML frontmatter and adapt behavior according to:
 - enabled: Whether plugin is active
 - mode: Processing mode (strict, standard, lenient)
@@ -178,7 +178,7 @@ Use settings file to control hook activation:
 
 ```bash
 #!/bin/bash
-STATE_FILE=".claude/security-scan.local.md"
+STATE_FILE=".gemini/security-scan.local.md"
 
 # Quick exit if not configured
 if [[ ! -f "$STATE_FILE" ]]; then
@@ -203,7 +203,7 @@ fi
 
 Store agent-specific state and configuration:
 
-**.claude/multi-agent-swarm.local.md:**
+**.gemini/multi-agent-swarm.local.md:**
 ```markdown
 ---
 agent_name: auth-agent
@@ -236,7 +236,7 @@ tmux send-keys -t "$COORDINATOR" "Agent $AGENT_NAME completed task" Enter
 
 ### Pattern 3: Configuration-Driven Behavior
 
-**.claude/my-plugin.local.md:**
+**.gemini/my-plugin.local.md:**
 ```markdown
 ---
 validation_level: strict
@@ -280,10 +280,10 @@ Commands can create settings files:
 
 Steps:
 1. Ask user for configuration preferences
-2. Create `.claude/my-plugin.local.md` with YAML frontmatter
+2. Create `.gemini/my-plugin.local.md` with YAML frontmatter
 3. Set appropriate values based on user input
 4. Inform user that settings are saved
-5. Remind user to restart Claude Code for hooks to recognize changes
+5. Remind user to restart Gemini CLI for hooks to recognize changes
 ```
 
 ### Template Generation
@@ -293,7 +293,7 @@ Provide template in plugin README:
 ```markdown
 ## Configuration
 
-Create `.claude/my-plugin.local.md` in your project:
+Create `.gemini/my-plugin.local.md` in your project:
 
 \`\`\`markdown
 ---
@@ -307,7 +307,7 @@ max_retries: 3
 Your settings are active.
 \`\`\`
 
-After creating or editing, restart Claude Code for changes to take effect.
+After creating or editing, restart Gemini CLI for changes to take effect.
 ```
 
 ## Best Practices
@@ -315,12 +315,12 @@ After creating or editing, restart Claude Code for changes to take effect.
 ### File Naming
 
 ✅ **DO:**
-- Use `.claude/plugin-name.local.md` format
+- Use `.gemini/plugin-name.local.md` format
 - Match plugin name exactly
 - Use `.local.md` suffix for user-local files
 
 ❌ **DON'T:**
-- Use different directory (not `.claude/`)
+- Use different directory (not `.gemini/`)
 - Use inconsistent naming
 - Use `.md` without `.local` (might be committed)
 
@@ -329,8 +329,8 @@ After creating or editing, restart Claude Code for changes to take effect.
 Always add to `.gitignore`:
 
 ```gitignore
-.claude/*.local.md
-.claude/*.local.json
+.gemini/*.local.md
+.gemini/*.local.json
 ```
 
 Document this in plugin README.
@@ -366,17 +366,17 @@ fi
 
 ### Restart Requirement
 
-**Important:** Settings changes require Claude Code restart.
+**Important:** Settings changes require Gemini CLI restart.
 
 Document in your README:
 
 ```markdown
 ## Changing Settings
 
-After editing `.claude/my-plugin.local.md`:
+After editing `.gemini/my-plugin.local.md`:
 1. Save the file
-2. Exit Claude Code
-3. Restart: `claude` or `cc`
+2. Exit Gemini CLI
+3. Restart: `gemini` or `cc`
 4. New settings will be loaded
 ```
 
@@ -425,7 +425,7 @@ Settings files should be:
 
 ### multi-agent-swarm Plugin
 
-**.claude/multi-agent-swarm.local.md:**
+**.gemini/multi-agent-swarm.local.md:**
 ```markdown
 ---
 agent_name: auth-implementation
@@ -451,7 +451,7 @@ Coordinate with auth-agent on shared types.
 
 ### ralph-wiggum Plugin
 
-**.claude/ralph-loop.local.md:**
+**.gemini/ralph-loop.local.md:**
 ```markdown
 ---
 iteration: 1
@@ -476,7 +476,7 @@ Make sure tests pass after each fix.
 
 ```
 project-root/
-└── .claude/
+└── .gemini/
     └── plugin-name.local.md
 ```
 
@@ -500,7 +500,7 @@ BODY=$(awk '/^---$/{i++; next} i>=2' "$FILE")
 ### Quick Exit Pattern
 
 ```bash
-if [[ ! -f ".claude/my-plugin.local.md" ]]; then
+if [[ ! -f ".gemini/my-plugin.local.md" ]]; then
   exit 0  # Not configured
 fi
 ```
@@ -535,10 +535,10 @@ To add settings to a plugin:
 
 1. Design settings schema (which fields, types, defaults)
 2. Create template file in plugin documentation
-3. Add gitignore entry for `.claude/*.local.md`
+3. Add gitignore entry for `.gemini/*.local.md`
 4. Implement settings parsing in hooks/commands
 5. Use quick-exit pattern (check file exists, check enabled field)
 6. Document settings in plugin README with template
-7. Remind users that changes require Claude Code restart
+7. Remind users that changes require Gemini CLI restart
 
 Focus on keeping settings simple and providing good defaults when settings file doesn't exist.

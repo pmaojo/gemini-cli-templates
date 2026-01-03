@@ -252,7 +252,7 @@ function getHookDescription(hook, matcher, type) {
   }
   
   if (command.includes('notifications.log')) {
-    return 'Log Claude Code notifications';
+    return 'Log Gemini CLI notifications';
   }
 
   // Generate description based on command analysis
@@ -288,7 +288,7 @@ function getHookDescription(hook, matcher, type) {
  */
 function getHooksForLanguage(language) {
   const templateDir = path.join(__dirname, '../templates', language);
-  const settingsPath = path.join(templateDir, '.claude', 'settings.json');
+  const settingsPath = path.join(templateDir, '.gemini', 'settings.json');
   
   return getHooksFromSettings(settingsPath);
 }

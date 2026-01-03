@@ -1,5 +1,5 @@
 /**
- * Claude Code Templates - Terminal Theme for Docusaurus
+ * Gemini Code Templates - Terminal Theme for Docusaurus
  * Matching the main website's dark terminal aesthetic
  */
 
@@ -13,9 +13,9 @@
   --border-secondary: #21262d;
   --text-primary: #c9d1d9;
   --text-secondary: #7d8590;
-  --text-accent: #d57455;
+  --text-accent: #1a73e8;
   --text-success: #3fb950;
-  --text-warning: #f97316;
+  --text-warning: #4285f4;
   --text-error: #f85149;
   --text-info: #a5d6ff;
   --shadow-primary: rgba(0, 0, 0, 0.4);

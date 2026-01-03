@@ -1,10 +1,10 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Gemini CLI (gemini.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-This directory contains the static website (aitmpl.com) that serves as the public web interface for browsing and installing Claude Code components. The site is a vanilla JavaScript application that loads component data dynamically and provides an interactive browsing experience for 500+ components including agents, commands, settings, hooks, MCPs, and templates.
+This directory contains the static website (aitmpl.com) that serves as the public web interface for browsing and installing Gemini CLI components. The site is a vanilla JavaScript application that loads component data dynamically and provides an interactive browsing experience for 500+ components including agents, commands, settings, hooks, MCPs, and templates.
 
 ## Development Commands
 
@@ -29,7 +29,7 @@ python scripts/generate_components_json.py
 
 ### Deployment
 - Site is automatically deployed to GitHub Pages when changes are pushed to `docs/` directory
-- Deployed at: https://aitmpl.com (davila7.github.io/claude-code-templates)
+- Deployed at: https://aitmpl.com (davila7.github.io/gemini-code-templates)
 - Vercel configuration in `vercel.json` for routing
 
 ## Architecture
@@ -65,7 +65,7 @@ python scripts/generate_components_json.py
 #### Data Files
 - `components.json` - Main component catalog (~2MB, generated file)
 - `trending-data.json` - Trending components rankings
-- `claude-jobs.json` - Job postings data
+- `gemini-jobs.json` - Job postings data
 
 ### Component System
 
@@ -83,7 +83,7 @@ Each component type has specific structure:
 - Installation: `--command <name>`
 
 **Settings** (60 total)
-- Claude Code configuration files
+- Gemini CLI configuration files
 - Includes statuslines with accompanying Python scripts
 - Stored in `cli-tool/components/settings/{category}/{name}.json`
 - Installation: `--setting <name>`
@@ -105,7 +105,7 @@ Each component type has specific structure:
 
 **Plugins** (10 total)
 - Component bundles with marketplace metadata
-- Defined in `.claude-plugin/marketplace.json`
+- Defined in `.gemini-plugin/marketplace.json`
 - Installation: `--plugin <name>`
 
 ### Data Loading Strategy
@@ -211,7 +211,7 @@ function generateCartCommand(cart) {
   if (cart.agents.length) flags.push(...cart.agents.map(a => `--agent ${a}`));
   if (cart.commands.length) flags.push(...cart.commands.map(c => `--command ${c}`));
   // ... other types
-  return `npx claude-code-templates@latest ${flags.join(' ')} --yes`;
+  return `npx gemini-code-templates@latest ${flags.join(' ')} --yes`;
 }
 ```
 
@@ -360,4 +360,4 @@ CSS is modular:
 - Verify cart data structure matches expected format
 - Clear cache and reload if data structure changed
 
-This website serves as the primary user interface for the Claude Code Templates ecosystem, providing an intuitive way to discover and install 500+ components through a terminal-themed, responsive web interface.
+This website serves as the primary user interface for the Gemini CLI Templates ecosystem, providing an intuitive way to discover and install 500+ components through a terminal-themed, responsive web interface.

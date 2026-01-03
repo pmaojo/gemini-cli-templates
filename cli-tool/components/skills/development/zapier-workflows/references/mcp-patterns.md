@@ -55,7 +55,7 @@ This file documents preferred MCP tools, usage patterns, and orchestration workf
 ```
 User: "[Example user request]"
 
-Claude:
+Gemini:
 1. [MCP Tool: action with parameters]
    → [Expected result]
 2. [Process the result]
@@ -100,4 +100,4 @@ Claude:
 
 ---
 
-*This file is editable by Claude during conversations. When the user teaches new patterns, updates preferences, or corrects approaches, Claude should update this file using the Edit tool.*
+*This file is editable by Gemini during conversations. When the user teaches new patterns, updates preferences, or corrects approaches, Gemini should update this file using the Edit tool.*

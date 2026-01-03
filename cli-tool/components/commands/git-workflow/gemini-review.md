@@ -2,7 +2,7 @@
 allowed-tools: Bash(gh:*), Read, Grep, TodoWrite, Edit, MultiEdit
 argument-hint: [pr-number] | --analyze-only | --preview | --priority high|medium|low
 description: Transform Gemini Code Assist PR reviews into prioritized TodoLists with automated execution
-model: claude-sonnet-4-5-20250929
+model: gemini-sonnet-4-5-20250929
 ---
 
 # Gemini PR Review Automation
@@ -11,7 +11,7 @@ model: claude-sonnet-4-5-20250929
 
 **The Problem**: Gemini Code Assist provides free, automated PR reviews on GitHub. But AI-generated reviews often get ignored because they lack the urgency of human feedback.
 
-**The Pain Point**: Manually asking Claude Code to:
+**The Pain Point**: Manually asking Gemini CLI to:
 1. "Analyze PR #42's Gemini review"
 2. "Prioritize the issues"
 3. "Create a TodoList"
@@ -101,10 +101,10 @@ Key behaviors:
 ```bash
 1. Open GitHub PR page
 2. Read Gemini review (often skipped because "AI generated")
-3. Tell Claude: "Analyze PR #42 Gemini review"
-4. Tell Claude: "Prioritize these issues"
-5. Tell Claude: "Create TodoList"
-6. Tell Claude: "Start working on them"
+3. Tell Gemini: "Analyze PR #42 Gemini review"
+4. Tell Gemini: "Prioritize these issues"
+5. Tell Gemini: "Create TodoList"
+6. Tell Gemini: "Start working on them"
 ```
 
 **After (Automated)**:

@@ -1,6 +1,6 @@
 # AI-Assisted Agent Generation Template
 
-Use this template to generate agents using Claude with the agent creation system prompt.
+Use this template to generate agents using Gemini with the agent creation system prompt.
 
 ## Usage Pattern
 
@@ -14,7 +14,7 @@ Think about:
 
 ### Step 2: Use the Generation Prompt
 
-Send this to Claude (with the agent-creation-system-prompt loaded):
+Send this to Gemini (with the agent-creation-system-prompt loaded):
 
 ```
 Create an agent configuration based on this request: "[YOUR DESCRIPTION]"
@@ -24,9 +24,9 @@ Return ONLY the JSON object, no other text.
 
 **Replace [YOUR DESCRIPTION] with your agent requirements.**
 
-### Step 3: Claude Returns JSON
+### Step 3: Gemini Returns JSON
 
-Claude will return:
+Gemini will return:
 
 ```json
 {
@@ -59,7 +59,7 @@ tools: ["Read", "Write", "Grep"]  # Optional: restrict tools
 I need an agent that reviews code changes for quality issues, security vulnerabilities, and adherence to best practices. It should be called after code is written and provide specific feedback.
 ```
 
-**Claude generates:**
+**Gemini generates:**
 ```json
 {
   "identifier": "code-quality-reviewer",
@@ -138,7 +138,7 @@ Include file names and line numbers for all findings.
 Create an agent that generates unit tests for code. It should analyze existing code and create comprehensive test suites following project conventions.
 ```
 
-**Claude generates:**
+**Gemini generates:**
 ```json
 {
   "identifier": "test-generator",
@@ -174,7 +174,7 @@ Build an agent that writes and updates API documentation. It should analyze code
 
 ### Include Triggering Preferences
 
-Tell Claude when the agent should activate:
+Tell Gemini when the agent should activate:
 
 ```
 "Create an agent that generates tests. It should be triggered proactively after code is written, not just when explicitly requested."
@@ -220,7 +220,7 @@ If generated agent needs improvement:
 
 ## Advantages of AI-Assisted Generation
 
-- **Comprehensive**: Claude includes edge cases and quality checks
+- **Comprehensive**: Gemini includes edge cases and quality checks
 - **Consistent**: Follows proven patterns
 - **Fast**: Seconds vs manual writing
 - **Examples**: Auto-generates triggering examples

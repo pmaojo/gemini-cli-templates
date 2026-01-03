@@ -4,18 +4,18 @@ sidebar_position: 3
 
 # Health Check
 
-System validation and optimization for your Claude Code setup.
+System validation and optimization for your Gemini Code setup.
 
 ## Launch Command
 
 ```bash
-npx claude-code-templates@latest --health-check
+npx gemini-code-templates@latest --health-check
 ```
 
 ## What Gets Checked
 
 - **System requirements** - Node.js, npm, Git, memory, network
-- **Claude Code setup** - Installation, authentication, permissions
+- **Gemini Code setup** - Installation, authentication, permissions
 - **Project configuration** - CLAUDE.md, components, settings, hooks
 - **Component integrity** - Validates installed agents, commands, MCPs
 - **Performance optimization** - Identifies bottlenecks and improvements
@@ -33,7 +33,7 @@ npx claude-code-templates@latest --health-check
 - **Hook execution** - Tests automation trigger functionality
 
 ### Performance Assessment
-- **Response times** - Measures Claude Code performance
+- **Response times** - Measures Gemini Code performance
 - **Memory usage** - Analyzes resource consumption
 - **File access speed** - Tests file system performance
 - **Network latency** - Measures API communication speed
@@ -57,4 +57,4 @@ The health check provides an overall score (0-100%) based on:
 
 ---
 
-**Next:** Try the [Chats Interface](./chats) for mobile-optimized Claude Code conversations.
+**Next:** Try the [Chats Interface](./chats) for mobile-optimized Gemini Code conversations.

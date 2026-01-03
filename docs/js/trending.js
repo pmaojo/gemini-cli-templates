@@ -1,6 +1,6 @@
 /**
  * Trending Page JavaScript
- * GitHub-inspired trending components page for Claude Code Templates
+ * GitHub-inspired trending components page for Gemini CLI Templates
  */
 
 class TrendingPage {
@@ -219,7 +219,7 @@ class TrendingPage {
             agents: '#f59e0b',      // amber (yellow)
             mcps: '#3b82f6',        // blue
             settings: '#8b5cf6',    // violet
-            hooks: '#f97316',       // orange
+            hooks: '#4285f4',       // orange
             skills: '#ec4899'       // pink
         };
 
@@ -669,7 +669,7 @@ function showInstallModal(componentName) {
     const componentPath = componentCategory ? `${componentCategory}/${cleanName}` : cleanName;
 
     // Update the command with the correct flag and full component path
-    const command = `npx claude-code-templates@latest --${flagType} ${componentPath} --yes`;
+    const command = `npx gemini-code-templates@latest --${flagType} ${componentPath} --yes`;
     commandText.textContent = command;
 
     // Show the modal

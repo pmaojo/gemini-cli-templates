@@ -6,41 +6,41 @@ const TEMPLATES_CONFIG = {
     name: 'Common (Language-agnostic)',
     description: 'Universal configuration for any project',
     files: [
-      { source: 'common/CLAUDE.md', destination: 'CLAUDE.md' }
+      { source: 'common/GEMINI.md', destination: 'GEMINI.md' }
     ]
   },
   'javascript-typescript': {
     name: 'JavaScript/TypeScript',
     description: 'Optimized for modern JS/TS development',
     files: [
-      { source: 'javascript-typescript/CLAUDE.md', destination: 'CLAUDE.md' },
-      { source: 'javascript-typescript/.claude', destination: '.claude' },
-      { source: 'javascript-typescript/.claude/settings.json', destination: '.claude/settings.json' },
+      { source: 'javascript-typescript/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'javascript-typescript/.gemini', destination: '.gemini' },
+      { source: 'javascript-typescript/.gemini/settings.json', destination: '.gemini/settings.json' },
       { source: 'javascript-typescript/.mcp.json', destination: '.mcp.json' }
     ],
     frameworks: {
       'react': {
         name: 'React',
         additionalFiles: [
-          { source: 'javascript-typescript/examples/react-app/.claude/commands', destination: '.claude/commands' }
+          { source: 'javascript-typescript/examples/react-app/.gemini/commands', destination: '.gemini/commands' }
         ]
       },
       'vue': {
         name: 'Vue.js',
         additionalFiles: [
-          { source: 'javascript-typescript/examples/vue-app/.claude/commands', destination: '.claude/commands' }
+          { source: 'javascript-typescript/examples/vue-app/.gemini/commands', destination: '.gemini/commands' }
         ]
       },
       'angular': {
         name: 'Angular',
         additionalFiles: [
-          { source: 'javascript-typescript/examples/angular-app/.claude/commands', destination: '.claude/commands' }
+          { source: 'javascript-typescript/examples/angular-app/.gemini/commands', destination: '.gemini/commands' }
         ]
       },
       'node': {
         name: 'Node.js',
         additionalFiles: [
-          { source: 'javascript-typescript/examples/node-api/.claude/commands', destination: '.claude/commands' }
+          { source: 'javascript-typescript/examples/node-api/.gemini/commands', destination: '.gemini/commands' }
         ]
       }
     }
@@ -49,29 +49,29 @@ const TEMPLATES_CONFIG = {
     name: 'Python',
     description: 'Optimized for Python development',
     files: [
-      { source: 'python/CLAUDE.md', destination: 'CLAUDE.md' },
-      { source: 'python/.claude', destination: '.claude' },
-      { source: 'python/.claude/settings.json', destination: '.claude/settings.json' },
+      { source: 'python/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'python/.gemini', destination: '.gemini' },
+      { source: 'python/.gemini/settings.json', destination: '.gemini/settings.json' },
       { source: 'python/.mcp.json', destination: '.mcp.json' }
     ],
     frameworks: {
       'django': {
         name: 'Django',
         additionalFiles: [
-          { source: 'python/examples/django-app/.claude/commands', destination: '.claude/commands' },
-          { source: 'python/examples/django-app/CLAUDE.md', destination: 'CLAUDE.md' }
+          { source: 'python/examples/django-app/.gemini/commands', destination: '.gemini/commands' },
+          { source: 'python/examples/django-app/GEMINI.md', destination: 'GEMINI.md' }
         ]
       },
       'flask': {
         name: 'Flask',
         additionalFiles: [
-          { source: 'python/examples/flask-app/.claude/commands', destination: '.claude/commands' }
+          { source: 'python/examples/flask-app/.gemini/commands', destination: '.gemini/commands' }
         ]
       },
       'fastapi': {
         name: 'FastAPI',
         additionalFiles: [
-          { source: 'python/examples/fastapi-app/.claude/commands', destination: '.claude/commands' }
+          { source: 'python/examples/fastapi-app/.gemini/commands', destination: '.gemini/commands' }
         ]
       }
     }
@@ -80,23 +80,23 @@ const TEMPLATES_CONFIG = {
     name: 'Ruby',
     description: 'Optimized for Ruby development with modern tools',
     files: [
-      { source: 'ruby/CLAUDE.md', destination: 'CLAUDE.md' },
-      { source: 'ruby/.claude', destination: '.claude' },
-      { source: 'ruby/.claude/settings.json', destination: '.claude/settings.json' },
+      { source: 'ruby/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'ruby/.gemini', destination: '.gemini' },
+      { source: 'ruby/.gemini/settings.json', destination: '.gemini/settings.json' },
       { source: 'ruby/.mcp.json', destination: '.mcp.json' }
     ],
     frameworks: {
       'rails': {
         name: 'Ruby on Rails 8',
         additionalFiles: [
-          { source: 'ruby/examples/rails-app/.claude/commands', destination: '.claude/commands' },
-          { source: 'ruby/examples/rails-app/CLAUDE.md', destination: 'CLAUDE.md' }
+          { source: 'ruby/examples/rails-app/.gemini/commands', destination: '.gemini/commands' },
+          { source: 'ruby/examples/rails-app/GEMINI.md', destination: 'GEMINI.md' }
         ]
       },
       'sinatra': {
         name: 'Sinatra',
         additionalFiles: [
-          { source: 'ruby/examples/sinatra-app/.claude/commands', destination: '.claude/commands' }
+          { source: 'ruby/examples/sinatra-app/.gemini/commands', destination: '.gemini/commands' }
         ]
       }
     }

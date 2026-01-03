@@ -1,5 +1,5 @@
 {
-  "description": "Disable Claude Code telemetry for privacy.",
+  "description": "Disable Gemini CLI telemetry for privacy.",
   "env": {
     "DISABLE_TELEMETRY": "1"
   }

@@ -1,14 +1,14 @@
-# Cloudflare Claude Code Sandbox
+# Cloudflare Gemini CLI Sandbox
 
-Execute Claude Code in an isolated Cloudflare Workers sandbox environment with AI-powered code execution.
+Execute Gemini CLI in an isolated Cloudflare Workers sandbox environment with AI-powered code execution.
 
 ## Description
 
-This component sets up Cloudflare Sandbox SDK integration to run Claude Code in a secure, isolated cloud environment. Built on Cloudflare's container-based sandboxes with Durable Objects for persistent execution.
+This component sets up Cloudflare Sandbox SDK integration to run Gemini CLI in a secure, isolated cloud environment. Built on Cloudflare's container-based sandboxes with Durable Objects for persistent execution.
 
 ## Features
 
-- **Isolated Execution**: Run Claude Code in secure Cloudflare Workers sandboxes
+- **Isolated Execution**: Run Gemini CLI in secure Cloudflare Workers sandboxes
 - **AI Code Executor**: Turn natural language into executable Python/Node.js code
 - **Real-time Streaming**: Stream execution output as it happens
 - **Persistent Storage**: Use Durable Objects for stateful sandbox sessions
@@ -18,7 +18,7 @@ This component sets up Cloudflare Sandbox SDK integration to run Claude Code in 
 ## Requirements
 
 - Cloudflare Account (Workers Paid plan for Durable Objects)
-- Anthropic API Key
+- Google API Key
 - Node.js 16.17.0+
 - Docker (for local development)
 - Wrangler CLI
@@ -39,7 +39,7 @@ This component sets up Cloudflare Sandbox SDK integration to run Claude Code in 
                    │
                    ▼
 ┌─────────────────────────────────────────────────────┐
-│  Claude AI (via Anthropic SDK)                      │
+│  Gemini AI (via Google SDK)                      │
 │  • Generates Python/TypeScript code                 │
 │  • Returns executable implementation                │
 └──────────────────┬──────────────────────────────────┘
@@ -66,58 +66,58 @@ This component sets up Cloudflare Sandbox SDK integration to run Claude Code in 
 
 ```bash
 # Execute a prompt in Cloudflare sandbox
-npx claude-code-templates@latest --sandbox cloudflare --prompt "Calculate the 10th Fibonacci number"
+npx gemini-code-templates@latest --sandbox cloudflare --prompt "Calculate the 10th Fibonacci number"
 
 # Pass API keys directly
-npx claude-code-templates@latest --sandbox cloudflare \
-  --anthropic-api-key your_anthropic_key \
+npx gemini-code-templates@latest --sandbox cloudflare \
+  --Google-api-key your_Google_key \
   --prompt "Create a web scraper"
 
 # Install components and execute
-npx claude-code-templates@latest --sandbox cloudflare \
+npx gemini-code-templates@latest --sandbox cloudflare \
   --agent frontend-developer \
   --command setup-react \
-  --anthropic-api-key your_anthropic_key \
+  --Google-api-key your_Google_key \
   --prompt "Create a modern todo app"
 
 # Deploy your own Cloudflare Worker sandbox
-cd .claude/sandbox/cloudflare
+cd .gemini/sandbox/cloudflare
 npm install
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 npx wrangler deploy
 ```
 
 ## Environment Setup
 
 The component creates:
-- `.claude/sandbox/cloudflare/src/index.ts` - Worker with sandbox logic
-- `.claude/sandbox/cloudflare/wrangler.toml` - Cloudflare configuration
-- `.claude/sandbox/cloudflare/package.json` - Node.js dependencies
-- `.claude/sandbox/cloudflare/launcher.ts` - TypeScript launcher script
-- `.claude/sandbox/cloudflare/monitor.ts` - Real-time monitoring tool
+- `.gemini/sandbox/cloudflare/src/index.ts` - Worker with sandbox logic
+- `.gemini/sandbox/cloudflare/wrangler.toml` - Cloudflare configuration
+- `.gemini/sandbox/cloudflare/package.json` - Node.js dependencies
+- `.gemini/sandbox/cloudflare/launcher.ts` - TypeScript launcher script
+- `.gemini/sandbox/cloudflare/monitor.ts` - Real-time monitoring tool
 
 ## API Key Configuration
 
 ### Option 1: CLI Parameters (Recommended)
 ```bash
-npx claude-code-templates@latest --sandbox cloudflare \
-  --anthropic-api-key your_anthropic_api_key \
+npx gemini-code-templates@latest --sandbox cloudflare \
+  --Google-api-key your_Google_api_key \
   --prompt "Your prompt here"
 ```
 
 ### Option 2: Wrangler Secrets
 ```bash
-cd .claude/sandbox/cloudflare
-npx wrangler secret put ANTHROPIC_API_KEY
+cd .gemini/sandbox/cloudflare
+npx wrangler secret put Google_API_KEY
 # Paste your API key when prompted
 ```
 
 ### Option 3: Environment Variables
 ```bash
-export ANTHROPIC_API_KEY=your_anthropic_api_key_here
+export Google_API_KEY=your_Google_api_key_here
 
 # Or create .dev.vars file:
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
+Google_API_KEY=your_Google_api_key_here
 ```
 
 **Note**: Wrangler secrets are required for production deployment. CLI parameters work for local execution only.
@@ -126,7 +126,7 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
 1. User sends natural language request (e.g., "What's the factorial of 5?")
 2. Cloudflare Worker receives request via POST /execute
-3. Claude generates executable Python/TypeScript code via Anthropic API
+3. Gemini generates executable Python/TypeScript code via Google API
 4. Code is written to sandbox file system
 5. Sandbox executes code in isolated container
 6. Results stream back in real-time
@@ -136,7 +136,7 @@ ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
 ### Local Development
 ```bash
-cd .claude/sandbox/cloudflare
+cd .gemini/sandbox/cloudflare
 npm install
 npm run dev
 
@@ -149,7 +149,7 @@ curl -X POST http://localhost:8787/execute \
 ### Production Deployment
 ```bash
 # Set API key secret
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 
 # Deploy to Cloudflare Workers
 npx wrangler deploy
@@ -211,19 +211,19 @@ const state = await sandbox.readFile('/data/state.json');
 
 ```bash
 # Mathematical computation
-npx claude-code-templates@latest --sandbox cloudflare \
+npx gemini-code-templates@latest --sandbox cloudflare \
   --prompt "Calculate the 100th Fibonacci number"
 
 # Data analysis
-npx claude-code-templates@latest --sandbox cloudflare \
+npx gemini-code-templates@latest --sandbox cloudflare \
   --prompt "What is the mean of [10, 20, 30, 40, 50]?"
 
 # String manipulation
-npx claude-code-templates@latest --sandbox cloudflare \
+npx gemini-code-templates@latest --sandbox cloudflare \
   --prompt "Reverse the string 'Hello World'"
 
 # Web development
-npx claude-code-templates@latest --sandbox cloudflare \
+npx gemini-code-templates@latest --sandbox cloudflare \
   --agent frontend-developer \
   --prompt "Create a responsive navigation bar"
 ```
@@ -258,7 +258,7 @@ npx wrangler tail
 npx wrangler secret list
 
 # Update secret
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 ```
 
 ### Local Development Issues
@@ -297,14 +297,14 @@ npm install
 - [Workers Documentation](https://developers.cloudflare.com/workers/)
 - [Durable Objects Guide](https://developers.cloudflare.com/durable-objects/)
 - [Wrangler CLI Reference](https://developers.cloudflare.com/workers/wrangler/)
-- [Anthropic API Documentation](https://docs.anthropic.com/)
+- [Google API Documentation](https://docs.Google.com/)
 
 ## Next Steps
 
 After installation:
 1. Set up Cloudflare account and get API credentials
 2. Install Wrangler CLI: `npm install -g wrangler`
-3. Configure secrets: `npx wrangler secret put ANTHROPIC_API_KEY`
+3. Configure secrets: `npx wrangler secret put Google_API_KEY`
 4. Deploy your worker: `npx wrangler deploy`
 5. Test with example requests
 6. Customize sandbox configuration for your use case

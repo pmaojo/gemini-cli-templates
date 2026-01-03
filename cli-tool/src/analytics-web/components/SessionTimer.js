@@ -133,15 +133,15 @@ class SessionTimer {
   }
 
   /**
-   * Load Claude session information
+   * Load Gemini session information
    */
-  async loadClaudeSessionInfo() {
+  async loadGeminiSessionInfo() {
     try {
-      const response = await fetch('/api/claude/session');
+      const response = await fetch('/api/gemini/session');
       if (!response.ok) throw new Error('Failed to fetch session info');
       return await response.json();
     } catch (error) {
-      console.error('Error loading Claude session info:', error);
+      console.error('Error loading Gemini session info:', error);
       return null;
     }
   }
@@ -152,11 +152,11 @@ class SessionTimer {
   async renderSessionInfo(container) {
     const { timer, userPlan, monthlyUsage, limits } = this.sessionData;
     
-    // Load Claude session info
-    const claudeSessionInfo = await this.loadClaudeSessionInfo();
+    // Load Gemini session info
+    const geminiSessionInfo = await this.loadGeminiSessionInfo();
     
     // Update header status
-    this.updateHeaderStatus(timer, claudeSessionInfo);
+    this.updateHeaderStatus(timer, geminiSessionInfo);
     
     if (!timer.hasActiveSession) {
       container.innerHTML = `
@@ -173,12 +173,12 @@ class SessionTimer {
     
     const getProgressColor = (percentage) => {
       if (percentage < 50) return '#3fb950';
-      if (percentage < 80) return '#f97316';
+      if (percentage < 80) return '#4285f4';
       return '#f85149';
     };
 
     // For messages, use a relative progress based on typical usage patterns
-    // Since Claude uses dynamic limits, we'll show relative activity level
+    // Since Gemini uses dynamic limits, we'll show relative activity level
     const messageActivityLevel = Math.min(100, (timer.messagesUsed / (timer.messagesEstimate || 45)) * 100);
     const messageProgressColor = timer.messagesEstimate ? getProgressColor(messageActivityLevel) : '#3fb950';
     const timeProgressColor = getProgressColor(timeProgressPercentage);
@@ -203,8 +203,8 @@ class SessionTimer {
         
         <div class="session-timer-row">
           <div class="session-timer-time-compact">
-            <div class="session-timer-time-value">${claudeSessionInfo && claudeSessionInfo.hasSession ? 
-              (claudeSessionInfo.estimatedTimeRemaining.isExpired ? 'Expired' : claudeSessionInfo.estimatedTimeRemaining.formatted) : 
+            <div class="session-timer-time-value">${geminiSessionInfo && geminiSessionInfo.hasSession ? 
+              (geminiSessionInfo.estimatedTimeRemaining.isExpired ? 'Expired' : geminiSessionInfo.estimatedTimeRemaining.formatted) : 
               formatTimeRemaining(timer.timeRemaining)
             }</div>
             <div class="session-timer-time-label">remaining</div>
@@ -235,19 +235,19 @@ class SessionTimer {
             <div class="session-timer-progress-item">
               <div class="session-timer-progress-header">
                 <span class="session-timer-progress-label">Session Time</span>
-                <span class="session-timer-progress-value">${claudeSessionInfo && claudeSessionInfo.hasSession ? 
-                  `${claudeSessionInfo.sessionDuration.formatted}/${claudeSessionInfo.sessionLimit.formatted}` : 
+                <span class="session-timer-progress-value">${geminiSessionInfo && geminiSessionInfo.hasSession ? 
+                  `${geminiSessionInfo.sessionDuration.formatted}/${geminiSessionInfo.sessionLimit.formatted}` : 
                   `${formatTimeRemaining(this.SESSION_DURATION - timer.timeRemaining)}/5h`
                 }</span>
               </div>
               <div class="session-timer-progress-bar">
                 <div class="session-timer-progress-fill" 
-                     style="width: ${claudeSessionInfo && claudeSessionInfo.hasSession ? 
-                       Math.min(100, (claudeSessionInfo.sessionDuration.ms / claudeSessionInfo.sessionLimit.ms) * 100) : 
+                     style="width: ${geminiSessionInfo && geminiSessionInfo.hasSession ? 
+                       Math.min(100, (geminiSessionInfo.sessionDuration.ms / geminiSessionInfo.sessionLimit.ms) * 100) : 
                        timeProgressPercentage
-                     }%; background-color: ${claudeSessionInfo && claudeSessionInfo.hasSession ? 
-                       (claudeSessionInfo.estimatedTimeRemaining.isExpired ? '#f85149' : 
-                        claudeSessionInfo.estimatedTimeRemaining.ms < 600000 ? '#f97316' : '#3fb950') : 
+                     }%; background-color: ${geminiSessionInfo && geminiSessionInfo.hasSession ? 
+                       (geminiSessionInfo.estimatedTimeRemaining.isExpired ? '#f85149' : 
+                        geminiSessionInfo.estimatedTimeRemaining.ms < 600000 ? '#4285f4' : '#3fb950') : 
                        timeProgressColor
                      };"></div>
               </div>
@@ -280,12 +280,12 @@ class SessionTimer {
     const popoverHTML = `
       <div class="session-timer-tooltip" id="message-info-tooltip" style="display: ${this.isTooltipVisible ? 'block' : 'none'};">
         <div class="session-timer-tooltip-content">
-          <h4>Claude Pro Plan Usage</h4>
-          <p>Shows user messages (prompts) sent in this session. Claude Pro doesn't have fixed message limits - usage is based on message complexity, conversation length, and current capacity.</p>
+          <h4>Gemini Pro Plan Usage</h4>
+          <p>Shows user messages (prompts) sent in this session. Gemini Pro doesn't have fixed message limits - usage is based on message complexity, conversation length, and current capacity.</p>
           <p>The "45 est." is a rough estimate for typical short messages (~200 sentences). You may send more or fewer messages depending on complexity.</p>
           <p><strong>Projects benefit from caching</strong> - repeated content uses fewer resources, allowing more messages.</p>
           <div class="session-timer-tooltip-link">
-            <a href="https://support.anthropic.com/en/articles/9797557-usage-limit-best-practices" target="_blank" rel="noopener noreferrer">
+            <a href="https://support.google.com/en/articles/9797557-usage-limit-best-practices" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-external-link-alt"></i> Usage Limit Best Practices
             </a>
           </div>
@@ -548,16 +548,16 @@ class SessionTimer {
   /**
    * Update header status display
    */
-  updateHeaderStatus(timer, claudeSessionInfo) {
+  updateHeaderStatus(timer, geminiSessionInfo) {
     const statusDot = this.container.querySelector('.session-timer-status-dot');
     const statusText = this.container.querySelector('.session-timer-status-text');
     
-    // If we have Claude session info, prioritize that
-    if (claudeSessionInfo && claudeSessionInfo.hasSession) {
-      if (claudeSessionInfo.estimatedTimeRemaining.isExpired) {
+    // If we have Gemini session info, prioritize that
+    if (geminiSessionInfo && geminiSessionInfo.hasSession) {
+      if (geminiSessionInfo.estimatedTimeRemaining.isExpired) {
         statusDot.className = 'session-timer-status-dot expired';
         statusText.textContent = 'Session Expired';
-      } else if (claudeSessionInfo.estimatedTimeRemaining.ms < 600000) { // < 10 minutes
+      } else if (geminiSessionInfo.estimatedTimeRemaining.ms < 600000) { // < 10 minutes
         statusDot.className = 'session-timer-status-dot warning';
         statusText.textContent = 'Ending Soon';
       } else {

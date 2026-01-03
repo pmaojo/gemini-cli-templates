@@ -20,9 +20,9 @@ const WebSocketServer = require('./analytics/notifications/WebSocketServer');
 const NotificationManager = require('./analytics/notifications/NotificationManager');
 const PerformanceMonitor = require('./analytics/utils/PerformanceMonitor');
 const ConsoleBridge = require('./console-bridge');
-const ClaudeAPIProxy = require('./claude-api-proxy');
+const GeminiAPIProxy = require('./gemini-api-proxy');
 
-class ClaudeAnalytics {
+class GeminiAnalytics {
   constructor(options = {}) {
     this.options = options;
     this.verbose = options.verbose || false;
@@ -46,7 +46,7 @@ class ClaudeAnalytics {
     this.consoleBridge = null;
     this.cloudflareProcess = null;
     this.publicUrl = null;
-    this.claudeApiProxy = null;
+    this.geminiApiProxy = null;
     this.data = {
       conversations: [],
       summary: {},
@@ -85,17 +85,17 @@ class ClaudeAnalytics {
 
   async initialize() {
     const homeDir = os.homedir();
-    this.claudeDir = path.join(homeDir, '.claude');
-    this.claudeDesktopDir = path.join(homeDir, 'Library', 'Application Support', 'Claude');
-    this.claudeStatsigDir = path.join(this.claudeDir, 'statsig');
+    this.geminiDir = path.join(homeDir, '.gemini');
+    this.geminiDesktopDir = path.join(homeDir, 'Library', 'Application Support', 'Gemini');
+    this.geminiStatsigDir = path.join(this.geminiDir, 'statsig');
 
-    // Check if Claude directories exist
-    if (!(await fs.pathExists(this.claudeDir))) {
-      throw new Error(`Claude Code directory not found at ${this.claudeDir}`);
+    // Check if Gemini directories exist
+    if (!(await fs.pathExists(this.geminiDir))) {
+      throw new Error(`Gemini CLI directory not found at ${this.geminiDir}`);
     }
 
-    // Initialize conversation analyzer with Claude directory and cache
-    this.conversationAnalyzer = new ConversationAnalyzer(this.claudeDir, this.dataCache);
+    // Initialize conversation analyzer with Gemini directory and cache
+    this.conversationAnalyzer = new ConversationAnalyzer(this.geminiDir, this.dataCache);
 
     await this.loadInitialData();
     this.setupFileWatchers();
@@ -116,11 +116,11 @@ class ClaudeAnalytics {
       // Update our data structure with analyzed data
       this.data = analyzedData;
       
-      // Get Claude session information
-      const claudeSessionInfo = await this.getClaudeSessionInfo();
+      // Get Gemini session information
+      const geminiSessionInfo = await this.getGeminiSessionInfo();
       
-      // Analyze session data for Max plan usage tracking with real Claude session info
-      this.data.sessionData = this.sessionAnalyzer.analyzeSessionData(this.data.conversations, claudeSessionInfo);
+      // Analyze session data for Max plan usage tracking with real Gemini session info
+      this.data.sessionData = this.sessionAnalyzer.analyzeSessionData(this.data.conversations, geminiSessionInfo);
       
       // Send real-time notifications if WebSocket is available
       if (this.notificationManager) {
@@ -131,7 +131,7 @@ class ClaudeAnalytics {
       }
 
     } catch (error) {
-      console.error(chalk.red('Error loading Claude data:'), error.message);
+      console.error(chalk.red('Error loading Gemini data:'), error.message);
       throw error;
     }
   }
@@ -141,10 +141,10 @@ class ClaudeAnalytics {
     const projects = [];
 
     try {
-      const files = await fs.readdir(this.claudeDir);
+      const files = await fs.readdir(this.geminiDir);
 
       for (const file of files) {
-        const filePath = path.join(this.claudeDir, file);
+        const filePath = path.join(this.geminiDir, file);
         const stats = await fs.stat(filePath);
 
         if (stats.isDirectory() && !file.startsWith('.')) {
@@ -303,7 +303,7 @@ class ClaudeAnalytics {
     }
 
     // Fallback: Extract project name from file path like:
-    // /Users/user/.claude/projects/-Users-user-Projects-MyProject/conversation.jsonl
+    // /Users/user/.gemini/projects/-Users-user-Projects-MyProject/conversation.jsonl
     const pathParts = filePath.split('/');
     const projectIndex = pathParts.findIndex(part => part === 'projects');
 
@@ -431,8 +431,8 @@ class ClaudeAnalytics {
     const avgTokensPerConversation = totalConversations > 0 ? Math.round(totalTokens / totalConversations) : 0;
     const totalFileSize = conversations.reduce((sum, conv) => sum + conv.fileSize, 0);
 
-    // Calculate real Claude sessions (5-hour periods)
-    const claudeSessions = this.calculateClaudeSessions(conversations);
+    // Calculate real Gemini sessions (5-hour periods)
+    const geminiSessions = this.calculateGeminiSessions(conversations);
 
     return {
       totalConversations,
@@ -442,11 +442,11 @@ class ClaudeAnalytics {
       avgTokensPerConversation,
       totalFileSize: this.formatBytes(totalFileSize),
       lastActivity: conversations.length > 0 ? conversations[0].lastModified : null,
-      claudeSessions,
+      geminiSessions,
     };
   }
 
-  calculateClaudeSessions(conversations) {
+  calculateGeminiSessions(conversations) {
     // Collect all message timestamps across all conversations
     const allMessages = [];
 
@@ -592,7 +592,7 @@ class ClaudeAnalytics {
   setupFileWatchers() {
     // Setup file watchers using the FileWatcher module
     this.fileWatcher.setupFileWatchers(
-      this.claudeDir,
+      this.geminiDir,
       // Data refresh callback
       async () => {
         await this.loadInitialData();
@@ -601,7 +601,7 @@ class ClaudeAnalytics {
       async () => {
         const enrichmentResult = await this.processDetector.enrichWithRunningProcesses(
           this.data.conversations, 
-          this.claudeDir, 
+          this.geminiDir, 
           this.stateCalculator
         );
         this.data.conversations = enrichmentResult.conversations;
@@ -748,7 +748,7 @@ class ClaudeAnalytics {
     this.app.get('/api/conversation-state', async (req, res) => {
       try {
         // Detect running processes for accurate state calculation
-        const runningProcesses = await this.processDetector.detectRunningClaudeProcesses();
+        const runningProcesses = await this.processDetector.detectRunningGeminiProcesses();
         const activeStates = {};
         
         // Calculate states for ALL conversations, not just those with runningProcess
@@ -856,12 +856,12 @@ class ClaudeAnalytics {
     // Session data endpoint for Max plan usage tracking
     this.app.get('/api/session/data', async (req, res) => {
       try {
-        // Get real-time Claude session information
-        const claudeSessionInfo = await this.getClaudeSessionInfo();
+        // Get real-time Gemini session information
+        const geminiSessionInfo = await this.getGeminiSessionInfo();
         
         if (!this.data.sessionData) {
           // Generate session data if not available
-          this.data.sessionData = this.sessionAnalyzer.analyzeSessionData(this.data.conversations, claudeSessionInfo);
+          this.data.sessionData = this.sessionAnalyzer.analyzeSessionData(this.data.conversations, geminiSessionInfo);
         }
 
         const timerData = this.sessionAnalyzer.getSessionTimerData(this.data.sessionData);
@@ -869,7 +869,7 @@ class ClaudeAnalytics {
         res.json({
           ...this.data.sessionData,
           timer: timerData,
-          claudeSessionInfo: claudeSessionInfo,
+          geminiSessionInfo: geminiSessionInfo,
           timestamp: Date.now()
         });
       } catch (error) {
@@ -920,7 +920,7 @@ class ClaudeAnalytics {
           }
         }).filter(Boolean);
 
-        // Extract actual messages from Claude Code format
+        // Extract actual messages from Gemini CLI format
         const messages = rawMessages.map(item => {
           if (item.message && item.message.role) {
             let content = '';
@@ -1001,7 +1001,7 @@ class ClaudeAnalytics {
         // Update process information and conversation states
         const enrichmentResult = await this.processDetector.enrichWithRunningProcesses(
           this.data.conversations, 
-          this.claudeDir, 
+          this.geminiDir, 
           this.stateCalculator
         );
         this.data.conversations = enrichmentResult.conversations;
@@ -1012,7 +1012,7 @@ class ClaudeAnalytics {
         
         for (const conv of activeConversations) {
           try {
-            const conversationFile = path.join(this.claudeDir, conv.fileName);
+            const conversationFile = path.join(this.geminiDir, conv.fileName);
             const content = await fs.readFile(conversationFile, 'utf8');
             const parsedMessages = content.split('\n')
               .filter(line => line.trim())
@@ -1120,18 +1120,18 @@ class ClaudeAnalytics {
       });
     });
 
-    // Claude session information endpoint
-    this.app.get('/api/claude/session', async (req, res) => {
+    // Gemini session information endpoint
+    this.app.get('/api/gemini/session', async (req, res) => {
       try {
-        const sessionInfo = await this.getClaudeSessionInfo();
+        const sessionInfo = await this.getGeminiSessionInfo();
         res.json({
           ...sessionInfo,
           timestamp: Date.now()
         });
       } catch (error) {
-        console.error('Error getting Claude session info:', error);
+        console.error('Error getting Gemini session info:', error);
         res.status(500).json({ 
-          error: 'Failed to get Claude session info',
+          error: 'Failed to get Gemini session info',
           timestamp: Date.now()
         });
       }
@@ -1255,7 +1255,7 @@ class ClaudeAnalytics {
         const allConversations = await this.conversationAnalyzer.loadConversations(this.stateCalculator);
 
         // Generate year in review statistics
-        const yearInReview = await this.yearInReview2025.generateYearInReview(allConversations, this.claudeDir);
+        const yearInReview = await this.yearInReview2025.generateYearInReview(allConversations, this.geminiDir);
 
         console.log(`✅ 2025 Year in Review generated with ${yearInReview.totalConversations} conversations`);
 
@@ -1305,12 +1305,12 @@ class ClaudeAnalytics {
     // Add fragment/hash or path for specific page
     if (openTo === 'agents') {
       fullUrl = `${baseUrl}/#agents`;
-      console.log(chalk.blue('🌐 Opening browser to Claude Code Chats...'));
+      console.log(chalk.blue('🌐 Opening browser to Gemini CLI Chats...'));
     } else if (openTo === '2025') {
       fullUrl = `${baseUrl}/2025`;
       console.log(chalk.blue('🎉 Opening browser to 2025 Year in Review...'));
     } else {
-      console.log(chalk.blue('🌐 Opening browser to Claude Code Analytics...'));
+      console.log(chalk.blue('🌐 Opening browser to Gemini CLI Analytics...'));
     }
 
     try {
@@ -1525,16 +1525,16 @@ class ClaudeAnalytics {
       // Connect notification manager to file watcher for typing detection
       this.fileWatcher.setNotificationManager(this.notificationManager);
       
-      // Initialize Claude API Proxy for bidirectional communication
-      console.log(chalk.blue('🌉 Initializing Claude API Proxy...'));
-      this.claudeApiProxy = new ClaudeAPIProxy();
-      await this.claudeApiProxy.start();
-      console.log(chalk.green('✅ Claude API Proxy initialized on port 3335'));
+      // Initialize Gemini API Proxy for bidirectional communication
+      console.log(chalk.blue('🌉 Initializing Gemini API Proxy...'));
+      this.geminiApiProxy = new GeminiAPIProxy();
+      await this.geminiApiProxy.start();
+      console.log(chalk.green('✅ Gemini API Proxy initialized on port 3335'));
       
       // Setup notification subscriptions
       this.setupNotificationSubscriptions();
       
-      // Initialize Console Bridge for Claude Code interaction
+      // Initialize Console Bridge for Gemini CLI interaction
       await this.initializeConsoleBridge();
       
       console.log(chalk.green('✅ WebSocket, notifications, and console bridge initialized'));
@@ -1544,7 +1544,7 @@ class ClaudeAnalytics {
   }
 
   /**
-   * Initialize Console Bridge for Claude Code interaction
+   * Initialize Console Bridge for Gemini CLI interaction
    */
   async initializeConsoleBridge() {
     try {
@@ -1594,7 +1594,7 @@ class ClaudeAnalytics {
     
     // Listen for responses from main WebSocket and forward to bridge
     this.webSocketServer.on('console_response', (responseData) => {
-      console.log(chalk.blue('📱 Forwarding console response to Claude Code'));
+      console.log(chalk.blue('📱 Forwarding console response to Gemini CLI'));
       
       if (this.consoleBridge) {
         this.consoleBridge.handleWebMessage({
@@ -1657,7 +1657,7 @@ class ClaudeAnalytics {
   }
 
   /**
-   * Load available agents from .claude/agents directories (project and user level)
+   * Load available agents from .gemini/agents directories (project and user level)
    * @returns {Promise<Array>} Array of agent objects
    */
   async loadAgents() {
@@ -1665,12 +1665,12 @@ class ClaudeAnalytics {
     const homeDir = os.homedir();
     
     // Define agent paths (user level and project level)
-    const userAgentsDir = path.join(homeDir, '.claude', 'agents');
+    const userAgentsDir = path.join(homeDir, '.gemini', 'agents');
     const projectAgentsDirs = [];
     
     try {
-      // 1. Check current working directory for .claude/agents
-      const currentProjectAgentsDir = path.join(process.cwd(), '.claude', 'agents');
+      // 1. Check current working directory for .gemini/agents
+      const currentProjectAgentsDir = path.join(process.cwd(), '.gemini', 'agents');
       if (await fs.pathExists(currentProjectAgentsDir)) {
         const currentProjectName = path.basename(process.cwd());
         projectAgentsDirs.push({
@@ -1679,13 +1679,13 @@ class ClaudeAnalytics {
         });
       }
       
-      // 2. Check parent directories for .claude/agents (for monorepo/nested projects)
+      // 2. Check parent directories for .gemini/agents (for monorepo/nested projects)
       let currentDir = process.cwd();
       let parentDir = path.dirname(currentDir);
       
-      // Search up to 3 levels up for .claude/agents
+      // Search up to 3 levels up for .gemini/agents
       for (let i = 0; i < 3 && parentDir !== currentDir; i++) {
-        const parentProjectAgentsDir = path.join(parentDir, '.claude', 'agents');
+        const parentProjectAgentsDir = path.join(parentDir, '.gemini', 'agents');
         
         if (await fs.pathExists(parentProjectAgentsDir)) {
           const parentProjectName = path.basename(parentDir);
@@ -1704,12 +1704,12 @@ class ClaudeAnalytics {
         parentDir = path.dirname(currentDir);
       }
       
-      // 3. Find all project directories that might have agents (in ~/.claude/projects)
-      const projectsDir = path.join(this.claudeDir, 'projects');
+      // 3. Find all project directories that might have agents (in ~/.gemini/projects)
+      const projectsDir = path.join(this.geminiDir, 'projects');
       if (await fs.pathExists(projectsDir)) {
         const projectDirs = await fs.readdir(projectsDir);
         for (const projectDir of projectDirs) {
-          const projectAgentsDir = path.join(projectsDir, projectDir, '.claude', 'agents');
+          const projectAgentsDir = path.join(projectsDir, projectDir, '.gemini', 'agents');
           if (await fs.pathExists(projectAgentsDir)) {
             projectAgentsDirs.push({
               path: projectAgentsDir,
@@ -1958,18 +1958,18 @@ class ClaudeAnalytics {
   }
 
   /**
-   * Get Claude session information from statsig files
+   * Get Gemini session information from statsig files
    */
-  async getClaudeSessionInfo() {
+  async getGeminiSessionInfo() {
     try {
-      if (!await fs.pathExists(this.claudeStatsigDir)) {
+      if (!await fs.pathExists(this.geminiStatsigDir)) {
         return {
           hasSession: false,
-          error: 'Claude statsig directory not found'
+          error: 'Gemini statsig directory not found'
         };
       }
 
-      const files = await fs.readdir(this.claudeStatsigDir);
+      const files = await fs.readdir(this.geminiStatsigDir);
       const sessionFile = files.find(file => file.startsWith('statsig.session_id.'));
       
       if (!sessionFile) {
@@ -1979,7 +1979,7 @@ class ClaudeAnalytics {
         };
       }
 
-      const sessionFilePath = path.join(this.claudeStatsigDir, sessionFile);
+      const sessionFilePath = path.join(this.geminiStatsigDir, sessionFile);
       const sessionData = await fs.readFile(sessionFilePath, 'utf8');
       const sessionInfo = JSON.parse(sessionData);
 
@@ -1998,7 +1998,7 @@ class ClaudeAnalytics {
       const timeSinceLastUpdateMinutes = Math.floor(timeSinceLastUpdate / (1000 * 60));
       
       // CORRECTED: Calculate next reset time based on scheduled reset hours
-      // Claude sessions reset at specific times, not fixed durations
+      // Gemini sessions reset at specific times, not fixed durations
       const resetHours = [1, 7, 13, 19]; // 1am, 7am, 1pm, 7pm local time
       const sessionStartDate = new Date(startTime);
       
@@ -2296,9 +2296,9 @@ class ClaudeAnalytics {
       this.consoleBridge.shutdown();
     }
     
-    // Stop Claude API Proxy
-    if (this.claudeApiProxy) {
-      this.claudeApiProxy.stop();
+    // Stop Gemini API Proxy
+    if (this.geminiApiProxy) {
+      this.geminiApiProxy.stop();
     }
     
     if (this.httpServer) {
@@ -2322,12 +2322,12 @@ async function runAnalytics(options = {}) {
   const openTo = options.openTo;
   
   if (openTo === 'agents') {
-    console.log(chalk.blue('💬 Starting Claude Code Chats Dashboard...'));
+    console.log(chalk.blue('💬 Starting Gemini CLI Chats Dashboard...'));
   } else {
-    console.log(chalk.blue('📊 Starting Claude Code Analytics Dashboard...'));
+    console.log(chalk.blue('📊 Starting Gemini CLI Analytics Dashboard...'));
   }
 
-  const analytics = new ClaudeAnalytics(options);
+  const analytics = new GeminiAnalytics(options);
 
   try {
     // Handle Cloudflare Tunnel prompt BEFORE initializing anything
@@ -2359,7 +2359,7 @@ async function runAnalytics(options = {}) {
     const accessUrl = analytics.publicUrl || `http://localhost:${analytics.port}`;
     
     if (openTo === 'agents') {
-      console.log(chalk.green('✅ Claude Code Chats dashboard is running!'));
+      console.log(chalk.green('✅ Gemini CLI Chats dashboard is running!'));
       console.log(chalk.cyan(`📱 Access at: ${accessUrl}/#agents`));
     } else {
       console.log(chalk.green('✅ Analytics dashboard is running!'));

@@ -1,10 +1,10 @@
 # Using MCP Tools in Commands and Agents
 
-Complete guide to using MCP tools effectively in Claude Code plugin commands and agents.
+Complete guide to using MCP tools effectively in Gemini CLI plugin commands and agents.
 
 ## Overview
 
-Once an MCP server is configured, its tools become available with the prefix `mcp__plugin_<plugin-name>_<server-name>__<tool-name>`. Use these tools in commands and agents just like built-in Claude Code tools.
+Once an MCP server is configured, its tools become available with the prefix `mcp__plugin_<plugin-name>_<server-name>__<tool-name>`. Use these tools in commands and agents just like built-in Gemini CLI tools.
 
 ## Tool Naming Convention
 
@@ -150,7 +150,7 @@ The agent has access to all Asana MCP tools without pre-approval.
 ### Agent Tool Access
 
 Agents have broader tool access than commands:
-- Can use any tool Claude determines is necessary
+- Can use any tool Gemini determines is necessary
 - Don't need pre-allowed lists
 - Should document which tools they typically use
 
@@ -241,10 +241,10 @@ Each MCP tool has a schema defining its parameters. View with `/mcp`.
 
 ### Calling Tools with Parameters
 
-Claude automatically structures tool calls based on schema:
+Gemini automatically structures tool calls based on schema:
 
 ```typescript
-// Claude generates this internally
+// Gemini generates this internally
 {
   toolName: "mcp__plugin_asana_asana__asana_create_task",
   input: {
@@ -348,7 +348,7 @@ When tools don't depend on each other, call in parallel:
 
 ```markdown
 Steps:
-1. Make parallel calls (Claude handles this automatically):
+1. Make parallel calls (Gemini handles this automatically):
    - mcp__plugin_api_server__get_project
    - mcp__plugin_api_server__get_users
    - mcp__plugin_api_server__get_tags
@@ -412,10 +412,10 @@ Ensure you're authenticated to Asana before running this command.
 ### Local Testing
 
 1. **Configure MCP server** in `.mcp.json`
-2. **Install plugin locally** in `.claude-plugin/`
+2. **Install plugin locally** in `.gemini-plugin/`
 3. **Verify tools available** with `/mcp`
 4. **Test command** that uses tools
-5. **Check debug output**: `claude --debug`
+5. **Check debug output**: `gemini --debug`
 
 ### Test Scenarios
 
@@ -507,7 +507,7 @@ Steps:
 - MCP server configured correctly
 - Server connected (check `/mcp`)
 - Tool names match exactly (case-sensitive)
-- Restart Claude Code after config changes
+- Restart Gemini CLI after config changes
 
 ### Tool Calls Failing
 
@@ -515,7 +515,7 @@ Steps:
 - Authentication is valid
 - Parameters match tool schema
 - Required parameters provided
-- Check `claude --debug` logs
+- Check `gemini --debug` logs
 
 ### Performance Issues
 

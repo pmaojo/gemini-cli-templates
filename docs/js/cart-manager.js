@@ -1,4 +1,4 @@
-// Shopping Cart Manager for Claude Code Templates
+// Shopping Cart Manager for Gemini CLI Templates
 class CartManager {
     constructor() {
         this.cart = {
@@ -299,7 +299,7 @@ class CartManager {
 
     // Update generated command
     updateCommand() {
-        let command = 'npx claude-code-templates@latest';
+        let command = 'npx gemini-code-templates@latest';
         
         if (this.cart.agents.length > 0) {
             const agentPaths = this.cart.agents.map(item => this.getCleanPath(item.path)).join(',');
@@ -402,12 +402,12 @@ class CartManager {
 
     // Save cart to localStorage
     saveCartToStorage() {
-        localStorage.setItem('claudeCodeCart', JSON.stringify(this.cart));
+        localStorage.setItem('geminiCodeCart', JSON.stringify(this.cart));
     }
 
     // Load cart from localStorage
     loadCartFromStorage() {
-        const saved = localStorage.getItem('claudeCodeCart');
+        const saved = localStorage.getItem('geminiCodeCart');
         if (saved) {
             try {
                 this.cart = JSON.parse(saved);
@@ -634,7 +634,7 @@ function toggleShareDropdown() {
 
 function shareOnTwitter() {
     const command = document.getElementById('generatedCommand').textContent.trim();
-    const message = `🚀 Just created this Claude Code Templates stack!
+    const message = `🚀 Just created this Gemini CLI Templates stack!
 
 Just run this command:
 ${command}
@@ -649,7 +649,7 @@ Create yours at https://aitmpl.com`;
 
 function shareOnThreads() {
     const command = document.getElementById('generatedCommand').textContent.trim();
-    const message = `🚀 Just created this Claude Code Templates stack!
+    const message = `🚀 Just created this Gemini CLI Templates stack!
 
 Just run this command:
 ${command}

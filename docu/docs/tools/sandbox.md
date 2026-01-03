@@ -10,22 +10,22 @@ Cloud execution environment for safe testing and experimentation.
 
 Add to your `.env` file:
 ```bash
-ANTHROPIC_API_KEY=your_anthropic_key_here
+ANTHROPIC_API_KEY=your_google_key_here
 E2B_API_KEY=your_e2b_key_here
 ```
 
-Get keys at [console.anthropic.com](https://console.anthropic.com/) and [e2b.dev](https://e2b.dev/).
+Get keys at [console.google.com](https://console.google.com/) and [e2b.dev](https://e2b.dev/).
 
 ## Launch Commands
 
 ### Basic execution
 ```bash
-npx claude-code-templates@latest --sandbox e2b --prompt "your task"
+npx gemini-code-templates@latest --sandbox e2b --prompt "your task"
 ```
 
 ### With components
 ```bash
-npx claude-code-templates@latest --sandbox e2b --agent frontend-developer --prompt "optimize React components"
+npx gemini-code-templates@latest --sandbox e2b --agent frontend-developer --prompt "optimize React components"
 ```
 
 ## Features
@@ -37,7 +37,7 @@ npx claude-code-templates@latest --sandbox e2b --agent frontend-developer --prom
 - **Resource scaling** - Handle intensive computational tasks
 # With specific environment and timeout
 ```
-npx claude-code-templates@latest --sandbox e2b --agent security/security-auditor --prompt "audit this codebase" --timeout 300
+npx gemini-code-templates@latest --sandbox e2b --agent security/security-auditor --prompt "audit this codebase" --timeout 300
 ```
 
 ## 🔒 Isolation Features

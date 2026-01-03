@@ -4,9 +4,9 @@ Complete reference for `plugin.json` configuration.
 
 ## File Location
 
-**Required path**: `.claude-plugin/plugin.json`
+**Required path**: `.gemini-plugin/plugin.json`
 
-The manifest MUST be in the `.claude-plugin/` directory at the plugin root. Claude Code will not recognize plugins without this file in the correct location.
+The manifest MUST be in the `.gemini-plugin/` directory at the plugin root. Gemini CLI will not recognize plugins without this file in the correct location.
 
 ## Complete Field Reference
 
@@ -19,7 +19,7 @@ The manifest MUST be in the `.claude-plugin/` directory at the plugin root. Clau
 **Example**: `"test-automation-suite"`
 
 The unique identifier for the plugin. Used for:
-- Plugin identification in Claude Code
+- Plugin identification in Gemini CLI
 - Conflict detection with other plugins
 - Command namespacing (optional)
 
@@ -351,7 +351,7 @@ All paths in component fields must follow these rules:
 
 ### Resolution Order
 
-When Claude Code loads components:
+When Gemini CLI loads components:
 
 1. **Default directories**: Scans standard locations first
    - `./commands/`
@@ -374,7 +374,7 @@ When Claude Code loads components:
 
 ### Manifest Validation
 
-Claude Code validates the manifest on plugin load:
+Gemini CLI validates the manifest on plugin load:
 
 **Syntax validation**:
 - Valid JSON format

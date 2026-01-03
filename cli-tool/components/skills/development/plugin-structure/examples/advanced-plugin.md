@@ -6,7 +6,7 @@ A complex, enterprise-grade plugin with MCP integration and advanced organizatio
 
 ```
 enterprise-devops/
-├── .claude-plugin/
+├── .gemini-plugin/
 │   └── plugin.json
 ├── commands/
 │   ├── ci/
@@ -100,7 +100,7 @@ enterprise-devops/
 
 ## File Contents
 
-### .claude-plugin/plugin.json
+### .gemini-plugin/plugin.json
 
 ```json
 {

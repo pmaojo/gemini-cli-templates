@@ -13,20 +13,20 @@ Templates are complete project configurations that install multiple components t
 ## Installation
 
 ### 📦 Basic Installation
-Install this component locally in your project. Works with your existing Claude Code setup.
+Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx claude-code-templates@latest --template react --yes
+npx gemini-code-templates@latest --template react --yes
 ```
 
 ### Template with Directory
 ```bash
-npx claude-code-templates@latest --template nextjs --directory ./my-app --yes
+npx gemini-code-templates@latest --template nextjs --directory ./my-app --yes
 ```
 
 ### Template with Additional Components
 ```bash
-npx claude-code-templates@latest \
+npx gemini-code-templates@latest \
   --template react \
   --agent security/security-auditor \
   --hook notifications/slack-notifications
@@ -38,7 +38,7 @@ Templates create a complete setup:
 
 ### File Structure
 ```
-.claude/
+.gemini/
 ├── agents/           # Template-specific agents
 ├── commands/         # Curated commands
 ├── mcps/            # Relevant integrations

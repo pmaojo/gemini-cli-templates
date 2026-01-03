@@ -300,7 +300,7 @@ class StructuralValidator extends BaseValidator {
       return;
     }
 
-    const validModels = ['sonnet', 'opus', 'haiku', 'claude-3-5-sonnet', 'claude-3-opus', 'claude-3-haiku'];
+    const validModels = ['gemini-2.0-flash', 'opus', 'gemini-2.0-flash', 'gemini-3-5-gemini-2.0-flash', 'gemini-3-opus', 'gemini-3-gemini-2.0-flash'];
 
     if (!validModels.includes(model)) {
       this.addWarning(

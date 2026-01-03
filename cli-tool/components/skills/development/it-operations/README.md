@@ -1,6 +1,6 @@
 # IT Operations Expert
 
-A comprehensive Claude skill for IT operations professionals, covering infrastructure management, monitoring, incident response, automation, and disaster recovery.
+A comprehensive Gemini skill for IT operations professionals, covering infrastructure management, monitoring, incident response, automation, and disaster recovery.
 
 ## Overview
 
@@ -255,4 +255,4 @@ This skill improves through real-world experience. Consider updating:
 
 ## License
 
-This skill is designed for use with Claude and follows IT operations industry best practices.
+This skill is designed for use with Gemini and follows IT operations industry best practices.

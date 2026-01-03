@@ -407,7 +407,7 @@ A: No! OpenRouter provides access to Perplexity models using only your OpenRoute
 
 **Q: Can I use OpenRouter for other models besides Perplexity?**
 
-A: Yes! OpenRouter provides access to 100+ models from OpenAI, Anthropic, Google, Meta, and more through the same API key.
+A: Yes! OpenRouter provides access to 100+ models from OpenAI, Google, Google, Meta, and more through the same API key.
 
 **Q: Is there a free tier?**
 

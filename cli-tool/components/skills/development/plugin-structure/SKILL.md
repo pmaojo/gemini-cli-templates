@@ -1,31 +1,31 @@
 ---
 name: Plugin Structure
-description: This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "set up plugin.json", "use ${CLAUDE_PLUGIN_ROOT}", "add commands/agents/skills/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Claude Code plugin architecture best practices.
+description: This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "set up plugin.json", "use ${CLAUDE_PLUGIN_ROOT}", "add commands/agents/skills/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Gemini CLI plugin architecture best practices.
 version: 0.1.0
 ---
 
-# Plugin Structure for Claude Code
+# Plugin Structure for Gemini CLI
 
 ## Overview
 
-Claude Code plugins follow a standardized directory structure with automatic component discovery. Understanding this structure enables creating well-organized, maintainable plugins that integrate seamlessly with Claude Code.
+Gemini CLI plugins follow a standardized directory structure with automatic component discovery. Understanding this structure enables creating well-organized, maintainable plugins that integrate seamlessly with Gemini CLI.
 
 **Key concepts:**
 - Conventional directory layout for automatic discovery
-- Manifest-driven configuration in `.claude-plugin/plugin.json`
+- Manifest-driven configuration in `.gemini-plugin/plugin.json`
 - Component-based organization (commands, agents, skills, hooks)
 - Portable path references using `${CLAUDE_PLUGIN_ROOT}`
 - Explicit vs. auto-discovered component loading
 
 ## Directory Structure
 
-Every Claude Code plugin follows this organizational pattern:
+Every Gemini CLI plugin follows this organizational pattern:
 
 ```
 plugin-name/
-├── .claude-plugin/
+├── .gemini-plugin/
 │   └── plugin.json          # Required: Plugin manifest
-├── commands/                 # Slash commands (.md files)
+├── commands/                 # Gemini Commands (.md files)
 ├── agents/                   # Subagent definitions (.md files)
 ├── skills/                   # Agent skills (subdirectories)
 │   └── skill-name/
@@ -38,14 +38,14 @@ plugin-name/
 
 **Critical rules:**
 
-1. **Manifest location**: The `plugin.json` manifest MUST be in `.claude-plugin/` directory
-2. **Component locations**: All component directories (commands, agents, skills, hooks) MUST be at plugin root level, NOT nested inside `.claude-plugin/`
+1. **Manifest location**: The `plugin.json` manifest MUST be in `.gemini-plugin/` directory
+2. **Component locations**: All component directories (commands, agents, skills, hooks) MUST be at plugin root level, NOT nested inside `.gemini-plugin/`
 3. **Optional components**: Only create directories for components the plugin actually uses
 4. **Naming convention**: Use kebab-case for all directory and file names
 
 ## Plugin Manifest (plugin.json)
 
-The manifest defines plugin metadata and configuration. Located at `.claude-plugin/plugin.json`:
+The manifest defines plugin metadata and configuration. Located at `.gemini-plugin/plugin.json`:
 
 ### Required Fields
 
@@ -131,7 +131,7 @@ description: Command description
 Command implementation instructions...
 ```
 
-**Usage**: Commands integrate as native slash commands in Claude Code
+**Usage**: Commands integrate as native slash commands in Gemini CLI
 
 ### Agents
 
@@ -159,7 +159,7 @@ capabilities:
 Detailed agent instructions and knowledge...
 ```
 
-**Usage**: Users can invoke agents manually, or Claude Code selects them automatically based on task context
+**Usage**: Users can invoke agents manually, or Gemini CLI selects them automatically based on task context
 
 ### Skills
 
@@ -195,7 +195,7 @@ Skill instructions and guidance...
 
 **Supporting files**: Skills can include scripts, references, examples, or assets in subdirectories
 
-**Usage**: Claude Code autonomously activates skills based on task context matching the description
+**Usage**: Gemini CLI autonomously activates skills based on task context matching the description
 
 ### Hooks
 
@@ -228,7 +228,7 @@ hooks/
 
 **Available events**: PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification
 
-**Usage**: Hooks execute automatically in response to Claude Code events
+**Usage**: Hooks execute automatically in response to Gemini CLI events
 
 ### MCP Servers
 
@@ -251,7 +251,7 @@ hooks/
 }
 ```
 
-**Usage**: MCP servers integrate seamlessly with Claude Code's tool system
+**Usage**: MCP servers integrate seamlessly with Gemini CLI's tool system
 
 ## Portable Path References
 
@@ -338,9 +338,9 @@ source "${CLAUDE_PLUGIN_ROOT}/lib/common.sh"
 
 ## Auto-Discovery Mechanism
 
-Claude Code automatically discovers and loads components:
+Gemini CLI automatically discovers and loads components:
 
-1. **Plugin manifest**: Reads `.claude-plugin/plugin.json` when plugin enables
+1. **Plugin manifest**: Reads `.gemini-plugin/plugin.json` when plugin enables
 2. **Commands**: Scans `commands/` directory for `.md` files
 3. **Agents**: Scans `agents/` directory for `.md` files
 4. **Skills**: Scans `skills/` for subdirectories containing `SKILL.md`
@@ -348,9 +348,9 @@ Claude Code automatically discovers and loads components:
 6. **MCP servers**: Loads configuration from `.mcp.json` or manifest
 
 **Discovery timing**:
-- Plugin installation: Components register with Claude Code
+- Plugin installation: Components register with Gemini CLI
 - Plugin enable: Components become available for use
-- No restart required: Changes take effect on next Claude Code session
+- No restart required: Changes take effect on next Gemini CLI session
 
 **Override behavior**: Custom paths in `plugin.json` supplement (not replace) default directories
 
@@ -408,7 +408,7 @@ Claude Code automatically discovers and loads components:
 Single command with no dependencies:
 ```
 my-plugin/
-├── .claude-plugin/
+├── .gemini-plugin/
 │   └── plugin.json    # Just name field
 └── commands/
     └── hello.md       # Single command
@@ -419,7 +419,7 @@ my-plugin/
 Complete plugin with all component types:
 ```
 my-plugin/
-├── .claude-plugin/
+├── .gemini-plugin/
 │   └── plugin.json
 ├── commands/          # User-facing commands
 ├── agents/            # Specialized subagents
@@ -436,7 +436,7 @@ my-plugin/
 Plugin providing only skills:
 ```
 my-plugin/
-├── .claude-plugin/
+├── .gemini-plugin/
 │   └── plugin.json
 └── skills/
     ├── skill-one/
@@ -451,7 +451,7 @@ my-plugin/
 - Verify file is in correct directory with correct extension
 - Check YAML frontmatter syntax (commands, agents, skills)
 - Ensure skill has `SKILL.md` (not `README.md` or other name)
-- Confirm plugin is enabled in Claude Code settings
+- Confirm plugin is enabled in Gemini CLI settings
 
 **Path resolution errors**:
 - Replace all hardcoded paths with `${CLAUDE_PLUGIN_ROOT}`
@@ -460,10 +460,10 @@ my-plugin/
 - Test with `echo $CLAUDE_PLUGIN_ROOT` in hook scripts
 
 **Auto-discovery not working**:
-- Confirm directories are at plugin root (not in `.claude-plugin/`)
+- Confirm directories are at plugin root (not in `.gemini-plugin/`)
 - Check file naming follows conventions (kebab-case, correct extensions)
 - Verify custom paths in manifest are correct
-- Restart Claude Code to reload plugin configuration
+- Restart Gemini CLI to reload plugin configuration
 
 **Conflicts between plugins**:
 - Use unique, descriptive component names

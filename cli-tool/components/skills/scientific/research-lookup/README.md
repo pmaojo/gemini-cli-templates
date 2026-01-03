@@ -30,13 +30,13 @@ python scripts/research_lookup.py "Recent advances in CRISPR gene editing 2024"
 # Multiple queries with delay
 python scripts/research_lookup.py --batch "CRISPR applications" "gene therapy trials" "ethical considerations"
 
-# Claude Code integration (called automatically)
+# Gemini CLI integration (called automatically)
 python lookup.py "your research query here"
 ```
 
-### Claude Code Integration
+### Gemini CLI Integration
 
-The research lookup tool is automatically available in Claude Code when you:
+The research lookup tool is automatically available in Gemini CLI when you:
 
 1. **Ask research questions:** "Research recent advances in quantum computing"
 2. **Request literature reviews:** "Find current studies on climate change impacts"

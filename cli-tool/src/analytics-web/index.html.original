@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code Analytics - Terminal</title>
+    <title>Gemini CLI Analytics - Terminal</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <style>
         * {
@@ -34,7 +34,7 @@
         }
         
         .terminal-title {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 1.25rem;
             font-weight: normal;
             display: flex;
@@ -81,9 +81,9 @@
         }
         
         .github-star-btn:hover {
-            border-color: #d57455;
+            border-color: #1a73e8;
             background: #30363d;
-            color: #d57455;
+            color: #1a73e8;
             text-decoration: none;
         }
         
@@ -110,7 +110,7 @@
         }
         
         .stat-value {
-            color: #d57455;
+            color: #1a73e8;
             font-weight: bold;
         }
         
@@ -168,7 +168,7 @@
         
         .date-input:focus {
             outline: none;
-            border-color: #d57455;
+            border-color: #1a73e8;
         }
         
         .refresh-btn {
@@ -187,8 +187,8 @@
         }
         
         .refresh-btn:hover {
-            border-color: #d57455;
-            color: #d57455;
+            border-color: #1a73e8;
+            color: #1a73e8;
         }
         
         .refresh-btn.loading {
@@ -212,7 +212,7 @@
         }
         
         .chart-title {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 0.875rem;
             text-transform: uppercase;
             margin-bottom: 16px;
@@ -259,13 +259,13 @@
         }
         
         .filter-btn:hover {
-            border-color: #d57455;
-            color: #d57455;
+            border-color: #1a73e8;
+            color: #1a73e8;
         }
         
         .filter-btn.active {
-            background: #d57455;
-            border-color: #d57455;
+            background: #1a73e8;
+            border-color: #1a73e8;
             color: #0d1117;
         }
         
@@ -294,7 +294,7 @@
         }
         
         .session-id {
-            color: #d57455;
+            color: #1a73e8;
             font-family: monospace;
             display: flex;
             align-items: center;
@@ -361,7 +361,7 @@
         }
         
         .conversation-state {
-            color: #d57455;
+            color: #1a73e8;
             font-style: italic;
             font-size: 0.8rem;
         }
@@ -408,11 +408,11 @@
         }
         
         .status-square.success {
-            background: #d57455;
+            background: #1a73e8;
         }
         
         .status-square.tool {
-            background: #f97316;
+            background: #4285f4;
         }
         
         .status-square.error {
@@ -503,7 +503,7 @@
         }
         
         .detail-title {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 1.1rem;
         }
         
@@ -526,7 +526,7 @@
         
         .export-format-select:focus {
             outline: none;
-            border-color: #d57455;
+            border-color: #1a73e8;
         }
         
         .export-format-select option {
@@ -547,13 +547,13 @@
         }
         
         .btn:hover {
-            border-color: #d57455;
-            color: #d57455;
+            border-color: #1a73e8;
+            color: #1a73e8;
         }
         
         .btn-primary {
-            background: #d57455;
-            border-color: #d57455;
+            background: #1a73e8;
+            border-color: #1a73e8;
             color: #0d1117;
         }
         
@@ -605,7 +605,7 @@
         
         .search-input:focus {
             outline: none;
-            border-color: #d57455;
+            border-color: #1a73e8;
         }
         
         .conversation-history {
@@ -643,7 +643,7 @@
         }
         
         .message-role.assistant {
-            color: #d57455;
+            color: #1a73e8;
         }
         
         .message-time {
@@ -670,11 +670,11 @@
         }
         
         .message-type-indicator.success {
-            background: #d57455;
+            background: #1a73e8;
         }
         
         .message-type-indicator.tool {
-            background: #f97316;
+            background: #4285f4;
         }
         
         .message-type-indicator.error {
@@ -772,23 +772,23 @@
         <div class="terminal-header">
             <div class="terminal-title">
                 <span class="status-dot"></span>
-                claude-code-analytics
+                gemini-code-analytics
             </div>
             <div class="terminal-subtitle">real-time monitoring dashboard</div>
             <div class="terminal-subtitle" id="lastUpdate"></div>
             
-            <a href="https://github.com/davila7/claude-code-templates" target="_blank" class="github-star-btn" title="Give us a star on GitHub to support the project!">
+            <a href="https://github.com/davila7/gemini-cli-templates" target="_blank" class="github-star-btn" title="Give us a star on GitHub to support the project!">
                 <span class="star-icon">⭐</span>
                 <span>Star on GitHub</span>
             </a>
         </div>
         
         <div id="loading" class="loading">
-            loading claude code data...
+            loading gemini code data...
         </div>
         
         <div id="error" class="error" style="display: none;">
-            error: failed to load claude code data
+            error: failed to load gemini code data
         </div>
         
         <div id="dashboard" style="display: none;">
@@ -798,9 +798,9 @@
                     <span class="stat-value" id="totalConversations">0</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-label">claude sessions:</span>
-                    <span class="stat-value" id="claudeSessions">0</span>
-                    <span class="stat-sublabel" id="claudeSessionsDetail"></span>
+                    <span class="stat-label">gemini sessions:</span>
+                    <span class="stat-value" id="geminiSessions">0</span>
+                    <span class="stat-sublabel" id="geminiSessionsDetail"></span>
                 </div>
                 <div class="stat">
                     <span class="stat-label">tokens:</span>
@@ -1099,8 +1099,8 @@
                         currentState === 'User may be typing...' ||
                         currentState === 'Awaiting response...') {
                         
-                        const title = 'Claude is waiting for you!';
-                        const body = `Project: ${conv.project} - Claude needs your input`;
+                        const title = 'Gemini is waiting for you!';
+                        const body = `Project: ${conv.project} - Gemini needs your input`;
                         
                         sendNotification(title, body, conv.id);
                     }
@@ -1124,7 +1124,7 @@
                     // Send a test notification
                     sendNotification(
                         'Notifications enabled!', 
-                        'You will now receive alerts when Claude is waiting for your input.',
+                        'You will now receive alerts when Gemini is waiting for your input.',
                         null
                     );
                 } else {
@@ -1147,11 +1147,11 @@
             document.getElementById('activeProjects').textContent = summary.activeProjects;
             document.getElementById('dataSize').textContent = summary.totalFileSize;
             
-            // Update Claude sessions
-            if (summary.claudeSessions) {
-                document.getElementById('claudeSessions').textContent = summary.claudeSessions.total.toLocaleString();
-                document.getElementById('claudeSessionsDetail').textContent = 
-                    `this month: ${summary.claudeSessions.currentMonth} • this week: ${summary.claudeSessions.thisWeek}`;
+            // Update Gemini sessions
+            if (summary.geminiSessions) {
+                document.getElementById('geminiSessions').textContent = summary.geminiSessions.total.toLocaleString();
+                document.getElementById('geminiSessionsDetail').textContent = 
+                    `this month: ${summary.geminiSessions.currentMonth} • this week: ${summary.geminiSessions.thisWeek}`;
             }
         }
         
@@ -1260,11 +1260,11 @@
                     datasets: [{
                         label: 'Tokens',
                         data: dateRange.map(day => day.tokens),
-                        borderColor: '#d57455',
+                        borderColor: '#1a73e8',
                         backgroundColor: 'rgba(213, 116, 85, 0.1)',
                         borderWidth: 2,
-                        pointBackgroundColor: '#d57455',
-                        pointBorderColor: '#d57455',
+                        pointBackgroundColor: '#1a73e8',
+                        pointBorderColor: '#1a73e8',
                         pointRadius: 4,
                         pointHoverRadius: 6,
                         fill: true,
@@ -1280,7 +1280,7 @@
                         },
                         tooltip: {
                             backgroundColor: '#161b22',
-                            titleColor: '#d57455',
+                            titleColor: '#1a73e8',
                             bodyColor: '#c9d1d9',
                             borderColor: '#30363d',
                             borderWidth: 1,
@@ -1376,10 +1376,10 @@
             
             // Terminal-style colors
             const colors = [
-                '#d57455', // Orange
+                '#1a73e8', // Orange
                 '#3fb950', // Green
                 '#a5d6ff', // Blue
-                '#f97316', // Orange variant
+                '#4285f4', // Orange variant
                 '#c9d1d9', // Light gray
                 '#7d8590'  // Gray
             ];
@@ -1421,7 +1421,7 @@
                         },
                         tooltip: {
                             backgroundColor: '#161b22',
-                            titleColor: '#d57455',
+                            titleColor: '#1a73e8',
                             bodyColor: '#c9d1d9',
                             borderColor: '#30363d',
                             borderWidth: 1,
@@ -1469,7 +1469,7 @@
                         <div class="session-id-container">
                             <div class="session-id">
                                 ${conv.id.substring(0, 8)}...
-                                ${conv.runningProcess ? `<span class="process-indicator" title="Active claude process (PID: ${conv.runningProcess.pid})"></span>` : ''}
+                                ${conv.runningProcess ? `<span class="process-indicator" title="Active gemini process (PID: ${conv.runningProcess.pid})"></span>` : ''}
                             </div>
                             <div class="status-squares">
                                 ${generateStatusSquaresHTML(conv.statusSquares || [])}
@@ -1486,7 +1486,7 @@
                 </tr>
             `).join('');
             
-            // NEW: Add orphan processes (active claude commands without conversation)
+            // NEW: Add orphan processes (active gemini commands without conversation)
             if (window.allData && window.allData.orphanProcesses && window.allData.orphanProcesses.length > 0) {
                 const orphanRows = window.allData.orphanProcesses.map(process => `
                     <tr style="background: rgba(248, 81, 73, 0.1); cursor: default;">
@@ -1494,7 +1494,7 @@
                             <div class="session-id-container">
                                 <div class="session-id">
                                     orphan-${process.pid}
-                                    <span class="process-indicator orphan" title="Orphan claude process (PID: ${process.pid})"></span>
+                                    <span class="process-indicator orphan" title="Orphan gemini process (PID: ${process.pid})"></span>
                                 </div>
                             </div>
                         </td>
@@ -1816,7 +1816,7 @@
             
             // Download CSV
             const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            downloadFile(blob, `claude-conversation-${currentSession.id.substring(0, 8)}.csv`);
+            downloadFile(blob, `gemini-conversation-${currentSession.id.substring(0, 8)}.csv`);
         }
         
         function exportSessionAsJSON(sessionData) {
@@ -1845,7 +1845,7 @@
             // Download JSON
             const jsonString = JSON.stringify(exportData, null, 2);
             const blob = new Blob([jsonString], { type: 'application/json;charset=utf-8;' });
-            downloadFile(blob, `claude-conversation-${currentSession.id.substring(0, 8)}.json`);
+            downloadFile(blob, `gemini-conversation-${currentSession.id.substring(0, 8)}.json`);
         }
         
         function downloadFile(blob, filename) {

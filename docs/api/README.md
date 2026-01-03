@@ -1,6 +1,6 @@
 # API Directory - Documentation
 
-This directory contains **static files** for the Claude Code Templates project deployed on Vercel.
+This directory contains **static files** for the Gemini CLI Templates project deployed on Vercel.
 
 ## 📁 Structure Overview
 
@@ -88,4 +88,4 @@ See `/api/README.md` for documentation on:
 ---
 
 **Last Updated:** October 22, 2025
-**Maintained by:** Claude Code Templates Team
+**Maintained by:** Gemini CLI Templates Team

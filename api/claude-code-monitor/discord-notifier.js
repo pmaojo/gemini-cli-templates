@@ -1,4 +1,4 @@
-// Notificador de Discord para Claude Code Changelog
+// Notificador de Discord para Gemini Code Changelog
 
 import { neon } from '@neondatabase/serverless';
 import axios from 'axios';
@@ -40,8 +40,8 @@ export async function sendDiscordNotification(versionData) {
   }
 
   const payload = {
-    username: 'Claude Code Monitor',
-    avatar_url: 'https://raw.githubusercontent.com/anthropics/claude-code/main/assets/icon.png',
+    username: 'Gemini Code Monitor',
+    avatar_url: 'https://raw.githubusercontent.com/googles/gemini-code/main/assets/icon.png',
     embeds: [embed]
   };
 
@@ -65,13 +65,13 @@ export async function sendDiscordNotification(versionData) {
  */
 function buildDiscordEmbed({ version, changes, summary, npmUrl, githubUrl }) {
   const embed = {
-    title: `🚀 Claude Code ${version} Released`,
-    description: `A new version of Claude Code is available with **${summary.total} changes**!`,
+    title: `🚀 Gemini Code ${version} Released`,
+    description: `A new version of Gemini Code is available with **${summary.total} changes**!`,
     url: githubUrl,
-    color: 0x8B5CF6, // Purple (Claude color)
+    color: 0x8B5CF6, // Purple (Gemini color)
     fields: [],
     footer: {
-      text: 'Claude Code Changelog Monitor',
+      text: 'Gemini Code Changelog Monitor',
       icon_url: 'https://avatars.githubusercontent.com/u/100788936?s=200&v=4'
     },
     timestamp: new Date().toISOString()
@@ -116,7 +116,7 @@ function buildDiscordEmbed({ version, changes, summary, npmUrl, githubUrl }) {
   // Links
   embed.fields.push({
     name: '📦 Installation',
-    value: `\`\`\`bash\nnpm install -g @anthropic-ai/claude-code@${version}\n\`\`\``,
+    value: `\`\`\`bash\nnpm install -g @google-ai/gemini-code@${version}\n\`\`\``,
     inline: false
   });
 
@@ -159,7 +159,7 @@ async function logNotification(sql, versionId, notificationResult) {
  */
 async function markAsNotified(sql, versionId) {
   await sql`
-    UPDATE claude_code_versions
+    UPDATE gemini_code_versions
     SET
       discord_notified = true,
       discord_notification_sent_at = NOW()
@@ -177,7 +177,7 @@ export async function processAndNotify(versionId) {
   // Obtener datos de la versión
   const versionResult = await sql`
     SELECT *
-    FROM claude_code_versions
+    FROM gemini_code_versions
     WHERE id = ${versionId}
   `;
 

@@ -45,15 +45,15 @@ function createComponentModalHTML(component) {
     if (componentPath.endsWith('.json')) {
         componentPath = componentPath.replace(/\.json$/, '');
     }
-    const installCommand = `npx claude-code-templates@latest --${component.type}=${componentPath} --yes`;
+    const installCommand = `npx gemini-code-templates@latest --${component.type}=${componentPath} --yes`;
     
     // Generate global agent command for agents only
-    const globalAgentCommand = component.type === 'agent' ? `npx claude-code-templates@latest --create-agent ${componentPath}` : null;
+    const globalAgentCommand = component.type === 'agent' ? `npx gemini-code-templates@latest --create-agent ${componentPath}` : null;
     
     const description = getComponentDescription(component); // Full description
 
     // Construct GitHub URL
-    let githubUrl = 'https://github.com/davila7/claude-code-templates/';
+    let githubUrl = 'https://github.com/davila7/gemini-code-templates/';
     if (component.type === 'template') {
         githubUrl += `tree/main/cli-tool/templates/${component.folderPath}`;
     } else {
@@ -79,7 +79,7 @@ function createComponentModalHTML(component) {
                             <!-- Basic Installation -->
                             <div class="basic-installation-section">
                                 <h4>📦 Basic Installation</h4>
-                                <p class="installation-description">Install this ${component.type} locally in your project. Works with your existing Claude Code setup.</p>
+                                <p class="installation-description">Install this ${component.type} locally in your project. Works with your existing Gemini CLI setup.</p>
                                 <div class="command-line">
                                     <code>${installCommand}</code>
                                     <button class="copy-btn" data-command="${installCommand.replace(/"/g, '&quot;')}" onclick="copyToClipboard(this.dataset.command)">Copy</button>
@@ -87,9 +87,9 @@ function createComponentModalHTML(component) {
                             </div>
                             
                             ${globalAgentCommand ? `
-                            <!-- Global Agent (Claude Code SDK) -->
+                            <!-- Global Agent (Gemini CLI SDK) -->
                             <div class="global-agent-section">
-                                <h4>🌍 Global Agent (Claude Code SDK)</h4>
+                                <h4>🌍 Global Agent (Gemini CLI SDK)</h4>
                                 <p class="global-agent-description">Create a global AI agent accessible from anywhere with zero configuration. Perfect for automation and CI/CD workflows.</p>
                                 
                                 <div class="command-line">
@@ -108,7 +108,7 @@ function createComponentModalHTML(component) {
                                     <div class="global-features">
                                         <div class="feature">✅ Works in scripts, CI/CD, npm tasks</div>
                                         <div class="feature">✅ Auto-detects project context</div>
-                                        <div class="feature">✅ Powered by Claude Code SDK</div>
+                                        <div class="feature">✅ Powered by Gemini CLI SDK</div>
                                     </div>
                                 </div>
                             </div>` : ''}
@@ -117,7 +117,7 @@ function createComponentModalHTML(component) {
                             <!-- Run in E2B Sandbox (Cloud Execution) -->
                             <div class="e2b-sandbox-section">
                                 <h4>☁️ Run in E2B Sandbox (Cloud Execution) <span class="new-badge">NEW</span></h4>
-                                <p class="e2b-description">Execute Claude Code with this ${component.type} in an isolated cloud environment using E2B. Perfect for testing complex projects without affecting your local system.</p>
+                                <p class="e2b-description">Execute Gemini CLI with this ${component.type} in an isolated cloud environment using E2B. Perfect for testing complex projects without affecting your local system.</p>
                                 
                                 <div class="e2b-api-setup">
                                     <h5>🔑 Setup API Keys</h5>
@@ -125,13 +125,13 @@ function createComponentModalHTML(component) {
                                         <div class="env-comment">Add to your .env file:</div>
                                         <div class="env-example">
                                             <code>E2B_API_KEY=your_e2b_key_here</code>
-                                            <code>ANTHROPIC_API_KEY=your_anthropic_key_here</code>
+                                            <code>ANTHROPIC_API_KEY=your_google_key_here</code>
                                         </div>
                                     </div>
                                     
                                     <div class="command-line">
-                                        <code>npx claude-code-templates@latest --sandbox e2b --agent=${componentPath} --prompt "your development task"</code>
-                                        <button class="copy-btn" data-command="npx claude-code-templates@latest --sandbox e2b --agent=${componentPath} --prompt &quot;your development task&quot;" onclick="copyToClipboard(this.dataset.command)">Copy</button>
+                                        <code>npx gemini-code-templates@latest --sandbox e2b --agent=${componentPath} --prompt "your development task"</code>
+                                        <button class="copy-btn" data-command="npx gemini-code-templates@latest --sandbox e2b --agent=${componentPath} --prompt &quot;your development task&quot;" onclick="copyToClipboard(this.dataset.command)">Copy</button>
                                     </div>
                                 </div>
                                 
@@ -148,8 +148,8 @@ function createComponentModalHTML(component) {
                                         <a href="https://e2b.dev/dashboard" target="_blank" class="api-key-link">
                                             <span>🔑</span> E2B API Key
                                         </a>
-                                        <a href="https://console.anthropic.com" target="_blank" class="api-key-link">
-                                            <span>🔑</span> Anthropic API Key
+                                        <a href="https://console.google.com" target="_blank" class="api-key-link">
+                                            <span>🔑</span> Google API Key
                                         </a>
                                     </div>
                                 </div>

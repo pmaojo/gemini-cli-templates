@@ -304,8 +304,8 @@ git commit -m "chore(hotfix): bump version to v1.2.1
 
 Critical fix for $ARGUMENTS
 
-🤖 Generated with Claude Code
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with Gemini CLI
+Co-Authored-By: Gemini <noreply@Google.com>"
 ```
 
 ### 8. Create Emergency PR
@@ -360,7 +360,7 @@ gh pr create \
 
 **⚠️ This is a critical production hotfix requiring immediate deployment**
 
-🤖 Generated with Claude Code
+🤖 Generated with Gemini CLI
 EOF
 )" \
   --base main \

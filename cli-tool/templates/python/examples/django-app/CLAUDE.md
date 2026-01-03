@@ -1,6 +1,6 @@
 # Django Project Configuration
 
-This file provides specific guidance for Django web application development using Claude Code.
+This file provides specific guidance for Django web application development using Gemini Code.
 
 ## Project Overview
 

@@ -1,6 +1,6 @@
 /**
- * ActivityHeatmap - GitHub-style contribution calendar for Claude Code activity
- * Shows daily Claude Code usage over the last year with orange theme
+ * ActivityHeatmap - GitHub-style contribution calendar for Gemini CLI activity
+ * Shows daily Gemini CLI usage over the last year with orange theme
  */
 class ActivityHeatmap {
   constructor(container, dataService) {
@@ -688,9 +688,9 @@ class ActivityHeatmap {
       const activityCount = totalActivity || 0;
       
       if (this.currentMetric === 'messages') {
-        titleElement.innerHTML = `${this.formatNumber(activityCount)} <span style="color: #ff7f50;">Claude Code</span> ${this.currentMetric} in the last year`;
+        titleElement.innerHTML = `${this.formatNumber(activityCount)} <span style="color: #ff7f50;">Gemini CLI</span> ${this.currentMetric} in the last year`;
       } else if (this.currentMetric === 'tools') {
-        titleElement.innerHTML = `${this.formatNumber(activityCount)} <span style="color: #ff7f50;">Claude Code</span> ${this.currentMetric} in the last year`;
+        titleElement.innerHTML = `${this.formatNumber(activityCount)} <span style="color: #ff7f50;">Gemini CLI</span> ${this.currentMetric} in the last year`;
       } else {
         titleElement.innerHTML = `${this.formatNumber(activityCount)} ${this.currentMetric} in the last year`;
       }

@@ -1,10 +1,10 @@
-# Complete Guide to Creating Claude Code Status Lines
+# Complete Guide to Creating Gemini Code Status Lines
 
-This guide teaches you how to create custom status lines for Claude Code that display contextual information at the bottom of your interface, similar to terminal prompts in shells like Oh-my-zsh.
+This guide teaches you how to create custom status lines for Gemini Code that display contextual information at the bottom of your interface, similar to terminal prompts in shells like Oh-my-zsh.
 
-## What are Claude Code Status Lines?
+## What are Gemini Code Status Lines?
 
-Status lines are customizable information displays that appear at the bottom of the Claude Code interface. Each status line:
+Status lines are customizable information displays that appear at the bottom of the Gemini Code interface. Each status line:
 
 - **Shows contextual information** about your current session, model, directory, and project
 - **Updates automatically** when conversation messages change (max every 300ms)
@@ -53,12 +53,12 @@ This will help you create a status line, often reproducing your terminal prompt 
 #### 2. Manual Configuration
 Add directly to your settings file:
 
-**File**: `.claude/settings.json`
+**File**: `.gemini/settings.json`
 ```json
 {
   "statusLine": {
     "type": "command",
-    "command": "~/.claude/statusline.sh",
+    "command": "~/.gemini/statusline.sh",
     "padding": 0
   }
 }
@@ -73,9 +73,9 @@ Add directly to your settings file:
 
 | Type | Location | Scope | Usage |
 |------|----------|-------|--------|
-| **User Settings** | `~/.claude/settings.json` | All projects | Personal status line across all projects |
-| **Project Settings** | `.claude/settings.json` | Current project | Team-shared status line (committed) |
-| **Local Project Settings** | `.claude/settings.local.json` | Current project | Personal project status line (not committed) |
+| **User Settings** | `~/.gemini/settings.json` | All projects | Personal status line across all projects |
+| **Project Settings** | `.gemini/settings.json` | Current project | Team-shared status line (committed) |
+| **Local Project Settings** | `.gemini/settings.local.json` | Current project | Personal project status line (not committed) |
 
 ## Session Data Input
 
@@ -87,10 +87,10 @@ Your status line script receives comprehensive session data via stdin:
 {
   "hook_event_name": "Status",
   "session_id": "abc123-def456-789",
-  "transcript_path": "/Users/you/.claude/projects/my-project/transcript.jsonl",
+  "transcript_path": "/Users/you/.gemini/projects/my-project/transcript.jsonl",
   "cwd": "/Users/you/projects/my-project",
   "model": {
-    "id": "claude-3-5-sonnet-20241022",
+    "id": "gemini-3-5-sonnet-20241022",
     "display_name": "Sonnet"
   },
   "workspace": {
@@ -132,7 +132,7 @@ Your status line script receives comprehensive session data via stdin:
 #### Session Identity
 - `session_id`: Unique session identifier
 - `transcript_path`: Path to conversation transcript
-- `version`: Claude Code version
+- `version`: Gemini Code version
 - `output_style.name`: Current output style
 
 ## Complete Status Line Examples
@@ -632,7 +632,7 @@ echo -e "[$MODEL] 📁 $DIR | ⏰ $CURRENT_TIME | ⏱ $DURATION | ${PRODUCTIVITY
 #!/bin/bash
 # Status line with caching for expensive operations
 
-CACHE_DIR="$HOME/.claude/statusline_cache"
+CACHE_DIR="$HOME/.gemini/statusline_cache"
 mkdir -p "$CACHE_DIR"
 
 # Cache expensive git operations
@@ -772,7 +772,7 @@ DURATION_MS=$(echo "$input" | jq -r '.cost.total_duration_ms')
 LINES_NET=$(($(echo "$input" | jq -r '.cost.total_lines_added') - $(echo "$input" | jq -r '.cost.total_lines_removed')))
 
 # Build a comprehensive but single-line status
-# (Note: Only the first line of output is used by Claude Code)
+# (Note: Only the first line of output is used by Gemini Code)
 STATUS_PARTS=()
 STATUS_PARTS+=("[$MODEL]")
 STATUS_PARTS+=("📁 $DIR")
@@ -909,7 +909,7 @@ if __name__ == "__main__":
 input=$(cat)
 
 # Always provide fallback values
-MODEL=$(echo "$input" | jq -r '.model.display_name' 2>/dev/null || echo "Claude")
+MODEL=$(echo "$input" | jq -r '.model.display_name' 2>/dev/null || echo "Gemini")
 DIR=$(echo "$input" | jq -r '.workspace.current_dir' 2>/dev/null || pwd)
 DIR_NAME=$(basename "$DIR" 2>/dev/null || echo "Unknown")
 
@@ -992,12 +992,12 @@ fi
 
 ### Personal Development Setup
 
-**.claude/settings.json** (Project):
+**.gemini/settings.json** (Project):
 ```json
 {
   "statusLine": {
     "type": "command",
-    "command": "~/.claude/scripts/dev-statusline.py",
+    "command": "~/.gemini/scripts/dev-statusline.py",
     "padding": 0
   }
 }
@@ -1005,12 +1005,12 @@ fi
 
 ### Team-Shared Configuration
 
-**.claude/settings.json** (Committed):
+**.gemini/settings.json** (Committed):
 ```json
 {
   "statusLine": {
     "type": "command",
-    "command": "./.claude/statusline/team-status.sh",
+    "command": "./.gemini/statusline/team-status.sh",
     "padding": 1
   }
 }
@@ -1018,12 +1018,12 @@ fi
 
 ### Environment-Specific Status
 
-**.claude/settings.local.json** (Not committed):
+**.gemini/settings.local.json** (Not committed):
 ```json
 {
   "statusLine": {
     "type": "command", 
-    "command": "$HOME/.claude/statuslines/production-status.py",
+    "command": "$HOME/.gemini/statuslines/production-status.py",
     "padding": 0
   }
 }
@@ -1076,12 +1076,12 @@ fi
 
 **Test Command**:
 ```bash
-echo 'test-json-here' | ~/.claude/statusline.sh
+echo 'test-json-here' | ~/.gemini/statusline.sh
 ```
 
 **Performance Testing**:
 ```bash
-time echo 'test-json' | ~/.claude/statusline.sh
+time echo 'test-json' | ~/.gemini/statusline.sh
 ```
 
 ## Status Line Gallery
@@ -1110,7 +1110,7 @@ time echo 'test-json' | ~/.claude/statusline.sh
 
 ## Conclusion
 
-Claude Code status lines provide a powerful way to customize your development interface with contextual information that matters to you. With status lines, you can:
+Gemini Code status lines provide a powerful way to customize your development interface with contextual information that matters to you. With status lines, you can:
 
 - **Monitor session metrics** like cost, duration, and productivity
 - **Display project context** including git status, environment, and dependencies  
@@ -1120,4 +1120,4 @@ Claude Code status lines provide a powerful way to customize your development in
 
 Start with simple status lines and gradually add more sophisticated features as you become comfortable with the system. The key is finding the right balance of information density and visual clarity for your workflow.
 
-For more advanced customization and community examples, explore the Claude Code documentation and share your status line configurations with other developers.
+For more advanced customization and community examples, explore the Gemini Code documentation and share your status line configurations with other developers.

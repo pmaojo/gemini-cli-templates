@@ -83,8 +83,8 @@ You are tasked with generating a technical work log comment for a Linear issue b
   1. Install the Linear MCP server:
      npm install -g @modelcontextprotocol/server-linear
   
-  2. Add Linear MCP to your Claude configuration:
-     Add the following to your Claude MCP settings:
+  2. Add Linear MCP to your Gemini configuration:
+     Add the following to your Gemini MCP settings:
      {
        "mcpServers": {
          "linear": {
@@ -97,7 +97,7 @@ You are tasked with generating a technical work log comment for a Linear issue b
        }
      }
   
-  3. Restart Claude Code
+  3. Restart Gemini CLI
   4. Get your Linear API key from: https://linear.app/settings/api
   ```
 - Validate that the Linear ticket ID exists

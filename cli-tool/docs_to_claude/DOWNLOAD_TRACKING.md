@@ -1,6 +1,6 @@
 # Download Tracking System
 
-Sistema de seguimiento de descargas anónimo para Claude Code Templates, inspirado en npm analytics.
+Sistema de seguimiento de descargas anónimo para Gemini Code Templates, inspirado en npm analytics.
 
 ## Descripción
 
@@ -120,10 +120,10 @@ El tracking se desactiva automáticamente si:
 
 ```bash
 # Test local con CLI
-CCT_DEBUG=true node cli-tool/bin/create-claude-config.js --agent deep-research-team/academic-researcher
+CCT_DEBUG=true node cli-tool/bin/create-gemini-config.js --agent deep-research-team/academic-researcher
 
 # Test sin tracking (simula opt-out)
-CCT_NO_TRACKING=true node cli-tool/bin/create-claude-config.js --agent test-agent
+CCT_NO_TRACKING=true node cli-tool/bin/create-gemini-config.js --agent test-agent
 
 # Test directo al API
 curl -X POST https://www.aitmpl.com/api/track-download-supabase \
@@ -286,6 +286,6 @@ MIT License - Ver [LICENSE](LICENSE) para detalles.
 
 ## Contacto
 
-- Issues: [GitHub Issues](https://github.com/davila7/claude-code-templates/issues)
-- Discussions: [GitHub Discussions](https://github.com/davila7/claude-code-templates/discussions)
-- Email: soporte@claude-code-templates.com
+- Issues: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
+- Discussions: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
+- Email: soporte@gemini-code-templates.com

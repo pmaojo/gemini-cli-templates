@@ -5,7 +5,7 @@ const crypto = require('crypto');
 
 describe('IntegrityValidator', () => {
   let validator;
-  const testRegistryPath = path.join(process.cwd(), '.claude/security/component-hashes.json');
+  const testRegistryPath = path.join(process.cwd(), '.gemini/security/component-hashes.json');
 
   beforeEach(() => {
     validator = new IntegrityValidator();

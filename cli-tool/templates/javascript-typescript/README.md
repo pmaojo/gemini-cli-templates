@@ -1,21 +1,21 @@
 # JavaScript/TypeScript Templates
 
-**Claude Code configuration template optimized for modern JavaScript and TypeScript development**
+**Gemini Code configuration template optimized for modern JavaScript and TypeScript development**
 
-This folder contains a comprehensive Claude Code template specifically designed for JavaScript and TypeScript projects, supporting popular frameworks like React, Vue.js, Angular, and Node.js.
+This folder contains a comprehensive Gemini Code template specifically designed for JavaScript and TypeScript projects, supporting popular frameworks like React, Vue.js, Angular, and Node.js.
 
 ## 📁 What's in This Folder
 
-This template provides the foundation for JavaScript/TypeScript development with Claude Code:
+This template provides the foundation for JavaScript/TypeScript development with Gemini Code:
 
 ### 📄 Files Included
-- **`CLAUDE.md`** - Complete JavaScript/TypeScript development guidance for Claude Code
+- **`CLAUDE.md`** - Complete JavaScript/TypeScript development guidance for Gemini Code
 - **`README.md`** - This documentation file
 
 ### 🎯 Template Features
 When you use this template with the installer, it automatically creates:
-- **`.claude/settings.json`** - Optimized settings for JS/TS projects
-- **`.claude/commands/`** - Ready-to-use commands for common tasks
+- **`.gemini/settings.json`** - Optimized settings for JS/TS projects
+- **`.gemini/commands/`** - Ready-to-use commands for common tasks
 
 ## 🚀 How to Use This Template
 
@@ -24,13 +24,13 @@ Use the CLI installer to automatically set up this template in your project:
 
 ```bash
 cd your-javascript-project
-npx claude-code-templates --language javascript-typescript
+npx gemini-code-templates --language javascript-typescript
 ```
 
 The installer will:
 - Copy the `CLAUDE.md` file to your project
 - Auto-detect your framework (React, Vue, Node.js, etc.)
-- Create appropriate `.claude/` configuration files
+- Create appropriate `.gemini/` configuration files
 - Set up framework-specific commands
 - Configure development workflows
 
@@ -39,19 +39,19 @@ Copy the template manually for more control:
 
 ```bash
 # Clone the repository
-git clone https://github.com/davila7/claude-code-templates.git
+git clone https://github.com/davila7/gemini-code-templates.git
 
 # Copy the JavaScript/TypeScript template
-cp claude-code-templates/javascript-typescript/CLAUDE.md your-project/
+cp gemini-code-templates/javascript-typescript/CLAUDE.md your-project/
 
 # Then use the CLI to complete the setup
 cd your-project
-npx claude-code-templates --language javascript-typescript
+npx gemini-code-templates --language javascript-typescript
 ```
 
 ## 🎨 Framework Support
 
-This template automatically configures Claude Code for:
+This template automatically configures Gemini Code for:
 
 ### Frontend Frameworks
 - **React** - Components, hooks, JSX, testing with React Testing Library
@@ -103,7 +103,7 @@ Based on detection, it creates:
 ```
 your-project/
 ├── CLAUDE.md                    # Copied from this template
-├── .claude/
+├── .gemini/
 │   ├── settings.json           # Framework-specific settings
 │   └── commands/               # Commands for your framework
 │       ├── test.md
@@ -167,12 +167,12 @@ The `CLAUDE.md` file in this folder contains comprehensive guidance for:
 
 2. **Run the installer:**
    ```bash
-   npx claude-code-templates --language javascript-typescript
+   npx gemini-code-templates --language javascript-typescript
    ```
 
-3. **Start Claude Code:**
+3. **Start Gemini Code:**
    ```bash
-   claude
+   gemini
    ```
 
 4. **Try the commands:**
@@ -188,17 +188,17 @@ The `CLAUDE.md` file in this folder contains comprehensive guidance for:
 After installation, you can customize the setup:
 
 ### Modify Commands
-Edit files in `.claude/commands/` to match your workflow:
+Edit files in `.gemini/commands/` to match your workflow:
 ```bash
 # Edit the test command
-vim .claude/commands/test.md
+vim .gemini/commands/test.md
 
 # Add a custom command
-echo "# Deploy Command" > .claude/commands/deploy.md
+echo "# Deploy Command" > .gemini/commands/deploy.md
 ```
 
 ### Adjust Settings
-Update `.claude/settings.json` for your project:
+Update `.gemini/settings.json` for your project:
 ```json
 {
   "framework": "react",
@@ -213,7 +213,7 @@ The template adapts to your specific framework needs automatically.
 
 ## 📖 Learn More
 
-- **Main Project**: [Claude Code Templates](../README.md)
+- **Main Project**: [Gemini Code Templates](../README.md)
 - **Common Templates**: [Universal patterns](../common/README.md)
 - **Python Templates**: [Python development](../python/README.md)
 - **CLI Tool**: [Automated installer](../cli-tool/README.md)
@@ -232,7 +232,7 @@ The template adapts to your specific framework needs automatically.
 
 ### After (With This Template)
 ```bash
-npx claude-code-templates --language javascript-typescript
+npx gemini-code-templates --language javascript-typescript
 # ✅ Everything configured in 30 seconds!
 ```
 
@@ -256,4 +256,4 @@ Your contributions make this template better for the entire JavaScript/TypeScrip
 
 ---
 
-**Ready to supercharge your JavaScript/TypeScript development?** Run `npx claude-code-templates --language javascript-typescript` in your project now!
+**Ready to supercharge your JavaScript/TypeScript development?** Run `npx gemini-code-templates --language javascript-typescript` in your project now!

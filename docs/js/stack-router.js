@@ -90,7 +90,7 @@ class StackRouter {
         this.renderStackPage(companyInfo, stackComponents, 'company');
         
         // Update page title and meta
-        document.title = `${companyInfo.name} Stack - Claude Code Templates`;
+        document.title = `${companyInfo.name} Stack - Gemini CLI Templates`;
         this.updateMetaTags(companyInfo, 'company');
     }
 
@@ -118,7 +118,7 @@ class StackRouter {
         this.renderStackPage(techInfo, stackComponents, 'technology');
         
         // Update page title and meta
-        document.title = `${techInfo.name} Stack - Claude Code Templates`;
+        document.title = `${techInfo.name} Stack - Gemini CLI Templates`;
         this.updateMetaTags(techInfo, 'technology');
     }
 
@@ -280,7 +280,7 @@ class StackRouter {
     generateStackInstallCommand(components) {
         const allComponents = [...components.agents, ...components.commands, ...components.mcps];
         const componentArgs = allComponents.map(c => `--${c.type} ${c.name}`).join(' ');
-        return `npx claude-code-templates@latest ${componentArgs}`;
+        return `npx gemini-code-templates@latest ${componentArgs}`;
     }
 
     // Update header for stack page
@@ -315,7 +315,7 @@ class StackRouter {
         const ogDescription = document.querySelector('meta[property="og:description"]');
         
         if (ogTitle) {
-            ogTitle.content = `${stackInfo.name} Development Stack - Claude Code Templates`;
+            ogTitle.content = `${stackInfo.name} Development Stack - Gemini CLI Templates`;
         }
         
         if (ogDescription) {
@@ -327,7 +327,7 @@ class StackRouter {
         const twitterDescription = document.querySelector('meta[property="twitter:description"]');
         
         if (twitterTitle) {
-            twitterTitle.content = `${stackInfo.name} Development Stack - Claude Code Templates`;
+            twitterTitle.content = `${stackInfo.name} Development Stack - Gemini CLI Templates`;
         }
         
         if (twitterDescription) {
@@ -361,7 +361,7 @@ class StackRouter {
         window.history.pushState({}, '', window.location.pathname);
         
         // Reset page title and meta
-        document.title = 'Claude Code Templates';
+        document.title = 'Gemini CLI Templates';
         this.resetMetaTags();
     }
 
@@ -378,11 +378,11 @@ class StackRouter {
         const ogDescription = document.querySelector('meta[property="og:description"]');
         
         if (ogTitle) {
-            ogTitle.content = 'Claude Code Templates - Ready-to-use configurations';
+            ogTitle.content = 'Gemini CLI Templates - Ready-to-use configurations';
         }
         
         if (ogDescription) {
-            ogDescription.content = 'Browse and install Claude Code configuration templates for different languages and frameworks. Includes 100+ agents, 159+ commands, 23+ MCPs, and 14+ templates.';
+            ogDescription.content = 'Browse and install Gemini CLI configuration templates for different languages and frameworks. Includes 100+ agents, 159+ commands, 23+ MCPs, and 14+ templates.';
         }
     }
 
@@ -401,7 +401,7 @@ class StackRouter {
         this.renderAllCompaniesPage();
         
         // Update page title and meta
-        document.title = 'All Development Stacks - Claude Code Templates';
+        document.title = 'All Development Stacks - Gemini CLI Templates';
         this.updateMetaTagsForAllCompanies();
     }
 
@@ -437,7 +437,7 @@ class StackRouter {
         
         // Group companies by category
         const categories = {
-            'AI & Machine Learning': ['openai', 'anthropic'],
+            'AI & Machine Learning': ['openai', 'google'],
             'Payments & E-commerce': ['stripe', 'shopify', 'shopify'],
             'CRM & Business': ['salesforce', 'hubspot', 'airtable', 'linear'],
             'Communication': ['twilio', 'slack', 'discord', 'sendgrid'],
@@ -537,7 +537,7 @@ class StackRouter {
         const ogDescription = document.querySelector('meta[property="og:description"]');
         
         if (ogTitle) {
-            ogTitle.content = 'All Development Stacks - Claude Code Templates';
+            ogTitle.content = 'All Development Stacks - Gemini CLI Templates';
         }
         
         if (ogDescription) {

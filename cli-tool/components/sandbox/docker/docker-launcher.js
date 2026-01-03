@@ -2,7 +2,7 @@
 
 /**
  * Docker Sandbox Launcher
- * Orchestrates Docker container execution for Claude Code
+ * Orchestrates Docker container execution for Gemini Code
  */
 
 import { spawn, execSync } from 'child_process';
@@ -15,12 +15,12 @@ const __dirname = path.dirname(__filename);
 
 // Parse command line arguments
 const args = process.argv.slice(2);
-const prompt = args[0] || 'Hello, Claude!';
+const prompt = args[0] || 'Hello, Gemini!';
 const componentsToInstall = args[1] || '';
-const anthropicApiKey = process.env.ANTHROPIC_API_KEY;
+const googleApiKey = process.env.ANTHROPIC_API_KEY;
 
 // Validate API key
-if (!anthropicApiKey) {
+if (!googleApiKey) {
   console.error('❌ Error: ANTHROPIC_API_KEY environment variable is required');
   process.exit(1);
 }
@@ -64,7 +64,7 @@ async function buildDockerImage() {
 
   // Check if image exists
   try {
-    execSync('docker image inspect claude-sandbox', { stdio: 'pipe' });
+    execSync('docker image inspect gemini-sandbox', { stdio: 'pipe' });
     console.log('   ✅ Image already exists\n');
     return true;
   } catch (error) {
@@ -74,7 +74,7 @@ async function buildDockerImage() {
     return new Promise((resolve) => {
       const build = spawn('docker', [
         'build',
-        '-t', 'claude-sandbox',
+        '-t', 'gemini-sandbox',
         '.'
       ], {
         cwd: __dirname,
@@ -113,9 +113,9 @@ async function runDockerContainer() {
     const dockerArgs = [
       'run',
       '--rm',
-      '-e', `ANTHROPIC_API_KEY=${anthropicApiKey}`,
+      '-e', `ANTHROPIC_API_KEY=${googleApiKey}`,
       '-v', `${outputDir}:/output`,
-      'claude-sandbox',
+      'gemini-sandbox',
       'node', '/app/execute.js',
       prompt,
       componentsToInstall

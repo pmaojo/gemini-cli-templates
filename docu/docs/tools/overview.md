@@ -4,36 +4,36 @@ sidebar_position: 1
 
 # Additional Tools
 
-Utilities that enhance your Claude Code development workflow.
+Utilities that enhance your Gemini Code development workflow.
 
 ## Available Tools
 
 ### 📊 Analytics Dashboard
-Real-time monitoring of Claude Code sessions.
+Real-time monitoring of Gemini Code sessions.
 ```bash
-npx claude-code-templates@latest --analytics
+npx gemini-code-templates@latest --analytics
 ```
 
 ### 🏥 Health Check  
 System validation and optimization checks.
 ```bash
-npx claude-code-templates@latest --health-check
+npx gemini-code-templates@latest --health-check
 ```
 
 ### 💬 Chats Interface
 Mobile-optimized chat interface.
 ```bash
-npx claude-code-templates@latest --chats
+npx gemini-code-templates@latest --chats
 ```
 
 ### 🌐 Cloudflare Tunnel
 Remote access to your tools.
 ```bash
-npx claude-code-templates@latest --tunnel
+npx gemini-code-templates@latest --tunnel
 ```
 
 ### ☁️ E2B Sandbox
 Cloud execution environment.
 ```bash
-npx claude-code-templates@latest --sandbox
+npx gemini-code-templates@latest --sandbox
 ```

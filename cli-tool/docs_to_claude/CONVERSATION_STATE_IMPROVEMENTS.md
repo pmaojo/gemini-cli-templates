@@ -17,8 +17,8 @@ Successfully enhanced the conversation state banner (`#conversation-state-banner
 - **Error Detection**: Identifies error states from message content
 
 **New States Added:**
-- `Analyzing code...` - When Claude examines files
-- `Task completed` - When Claude indicates completion
+- `Analyzing code...` - When Gemini examines files
+- `Task completed` - When Gemini indicates completion
 - `Processing request...` - For complex ongoing requests  
 - `Encountered issue` - When errors are detected
 
@@ -28,9 +28,9 @@ Successfully enhanced the conversation state banner (`#conversation-state-banner
 
 **New Features:**
 - **File Size Monitoring**: Tracks file size changes to detect typing activity
-- **Timing Analysis**: Uses file modification timestamps to identify user vs Claude activity
+- **Timing Analysis**: Uses file modification timestamps to identify user vs Gemini activity
 - **Debounced Detection**: Waits 2 seconds after file changes to confirm typing vs completed messages
-- **Smart Differentiation**: Distinguishes between user typing and Claude writing
+- **Smart Differentiation**: Distinguishes between user typing and Gemini writing
 
 **Logic:**
 ```javascript
@@ -54,7 +54,7 @@ Successfully enhanced the conversation state banner (`#conversation-state-banner
 
 | State | Trigger | Visual |
 |-------|---------|--------|
-| `Claude Code working...` | User sent message or Claude indicates work | 🤖 Blue pulse |
+| `Gemini Code working...` | User sent message or Gemini indicates work | 🤖 Blue pulse |
 | `Executing tools...` | Tool use without results | 🔧 Green pulse |
 | `Analyzing results...` | Tool use with results | 📊 Purple pulse |
 | `Analyzing code...` | Read/grep tools | 🔍 Purple pulse |
@@ -86,7 +86,7 @@ Successfully enhanced the conversation state banner (`#conversation-state-banner
 
 ### Real-time Message Detection
 ```
-User/Claude adds message → File change detected → WebSocket notification sent → 
+User/Gemini adds message → File change detected → WebSocket notification sent → 
 Frontend analyzes message content → Intelligent state determined → Banner updated
 ```
 
@@ -99,7 +99,7 @@ Wait 2s for complete message → If no new message after assistant response →
 
 ### State Transition Logic
 ```
-User message → "Claude Code working..." → Tool execution → "Executing tools..." → 
+User message → "Gemini Code working..." → Tool execution → "Executing tools..." → 
 Tool results → "Analyzing results..." → Text response → Content analysis → 
 Final state ("Task completed", "Awaiting user input...", etc.)
 ```
@@ -121,7 +121,7 @@ Final state ("Task completed", "Awaiting user input...", etc.)
 ## Testing Results
 
 ✅ **WebSocket Connection**: Successfully established, subscriptions working  
-✅ **File Monitoring**: Detects changes in `~/.claude/projects/*/conversation.jsonl`  
+✅ **File Monitoring**: Detects changes in `~/.gemini/projects/*/conversation.jsonl`  
 ✅ **State Analysis**: New message analysis logic working  
 ✅ **CSS Styling**: New state classes displaying correctly  
 ✅ **Integration**: FileWatcher connected to NotificationManager  
@@ -151,4 +151,4 @@ The conversation state detection system has been significantly improved with:
 - **Enhanced visual feedback** with appropriate animations
 - **Robust error handling** and fallback mechanisms
 
-The system now provides much more accurate and responsive conversation state information, greatly improving the user experience for monitoring Claude Code sessions.
+The system now provides much more accurate and responsive conversation state information, greatly improving the user experience for monitoring Gemini Code sessions.

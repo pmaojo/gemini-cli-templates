@@ -215,7 +215,7 @@ function getStepConfig(stepName, currentAnswers, projectInfo, options, additiona
       return {
         type: 'checkbox',
         name: 'agents',
-        message: 'Select Claude Code agents to install (use space to select):',
+        message: 'Select Gemini CLI agents to install (use space to select):',
         choices: agentChoices,
         prefix: chalk.magenta('🤖'),
         pageSize: 10
@@ -225,7 +225,7 @@ function getStepConfig(stepName, currentAnswers, projectInfo, options, additiona
       return {
         type: 'confirm',
         name: 'analytics',
-        message: 'Launch Claude Code Analytics Dashboard? (Real-time monitoring of your Claude Code usage)',
+        message: 'Launch Gemini CLI Analytics Dashboard? (Real-time monitoring of your Gemini CLI usage)',
         default: false,
         prefix: chalk.blue('📊')
       };
@@ -238,7 +238,7 @@ function getStepConfig(stepName, currentAnswers, projectInfo, options, additiona
       const mcpCount = currentAnswers.mcps ? currentAnswers.mcps.length : 0;
       const agentCount = currentAnswers.agents ? currentAnswers.agents.length : 0;
       
-      let message = `Setup Claude Code for ${chalk.cyan(confirmLanguage)}`;
+      let message = `Setup Gemini CLI for ${chalk.cyan(confirmLanguage)}`;
       if (confirmFramework !== 'none') {
         message += ` with ${chalk.green(confirmFramework)}`;
       }
@@ -424,7 +424,7 @@ function createPrompts(projectInfo, options = {}) {
       const hookCount = answers.hooks ? answers.hooks.length : 0;
       const mcpCount = answers.mcps ? answers.mcps.length : 0;
       
-      let message = `Setup Claude Code for ${chalk.cyan(language)}`;
+      let message = `Setup Gemini CLI for ${chalk.cyan(language)}`;
       if (framework !== 'none') {
         message += ` with ${chalk.green(framework)}`;
       }

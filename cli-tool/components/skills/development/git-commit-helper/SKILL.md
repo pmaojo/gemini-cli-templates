@@ -14,7 +14,7 @@ Analyze staged changes and generate commit message:
 git diff --staged
 
 # Generate commit message based on changes
-# (Claude will analyze the diff and suggest a message)
+# (Gemini will analyze the diff and suggest a message)
 ```
 
 ## Commit message format

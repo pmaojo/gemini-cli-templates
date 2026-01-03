@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code 2025 - Activity Graph</title>
+    <title>Gemini CLI 2025 - Activity Graph</title>
 
     <style>
         :root {
@@ -346,7 +346,7 @@
         </div>
         <div id="introContent" style="display: none;">
             <h1 class="intro-title">2025</h1>
-            <p class="intro-subtitle">Your Year with Claude Code</p>
+            <p class="intro-subtitle">Your Year with Gemini CLI</p>
             <button class="start-btn" onclick="startAnimation()">▶ Start</button>
         </div>
     </div>
@@ -440,7 +440,7 @@
         let lastMouseY = 0;
 
         // Graph structure
-        const centerNode = { x: 0, y: 0, name: 'Claude', color: '#d97706' };
+        const centerNode = { x: 0, y: 0, name: 'Gemini', color: '#d97706' };
         const branches = {
             agents: { nodes: [], angle: 0, color: '#f59e0b' },
             mcps: { nodes: [], angle: Math.PI / 2, color: '#8b5cf6' },
@@ -784,11 +784,11 @@
 
             formatModelName(modelName) {
                 const nameMap = {
-                    'claude-sonnet-4-5-20250929': 'Sonnet 4.5',
-                    'claude-haiku-4-5-20251001': 'Haiku 4.5',
-                    'claude-3-5-sonnet': 'Sonnet 3.5',
-                    'claude-3-opus': 'Opus 3',
-                    'claude-3-haiku': 'Haiku 3',
+                    'gemini-gemini-2.0-flash-4-5-20250929': 'Sonnet 4.5',
+                    'gemini-gemini-2.0-flash-4-5-20251001': 'Haiku 4.5',
+                    'gemini-3-5-gemini-2.0-flash': 'Sonnet 3.5',
+                    'gemini-3-opus': 'Opus 3',
+                    'gemini-3-gemini-2.0-flash': 'Haiku 3',
                     'Unknown': 'Unknown'
                 };
                 return nameMap[modelName] || modelName;
@@ -1310,11 +1310,11 @@
             if (!modelNodes.has(modelName)) {
                 // Assign colors to models
                 const modelColors = {
-                    'claude-sonnet-4-5-20250929': '#3b82f6', // Blue for Sonnet 4.5
-                    'claude-haiku-4-5-20251001': '#10b981',  // Green for Haiku 4.5
-                    'claude-3-5-sonnet': '#8b5cf6',          // Purple for Sonnet 3.5
-                    'claude-3-opus': '#f59e0b',              // Orange for Opus 3
-                    'claude-3-haiku': '#14b8a6',             // Teal for Haiku 3
+                    'gemini-gemini-2.0-flash-4-5-20250929': '#3b82f6', // Blue for Sonnet 4.5
+                    'gemini-gemini-2.0-flash-4-5-20251001': '#10b981',  // Green for Haiku 4.5
+                    'gemini-3-5-gemini-2.0-flash': '#8b5cf6',          // Purple for Sonnet 3.5
+                    'gemini-3-opus': '#f59e0b',              // Orange for Opus 3
+                    'gemini-3-gemini-2.0-flash': '#14b8a6',             // Teal for Haiku 3
                     'Unknown': '#6b7280'                      // Gray for Unknown
                 };
                 const color = modelColors[modelName] || '#6b7280';
@@ -1869,7 +1869,7 @@
                 ctx.fillStyle = '#e0e0e0';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
-                ctx.fillText('Claude', centerNode.x, centerNode.y);
+                ctx.fillText('Gemini', centerNode.x, centerNode.y);
                 ctx.restore();
             }
 

@@ -7,7 +7,7 @@ const { getHooksForLanguage, filterHooksBySelection, getMCPsForLanguage, filterM
 // GitHub configuration for downloading templates
 const GITHUB_CONFIG = {
   owner: 'davila7',
-  repo: 'claude-code-templates',
+  repo: 'gemini-cli-templates',
   branch: 'main',
   templatesPath: 'cli-tool/templates'
 };
@@ -286,16 +286,16 @@ async function mergeMCPFileFromContent(mcpContent, destPath, templateConfig) {
 async function checkExistingFiles(targetDir, templateConfig) {
   const existingFiles = [];
   
-  // Check for existing CLAUDE.md
-  const claudeFile = path.join(targetDir, 'CLAUDE.md');
-  if (await fs.pathExists(claudeFile)) {
-    existingFiles.push('CLAUDE.md');
+  // Check for existing GEMINI.md
+  const geminiFile = path.join(targetDir, 'GEMINI.md');
+  if (await fs.pathExists(geminiFile)) {
+    existingFiles.push('GEMINI.md');
   }
   
-  // Check for existing .claude directory
-  const claudeDir = path.join(targetDir, '.claude');
-  if (await fs.pathExists(claudeDir)) {
-    existingFiles.push('.claude/');
+  // Check for existing .gemini directory
+  const geminiDir = path.join(targetDir, '.gemini');
+  if (await fs.pathExists(geminiDir)) {
+    existingFiles.push('.gemini/');
   }
   
   // Check for existing .mcp.json
@@ -312,7 +312,7 @@ async function promptUserForOverwrite(existingFiles, targetDir) {
     return 'proceed'; // No existing files, safe to proceed
   }
   
-  console.log(chalk.yellow('\n⚠️  Existing Claude Code configuration detected!'));
+  console.log(chalk.yellow('\n⚠️  Existing Gemini CLI configuration detected!'));
   console.log(chalk.yellow('The following files/directories already exist:'));
   existingFiles.forEach(file => {
     console.log(chalk.yellow(`   • ${file}`));
@@ -403,7 +403,7 @@ async function copyTemplateFiles(templateConfig, targetDir, options = {}) {
     
     try {
       // Handle framework-specific command files specially
-      if (file.source.includes('.claude/commands') && file.source.includes('examples/')) {
+      if (file.source.includes('.gemini/commands') && file.source.includes('examples/')) {
         // This is a framework-specific commands directory - merge with existing commands
         await fs.ensureDir(destPath);
         
@@ -437,16 +437,16 @@ async function copyTemplateFiles(templateConfig, targetDir, options = {}) {
           console.log(chalk.yellow(`   This is normal for some templates - continuing...`));
           failedFiles++;
         }
-      } else if (file.source.includes('.claude') && !file.source.includes('examples/')) {
-        // This is base .claude directory - download it but handle commands specially
+      } else if (file.source.includes('.gemini') && !file.source.includes('examples/')) {
+        // This is base .gemini directory - download it but handle commands specially
         await fs.ensureDir(destPath);
         
-        // Download base .claude directory structure from GitHub
+        // Download base .gemini directory structure from GitHub
         try {
-          const baseClaudeFiles = await downloadDirectoryFromGitHub(file.source);
+          const baseGeminiFiles = await downloadDirectoryFromGitHub(file.source);
           
           // Write non-command files first
-          for (const [fileName, content] of Object.entries(baseClaudeFiles)) {
+          for (const [fileName, content] of Object.entries(baseGeminiFiles)) {
             if (fileName !== 'commands') { // Skip commands directory, handle separately
               const destFile = path.join(destPath, fileName);
               
@@ -489,7 +489,7 @@ async function copyTemplateFiles(templateConfig, targetDir, options = {}) {
           }
           
         } catch (error) {
-          console.log(chalk.yellow(`⚠️  Could not download .claude directory (${error.message})`));
+          console.log(chalk.yellow(`⚠️  Could not download .gemini directory (${error.message})`));
           console.log(chalk.yellow(`   Continuing with other template files...`));
           failedFiles++;
           // Don't throw - continue with other files
@@ -525,7 +525,7 @@ async function copyTemplateFiles(templateConfig, targetDir, options = {}) {
         }
         successfulFiles++;
       } else {
-        // Download regular files (CLAUDE.md, etc.)
+        // Download regular files (GEMINI.md, etc.)
         // In merge mode, skip if file already exists
         if (userAction === 'merge' && await fs.pathExists(destPath)) {
           console.log(chalk.blue(`⏭️  Skipped ${file.destination} (already exists)`));
@@ -584,7 +584,7 @@ async function copyTemplateFiles(templateConfig, targetDir, options = {}) {
     console.log(chalk.green('\n✅ Template installation completed successfully!'));
     if (failedFiles > 0) {
       console.log(chalk.yellow('   Some optional files were skipped due to rate limits or missing files.'));
-      console.log(chalk.yellow('   This is normal and your Claude Code configuration should work properly.'));
+      console.log(chalk.yellow('   This is normal and your Gemini CLI configuration should work properly.'));
     }
   }
   
@@ -596,58 +596,58 @@ async function runPostInstallationValidation(targetDir, templateConfig) {
   const { spawn } = require('child_process');
   
   console.log(chalk.cyan('\n🔍 Post-Installation Validation'));
-  console.log(chalk.gray('Claude Code can now review the installed configuration to ensure everything is properly set up.'));
+  console.log(chalk.gray('Gemini CLI can now review the installed configuration to ensure everything is properly set up.'));
   
   try {
     const { runValidation } = await inquirer.prompt([{
       type: 'confirm',
       name: 'runValidation',
-      message: 'Would you like Claude Code to review and validate the installation?',
+      message: 'Would you like Gemini CLI to review and validate the installation?',
       default: true,
       prefix: chalk.blue('🤖')
     }]);
     
     if (!runValidation) {
-      console.log(chalk.yellow('⏭️  Skipping validation. You can run "claude" anytime to review your configuration.'));
+      console.log(chalk.yellow('⏭️  Skipping validation. You can run "gemini" anytime to review your configuration.'));
       return;
     }
     
-    console.log(chalk.blue('\n🚀 Starting Claude Code validation...'));
+    console.log(chalk.blue('\n🚀 Starting Gemini CLI validation...'));
     console.log(chalk.gray('This will review all installed files and configurations.\n'));
     
-    // Prepare validation prompt for Claude
+    // Prepare validation prompt for Gemini
     const validationPrompt = createValidationPrompt(templateConfig);
     
-    // Run claude command with validation prompt as a task
+    // Run gemini command with validation prompt as a task
     // Escape quotes in the prompt and create proper shell command
     const escapedPrompt = validationPrompt.replace(/"/g, '\\"');
-    const claudeCommand = `claude "${escapedPrompt}"`;
+    const geminiCommand = `gemini "${escapedPrompt}"`;
     
-    const claudeProcess = spawn('sh', ['-c', claudeCommand], {
+    const geminiProcess = spawn('sh', ['-c', geminiCommand], {
       cwd: targetDir,
       stdio: 'inherit'
     });
     
-    claudeProcess.on('error', (error) => {
+    geminiProcess.on('error', (error) => {
       if (error.code === 'ENOENT') {
-        console.log(chalk.yellow('\n⚠️  Claude Code CLI not found in PATH.'));
-        console.log(chalk.blue('💡 To run validation manually later, use: claude "Review the Claude Code configuration and validate all installed files"'));
+        console.log(chalk.yellow('\n⚠️  Gemini CLI CLI not found in PATH.'));
+        console.log(chalk.blue('💡 To run validation manually later, use: gemini "Review the Gemini CLI configuration and validate all installed files"'));
       } else {
-        console.error(chalk.red('Error running Claude Code validation:'), error.message);
+        console.error(chalk.red('Error running Gemini CLI validation:'), error.message);
       }
     });
     
-    claudeProcess.on('close', (code) => {
+    geminiProcess.on('close', (code) => {
       if (code === 0) {
-        console.log(chalk.green('\n✅ Claude Code validation completed successfully!'));
+        console.log(chalk.green('\n✅ Gemini CLI validation completed successfully!'));
       } else if (code !== null) {
-        console.log(chalk.yellow(`\n⚠️  Claude Code validation exited with code ${code}`));
+        console.log(chalk.yellow(`\n⚠️  Gemini CLI validation exited with code ${code}`));
       }
     });
     
   } catch (error) {
     console.error(chalk.red('Error during validation setup:'), error.message);
-    console.log(chalk.blue('💡 You can run validation manually later with: claude "Review the Claude Code configuration"'));
+    console.log(chalk.blue('💡 You can run validation manually later with: gemini "Review the Gemini CLI configuration"'));
   }
 }
 
@@ -655,7 +655,7 @@ function createValidationPrompt(templateConfig) {
   const language = templateConfig.language || 'unknown';
   const framework = templateConfig.framework || 'none';
   
-  return `Validate Claude Code Templates installation for this ${language}${framework !== 'none' ? ` ${framework}` : ''} project. 1) Check project structure (package.json, src/, etc.) 2) Review CLAUDE.md, .claude/settings.json, .claude/commands/ 3) Compare with actual project dependencies 4) Suggest specific improvements. Make configuration match this project's actual setup.`;
+  return `Validate Gemini CLI Templates installation for this ${language}${framework !== 'none' ? ` ${framework}` : ''} project. 1) Check project structure (package.json, src/, etc.) 2) Review GEMINI.md, .gemini/settings.json, .gemini/commands/ 3) Compare with actual project dependencies 4) Suggest specific improvements. Make configuration match this project's actual setup.`;
 }
 
 async function processSettingsFile(sourcePath, destPath, templateConfig) {
@@ -733,7 +733,7 @@ async function ensureDirectoryExists(dirPath) {
 
 async function checkWritePermissions(targetDir) {
   try {
-    const testFile = path.join(targetDir, '.claude-test-write');
+    const testFile = path.join(targetDir, '.gemini-test-write');
     await fs.writeFile(testFile, 'test');
     await fs.remove(testFile);
     return true;

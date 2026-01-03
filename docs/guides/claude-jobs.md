@@ -1,12 +1,12 @@
-# Claude Jobs Scraper
+# Gemini Jobs Scraper
 
-Script para encontrar trabajos relacionados con Claude Code y Anthropic Claude utilizando múltiples fuentes y APIs profesionales.
+Script para encontrar trabajos relacionados con Gemini CLI y Google Gemini utilizando múltiples fuentes y APIs profesionales.
 
 ## 🎯 Características
 
 - **APIs Profesionales**: RapidAPI Jobs, Google Jobs (SerpAPI)
 - **Scraping Tradicional**: GitHub, YCombinator, WeWorkRemotely (fallback)
-- **Filtrado Estricto**: Solo trabajos que mencionen "Claude" explícitamente
+- **Filtrado Estricto**: Solo trabajos que mencionen "Gemini" explícitamente
 - **Datos Estructurados**: JSON compatible con la web existente
 - **Rate Limiting**: Manejo responsable de APIs
 
@@ -54,7 +54,7 @@ Script para encontrar trabajos relacionados con Claude Code y Anthropic Claude u
 ## 🚀 Uso
 
 ```bash
-python generate_claude_jobs.py
+python generate_gemini_jobs.py
 ```
 
 ### Flujo de Funcionamiento:
@@ -69,7 +69,7 @@ python generate_claude_jobs.py
    - WeWorkRemotely RSS
 
 3. **Generación del JSON**:
-   - Archivo: `docs/claude-jobs.json`
+   - Archivo: `docs/gemini-jobs.json`
    - Estructura compatible con la web existente
 
 ## 📊 Datos Generados
@@ -78,11 +78,11 @@ Cada trabajo incluye:
 
 ```json
 {
-  "company": "Anthropic",
-  "company_icon": "https://anthropic.com/favicon.ico",
+  "company": "Google",
+  "company_icon": "https://google.com/favicon.ico",
   "location": "Remote",
-  "description": "Senior AI Developer to enhance Claude Code capabilities...",
-  "job_link": "https://anthropic.com/careers/claude-developer",
+  "description": "Senior AI Developer to enhance Gemini CLI capabilities...",
+  "job_link": "https://google.com/careers/gemini-developer",
   "source": "RapidAPI Jobs",
   "date_posted": "2025-09-10T10:00:00Z",
   "salary": 150000
@@ -93,17 +93,17 @@ Cada trabajo incluye:
 
 El script usa filtrado **ultra-estricto**:
 
-- **Debe mencionar "Claude"** explícitamente
-- Términos específicos: `claude code`, `anthropic claude`, `claude ai`, etc.
+- **Debe mencionar "Gemini"** explícitamente
+- Términos específicos: `gemini code`, `google gemini`, `gemini ai`, etc.
 - Validación de contexto laboral: `hiring`, `position`, `engineer`, etc.
 
 ## 📈 Resultados Esperados
 
-Dado que Claude Code es muy nuevo (2025), los resultados serán limitados pero precisos:
+Dado que Gemini CLI es muy nuevo (2025), los resultados serán limitados pero precisos:
 
 - **Con APIs**: 5-20 trabajos relevantes potenciales
 - **Solo Scraping**: 0-5 trabajos (debido a restricciones)
-- **Calidad**: 100% relevantes (menciones específicas de Claude)
+- **Calidad**: 100% relevantes (menciones específicas de Gemini)
 
 ## 🔄 Automatización
 
@@ -111,7 +111,7 @@ Para ejecutar periódicamente:
 
 ```bash
 # Cron job diario a las 9 AM
-0 9 * * * cd /path/to/project && python generate_claude_jobs.py
+0 9 * * * cd /path/to/project && python generate_gemini_jobs.py
 
 # GitHub Actions (recomendado)
 # Ver ejemplo en .github/workflows/
@@ -119,7 +119,7 @@ Para ejecutar periódicamente:
 
 ## ⚠️ Limitaciones
 
-1. **Claude Code es nuevo**: Pocas ofertas laborales específicas aún
+1. **Gemini CLI es nuevo**: Pocas ofertas laborales específicas aún
 2. **APIs pagadas**: Mejores resultados requieren suscripciones
 3. **Rate limits**: Respetar límites de APIs para evitar bloqueos
 4. **Falsos positivos**: Filtrado estricto puede omitir trabajos relevantes
@@ -129,7 +129,7 @@ Para ejecutar periódicamente:
 ### Sin resultados:
 - ✅ Verifica API keys en `.env`
 - ✅ Revisa límites de rate en las APIs
-- ✅ Claude Code es muy específico - resultados limitados son normales
+- ✅ Gemini CLI es muy específico - resultados limitados son normales
 
 ### Errores de API:
 - ✅ Verifica saldo en RapidAPI/SerpAPI
@@ -138,11 +138,11 @@ Para ejecutar periódicamente:
 
 ## 🔮 Futuro
 
-A medida que Claude Code se popularice (2025-2026):
+A medida que Gemini CLI se popularice (2025-2026):
 - Más trabajos específicos aparecerán
 - Términos de búsqueda se pueden expandir
 - APIs especializadas en AI jobs pueden surgir
 
 ---
 
-**Resultado**: JSON estructurado en `docs/claude-jobs.json` listo para consumo por la web.
+**Resultado**: JSON estructurado en `docs/gemini-jobs.json` listo para consumo por la web.

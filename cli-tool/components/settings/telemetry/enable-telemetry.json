@@ -1,5 +1,5 @@
 {
-  "description": "Enable Claude Code telemetry for usage analytics and improvements.",
+  "description": "Enable Gemini CLI telemetry for usage analytics and improvements.",
   "env": {
     "CLAUDE_CODE_ENABLE_TELEMETRY": "1"
   }

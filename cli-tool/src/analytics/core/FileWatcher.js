@@ -17,15 +17,15 @@ class FileWatcher {
 
   /**
    * Setup file watchers for real-time updates
-   * @param {string} claudeDir - Path to Claude directory
+   * @param {string} geminiDir - Path to Gemini directory
    * @param {Function} dataRefreshCallback - Callback to refresh data
    * @param {Function} processRefreshCallback - Callback to refresh process data
    * @param {Object} dataCache - DataCache instance for invalidation
    */
-  setupFileWatchers(claudeDir, dataRefreshCallback, processRefreshCallback, dataCache = null, conversationChangeCallback = null) {
+  setupFileWatchers(geminiDir, dataRefreshCallback, processRefreshCallback, dataCache = null, conversationChangeCallback = null) {
     console.log(chalk.blue('👀 Setting up file watchers for real-time updates...'));
 
-    this.claudeDir = claudeDir;
+    this.geminiDir = geminiDir;
     this.dataRefreshCallback = dataRefreshCallback;
     this.processRefreshCallback = processRefreshCallback;
     this.dataCache = dataCache;
@@ -43,7 +43,7 @@ class FileWatcher {
    */
   setupConversationWatcher() {
     const conversationWatcher = chokidar.watch([
-      path.join(this.claudeDir, '**/*.jsonl')
+      path.join(this.geminiDir, '**/*.jsonl')
     ], {
       persistent: true,
       ignoreInitial: true,
@@ -81,7 +81,7 @@ class FileWatcher {
    * Setup watcher for project directories
    */
   setupProjectWatcher() {
-    const projectWatcher = chokidar.watch(this.claudeDir, {
+    const projectWatcher = chokidar.watch(this.geminiDir, {
       persistent: true,
       ignoreInitial: true,
       depth: 2, // Increased depth to catch subdirectories
@@ -127,8 +127,8 @@ class FileWatcher {
   extractConversationId(filePath) {
     try {
       // Handle different path formats:
-      // /Users/user/.claude/projects/PROJECT_NAME/conversation.jsonl -> PROJECT_NAME
-      // /Users/user/.claude/CONVERSATION_ID.jsonl -> CONVERSATION_ID
+      // /Users/user/.gemini/projects/PROJECT_NAME/conversation.jsonl -> PROJECT_NAME
+      // /Users/user/.gemini/CONVERSATION_ID.jsonl -> CONVERSATION_ID
       
       const pathParts = filePath.split(path.sep);
       const fileName = pathParts[pathParts.length - 1];
@@ -305,7 +305,7 @@ class FileWatcher {
    * Resume all watchers
    */
   resume() {
-    if (!this.isActive && this.claudeDir) {
+    if (!this.isActive && this.geminiDir) {
       console.log(chalk.green('▶️  Resuming file watchers...'));
       
       // Clear existing watchers
@@ -313,7 +313,7 @@ class FileWatcher {
       
       // Restart watchers
       this.setupFileWatchers(
-        this.claudeDir, 
+        this.geminiDir, 
         this.dataRefreshCallback, 
         this.processRefreshCallback
       );
@@ -355,7 +355,7 @@ class FileWatcher {
       isActive: this.isActive,
       watcherCount: this.watchers.length,
       intervalCount: this.intervals.length,
-      watchedDir: this.claudeDir
+      watchedDir: this.geminiDir
     };
   }
 

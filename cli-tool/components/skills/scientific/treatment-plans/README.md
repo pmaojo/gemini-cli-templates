@@ -48,7 +48,7 @@ Skill for generating **concise, clinician-focused** medical treatment plans acro
 ### Generate a Treatment Plan Template
 
 ```bash
-cd .claude/skills/treatment-plans/scripts
+cd .gemini/skills/treatment-plans/scripts
 python generate_template.py
 
 # Or specify type directly
@@ -480,7 +480,7 @@ Review the specific issues identified, consult reference files for guidance, and
 
 ## License
 
-Part of the Claude Scientific Writer project. See main LICENSE file.
+Part of the Gemini Scientific Writer project. See main LICENSE file.
 
 ---
 

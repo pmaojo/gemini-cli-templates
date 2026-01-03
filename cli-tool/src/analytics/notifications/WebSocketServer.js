@@ -102,7 +102,7 @@ class WebSocketServer {
       data: {
         clientId: clientId,
         serverTime: new Date().toISOString(),
-        message: 'Connected to Claude Code Analytics WebSocket'
+        message: 'Connected to Gemini CLI Analytics WebSocket'
       }
     });
 
@@ -259,7 +259,7 @@ class WebSocketServer {
     const messageStr = JSON.stringify({
       ...message,
       timestamp: Date.now(),
-      server: 'Claude Code Analytics'
+      server: 'Gemini CLI Analytics'
     });
 
     let sentCount = 0;
@@ -305,7 +305,7 @@ class WebSocketServer {
       const messageStr = JSON.stringify({
         ...message,
         timestamp: Date.now(),
-        server: 'Claude Code Analytics'
+        server: 'Gemini CLI Analytics'
       });
       client.ws.send(messageStr);
       return true;

@@ -1,10 +1,10 @@
-# Complete Guide to Creating Claude Code Commands
+# Complete Guide to Creating Gemini Code Commands
 
-This guide teaches you how to create custom slash commands for Claude Code using `.md` files with optional YAML frontmatter configuration.
+This guide teaches you how to create custom slash commands for Gemini Code using `.md` files with optional YAML frontmatter configuration.
 
-## What are Claude Code Commands?
+## What are Gemini Code Commands?
 
-Commands are reusable prompts that you can invoke with a simple slash syntax during your Claude Code sessions. Each command:
+Commands are reusable prompts that you can invoke with a simple slash syntax during your Gemini Code sessions. Each command:
 
 - **Has a specific purpose** and can be customized with arguments
 - **Can execute bash commands** before running the prompt
@@ -33,8 +33,8 @@ Share project commands with your team while keeping personal commands private.
 
 | Type | Location | Scope | Visibility | Priority |
 |------|----------|-------|------------|----------|
-| **Project Commands** | `.claude/commands/` | Current project only | Shared with team | Higher |
-| **Personal Commands** | `~/.claude/commands/` | All projects | Private to user | Lower |
+| **Project Commands** | `.gemini/commands/` | Current project only | Shared with team | Higher |
+| **Personal Commands** | `~/.gemini/commands/` | All projects | Private to user | Lower |
 
 *When there are name conflicts, project commands take precedence over personal commands.*
 
@@ -57,7 +57,7 @@ Your command prompt goes here. This can include:
 - Bash command output using !`command`
 - Multiple paragraphs with detailed instructions
 
-Include specific instructions and context that Claude should follow.
+Include specific instructions and context that Gemini should follow.
 ```
 
 ## Command Configuration
@@ -76,7 +76,7 @@ Include specific instructions and context that Claude should follow.
 Commands can be organized in subdirectories for better organization:
 
 ```
-.claude/commands/
+.gemini/commands/
 ├── frontend/
 │   ├── component.md      # /component (project:frontend)
 │   └── styling.md        # /styling (project:frontend)
@@ -120,15 +120,15 @@ description: Generate React component with tests
 ```
 
 ### `model` (Optional)
-Specify which Claude model to use:
+Specify which Gemini model to use:
 ```yaml
-model: claude-3-5-sonnet-20241022    # Default, balanced performance
-model: claude-3-5-haiku-20241022     # Faster, simpler tasks
-model: claude-3-opus-20240229        # Most capable, complex tasks
+model: gemini-3-5-sonnet-20241022    # Default, balanced performance
+model: gemini-3-5-haiku-20241022     # Faster, simpler tasks
+model: gemini-3-opus-20240229        # Most capable, complex tasks
 ```
 
 ### `disable-model-invocation` (Optional)
-Prevent Claude from automatically invoking this command via the SlashCommand tool:
+Prevent Gemini from automatically invoking this command via the SlashCommand tool:
 ```yaml
 disable-model-invocation: true    # Default: false
 ```
@@ -261,7 +261,7 @@ Analyze the architectural implications of @src/config/architecture.md and provid
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git log:*)
 argument-hint: [optional-commit-message]
 description: Create a well-formatted git commit
-model: claude-3-5-sonnet-20241022
+model: gemini-3-5-sonnet-20241022
 ---
 
 ## Repository Context
@@ -279,7 +279,7 @@ Create a git commit with proper formatting:
 1. **If no message provided**: Generate a descriptive commit message based on the staged changes
 2. **If message provided**: Use "$ARGUMENTS" as the commit message
 3. **Follow conventional commits format**: `type(scope): description`
-4. **Add co-authored-by**: Include Claude attribution
+4. **Add co-authored-by**: Include Gemini attribution
 
 Commit message should be:
 - Clear and descriptive
@@ -295,7 +295,7 @@ Commit message should be:
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [component-name] [directory]
 description: Generate React component with TypeScript and tests
-model: claude-3-5-sonnet-20241022
+model: gemini-3-5-sonnet-20241022
 ---
 
 ## Component Generation Task
@@ -350,7 +350,7 @@ Follow the existing code patterns from: @src/components/
 allowed-tools: Read, Edit, Bash, WebFetch
 argument-hint: [endpoint-path]
 description: Generate comprehensive API tests
-model: claude-3-5-sonnet-20241022
+model: gemini-3-5-sonnet-20241022
 ---
 
 ## API Testing Generation
@@ -407,7 +407,7 @@ For each supported method (GET, POST, PUT, DELETE):
 ---
 allowed-tools: Read, Bash, Grep, Glob
 description: Analyze application performance and suggest optimizations
-model: claude-3-5-sonnet-20241022
+model: gemini-3-5-sonnet-20241022
 ---
 
 ## Performance Analysis Report
@@ -469,7 +469,7 @@ model: claude-3-5-sonnet-20241022
 ---
 allowed-tools: Read, Bash, Grep
 description: Comprehensive security audit of the codebase
-model: claude-3-5-sonnet-20241022
+model: gemini-3-5-sonnet-20241022
 ---
 
 ## Security Audit Report
@@ -548,7 +548,7 @@ model: claude-3-5-sonnet-20241022
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [migration-name]
 description: Create database migration with rollback
-model: claude-3-5-sonnet-20241022
+model: gemini-3-5-sonnet-20241022
 ---
 
 ## Database Migration Creation
@@ -620,7 +620,7 @@ DROP TABLE IF EXISTS example;
 - `/agents` - Manage and configure custom AI subagents
 - `/clear` - Clear conversation history for fresh start
 - `/compact [instructions]` - Compress conversation with optional focus
-- `/config` - View and modify Claude Code configuration
+- `/config` - View and modify Gemini Code configuration
 - `/help` - Show all available commands and usage
 
 ### Development Commands
@@ -630,14 +630,14 @@ DROP TABLE IF EXISTS example;
 - `/pr_comments` - View and manage pull request comments
 
 ### System Commands
-- `/bug` - Report issues to Anthropic development team
+- `/bug` - Report issues to Google development team
 - `/cost` - Display token usage and billing information
-- `/doctor` - Health check for Claude Code installation
+- `/doctor` - Health check for Gemini Code installation
 - `/model` - Select or change AI model (Sonnet/Haiku/Opus)
 - `/status` - View account and system status information
 
 ### Authentication & Permissions
-- `/login` - Switch between Anthropic accounts
+- `/login` - Switch between Google accounts
 - `/logout` - Sign out from current account
 - `/permissions` - View and update access permissions
 
@@ -650,17 +650,17 @@ DROP TABLE IF EXISTS example;
 
 ## SlashCommand Tool
 
-The `SlashCommand` tool allows Claude to programmatically execute custom slash commands during conversations. This enables Claude to invoke commands automatically when appropriate.
+The `SlashCommand` tool allows Gemini to programmatically execute custom slash commands during conversations. This enables Gemini to invoke commands automatically when appropriate.
 
 ### How It Works
 
-1. **Automatic Discovery**: Claude can see available custom commands and their descriptions
-2. **Context-Aware Invocation**: Claude triggers commands based on conversation context
+1. **Automatic Discovery**: Gemini can see available custom commands and their descriptions
+2. **Context-Aware Invocation**: Gemini triggers commands based on conversation context
 3. **Metadata Inclusion**: Command descriptions are included in context up to character budget
 
 ### Enabling SlashCommand Tool
 
-To encourage Claude to use commands, reference them by name in your prompts:
+To encourage Gemini to use commands, reference them by name in your prompts:
 
 ```markdown
 > Run /write-unit-test when you are about to start writing tests.
@@ -677,7 +677,7 @@ To encourage Claude to use commands, reference them by name in your prompts:
 
 ### Permission Rules
 
-Control which commands Claude can invoke:
+Control which commands Gemini can invoke:
 
 ```bash
 # Deny all SlashCommand invocations
@@ -714,7 +714,7 @@ export SLASH_COMMAND_TOOL_CHAR_BUDGET=20000
 ```
 
 **When budget is exceeded**:
-- Claude sees only a subset of available commands
+- Gemini sees only a subset of available commands
 - A warning shows in `/context` as "M of N commands"
 - Prioritize important commands by keeping descriptions concise
 
@@ -727,7 +727,7 @@ export SLASH_COMMAND_TOOL_CHAR_BUDGET=20000
 - ✅ Monitor character budget with `/context`
 
 **DON'T:**
-- ❌ Assume Claude will discover commands without references
+- ❌ Assume Gemini will discover commands without references
 - ❌ Write overly long command descriptions
 - ❌ Enable automatic invocation for destructive operations
 
@@ -856,7 +856,7 @@ argument-hint: [options]
 
 ### By Project Phase
 ```
-.claude/commands/
+.gemini/commands/
 ├── setup/              # Project initialization
 ├── development/        # Daily development tasks  
 ├── testing/           # Testing and QA
@@ -866,7 +866,7 @@ argument-hint: [options]
 
 ### By Technology Stack
 ```
-.claude/commands/
+.gemini/commands/
 ├── frontend/          # React, Vue, Angular commands
 ├── backend/           # Node.js, Python, API commands
 ├── database/          # SQL, migrations, seeding
@@ -876,7 +876,7 @@ argument-hint: [options]
 
 ### By Team Role
 ```
-~/.claude/commands/
+~/.gemini/commands/
 ├── developer/         # General development commands
 ├── devops/           # Infrastructure and deployment
 ├── qa/               # Testing and quality assurance
@@ -888,10 +888,10 @@ argument-hint: [options]
 ### Command Not Found
 **Symptoms**: `/command` shows "Command not found"
 **Solutions**:
-- Verify file exists in `.claude/commands/` or `~/.claude/commands/`
+- Verify file exists in `.gemini/commands/` or `~/.gemini/commands/`
 - Check filename matches command name (without `.md`)
 - Ensure markdown file has proper content
-- Restart Claude Code session
+- Restart Gemini Code session
 
 ### Arguments Not Working
 **Symptoms**: `$ARGUMENTS` appears literally in output
@@ -1025,7 +1025,7 @@ Execute database operation: $ARGUMENTS
 
 ## Conclusion
 
-Claude Code commands are a powerful automation tool that can significantly improve your development workflow. With this guide, you can create effective commands that:
+Gemini Code commands are a powerful automation tool that can significantly improve your development workflow. With this guide, you can create effective commands that:
 
 - **Automate repetitive tasks** with simple slash syntax
 - **Standardize team workflows** through shared project commands  

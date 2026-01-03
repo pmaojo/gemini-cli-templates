@@ -60,21 +60,21 @@
   </url>
 
   <url>
-    <loc>https://aitmpl.com/blog/e2b-claude-code-sandbox</loc>
+    <loc>https://aitmpl.com/blog/e2b-gemini-code-sandbox</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/blog/supabase-claude-code-integration</loc>
+    <loc>https://aitmpl.com/blog/supabase-gemini-code-integration</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/blog/nextjs-vercel-claude-code-integration</loc>
+    <loc>https://aitmpl.com/blog/nextjs-vercel-gemini-code-integration</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

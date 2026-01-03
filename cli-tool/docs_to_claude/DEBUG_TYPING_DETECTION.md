@@ -12,7 +12,7 @@ this.checkForUserTyping(conversationId);
 
 ### 2. **Backend File Activity** (FileWatcher.js)
 ```javascript
-// Detecta cambios en ~/.claude/projects/*/conversation.jsonl
+// Detecta cambios en ~/.gemini/projects/*/conversation.jsonl
 this.checkForTypingActivity(conversationId, filePath);
 ```
 
@@ -54,11 +54,11 @@ window.app.components.agents.lastMessageTime
 
 ## 🔧 Test Manual
 
-1. **Envía un mensaje como usuario** → Banner debe mostrar "Claude Code working..."
-2. **Claude responde** → Banner debe mostrar estado basado en contenido
+1. **Envía un mensaje como usuario** → Banner debe mostrar "Gemini Code working..."
+2. **Gemini responde** → Banner debe mostrar estado basado en contenido
 3. **Espera 30 segundos SIN escribir nada** → Banner debe cambiar a "User typing..."
 4. **Empieza a escribir** → Verifica logs en ambos lados
-5. **Envía mensaje** → Banner debe cambiar inmediatamente a "Claude Code working..."
+5. **Envía mensaje** → Banner debe cambiar inmediatamente a "Gemini Code working..."
 
 ## 🐛 Posibles Problemas
 
@@ -87,8 +87,8 @@ console.log('✍️ FRONTEND: Setting User typing state for ${conversationId}');
 ## ▶️ Próximos Pasos
 
 1. **Ejecuta nuevamente** `npm run analytics:start`
-2. **Haz una conversación** con Claude
-3. **Espera 30+ segundos** después de que Claude responda
+2. **Haz una conversación** con Gemini
+3. **Espera 30+ segundos** después de que Gemini responda
 4. **Verifica logs** tanto en navegador como en terminal
 5. **Reporta** qué logs ves y si aparece el estado
 

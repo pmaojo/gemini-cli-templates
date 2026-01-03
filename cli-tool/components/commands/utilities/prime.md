@@ -6,7 +6,7 @@ Enhanced AI mode for complex tasks
 
 ## Instructions
 
-Initialize a new Claude Code session with comprehensive project context:
+Initialize a new Gemini CLI session with comprehensive project context:
 
 1. **Analyze Codebase Structure**
    - Run `git ls-files` to understand file organization and project layout

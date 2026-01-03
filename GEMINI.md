@@ -1,10 +1,10 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Gemini CLI (gemini.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-This is a Node.js CLI tool for setting up Claude Code configurations and providing real-time analytics. The project uses modern JavaScript/Node.js development practices and includes a comprehensive analytics dashboard with modular architecture.
+This is a Node.js CLI tool for setting up Gemini CLI configurations and providing real-time analytics. The project uses modern JavaScript/Node.js development practices and includes a comprehensive analytics dashboard with modular architecture.
 
 ## Development Commands
 
@@ -51,12 +51,12 @@ This is a Node.js CLI tool for setting up Claude Code configurations and providi
 npm run analytics:start
 
 # Open browser to http://localhost:3333
-# The dashboard provides real-time monitoring of Claude Code sessions
+# The dashboard provides real-time monitoring of Gemini CLI sessions
 ```
 
 ### Key Features
-- **Real-time Session Monitoring** - Live tracking of active Claude Code conversations
-- **Conversation State Detection** - "Claude working...", "User typing...", "Awaiting input..."
+- **Real-time Session Monitoring** - Live tracking of active Gemini CLI conversations
+- **Conversation State Detection** - "Gemini working...", "User typing...", "Awaiting input..."
 - **Performance Analytics** - System health, memory usage, and performance metrics
 - **WebSocket Integration** - Real-time updates without polling
 - **Export Capabilities** - CSV/JSON export of conversation data
@@ -376,7 +376,7 @@ const API_KEY = process.env.GOOGLE_API_KEY;
 
 ### Core Component Types
 
-This CLI tool manages a comprehensive component system for Claude Code configurations:
+This CLI tool manages a comprehensive component system for Gemini CLI configurations:
 
 #### 🤖 Agents (600+ specialists)
 AI specialists organized by domain expertise:
@@ -399,7 +399,7 @@ External service connections:
 - **Browser**: `playwright-mcp`, `browsermcp`, `browser-use-mcp-server`
 
 #### ⚙️ Settings
-Claude Code configuration files:
+Gemini CLI configuration files:
 - **Performance**: `performance-optimization`, `bash-timeouts`, `mcp-timeouts`
 - **Security**: `read-only-mode`, `deny-sensitive-files`, `allow-git-operations`
 - **Statuslines**: `context-monitor`, `git-branch-statusline`, `time-statusline`
@@ -415,24 +415,24 @@ Automation triggers for development workflows:
 #### CLI Installation Patterns
 ```bash
 # Install specific components
-npx claude-code-templates@latest --agent <name>
-npx claude-code-templates@latest --command <name>
-npx claude-code-templates@latest --mcp <name>
-npx claude-code-templates@latest --setting <name>
-npx claude-code-templates@latest --hook <name>
+npx gemini-code-templates@latest --agent <name>
+npx gemini-code-templates@latest --command <name>
+npx gemini-code-templates@latest --mcp <name>
+npx gemini-code-templates@latest --setting <name>
+npx gemini-code-templates@latest --hook <name>
 
 # Batch installation
-npx claude-code-templates@latest --agent security-auditor --command security-audit --setting read-only-mode
+npx gemini-code-templates@latest --agent security-auditor --command security-audit --setting read-only-mode
 
 # Interactive mode
-npx claude-code-templates@latest
+npx gemini-code-templates@latest
 ```
 
 #### Special Component Features
 
 **Statusline System with Python Scripts**
 - Statuslines can reference external Python scripts
-- Files are downloaded automatically to `.claude/scripts/` relative to project
+- Files are downloaded automatically to `.gemini/scripts/` relative to project
 - Example: `statusline/context-monitor` installs both JSON config and Python script
 - Implementation in `src/index.js:installIndividualSetting()`:
 
@@ -440,7 +440,7 @@ npx claude-code-templates@latest
 if (settingName.includes('statusline/')) {
   const pythonFileName = settingName.split('/')[1] + '.py';
   const pythonUrl = githubUrl.replace('.json', '.py');
-  additionalFiles['.claude/scripts/' + pythonFileName] = {
+  additionalFiles['.gemini/scripts/' + pythonFileName] = {
     content: pythonContent,
     executable: true
   };
@@ -458,7 +458,7 @@ The `scripts/generate_components_json.py` script creates the component catalog:
 ## Important Implementation Notes
 
 ### Path Handling
-- **Relative Paths**: Always use relative paths like `.claude/scripts/` for project-local files
+- **Relative Paths**: Always use relative paths like `.gemini/scripts/` for project-local files
 - **Cross-platform**: Use `path.join()` for cross-platform compatibility
 - **No Hardcoding**: Never hardcode user home directories or absolute paths
 
@@ -467,7 +467,7 @@ The statusline context monitor system demonstrates key architectural patterns:
 - **Component Download**: Automatic download of related files (Python scripts)
 - **Relative Installation**: Files installed relative to project, not globally
 - **Background Dependencies**: Python files excluded from public component listings
-- **Dynamic Loading**: Components loaded and executed dynamically by Claude Code
+- **Dynamic Loading**: Components loaded and executed dynamically by Gemini CLI
 
 ### Error Handling Patterns
 - Use try/catch blocks for async operations
@@ -514,7 +514,7 @@ npm publish
 ### Component Security
 - Never include hardcoded credentials or API keys in components
 - Validate all user inputs in components
-- Use relative paths (`.claude/scripts/`) instead of absolute paths
+- Use relative paths (`.gemini/scripts/`) instead of absolute paths
 - Review components for potential security vulnerabilities before publishing
 
 ## API Architecture & Deployment
@@ -524,7 +524,7 @@ npm publish
 The `/api` directory contains Vercel Serverless Functions that power critical infrastructure:
 - Component download tracking (Supabase)
 - Discord bot interactions
-- Claude Code changelog monitoring (Neon Database)
+- Gemini CLI changelog monitoring (Neon Database)
 
 **⚠️ CRITICAL**: API endpoints are essential for component download metrics. Breaking these endpoints affects analytics for all `--agent`, `--command`, `--mcp`, `--hook`, `--skill`, and `--setting` installations.
 
@@ -549,7 +549,7 @@ The `/api` directory contains Vercel Serverless Functions that power critical in
 
 **Response**: `200 OK` or `400 Bad Request`
 
-**Used By**: CLI tool (`cli-tool/bin/create-claude-config.js`) on every component installation
+**Used By**: CLI tool (`cli-tool/bin/create-gemini-config.js`) on every component installation
 
 **Database**: Supabase (component_downloads, download_stats tables)
 
@@ -568,9 +568,9 @@ The `/api` directory contains Vercel Serverless Functions that power critical in
 
 **Authentication**: Discord signature verification
 
-#### 3. `/api/claude-code-check`
+#### 3. `/api/gemini-code-check`
 
-**Purpose**: Monitors Claude Code releases and sends Discord notifications
+**Purpose**: Monitors Gemini CLI releases and sends Discord notifications
 
 **Method**: `GET` (triggered by Vercel Cron every 4 hours)
 
@@ -581,7 +581,7 @@ The `/api` directory contains Vercel Serverless Functions that power critical in
 - Sends formatted Discord embeds
 - Stores in Neon Database
 
-**Database**: Neon (claude_code_versions, claude_code_changes, discord_notifications_log)
+**Database**: Neon (gemini_code_versions, gemini_code_changes, discord_notifications_log)
 
 ### Deployment Workflow
 
@@ -612,7 +612,7 @@ The `vercel.json` file in project root configures:
   "outputDirectory": "docs",
   "crons": [
     {
-      "path": "/api/claude-code-check",
+      "path": "/api/gemini-code-check",
       "schedule": "0 */4 * * *"
     }
   ],
@@ -777,11 +777,11 @@ ORDER BY downloads DESC
 LIMIT 20;
 ```
 
-**Neon (Claude Code Versions)**:
+**Neon (Gemini CLI Versions)**:
 ```sql
--- Latest Claude Code versions
+-- Latest Gemini CLI versions
 SELECT version, published_at, discord_notified
-FROM claude_code_versions
+FROM gemini_code_versions
 ORDER BY published_at DESC
 LIMIT 10;
 ```
@@ -815,4 +815,4 @@ vercel promote <previous-deployment-url>
 # Go to Vercel Dashboard → Deployments → Click "..." → Promote to Production
 ```
 
-This codebase represents a comprehensive Claude Code component ecosystem with real-time analytics, modular architecture, extensive automation capabilities, and production-ready API infrastructure. The system is designed for scalability, maintainability, and ease of use while providing powerful development workflow enhancements.
+This codebase represents a comprehensive Gemini CLI component ecosystem with real-time analytics, modular architecture, extensive automation capabilities, and production-ready API infrastructure. The system is designed for scalability, maintainability, and ease of use while providing powerful development workflow enhancements.

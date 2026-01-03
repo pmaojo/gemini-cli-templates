@@ -1,6 +1,6 @@
 # CLAUDE.md - React Application
 
-This file provides guidance to Claude Code when working with React applications using TypeScript.
+This file provides guidance to Gemini Code when working with React applications using TypeScript.
 
 ## Project Type
 

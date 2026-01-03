@@ -1,6 +1,6 @@
 # Command Development Skill
 
-Comprehensive guidance on creating Claude Code slash commands, including file format, frontmatter options, dynamic arguments, and best practices.
+Comprehensive guidance on creating Gemini CLI slash commands, including file format, frontmatter options, dynamic arguments, and best practices.
 
 ## Overview
 
@@ -81,7 +81,7 @@ Practical command examples:
 
 ## When This Skill Triggers
 
-Claude Code activates this skill when users:
+Gemini CLI activates this skill when users:
 - Ask to "create a slash command" or "add a command"
 - Need to "write a custom command"
 - Want to "define command arguments"
@@ -108,7 +108,7 @@ The skill uses progressive disclosure:
    - simple-commands.md
    - plugin-commands.md
 
-Claude loads references and examples as needed based on task.
+Gemini loads references and examples as needed based on task.
 
 ## Command Basics Quick Reference
 
@@ -129,8 +129,8 @@ Command prompt content with:
 
 ### Locations
 
-- **Project**: `.claude/commands/` (shared with team)
-- **Personal**: `~/.claude/commands/` (your commands)
+- **Project**: `.gemini/commands/` (shared with team)
+- **Personal**: `~/.gemini/commands/` (your commands)
 - **Plugin**: `plugin-name/commands/` (plugin-specific)
 
 ### Key Features
@@ -261,7 +261,7 @@ To update this skill:
 3. Add new examples/ for different use cases
 4. Update frontmatter when new fields added
 5. Ensure imperative/infinitive form throughout
-6. Test examples work with current Claude Code
+6. Test examples work with current Gemini CLI
 
 ## Version History
 

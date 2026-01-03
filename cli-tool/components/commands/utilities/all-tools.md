@@ -14,7 +14,7 @@ Display all available tools from your system prompt in the following format:
 4. **Format as bullet points** for clear organization
 
 The output should help developers understand:
-- What tools are available in the current Claude Code session
+- What tools are available in the current Gemini CLI session
 - The exact function signatures for reference
 - The primary purpose of each tool
 

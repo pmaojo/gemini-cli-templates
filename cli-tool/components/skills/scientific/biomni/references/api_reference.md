@@ -24,8 +24,8 @@ agent = A1(
 - **`path`** (str, required) - Directory path for biomni data lake (~11GB). Data is automatically downloaded on first use if not present.
 
 - **`llm`** (str, required) - LLM model identifier. Options include:
-  - `'claude-sonnet-4-20250514'` - Recommended for balanced performance
-  - `'claude-opus-4-20250514'` - Maximum capability
+  - `'gemini-sonnet-4-20250514'` - Recommended for balanced performance
+  - `'gemini-opus-4-20250514'` - Maximum capability
   - `'gpt-4'`, `'gpt-4-turbo'` - OpenAI models
   - `'gemini-2.0-flash-exp'` - Google Gemini
   - `'llama-3.3-70b-versatile'` - Via Groq
@@ -38,12 +38,12 @@ agent = A1(
 **Example:**
 ```python
 # Basic initialization
-agent = A1(path='./biomni_data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./biomni_data', llm='gemini-sonnet-4-20250514')
 
 # With MCP integration
 agent = A1(
     path='./biomni_data',
-    llm='claude-sonnet-4-20250514',
+    llm='gemini-sonnet-4-20250514',
     mcp_config='./.biomni/mcp_config.json'
 )
 ```
@@ -131,7 +131,7 @@ Global configuration parameters accessible via `biomni.config.default_config`.
 from biomni.config import default_config
 
 # LLM Configuration
-default_config.llm = "claude-sonnet-4-20250514"
+default_config.llm = "gemini-sonnet-4-20250514"
 default_config.llm_temperature = 0.7
 
 # Execution Parameters
@@ -365,7 +365,7 @@ Create `.biomni/mcp_config.json`:
 # Initialize with MCP config
 agent = A1(
     path='./data',
-    llm='claude-sonnet-4-20250514',
+    llm='gemini-sonnet-4-20250514',
     mcp_config='./.biomni/mcp_config.json'
 )
 
@@ -435,7 +435,7 @@ default_config.sandbox_mode = True  # Enable sandboxing
 
 # Initialize with error handling
 try:
-    agent = A1(path='/data/biomni', llm='claude-sonnet-4-20250514')
+    agent = A1(path='/data/biomni', llm='gemini-sonnet-4-20250514')
     result = agent.go(task_query)
     agent.save_conversation_history(f'reports/{task_id}.pdf')
 except Exception as e:

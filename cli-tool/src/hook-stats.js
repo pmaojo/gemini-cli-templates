@@ -21,13 +21,13 @@ function estimateTokens(text) {
 }
 
 async function analyzeHooks(targetDir = process.cwd()) {
-  const settingsPath = path.join(targetDir, '.claude', 'settings.json');
+  const settingsPath = path.join(targetDir, '.gemini', 'settings.json');
   
   console.log(chalk.blue('🔍 Analyzing automation hooks...'));
   console.log(chalk.gray(`Scanning: ${settingsPath}`));
 
   if (!await fs.pathExists(settingsPath)) {
-    console.log(chalk.yellow('⚠️  No .claude/settings.json file found.'));
+    console.log(chalk.yellow('⚠️  No .gemini/settings.json file found.'));
     return null;
   }
 
@@ -96,7 +96,7 @@ function displayHookStats(analysis) {
   }
 
   console.log(chalk.blue('\n📊 Hook Analysis Results'));
-  console.log(chalk.gray(`File: .claude/settings.json (${analysis.fileSize} bytes)`));
+  console.log(chalk.gray(`File: .gemini/settings.json (${analysis.fileSize} bytes)`));
   console.log(chalk.gray(`Last Modified: ${analysis.lastModified.toLocaleDateString()}`));
   console.log(chalk.gray(`Total Hooks: ${analysis.totalHooks}`));
 
@@ -165,50 +165,50 @@ function displayHookStats(analysis) {
 async function runHookStats(options) {
   const targetDir = options.directory || process.cwd();
   
-  console.log(chalk.blue('🔧 Claude Code Hook Analysis'));
+  console.log(chalk.blue('🔧 Gemini CLI Hook Analysis'));
   console.log(chalk.gray(`Target directory: ${targetDir}`));
 
   const analysis = await analyzeHooks(targetDir);
   
   if (!analysis) {
     console.log(chalk.yellow('\n💡 No automation hooks found.'));
-    console.log(chalk.gray('Would you like to set up Claude Code Templates to add automation hooks?'));
+    console.log(chalk.gray('Would you like to set up Gemini CLI Templates to add automation hooks?'));
     
     const { setupHooks } = await inquirer.prompt([{
       type: 'confirm',
       name: 'setupHooks',
-      message: 'Set up automation hooks with Claude Code Templates?',
+      message: 'Set up automation hooks with Gemini CLI Templates?',
       default: true
     }]);
 
     if (setupHooks) {
-      console.log(chalk.blue('\n🚀 Starting Claude Code Templates setup...'));
+      console.log(chalk.blue('\n🚀 Starting Gemini CLI Templates setup...'));
       
       // Import and run the main setup
-      const createClaudeConfig = require('./index');
-      await createClaudeConfig({ ...options, directory: targetDir });
+      const createGeminiConfig = require('./index');
+      await createGeminiConfig({ ...options, directory: targetDir });
     }
     return;
   }
 
   displayHookStats(analysis);
 
-  // Ask if user wants Claude Code to review and optimize hooks
+  // Ask if user wants Gemini CLI to review and optimize hooks
   console.log(chalk.blue('\n🤖 Optimization Opportunity'));
-  console.log(chalk.gray('Claude Code can analyze your automation hooks and suggest optimizations.'));
+  console.log(chalk.gray('Gemini CLI can analyze your automation hooks and suggest optimizations.'));
   
   const { optimizeHooks } = await inquirer.prompt([{
     type: 'confirm',
     name: 'optimizeHooks',
-    message: 'Would you like Claude Code to review and optimize your automation hooks?',
+    message: 'Would you like Gemini CLI to review and optimize your automation hooks?',
     default: true
   }]);
 
   if (optimizeHooks) {
-    console.log(chalk.blue('\n🔍 Launching Claude Code for hook optimization...'));
+    console.log(chalk.blue('\n🔍 Launching Gemini CLI for hook optimization...'));
     
     // Prepare the optimization prompt
-    const hookSummary = `I have ${analysis.totalHooks} automation hooks configured in my .claude/settings.json file:
+    const hookSummary = `I have ${analysis.totalHooks} automation hooks configured in my .gemini/settings.json file:
 
 ${Object.entries(analysis.byType).map(([type, data]) => 
   `${type}: ${data.count} hooks (${data.hooks.filter(h => h.enabled).length} enabled, ${data.hooks.filter(h => !h.enabled).length} disabled)`
@@ -229,22 +229,22 @@ Please review my automation hook configuration and suggest optimizations for:
 
 Consider my project structure and suggest hooks that would be most beneficial for my development workflow.`;
 
-    const claudeCommand = `claude "${hookSummary}"`;
+    const geminiCommand = `gemini "${hookSummary}"`;
     
     try {
-      const child = spawn('sh', ['-c', claudeCommand], {
+      const child = spawn('sh', ['-c', geminiCommand], {
         stdio: 'inherit',
         cwd: targetDir
       });
 
       child.on('error', (error) => {
-        console.error(chalk.red('❌ Error launching Claude Code:'), error.message);
-        console.log(chalk.yellow('💡 Make sure Claude Code is installed: npm install -g @anthropic-ai/claude-code'));
+        console.error(chalk.red('❌ Error launching Gemini CLI:'), error.message);
+        console.log(chalk.yellow('💡 Make sure Gemini CLI is installed: npm install -g @google-ai/gemini-code'));
       });
 
     } catch (error) {
-      console.error(chalk.red('❌ Error launching Claude Code:'), error.message);
-      console.log(chalk.yellow('💡 Make sure Claude Code is installed and accessible.'));
+      console.error(chalk.red('❌ Error launching Gemini CLI:'), error.message);
+      console.log(chalk.yellow('💡 Make sure Gemini CLI is installed and accessible.'));
     }
   } else {
     console.log(chalk.gray('\n✅ Hook analysis complete. You can run this command again anytime to re-analyze your hooks.'));

@@ -2,14 +2,14 @@
 
 ## Overview
 
-Complete implementation of Cloudflare Workers sandbox for executing Claude Code with AI-powered code generation. This sandbox leverages Cloudflare's global edge network to provide ultra-fast, isolated code execution.
+Complete implementation of Cloudflare Workers sandbox for executing Gemini CLI with AI-powered code generation. This sandbox leverages Cloudflare's global edge network to provide ultra-fast, isolated code execution.
 
 ## What Was Built
 
 ### Core Infrastructure
 1. **Cloudflare Worker** (`src/index.ts`)
    - RESTful API with `/execute`, `/health`, and root endpoints
-   - Integration with Anthropic's Claude AI for code generation
+   - Integration with Google's Gemini AI for code generation
    - Cloudflare Sandbox SDK integration for isolated execution
    - Support for both Python and JavaScript/Node.js
    - CORS support for browser access
@@ -32,7 +32,7 @@ Complete implementation of Cloudflare Workers sandbox for executing Claude Code 
    - Memory usage tracking
 
 ### Documentation Suite
-1. **Main Documentation** (`claude-code-sandbox.md`)
+1. **Main Documentation** (`gemini-code-sandbox.md`)
    - Component overview and features
    - Architecture diagrams
    - Usage examples
@@ -114,7 +114,7 @@ Complete implementation of Cloudflare Workers sandbox for executing Claude Code 
         │                     │
         ▼                     ▼
 ┌──────────────┐    ┌──────────────────┐
-│  Claude AI   │    │  Sandbox SDK     │
+│  Gemini AI   │    │  Sandbox SDK     │
 │  Code Gen    │    │  Isolated Exec   │
 └──────┬───────┘    └────────┬─────────┘
        │                     │
@@ -134,7 +134,7 @@ Complete implementation of Cloudflare Workers sandbox for executing Claude Code 
 ## Key Features
 
 ### 1. AI-Powered Code Execution
-- Natural language to executable code via Claude Sonnet 4.5
+- Natural language to executable code via Gemini Sonnet 4.5
 - Automatic code cleanup and formatting
 - Support for Python and JavaScript/Node.js
 - Error handling and timeout management
@@ -184,7 +184,7 @@ cloudflare/
 │   └── index.ts                  # Cloudflare Worker source (253 lines)
 ├── launcher.ts                   # CLI launcher tool (254 lines)
 ├── monitor.ts                    # Monitoring tool (372 lines)
-├── claude-code-sandbox.md        # Main component doc (358 lines)
+├── gemini-code-sandbox.md        # Main component doc (358 lines)
 ├── README.md                     # Complete guide (435 lines)
 ├── QUICKSTART.md                 # Quick start (315 lines)
 ├── SANDBOX_DEBUGGING.md          # Debug guide (523 lines)
@@ -202,9 +202,9 @@ cloudflare/
 
 ### Deploy to Production
 ```bash
-cd .claude/sandbox/cloudflare
+cd .gemini/sandbox/cloudflare
 npm install
-npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put Google_API_KEY
 npx wrangler deploy
 ```
 
@@ -227,12 +227,12 @@ curl https://your-worker.workers.dev/health
 
 ## Integration Points
 
-### With Claude Code Templates CLI
+### With Gemini CLI Templates CLI
 The sandbox integrates seamlessly with the main CLI:
 
 ```bash
-npx claude-code-templates@latest --sandbox cloudflare \
-  --anthropic-api-key your_key \
+npx gemini-code-templates@latest --sandbox cloudflare \
+  --Google-api-key your_key \
   --prompt "Your prompt"
 ```
 
@@ -240,7 +240,7 @@ npx claude-code-templates@latest --sandbox cloudflare \
 Can be combined with agents, commands, and settings:
 
 ```bash
-npx claude-code-templates@latest --sandbox cloudflare \
+npx gemini-code-templates@latest --sandbox cloudflare \
   --agent frontend-developer \
   --command setup-react \
   --prompt "Create a todo app"
@@ -260,13 +260,13 @@ npx claude-code-templates@latest --sandbox cloudflare \
 - **Free Tier**: 100,000 requests/day (limited Durable Objects)
 - **Paid Plan**: $5/month (10M requests + unlimited Durable Objects)
 
-### Anthropic API
-- **Claude Sonnet 4.5**: ~$3 per million input tokens
+### Google API
+- **Gemini Sonnet 4.5**: ~$3 per million input tokens
 - **Typical Request**: 200 tokens ≈ $0.0006 per execution
 
 ### Example Monthly Cost (10,000 executions)
 - Cloudflare: $5/month
-- Anthropic: ~$6/month
+- Google: ~$6/month
 - **Total**: ~$11/month
 
 ## Performance Metrics
@@ -341,7 +341,7 @@ npx claude-code-templates@latest --sandbox cloudflare \
 ✅ Local development support
 ✅ Production deployment guide
 ✅ Debugging and troubleshooting guides
-✅ Integration with Claude Code Templates
+✅ Integration with Gemini CLI Templates
 ✅ Security best practices implemented
 ✅ Performance optimizations included
 ✅ Cost analysis provided

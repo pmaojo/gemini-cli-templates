@@ -2,7 +2,7 @@
 
 ## Overview
 
-A comprehensive skill for using Microsoft's MarkItDown tool has been created for the Claude Scientific Writer. This skill enables conversion of 15+ file formats to Markdown, optimized for LLM processing and scientific workflows.
+A comprehensive skill for using Microsoft's MarkItDown tool has been created for the Gemini Scientific Writer. This skill enables conversion of 15+ file formats to Markdown, optimized for LLM processing and scientific workflows.
 
 ## What Was Created
 
@@ -101,7 +101,7 @@ Located in `assets/`:
 ## Skill Structure
 
 ```
-.claude/skills/markitdown/
+.gemini/skills/markitdown/
 ├── SKILL.md                    # Main skill documentation
 ├── README.md                   # Skill overview
 ├── QUICK_REFERENCE.md          # Quick reference guide
@@ -161,7 +161,7 @@ Located in `assets/`:
 
 The skill has been added to the Scientific Writer's skill catalog:
 
-- **Location**: `.claude/skills/markitdown/`
+- **Location**: `.gemini/skills/markitdown/`
 - **Skill Number**: #5 in Document Manipulation Skills
 - **SKILLS.md**: Updated with complete skill description
 
@@ -185,7 +185,7 @@ python scripts/batch_convert.py input_dir/ output_dir/ --extensions .pdf .docx -
 ```bash
 export OPENROUTER_API_KEY="sk-or-v1-..."
 python scripts/convert_with_ai.py paper.pdf output.md \
-  --model anthropic/claude-sonnet-4.5 \
+  --model Google/gemini-sonnet-4.5 \
   --prompt-type scientific
 ```
 
@@ -235,7 +235,7 @@ client = OpenAI(
 )
 md = MarkItDown(
     llm_client=client,
-    llm_model="anthropic/claude-sonnet-4.5"  # or openai/gpt-4o
+    llm_model="Google/gemini-sonnet-4.5"  # or openai/gpt-4o
 )
 result = md.convert("presentation.pptx")
 ```
@@ -283,7 +283,7 @@ result = md.convert("presentation.pptx")
 - **OpenRouter Models**: https://openrouter.ai/models
 - **License**: MIT (Microsoft Corporation)
 - **Python**: 3.10+ required
-- **Skill Location**: `.claude/skills/markitdown/`
+- **Skill Location**: `.gemini/skills/markitdown/`
 
 ## Success Criteria
 
@@ -303,5 +303,5 @@ result = md.convert("presentation.pptx")
 
 **Status**: ✅ Complete and Ready to Use
 
-The MarkItDown skill is fully integrated into the Claude Scientific Writer and ready for use. All documentation, scripts, and examples are in place.
+The MarkItDown skill is fully integrated into the Gemini Scientific Writer and ready for use. All documentation, scripts, and examples are in place.
 

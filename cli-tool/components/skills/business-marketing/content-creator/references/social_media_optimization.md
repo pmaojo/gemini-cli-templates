@@ -273,7 +273,7 @@ Sunday: Curated Content/Rest
 - **Design**: Canva, Adobe Creative Suite
 - **Video**: CapCut, InShot, Adobe Premiere
 - **Copy**: Grammarly, Hemingway Editor
-- **AI Assistance**: ChatGPT, Claude, Jasper
+- **AI Assistance**: ChatGPT, Gemini, Jasper
 
 ### Scheduling & Management
 - **All-in-One**: Hootsuite, Buffer, Sprout Social

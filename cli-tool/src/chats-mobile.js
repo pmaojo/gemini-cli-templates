@@ -28,8 +28,8 @@ class ChatsMobile {
     
     // Initialize ConversationAnalyzer with proper parameters
     const homeDir = os.homedir();
-    const claudeDir = path.join(homeDir, '.claude');
-    this.conversationAnalyzer = new ConversationAnalyzer(claudeDir, this.dataCache);
+    const geminiDir = path.join(homeDir, '.gemini');
+    this.conversationAnalyzer = new ConversationAnalyzer(geminiDir, this.dataCache);
 
     // Initialize SessionSharing for export/import functionality
     this.sessionSharing = new SessionSharing(this.conversationAnalyzer);
@@ -74,7 +74,7 @@ class ChatsMobile {
    * Initialize the chats mobile server
    */
   async initialize() {
-    console.log(chalk.gray('🔧 Initializing Claude Code Chats Mobile...'));
+    console.log(chalk.gray('🔧 Initializing Gemini CLI Chats Mobile...'));
     
     try {
       // Setup middleware
@@ -536,7 +536,7 @@ class ChatsMobile {
         const durationMinutes = Math.floor((durationMs % (1000 * 60 * 60)) / (1000 * 60));
 
         // Calculate time conversing vs executing (time between messages)
-        let totalWaitTime = 0; // Time waiting for Claude (thinking + executing)
+        let totalWaitTime = 0; // Time waiting for Gemini (thinking + executing)
         let totalUserTime = 0; // Time user takes to respond
 
         // Find user and assistant messages only (ignore tool results and other message types)
@@ -557,7 +557,7 @@ class ChatsMobile {
             }
             lastUserTime = new Date(msg.timestamp);
           } else if (msg.role === 'assistant') {
-            // If there was a previous user message, calculate Claude execution time
+            // If there was a previous user message, calculate Gemini execution time
             if (lastUserTime) {
               const executionTime = new Date(msg.timestamp) - lastUserTime;
               // Only count gaps less than 10 minutes (typical execution time)
@@ -579,7 +579,7 @@ class ChatsMobile {
           ? Math.round((conversation.tokenUsage?.cacheReadTokens || 0) / cacheTotal * 100)
           : 0;
 
-        // Estimate cost (approximate Claude API pricing)
+        // Estimate cost (approximate Gemini API pricing)
         // Sonnet 4.5: $3/1M input, $15/1M output
         // Cache write: $3.75/1M, Cache read: $0.30/1M
         const inputCost = (conversation.tokenUsage?.inputTokens || 0) / 1000000 * 3;
@@ -816,15 +816,15 @@ class ChatsMobile {
   }
 
   /**
-   * Setup file watching for Claude Code conversations
+   * Setup file watching for Gemini CLI conversations
    */
   async setupFileWatching() {
     try {
       const homeDir = os.homedir();
-      const claudeDir = path.join(homeDir, '.claude');
+      const geminiDir = path.join(homeDir, '.gemini');
       
       this.fileWatcher.setupFileWatchers(
-        claudeDir,
+        geminiDir,
         this.handleDataRefresh.bind(this),
         () => {}, // processRefreshCallback (not needed for mobile)
         this.dataCache,
@@ -1004,9 +1004,9 @@ class ChatsMobile {
   async loadInitialData() {
     try {
       const homeDir = os.homedir();
-      const claudeDataDir = path.join(homeDir, '.claude');
+      const geminiDataDir = path.join(homeDir, '.gemini');
       
-      if (await fs.pathExists(claudeDataDir)) {
+      if (await fs.pathExists(geminiDataDir)) {
         // Use ConversationAnalyzer to load conversations
         const conversations = await this.conversationAnalyzer.loadConversations(this.stateCalculator);
         
@@ -1033,8 +1033,8 @@ class ChatsMobile {
         console.log(chalk.green(`📂 Loaded ${this.data.conversations.length} conversations`));
         console.log(chalk.gray(`📊 Initialized message counts for ${this.conversationMessageCounts.size} conversations`));
       } else {
-        console.log(chalk.yellow('⚠️  No Claude Code data directory found'));
-        console.log(chalk.gray(`    Expected directory: ${claudeDataDir}`));
+        console.log(chalk.yellow('⚠️  No Gemini CLI data directory found'));
+        console.log(chalk.gray(`    Expected directory: ${geminiDataDir}`));
       }
     } catch (error) {
       console.warn(chalk.yellow('⚠️  Failed to load initial data:', error.message));
@@ -1231,7 +1231,7 @@ class ChatsMobile {
  * Start the mobile chats server
  */
 async function startChatsMobile(options = {}) {
-  console.log(chalk.blue('📱 Starting Claude Code Chats Mobile...'));
+  console.log(chalk.blue('📱 Starting Gemini CLI Chats Mobile...'));
   
   const chatsMobile = new ChatsMobile(options);
   
@@ -1243,7 +1243,7 @@ async function startChatsMobile(options = {}) {
       await chatsMobile.openBrowser();
     }
     
-    console.log(chalk.green('✅ Claude Code Chats Mobile is running!'));
+    console.log(chalk.green('✅ Gemini CLI Chats Mobile is running!'));
     
     // Show access URLs
     console.log(chalk.cyan(`📱 Local access: ${chatsMobile.localUrl}`));

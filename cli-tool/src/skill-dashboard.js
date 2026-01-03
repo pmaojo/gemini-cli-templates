@@ -13,8 +13,8 @@ class SkillDashboard {
     this.port = 3337;
     this.httpServer = null;
     this.homeDir = os.homedir();
-    this.claudeDir = path.join(this.homeDir, '.claude');
-    this.personalSkillsDir = path.join(this.claudeDir, 'skills');
+    this.geminiDir = path.join(this.homeDir, '.gemini');
+    this.personalSkillsDir = path.join(this.geminiDir, 'skills');
   }
 
   async initialize() {
@@ -31,7 +31,7 @@ class SkillDashboard {
       console.log(chalk.gray(`✓ Found ${this.personalSkills.length} personal skill(s)`));
 
       // Load project skills (if in a project directory)
-      const projectSkillsDir = path.join(process.cwd(), '.claude', 'skills');
+      const projectSkillsDir = path.join(process.cwd(), '.gemini', 'skills');
       console.log(chalk.gray(`📂 Scanning project skills: ${projectSkillsDir}`));
       this.projectSkills = await this.loadSkillsFromDirectory(projectSkillsDir, 'Project');
       console.log(chalk.gray(`✓ Found ${this.projectSkills.length} project skill(s)`));
@@ -103,7 +103,7 @@ class SkillDashboard {
 
   async loadPluginSkills() {
     const skills = [];
-    const pluginsDir = path.join(this.claudeDir, 'plugins', 'marketplaces');
+    const pluginsDir = path.join(this.geminiDir, 'plugins', 'marketplaces');
 
     try {
       if (!(await fs.pathExists(pluginsDir))) {
@@ -504,7 +504,7 @@ class SkillDashboard {
 }
 
 async function runSkillDashboard(options = {}) {
-  console.log(chalk.blue('🎯 Starting Claude Code Skills Dashboard...'));
+  console.log(chalk.blue('🎯 Starting Gemini CLI Skills Dashboard...'));
 
   const dashboard = new SkillDashboard(options);
 

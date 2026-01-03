@@ -1,8 +1,8 @@
-# Rust Claude Code Templates
+# Rust Gemini Code Templates
 
 ## Coming Soon! 🚧
 
-We're actively working on creating comprehensive Claude Code templates for Rust development.
+We're actively working on creating comprehensive Gemini Code templates for Rust development.
 
 ### What to Expect
 - Best practices for Rust project structure

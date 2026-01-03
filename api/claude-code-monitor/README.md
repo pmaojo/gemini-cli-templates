@@ -1,6 +1,6 @@
-# Claude Code Changelog Monitor
+# Gemini Code Changelog Monitor
 
-Sistema automatizado para monitorear releases de Claude Code y enviar notificaciones a Discord.
+Sistema automatizado para monitorear releases de Gemini Code y enviar notificaciones a Discord.
 
 ## 🚀 Características
 
@@ -16,7 +16,7 @@ Sistema automatizado para monitorear releases de Claude Code y enviar notificaci
 ```
 NPM Release
     ↓
-[Vercel Function] /api/claude-code-monitor
+[Vercel Function] /api/gemini-code-monitor
     ↓
 [Fetch CHANGELOG.md] ← GitHub
     ↓
@@ -39,7 +39,7 @@ NPM Release
 4. Ejecuta el script de migración:
 
 ```bash
-psql "YOUR_NEON_CONNECTION_STRING" < database/migrations/001_create_claude_code_versions.sql
+psql "YOUR_NEON_CONNECTION_STRING" < database/migrations/001_create_gemini_code_versions.sql
 ```
 
 ### 2. Configurar Variables de Entorno
@@ -50,7 +50,7 @@ En Vercel, agrega estas variables:
 # Neon Database
 NEON_DATABASE_URL=postgresql://user:password@host/database?sslmode=require
 
-# Discord Webhook (específico para Claude Code changelog)
+# Discord Webhook (específico para Gemini Code changelog)
 DISCORD_WEBHOOK_URL_CHANGELOG=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
 
 # O usa el webhook general (fallback)
@@ -66,7 +66,7 @@ vercel --prod
 
 ## 📡 Endpoints
 
-### `GET/POST /api/claude-code-monitor`
+### `GET/POST /api/gemini-code-monitor`
 
 Endpoint principal que hace todo el proceso:
 
@@ -109,11 +109,11 @@ Endpoint principal que hace todo el proceso:
 }
 ```
 
-### `POST /api/claude-code-monitor/webhook`
+### `POST /api/gemini-code-monitor/webhook`
 
 Webhook para recibir notificaciones de NPM (alternativa).
 
-### `POST /api/claude-code-monitor/discord-notifier`
+### `POST /api/gemini-code-monitor/discord-notifier`
 
 Procesa y notifica una versión ya guardada en la DB.
 
@@ -134,14 +134,14 @@ NPM puede enviar webhooks cuando se publica un paquete, pero requiere cuenta Pro
 Si tienes NPM Pro:
 
 1. Ve a la configuración del paquete
-2. Agrega webhook: `https://your-domain.vercel.app/api/claude-code-monitor/webhook`
+2. Agrega webhook: `https://your-domain.vercel.app/api/gemini-code-monitor/webhook`
 
 ### Opción 2: GitHub Actions (Gratis)
 
-Crea `.github/workflows/check-claude-code.yml`:
+Crea `.github/workflows/check-gemini-code.yml`:
 
 ```yaml
-name: Check Claude Code Updates
+name: Check Gemini Code Updates
 
 on:
   schedule:
@@ -154,7 +154,7 @@ jobs:
     steps:
       - name: Trigger Vercel Function
         run: |
-          curl -X POST https://your-domain.vercel.app/api/claude-code-monitor
+          curl -X POST https://your-domain.vercel.app/api/gemini-code-monitor
 ```
 
 ### Opción 3: Vercel Cron Jobs
@@ -165,7 +165,7 @@ En `vercel.json`:
 {
   "crons": [
     {
-      "path": "/api/claude-code-monitor",
+      "path": "/api/gemini-code-monitor",
       "schedule": "0 */4 * * *"
     }
   ]
@@ -177,12 +177,12 @@ En `vercel.json`:
 Simplemente abre en el navegador o haz un GET request:
 
 ```bash
-curl https://your-domain.vercel.app/api/claude-code-monitor
+curl https://your-domain.vercel.app/api/gemini-code-monitor
 ```
 
 ## 📊 Schema de Base de Datos
 
-### `claude_code_versions`
+### `gemini_code_versions`
 
 Almacena todas las versiones detectadas.
 
@@ -197,14 +197,14 @@ Almacena todas las versiones detectadas.
 | discord_notified                | BOOLEAN   | Si ya se notificó a Discord      |
 | discord_notification_sent_at    | TIMESTAMP | Cuándo se envió la notificación  |
 
-### `claude_code_changes`
+### `gemini_code_changes`
 
 Cambios individuales parseados.
 
 | Campo       | Tipo    | Descripción                               |
 | ----------- | ------- | ----------------------------------------- |
 | id          | SERIAL  | ID único                                  |
-| version_id  | INTEGER | FK a claude_code_versions                 |
+| version_id  | INTEGER | FK a gemini_code_versions                 |
 | change_type | VARCHAR | feature, fix, improvement, breaking, etc. |
 | description | TEXT    | Descripción del cambio                    |
 | category    | VARCHAR | Plugin System, CLI, Performance, etc.     |
@@ -216,7 +216,7 @@ Log de todas las notificaciones enviadas.
 | Campo           | Tipo      | Descripción                   |
 | --------------- | --------- | ----------------------------- |
 | id              | SERIAL    | ID único                      |
-| version_id      | INTEGER   | FK a claude_code_versions     |
+| version_id      | INTEGER   | FK a gemini_code_versions     |
 | webhook_url     | VARCHAR   | URL del webhook usado         |
 | payload         | JSONB     | Payload completo enviado      |
 | response_status | INTEGER   | HTTP status code de respuesta |
@@ -243,10 +243,10 @@ Metadata del sistema de monitoreo.
 
 ```bash
 # Verificar endpoint
-curl https://your-domain.vercel.app/api/claude-code-monitor
+curl https://your-domain.vercel.app/api/gemini-code-monitor
 
 # Ver respuesta completa
-curl -v https://your-domain.vercel.app/api/claude-code-monitor
+curl -v https://your-domain.vercel.app/api/gemini-code-monitor
 ```
 
 ### Test Local
@@ -264,7 +264,7 @@ echo "DISCORD_WEBHOOK_URL=your_webhook_url" >> .env
 vercel dev
 
 # En otra terminal
-curl http://localhost:3000/api/claude-code-monitor
+curl http://localhost:3000/api/gemini-code-monitor
 ```
 
 ## 📝 Parser de Changelog
@@ -299,8 +299,8 @@ El parser clasifica automáticamente los cambios:
 
 El embed incluye:
 
-- **Título**: 🚀 Claude Code [version] Released
-- **Color**: Purple (#8B5CF6) - color de Claude
+- **Título**: 🚀 Gemini Code [version] Released
+- **Color**: Purple (#8B5CF6) - color de Gemini
 - **Fields**:
   - ⚠️ Breaking Changes (si hay)
   - ✨ New Features
@@ -323,7 +323,7 @@ El embed incluye:
 
 **Causa**: La versión en NPM aún no está en el CHANGELOG.md de GitHub
 
-**Solución**: Esperar a que Anthropic actualice el changelog, o verificar manualmente
+**Solución**: Esperar a que Google actualice el changelog, o verificar manualmente
 
 ### Notificación duplicada
 
@@ -348,7 +348,7 @@ psql "$NEON_DATABASE_URL" -c "SELECT 1"
 ```sql
 -- Ver últimas versiones procesadas
 SELECT version, published_at, discord_notified
-FROM claude_code_versions
+FROM gemini_code_versions
 ORDER BY published_at DESC
 LIMIT 10;
 
@@ -357,8 +357,8 @@ SELECT
   v.version,
   c.change_type,
   COUNT(*) as count
-FROM claude_code_versions v
-JOIN claude_code_changes c ON c.version_id = v.id
+FROM gemini_code_versions v
+JOIN gemini_code_changes c ON c.version_id = v.id
 GROUP BY v.version, c.change_type
 ORDER BY v.published_at DESC;
 
@@ -369,7 +369,7 @@ SELECT
   dl.sent_at,
   dl.error_message
 FROM discord_notifications_log dl
-JOIN claude_code_versions v ON v.id = dl.version_id
+JOIN gemini_code_versions v ON v.id = dl.version_id
 ORDER BY dl.sent_at DESC;
 
 -- Ver metadata de monitoreo
@@ -378,7 +378,7 @@ SELECT * FROM monitoring_metadata;
 
 ## 🚀 Próximas Mejoras
 
-- [ ] Command Discord `/claude-changelog [version]`
+- [ ] Command Discord `/gemini-changelog [version]`
 - [ ] Comparación entre versiones
 - [ ] Estadísticas de adopción
 - [ ] Alertas para breaking changes
@@ -387,12 +387,12 @@ SELECT * FROM monitoring_metadata;
 
 ## 📚 Referencias
 
-- [Claude Code GitHub](https://github.com/anthropics/claude-code)
-- [Claude Code NPM](https://www.npmjs.com/package/@anthropic-ai/claude-code)
+- [Gemini Code GitHub](https://github.com/googles/gemini-code)
+- [Gemini Code NPM](https://www.npmjs.com/package/@google-ai/gemini-code)
 - [Neon Database Docs](https://neon.tech/docs)
 - [Discord Webhooks](https://discord.com/developers/docs/resources/webhook)
 - [Vercel Functions](https://vercel.com/docs/functions)
 
 ---
 
-**Made with ❤️ for the Claude Code community**
+**Made with ❤️ for the Gemini Code community**

@@ -148,7 +148,7 @@ For AI-powered image descriptions using OpenRouter:
 
 ### OpenRouter API
 
-OpenRouter provides unified access to multiple AI models (GPT-4, Claude, Gemini, etc.) through a single API.
+OpenRouter provides unified access to multiple AI models (GPT-4, Gemini, Gemini, etc.) through a single API.
 
 ```bash
 # Install OpenAI SDK (required, already included with markitdown)
@@ -166,14 +166,14 @@ echo 'export OPENROUTER_API_KEY="sk-or-v1-..."' >> ~/.zshrc   # macOS
 
 **Why OpenRouter?**
 - Access to 100+ AI models through one API
-- Choose between GPT-4, Claude, Gemini, and more
+- Choose between GPT-4, Gemini, Gemini, and more
 - Competitive pricing
 - No vendor lock-in
 - Simple OpenAI-compatible interface
 
 **Popular Models for Image Description:**
-- `anthropic/claude-sonnet-4.5` - **Recommended** - Best for scientific vision
-- `anthropic/claude-opus-4.5` - Excellent technical analysis
+- `Google/gemini-sonnet-4.5` - **Recommended** - Best for scientific vision
+- `Google/gemini-opus-4.5` - Excellent technical analysis
 - `openai/gpt-4o` - Good vision understanding
 - `google/gemini-pro-vision` - Cost-effective option
 
@@ -269,7 +269,7 @@ To use the skill scripts:
 
 ```bash
 # Navigate to scripts directory
-cd /Users/vinayak/Documents/claude-scientific-writer/.claude/skills/markitdown/scripts
+cd /Users/vinayak/Documents/gemini-scientific-writer/.gemini/skills/markitdown/scripts
 
 # Scripts are already executable, just run them
 python batch_convert.py --help

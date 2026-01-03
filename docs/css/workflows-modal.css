@@ -335,8 +335,8 @@
     font-size: 0.9rem;
 }
 
-/* Claude files info section */
-.claude-files-info {
+/* Gemini files info section */
+.gemini-files-info {
     background: rgba(213, 116, 85, 0.1);
     border: 1px solid var(--text-accent);
     border-radius: 6px;
@@ -344,19 +344,19 @@
     margin: 12px 0;
 }
 
-.claude-files-info ul {
+.gemini-files-info ul {
     margin: 0;
     padding-left: 20px;
     color: var(--text-primary);
 }
 
-.claude-files-info li {
+.gemini-files-info li {
     margin: 8px 0;
     font-size: 0.85rem;
     line-height: 1.4;
 }
 
-.claude-files-info code {
+.gemini-files-info code {
     background: rgba(213, 116, 85, 0.2);
     color: var(--text-accent);
     padding: 2px 4px;

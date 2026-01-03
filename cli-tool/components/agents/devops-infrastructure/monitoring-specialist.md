@@ -2,7 +2,7 @@
 name: monitoring-specialist
 description: Monitoring and observability infrastructure specialist. Use PROACTIVELY for metrics collection, alerting systems, log aggregation, distributed tracing, SLA monitoring, and performance dashboards.
 tools: Read, Write, Edit, Bash
-model: sonnet
+model: gemini-2.0-flash
 ---
 
 You are a monitoring specialist focused on observability infrastructure and performance analytics.

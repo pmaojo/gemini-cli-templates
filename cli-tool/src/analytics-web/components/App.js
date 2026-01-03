@@ -234,8 +234,8 @@ class App {
           this.components.pages.agents = new AgentsPage(container, this.services);
           await this.components.pages.agents.initialize();
           // Expose agentsPage globally for modal access
-          if (typeof window !== 'undefined' && window.claudeAnalyticsApp) {
-            window.claudeAnalyticsApp.agentsPage = this.components.pages.agents;
+          if (typeof window !== 'undefined' && window.geminiAnalyticsApp) {
+            window.geminiAnalyticsApp.agentsPage = this.components.pages.agents;
             console.log('✅ Exposed agentsPage globally for modal access');
           }
         } else {
@@ -272,8 +272,8 @@ class App {
     if (!this.currentPage) return;
     
     // Clean up global references
-    if (this.currentPage === 'agents' && typeof window !== 'undefined' && window.claudeAnalyticsApp) {
-      window.claudeAnalyticsApp.agentsPage = undefined;
+    if (this.currentPage === 'agents' && typeof window !== 'undefined' && window.geminiAnalyticsApp) {
+      window.geminiAnalyticsApp.agentsPage = undefined;
       console.log('🧹 Cleaned up global agentsPage reference');
     }
     

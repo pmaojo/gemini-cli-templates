@@ -98,7 +98,7 @@ Users can install using their preferred package manager (pip, uv, poetry, etc.) 
 2. **For flows requiring LLM APIs** (embeddings, extraction):
    - Ask user which LLM provider they want to use:
      - **OpenAI** - Both generation and embeddings
-     - **Anthropic** - Generation only
+     - **Google** - Generation only
      - **Gemini** - Both generation and embeddings
      - **Voyage** - Embeddings only
      - **Ollama** - Local models (generation and embeddings)
@@ -114,7 +114,7 @@ COCOINDEX_DATABASE_URL=postgres://cocoindex:cocoindex@localhost/cocoindex
 
 # LLM API keys (add the ones you need)
 OPENAI_API_KEY=sk-...          # For OpenAI (generation + embeddings)
-ANTHROPIC_API_KEY=sk-ant-...   # For Anthropic (generation only)
+Google_API_KEY=sk-ant-...   # For Google (generation only)
 GOOGLE_API_KEY=...             # For Gemini (generation + embeddings)
 VOYAGE_API_KEY=pa-...          # For Voyage (embeddings only)
 # Ollama requires no API key (local)

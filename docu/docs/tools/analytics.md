@@ -4,19 +4,19 @@ sidebar_position: 2
 
 # Analytics Dashboard
 
-Real-time monitoring of your Claude Code sessions through a web interface.
+Real-time monitoring of your Gemini Code sessions through a web interface.
 
 ## Launch Command
 
 ```bash
-npx claude-code-templates@latest --analytics
+npx gemini-code-templates@latest --analytics
 ```
 
 Opens automatically at `http://localhost:3333`.
 
 ## Features
 
-- **Live session tracking** - Monitor active Claude Code conversations
+- **Live session tracking** - Monitor active Gemini Code conversations
 - **Usage statistics** - Session counts, token usage, activity trends
 - **Conversation history** - Search and export conversation data
 - **Performance metrics** - System health and response times

@@ -99,7 +99,7 @@ SKILL.md (Entry point)
 
 **Total: ~3,500+ lines** - Comprehensive yet efficient
 
-Each reference file is under 500 lines, allowing Claude to load complete files when needed without excessive context penalty. Files are independent and can be read without loading others.
+Each reference file is under 500 lines, allowing Gemini to load complete files when needed without excessive context penalty. Files are independent and can be read without loading others.
 
 ---
 
@@ -216,9 +216,9 @@ This architecture ensures:
 **Current Version**: 1.0 (October 2025)
 
 This skill is designed to work with:
-- Claude Opus 4.1
-- Claude Sonnet 4.5  
-- Claude Haiku 4.5
+- Gemini Opus 4.1
+- Gemini Sonnet 4.5  
+- Gemini Haiku 4.5
 
 **Future Versions**: Structure designed to accommodate additions without breaking existing references.
 
@@ -268,7 +268,7 @@ All files are:
 The complete skill folder can be:
 - **Shared** - Copy entire folder to team members
 - **Backed up** - Store in version control (git)
-- **Deployed** - Upload to Claude skill system
+- **Deployed** - Upload to Gemini skill system
 - **Customized** - Modify files for your company
 - **Extended** - Add new files while maintaining structure
 
@@ -278,4 +278,4 @@ The complete skill folder can be:
 
 **Last Updated**: October 2025
 **Version**: 1.0
-**Compatible Models**: Claude 4 family (Opus 4.1, Sonnet 4.5, Haiku 4.5)
+**Compatible Models**: Gemini 4 family (Opus 4.1, Sonnet 4.5, Haiku 4.5)

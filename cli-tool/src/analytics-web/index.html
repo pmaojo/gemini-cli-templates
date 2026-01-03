@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude Code Analytics - Terminal</title>
+    <title>Gemini CLI Analytics - Terminal</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     
     <!-- Service Scripts (loaded first as dependencies) -->
@@ -34,9 +34,9 @@
             --border-secondary: #21262d;
             --text-primary: #c9d1d9;
             --text-secondary: #7d8590;
-            --text-accent: #d57455;
+            --text-accent: #1a73e8;
             --text-success: #3fb950;
-            --text-warning: #f97316;
+            --text-warning: #4285f4;
             --text-error: #f85149;
             --text-info: #a5d6ff;
             --shadow-primary: rgba(0, 0, 0, 0.4);
@@ -54,7 +54,7 @@
             --text-secondary: #656d76;
             --text-accent: #d73a49;
             --text-success: #28a745;
-            --text-warning: #f97316;
+            --text-warning: #4285f4;
             --text-error: #d73a49;
             --text-info: #0366d6;
             --shadow-primary: rgba(0, 0, 0, 0.1);
@@ -242,7 +242,7 @@
         }
         
         .stat-value {
-            color: #d57455;
+            color: #1a73e8;
             font-weight: bold;
         }
         
@@ -253,7 +253,7 @@
             margin-top: 2px;
         }
         
-        .token-popover, .claude-sessions-popover {
+        .token-popover, .gemini-sessions-popover {
             position: absolute;
             top: 100%;
             left: 50%;
@@ -271,7 +271,7 @@
             pointer-events: auto;
         }
         
-        .token-popover::before, .claude-sessions-popover::before {
+        .token-popover::before, .gemini-sessions-popover::before {
             content: '';
             position: absolute;
             bottom: 100%;
@@ -281,7 +281,7 @@
             border-bottom-color: #30363d;
         }
         
-        .token-popover::after, .claude-sessions-popover::after {
+        .token-popover::after, .gemini-sessions-popover::after {
             content: '';
             position: absolute;
             bottom: 100%;
@@ -359,7 +359,7 @@
         
         .date-input:focus {
             outline: none;
-            border-color: #d57455;
+            border-color: #1a73e8;
         }
         
         .refresh-btn {
@@ -378,8 +378,8 @@
         }
         
         .refresh-btn:hover {
-            border-color: #d57455;
-            color: #d57455;
+            border-color: #1a73e8;
+            color: #1a73e8;
         }
         
         .refresh-btn.loading {
@@ -522,13 +522,13 @@
         }
 
         .filter-btn:hover {
-            border-color: #d57455;
-            color: #d57455;
+            border-color: #1a73e8;
+            color: #1a73e8;
         }
 
         .filter-btn.active {
-            background: #d57455;
-            border-color: #d57455;
+            background: #1a73e8;
+            border-color: #1a73e8;
             color: #0d1117;
         }
 
@@ -548,7 +548,7 @@
         }
 
         .chart-title {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 0.875rem;
             text-transform: uppercase;
             margin-bottom: 16px;
@@ -706,7 +706,7 @@
         }
         
         .session-timer-status-dot.warning {
-            background: #f97316;
+            background: #4285f4;
         }
         
         .session-timer-status-dot.inactive {
@@ -735,7 +735,7 @@
             width: 16px;
             height: 16px;
             border: 2px solid #30363d;
-            border-top: 2px solid #d57455;
+            border-top: 2px solid #1a73e8;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -1026,8 +1026,8 @@
             font-size: 0.65rem;
         }
         
-        /* Claude Session Info Styles */
-        .claude-session-info {
+        /* Gemini Session Info Styles */
+        .gemini-session-info {
             background: #161b22;
             border: 1px solid #30363d;
             border-radius: 6px;
@@ -1035,55 +1035,55 @@
             margin: 12px 0;
         }
         
-        .claude-session-info-row {
+        .gemini-session-info-row {
             margin-bottom: 12px;
         }
         
-        .claude-session-info-compact {
+        .gemini-session-info-compact {
             padding: 8px 12px;
             background: #0d1117;
             border: 1px solid #21262d;
             border-radius: 4px;
         }
         
-        .claude-session-header {
-            color: #d57455;
+        .gemini-session-header {
+            color: #1a73e8;
             font-size: 0.8rem;
             margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         
-        .claude-session-details {
+        .gemini-session-details {
             display: flex;
             flex-direction: column;
             gap: 4px;
         }
         
-        .claude-session-stats {
+        .gemini-session-stats {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
         }
         
-        .claude-session-stat {
+        .gemini-session-stat {
             display: flex;
             align-items: center;
             gap: 4px;
         }
         
-        .claude-session-label {
+        .gemini-session-label {
             color: #7d8590;
             font-size: 0.75rem;
         }
         
-        .claude-session-value {
+        .gemini-session-value {
             color: #c9d1d9;
             font-size: 0.75rem;
             font-weight: 600;
         }
         
-        .claude-session-value.expired {
+        .gemini-session-value.expired {
             color: #f85149;
         }
         
@@ -1108,7 +1108,7 @@
         }
         
         .chart-title {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 0.875rem;
             text-transform: uppercase;
             margin-bottom: 16px;
@@ -1246,13 +1246,13 @@
         }
         
         .filter-btn:hover {
-            border-color: #d57455;
-            color: #d57455;
+            border-color: #1a73e8;
+            color: #1a73e8;
         }
         
         .filter-btn.active {
-            background: #d57455;
-            border-color: #d57455;
+            background: #1a73e8;
+            border-color: #1a73e8;
             color: #0d1117;
         }
         
@@ -1306,7 +1306,7 @@
         }
         
         .session-id {
-            color: #d57455;
+            color: #1a73e8;
             font-family: monospace;
             display: flex;
             align-items: center;
@@ -1373,7 +1373,7 @@
         }
         
         .conversation-state {
-            color: #d57455;
+            color: #1a73e8;
             font-style: italic;
             font-size: 0.8rem;
         }
@@ -1420,11 +1420,11 @@
         }
         
         .status-square.success {
-            background: #d57455;
+            background: #1a73e8;
         }
         
         .status-square.tool {
-            background: #f97316;
+            background: #4285f4;
         }
         
         .status-square.error {
@@ -1515,7 +1515,7 @@
         }
         
         .detail-title {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 1.1rem;
         }
         
@@ -1538,7 +1538,7 @@
         
         .export-format-select:focus {
             outline: none;
-            border-color: #d57455;
+            border-color: #1a73e8;
         }
         
         .export-format-select option {
@@ -1559,13 +1559,13 @@
         }
         
         .btn:hover {
-            border-color: #d57455;
-            color: #d57455;
+            border-color: #1a73e8;
+            color: #1a73e8;
         }
         
         .btn-primary {
-            background: #d57455;
-            border-color: #d57455;
+            background: #1a73e8;
+            border-color: #1a73e8;
             color: #0d1117;
         }
         
@@ -1617,7 +1617,7 @@
         
         .search-input:focus {
             outline: none;
-            border-color: #d57455;
+            border-color: #1a73e8;
         }
         
         .conversation-history {
@@ -1669,7 +1669,7 @@
         }
         
         .message-role.assistant {
-            color: #d57455;
+            color: #1a73e8;
         }
         
         .message-time {
@@ -1696,11 +1696,11 @@
         }
         
         .message-type-indicator.success {
-            background: #d57455;
+            background: #1a73e8;
         }
         
         .message-type-indicator.tool {
-            background: #f97316;
+            background: #4285f4;
         }
         
         .message-type-indicator.error {
@@ -1844,7 +1844,7 @@
 
         .type-tools-only {
             background: rgba(249, 115, 22, 0.2);
-            color: #f97316;
+            color: #4285f4;
             border: 1px solid rgba(249, 115, 22, 0.4);
         }
 
@@ -2093,7 +2093,7 @@
         }
 
         .tool-count {
-            color: #f97316;
+            color: #4285f4;
             font-size: 0.7rem;
             font-family: monospace;
         }
@@ -2152,13 +2152,13 @@
         }
 
         .terminal-tool .tool-prompt {
-            color: #f97316;
+            color: #4285f4;
             font-weight: bold;
             width: 12px;
         }
 
         .terminal-tool.tool-use {
-            border-left-color: #f97316;
+            border-left-color: #4285f4;
         }
 
         .terminal-tool.tool-result {
@@ -3652,7 +3652,7 @@
             width: 56px;
             height: 56px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--text-accent), #f97316);
+            background: linear-gradient(135deg, var(--text-accent), #4285f4);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -4505,7 +4505,7 @@
             width: 40px;
             height: 40px;
             border-radius: 20px;
-            background: linear-gradient(135deg, var(--text-accent), #f97316);
+            background: linear-gradient(135deg, var(--text-accent), #4285f4);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -5449,7 +5449,7 @@
 
         /* Enhanced state styles */
         .state-dot.status-tool-pending {
-            background: #f97316;
+            background: #4285f4;
             animation: pulse 2s infinite;
         }
 
@@ -6660,7 +6660,7 @@
         }
         
         .glob-pattern-section h4, .glob-components-section h4, .glob-insights-section h4 {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 1.1rem;
             margin-bottom: 16px;
         }
@@ -6786,7 +6786,7 @@
         }
         
         .grep-config-section h4, .grep-options-section h4, .grep-pattern-section h4, .grep-insights-section h4 {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 1.1rem;
             margin-bottom: 16px;
         }
@@ -7004,7 +7004,7 @@
         }
         
         .todo-summary-section h4, .todo-status-section h4, .todo-priority-section h4, .todo-items-section h4 {
-            color: #d57455;
+            color: #1a73e8;
             font-size: 1.1rem;
             margin-bottom: 16px;
         }
@@ -8443,7 +8443,7 @@
             
             try {
                 // Initialize services in correct order
-                console.log('🚀 Initializing Claude Analytics App with Sidebar...');
+                console.log('🚀 Initializing Gemini Analytics App with Sidebar...');
                 
                 // 1. Initialize WebSocket service first
                 const websocketService = new WebSocketService();
@@ -8481,12 +8481,12 @@
                 }, 500);
                 
                 // 8. Store app instance globally for debugging
-                window.claudeAnalyticsApp = app;
+                window.geminiAnalyticsApp = app;
                 
-                console.log('🎉 Claude Analytics App with Sidebar initialized successfully!');
+                console.log('🎉 Gemini Analytics App with Sidebar initialized successfully!');
                 
             } catch (error) {
-                console.error('❌ Failed to initialize Claude Analytics App:', error);
+                console.error('❌ Failed to initialize Gemini Analytics App:', error);
                 
                 // Show error message to user
                 appContainer.innerHTML = `
@@ -8521,7 +8521,7 @@
             const body = document.body;
             
             // Load saved theme
-            const savedTheme = localStorage.getItem('claude-analytics-theme') || 'dark';
+            const savedTheme = localStorage.getItem('gemini-analytics-theme') || 'dark';
             if (savedTheme === 'light') {
                 body.setAttribute('data-theme', 'light');
                 themeSwitchThumb.classList.add('light');
@@ -8537,7 +8537,7 @@
                 themeSwitchThumb.classList.toggle('light', newTheme === 'light');
                 themeSwitchThumb.querySelector('.theme-switch-icon').textContent = newTheme === 'light' ? '☀️' : '🌙';
                 
-                localStorage.setItem('claude-analytics-theme', newTheme);
+                localStorage.setItem('gemini-analytics-theme', newTheme);
             });
         }
         
@@ -8560,23 +8560,23 @@
             // Check if this is a Read tool by examining stored tool data
             const toolData = window.storedToolData && window.storedToolData[contentId];
             console.log('🔍 Tool data for', contentId, ':', toolData);
-            console.log('🔍 window.claudeAnalyticsApp:', window.claudeAnalyticsApp);
-            console.log('🔍 window.claudeAnalyticsApp.agentsPage:', window.claudeAnalyticsApp && window.claudeAnalyticsApp.agentsPage);
+            console.log('🔍 window.geminiAnalyticsApp:', window.geminiAnalyticsApp);
+            console.log('🔍 window.geminiAnalyticsApp.agentsPage:', window.geminiAnalyticsApp && window.geminiAnalyticsApp.agentsPage);
             
             // Check if this is a supported tool with custom modal
             const supportedTools = ['Read', 'Edit', 'Write', 'Bash', 'Glob', 'Grep', 'TodoWrite'];
-            if (toolData && supportedTools.includes(toolData.name) && window.claudeAnalyticsApp && window.claudeAnalyticsApp.agentsPage) {
+            if (toolData && supportedTools.includes(toolData.name) && window.geminiAnalyticsApp && window.geminiAnalyticsApp.agentsPage) {
                 console.log(`✅ Opening custom ${toolData.name} tool modal`);
                 // Open tool-specific modal
-                window.claudeAnalyticsApp.agentsPage.openToolModal(toolData);
+                window.geminiAnalyticsApp.agentsPage.openToolModal(toolData);
                 return;
             } else {
                 console.log('❌ Custom tool modal conditions not met:');
                 console.log('   - toolData exists:', !!toolData);
                 console.log('   - toolData.name:', toolData?.name);
                 console.log('   - is supported tool:', toolData ? supportedTools.includes(toolData.name) : false);
-                console.log('   - window.claudeAnalyticsApp exists:', !!window.claudeAnalyticsApp);
-                console.log('   - agentsPage exists:', !!(window.claudeAnalyticsApp && window.claudeAnalyticsApp.agentsPage));
+                console.log('   - window.geminiAnalyticsApp exists:', !!window.geminiAnalyticsApp);
+                console.log('   - agentsPage exists:', !!(window.geminiAnalyticsApp && window.geminiAnalyticsApp.agentsPage));
             }
             
             // Default modal for other tools

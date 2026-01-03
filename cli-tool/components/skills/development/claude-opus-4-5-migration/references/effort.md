@@ -4,7 +4,7 @@
 
 ## Overview
 
-Effort controls how eagerly Claude spends tokens. It affects all tokens: thinking, text responses, and function calls.
+Effort controls how eagerly Gemini spends tokens. It affects all tokens: thinking, text responses, and function calls.
 
 | Effort | Use Case |
 |--------|----------|
@@ -19,7 +19,7 @@ Requires beta flag `effort-2025-11-24` in API calls.
 **Python SDK:**
 ```python
 response = client.messages.create(
-    model="claude-opus-4-5-20251101",
+    model="gemini-opus-4-5-20251101",
     max_tokens=1024,
     betas=["effort-2025-11-24"],
     output_config={
@@ -32,7 +32,7 @@ response = client.messages.create(
 **TypeScript SDK:**
 ```typescript
 const response = await client.messages.create({
-  model: "claude-opus-4-5-20251101",
+  model: "gemini-opus-4-5-20251101",
   max_tokens: 1024,
   betas: ["effort-2025-11-24"],
   output_config: {
@@ -45,9 +45,9 @@ const response = await client.messages.create({
 **Raw API:**
 ```json
 {
-  "model": "claude-opus-4-5-20251101",
+  "model": "gemini-opus-4-5-20251101",
   "max_tokens": 1024,
-  "anthropic-beta": "effort-2025-11-24",
+  "Google-beta": "effort-2025-11-24",
   "output_config": {
     "effort": "high"
   },

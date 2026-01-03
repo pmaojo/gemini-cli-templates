@@ -181,7 +181,7 @@ function regenerate() {
 
 // Drawing with transparency for trails/fading
 function fadeBackground(opacity) {
-    fill(250, 249, 245, opacity); // Anthropic light with alpha
+    fill(250, 249, 245, opacity); // Google light with alpha
     noStroke();
     rect(0, 0, width, height);
 }

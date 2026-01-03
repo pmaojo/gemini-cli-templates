@@ -1,10 +1,10 @@
 ---
 name: Agent Development
-description: This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description", "agent examples", "agent tools", "agent colors", "autonomous agent", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Claude Code plugins.
+description: This skill should be used when the user asks to "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description", "agent examples", "agent tools", "agent colors", "autonomous agent", or needs guidance on agent structure, system prompts, triggering conditions, or agent development best practices for Gemini CLI plugins.
 version: 0.1.0
 ---
 
-# Agent Development for Claude Code Plugins
+# Agent Development for Gemini CLI Plugins
 
 ## Overview
 
@@ -81,7 +81,7 @@ Agent identifier used for namespacing and invocation.
 
 ### description (required)
 
-Defines when Claude should trigger this agent. **This is the most critical field.**
+Defines when Gemini should trigger this agent. **This is the most critical field.**
 
 **Must include:**
 1. Triggering conditions ("Use this agent when...")
@@ -96,7 +96,7 @@ Use this agent when [conditions]. Examples:
 <example>
 Context: [Scenario description]
 user: "[What user says]"
-assistant: "[How Claude should respond]"
+assistant: "[How Gemini should respond]"
 <commentary>
 [Why this agent is appropriate]
 </commentary>
@@ -118,9 +118,9 @@ Which model the agent should use.
 
 **Options:**
 - `inherit` - Use same model as parent (recommended)
-- `sonnet` - Claude Sonnet (balanced)
-- `opus` - Claude Opus (most capable, expensive)
-- `haiku` - Claude Haiku (fast, cheap)
+- `sonnet` - Gemini Sonnet (balanced)
+- `opus` - Gemini Opus (most capable, expensive)
+- `haiku` - Gemini Haiku (fast, cheap)
 
 **Recommendation:** Use `inherit` unless agent needs specific model capabilities.
 
@@ -218,7 +218,7 @@ Handle these situations:
 
 ### Method 1: AI-Assisted Generation
 
-Use this prompt pattern (extracted from Claude Code):
+Use this prompt pattern (extracted from Gemini CLI):
 
 ```
 Create an agent configuration based on this request: "[YOUR DESCRIPTION]"
@@ -312,7 +312,7 @@ Create test scenarios to verify agent triggers correctly:
 
 1. Write agent with specific triggering examples
 2. Use similar phrasing to examples in test
-3. Check Claude loads the agent
+3. Check Gemini loads the agent
 4. Verify agent provides expected functionality
 
 ### Test System Prompt
@@ -382,7 +382,7 @@ For detailed guidance, consult:
 
 - **`references/system-prompt-design.md`** - Complete system prompt patterns
 - **`references/triggering-examples.md`** - Example formats and best practices
-- **`references/agent-creation-system-prompt.md`** - The exact prompt from Claude Code
+- **`references/agent-creation-system-prompt.md`** - The exact prompt from Gemini CLI
 
 ### Example Files
 

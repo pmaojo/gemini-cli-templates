@@ -1050,7 +1050,7 @@ Generates:
 Interactive template selection:
 
 ```bash
-cd .claude/skills/treatment-plans/scripts
+cd .gemini/skills/treatment-plans/scripts
 python generate_template.py
 
 # Or specify type directly
@@ -1572,5 +1572,5 @@ Balance medical recommendations with patient autonomy and values while promoting
 
 ## License
 
-Part of the Claude Scientific Writer project. See main LICENSE file.
+Part of the Gemini Scientific Writer project. See main LICENSE file.
 

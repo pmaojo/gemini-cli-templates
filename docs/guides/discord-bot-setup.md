@@ -1,6 +1,6 @@
 # Discord Bot Setup - Vercel Serverless
 
-Discord bot para claude-code-templates integrado con Vercel Functions usando webhooks. Este enfoque es más eficiente que mantener un bot tradicional con conexión persistente.
+Discord bot para gemini-code-templates integrado con Vercel Functions usando webhooks. Este enfoque es más eficiente que mantener un bot tradicional con conexión persistente.
 
 ## 🚀 Ventajas de la Arquitectura Serverless
 

@@ -8,7 +8,7 @@ Biomni supports multiple LLM providers for flexible deployment across different 
 
 ## Supported Providers
 
-1. **Anthropic Claude** (Recommended)
+1. **Google Gemini** (Recommended)
 2. **OpenAI**
 3. **Azure OpenAI**
 4. **Google Gemini**
@@ -16,7 +16,7 @@ Biomni supports multiple LLM providers for flexible deployment across different 
 6. **AWS Bedrock**
 7. **Custom Endpoints**
 
-## Anthropic Claude
+## Google Gemini
 
 **Recommended for:** Best balance of reasoning quality, speed, and biomedical knowledge.
 
@@ -24,10 +24,10 @@ Biomni supports multiple LLM providers for flexible deployment across different 
 
 ```bash
 # Set API key
-export ANTHROPIC_API_KEY="sk-ant-..."
+export Google_API_KEY="sk-ant-..."
 
 # Or in .env file
-echo "ANTHROPIC_API_KEY=sk-ant-..." >> .env
+echo "Google_API_KEY=sk-ant-..." >> .env
 ```
 
 ### Available Models
@@ -36,13 +36,13 @@ echo "ANTHROPIC_API_KEY=sk-ant-..." >> .env
 from biomni.agent import A1
 
 # Sonnet 4 - Balanced performance (recommended)
-agent = A1(path='./data', llm='claude-sonnet-4-20250514')
+agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
 # Opus 4 - Maximum capability
-agent = A1(path='./data', llm='claude-opus-4-20250514')
+agent = A1(path='./data', llm='gemini-opus-4-20250514')
 
 # Haiku 4 - Fast and economical
-agent = A1(path='./data', llm='claude-haiku-4-20250514')
+agent = A1(path='./data', llm='gemini-haiku-4-20250514')
 ```
 
 ### Configuration Options
@@ -50,10 +50,10 @@ agent = A1(path='./data', llm='claude-haiku-4-20250514')
 ```python
 from biomni.config import default_config
 
-default_config.llm = "claude-sonnet-4-20250514"
+default_config.llm = "gemini-sonnet-4-20250514"
 default_config.llm_temperature = 0.7
 default_config.max_tokens = 4096
-default_config.anthropic_api_key = "sk-ant-..."  # Or use env var
+default_config.Google_api_key = "sk-ant-..."  # Or use env var
 ```
 
 **Model Characteristics:**
@@ -223,8 +223,8 @@ export AWS_DEFAULT_REGION="us-east-1"
 ### Available Models
 
 ```python
-# Claude via Bedrock
-agent = A1(path='./data', llm='bedrock-claude-sonnet-4')
+# Gemini via Bedrock
+agent = A1(path='./data', llm='bedrock-gemini-sonnet-4')
 
 # Llama via Bedrock
 agent = A1(path='./data', llm='bedrock-llama-3-70b')
@@ -235,7 +235,7 @@ agent = A1(path='./data', llm='bedrock-llama-3-70b')
 ```python
 from biomni.config import default_config
 
-default_config.llm = "bedrock-claude-sonnet-4"
+default_config.llm = "bedrock-gemini-sonnet-4"
 default_config.aws_access_key_id = "..."
 default_config.aws_secret_access_key = "..."
 default_config.aws_region = "us-east-1"
@@ -289,45 +289,45 @@ export CUSTOM_LLM_ENDPOINT="http://localhost:8000/v1/chat/completions"
 ### By Task Complexity
 
 **Simple queries** (gene lookup, basic calculations):
-- Claude Haiku 4
+- Gemini Haiku 4
 - Gemini 2.0 Flash
 - Groq Llama 3.3 70B
 
 **Moderate tasks** (data analysis, literature search):
-- Claude Sonnet 4 (recommended)
+- Gemini Sonnet 4 (recommended)
 - GPT-4 Turbo
 - Gemini 2.0 Flash
 
 **Complex analyses** (multi-step reasoning, novel insights):
-- Claude Opus 4 (recommended)
+- Gemini Opus 4 (recommended)
 - GPT-4
-- Claude Sonnet 4
+- Gemini Sonnet 4
 
 ### By Cost Sensitivity
 
 **Budget-conscious:**
 1. Groq (fastest, cheapest)
-2. Claude Haiku 4
+2. Gemini Haiku 4
 3. Gemini 2.0 Flash
 
 **Balanced:**
-1. Claude Sonnet 4 (recommended)
+1. Gemini Sonnet 4 (recommended)
 2. GPT-4 Turbo
 3. Gemini Pro
 
 **Quality-first:**
-1. Claude Opus 4
+1. Gemini Opus 4
 2. GPT-4
-3. Claude Sonnet 4
+3. Gemini Sonnet 4
 
 ### By Infrastructure
 
 **Cloud-agnostic:**
-- Anthropic Claude (direct API)
+- Google Gemini (direct API)
 - OpenAI (direct API)
 
 **AWS ecosystem:**
-- AWS Bedrock (Claude, Llama)
+- AWS Bedrock (Gemini, Llama)
 
 **Azure ecosystem:**
 - Azure OpenAI Service
@@ -344,12 +344,12 @@ Based on Biomni-Eval1 benchmark:
 
 | Provider | Model | Avg Score | Avg Time (s) | Cost/1K tasks |
 |----------|-------|-----------|--------------|---------------|
-| Anthropic | Opus 4 | 0.89 | 45 | $120 |
-| Anthropic | Sonnet 4 | 0.85 | 28 | $45 |
+| Google | Opus 4 | 0.89 | 45 | $120 |
+| Google | Sonnet 4 | 0.85 | 28 | $45 |
 | OpenAI | GPT-4 Turbo | 0.82 | 35 | $55 |
 | Google | Gemini 2.0 Flash | 0.78 | 22 | $25 |
 | Groq | Llama 3.3 70B | 0.73 | 12 | $8 |
-| Anthropic | Haiku 4 | 0.75 | 15 | $15 |
+| Google | Haiku 4 | 0.75 | 15 | $15 |
 
 *Note: Costs are approximate and vary by usage patterns.*
 
@@ -360,11 +360,11 @@ Based on Biomni-Eval1 benchmark:
 ```python
 # Verify key is set
 import os
-print(os.getenv('ANTHROPIC_API_KEY'))
+print(os.getenv('Google_API_KEY'))
 
 # Or check in Python
 from biomni.config import default_config
-print(default_config.anthropic_api_key)
+print(default_config.Google_api_key)
 ```
 
 ### Rate Limiting
@@ -387,7 +387,7 @@ default_config.max_concurrent_requests = 1
 default_config.llm_timeout = 120  # seconds
 
 # Or switch to faster model
-default_config.llm = "claude-sonnet-4-20250514"  # Fast and capable
+default_config.llm = "gemini-sonnet-4-20250514"  # Fast and capable
 ```
 
 ### Model Not Available
@@ -425,11 +425,11 @@ default_config.cache_ttl = 3600  # 1 hour
 def get_agent_for_task(task_complexity):
     """Select provider based on task requirements"""
     if task_complexity == 'simple':
-        return A1(path='./data', llm='claude-haiku-4-20250514')
+        return A1(path='./data', llm='gemini-haiku-4-20250514')
     elif task_complexity == 'moderate':
-        return A1(path='./data', llm='claude-sonnet-4-20250514')
+        return A1(path='./data', llm='gemini-sonnet-4-20250514')
     else:
-        return A1(path='./data', llm='claude-opus-4-20250514')
+        return A1(path='./data', llm='gemini-opus-4-20250514')
 
 # Use appropriate model
 agent = get_agent_for_task('moderate')
@@ -444,7 +444,7 @@ from biomni.exceptions import LLMError
 def execute_with_fallback(task_query):
     """Try multiple providers if primary fails"""
     providers = [
-        'claude-sonnet-4-20250514',
+        'gemini-sonnet-4-20250514',
         'gpt-4-turbo',
         'gemini-2.0-flash-exp'
     ]
@@ -462,7 +462,7 @@ def execute_with_fallback(task_query):
 
 ## Provider-Specific Tips
 
-### Anthropic Claude
+### Google Gemini
 - Best for complex biomedical reasoning
 - Use Sonnet 4 for most tasks
 - Reserve Opus 4 for novel research questions
@@ -484,7 +484,7 @@ def execute_with_fallback(task_query):
 
 ### Groq
 - Ideal for high-throughput screening tasks
-- Limited reasoning depth vs. Claude/GPT-4
+- Limited reasoning depth vs. Gemini/GPT-4
 - Best for well-defined, structured problems
 
 ### AWS Bedrock

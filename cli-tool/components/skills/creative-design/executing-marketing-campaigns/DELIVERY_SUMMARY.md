@@ -2,7 +2,7 @@
 
 ## 📦 What You've Received
 
-A production-ready Claude AI skill for marketing teams, built following Anthropic's official best practices and designed for immediate deployment.
+A production-ready Gemini AI skill for marketing teams, built following Google's official best practices and designed for immediate deployment.
 
 ### Package Contents
 
@@ -277,7 +277,7 @@ python scripts/marketing_utils.py batch \
 - **Paths**: Forward slashes only (Windows compatible)
 - **Total Content**: 2,600+ lines
 - **Token Efficient**: Each file loads independently
-- **Compatible**: All Claude 4 models (Opus, Sonnet, Haiku)
+- **Compatible**: All Gemini 4 models (Opus, Sonnet, Haiku)
 
 ---
 
@@ -419,22 +419,22 @@ See [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md) for detailed customizatio
 
 ---
 
-## 📖 How to Use This Skill with Claude
+## 📖 How to Use This Skill with Gemini
 
 ### Scenario 1: "Help me plan a campaign"
-> Share the [campaigns.md](reference/campaigns.md) content, then ask Claude to help you fill out the campaign development template for your specific situation.
+> Share the [campaigns.md](reference/campaigns.md) content, then ask Gemini to help you fill out the campaign development template for your specific situation.
 
 ### Scenario 2: "Review my email copy"
-> Share [content.md](reference/content.md) copywriting principles, paste your email, ask Claude to review against the guidelines.
+> Share [content.md](reference/content.md) copywriting principles, paste your email, ask Gemini to review against the guidelines.
 
 ### Scenario 3: "Create a content calendar"
-> Share [social_media.md](reference/social_media.md) platform guides and [templates.md](reference/templates.md) calendar template, ask Claude to create one for you.
+> Share [social_media.md](reference/social_media.md) platform guides and [templates.md](reference/templates.md) calendar template, ask Gemini to create one for you.
 
 ### Scenario 4: "Set up campaign tracking"
-> Ask Claude to use [scripts/marketing_utils.py](scripts/marketing_utils.py) to generate tracking URLs from your [examples/campaigns_sample.csv](examples/campaigns_sample.csv) format.
+> Ask Gemini to use [scripts/marketing_utils.py](scripts/marketing_utils.py) to generate tracking URLs from your [examples/campaigns_sample.csv](examples/campaigns_sample.csv) format.
 
 ### Scenario 5: "Define campaign success metrics"
-> Share [analytics.md](reference/analytics.md) funnel framework and KPI definitions, ask Claude to help define success metrics for your campaign.
+> Share [analytics.md](reference/analytics.md) funnel framework and KPI definitions, ask Gemini to help define success metrics for your campaign.
 
 ---
 
@@ -465,7 +465,7 @@ See [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md) for detailed customizatio
 
 This skill has been developed with:
 
-✅ **Best Practices**: Built following Anthropic's official Claude skills guidelines
+✅ **Best Practices**: Built following Google's official Gemini skills guidelines
 ✅ **Real Examples**: Includes 50+ real marketing examples
 ✅ **Field-Tested**: Frameworks based on proven marketing methodologies
 ✅ **Comprehensive**: Covers marketing funnel from awareness to advocacy
@@ -520,7 +520,7 @@ After deploying this skill, track:
 
 1. **Review**: Read README.md and SKILL.md
 2. **Customize**: Follow IMPLEMENTATION_GUIDE.md
-3. **Deploy**: Upload files to your Claude skills system
+3. **Deploy**: Upload files to your Gemini skills system
 4. **Train**: Demonstrate to your team
 5. **Use**: Apply to your next marketing project
 6. **Iterate**: Collect feedback and improve

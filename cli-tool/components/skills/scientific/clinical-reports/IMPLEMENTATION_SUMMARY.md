@@ -2,7 +2,7 @@
 
 ## 📊 Overview
 
-Successfully implemented a comprehensive clinical reports skill for the Claude Scientific Writer project.
+Successfully implemented a comprehensive clinical reports skill for the Gemini Scientific Writer project.
 
 **Implementation Date**: November 4, 2025  
 **Total Files Created**: 30  
@@ -14,7 +14,7 @@ Successfully implemented a comprehensive clinical reports skill for the Claude S
 ## 📂 Structure
 
 ```
-.claude/skills/clinical-reports/
+.gemini/skills/clinical-reports/
 ├── README.md                    (Quick start guide)
 ├── SKILL.md                     (Main skill definition - 1,089 lines)
 ├── references/                  (8 comprehensive guides)
@@ -637,5 +637,5 @@ Supports development of:
 
 **Implementation completed successfully on November 4, 2025**
 
-The clinical-reports skill is now fully integrated into the Claude Scientific Writer project and ready for use!
+The clinical-reports skill is now fully integrated into the Gemini Scientific Writer project and ready for use!
 

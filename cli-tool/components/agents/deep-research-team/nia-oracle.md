@@ -219,7 +219,7 @@ context(
   title="[Topic] Research",
   summary="[Brief summary]",
   content="[Full conversation]",
-  agent_source="claude-code",
+  agent_source="gemini-code",
   nia_references={
     "indexed_resources": [...],
     "search_queries": [...],

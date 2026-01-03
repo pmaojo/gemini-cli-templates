@@ -1,20 +1,20 @@
 {
-  "name": "claude-code-templates",
+  "name": "gemini-cli-templates",
   "version": "1.28.12",
-  "description": "CLI tool to setup Claude Code configurations with framework-specific commands, automation hooks and MCP Servers for your projects",
+  "description": "CLI tool to setup Gemini CLI configurations with framework-specific commands, automation hooks and MCP Servers for your projects",
   "main": "src/index.js",
   "bin": {
-    "create-claude-config": "bin/create-claude-config.js",
-    "claude-code-templates": "bin/create-claude-config.js",
-    "claude-code-template": "bin/create-claude-config.js",
-    "claude-init": "bin/create-claude-config.js",
-    "cctemplates": "bin/create-claude-config.js",
-    "cct": "bin/create-claude-config.js",
-    "claude-setup": "bin/create-claude-config.js",
-    "claude-config": "bin/create-claude-config.js"
+    "create-gemini-config": "bin/create-gemini-config.js",
+    "gemini-cli-templates": "bin/create-gemini-config.js",
+    "gemini-cli-template": "bin/create-gemini-config.js",
+    "gemini-init": "bin/create-gemini-config.js",
+    "gctemplates": "bin/create-gemini-config.js",
+    "gct": "bin/create-gemini-config.js",
+    "gemini-setup": "bin/create-gemini-config.js",
+    "gemini-config": "bin/create-gemini-config.js"
   },
   "scripts": {
-    "start": "node bin/create-claude-config.js",
+    "start": "node bin/create-gemini-config.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -29,7 +29,7 @@
     "test:node": "make test-node",
     "test:all": "npm run test:coverage && make test",
     "dev:link": "npm link",
-    "dev:unlink": "npm unlink -g claude-code-templates",
+    "dev:unlink": "npm unlink -g gemini-cli-templates",
     "pretest:commands": "npm run dev:link",
     "analytics:start": "node src/analytics.js",
     "analytics:test": "npm run test:analytics",
@@ -39,8 +39,8 @@
     "security-audit:json": "node src/security-audit.js --json --output=security-report.json"
   },
   "keywords": [
-    "claude",
-    "claude-code",
+    "gemini",
+    "gemini-cli",
     "ai",
     "configuration",
     "template",
@@ -61,7 +61,7 @@
     "rust",
     "go"
   ],
-  "author": "Claude Code Templates",
+  "author": "Gemini CLI Templates",
   "license": "MIT",
   "dependencies": {
     "boxen": "^5.1.2",
@@ -83,12 +83,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davila7/claude-code-templates.git"
+    "url": "git+https://github.com/davila7/gemini-cli-templates.git"
   },
   "bugs": {
-    "url": "https://github.com/davila7/claude-code-templates/issues"
+    "url": "https://github.com/davila7/gemini-cli-templates/issues"
   },
-  "homepage": "https://github.com/davila7/claude-code-templates#readme",
+  "homepage": "https://github.com/davila7/gemini-cli-templates#readme",
   "files": [
     "bin/",
     "src/",

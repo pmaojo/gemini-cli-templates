@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const ora = require('ora');
 
 // Global agents directory
-const GLOBAL_AGENTS_DIR = path.join(os.homedir(), '.claude-code-templates');
+const GLOBAL_AGENTS_DIR = path.join(os.homedir(), '.gemini-code-templates');
 const AGENTS_DIR = path.join(GLOBAL_AGENTS_DIR, 'agents');
 const LOCAL_BIN_DIR = path.join(GLOBAL_AGENTS_DIR, 'bin');
 
@@ -49,7 +49,7 @@ async function createGlobalAgent(agentName, options = {}) {
     let githubUrl;
     if (agentName.includes('/')) {
       // Category/agent format
-      githubUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/agents/${agentName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     } else {
       // Direct agent format - try to find it in any category
       githubUrl = await findAgentUrl(agentName);
@@ -128,7 +128,7 @@ async function listGlobalAgents(options = {}) {
     
     if (allAgents.length === 0) {
       console.log(chalk.yellow('⚠️  No global agents installed yet.'));
-      console.log(chalk.gray('💡 Create one with: npx claude-code-templates@latest --create-agent <agent-name>'));
+      console.log(chalk.gray('💡 Create one with: npx gemini-cli-templates@latest --create-agent <agent-name>'));
       return;
     }
     
@@ -159,8 +159,8 @@ async function listGlobalAgents(options = {}) {
     
     console.log(chalk.blue('🌟 Global Usage:'));
     console.log(chalk.gray('  • Run from any directory: <agent-name> "prompt"'));
-    console.log(chalk.gray('  • List agents: npx claude-code-templates@latest --list-agents'));
-    console.log(chalk.gray('  • Remove agent: npx claude-code-templates@latest --remove-agent <name>'));
+    console.log(chalk.gray('  • List agents: npx gemini-cli-templates@latest --list-agents'));
+    console.log(chalk.gray('  • Remove agent: npx gemini-cli-templates@latest --remove-agent <name>'));
     
   } catch (error) {
     console.log(chalk.red(`❌ Error listing agents: ${error.message}`));
@@ -248,10 +248,10 @@ const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-// Check if Claude CLI is available
-function checkClaudeCLI() {
+// Check if Gemini CLI is available
+function checkGeminiCLI() {
   try {
-    execSync('claude --version', { stdio: 'ignore' });
+    execSync('gemini --version', { stdio: 'ignore' });
     return true;
   } catch (error) {
     return false;
@@ -378,11 +378,11 @@ Please analyze the \${userInput} in the context of this \${projectType} project.
   }
 }
 
-// Check Claude CLI availability
-if (!checkClaudeCLI()) {
-  console.error('❌ Claude CLI not found in PATH');
-  console.error('💡 Install Claude CLI: https://claude.ai/code');
-  console.error('💡 Or install via npm: npm install -g @anthropic-ai/claude-code');
+// Check Gemini CLI availability
+if (!checkGeminiCLI()) {
+  console.error('❌ Gemini CLI not found in PATH');
+  console.error('💡 Install Gemini CLI: https://gemini.ai/code');
+  console.error('💡 Or install via npm: npm install -g @google-ai/gemini-code');
   process.exit(1);
 }
 
@@ -393,8 +393,8 @@ const escapedSystemPrompt = systemPrompt.replace(/"/g, '\\\\"').replace(/\`/g, '
 const finalPrompt = userInput + contextPrompt;
 const escapedFinalPrompt = finalPrompt.replace(/"/g, '\\\\"').replace(/\`/g, '\\\\\`');
 
-// Build Claude command with SDK - use --system-prompt instead of --append-system-prompt for better control
-const claudeCmd = \`claude -p "\${escapedFinalPrompt}" --system-prompt "\${escapedSystemPrompt}"\${verbose ? ' --verbose' : ''}\`;
+// Build Gemini command with SDK - use --system-prompt instead of --append-system-prompt for better control
+const geminiCmd = \`gemini -p "\${escapedFinalPrompt}" --system-prompt "\${escapedSystemPrompt}"\${verbose ? ' --verbose' : ''}\`;
 
 // Debug output if verbose
 if (verbose) {
@@ -404,7 +404,7 @@ if (verbose) {
   console.log('📁 Project Context:', contextPrompt ? 'Auto-detected' : 'None');
   console.log('🎯 Final Prompt Length:', finalPrompt.length, 'characters');
   console.log('🤖 System Prompt Preview:', systemPrompt.substring(0, 150) + '...');
-  console.log('⚡ Claude Command:', claudeCmd);
+  console.log('⚡ Gemini Command:', geminiCmd);
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n');
 }
 
@@ -415,13 +415,13 @@ const agentDisplayName = '${agentName}'.replace(/-/g, ' ').replace(/\\b\\w/g, l 
 
 console.error(\`\\n🤖 \${agentDisplayName} is thinking...\`);
 const loader = setInterval(() => {
-  process.stderr.write(\`\\r\${frames[currentFrame]} Claude Code is working... \`);
+  process.stderr.write(\`\\r\${frames[currentFrame]} Gemini CLI is working... \`);
   currentFrame = (currentFrame + 1) % frames.length;
 }, 100);
 
 try {
-  // Execute Claude with the agent's system prompt
-  execSync(claudeCmd, { 
+  // Execute Gemini with the agent's system prompt
+  execSync(geminiCmd, { 
     stdio: ['inherit', 'inherit', 'pipe'],
     cwd: process.cwd() 
   });
@@ -433,7 +433,7 @@ try {
 } catch (error) {
   clearInterval(loader);
   process.stderr.write('\\r');
-  console.error('❌ Error executing Claude:', error.message);
+  console.error('❌ Error executing Gemini:', error.message);
   process.exit(1);
 }
 `;
@@ -520,7 +520,7 @@ async function addToPath() {
       
       // Add PATH export if not already present
       if (!content.includes(BIN_DIR)) {
-        const newContent = content + `\n# Claude Code Templates - Global Agents\n${pathExport}\n`;
+        const newContent = content + `\n# Gemini CLI Templates - Global Agents\n${pathExport}\n`;
         await fs.writeFile(configFile, newContent, 'utf8');
         console.log(chalk.green(`✅ Updated ${path.basename(configFile)}`));
       }
@@ -536,14 +536,14 @@ async function addToPath() {
 async function findAgentUrl(agentName) {
   try {
     // First try root level
-    const rootUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/agents/${agentName}.md`;
+    const rootUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     const rootResponse = await fetch(rootUrl);
     if (rootResponse.ok) {
       return rootUrl;
     }
     
     // Search in categories
-    const categoriesResponse = await fetch('https://api.github.com/repos/davila7/claude-code-templates/contents/cli-tool/components/agents');
+    const categoriesResponse = await fetch('https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents');
     if (!categoriesResponse.ok) {
       return null;
     }
@@ -552,7 +552,7 @@ async function findAgentUrl(agentName) {
     
     for (const item of contents) {
       if (item.type === 'dir') {
-        const categoryUrl = `https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/agents/${item.name}/${agentName}.md`;
+        const categoryUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${item.name}/${agentName}.md`;
         try {
           const categoryResponse = await fetch(categoryUrl);
           if (categoryResponse.ok) {
@@ -578,7 +578,7 @@ async function showAvailableAgents() {
   console.log(chalk.gray('Use format: category/agent-name or just agent-name\n'));
   
   try {
-    const response = await fetch('https://api.github.com/repos/davila7/claude-code-templates/contents/cli-tool/components/agents');
+    const response = await fetch('https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents');
     if (!response.ok) {
       console.log(chalk.red('❌ Could not fetch available agents from GitHub'));
       return;
@@ -592,7 +592,7 @@ async function showAvailableAgents() {
         agents.push({ name: item.name.replace('.md', ''), category: 'root' });
       } else if (item.type === 'dir') {
         try {
-          const categoryResponse = await fetch(`https://api.github.com/repos/davila7/claude-code-templates/contents/cli-tool/components/agents/${item.name}`);
+          const categoryResponse = await fetch(`https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents/${item.name}`);
           if (categoryResponse.ok) {
             const categoryContents = await categoryResponse.json();
             for (const categoryItem of categoryContents) {
@@ -629,8 +629,8 @@ async function showAvailableAgents() {
     });
     
     console.log(chalk.blue('Examples:'));
-    console.log(chalk.gray('  npx claude-code-templates@latest --create-agent api-security-audit'));
-    console.log(chalk.gray('  npx claude-code-templates@latest --create-agent deep-research-team/academic-researcher'));
+    console.log(chalk.gray('  npx gemini-cli-templates@latest --create-agent api-security-audit'));
+    console.log(chalk.gray('  npx gemini-cli-templates@latest --create-agent deep-research-team/academic-researcher'));
     
   } catch (error) {
     console.log(chalk.red('❌ Error fetching agents:', error.message));

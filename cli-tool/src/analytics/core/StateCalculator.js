@@ -22,15 +22,15 @@ class StateCalculator {
     const fileTimeDiff = now - lastModified;
     const fileMinutesAgo = fileTimeDiff / (1000 * 60);
 
-    // Enhanced detection: Look for real Claude Code activity indicators
-    const claudeActivity = this.detectRealClaudeActivity(messages, lastModified);
-    if (claudeActivity.isActive) {
-      return claudeActivity.status;
+    // Enhanced detection: Look for real Gemini CLI activity indicators
+    const geminiActivity = this.detectRealGeminiActivity(messages, lastModified);
+    if (geminiActivity.isActive) {
+      return geminiActivity.status;
     }
 
     // If there's very recent file activity (within 5 minutes), consider it active
     if (fileMinutesAgo < 5) {
-      return 'Claude Code working...';
+      return 'Gemini CLI working...';
     }
 
     // If there's an active process, prioritize that
@@ -45,14 +45,14 @@ class StateCalculator {
         if (lastMessage.role === 'user') {
           // User sent message - be more generous about active state
           if (lastMessageMinutesAgo < 3) {
-            return 'Claude Code working...';
+            return 'Gemini CLI working...';
           } else if (lastMessageMinutesAgo < 10) {
             return 'Awaiting response...';
           } else {
             return 'Active session';
           }
         } else if (lastMessage.role === 'assistant') {
-          // Claude responded - if there's an active process, still active
+          // Gemini responded - if there's an active process, still active
           if (lastMessageMinutesAgo < 10) {
             return 'Awaiting user input...';
           } else {
@@ -79,7 +79,7 @@ class StateCalculator {
     if (lastMessage.role === 'user') {
       // User sent last message
       if (lastMessageMinutesAgo < 3) {
-        return 'Claude Code working...';
+        return 'Gemini CLI working...';
       } else if (lastMessageMinutesAgo < 10) {
         return 'Awaiting response...';
       } else if (lastMessageMinutesAgo < 30) {
@@ -128,7 +128,7 @@ class StateCalculator {
     
     // More stable state logic - fewer transitions
     if (timeDiff < 30) {
-      return 'Claude Code working...';
+      return 'Gemini CLI working...';
     } else if (timeDiff < 300) { // 5 minutes
       return 'Awaiting user input...';
     } else {
@@ -171,12 +171,12 @@ class StateCalculator {
   }
 
   /**
-   * Detect real Claude Code activity based on conversation patterns and file activity
+   * Detect real Gemini CLI activity based on conversation patterns and file activity
    * @param {Array} messages - Conversation messages
    * @param {Date} lastModified - File last modification time
    * @returns {Object} Activity detection result
    */
-  detectRealClaudeActivity(messages, lastModified) {
+  detectRealGeminiActivity(messages, lastModified) {
     const now = new Date();
     const fileMinutesAgo = (now - lastModified) / (1000 * 60);
     
@@ -192,19 +192,19 @@ class StateCalculator {
     
     // Real activity indicators:
     
-    // 1. Very recent file modification (Claude Code just wrote to the conversation file)
+    // 1. Very recent file modification (Gemini CLI just wrote to the conversation file)
     if (fileMinutesAgo < 1) {
-      return { isActive: true, status: 'Claude Code working...' };
+      return { isActive: true, status: 'Gemini CLI working...' };
     }
     
-    // 2. Recent user message with recent file activity (Claude is processing)
+    // 2. Recent user message with recent file activity (Gemini is processing)
     if (lastMessage.role === 'user' && messageMinutesAgo < 5 && fileMinutesAgo < 10) {
-      return { isActive: true, status: 'Claude Code working...' };
+      return { isActive: true, status: 'Gemini CLI working...' };
     }
     
     // 3. Recent assistant message with very recent file activity (might still be working)
     if (lastMessage.role === 'assistant' && messageMinutesAgo < 2 && fileMinutesAgo < 5) {
-      return { isActive: true, status: 'Claude Code finishing...' };
+      return { isActive: true, status: 'Gemini CLI finishing...' };
     }
     
     // 4. Look for tool activity patterns (tools often indicate active sessions)
