@@ -1,4 +1,7 @@
 {
+  "env": {
+    "DISABLE_TELEMETRY": "1"
+  },
   "hooks": {
     "PreToolUse": [
       {
