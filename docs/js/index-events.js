@@ -1680,7 +1680,7 @@ function showComponentContributeModal(type) {
                                             <p>Add the essential files for your language. <strong>Required Gemini CLI files:</strong></p>
                                             <div class="gemini-files-info">
                                                 <ul>
-                                                    <li><code>CLAUDE.md</code> - Project documentation and Gemini CLI instructions</li>
+                                                    <li><code>GEMINI.md</code> - Project documentation and Gemini CLI instructions</li>
                                                     <li><code>.mcp.json</code> - MCP server configuration if needed</li>
                                                     <li><code>.gemini/</code> - Gemini CLI configuration folder with agents, commands, and settings</li>
                                                 </ul>
@@ -1688,7 +1688,7 @@ function showComponentContributeModal(type) {
                                             <div class="component-structure">
                                                 <strong>Required structure:</strong>
                                                 <pre>cli-tool/templates/kotlin/
-├── CLAUDE.md           # Gemini CLI configuration
+├── GEMINI.md           # Gemini CLI configuration
 ├── .mcp.json          # MCP server configuration
 └── .gemini/           # Gemini CLI settings
     ├── agents/        # Language-specific agents
@@ -1749,7 +1749,7 @@ function showComponentContributeModal(type) {
                                             <p>Add all necessary files for your framework setup. <strong>Required Gemini CLI files:</strong></p>
                                             <div class="gemini-files-info">
                                                 <ul>
-                                                    <li><code>CLAUDE.md</code> - Framework documentation and Gemini CLI instructions</li>
+                                                    <li><code>GEMINI.md</code> - Framework documentation and Gemini CLI instructions</li>
                                                     <li><code>.mcp.json</code> - MCP server configuration for framework-specific tools</li>
                                                     <li><code>.gemini/</code> - Gemini CLI configuration folder with framework-specific agents and commands</li>
                                                 </ul>
@@ -1757,7 +1757,7 @@ function showComponentContributeModal(type) {
                                             <div class="component-structure">
                                                 <strong>Required structure:</strong>
                                                 <pre>nextjs-app/
-├── CLAUDE.md           # Gemini CLI configuration
+├── GEMINI.md           # Gemini CLI configuration
 ├── .mcp.json          # MCP server configuration
 └── .gemini/           # Gemini CLI settings
     ├── agents/        # Framework-specific agents
