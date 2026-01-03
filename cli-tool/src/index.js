@@ -749,7 +749,7 @@ async function installIndividualSetting(settingName, targetDir, options) {
     } else {
       // Direct setting format: disable-telemetry
       // Try common category subdirectories
-      const categories = ['api', 'authentication', 'cleanup', 'environment', 'git', 'global', 'mcp', 'model', 'partnerships', 'permissions', 'statusline'];
+      const categories = ['api', 'authentication', 'cleanup', 'environment', 'git', 'global', 'mcp', 'model', 'partnerships', 'permissions', 'statusline', 'telemetry'];
       console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
       
       for (const category of categories) {
