@@ -49,7 +49,7 @@ async function createGlobalAgent(agentName, options = {}) {
     let githubUrl;
     if (agentName.includes('/')) {
       // Category/agent format
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     } else {
       // Direct agent format - try to find it in any category
       githubUrl = await findAgentUrl(agentName);
@@ -536,14 +536,14 @@ async function addToPath() {
 async function findAgentUrl(agentName) {
   try {
     // First try root level
-    const rootUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
+    const rootUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     const rootResponse = await fetch(rootUrl);
     if (rootResponse.ok) {
       return rootUrl;
     }
     
     // Search in categories
-    const categoriesResponse = await fetch('https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents');
+    const categoriesResponse = await fetch('https://api.github.com/repos/pmaojo/Gemini-cli-templates/contents/cli-tool/components/agents');
     if (!categoriesResponse.ok) {
       return null;
     }
@@ -552,7 +552,7 @@ async function findAgentUrl(agentName) {
     
     for (const item of contents) {
       if (item.type === 'dir') {
-        const categoryUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${item.name}/${agentName}.md`;
+        const categoryUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/agents/${item.name}/${agentName}.md`;
         try {
           const categoryResponse = await fetch(categoryUrl);
           if (categoryResponse.ok) {
@@ -578,7 +578,7 @@ async function showAvailableAgents() {
   console.log(chalk.gray('Use format: category/agent-name or just agent-name\n'));
   
   try {
-    const response = await fetch('https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents');
+    const response = await fetch('https://api.github.com/repos/pmaojo/Gemini-cli-templates/contents/cli-tool/components/agents');
     if (!response.ok) {
       console.log(chalk.red('❌ Could not fetch available agents from GitHub'));
       return;
@@ -592,7 +592,7 @@ async function showAvailableAgents() {
         agents.push({ name: item.name.replace('.md', ''), category: 'root' });
       } else if (item.type === 'dir') {
         try {
-          const categoryResponse = await fetch(`https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents/${item.name}`);
+          const categoryResponse = await fetch(`https://api.github.com/repos/pmaojo/Gemini-cli-templates/contents/cli-tool/components/agents/${item.name}`);
           if (categoryResponse.ok) {
             const categoryContents = await categoryResponse.json();
             for (const categoryItem of categoryContents) {

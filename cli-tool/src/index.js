@@ -509,10 +509,10 @@ async function installIndividualAgent(agentName, targetDir, options) {
     let githubUrl;
     if (agentName.includes('/')) {
       // Category/agent format: deep-research-team/academic-researcher
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     } else {
       // Direct agent format: api-security-audit
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/agents/${agentName}.md`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -574,10 +574,10 @@ async function installIndividualCommand(commandName, targetDir, options) {
     let githubUrl;
     if (commandName.includes('/')) {
       // Category/command format: security/vulnerability-scan
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
     } else {
       // Direct command format: check-file
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -640,10 +640,10 @@ async function installIndividualMCP(mcpName, targetDir, options) {
     let githubUrl;
     if (mcpName.includes('/')) {
       // Category/mcp format: database/mysql-integration
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
     } else {
       // Direct mcp format: web-fetch
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -726,10 +726,10 @@ async function installIndividualSetting(settingName, targetDir, options) {
     let githubUrl;
     if (settingName.includes('/')) {
       // Category/setting format: permissions/allow-npm-commands
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
     } else {
       // Direct setting format: allow-npm-commands
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/settings/${settingName}.json`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -1059,10 +1059,10 @@ async function installIndividualHook(hookName, targetDir, options) {
     let githubUrl;
     if (hookName.includes('/')) {
       // Category/hook format: pre-tool/backup-before-edit
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
     } else {
       // Direct hook format: backup-before-edit
-      githubUrl = `https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/hooks/${hookName}.json`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -1429,7 +1429,7 @@ async function getAvailableAgentsFromGitHub() {
     
     // If aitmpl.com API fails, try GitHub API as secondary fallback
     console.log(chalk.yellow('⚠️  Falling back to GitHub API...'));
-    const response = await fetch('https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents');
+    const response = await fetch('https://api.github.com/repos/pmaojo/Gemini-cli-templates/contents/cli-tool/components/agents');
     if (!response.ok) {
       // Check for rate limit error
       if (response.status === 403) {
@@ -1473,7 +1473,7 @@ async function getAvailableAgentsFromGitHub() {
       } else if (item.type === 'dir') {
         // Category directory, fetch its contents
         try {
-          const categoryResponse = await fetch(`https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/agents/${item.name}`);
+          const categoryResponse = await fetch(`https://api.github.com/repos/pmaojo/Gemini-cli-templates/contents/cli-tool/components/agents/${item.name}`);
           if (categoryResponse.ok) {
             const categoryContents = await categoryResponse.json();
             for (const categoryItem of categoryContents) {
@@ -1516,7 +1516,7 @@ async function installIndividualSkill(skillName, targetDir, options) {
     const skillBaseName = skillName.includes('/') ? skillName.split('/').pop() : skillName;
 
     // Use GitHub API to download ALL files and directories for the skill
-    const githubApiUrl = `https://api.github.com/repos/davila7/gemini-cli-templates/contents/cli-tool/components/skills/${skillName}`;
+    const githubApiUrl = `https://api.github.com/repos/pmaojo/Gemini-cli-templates/contents/cli-tool/components/skills/${skillName}`;
 
     console.log(chalk.gray(`📥 Downloading skill from GitHub (main branch)...`));
 
@@ -3171,7 +3171,7 @@ async function executeE2BSandbox(options, targetDir) {
         // Fallback to downloading from GitHub if not found locally
         console.log(chalk.gray('📥 Downloading E2B component files from GitHub...'));
         
-        const baseUrl = 'https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/sandbox/e2b';
+        const baseUrl = 'https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/sandbox/e2b';
         
         // Download launcher script
         const launcherResponse = await fetch(`${baseUrl}/e2b-launcher.py`);

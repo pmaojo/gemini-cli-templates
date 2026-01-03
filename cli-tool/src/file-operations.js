@@ -6,8 +6,8 @@ const { getHooksForLanguage, filterHooksBySelection, getMCPsForLanguage, filterM
 
 // GitHub configuration for downloading templates
 const GITHUB_CONFIG = {
-  owner: 'davila7',
-  repo: 'gemini-cli-templates',
+  owner: 'pmaojo',
+  repo: 'Gemini-cli-templates',
   branch: 'main',
   templatesPath: 'cli-tool/templates'
 };
