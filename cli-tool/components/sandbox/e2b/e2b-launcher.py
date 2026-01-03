@@ -246,7 +246,7 @@ Now, please execute this request and create all necessary files."""
         # Show loading message with visual separation
         print("")
         print("=" * 60)
-        print("☁️  EXECUTING GEMINI CLI IN SECURE CLOUD SANDBOX")
+        print("☁️  EXECUTING CLAUDE CODE IN SECURE CLOUD SANDBOX")
         print("=" * 60)
         print("")
         print("    ⏳ Starting execution...")

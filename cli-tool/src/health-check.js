@@ -108,7 +108,7 @@ class HealthChecker {
    */
   async checkGeminiCLISetupWithSpinner() {
     console.log(chalk.cyan('\n┌─────────────────────┐'));
-    console.log(chalk.cyan('│  GEMINI CLI SETUP   │'));
+    console.log(chalk.cyan('│  CLAUDE CODE SETUP  │'));
     console.log(chalk.cyan('└─────────────────────┘'));
     
     // Installation check
