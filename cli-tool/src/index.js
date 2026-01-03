@@ -2293,7 +2293,7 @@ async function installComponentFromWorkflow(componentData, type, targetDir, opti
  */
 function generateWorkflowYAML(workflowData) {
   const yaml = `#═══════════════════════════════════════════════════════════════════════════════
-# 🤖 GEMINI CLI WORKFLOW CONFIGURATION
+# 🤖 CLAUDE CODE WORKFLOW CONFIGURATION
 #═══════════════════════════════════════════════════════════════════════════════
 #
 # WORKFLOW: ${workflowData.name}
@@ -2302,7 +2302,7 @@ function generateWorkflowYAML(workflowData) {
 # HASH: ${workflowData.hash || 'generated'}
 #
 #═══════════════════════════════════════════════════════════════════════════════
-# 📋 INSTRUCTIONS FOR GEMINI CLI
+# 📋 INSTRUCTIONS FOR CLAUDE CODE
 #═══════════════════════════════════════════════════════════════════════════════
 #
 # This is a WORKFLOW EXECUTION FILE for Gemini CLI. When you encounter this file,
@@ -2349,7 +2349,7 @@ ${workflowData.steps.map((step, index) => `  - step: ${index + 1}
     category: "${step.category}"
     description: "${step.description}"
     
-    # GEMINI CLI INSTRUCTIONS FOR THIS STEP:
+    # CLAUDE CODE INSTRUCTIONS FOR THIS STEP:
     gemini_instructions: |
       Execute this step using the ${step.type} located at .gemini/${step.type}s/${step.name}.${step.type === 'mcp' ? 'json' : 'md'}
       Task: ${step.description}
@@ -2361,7 +2361,7 @@ ${workflowData.steps.map((step, index) => `  - step: ${index + 1}
       echo "🔄 Executing Step ${index + 1}: ${step.name}"
       echo "📝 Task: ${step.description}"
       echo "🎯 Using ${step.type}: ${step.path}"
-      # [GEMINI CLI WILL REPLACE THIS WITH ACTUAL EXECUTION]
+      # [CLAUDE CODE WILL REPLACE THIS WITH ACTUAL EXECUTION]
       echo "✅ Step ${index + 1} completed successfully"
 `).join('\n')}
 
@@ -2386,7 +2386,7 @@ components:
   mcps: [${workflowData.steps.filter(s => s.type === 'mcp').map(s => `"${s.path}"`).join(', ')}]
 
 #═══════════════════════════════════════════════════════════════════════════════
-# 🤖 GEMINI CLI INTEGRATION SETTINGS
+# 🤖 CLAUDE CODE INTEGRATION SETTINGS
 #═══════════════════════════════════════════════════════════════════════════════
 
 geminicode:
@@ -2396,7 +2396,7 @@ geminicode:
   show_progress: true         # Display progress indicators
   save_context: true          # Maintain context between steps
   
-  # WORKFLOW EXECUTION INSTRUCTIONS FOR GEMINI CLI:
+  # WORKFLOW EXECUTION INSTRUCTIONS FOR CLAUDE:
   execution_instructions: |
     When executing this workflow:
     
