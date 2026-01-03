@@ -179,7 +179,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         
         # Display results
         log_with_timestamp("=" * 60)
-        log_with_timestamp("🎯 CLAUDE CODE RESULTS")
+        log_with_timestamp("🎯 GEMINI CLI RESULTS")
         log_with_timestamp("=" * 60)
         
         if result.stdout:
