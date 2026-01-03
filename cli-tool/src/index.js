@@ -638,17 +638,32 @@ async function installIndividualMCP(mcpName, targetDir, options) {
   try {
     // Support both category/mcp-name and direct mcp-name formats
     let githubUrl;
+    let response;
+    
     if (mcpName.includes('/')) {
       // Category/mcp format: database/mysql-integration
       githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
+      console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
+      response = await fetch(githubUrl);
     } else {
-      // Direct mcp format: web-fetch
-      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
+      // Direct mcp format: filesystem-access
+      // Try common category subdirectories
+      const categories = ['filesystem', 'database', 'integration', 'browser_automation', 'devtools', 'productivity', 'deepgraph', 'audio', 'marketing', 'deepresearch'];
+      console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
+      
+      for (const category of categories) {
+        githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/mcps/${category}/${mcpName}.json`;
+        response = await fetch(githubUrl);
+        if (response.ok) break;
+      }
+      
+      // Fallback to root mcps folder
+      if (!response || !response.ok) {
+        githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/mcps/${mcpName}.json`;
+        response = await fetch(githubUrl);
+      }
     }
     
-    console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
-    
-    const response = await fetch(githubUrl);
     if (!response.ok) {
       if (response.status === 404) {
         console.log(chalk.red(`❌ MCP "${mcpName}" not found`));
