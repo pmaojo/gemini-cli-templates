@@ -1,0 +1,12 @@
+{
+  "name": "gemini-banana-app",
+  "version": "1.0.0",
+  "description": "GenAI app using Gemini 3 and Nano Banana Pro",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@google/genai": "^0.0.1"
+  }
+}

@@ -116,6 +116,32 @@ const TEMPLATES_CONFIG = {
     files: [
       { source: 'go/.mcp.json', destination: '.mcp.json' }
     ]
+  },
+  'genai': {
+    name: 'Gemini Native (GenAI)',
+    description: 'Templates for Gemini 3 and Nano Banana Pro applications',
+    files: [
+      { source: 'genai/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'genai/.gemini', destination: '.gemini' },
+      { source: 'genai/.gemini/settings.json', destination: '.gemini/settings.json' },
+      { source: 'genai/.mcp.json', destination: '.mcp.json' }
+    ],
+    frameworks: {
+      'python-banana': {
+        name: 'Python (Nano Banana)',
+        additionalFiles: [
+           { source: 'genai/examples/python-banana/main.py', destination: 'main.py' },
+           { source: 'genai/examples/python-banana/requirements.txt', destination: 'requirements.txt' }
+        ]
+      },
+      'js-banana': {
+        name: 'Node.js (Nano Banana)',
+        additionalFiles: [
+           { source: 'genai/examples/js-banana/index.js', destination: 'index.js' },
+           { source: 'genai/examples/js-banana/package.json', destination: 'package.json' }
+        ]
+      }
+    }
   }
 };
 
