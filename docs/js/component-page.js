@@ -1026,7 +1026,7 @@ class ComponentPageManager {
             },
             "keywords": `${name}, ${type}, ${category}, Gemini CLI, AI development`,
             "programmingLanguage": type === "command" ? "Shell" : "Configuration",
-            "relatedLink": "https://www.google.com/gemini-code"
+            "relatedLink": "https://github.com/google-gemini/gemini-cli"
         };
 
         const script = document.createElement('script');
