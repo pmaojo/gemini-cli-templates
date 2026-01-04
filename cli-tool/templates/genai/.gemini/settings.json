@@ -1,0 +1,7 @@
+{
+  "maxTokens": 8192,
+  "temperature": 0.7,
+  "topP": 0.95,
+  "topK": 40,
+  "model": "gemini-1.5-pro-latest"
+}
