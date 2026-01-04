@@ -1,55 +1,8 @@
-[![npm version](https://img.shields.io/npm/v/gemini-cli-templates.svg)](https://www.npmjs.com/package/gemini-cli-templates)
-[![npm downloads](https://img.shields.io/npm/dt/gemini-cli-templates.svg)](https://www.npmjs.com/package/gemini-cli-templates)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Sponsored by Z.AI](https://img.shields.io/badge/Sponsored%20by-Z.AI-2563eb?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMiAyMkgyMkwxMiAyWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+)](https://z.ai/subscribe?ic=8JVLJQFSKB&utm_source=github&utm_medium=badge&utm_campaign=readme)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/daniavila)
-[![GitHub stars](https://img.shields.io/github/stars/davila7/gemini-cli-templates.svg?style=social&label=Star)](https://github.com/davila7/gemini-cli-templates)
-
-<p align="center">
-  <a href="https://trendshift.io/repositories/15113" target="_blank">
-    <img src="https://trendshift.io/api/badge/repositories/15113" alt="davila7%2Fgemini-cli-templates | Trendshift" style="width: 200px; height: 40px;" width="125" height="40"/>
-  </a>
-  <br />
-  <br />
-  <a href="https://vercel.com/oss">
-  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
-  </a>
-</p>
-
----
-
-<div align="center">
-  <h3>🤝 Partnership</h3>
-  <p>
-    <strong>This project is sponsored by <a href="https://z.ai" target="_blank">Z.AI</a></strong><br/>
-    Supporting Gemini CLI Templates with the <strong>GLM CODING PLAN</strong>
-  </p>
-  <p>
-    <a href="https://z.ai/subscribe?ic=8JVLJQFSKB&utm_source=github&utm_medium=readme&utm_campaign=partnership" target="_blank">
-      <img src="https://img.shields.io/badge/Get%2010%25%20OFF-GLM%20Coding%20Plan-2563eb?style=for-the-badge" alt="GLM Coding Plan" />
-    </a>
-  </p>
-  <p>
-    <em>Top-tier coding performance powered by GLM-4.6 • Starting at $3/month</em><br/>
-    <em>Seamlessly integrates with Gemini CLI, Cursor, Cline & 10+ AI coding tools</em>
-  </p>
-  <p>
-    <code>npx gemini-cli-templates@latest --setting partnerships/glm-coding-plan --yes</code>
-  </p>
-</div>
-
----
-
-# Gemini CLI Templates ([aitmpl.com](https://aitmpl.com))
+# Gemini CLI Templates
 
 **Ready-to-use configurations for Google's Gemini CLI.** A comprehensive collection of AI agents, custom commands, settings, hooks, external integrations (MCPs), and project templates to enhance your development workflow.
 
 ## Browse & Install Components and Templates
-
-**[Browse All Templates](https://aitmpl.com)** - Interactive web interface to explore and install 100+ agents, commands, settings, hooks, and MCPs.
-
-<img width="1049" height="855" alt="Screenshot 2025-08-19 at 08 09 24" src="https://github.com/user-attachments/assets/e3617410-9b1c-4731-87b7-a3858800b737" />
 
 ## 🚀 Quick Installation
 
