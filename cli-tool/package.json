@@ -83,12 +83,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davila7/gemini-cli-templates.git"
+    "url": "git+https://github.com/pmaojo/Gemini-cli-templates.git"
   },
   "bugs": {
-    "url": "https://github.com/davila7/gemini-cli-templates/issues"
+    "url": "https://github.com/pmaojo/Gemini-cli-templates/issues"
   },
-  "homepage": "https://github.com/davila7/gemini-cli-templates#readme",
+  "homepage": "https://github.com/pmaojo/Gemini-cli-templates#readme",
   "files": [
     "bin/",
     "src/",
