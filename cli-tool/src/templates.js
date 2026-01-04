@@ -116,6 +116,27 @@ const TEMPLATES_CONFIG = {
     files: [
       { source: 'go/.mcp.json', destination: '.mcp.json' }
     ]
+  },
+  'genai': {
+    name: 'GenAI Native (2026)',
+    description: 'Next-generation templates for Gemini 2026+ capabilities',
+    files: [
+      { source: 'common/GEMINI.md', destination: 'GEMINI.md' }
+    ],
+    frameworks: {
+      'general': {
+        name: 'General Purpose',
+        additionalFiles: []
+      },
+      'autonomous': {
+        name: 'Autonomous Agents',
+        additionalFiles: []
+      },
+      'architect': {
+        name: 'System Architecture',
+        additionalFiles: []
+      }
+    }
   }
 };
 
