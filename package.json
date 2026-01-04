@@ -1,11 +1,11 @@
 {
-  "name": "claude-code-templates",
-  "version": "1.21.14",
+  "name": "@pmaojo/gemini-cli-templates",
+  "version": "1.28.12",
   "description": "Component templates and tracking system for Gemini CLI",
   "main": "cli-tool/src/index.js",
   "bin": {
-    "claude-code-templates": "cli-tool/bin/create-claude-config.js",
-    "cct": "cli-tool/bin/create-claude-config.js"
+    "gemini-cli-templates": "cli-tool/bin/create-gemini-config.js",
+    "gct": "cli-tool/bin/create-gemini-config.js"
   },
   "scripts": {
     "dev": "vercel dev",
@@ -37,12 +37,20 @@
     "@vercel/node": "^3.0.0"
   },
   "keywords": [
-    "claude-code",
+    "gemini-cli",
     "templates",
     "components",
     "tracking",
     "analytics"
   ],
-  "author": "Gemini CLI Templates",
-  "license": "MIT"
+  "author": "pmaojo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmaojo/gemini-cli-templates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pmaojo/gemini-cli-templates/issues"
+  },
+  "homepage": "https://github.com/pmaojo/gemini-cli-templates#readme"
 }
