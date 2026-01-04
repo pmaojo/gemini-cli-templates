@@ -1,4 +1,4 @@
-# CLAUDE.md - React Application
+# GEMINI.md - React Application
 
 This file provides guidance to Gemini Code when working with React applications using TypeScript.
 
