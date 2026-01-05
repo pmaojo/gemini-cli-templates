@@ -2,7 +2,7 @@
   "jobs": [
     {
       "company": "Unknown Company",
-      "company_icon": "https://www.aitmpl.com/static/img/logo.png",
+      "company_icon": "https://gemini-cli-templates.vercel.app-templates.vercel.app/static/img/logo.png",
       "job_title": "Lead Full Stack Developer and Product Owner (Encore/ ...",
       "location": "e, MC",
       "description": "We're looking for a Lead Full-Stack Developer who knows how to harness Gemini CLI, MCPs, and...",
@@ -145,7 +145,7 @@
     },
     {
       "company": "Unknown Company",
-      "company_icon": "https://www.aitmpl.com/static/img/logo.png",
+      "company_icon": "https://gemini-cli-templates.vercel.app-templates.vercel.app/static/img/logo.png",
       "job_title": "Lead Full Stack Developer (Encore/Gemini CLI)",
       "location": "e, MC",
       "description": "We're looking for a Lead Full-Stack Developer who knows how to harness Gemini CLI, MCPs, and...",

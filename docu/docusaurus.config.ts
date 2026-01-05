@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://aitmpl.com',
+  url: 'https://gemini-cli-templates.vercel.app-templates.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For custom domain deployment
   baseUrl: '/',
@@ -106,7 +106,7 @@ const config: Config = {
           label: 'Documentation',
         },
         {
-          href: 'https://aitmpl.com/',
+          href: 'https://gemini-cli-templates.vercel.app-templates.vercel.app/',
           label: 'Browse Components',
           position: 'left',
         },
@@ -135,7 +135,7 @@ const config: Config = {
           items: [
             {
               label: 'Browse Components',
-              href: 'https://aitmpl.com/',
+              href: 'https://gemini-cli-templates.vercel.app-templates.vercel.app/',
             },
             {
               label: 'GitHub Repository',

@@ -10,7 +10,7 @@
 const axios = require('axios');
 
 // Configuration
-const BASE_URL = process.env.API_BASE_URL || 'https://aitmpl.com';
+const BASE_URL = process.env.API_BASE_URL || 'https://gemini-cli-templates.vercel.app-templates.vercel.app';
 const TIMEOUT = 30000; // 30 seconds
 
 describe('API Endpoints - Critical Tests', () => {

@@ -74,11 +74,11 @@ npx gemini-cli-templates@latest --plugins
 
 ## 📖 Documentation
 
-**[📚 docs.aitmpl.com](https://docs.aitmpl.com/)** - Complete guides, examples, and API reference for all components and tools.
+**[📚 docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app/)** - Complete guides, examples, and API reference for all components and tools.
 
 ## Contributing
 
-We welcome contributions! **[Browse existing templates](https://aitmpl.com)** to see what's available, then check our [contributing guidelines](CONTRIBUTING.md) to add your own agents, commands, MCPs, settings, or hooks.
+We welcome contributions! **[Browse existing templates](https://gemini-cli-templates.vercel.app-templates.vercel.app)** to see what's available, then check our [contributing guidelines](CONTRIBUTING.md) to add your own agents, commands, MCPs, settings, or hooks.
 
 **Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.**
 
@@ -118,8 +118,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **🌐 Browse Templates**: [aitmpl.com](https://aitmpl.com)
-- **📚 Documentation**: [docs.aitmpl.com](https://docs.aitmpl.com)
+- **🌐 Browse Templates**: [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)
+- **📚 Documentation**: [docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app)
 - **💬 Community**: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
 - **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
 

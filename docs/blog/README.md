@@ -27,7 +27,7 @@ Para agregar un nuevo artículo al blog, simplemente edita el archivo `blog-arti
   "title": "Título del Artículo",
   "description": "Descripción breve del artículo (1-2 líneas)",
   "url": "https://medium.com/@tu-usuario/url-del-articulo",
-  "image": "https://www.aitmpl.com/blog/assets/imagen-cover.png",
+  "image": "https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/imagen-cover.png",
   "category": "Categoría",
   "publishDate": "2025-02-10",
   "readTime": "5 min read",
@@ -52,19 +52,19 @@ Para agregar un nuevo artículo al blog, simplemente edita el archivo `blog-arti
 
 ## 📝 Campos Explicados
 
-| Campo | Tipo | Descripción | Ejemplo |
-|-------|------|-------------|---------|
-| `id` | string | Identificador único del artículo | `"supabase-integration"` |
-| `title` | string | Título completo del artículo | `"Gemini CLI + Supabase Integration"` |
-| `description` | string | Descripción breve (1-2 líneas) | `"Learn how to integrate..."` |
-| `url` | string | URL completa del artículo | `"https://medium.com/@..."` |
-| `image` | string | URL de la imagen de portada | `"https://www.aitmpl.com/blog/assets/..."` |
-| `category` | string | Categoría del artículo | `"Database"`, `"Development"`, etc. |
-| `publishDate` | string | Fecha de publicación (YYYY-MM-DD) | `"2025-02-10"` |
-| `readTime` | string | Tiempo estimado de lectura | `"5 min read"` |
-| `tags` | array | Array de tags/etiquetas | `["Supabase", "Database", "MCP"]` |
-| `difficulty` | string | Nivel de dificultad del artículo | `"basic"`, `"intermediate"`, `"advanced"` |
-| `order` | number | Orden de aparición (menor = primero) | `1`, `2`, `3`, etc. |
+| Campo         | Tipo   | Descripción                          | Ejemplo                                                                          |
+| ------------- | ------ | ------------------------------------ | -------------------------------------------------------------------------------- |
+| `id`          | string | Identificador único del artículo     | `"supabase-integration"`                                                         |
+| `title`       | string | Título completo del artículo         | `"Gemini CLI + Supabase Integration"`                                            |
+| `description` | string | Descripción breve (1-2 líneas)       | `"Learn how to integrate..."`                                                    |
+| `url`         | string | URL completa del artículo            | `"https://medium.com/@..."`                                                      |
+| `image`       | string | URL de la imagen de portada          | `"https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/..."` |
+| `category`    | string | Categoría del artículo               | `"Database"`, `"Development"`, etc.                                              |
+| `publishDate` | string | Fecha de publicación (YYYY-MM-DD)    | `"2025-02-10"`                                                                   |
+| `readTime`    | string | Tiempo estimado de lectura           | `"5 min read"`                                                                   |
+| `tags`        | array  | Array de tags/etiquetas              | `["Supabase", "Database", "MCP"]`                                                |
+| `difficulty`  | string | Nivel de dificultad del artículo     | `"basic"`, `"intermediate"`, `"advanced"`                                        |
+| `order`       | number | Orden de aparición (menor = primero) | `1`, `2`, `3`, etc.                                                              |
 
 ## 🎨 Categorías Recomendadas
 
@@ -90,6 +90,7 @@ El badge de dificultad se muestra automáticamente en la metadata del artículo.
 ## 🏷️ Tags Recomendados
 
 Usa tags específicos y relevantes:
+
 - Tecnologías: `Supabase`, `Next.js`, `React`, `Node.js`
 - Conceptos: `Agents`, `Commands`, `MCP`, `Automation`
 - Herramientas: `Git`, `Docker`, `Kubernetes`
@@ -98,6 +99,7 @@ Usa tags específicos y relevantes:
 ## 📊 Orden de Artículos
 
 Los artículos se muestran según el campo `order`:
+
 - **Menor número = Aparece primero**
 - Usa números consecutivos: 1, 2, 3, 4, 5...
 - Para reordenar, simplemente cambia los números
@@ -120,6 +122,7 @@ git push
 ## 🎯 Badges de Dificultad
 
 El sistema automáticamente muestra un badge de dificultad con colores específicos:
+
 - **Basic** (Verde): Para artículos introductorios y guías básicas
 - **Intermediate** (Naranja): Para configuraciones más avanzadas
 - **Advanced** (Rojo): Para temas complejos y arquitecturas avanzadas
@@ -136,16 +139,19 @@ El sistema automáticamente muestra un badge de dificultad con colores específi
 ## 🐛 Troubleshooting
 
 ### Los artículos no se cargan
+
 1. Verifica que `blog-articles.json` esté en la raíz de `/docs/blog/`
 2. Revisa la consola del navegador para errores
 3. Asegúrate de que el JSON sea válido (usa un validador JSON online)
 
 ### Error de JSON inválido
+
 - Verifica que todas las comillas sean dobles (`"`)
 - Asegúrate de que no falten comas entre objetos
 - El último elemento del array no debe tener coma final
 
 ### Las imágenes no se muestran
+
 - Verifica que las URLs de las imágenes sean accesibles
 - Usa URLs completas (no relativas)
 - Asegúrate de que las imágenes estén en `/docs/blog/assets/`
@@ -173,7 +179,7 @@ Luego abre: `http://localhost:8000`
       "title": "Amazing New Feature in Gemini CLI",
       "description": "Discover how to use the latest feature that will revolutionize your workflow.",
       "url": "https://medium.com/@dan.avila7/amazing-new-feature-12345",
-      "image": "https://www.aitmpl.com/blog/assets/new-feature-cover.png",
+      "image": "https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/new-feature-cover.png",
       "category": "Development",
       "publishDate": "2025-02-10",
       "readTime": "6 min read",

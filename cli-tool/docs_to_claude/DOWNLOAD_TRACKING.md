@@ -5,6 +5,7 @@ Sistema de seguimiento de descargas anónimo para Gemini Code Templates, inspira
 ## Descripción
 
 Este sistema rastrea las descargas e instalaciones de componentes de forma completamente anónima para:
+
 - Identificar los componentes más populares
 - Mejorar la calidad de los componentes más utilizados
 - Entender patrones de uso para desarrollo futuro
@@ -15,11 +16,13 @@ Este sistema rastrea las descargas e instalaciones de componentes de forma compl
 ### Backend (Vercel + Supabase)
 
 1. **API Endpoint**: `/api/track-download-supabase.js`
+
    - Recibe requests POST con datos de descarga
    - Valida y almacena en Supabase (PostgreSQL)
    - Maneja rate limiting y validaciones
 
 2. **Base de Datos**:
+
    ```sql
    -- Tabla principal de descargas
    component_downloads (
@@ -27,7 +30,7 @@ Este sistema rastrea las descargas e instalaciones de componentes de forma compl
      category, download_timestamp, user_agent, ip_address,
      country, cli_version, created_at
    )
-   
+
    -- Tabla de estadísticas agregadas
    download_stats (
      id, component_type, component_name, total_downloads,
@@ -38,6 +41,7 @@ Este sistema rastrea las descargas e instalaciones de componentes de forma compl
 ### Cliente (CLI)
 
 1. **TrackingService**: Maneja el envío de datos
+
    - Dual endpoint: Base de datos + telemetría
    - Fire-and-forget (no bloquea al usuario)
    - Respeta opt-out del usuario
@@ -52,6 +56,7 @@ Este sistema rastrea las descargas e instalaciones de componentes de forma compl
 ## Datos Recopilados
 
 ### Información Anónima
+
 - **Tipo de componente**: agent, command, mcp, setting, hook
 - **Nombre del componente**: ej. "api-security-audit"
 - **Categoría**: ej. "security", "testing", "automation"
@@ -61,6 +66,7 @@ Este sistema rastrea las descargas e instalaciones de componentes de forma compl
 - **País**: Solo código de 2 letras (IP geolocation)
 
 ### NO se Recopila
+
 - ❌ Información personal identificable
 - ❌ Nombres de usuario
 - ❌ Rutas completas de archivos
@@ -87,8 +93,9 @@ export SUPABASE_SERVICE_ROLE_KEY="..."
 ### Opt-out del Usuario
 
 El tracking se desactiva automáticamente si:
+
 - `CCT_NO_TRACKING=true`
-- `CCT_NO_ANALYTICS=true` 
+- `CCT_NO_ANALYTICS=true`
 - `CI=true` (entornos CI/CD)
 
 ## Desarrollo
@@ -96,15 +103,17 @@ El tracking se desactiva automáticamente si:
 ### Setup Local
 
 1. Instalar dependencias:
+
    ```bash
    npm install
    ```
 
 2. Configurar Vercel:
+
    ```bash
    # Instalar Vercel CLI
    npm i -g vercel
-   
+
    # Configurar proyecto
    vercel
    ```
@@ -126,7 +135,7 @@ CCT_DEBUG=true node cli-tool/bin/create-gemini-config.js --agent deep-research-t
 CCT_NO_TRACKING=true node cli-tool/bin/create-gemini-config.js --agent test-agent
 
 # Test directo al API
-curl -X POST https://www.aitmpl.com/api/track-download-supabase \
+curl -X POST https://gemini-cli-templates.vercel.app-templates.vercel.app/api/track-download-supabase \
   -H "Content-Type: application/json" \
   -d '{"type":"agent","name":"test","path":"test","category":"test","cliVersion":"1.19.0"}'
 ```
@@ -148,30 +157,33 @@ curl -X POST https://tu-dominio.com/api/track-download-supabase \
 ### POST /api/track-download-supabase
 
 **Request Body:**
+
 ```json
 {
   "type": "agent|command|mcp|setting|hook|template",
   "name": "component-name",
-  "path": "optional/component/path", 
+  "path": "optional/component/path",
   "category": "component-category",
   "cliVersion": "1.0.0"
 }
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
   "message": "Download tracked successfully",
   "data": {
     "type": "agent",
-    "name": "component-name", 
+    "name": "component-name",
     "timestamp": "2023-12-07T10:30:00.000Z"
   }
 }
 ```
 
 **Error Response:**
+
 ```json
 {
   "error": "Bad Request",
@@ -191,6 +203,7 @@ curl https://tu-dominio.com/api/track-download
 ### Métricas
 
 El sistema proporciona métricas para:
+
 - Total de descargas por componente
 - Tendencias de popularidad
 - Distribución geográfica
@@ -200,6 +213,7 @@ El sistema proporciona métricas para:
 ### Logs
 
 Los logs incluyen:
+
 - Requests exitosos/fallidos
 - Errores de validación
 - Problemas de conectividad a BD
@@ -226,12 +240,14 @@ Los logs incluyen:
 
 ### Problemas Comunes
 
-1. **Tracking no funciona**: 
+1. **Tracking no funciona**:
+
    - Verificar conectividad de red
    - Comprobar variables de entorno
    - Revisar logs con `CCT_DEBUG=true`
 
 2. **Base de datos no responde**:
+
    - Verificar `POSTGRES_URL`
    - Comprobar límites de conexión
    - Revisar logs de Vercel

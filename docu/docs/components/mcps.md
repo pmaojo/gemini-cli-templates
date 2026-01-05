@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # MCPs (Model Context Protocol)
 
-External service integrations that extend Gemini Code with real-time data access. Browse and install from **[aitmpl.com](https://aitmpl.com)**.
+External service integrations that extend Gemini Code with real-time data access. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
 
 ## 🔌 What are MCPs?
 
@@ -13,6 +13,7 @@ MCPs connect Gemini Code to external services, databases, and APIs. They provide
 ## Installation
 
 ### 📦 Basic Installation
+
 Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
@@ -20,6 +21,7 @@ npx gemini-code-templates@latest --mcp database/supabase --yes
 ```
 
 ### Multiple MCPs
+
 ```bash
 npx gemini-code-templates@latest --mcp database/supabase,development/github-integration --yes
 ```
@@ -29,7 +31,9 @@ npx gemini-code-templates@latest --mcp database/supabase,development/github-inte
 Most MCPs require configuration after installation:
 
 ### API Keys
+
 Add required API keys to environment variables:
+
 ```bash
 # Database MCPs
 DATABASE_URL=your_database_url
@@ -47,6 +51,7 @@ AWS_SECRET_ACCESS_KEY=your_aws_secret
 ## 💡 Usage After Installation
 
 MCPs provide real-time data access:
+
 - **Query databases** directly in conversations
 - **Access GitHub repos** and issues
 - **Browse documentation** with context
@@ -58,21 +63,27 @@ MCPs provide real-time data access:
 Browse MCPs by integration type to connect Gemini Code with external services:
 
 ### Database Integrations
+
 Connect to databases and data sources for real-time data access. Examples: `supabase` for Supabase integration, `postgresql-integration` for PostgreSQL access, `mongodb-integration` for MongoDB queries.
 
 ### Development Tools
+
 GitHub, version control, and development service connections. Examples: `github-integration` for repository access, `filesystem-access` for file operations, `npm-registry` for package management.
 
 ### Documentation & Context
+
 Documentation and knowledge base access for contextual information. Examples: `context7` for documentation lookup, `confluence-integration` for enterprise wikis, `notion-integration` for team knowledge bases.
 
 ### Browser Automation
+
 Web scraping and browser control for testing and automation. Examples: `playwright-mcp` for web automation, `browsermcp` for browser control, `selenium-integration` for legacy browser testing.
 
 ### Cloud Services
+
 AWS, Google Cloud, and other cloud platform integrations. Examples: `aws-integration` for AWS services, `gcp-integration` for Google Cloud, `vercel-integration` for deployment management.
 
 ### Communication
+
 Slack, Discord, and other communication tool connections. Examples: `slack-integration` for team communication, `discord-integration` for community management, `teams-integration` for enterprise chat.
 
 ## 🎯 How to Choose MCPs
@@ -80,18 +91,21 @@ Slack, Discord, and other communication tool connections. Examples: `slack-integ
 Select MCPs based on your project's external service requirements:
 
 ### By Project Type
+
 - **Web applications**: Choose `supabase` and `github-integration` for database and version control
 - **Data projects**: Use `postgresql-integration` and `context7` for data access and documentation
 - **API services**: Select `github-integration` and `aws-integration` for development and deployment
 - **Testing projects**: Pick `playwright-mcp` and `filesystem-access` for automation and file handling
 
 ### By Data Requirements
+
 - **Live database access**: Choose appropriate `database/*` MCPs for real-time queries
 - **Documentation lookup**: Use `context7` for intelligent documentation search
 - **Repository access**: Select `github-integration` for code and issue management
 - **Web automation**: Pick `browser/*` MCPs for web scraping and testing
 
 ### By Integration Needs
+
 - **Supabase projects**: Essential `supabase` MCP for database operations
 - **GitHub workflows**: Required `github-integration` for repository management
 - **AWS deployments**: Use `aws-integration` for cloud service management
@@ -102,8 +116,8 @@ Select MCPs based on your project's external service requirements:
 - **Start with essential MCPs** for your stack
 - **Configure environment variables** properly
 - **Test connections** after installation
-- **Browse [aitmpl.com](https://aitmpl.com)** for specialized integrations
+- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for specialized integrations
 
 ---
 
-**Find more MCPs:** [Browse all MCPs on aitmpl.com](https://aitmpl.com) → Filter by "MCPs"
+**Find more MCPs:** [Browse all MCPs on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "MCPs"

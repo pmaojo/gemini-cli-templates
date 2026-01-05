@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Agents
 
-AI specialists that provide expert assistance for specific development tasks. Browse and install from **[aitmpl.com](https://aitmpl.com)**.
+AI specialists that provide expert assistance for specific development tasks. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
 
 ## 🤖 What are Agents?
 
@@ -13,6 +13,7 @@ Agents are specialized AI assistants that understand specific domains and provid
 ## Installation
 
 ### 📦 Basic Installation
+
 Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
@@ -20,6 +21,7 @@ npx gemini-code-templates@latest --agent development/frontend-developer --yes
 ```
 
 ### 🌍 Global Agent (Gemini Code SDK)
+
 Create a global AI agent accessible from anywhere with zero configuration. Perfect for automation and CI/CD workflows.
 
 ```bash
@@ -27,6 +29,7 @@ npx gemini-code-templates@latest --create-agent development/frontend-developer
 ```
 
 After installation, use from anywhere:
+
 ```bash
 frontend-developer "your prompt here"
 ```
@@ -36,15 +39,19 @@ frontend-developer "your prompt here"
 ✅ Powered by Gemini Code SDK
 
 ### ☁️ Run in E2B Sandbox (Cloud Execution)
+
 **NEW** Execute Gemini Code with this component in an isolated cloud environment using E2B. Perfect for testing complex projects without affecting your local system.
 
 #### 🔑 Setup API Keys
+
 Add to your `.env` file:
+
 ```bash
 ANTHROPIC_API_KEY=your_google_key_here
 # Required for Gemini Code access
 E2B_API_KEY=your_e2b_key_here
 ```
+
 [Get Google API Key](https://console.google.com/) | [Get E2B API Key](https://e2b.dev/)
 
 ```bash
@@ -65,18 +72,23 @@ npx gemini-code-templates@latest --sandbox e2b --agent development/frontend-deve
 Browse agents by specialty area to find the right expert for your needs:
 
 ### Development
+
 Frontend, backend, and mobile development specialists. Examples: `frontend-developer` for React expertise, `backend-developer` for API development, `mobile-developer` for React Native and Flutter.
 
-### Security  
+### Security
+
 Security auditing, penetration testing, and compliance experts. Examples: `security-auditor` for vulnerability assessment, `penetration-tester` for security testing, `compliance-specialist` for regulatory requirements.
 
 ### Data & AI
+
 Data science, machine learning, and AI specialists. Examples: `data-scientist` for data analysis, `ml-engineer` for model development, `nlp-engineer` for text processing.
 
 ### Performance Testing
+
 Optimization and performance analysis experts. Examples: `performance-engineer` for system optimization, `react-performance-optimization` for React apps, `load-testing-specialist` for stress testing.
 
 ### Business
+
 Strategy, analysis, and business development specialists. Examples: `product-strategist` for product planning, `business-analyst` for requirements analysis, `legal-advisor` for compliance guidance.
 
 ## 🎯 How to Choose an Agent
@@ -84,20 +96,23 @@ Strategy, analysis, and business development specialists. Examples: `product-str
 Select agents based on your current needs and project context:
 
 ### By Technology Stack
+
 - **React projects**: Choose `frontend-developer` for component optimization and best practices
-- **API development**: Use `backend-developer` for server architecture and database design  
+- **API development**: Use `backend-developer` for server architecture and database design
 - **Mobile apps**: Select `mobile-developer` for React Native or Flutter guidance
 - **Data projects**: Pick `data-scientist` for analysis and visualization
 
 ### By Project Phase
+
 - **Starting new project**: Begin with `fullstack-developer` for overall architecture guidance
 - **Development phase**: Add specific agents like `frontend-developer` or `backend-developer`
 - **Pre-launch preparation**: Include `security-auditor` for vulnerability assessment
 - **Production optimization**: Use `performance-engineer` for system tuning
 
 ### By Current Challenges
+
 - **Performance issues**: Choose from `performance-testing/*` specialists
-- **Security concerns**: Select appropriate `security/*` experts  
+- **Security concerns**: Select appropriate `security/*` experts
 - **Data analysis needs**: Pick from `data-ai/*` specialists
 - **Feature development**: Use `development/*` agents for coding guidance
 
@@ -106,8 +121,8 @@ Select agents based on your current needs and project context:
 - **Start with one agent** for your main technology stack
 - **Add security agents** before production
 - **Use performance agents** when optimizing
-- **Browse [aitmpl.com](https://aitmpl.com)** for the complete list
+- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for the complete list
 
 ---
 
-**Find more agents:** [Browse all agents on aitmpl.com](https://aitmpl.com) → Filter by "Agents"
+**Find more agents:** [Browse all agents on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "Agents"

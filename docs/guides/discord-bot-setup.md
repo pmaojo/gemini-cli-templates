@@ -49,7 +49,7 @@ DISCORD_PUBLIC_KEY=abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567
 DISCORD_GUILD_ID=987654321098765432  # Opcional, para testing en un server específico
 
 # API Configuration
-COMPONENTS_API_URL=https://aitmpl.com/components.json
+COMPONENTS_API_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app/components.json
 ```
 
 #### En Vercel (para producción)
@@ -60,7 +60,7 @@ COMPONENTS_API_URL=https://aitmpl.com/components.json
    - `DISCORD_APP_ID`
    - `DISCORD_BOT_TOKEN`
    - `DISCORD_PUBLIC_KEY`
-   - `COMPONENTS_API_URL` (opcional, por defecto usa aitmpl.com)
+   - `COMPONENTS_API_URL` (opcional, por defecto usa gemini-cli-templates.vercel.app-templates.vercel.app)
 
 ### 3. Instalar Dependencias
 
@@ -69,6 +69,7 @@ npm install
 ```
 
 Esto instalará:
+
 - `discord-interactions` - Para verificar requests de Discord
 - `axios` - Para cargar components.json
 - `dotenv` - Para variables de entorno
@@ -80,6 +81,7 @@ npm run discord:register
 ```
 
 Output esperado:
+
 ```
 📦 Registering Discord slash commands...
 
@@ -104,6 +106,7 @@ vercel --prod
 O usa el deployment automático de GitHub si lo tienes configurado.
 
 Después del deploy, copia tu URL de producción:
+
 ```
 https://your-project.vercel.app
 ```
@@ -194,7 +197,8 @@ api/
 ### Cache de Componentes
 
 El sistema mantiene `components.json` en memoria por 5 minutos:
-- Primera request: Descarga desde aitmpl.com
+
+- Primera request: Descarga desde gemini-cli-templates.vercel.app-templates.vercel.app
 - Siguientes requests (< 5 min): Usa cache
 - Después de 5 min: Actualiza automáticamente
 
@@ -207,6 +211,7 @@ Esto reduce latencia y requests a la API.
 **Causa**: La PUBLIC_KEY no está configurada o es incorrecta
 
 **Solución**:
+
 1. Verifica que `DISCORD_PUBLIC_KEY` esté en las variables de entorno de Vercel
 2. Asegúrate de copiar la Public Key correcta del Developer Portal
 3. Redeploy después de cambiar variables de entorno
@@ -216,6 +221,7 @@ Esto reduce latencia y requests a la API.
 **Causa**: El endpoint no responde correctamente al PING
 
 **Solución**:
+
 1. Verifica que el deployment fue exitoso
 2. Prueba manualmente: `curl https://your-domain.vercel.app/api/discord/interactions`
 3. Revisa los logs en Vercel Dashboard → Functions
@@ -225,6 +231,7 @@ Esto reduce latencia y requests a la API.
 **Causa**: No se registraron o falta scope
 
 **Solución**:
+
 1. Ejecuta `npm run discord:register` nuevamente
 2. Si usaste `DISCORD_GUILD_ID`, los comandos solo aparecen en ese server
 3. Quita el bot del server y vuelve a invitarlo con el scope `applications.commands`
@@ -235,6 +242,7 @@ Esto reduce latencia y requests a la API.
 **Causa**: Error en el handler o falta de permisos
 
 **Solución**:
+
 1. Revisa logs en Vercel Dashboard → Functions
 2. Verifica que el bot tenga permisos de "Send Messages" y "Embed Links"
 3. Prueba con un comando simple como `/random`
@@ -244,7 +252,8 @@ Esto reduce latencia y requests a la API.
 **Causa**: No puede acceder a components.json
 
 **Solución**:
-1. Verifica que `https://aitmpl.com/components.json` sea accesible
+
+1. Verifica que `https://gemini-cli-templates.vercel.app-templates.vercel.app/components.json` sea accesible
 2. Revisa la variable `COMPONENTS_API_URL` si usas una URL custom
 3. Chequea los logs de Vercel para ver el error específico
 
@@ -253,6 +262,7 @@ Esto reduce latencia y requests a la API.
 ### Vercel Dashboard
 
 Ve a tu proyecto en Vercel → Functions para ver:
+
 - Invocaciones totales
 - Errores
 - Tiempo de respuesta
@@ -261,6 +271,7 @@ Ve a tu proyecto en Vercel → Functions para ver:
 ### Discord Logs
 
 Cada comando registra en consola:
+
 ```
 🔹 Command received: /search
 ✅ Components data loaded
@@ -271,16 +282,19 @@ Revisa estos logs en Vercel Functions.
 ## 🚀 Próximos Pasos
 
 ### Fase 2: Comandos Interactivos
+
 - `/stats` - Estadísticas de la plataforma
 - `/new` - Componentes recientes
 - `/daily` - Componente del día
 
 ### Fase 3: Botones y Menús
+
 - Agregar botones de acción a los embeds
 - Select menus para filtros avanzados
 - Modal forms para búsqueda compleja
 
 ### Fase 4: Integración Avanzada
+
 - Tracking de instalaciones vía Discord
 - Notificaciones automáticas de releases
 - Sistema de votación y reviews
@@ -303,6 +317,7 @@ Revisa estos logs en Vercel Functions.
 ## 🤝 Soporte
 
 Si tienes problemas:
+
 1. Revisa los logs en Vercel Dashboard
 2. Verifica todas las variables de entorno
 3. Prueba los endpoints manualmente con curl

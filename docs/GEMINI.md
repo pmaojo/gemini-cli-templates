@@ -4,11 +4,12 @@ This file provides guidance to Gemini CLI (gemini.ai/code) when working with cod
 
 ## Project Overview
 
-This directory contains the static website (aitmpl.com) that serves as the public web interface for browsing and installing Gemini CLI components. The site is a vanilla JavaScript application that loads component data dynamically and provides an interactive browsing experience for 500+ components including agents, commands, settings, hooks, MCPs, and templates.
+This directory contains the static website (gemini-cli-templates.vercel.app-templates.vercel.app) that serves as the public web interface for browsing and installing Gemini CLI components. The site is a vanilla JavaScript application that loads component data dynamically and provides an interactive browsing experience for 500+ components including agents, commands, settings, hooks, MCPs, and templates.
 
 ## Development Commands
 
 ### Local Development
+
 ```bash
 # Serve locally with any static file server
 python -m http.server 8000
@@ -19,6 +20,7 @@ npx http-server
 ```
 
 ### Component Data Generation
+
 ```bash
 # From project root - regenerate components.json
 cd ..
@@ -28,13 +30,15 @@ python scripts/generate_components_json.py
 ```
 
 ### Deployment
+
 - Site is automatically deployed to GitHub Pages when changes are pushed to `docs/` directory
-- Deployed at: https://aitmpl.com (davila7.github.io/gemini-cli-templates)
+- Deployed at: https://gemini-cli-templates.vercel.app-templates.vercel.app (davila7.github.io/gemini-cli-templates)
 - Vercel configuration in `vercel.json` for routing
 
 ## Architecture
 
 ### Data Flow
+
 1. **Component Generation**: Python script (`scripts/generate_components_json.py`) scans `cli-tool/components/` and generates `docs/components.json` (~2MB file with embedded content)
 2. **Static Loading**: Website loads `components.json` on page load (with mobile optimization and progress indicators)
 3. **Dynamic Rendering**: JavaScript renders component cards based on user filters and search
@@ -43,6 +47,7 @@ python scripts/generate_components_json.py
 ### Key Files
 
 #### HTML Pages
+
 - `index.html` - Main page with component browser and search
 - `component.html` - Individual component detail pages
 - `plugin.html` - Plugin marketplace interface
@@ -50,6 +55,7 @@ python scripts/generate_components_json.py
 - `download-stats.html` - Analytics and download statistics
 
 #### JavaScript Architecture (`js/`)
+
 - `data-loader.js` - Loads and caches components.json, handles data fetching
 - `search-functionality.js` - Real-time search across all components with fuzzy matching
 - `cart-manager.js` - Shopping cart for batch component installation
@@ -59,10 +65,12 @@ python scripts/generate_components_json.py
 - `trending.js` - Trending components data visualization
 
 #### CSS (`css/`)
+
 - Modular CSS with separate files for components, modals, responsive design
 - Terminal-themed design system with monospace fonts and CLI aesthetics
 
 #### Data Files
+
 - `components.json` - Main component catalog (~2MB, generated file)
 - `trending-data.json` - Trending components rankings
 - `gemini-jobs.json` - Job postings data
@@ -70,40 +78,48 @@ python scripts/generate_components_json.py
 ### Component System
 
 #### Component Types
+
 Each component type has specific structure:
 
 **Agents** (162 total)
+
 - AI specialists organized by category (Development, Data/AI, Security, Business, etc.)
 - Stored in `cli-tool/components/agents/{category}/{name}.md`
 - Installation: `--agent <name>`
 
 **Commands** (210 total)
+
 - Custom slash commands organized by category
 - Stored in `cli-tool/components/commands/{category}/{name}.md`
 - Installation: `--command <name>`
 
 **Settings** (60 total)
+
 - Gemini CLI configuration files
 - Includes statuslines with accompanying Python scripts
 - Stored in `cli-tool/components/settings/{category}/{name}.json`
 - Installation: `--setting <name>`
 
 **Hooks** (39 total)
+
 - Event-driven automation triggers
 - Stored in `cli-tool/components/hooks/{category}/{name}.md`
 - Installation: `--hook <name>`
 
 **MCPs** (55 total)
+
 - Model Context Protocol integrations
 - Stored in `cli-tool/components/mcps/{name}.json`
 - Installation: `--mcp <name>`
 
 **Templates** (14 total)
+
 - Complete project configurations
 - Organized by language and framework in `cli-tool/templates/`
 - Installation: `--template <language>`
 
 **Plugins** (10 total)
+
 - Component bundles with marketplace metadata
 - Defined in `.gemini-plugin/marketplace.json`
 - Installation: `--plugin <name>`
@@ -121,6 +137,7 @@ The site implements a multi-stage loading strategy for optimal mobile performanc
 ### Search Functionality
 
 Real-time search across all components:
+
 - **Fuzzy Matching**: Tolerates typos and partial matches
 - **Multi-field Search**: Searches name, description, category, type
 - **Filter Integration**: Combines with type filters (agents/commands/etc)
@@ -130,6 +147,7 @@ Real-time search across all components:
 ### Shopping Cart System
 
 Batch installation builder:
+
 - Add multiple components across types (agents, commands, settings, hooks, MCPs)
 - Generates single NPX command for installation
 - Supports sharing cart via URL parameters
@@ -138,6 +156,7 @@ Batch installation builder:
 ### Plugin Marketplace
 
 Plugin system for component bundles:
+
 - Each plugin contains agents, commands, and MCPs
 - Defined in marketplace.json with metadata
 - Installation installs all plugin components
@@ -146,6 +165,7 @@ Plugin system for component bundles:
 ### Download Analytics
 
 Supabase-powered analytics:
+
 - Tracks component installations via API endpoints
 - Aggregates download counts by component and type
 - Displays trending components and download stats
@@ -179,7 +199,7 @@ Supabase-powered analytics:
 ```javascript
 // Loading pattern from data-loader.js
 async function loadAllComponentsData() {
-  const response = await fetch('components.json');
+  const response = await fetch("components.json");
   const data = await response.json();
   componentsData = data;
   collectAvailableCategories();
@@ -191,8 +211,8 @@ async function loadAllComponentsData() {
 
 ```javascript
 // Current filter state
-let currentFilter = 'agents'; // or 'commands', 'mcps', etc.
-let currentCategoryFilter = 'all'; // or specific category
+let currentFilter = "agents"; // or 'commands', 'mcps', etc.
+let currentCategoryFilter = "all"; // or specific category
 
 // Update filters
 function handleFilterClick(event, filter) {
@@ -208,10 +228,11 @@ function handleFilterClick(event, filter) {
 // Pattern from cart-manager.js
 function generateCartCommand(cart) {
   const flags = [];
-  if (cart.agents.length) flags.push(...cart.agents.map(a => `--agent ${a}`));
-  if (cart.commands.length) flags.push(...cart.commands.map(c => `--command ${c}`));
+  if (cart.agents.length) flags.push(...cart.agents.map((a) => `--agent ${a}`));
+  if (cart.commands.length)
+    flags.push(...cart.commands.map((c) => `--command ${c}`));
   // ... other types
-  return `npx gemini-cli-templates@latest ${flags.join(' ')} --yes`;
+  return `npx gemini-cli-templates@latest ${flags.join(" ")} --yes`;
 }
 ```
 
@@ -222,12 +243,14 @@ function generateCartCommand(cart) {
 When components are added/modified in `cli-tool/components/`:
 
 1. Run component generation script:
+
    ```bash
    cd /path/to/project/root
    python scripts/generate_components_json.py
    ```
 
 2. This script:
+
    - Scans all directories in `cli-tool/components/`
    - Scans all templates in `cli-tool/templates/`
    - Fetches download stats from Supabase
@@ -244,6 +267,7 @@ When components are added/modified in `cli-tool/components/`:
 ### Testing Locally
 
 Before committing:
+
 1. Serve site locally: `python -m http.server 8000`
 2. Test component loading and search
 3. Verify filter functionality
@@ -253,12 +277,14 @@ Before committing:
 ## SEO and Metadata
 
 ### Structured Data
+
 - Schema.org markup for SoftwareApplication
 - Open Graph tags for social sharing
 - Twitter Card metadata
 - Sitemap.xml for search engines
 
 ### Performance Optimization
+
 - Cache-busting query parameters for dynamic content
 - Progressive loading for large JSON files
 - LocalStorage caching for repeat visits
@@ -267,19 +293,23 @@ Before committing:
 ## External Integrations
 
 ### GitHub API
+
 - Fetches component files dynamically (legacy, now uses components.json)
 - Links to source files on GitHub
 
 ### Supabase
+
 - Tracks component downloads
 - Aggregates download statistics
 - Powers trending components
 
 ### Vercel
+
 - Handles routing for SPA-style URLs
 - Configured in `vercel.json`
 
 ### Analytics
+
 - Hotjar for user behavior tracking
 - Counter.dev for page view analytics
 
@@ -308,6 +338,7 @@ Before deploying to production:
 ### Modifying Search Behavior
 
 Edit `js/search-functionality.js`:
+
 - `performSearch()` - Main search logic
 - `fuzzyMatch()` - Matching algorithm
 - `highlightMatches()` - Result highlighting
@@ -315,6 +346,7 @@ Edit `js/search-functionality.js`:
 ### Updating Styles
 
 CSS is modular:
+
 - `css/styles.css` - Main styles and variables
 - `css/components.css` - Component cards and grid
 - `css/responsive.css` - Mobile breakpoints
@@ -331,12 +363,14 @@ CSS is modular:
 ## Performance Considerations
 
 ### Large File Handling
+
 - `components.json` is ~2MB - implement progressive loading
 - Use virtual scrolling for large component lists
 - Debounce search input to avoid excessive filtering
 - Cache parsed JSON in memory after initial load
 
 ### Mobile Optimization
+
 - Lazy load images and component content
 - Reduce initial bundle size
 - Minimize re-renders during search/filter
@@ -345,17 +379,20 @@ CSS is modular:
 ## Troubleshooting
 
 ### Components Not Loading
+
 - Check browser console for fetch errors
 - Verify components.json is accessible
 - Ensure CORS is properly configured
 - Check GitHub API rate limits (if using legacy loading)
 
 ### Search Not Working
+
 - Verify search index is built correctly
 - Check fuzzy match threshold in search-functionality.js
 - Ensure component data includes searchable fields
 
 ### Cart Not Saving
+
 - Check LocalStorage is enabled
 - Verify cart data structure matches expected format
 - Clear cache and reload if data structure changed

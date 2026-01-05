@@ -32,24 +32,24 @@ npx gemini-code-templates@latest --health-check
 
 ## 🎯 What You Get
 
-| Component | Description | Example |
-|-----------|-------------|---------|
-| **CLAUDE.md** | Project-specific Gemini Code configuration | Framework best practices, coding standards |
-| **Commands** | Custom slash commands for development tasks | `/generate-tests`, `/check-file`, `/optimize-bundle` |
-| **Agents** | AI specialists for specific domains | API security audit, React performance, database optimization |
-| **MCPs** | External service integrations | GitHub, databases, development tools |
-| **Skills** | Modular capabilities with progressive disclosure | PDF processing, algorithmic art, MCP builder |
-| **Analytics** | Real-time monitoring dashboard | Live session tracking, usage statistics, exports |
+| Component     | Description                                      | Example                                                      |
+| ------------- | ------------------------------------------------ | ------------------------------------------------------------ |
+| **CLAUDE.md** | Project-specific Gemini Code configuration       | Framework best practices, coding standards                   |
+| **Commands**  | Custom slash commands for development tasks      | `/generate-tests`, `/check-file`, `/optimize-bundle`         |
+| **Agents**    | AI specialists for specific domains              | API security audit, React performance, database optimization |
+| **MCPs**      | External service integrations                    | GitHub, databases, development tools                         |
+| **Skills**    | Modular capabilities with progressive disclosure | PDF processing, algorithmic art, MCP builder                 |
+| **Analytics** | Real-time monitoring dashboard                   | Live session tracking, usage statistics, exports             |
 
 ## 🛠️ Supported Technologies
 
-| Language | Frameworks | Status |
-|----------|------------|---------|
-| **JavaScript/TypeScript** | React, Vue, Angular, Node.js | ✅ Ready |
-| **Python** | Django, Flask, FastAPI | ✅ Ready |
-| **Common** | Universal configurations | ✅ Ready |
-| **Go** | Gin, Echo, Fiber | 🚧 Coming Soon |
-| **Rust** | Axum, Warp, Actix | 🚧 Coming Soon |
+| Language                  | Frameworks                   | Status         |
+| ------------------------- | ---------------------------- | -------------- |
+| **JavaScript/TypeScript** | React, Vue, Angular, Node.js | ✅ Ready       |
+| **Python**                | Django, Flask, FastAPI       | ✅ Ready       |
+| **Common**                | Universal configurations     | ✅ Ready       |
+| **Go**                    | Gin, Echo, Fiber             | 🚧 Coming Soon |
+| **Rust**                  | Axum, Warp, Actix            | 🚧 Coming Soon |
 
 ## 🌍 Global Agents (Gemini Code SDK Integration)
 
@@ -61,18 +61,18 @@ npx gemini-code-templates@latest --create-agent customer-support
 
 # Use the agent from anywhere
 customer-support "Help me with ticket #12345"
-sre-logs "Analyze error patterns in app.log"  
+sre-logs "Analyze error patterns in app.log"
 code-reviewer "Review this PR for security issues"
 ```
 
 ### Available Global Agents
 
-| Agent | Usage | Description |
-|-------|-------|-------------|
-| `customer-support` | `customer-support "query"` | AI customer support specialist |
-| `api-security-audit` | `api-security-audit "analyze endpoints"` | Security auditing for APIs |
-| `react-performance-optimization` | `react-performance-optimization "optimize components"` | React performance expert |
-| `database-optimization` | `database-optimization "improve queries"` | Database performance tuning |
+| Agent                            | Usage                                                  | Description                    |
+| -------------------------------- | ------------------------------------------------------ | ------------------------------ |
+| `customer-support`               | `customer-support "query"`                             | AI customer support specialist |
+| `api-security-audit`             | `api-security-audit "analyze endpoints"`               | Security auditing for APIs     |
+| `react-performance-optimization` | `react-performance-optimization "optimize components"` | React performance expert       |
+| `database-optimization`          | `database-optimization "improve queries"`              | Database performance tuning    |
 
 ### Global Agent Management
 
@@ -113,17 +113,20 @@ npx gemini-code-templates@latest --skill pdf-google,docx,xlsx,pptx
 ### Featured Skills
 
 #### 🎨 Creative & Design
+
 - **algorithmic-art** - Create generative art using p5.js with seeded randomness
 - **canvas-design** - Design beautiful visual art in .png and .pdf formats
 - **slack-gif-creator** - Create animated GIFs optimized for Slack
 
 #### 💻 Development & Technical
+
 - **mcp-builder** - Guide for creating high-quality MCP servers
 - **artifacts-builder** - Build complex HTML artifacts with React and Tailwind
 - **webapp-testing** - Test local web applications using Playwright
 - **skill-creator** - Guide for creating effective skills
 
 #### 📄 Document Processing
+
 - **pdf-processing-pro** - Production-ready PDF toolkit (forms, tables, OCR)
 - **pdf-google** - Google's comprehensive PDF manipulation toolkit
 - **docx** - Create, edit, and analyze Word documents
@@ -131,6 +134,7 @@ npx gemini-code-templates@latest --skill pdf-google,docx,xlsx,pptx
 - **pptx** - Create, edit, and analyze PowerPoint presentations
 
 #### 🏢 Enterprise & Communication
+
 - **brand-guidelines** - Apply Google's official brand guidelines
 - **internal-comms** - Write internal communications (reports, newsletters, FAQs)
 - **theme-factory** - Style artifacts with professional themes
@@ -138,6 +142,7 @@ npx gemini-code-templates@latest --skill pdf-google,docx,xlsx,pptx
 ### Skills Architecture
 
 Skills follow Google's progressive disclosure pattern:
+
 - **Metadata** - Always loaded (name, description)
 - **Instructions** - Loaded when skill is triggered
 - **Resources** - Reference files loaded only when needed
@@ -146,6 +151,7 @@ Skills follow Google's progressive disclosure pattern:
 ### Attribution
 
 Skills from [googles/skills](https://github.com/googles/skills):
+
 - **Open Source** (Apache 2.0): algorithmic-art, mcp-builder, skill-creator, artifacts-builder, and more
 - **Source-Available** (Reference): docx, pdf-google, pptx, xlsx
 
@@ -153,18 +159,19 @@ See [ANTHROPIC_ATTRIBUTION.md](cli-tool/components/skills/ANTHROPIC_ATTRIBUTION.
 
 ## 📖 Documentation
 
-**[📚 Complete Documentation](https://docs.aitmpl.com/)** - Comprehensive guides, examples, and API reference
+**[📚 Complete Documentation](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/)** - Comprehensive guides, examples, and API reference
 
 Quick links:
-- [Getting Started](https://docs.aitmpl.com/docs/intro) - Installation and first steps
-- [Project Setup](https://docs.aitmpl.com/docs/project-setup/interactive-setup) - Configure your projects
-- [Analytics Dashboard](https://docs.aitmpl.com/docs/analytics/overview) - Real-time monitoring
-- [Individual Components](https://docs.aitmpl.com/docs/components/overview) - Agents, Commands, MCPs
-- [CLI Options](https://docs.aitmpl.com/docs/cli-options) - All available commands
+
+- [Getting Started](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/intro) - Installation and first steps
+- [Project Setup](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/project-setup/interactive-setup) - Configure your projects
+- [Analytics Dashboard](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/analytics/overview) - Real-time monitoring
+- [Individual Components](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/components/overview) - Agents, Commands, MCPs
+- [CLI Options](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/cli-options) - All available commands
 
 ## 🤝 Contributing
 
-We welcome contributions! Browse available templates and components at **[aitmpl.com](https://aitmpl.com)**, then check our [contributing guidelines](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md).
+We welcome contributions! Browse available templates and components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**, then check our [contributing guidelines](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
 
@@ -172,8 +179,8 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🔗 Links
 
-- **🌐 Browse Components**: [aitmpl.com](https://aitmpl.com)
-- **📚 Documentation**: [docs.aitmpl.com](https://docs.aitmpl.com)
+- **🌐 Browse Components**: [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)
+- **📚 Documentation**: [docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app)
 - **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
 - **💬 Discussions**: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
 

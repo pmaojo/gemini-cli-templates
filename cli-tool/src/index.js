@@ -459,8 +459,8 @@ async function createGeminiConfig(options = {}) {
   console.log(chalk.white('  2. Customize the configuration for your project'));
   console.log(chalk.white('  3. Start using Gemini CLI with: gemini'));
   console.log('');
-  console.log(chalk.blue('🌐 View all available templates at: https://aitmpl.com/'));
-  console.log(chalk.blue('📖 Read the complete documentation at: https://docs.aitmpl.com/'));
+  console.log(chalk.blue('🌐 View all available templates at: https://gemini-cli-templates.vercel.app-templates.vercel.app/'));
+  console.log(chalk.blue('📖 Read the complete documentation at: https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/'));
   
   if (config.language !== 'common') {
     console.log(chalk.yellow(`💡 Language-specific features for ${config.language} have been configured`));
@@ -1456,23 +1456,23 @@ async function getAvailableAgentsFromGitHub() {
       }
     }
     
-    // Fallback to aitmpl.com API if local file not found
+    // Fallback to gemini-cli-templates.vercel.app-templates.vercel.app API if local file not found
     try {
-      // Try aitmpl.com API first
-      const apiResponse = await fetch('https://aitmpl.com/api/agents.json');
+      // Try gemini-cli-templates.vercel.app-templates.vercel.app API first
+      const apiResponse = await fetch('https://gemini-cli-templates.vercel.app-templates.vercel.app/api/agents.json');
       if (apiResponse.ok) {
         const apiData = await apiResponse.json();
         
         if (apiData.agents && Array.isArray(apiData.agents)) {
-          console.log(chalk.green(`✅ Loaded ${apiData.agents.length} agents from aitmpl.com API`));
+          console.log(chalk.green(`✅ Loaded ${apiData.agents.length} agents from gemini-cli-templates.vercel.app-templates.vercel.app API`));
           return apiData.agents;
         }
       }
     } catch (apiError) {
-      console.warn('Could not fetch from aitmpl.com, trying GitHub API...');
+      console.warn('Could not fetch from gemini-cli-templates.vercel.app-templates.vercel.app, trying GitHub API...');
     }
     
-    // If aitmpl.com API fails, try GitHub API as secondary fallback
+    // If gemini-cli-templates.vercel.app-templates.vercel.app API fails, try GitHub API as secondary fallback
     console.log(chalk.yellow('⚠️  Falling back to GitHub API...'));
     const response = await fetch('https://api.github.com/repos/pmaojo/Gemini-cli-templates/contents/cli-tool/components/agents');
     if (!response.ok) {

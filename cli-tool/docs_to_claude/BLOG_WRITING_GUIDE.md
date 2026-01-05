@@ -23,115 +23,160 @@ docs/blog/
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[Technology] and Gemini Code Integration</title>
-    <meta name="description" content="Learn how to integrate [Technology] with Gemini Code using MCP servers, specialized agents, and automated commands for lightning-fast [domain] development.">
-    
+    <meta
+      name="description"
+      content="Learn how to integrate [Technology] with Gemini Code using MCP servers, specialized agents, and automated commands for lightning-fast [domain] development."
+    />
+
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/">
-    <meta property="og:title" content="[Technology] and Gemini Code Integration">
-    <meta property="og:description" content="Learn how to integrate [Technology] with Gemini Code...">
-    <meta property="og:image" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="article:published_time" content="[ISO_DATE]">
-    <meta property="article:author" content="Gemini Code Templates">
-    <meta property="article:section" content="[Category]">
-    <meta property="article:tag" content="[Technology]">
-    <meta property="article:tag" content="Gemini Code">
-    
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+    />
+    <meta
+      property="og:title"
+      content="[Technology] and Gemini Code Integration"
+    />
+    <meta
+      property="og:description"
+      content="Learn how to integrate [Technology] with Gemini Code..."
+    />
+    <meta
+      property="og:image"
+      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="article:published_time" content="[ISO_DATE]" />
+    <meta property="article:author" content="Gemini Code Templates" />
+    <meta property="article:section" content="[Category]" />
+    <meta property="article:tag" content="[Technology]" />
+    <meta property="article:tag" content="Gemini Code" />
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/">
-    <meta property="twitter:title" content="[Technology] and Gemini Code Integration">
-    <meta property="twitter:description" content="Learn how to integrate [Technology] with Gemini Code...">
-    <meta property="twitter:image" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg">
-    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+    />
+    <meta
+      property="twitter:title"
+      content="[Technology] and Gemini Code Integration"
+    />
+    <meta
+      property="twitter:description"
+      content="Learn how to integrate [Technology] with Gemini Code..."
+    />
+    <meta
+      property="twitter:image"
+      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg"
+    />
+
     <!-- Additional SEO -->
-    <meta name="keywords" content="[Technology], Gemini Code, MCP, [Domain], AI Development, Google">
-    <meta name="author" content="Gemini Code Templates">
-    <link rel="canonical" href="https://davila7.github.io/gemini-code-templates/blog/[slug]/">
-    
+    <meta
+      name="keywords"
+      content="[Technology], Gemini Code, MCP, [Domain], AI Development, Google"
+    />
+    <meta name="author" content="Gemini Code Templates" />
+    <link
+      rel="canonical"
+      href="https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+    />
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/blog.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+      {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "headline": "[Technology] and Gemini Code Integration",
         "description": "Learn how to integrate [Technology] with Gemini Code...",
         "image": "https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg",
         "author": {
-            "@type": "Organization",
-            "name": "Gemini Code Templates"
+          "@type": "Organization",
+          "name": "Gemini Code Templates"
         },
         "publisher": {
-            "@type": "Organization",
-            "name": "Gemini Code Templates",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://davila7.github.io/gemini-code-templates/static/img/logo.svg"
-            }
+          "@type": "Organization",
+          "name": "Gemini Code Templates",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://davila7.github.io/gemini-code-templates/static/img/logo.svg"
+          }
         },
         "datePublished": "[ISO_DATE]",
         "dateModified": "[ISO_DATE]",
         "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+          "@type": "WebPage",
+          "@id": "https://davila7.github.io/gemini-code-templates/blog/[slug]/"
         }
-    }
+      }
     </script>
-</head>
+  </head>
+</html>
 ```
 
 ### Header Section
 
 ```html
 <header class="header">
-    <div class="container">
-        <div class="header-content">
-            <div class="terminal-header">
-                <div class="ascii-title">
-                    <pre class="ascii-art"> 
+  <div class="container">
+    <div class="header-content">
+      <div class="terminal-header">
+        <div class="ascii-title">
+          <pre class="ascii-art">
+ 
 ██████╗ ██╗      ██████╗  ██████╗ 
 ██╔══██╗██║     ██╔═══██╗██╔════╝ 
 ██████╔╝██║     ██║   ██║██║  ███╗
 ██╔══██╗██║     ██║   ██║██║   ██║
 ██████╔╝███████╗╚██████╔╝╚██████╔╝
-╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝</pre>
-                </div>
-            </div>
-            <div class="header-actions">
-                <a href="../index.html" class="header-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
-                    </svg>
-                    Home
-                </a>
-                <a href="../index.html" class="header-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                    </svg>
-                    Blog
-                </a>
-                <a href="https://github.com/davila7/gemini-code-templates" target="_blank" class="header-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12..."/>
-                    </svg>
-                    GitHub
-                </a>
-            </div>
+╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝</pre
+          >
         </div>
+      </div>
+      <div class="header-actions">
+        <a href="../index.html" class="header-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+          </svg>
+          Home
+        </a>
+        <a href="../index.html" class="header-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"
+            />
+          </svg>
+          Blog
+        </a>
+        <a
+          href="https://github.com/davila7/gemini-code-templates"
+          target="_blank"
+          class="header-btn"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12..." />
+          </svg>
+          GitHub
+        </a>
+      </div>
     </div>
+  </div>
 </header>
 ```
 
@@ -139,106 +184,126 @@ docs/blog/
 
 ```html
 <header class="article-header">
-    <div class="container">
-        <h1 class="article-title">How to use Gemini Code with [Technology]</h1>
-        <p class="article-subtitle">Learn how to integrate [Technology] with Gemini Code using MCP, Agents, and Commands for faster [domain] development.</p>
-        <div class="article-meta-full">
-            <time datetime="[YYYY-MM-DD]">[Month DD, YYYY]</time>
-            <span class="read-time">[X] min read</span>
-            <div class="article-tags">
-                <span class="tag">[Technology]</span>
-                <span class="tag">[Category]</span>
-                <span class="tag">MCP</span>
-                <span class="tag">Agents</span>
-            </div>
-        </div>
+  <div class="container">
+    <h1 class="article-title">How to use Gemini Code with [Technology]</h1>
+    <p class="article-subtitle">
+      Learn how to integrate [Technology] with Gemini Code using MCP, Agents,
+      and Commands for faster [domain] development.
+    </p>
+    <div class="article-meta-full">
+      <time datetime="[YYYY-MM-DD]">[Month DD, YYYY]</time>
+      <span class="read-time">[X] min read</span>
+      <div class="article-tags">
+        <span class="tag">[Technology]</span>
+        <span class="tag">[Category]</span>
+        <span class="tag">MCP</span>
+        <span class="tag">Agents</span>
+      </div>
     </div>
+  </div>
 </header>
 ```
 
 ## 📝 Content Structure
 
 ### 1. Hero Image
+
 ```html
-<img src="../assets/[technology]-gemini-code-templates-cover.png" alt="[Technology] and Gemini Code Integration" class="article-cover">
+<img
+  src="../assets/[technology]-gemini-code-templates-cover.png"
+  alt="[Technology] and Gemini Code Integration"
+  class="article-cover"
+/>
 ```
 
 ### 2. Technology Stack Overview
+
 ```html
 <h2>[Technology] Stack for Gemini Code</h2>
-<p>Gemini Code Templates offers [X] pre-built components for [Technology] integration:</p>
+<p>
+  Gemini Code Templates offers [X] pre-built components for [Technology]
+  integration:
+</p>
 ```
 
 ### 3. Component Tables
 
 #### Agents Table
+
 ```html
 <h3>🤖 Agents</h3>
 <table class="components-table">
-    <thead>
-        <tr>
-            <th>Component</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>[Agent Name]</strong></td>
-            <td>[Detailed description of agent capabilities and use cases]</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>[Agent Name]</strong></td>
+      <td>[Detailed description of agent capabilities and use cases]</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### Commands Table
+
 ```html
 <h3>⚡ Commands</h3>
 <table class="components-table">
-    <thead>
-        <tr>
-            <th>Command</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><strong>[command-name]</strong></td>
-            <td>[Command description and functionality]</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>[command-name]</strong></td>
+      <td>[Command description and functionality]</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 #### MCP Table
+
 ```html
 <h3>🔌 MCP</h3>
 <table class="components-table">
-    <thead>
-        <tr>
-            <th>Component</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>🔌 <strong>[Technology] MCP Server</strong></td>
-            <td>Direct integration with [Technology] API through Model Context Protocol for seamless Gemini Code interaction.</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🔌 <strong>[Technology] MCP Server</strong></td>
+      <td>
+        Direct integration with [Technology] API through Model Context Protocol
+        for seamless Gemini Code interaction.
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
-### 4. AITMPL.com Browse Section
+### 4. gemini-cli-templates.vercel.app Browse Section
+
 ```html
-<h2>Browse all components on AITMPL.com</h2>
+<h2>Browse all components on gemini-cli-templates.vercel.app</h2>
 <p>Before installing, you can explore all available [Technology] components on the official Gemini Code Templates website:</p>
-<p>Visit <strong><a href="https://aitmpl.com" target="_blank" rel="noopener">aitmpl.com</a></strong> and search for "[technology]" to see:</p>
-<img src="../assets/aitmpl-[technology]-search.png" alt="Searching for [Technology] components on AITMPL.com" loading="lazy">
+<p>Visit <strong><a href="https://gemini-cli-templates.vercel.app-templates.vercel.app" target="_bgemini-cli-templates.vercel.app"noopener">gemini-cli-templates.vercel.app</a></strong> and search for "[technology]" to see:</p>
+<img src="../assets/aitmpl-[technology]-search.png" alt="Searching for [Technology] components on gemini-cli-templates.vercel.app" loading="lazy">
 ```
 
 ### 5. Installation Options
 
 #### Individual Components
+
 ```html
 <h3>Install Individual Components</h3>
 <pre><code class="language-bash">
@@ -253,13 +318,14 @@ npx gemini-code-templates@latest --mcp [technology]</code></pre>
 
 <p><strong>Components will be installed to:</strong></p>
 <ul>
-    <li>📁 <code>.gemini/commands/</code></li>
-    <li>📁 <code>.gemini/agents/</code></li>
-    <li>📁 <code>.mcp.json</code></li>
+  <li>📁 <code>.gemini/commands/</code></li>
+  <li>📁 <code>.gemini/agents/</code></li>
+  <li>📁 <code>.mcp.json</code></li>
 </ul>
 ```
 
 #### Global Agents
+
 ```html
 <h3>Create Global Agents (Available Anywhere)</h3>
 <pre><code class="language-bash"># Create global agents accessible from any project
@@ -276,6 +342,7 @@ npx gemini-code-templates@latest --remove-agent [agent-name]</code></pre>
 ```
 
 #### Multiple Components
+
 ```html
 <h3>Install Multiple Components at Once</h3>
 <pre><code class="language-bash">
@@ -292,14 +359,15 @@ npx gemini-code-templates@latest \
 
 <p><strong>This will install:</strong></p>
 <ul>
-    <li>✓ [X] [domain] commands</li>
-    <li>✓ [X] specialized AI agents</li>
-    <li>✓ 1 MCP server integration</li>
-    <li>✓ Complete documentation</li>
+  <li>✓ [X] [domain] commands</li>
+  <li>✓ [X] specialized AI agents</li>
+  <li>✓ 1 MCP server integration</li>
+  <li>✓ Complete documentation</li>
 </ul>
 ```
 
 #### Execute Prompt After Installation
+
 ```html
 <h3>Execute Prompt After Installation</h3>
 <pre><code class="language-bash"># Install components and run a prompt immediately
@@ -309,9 +377,13 @@ npx gemini-code-templates@latest \
 ```
 
 ### 6. File Structure
+
 ```html
 <h2>Where Components Are Installed</h2>
-<p>The installation creates a standard Gemini Code structure with components organized as follows:</p>
+<p>
+  The installation creates a standard Gemini Code structure with components
+  organized as follows:
+</p>
 
 <pre><code class="language-bash">your-project/
 ├── .gemini/
@@ -325,24 +397,31 @@ npx gemini-code-templates@latest \
 └── .mcp.json
 └── src/ # Your application code</code></pre>
 
-<p>That's it! Gemini Code will automatically detect all components and you can start using them immediately.</p>
+<p>
+  That's it! Gemini Code will automatically detect all components and you can
+  start using them immediately.
+</p>
 ```
 
 ### 7. Navigation Footer
+
 ```html
 <div class="article-nav">
-    <a href="../index.html" class="back-to-blog">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
-        </svg>
-        Back to Blog
-    </a>
+  <a href="../index.html" class="back-to-blog">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"
+      />
+    </svg>
+    Back to Blog
+  </a>
 </div>
 ```
 
 ## 📋 Content Guidelines
 
 ### Writing Style
+
 - Use clear, technical language suitable for developers
 - Include practical examples and code snippets
 - Focus on actionable content and real-world use cases
@@ -350,6 +429,7 @@ npx gemini-code-templates@latest \
 - Use bullet points and numbered lists for clarity
 
 ### Technical Content
+
 - Always include installation commands with proper syntax
 - Provide multiple installation methods (individual, global, bulk)
 - Show file structure after installation
@@ -357,6 +437,7 @@ npx gemini-code-templates@latest \
 - Use consistent command naming patterns
 
 ### SEO Optimization
+
 - **Title**: "How to use Gemini Code with [Technology]"
 - **Meta Description**: Max 160 characters, include key terms
 - **Keywords**: Technology name, Gemini Code, MCP, Agents, Commands, AI Development
@@ -366,6 +447,7 @@ npx gemini-code-templates@latest \
 - **Structured Data**: Include JSON-LD schema for articles
 
 ### Visual Assets Required
+
 1. **Cover Image**: 1200x630 pixels for social sharing
 2. **Hero Image**: Technology + Gemini Code branded image
 3. **AITMPL Search Screenshot**: Show search results for the technology
@@ -374,18 +456,21 @@ npx gemini-code-templates@latest \
 ## 🔧 Technical Requirements
 
 ### File Naming Convention
+
 - **Slug**: `[technology-name]-gemini-code-integration`
 - **Directory**: `docs/blog/[slug]/`
 - **Main File**: `index.html`
 - **Assets**: Use descriptive names with technology prefix
 
 ### Code Block Standards
+
 - Use `language-bash` for terminal commands
 - Include copy functionality (automatic via code-copy.js)
 - Clean terminal output (remove success messages and prompts)
 - Use proper syntax highlighting
 
 ### Responsive Design
+
 - All tables must be responsive
 - Images should have loading="lazy" attribute
 - Use relative paths for internal assets
@@ -396,11 +481,13 @@ npx gemini-code-templates@latest \
 Before writing an article, gather:
 
 1. **Available Components**
+
    - List all commands for the technology
-   - List all agents for the technology  
+   - List all agents for the technology
    - Identify MCP server if available
 
 2. **Installation Information**
+
    - Component file names
    - Installation directory structure
    - Example prompts for testing
@@ -425,11 +512,13 @@ Before writing an article, gather:
 ## 📈 Analytics & Performance
 
 ### Tracking
+
 - Article views and engagement will be tracked via existing analytics
 - Monitor social media sharing performance
 - Track component installation after article publication
 
 ### Success Metrics
+
 - Time on page > 3 minutes
 - Low bounce rate < 40%
 - High component installation conversion

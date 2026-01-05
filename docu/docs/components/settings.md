@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Settings
 
-Gemini Code configurations that customize behavior and performance. Browse and install from **[aitmpl.com](https://aitmpl.com)**.
+Gemini Code configurations that customize behavior and performance. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
 
 ## ⚙️ What are Settings?
 
@@ -13,6 +13,7 @@ Settings modify how Gemini Code behaves in your project. They control performanc
 ## Installation
 
 ### 📦 Basic Installation
+
 Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
@@ -20,6 +21,7 @@ npx gemini-code-templates@latest --setting performance/performance-optimization 
 ```
 
 ### Multiple Settings
+
 ```bash
 npx gemini-code-templates@latest --setting security/read-only-mode,performance/bash-timeouts --yes
 ```
@@ -29,25 +31,32 @@ npx gemini-code-templates@latest --setting security/read-only-mode,performance/b
 Statuslines include Python scripts for real-time monitoring:
 
 ### Git Branch Monitor
+
 ```bash
 npx gemini-code-templates@latest --setting statusline/git-branch-statusline --yes
 ```
+
 Shows current Git branch and status in Gemini Code interface.
 
 ### Context Monitor
+
 ```bash
 npx gemini-code-templates@latest --setting statusline/context-monitor --yes
 ```
+
 Displays project context and active files.
 
 ## ⚠️ Important Notes
 
 ### File Locations
+
 Settings are installed to:
+
 - **`.gemini/settings/`** - JSON configuration files
 - **`.gemini/scripts/`** - Python scripts (for statuslines)
 
 ### Environment Impact
+
 - **Performance settings** affect Gemini Code speed
 - **Security settings** may restrict functionality
 - **Git settings** change version control behavior
@@ -57,21 +66,27 @@ Settings are installed to:
 Browse settings by functional area to customize Gemini Code behavior:
 
 ### Performance
+
 Optimize Gemini Code speed and resource usage. Examples: `performance-optimization` for faster execution, `bash-timeouts` for command limits, `memory-optimization` for resource management.
 
 ### Security
+
 Control access and protect sensitive operations. Examples: `read-only-mode` for restricted file access, `deny-sensitive-files` for blocking confidential data, `sandbox-mode` for isolated execution.
 
 ### Git Integration
+
 Version control and Git workflow configurations. Examples: `allow-git-operations` for Git access, `auto-commit-settings` for automated commits, `commit-message-templates` for consistent messaging.
 
 ### Interface
+
 Customize Gemini Code appearance and interaction. Examples: `dark-mode` for visual preference, `compact-mode` for space efficiency, `keyboard-shortcuts` for productivity.
 
 ### Statuslines
+
 Real-time monitoring with Python scripts. Examples: `git-branch-statusline` for Git status display, `context-monitor` for project awareness, `performance-monitor` for system metrics.
 
 ### Workflow
+
 Development process optimizations. Examples: `auto-save` for automatic saving, `smart-suggestions` for intelligent recommendations, `code-formatting` for consistent styling.
 
 ## 🎯 How to Choose Settings
@@ -79,16 +94,19 @@ Development process optimizations. Examples: `auto-save` for automatic saving, `
 Select settings based on your project requirements and preferences:
 
 ### By Project Security Level
+
 - **High security projects**: Use `read-only-mode` and `deny-sensitive-files` for maximum protection
 - **Medium security**: Apply `restrict-file-access` for controlled access
 - **Development environment**: Enable `allow-git-operations` for full Git functionality
 
 ### By Performance Needs
+
 - **Large projects**: Choose `performance-optimization` and `memory-optimization` for better handling
 - **Slow command execution**: Use `bash-timeouts` to prevent hanging processes
 - **MCP connection issues**: Apply `mcp-timeouts` for reliable integrations
 
 ### By Workflow Type
+
 - **Git-heavy workflows**: Enable `allow-git-operations` with `git-branch-statusline` for Git awareness
 - **Team collaboration**: Use `commit-message-templates` and `code-formatting` for consistency
 - **Solo development**: Focus on `auto-save` and `custom-theme` for personal productivity
@@ -98,8 +116,8 @@ Select settings based on your project requirements and preferences:
 - **Start with performance settings** for better experience
 - **Add security settings** for production projects
 - **Use statuslines** for real-time project monitoring
-- **Browse [aitmpl.com](https://aitmpl.com)** for specialized configurations
+- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for specialized configurations
 
 ---
 
-**Find more settings:** [Browse all settings on aitmpl.com](https://aitmpl.com) → Filter by "Settings"
+**Find more settings:** [Browse all settings on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "Settings"

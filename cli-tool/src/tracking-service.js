@@ -129,7 +129,7 @@ class TrackingService {
                 cliVersion: trackingData.environment?.cli_version || 'unknown'
             };
 
-            const response = await fetch('https://www.aitmpl.com/api/track-download-supabase', {
+            const response = await fetch('https://gemini-cli-templates.vercel.app-templates.vercel.app/api/track-download-supabase', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -259,7 +259,7 @@ class TrackingService {
         const timeoutId = setTimeout(() => controller.abort(), this.timeout);
 
         try {
-            const response = await fetch('https://www.aitmpl.com/api/track-command-usage', {
+            const response = await fetch('https://gemini-cli-templates.vercel.app-templates.vercel.app/api/track-command-usage', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

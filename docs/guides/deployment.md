@@ -9,11 +9,13 @@ This project is configured for automatic deployment to Vercel from the `main` br
 Add these secrets to your GitHub repository settings:
 
 1. **VERCEL_TOKEN**: Your Vercel account token
+
    - Go to [Vercel Account Settings](https://vercel.com/account/tokens)
    - Create a new token with appropriate permissions
    - Add as `VERCEL_TOKEN` in GitHub Secrets
 
 2. **VERCEL_ORG_ID**: Your Vercel organization ID
+
    - Run `vercel link` in your project
    - Copy the `orgId` from `.vercel/project.json`
    - Add as `VERCEL_ORG_ID` in GitHub Secrets
@@ -37,7 +39,7 @@ cat .vercel/project.json
 
 ## Deployment Flow
 
-- ✅ **Push to main** → Automatic production deploy to aitmpl.com
+- ✅ **Push to main** → Automatic production deploy to gemini-cli-templates.vercel.app-templates.vercel.app
 - ✅ **Other branches** → Manual deploy only (no auto-deploy)
 - ✅ **Pull Requests** → No deployment
 
@@ -55,6 +57,6 @@ vercel --prod
 
 ## Domain Configuration
 
-The main branch deploys to the custom domain: **aitmpl.com**
+The main branch deploys to the custom domain: **gemini-cli-templates.vercel.app-templates.vercel.app**
 
 Configured in Vercel dashboard under Project Settings → Domains.

@@ -121,17 +121,17 @@ DISCORD_WEBHOOK_URL_CHANGELOG=xxx
 
 ```bash
 # Test against production
-API_BASE_URL=https://aitmpl.com npm run test:api
+API_BASE_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app npm run test:api
 
 # Check specific endpoint
-curl -X POST https://aitmpl.com/api/track-download-supabase \
+curl -X POST https://gemini-cli-templates.vercel.app-templates.vercel.app/api/track-download-supabase \
   -H "Content-Type: application/json" \
   -d '{"type":"agent","name":"test","path":"test/path"}'
 ```
 
 ### Endpoint Not Found After Deploy?
 
-1. Check Vercel function logs: `vercel logs aitmpl.com --follow`
+1. Check Vercel function logs: `vercel logs gemini-cli-templates.vercel.app-templates.vercel.app --follow`
 2. Verify file is in `/api` root (not nested)
 3. Ensure proper export: `export default async function handler(req, res) {}`
 
@@ -151,12 +151,13 @@ https://vercel.com/dashboard → aitmpl → Functions
 ### Real-time Logs
 
 ```bash
-vercel logs aitmpl.com --follow
+vercel logs gemini-cli-templates.vercel.app-templates.vercel.app --follow
 ```
 
 ### Database Queries
 
 **Supabase**:
+
 ```sql
 SELECT type, name, COUNT(*) as downloads
 FROM component_downloads
@@ -166,6 +167,7 @@ ORDER BY downloads DESC;
 ```
 
 **Neon**:
+
 ```sql
 SELECT version, published_at, discord_notified
 FROM gemini_code_versions

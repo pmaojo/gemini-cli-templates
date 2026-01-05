@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main pages -->
   <url>
-    <loc>https://aitmpl.com</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -10,42 +10,42 @@
 
   <!-- Filter pages -->
   <url>
-    <loc>https://aitmpl.com/agents</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/agents</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/commands</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/commands</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/settings</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/settings</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/hooks</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/hooks</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/mcps</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/mcps</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/templates</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/templates</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -53,28 +53,28 @@
 
   <!-- Blog pages -->
   <url>
-    <loc>https://aitmpl.com/blog</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/blog/e2b-gemini-code-sandbox</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/e2b-gemini-code-sandbox</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/blog/supabase-gemini-code-integration</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/supabase-gemini-code-integration</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/blog/nextjs-vercel-gemini-code-integration</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/nextjs-vercel-gemini-code-integration</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -82,14 +82,14 @@
   
   <!-- Other important pages -->
   <url>
-    <loc>https://aitmpl.com/trending.html</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/trending.html</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component.html</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component.html</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -97,42 +97,42 @@
 
   <!-- Top Popular Agents (based on downloads) -->
   <url>
-    <loc>https://aitmpl.com/component/agent/prompt-engineer</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/agent/prompt-engineer</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/agent/llms-maintainer</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/agent/llms-maintainer</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/agent/hackathon-ai-strategist</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/agent/hackathon-ai-strategist</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/agent/model-evaluator</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/agent/model-evaluator</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/agent/security-auditor</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/agent/security-auditor</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/agent/frontend-developer</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/agent/frontend-developer</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -140,14 +140,14 @@
 
   <!-- Popular Commands -->
   <url>
-    <loc>https://aitmpl.com/component/command/setup-ci-cd-pipeline</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/command/setup-ci-cd-pipeline</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/command/migrate-to-typescript</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/command/migrate-to-typescript</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -155,14 +155,14 @@
 
   <!-- Popular MCPs -->
   <url>
-    <loc>https://aitmpl.com/component/mcp/supabase</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/mcp/supabase</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/mcp/github-integration</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/mcp/github-integration</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -170,14 +170,14 @@
 
   <!-- Popular Settings -->
   <url>
-    <loc>https://aitmpl.com/component/setting/performance-optimization</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/setting/performance-optimization</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/setting/read-only-mode</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/setting/read-only-mode</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -185,14 +185,14 @@
 
   <!-- Popular Hooks -->
   <url>
-    <loc>https://aitmpl.com/component/hook/auto-git-add</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/hook/auto-git-add</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://aitmpl.com/component/hook/smart-commit</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/component/hook/smart-commit</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
