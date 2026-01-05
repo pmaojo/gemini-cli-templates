@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://sys.semantic/core#"
+     xml:base="http://sys.semantic/core"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://sys.semantic/core"/>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // Classes
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://sys.semantic/core#Entity -->
+    <owl:Class rdf:about="http://sys.semantic/core#Entity">
+        <rdfs:comment>The most general class of things in the domain.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://sys.semantic/core#Event -->
+    <owl:Class rdf:about="http://sys.semantic/core#Event">
+        <rdfs:subClassOf rdf:resource="http://sys.semantic/core#Entity"/>
+        <owl:disjointWith rdf:resource="http://sys.semantic/core#Role"/>
+        <rdfs:comment>Something that happens at a specific time and place.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://sys.semantic/core#Process -->
+    <owl:Class rdf:about="http://sys.semantic/core#Process">
+        <rdfs:subClassOf rdf:resource="http://sys.semantic/core#Event"/>
+        <rdfs:comment>A series of actions or steps taken in order to achieve a particular end.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://sys.semantic/core#Role -->
+    <owl:Class rdf:about="http://sys.semantic/core#Role">
+        <rdfs:subClassOf rdf:resource="http://sys.semantic/core#Entity"/>
+        <rdfs:comment>A function or part played by a person or thing in a particular situation.</rdfs:comment>
+    </owl:Class>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // Object Properties
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://sys.semantic/core#hasParticipant -->
+    <owl:ObjectProperty rdf:about="http://sys.semantic/core#hasParticipant">
+        <rdfs:domain rdf:resource="http://sys.semantic/core#Event"/>
+        <rdfs:range rdf:resource="http://sys.semantic/core#Entity"/>
+    </owl:ObjectProperty>
+
+    <!-- http://sys.semantic/core#partOf -->
+    <owl:ObjectProperty rdf:about="http://sys.semantic/core#partOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://sys.semantic/core#Entity"/>
+        <rdfs:range rdf:resource="http://sys.semantic/core#Entity"/>
+    </owl:ObjectProperty>
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // Data Properties
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://sys.semantic/core#name -->
+    <owl:DatatypeProperty rdf:about="http://sys.semantic/core#name">
+        <rdfs:domain rdf:resource="http://sys.semantic/core#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- http://sys.semantic/core#timestamp -->
+    <owl:DatatypeProperty rdf:about="http://sys.semantic/core#timestamp">
+        <rdfs:domain rdf:resource="http://sys.semantic/core#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF>

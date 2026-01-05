@@ -135,6 +135,20 @@ const TEMPLATES_CONFIG = {
         ]
       }
     }
+  },
+  'grafka': {
+    name: 'Grafka (Neuro-Symbolic)',
+    description: 'Hybrid AI engine with Knowledge Graph (Rust) and OWL Reasoning',
+    files: [
+      { source: 'grafka/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'grafka/.mcp.json', destination: '.mcp.json' },
+      { source: 'grafka/requirements.txt', destination: 'requirements.txt' },
+      { source: 'grafka/setup.sh', destination: 'setup.sh' },
+      { source: 'grafka/crates', destination: 'crates' },
+      { source: 'grafka/agents', destination: 'agents' },
+      { source: 'grafka/ontology', destination: 'ontology' },
+      { source: 'grafka/.gemini/commands', destination: '.gemini/commands' }
+    ]
   }
 };
 

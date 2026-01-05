@@ -1,0 +1,91 @@
+syntax = "proto3";
+package semantic_engine;
+
+service SemanticEngine {
+    // Ingests a batch of triples
+    rpc IngestTriples (IngestRequest) returns (IngestResponse);
+
+    // Queries the graph (Basic traversal for now)
+    rpc GetNeighbors (NodeRequest) returns (NeighborResponse);
+
+    // Vector Search (Placeholder for hybrid query)
+    rpc Search (SearchRequest) returns (SearchResponse);
+
+    // Resolves a string URI to a Node ID
+    rpc ResolveId (ResolveRequest) returns (ResolveResponse);
+
+    // Get all stored triples (for graph visualization)
+    rpc GetAllTriples (EmptyRequest) returns (TriplesResponse);
+
+    // Deletes all data associated with a tenant
+    rpc DeleteTenantData (EmptyRequest) returns (DeleteResponse);
+}
+
+message DeleteResponse {
+    bool success = 1;
+    string message = 2;
+}
+
+message Triple {
+    string subject = 1;
+    string predicate = 2;
+    string object = 3;
+}
+
+message IngestRequest {
+    repeated Triple triples = 1;
+    string tenant_id = 2;
+}
+
+message IngestResponse {
+    uint32 nodes_added = 1;
+    uint32 edges_added = 2;
+}
+
+message NodeRequest {
+    uint32 node_id = 1;
+    string tenant_id = 2;
+}
+
+message NeighborResponse {
+    repeated Neighbor neighbors = 1;
+}
+
+message Neighbor {
+    uint32 node_id = 1;
+    string edge_type = 2;
+}
+
+message SearchRequest {
+    string query = 1;
+    uint32 limit = 2;
+    string tenant_id = 3;
+}
+
+message SearchResponse {
+    repeated SearchResult results = 1;
+}
+
+message SearchResult {
+    uint32 node_id = 1;
+    float score = 2;
+    string content = 3;
+}
+
+message ResolveRequest {
+    string content = 1;
+    string tenant_id = 2;
+}
+
+message ResolveResponse {
+    uint32 node_id = 1;
+    bool found = 2;
+}
+
+message EmptyRequest {
+    string tenant_id = 1;
+}
+
+message TriplesResponse {
+    repeated Triple triples = 1;
+}
