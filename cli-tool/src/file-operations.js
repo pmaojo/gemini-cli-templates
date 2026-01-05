@@ -437,6 +437,40 @@ async function copyTemplateFiles(templateConfig, targetDir, options = {}) {
           console.log(chalk.yellow(`   This is normal for some templates - continuing...`));
           failedFiles++;
         }
+      } else if (file.source.includes('.gemini/agents') && file.source.includes('examples/')) {
+        // This is a framework-specific agents directory - merge with existing agents
+        await fs.ensureDir(destPath);
+        
+        // Download framework-specific agents from GitHub
+        try {
+          const frameworkFiles = await downloadDirectoryFromGitHub(file.source);
+          let filesWritten = 0;
+          
+          for (const [frameworkFileName, content] of Object.entries(frameworkFiles)) {
+            const destFile = path.join(destPath, frameworkFileName);
+            
+            // In merge mode, skip if file already exists
+            if (userAction === 'merge' && await fs.pathExists(destFile)) {
+              console.log(chalk.blue(`⏭️  Skipped ${frameworkFileName} (already exists)`));
+              continue;
+            }
+            
+            await fs.writeFile(destFile, content, 'utf8');
+            filesWritten++;
+          }
+          
+          if (filesWritten > 0) {
+            console.log(chalk.green(`✓ Downloaded ${filesWritten} framework agents ${file.source} → ${file.destination}`));
+            successfulFiles++;
+          } else {
+            console.log(chalk.yellow(`⚠️  No framework agents available for ${file.source}`));
+            skippedFiles++;
+          }
+        } catch (error) {
+          console.log(chalk.yellow(`⚠️  Could not download framework agents from ${file.source}: ${error.message}`));
+          console.log(chalk.yellow(`   This is normal for some templates - continuing...`));
+          failedFiles++;
+        }
       } else if (file.source.includes('.gemini') && !file.source.includes('examples/')) {
         // This is base .gemini directory - download it but handle commands specially
         await fs.ensureDir(destPath);

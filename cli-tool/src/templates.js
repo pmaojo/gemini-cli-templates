@@ -131,7 +131,7 @@ const TEMPLATES_CONFIG = {
         name: 'Tribe App (Agents & Commands)',
         additionalFiles: [
           { source: 'marketing/examples/tribe-app/.gemini/commands', destination: '.gemini/commands' },
-          { source: 'marketing/examples/tribe-app/agents', destination: '.gemini/agents' }
+          { source: 'marketing/examples/tribe-app/.gemini/agents', destination: '.gemini/agents' }
         ]
       }
     }
