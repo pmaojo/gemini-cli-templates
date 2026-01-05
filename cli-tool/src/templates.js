@@ -116,6 +116,25 @@ const TEMPLATES_CONFIG = {
     files: [
       { source: 'go/.mcp.json', destination: '.mcp.json' }
     ]
+  },
+  'marketing': {
+    name: 'Tribal Marketing',
+    description: 'Seth Godin\'s framework for building a Minimum Viable Audience',
+    files: [
+      { source: 'marketing/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'marketing/.gemini', destination: '.gemini' },
+      { source: 'marketing/.gemini/settings.json', destination: '.gemini/settings.json' },
+      { source: 'marketing/.mcp.json', destination: '.mcp.json' }
+    ],
+    frameworks: {
+      'tribe-app': {
+        name: 'Tribe App (Agents & Commands)',
+        additionalFiles: [
+          { source: 'marketing/examples/tribe-app/.gemini/commands', destination: '.gemini/commands' },
+          { source: 'marketing/examples/tribe-app/agents', destination: '.gemini/agents' }
+        ]
+      }
+    }
   }
 };
 
