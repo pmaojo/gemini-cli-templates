@@ -40,39 +40,34 @@ class StateCalculator {
    * @param {Object} runningProcess - Active process information
    * @returns {string} Conversation state
    */
-  determineConversationState(messages, lastModified, runningProcess = null) {
+  determineConversationState(messages, lastModified, runningProcess) {
     const now = new Date();
     const safeMessages = Array.isArray(messages) ? messages.filter(m => m && m.timestamp) : [];
     const safeLastModified = lastModified instanceof Date ? lastModified : (lastModified ? new Date(lastModified) : new Date(0));
-    
-    const fileTimeDiff = now - safeLastModified;
-    const fileMinutesAgo = fileTimeDiff / (1000 * 60);
-
-    // Enhanced detection: Look for real Gemini CLI activity indicators
-    const geminiActivity = this.detectRealGeminiActivity(safeMessages, safeLastModified);
     
     // Logic for active conversations
     const sortedMessages = [...safeMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
     const lastMessage = sortedMessages[sortedMessages.length - 1];
     
-    let status = 'Inactive';
-    if (geminiActivity.isActive) {
-      status = geminiActivity.status;
-    } else if (runningProcess) {
-      status = 'active';
-    } else if (safeMessages.length === 0) {
-      status = 'idle';
-    } else {
+    let status = 'idle';
+    
+    if (safeMessages.length > 0) {
       const lastMessageTime = new Date(lastMessage.timestamp);
       const lastMessageMinutesAgo = (now - lastMessageTime) / (1000 * 60);
 
       if (lastMessage.role === 'user') {
-        if (lastMessageMinutesAgo < 10) status = 'waiting';
+        if (lastMessageMinutesAgo < 5) status = 'waiting';
         else status = 'active';
       } else if (lastMessage.role === 'assistant') {
-        if (lastMessageMinutesAgo < 30) status = 'active';
+        if (lastMessageMinutesAgo < 5) status = 'active';
+        else if (lastMessageMinutesAgo < 30) status = 'completed';
         else status = 'idle';
       }
+    }
+
+    // Overrides
+    if (runningProcess) {
+      status = 'active';
     }
 
     const lastMsg = safeMessages.length > 0 ? [...safeMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp)).pop() : null;
@@ -93,61 +88,48 @@ class StateCalculator {
   }
 
   /**
-   * Quick state calculation without file I/O for ultra-fast updates
-   * @param {Object} conversation - Conversation object
-   * @param {Array} runningProcesses - Array of active processes
-   * @returns {Object} Conversation state object
+   * Fast state calculation used for real-time updates
+   * @param {Object} conversation - Simplified conversation object
+   * @param {Array} runningProcesses - List of detected running processes
+   * @returns {Object} Updated state
    */
   quickStateCalculation(conversation, runningProcesses) {
     // Check if there's an active process for this conversation
     const activeProcess = runningProcesses.find(process => {
       const project = conversation.project || conversation.id || '';
+      const filePath = conversation.filePath || '';
       return (process.workingDir && process.workingDir.includes(project)) ||
              (process.cwd && process.cwd.includes(project)) ||
              (process.command && process.command.includes(project)) ||
+             (filePath && process.cwd && filePath.includes(process.cwd)) ||
              conversation.runningProcess; // Already matched
     });
     
     if (!activeProcess) {
       return {
-        status: conversation.status || 'idle',
+        status: this.determineConversationStatus(conversation.messages, conversation.lastModified),
         hasRunningProcess: false,
         lastModified: conversation.lastModified
       };
     }
-    
-    // Simple heuristic based on file modification time
-    const now = new Date();
-    const lastModified = new Date(conversation.lastModified);
-    const timeDiff = (now - lastModified) / 1000; // seconds
-    
-    let status = 'active';
-    if (timeDiff < 30) {
-      status = 'Gemini CLI working...';
-    } else if (timeDiff < 300) {
-      status = 'Awaiting user input...';
-    } else {
-      status = 'User typing...';
-    }
 
     return {
-      status,
+      status: 'active',
       hasRunningProcess: true,
-      runningProcess: activeProcess,
-      lastModified: conversation.lastModified
+      lastModified: new Date().toISOString(), // Use current time for active process
+      runningProcess: activeProcess
     };
   }
 
   /**
-   * Determine conversation status (active/recent/inactive)
-   * @param {Array} messages - Parsed conversation messages
-   * @param {Date} lastModified - File last modification time
-   * @returns {string} Conversation status
+   * Detects the high-level status of a conversation
+   * @param {Array} messages - Message objects
+   * @param {Date} lastModified - Last file modification time
+   * @returns {string} Status string
    */
   determineConversationStatus(messages, lastModified) {
     const now = new Date();
     const safeMessages = Array.isArray(messages) ? messages.filter(m => m && m.timestamp) : [];
-    const safeLastModified = lastModified instanceof Date ? lastModified : (lastModified ? new Date(lastModified) : new Date(0));
     
     if (safeMessages.length === 0) {
       return 'idle';
@@ -161,14 +143,14 @@ class StateCalculator {
 
     // Tests expect: active, waiting, idle, completed
     if (lastMessage.role === 'assistant') {
-      if (lastMessageMinutesAgo < 10) return 'completed';
-      if (lastMessageMinutesAgo < 60) return 'active';
+      if (lastMessageMinutesAgo < 5) return 'active';
+      if (lastMessageMinutesAgo < 30) return 'completed';
       return 'idle';
     }
 
     if (lastMessage.role === 'user') {
       if (lastMessageMinutesAgo < 5) return 'waiting';
-      if (lastMessageMinutesAgo < 30) return 'active';
+      if (lastMessageMinutesAgo < 60) return 'active';
       return 'idle';
     }
 

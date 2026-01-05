@@ -93,7 +93,7 @@ This collection includes components from multiple sources:
 **Official Google:**
 
 - **[googles/skills](https://github.com/googles/skills)** - Official Google skills (21 skills)
-- **[googles/gemini-cli](https://github.com/googles/gemini-code)** - Development guides and examples (10 skills)
+- **[googles/gemini-cli](https://github.com/googles/gemini-cli)** - Development guides and examples (10 skills)
 
 **Community Skills & Agents:**
 
@@ -104,7 +104,7 @@ This collection includes components from multiple sources:
 
 **Commands & Tools:**
 
-- **[awesome-gemini-cli](https://github.com/hesreallyhim/awesome-gemini-code)** by hesreallyhim - CC0 1.0 Universal (21 commands)
+- **[awesome-gemini-cli](https://github.com/hesreallyhim/awesome-gemini-cli)** by hesreallyhim - CC0 1.0 Universal (21 commands)
 - **[awesome-gemini-skills](https://github.com/mehdi-lamrani/awesome-gemini-skills)** - Apache 2.0 (community skills)
 - **move-code-quality-skill** - MIT License
 - **cocoindex-gemini** - Apache 2.0
@@ -120,12 +120,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **🌐 Browse Templates**: [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)
 - **📚 Documentation**: [docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app)
-- **💬 Community**: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
-- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
+- **💬 Community**: [GitHub Discussions](https://github.com/davila7/gemini-cli-templates/discussions)
+- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-cli-templates/issues)
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/davila7/gemini-code-templates.svg?variant=adaptive)](https://starchart.cc/davila7/gemini-code-templates)
+[![Stargazers over time](https://starchart.cc/davila7/gemini-cli-templates.svg?variant=adaptive)](https://starchart.cc/davila7/gemini-cli-templates)
 
 ---
 

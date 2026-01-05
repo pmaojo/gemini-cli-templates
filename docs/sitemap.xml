@@ -60,21 +60,21 @@
   </url>
 
   <url>
-    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/e2b-gemini-code-sandbox</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/e2b-gemini-cli-sandbox</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/supabase-gemini-code-integration</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/supabase-gemini-cli-integration</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/nextjs-vercel-gemini-code-integration</loc>
+    <loc>https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/nextjs-vercel-gemini-cli-integration</loc>
     <lastmod>2025-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

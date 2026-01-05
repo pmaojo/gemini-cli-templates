@@ -395,7 +395,7 @@ def scrape_github_jobs():
         
         headers = {
             'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'gemini-code-templates-job-scraper'
+            'User-Agent': 'gemini-cli-templates-job-scraper'
         }
         
         github_token = os.getenv("GITHUB_TOKEN")
@@ -547,7 +547,7 @@ def scrape_remote_ok():
         # Remote OK has an API but might be rate limited
         url = "https://remoteok.io/api"
         headers = {
-            'User-Agent': 'gemini-code-templates-job-scraper'
+            'User-Agent': 'gemini-cli-templates-job-scraper'
         }
         
         response = requests.get(url, headers=headers)
@@ -591,7 +591,7 @@ def scrape_weworkremotely():
         
         rss_url = "https://weworkremotely.com/categories/remote-programming-jobs.rss"
         headers = {
-            'User-Agent': 'gemini-code-templates-job-scraper'
+            'User-Agent': 'gemini-cli-templates-job-scraper'
         }
         
         response = requests.get(rss_url, headers=headers)
@@ -691,7 +691,7 @@ def is_gemini_code_related(text):
     
     # ONLY Gemini-specific keywords - must contain "gemini"
     gemini_keywords = [
-        'gemini code', 'gemini-code', 'anthropic gemini', 'gemini ai', 
+        'gemini code', 'gemini-cli', 'anthropic gemini', 'gemini ai', 
         'gemini coder', 'gemini assistant', 'gemini developer', 'gemini engineer',
         'work with gemini', 'using gemini', 'gemini experience', 'gemini integration'
     ]
@@ -847,7 +847,7 @@ def generate_sample_jobs():
             'company_icon': 'https://anthropic.com/favicon.ico',
             'location': 'Remote',
             'description': 'Senior AI Developer to enhance Gemini Code capabilities and integrations...',
-            'job_link': 'https://anthropic.com/careers/gemini-code-developer',
+            'job_link': 'https://anthropic.com/careers/gemini-cli-developer',
             'source': 'Company Website',
             'date_posted': '2025-09-10T10:00:00Z',
             'salary': 150000

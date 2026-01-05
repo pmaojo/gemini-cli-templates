@@ -17,7 +17,7 @@ Agents are specialized AI assistants that understand specific domains and provid
 Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx gemini-code-templates@latest --agent development/frontend-developer --yes
+npx gemini-cli-templates@latest --agent development/frontend-developer --yes
 ```
 
 ### 🌍 Global Agent (Gemini Code SDK)
@@ -25,7 +25,7 @@ npx gemini-code-templates@latest --agent development/frontend-developer --yes
 Create a global AI agent accessible from anywhere with zero configuration. Perfect for automation and CI/CD workflows.
 
 ```bash
-npx gemini-code-templates@latest --create-agent development/frontend-developer
+npx gemini-cli-templates@latest --create-agent development/frontend-developer
 ```
 
 After installation, use from anywhere:
@@ -55,7 +55,7 @@ E2B_API_KEY=your_e2b_key_here
 [Get Google API Key](https://console.google.com/) | [Get E2B API Key](https://e2b.dev/)
 
 ```bash
-npx gemini-code-templates@latest --sandbox e2b --agent development/frontend-developer --prompt "your development task"
+npx gemini-cli-templates@latest --sandbox e2b --agent development/frontend-developer --prompt "your development task"
 ```
 
 ☁️ Isolated cloud environment  

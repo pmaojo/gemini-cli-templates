@@ -16,7 +16,7 @@ Sistema automatizado para monitorear releases de Gemini Code y enviar notificaci
 ```
 NPM Release
     ↓
-[Vercel Function] /api/gemini-code-monitor
+[Vercel Function] /api/gemini-cli-monitor
     ↓
 [Fetch CHANGELOG.md] ← GitHub
     ↓
@@ -66,7 +66,7 @@ vercel --prod
 
 ## 📡 Endpoints
 
-### `GET/POST /api/gemini-code-monitor`
+### `GET/POST /api/gemini-cli-monitor`
 
 Endpoint principal que hace todo el proceso:
 
@@ -109,11 +109,11 @@ Endpoint principal que hace todo el proceso:
 }
 ```
 
-### `POST /api/gemini-code-monitor/webhook`
+### `POST /api/gemini-cli-monitor/webhook`
 
 Webhook para recibir notificaciones de NPM (alternativa).
 
-### `POST /api/gemini-code-monitor/discord-notifier`
+### `POST /api/gemini-cli-monitor/discord-notifier`
 
 Procesa y notifica una versión ya guardada en la DB.
 
@@ -134,18 +134,18 @@ NPM puede enviar webhooks cuando se publica un paquete, pero requiere cuenta Pro
 Si tienes NPM Pro:
 
 1. Ve a la configuración del paquete
-2. Agrega webhook: `https://your-domain.vercel.app/api/gemini-code-monitor/webhook`
+2. Agrega webhook: `https://your-domain.vercel.app/api/gemini-cli-monitor/webhook`
 
 ### Opción 2: GitHub Actions (Gratis)
 
-Crea `.github/workflows/check-gemini-code.yml`:
+Crea `.github/workflows/check-gemini-cli.yml`:
 
 ```yaml
 name: Check Gemini Code Updates
 
 on:
   schedule:
-    - cron: '0 */4 * * *' # Cada 4 horas
+    - cron: "0 */4 * * *" # Cada 4 horas
   workflow_dispatch: # Manual trigger
 
 jobs:
@@ -154,7 +154,7 @@ jobs:
     steps:
       - name: Trigger Vercel Function
         run: |
-          curl -X POST https://your-domain.vercel.app/api/gemini-code-monitor
+          curl -X POST https://your-domain.vercel.app/api/gemini-cli-monitor
 ```
 
 ### Opción 3: Vercel Cron Jobs
@@ -165,7 +165,7 @@ En `vercel.json`:
 {
   "crons": [
     {
-      "path": "/api/gemini-code-monitor",
+      "path": "/api/gemini-cli-monitor",
       "schedule": "0 */4 * * *"
     }
   ]
@@ -177,7 +177,7 @@ En `vercel.json`:
 Simplemente abre en el navegador o haz un GET request:
 
 ```bash
-curl https://your-domain.vercel.app/api/gemini-code-monitor
+curl https://your-domain.vercel.app/api/gemini-cli-monitor
 ```
 
 ## 📊 Schema de Base de Datos
@@ -186,16 +186,16 @@ curl https://your-domain.vercel.app/api/gemini-code-monitor
 
 Almacena todas las versiones detectadas.
 
-| Campo                           | Tipo      | Descripción                      |
-| ------------------------------- | --------- | -------------------------------- |
-| id                              | SERIAL    | ID único                         |
-| version                         | VARCHAR   | Número de versión (ej: "2.0.31") |
-| published_at                    | TIMESTAMP | Fecha de publicación             |
-| changelog_content               | TEXT      | Contenido completo del changelog |
-| npm_url                         | VARCHAR   | URL del paquete en NPM           |
-| github_url                      | VARCHAR   | URL del changelog en GitHub      |
-| discord_notified                | BOOLEAN   | Si ya se notificó a Discord      |
-| discord_notification_sent_at    | TIMESTAMP | Cuándo se envió la notificación  |
+| Campo                        | Tipo      | Descripción                      |
+| ---------------------------- | --------- | -------------------------------- |
+| id                           | SERIAL    | ID único                         |
+| version                      | VARCHAR   | Número de versión (ej: "2.0.31") |
+| published_at                 | TIMESTAMP | Fecha de publicación             |
+| changelog_content            | TEXT      | Contenido completo del changelog |
+| npm_url                      | VARCHAR   | URL del paquete en NPM           |
+| github_url                   | VARCHAR   | URL del changelog en GitHub      |
+| discord_notified             | BOOLEAN   | Si ya se notificó a Discord      |
+| discord_notification_sent_at | TIMESTAMP | Cuándo se envió la notificación  |
 
 ### `gemini_code_changes`
 
@@ -228,14 +228,14 @@ Log de todas las notificaciones enviadas.
 
 Metadata del sistema de monitoreo.
 
-| Campo              | Tipo      | Descripción                      |
-| ------------------ | --------- | -------------------------------- |
-| id                 | SERIAL    | ID único (siempre 1)             |
-| last_check_at      | TIMESTAMP | Última verificación              |
-| last_version_found | VARCHAR   | Última versión encontrada        |
-| check_count        | INTEGER   | Número de verificaciones         |
-| error_count        | INTEGER   | Número de errores                |
-| last_error         | TEXT      | Último error (si hubo)           |
+| Campo              | Tipo      | Descripción               |
+| ------------------ | --------- | ------------------------- |
+| id                 | SERIAL    | ID único (siempre 1)      |
+| last_check_at      | TIMESTAMP | Última verificación       |
+| last_version_found | VARCHAR   | Última versión encontrada |
+| check_count        | INTEGER   | Número de verificaciones  |
+| error_count        | INTEGER   | Número de errores         |
+| last_error         | TEXT      | Último error (si hubo)    |
 
 ## 🧪 Testing
 
@@ -243,10 +243,10 @@ Metadata del sistema de monitoreo.
 
 ```bash
 # Verificar endpoint
-curl https://your-domain.vercel.app/api/gemini-code-monitor
+curl https://your-domain.vercel.app/api/gemini-cli-monitor
 
 # Ver respuesta completa
-curl -v https://your-domain.vercel.app/api/gemini-code-monitor
+curl -v https://your-domain.vercel.app/api/gemini-cli-monitor
 ```
 
 ### Test Local
@@ -264,7 +264,7 @@ echo "DISCORD_WEBHOOK_URL=your_webhook_url" >> .env
 vercel dev
 
 # En otra terminal
-curl http://localhost:3000/api/gemini-code-monitor
+curl http://localhost:3000/api/gemini-cli-monitor
 ```
 
 ## 📝 Parser de Changelog
@@ -387,8 +387,8 @@ SELECT * FROM monitoring_metadata;
 
 ## 📚 Referencias
 
-- [Gemini Code GitHub](https://github.com/googles/gemini-code)
-- [Gemini Code NPM](https://www.npmjs.com/package/@google-ai/gemini-code)
+- [Gemini Code GitHub](https://github.com/googles/gemini-cli)
+- [Gemini Code NPM](https://www.npmjs.com/package/@google-ai/gemini-cli)
 - [Neon Database Docs](https://neon.tech/docs)
 - [Discord Webhooks](https://discord.com/developers/docs/resources/webhook)
 - [Vercel Functions](https://vercel.com/docs/functions)

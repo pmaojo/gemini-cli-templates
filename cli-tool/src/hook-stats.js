@@ -239,7 +239,7 @@ Consider my project structure and suggest hooks that would be most beneficial fo
 
       child.on('error', (error) => {
         console.error(chalk.red('❌ Error launching Gemini CLI:'), error.message);
-        console.log(chalk.yellow('💡 Make sure Gemini CLI is installed: npm install -g @google-ai/gemini-code'));
+        console.log(chalk.yellow('💡 Make sure Gemini CLI is installed: npm install -g @google-ai/gemini-cli'));
       });
 
     } catch (error) {

@@ -9,31 +9,41 @@ Utilities that enhance your Gemini Code development workflow.
 ## Available Tools
 
 ### 📊 Analytics Dashboard
+
 Real-time monitoring of Gemini Code sessions.
+
 ```bash
-npx gemini-code-templates@latest --analytics
+npx gemini-cli-templates@latest --analytics
 ```
 
-### 🏥 Health Check  
+### 🏥 Health Check
+
 System validation and optimization checks.
+
 ```bash
-npx gemini-code-templates@latest --health-check
+npx gemini-cli-templates@latest --health-check
 ```
 
 ### 💬 Chats Interface
+
 Mobile-optimized chat interface.
+
 ```bash
-npx gemini-code-templates@latest --chats
+npx gemini-cli-templates@latest --chats
 ```
 
 ### 🌐 Cloudflare Tunnel
+
 Remote access to your tools.
+
 ```bash
-npx gemini-code-templates@latest --tunnel
+npx gemini-cli-templates@latest --tunnel
 ```
 
 ### ☁️ E2B Sandbox
+
 Cloud execution environment.
+
 ```bash
-npx gemini-code-templates@latest --sandbox
+npx gemini-cli-templates@latest --sandbox
 ```

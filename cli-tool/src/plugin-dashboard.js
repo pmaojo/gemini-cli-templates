@@ -268,7 +268,7 @@ class PluginDashboard {
               mcps: pluginDef.mcpServers ? pluginDef.mcpServers.length : 0
             };
           }
-          // Otherwise, try to count from source directory (gemini-code-plugins style)
+          // Otherwise, try to count from source directory (gemini-cli-plugins style)
           else if (typeof pluginDef.source === 'string') {
             if (await fs.pathExists(pluginSourcePath)) {
               components = await this.countPluginComponents(pluginSourcePath);

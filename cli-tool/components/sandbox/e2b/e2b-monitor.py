@@ -138,7 +138,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         # Create sandbox with monitoring
         log_with_timestamp("Creating E2B sandbox...")
         sbx = Sandbox.create(
-            template="anthropic-gemini-code",
+            template="anthropic-gemini-cli",
             api_key=e2b_api_key,
             envs={'ANTHROPIC_API_KEY': anthropic_api_key},
             timeout=600
@@ -155,7 +155,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         # Install components if specified
         if components_to_install:
             log_with_timestamp(f"📦 Installing components: {components_to_install}")
-            install_command = f"npx gemini-code-templates@latest {components_to_install}"
+            install_command = f"npx gemini-cli-templates@latest {components_to_install}"
             monitor_sandbox_execution(sbx, install_command, timeout=120)
             monitor_file_system(sbx, "After components installation")
         

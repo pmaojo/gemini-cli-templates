@@ -302,7 +302,7 @@ Consider my project structure and development needs to suggest the most benefici
 
       child.on('error', (error) => {
         console.error(chalk.red('❌ Error launching Gemini CLI:'), error.message);
-        console.log(chalk.yellow('💡 Make sure Gemini CLI is installed: npm install -g @google-ai/gemini-code'));
+        console.log(chalk.yellow('💡 Make sure Gemini CLI is installed: npm install -g @google-ai/gemini-cli'));
       });
 
     } catch (error) {

@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "crons": [
     {
-      "path": "/api/gemini-code-check",
+      "path": "/api/gemini-cli-check",
       "schedule": "*/30 * * * *"
     }
   ],

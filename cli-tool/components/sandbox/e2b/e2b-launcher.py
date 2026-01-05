@@ -105,7 +105,7 @@ def main():
                     print(f"🔄 Retry {retry_count}/{max_retries - 1} - WebSocket connection...")
                 
                 sbx = Sandbox.create(
-                    template="anthropic-gemini-code",
+                    template="anthropic-gemini-cli",
                     api_key=e2b_api_key,
                     envs={
                         'ANTHROPIC_API_KEY': anthropic_api_key,
@@ -149,7 +149,7 @@ def main():
         if components_to_install:
             print("📦 Installing specified components...")
             install_result = sbx.commands.run(
-                f"npx gemini-code-templates@latest {components_to_install}",
+                f"npx gemini-cli-templates@latest {components_to_install}",
                 timeout=120,  # 2 minutes for component installation
             )
             

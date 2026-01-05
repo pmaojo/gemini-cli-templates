@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Quick Setup',
     icon: '⚡',
-    command: 'npm install -g gemini-code-templates',
+    command: 'npm install -g gemini-cli-templates',
     description: (
       <>
         Install the CLI tool globally and get started with Gemini Code templates 
@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Real-time Analytics',
     icon: '📊',
-    command: 'gemini-code-templates --analytics',
+    command: 'gemini-cli-templates --analytics',
     description: (
       <>
         Monitor your Gemini Code usage with our comprehensive analytics dashboard. 

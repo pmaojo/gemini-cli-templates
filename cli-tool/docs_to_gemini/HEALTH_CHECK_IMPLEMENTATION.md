@@ -18,10 +18,10 @@ A comprehensive Health Check feature has been successfully implemented for the G
 
 All specified command aliases work correctly:
 
-- `gemini-code-templates --health-check`
-- `gemini-code-templates --health`
-- `gemini-code-templates --check`
-- `gemini-code-templates --verify`
+- `gemini-cli-templates --health-check`
+- `gemini-cli-templates --health`
+- `gemini-cli-templates --check`
+- `gemini-cli-templates --verify`
 
 ### 3. Comprehensive System Verification
 

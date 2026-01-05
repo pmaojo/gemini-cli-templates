@@ -545,7 +545,7 @@ async function executeLocalTask(task) {
                 task.output.push('❌ Gemini CLI CLI not found in PATH!');
                 task.output.push('💡 Please install Gemini CLI CLI first:');
                 task.output.push('🔗 Visit: https://gemini.ai/code');
-                task.output.push('🔗 Documentation: https://docs.google.com/gemini-code');
+                task.output.push('🔗 Documentation: https://docs.google.com/gemini-cli');
             } else {
                 task.output.push(`❌ Execution error: ${error.message}`);
             }

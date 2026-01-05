@@ -446,7 +446,7 @@ gemini
                 // Check content patterns
                 const content = codeElement.textContent;
 
-                if (content.includes('npm ') || content.includes('$ ') || content.includes('gemini-code ')) {
+                if (content.includes('npm ') || content.includes('$ ') || content.includes('gemini-cli ')) {
                     return 'bash';
                 }
                 if (content.includes('import ') && content.includes('from ')) {
@@ -521,8 +521,8 @@ gemini
                 return text
                     .split('\n')
                     .map(line => {
-                        // Remove prompts like "$ ", "❯ ", "gemini-code> "
-                        line = line.replace(/^[\$❯]\s*/, '').replace(/^gemini-code>\s*/, '');
+                        // Remove prompts like "$ ", "❯ ", "gemini-cli> "
+                        line = line.replace(/^[\$❯]\s*/, '').replace(/^gemini-cli>\s*/, '');
 
                         // Remove output/result comments (lines starting with # ✓)
                         if (line.trim().startsWith('# ✓') ||

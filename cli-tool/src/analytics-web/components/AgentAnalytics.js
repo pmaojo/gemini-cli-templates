@@ -589,7 +589,7 @@ class AgentAnalytics {
             <h4>Available Agent Types:</h4>
             <ul>
               <li><strong>general-purpose:</strong> Multi-step tasks and research</li>
-              <li><strong>gemini-code-best-practices:</strong> Workflow optimization</li>
+              <li><strong>gemini-cli-best-practices:</strong> Workflow optimization</li>
               <li><strong>docusaurus-expert:</strong> Documentation management</li>
             </ul>
           </div>

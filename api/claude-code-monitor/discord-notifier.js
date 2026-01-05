@@ -41,7 +41,7 @@ export async function sendDiscordNotification(versionData) {
 
   const payload = {
     username: 'Gemini Code Monitor',
-    avatar_url: 'https://raw.githubusercontent.com/googles/gemini-code/main/assets/icon.png',
+    avatar_url: 'https://raw.githubusercontent.com/googles/gemini-cli/main/assets/icon.png',
     embeds: [embed]
   };
 
@@ -116,7 +116,7 @@ function buildDiscordEmbed({ version, changes, summary, npmUrl, githubUrl }) {
   // Links
   embed.fields.push({
     name: '📦 Installation',
-    value: `\`\`\`bash\nnpm install -g @google-ai/gemini-code@${version}\n\`\`\``,
+    value: `\`\`\`bash\nnpm install -g @google-ai/gemini-cli@${version}\n\`\`\``,
     inline: false
   });
 

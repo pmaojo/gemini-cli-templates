@@ -317,8 +317,8 @@ For advanced contributors who want to improve the CLI tools like analytics, heal
 
 ```bash
 # Clone the repository
-git clone https://github.com/davila7/gemini-code-templates.git
-cd gemini-code-templates
+git clone https://github.com/davila7/gemini-cli-templates.git
+cd gemini-cli-templates
 
 # Navigate to the CLI tool directory
 cd cli-tool
@@ -443,16 +443,16 @@ npm run health-check
 
 ```bash
 # Test component installation
-npx gemini-code-templates@latest --agent your-agent --dry-run
-npx gemini-code-templates@latest --command your-command --dry-run
-npx gemini-code-templates@latest --mcp your-mcp --dry-run
+npx gemini-cli-templates@latest --agent your-agent --dry-run
+npx gemini-cli-templates@latest --command your-command --dry-run
+npx gemini-cli-templates@latest --mcp your-mcp --dry-run
 ```
 
 ### Template Testing
 
 ```bash
 # Test template installation
-npx gemini-code-templates@latest --template your-template --dry-run
+npx gemini-cli-templates@latest --template your-template --dry-run
 
 # Test with specific scenarios
 npm start -- --language python --framework django --dry-run
@@ -477,8 +477,8 @@ npm run health-check:test
 ### 1. Fork and Clone
 
 ```bash
-git clone https://github.com/your-username/gemini-code-templates.git
-cd gemini-code-templates
+git clone https://github.com/your-username/gemini-cli-templates.git
+cd gemini-cli-templates
 ```
 
 ### 2. Create Feature Branch
@@ -534,8 +534,8 @@ npm start -- --dry-run
 
 ### Community Support
 
-- **GitHub Issues** - [Report bugs or request features](https://github.com/davila7/gemini-code-templates/issues)
-- **GitHub Discussions** - [Join community discussions](https://github.com/davila7/gemini-code-templates/discussions)
+- **GitHub Issues** - [Report bugs or request features](https://github.com/davila7/gemini-cli-templates/issues)
+- **GitHub Discussions** - [Join community discussions](https://github.com/davila7/gemini-cli-templates/discussions)
 - **Documentation** - [Complete guides at docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app/)
 
 ### Quick Start Guides

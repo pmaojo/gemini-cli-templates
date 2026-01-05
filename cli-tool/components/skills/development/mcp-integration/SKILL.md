@@ -568,7 +568,7 @@ Working examples in `examples/`:
 ### External Resources
 
 - **Official MCP Docs**: https://modelcontextprotocol.io/
-- **Gemini CLI MCP Docs**: https://docs.gemini.com/en/docs/gemini-code/mcp
+- **Gemini CLI MCP Docs**: https://docs.gemini.com/en/docs/gemini-cli/mcp
 - **MCP SDK**: @modelcontextprotocol/sdk
 - **Testing**: Use `gemini --debug` and `/mcp` command
 

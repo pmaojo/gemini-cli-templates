@@ -32,7 +32,7 @@ Complete implementation of Cloudflare Workers sandbox for executing Gemini CLI w
    - Memory usage tracking
 
 ### Documentation Suite
-1. **Main Documentation** (`gemini-code-sandbox.md`)
+1. **Main Documentation** (`gemini-cli-sandbox.md`)
    - Component overview and features
    - Architecture diagrams
    - Usage examples
@@ -184,7 +184,7 @@ cloudflare/
 │   └── index.ts                  # Cloudflare Worker source (253 lines)
 ├── launcher.ts                   # CLI launcher tool (254 lines)
 ├── monitor.ts                    # Monitoring tool (372 lines)
-├── gemini-code-sandbox.md        # Main component doc (358 lines)
+├── gemini-cli-sandbox.md        # Main component doc (358 lines)
 ├── README.md                     # Complete guide (435 lines)
 ├── QUICKSTART.md                 # Quick start (315 lines)
 ├── SANDBOX_DEBUGGING.md          # Debug guide (523 lines)
@@ -231,7 +231,7 @@ curl https://your-worker.workers.dev/health
 The sandbox integrates seamlessly with the main CLI:
 
 ```bash
-npx gemini-code-templates@latest --sandbox cloudflare \
+npx gemini-cli-templates@latest --sandbox cloudflare \
   --Google-api-key your_key \
   --prompt "Your prompt"
 ```
@@ -240,7 +240,7 @@ npx gemini-code-templates@latest --sandbox cloudflare \
 Can be combined with agents, commands, and settings:
 
 ```bash
-npx gemini-code-templates@latest --sandbox cloudflare \
+npx gemini-cli-templates@latest --sandbox cloudflare \
   --agent frontend-developer \
   --command setup-react \
   --prompt "Create a todo app"

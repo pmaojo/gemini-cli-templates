@@ -4,8 +4,8 @@
 import { neon } from '@neondatabase/serverless';
 import axios from 'axios';
 
-const NPM_PACKAGE = '@google-ai/gemini-code';
-const CHANGELOG_URL = 'https://raw.githubusercontent.com/googles/gemini-code/main/CHANGELOG.md';
+const NPM_PACKAGE = '@google-ai/gemini-cli';
+const CHANGELOG_URL = 'https://raw.githubusercontent.com/googles/gemini-cli/main/CHANGELOG.md';
 
 // Inicializar cliente de Neon
 function getNeonClient() {
@@ -147,7 +147,7 @@ export default async function handler(req, res) {
     const fullChangelog = changelogResponse.data;
 
     // Guardar la nueva versión (sin parsear aún)
-    const githubUrl = `https://github.com/googles/gemini-code/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
+    const githubUrl = `https://github.com/googles/gemini-cli/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
 
     const savedVersion = await saveVersion(sql, {
       version: latestVersion.version,

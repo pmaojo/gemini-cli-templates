@@ -9,8 +9,9 @@ Secure remote access to your Gemini Code tools from anywhere.
 ## Launch Commands
 
 ### With Chats
+
 ```bash
-npx gemini-code-templates@latest --chats --tunnel
+npx gemini-cli-templates@latest --chats --tunnel
 ```
 
 ## How It Works
@@ -25,12 +26,13 @@ npx gemini-code-templates@latest --chats --tunnel
 ### Common Issues
 
 **Tunnel won't start:**
+
 ```bash
 # Check internet connection
 ping cloudflare.com
 
 # Verify tool is running locally first
-npx gemini-code-templates@latest --chats
+npx gemini-cli-templates@latest --chats
 ```
 
 ---

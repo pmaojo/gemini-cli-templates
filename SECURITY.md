@@ -13,10 +13,12 @@ The security of our CLI tool and the templates it generates is our top priority.
 If you discover a security vulnerability in Gemini Code Templates, please report it to us in one of the following ways:
 
 ### Email
+
 Send details of the vulnerability to [dan.avila7@gmail.com](mailto:dan.avila7@gmail.com) with the subject line "SECURITY: Gemini Code Templates Vulnerability Report"
 
 ### GitHub Security Advisories
-You can also report vulnerabilities through [GitHub Security Advisories](https://github.com/davila7/gemini-code-templates/security/advisories/new) for this repository.
+
+You can also report vulnerabilities through [GitHub Security Advisories](https://github.com/davila7/gemini-cli-templates/security/advisories/new) for this repository.
 
 ## What to Include in Your Report
 
@@ -34,12 +36,14 @@ To help us understand and resolve the issue quickly, please include:
 When using Gemini Code Templates:
 
 ### For Users
-- **Keep Updated**: Always use the latest version via `npx gemini-code-templates@latest`
+
+- **Keep Updated**: Always use the latest version via `npx gemini-cli-templates@latest`
 - **Review Templates**: Check generated files before committing to your repository
 - **Audit Hooks**: Review automation hooks before enabling them
 - **Secure Environment**: Use the tool in a secure development environment
 
 ### For Contributors
+
 - **Dependency Scanning**: Run `npm audit` before submitting changes
 - **Input Validation**: Validate all user inputs and file paths
 - **Secure Defaults**: Choose secure defaults for all template configurations

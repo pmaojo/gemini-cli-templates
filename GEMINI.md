@@ -468,17 +468,17 @@ Automation triggers for development workflows:
 
 ```bash
 # Install specific components
-npx gemini-code-templates@latest --agent <name>
-npx gemini-code-templates@latest --command <name>
-npx gemini-code-templates@latest --mcp <name>
-npx gemini-code-templates@latest --setting <name>
-npx gemini-code-templates@latest --hook <name>
+npx gemini-cli-templates@latest --agent <name>
+npx gemini-cli-templates@latest --command <name>
+npx gemini-cli-templates@latest --mcp <name>
+npx gemini-cli-templates@latest --setting <name>
+npx gemini-cli-templates@latest --hook <name>
 
 # Batch installation
-npx gemini-code-templates@latest --agent security-auditor --command security-audit --setting read-only-mode
+npx gemini-cli-templates@latest --agent security-auditor --command security-audit --setting read-only-mode
 
 # Interactive mode
-npx gemini-code-templates@latest
+npx gemini-cli-templates@latest
 ```
 
 #### Special Component Features
@@ -635,7 +635,7 @@ The `/api` directory contains Vercel Serverless Functions that power critical in
 
 **Authentication**: Discord signature verification
 
-#### 3. `/api/gemini-code-check`
+#### 3. `/api/gemini-cli-check`
 
 **Purpose**: Monitors Gemini CLI releases and sends Discord notifications
 
@@ -680,7 +680,7 @@ The `vercel.json` file in project root configures:
   "outputDirectory": "docs",
   "crons": [
     {
-      "path": "/api/gemini-code-check",
+      "path": "/api/gemini-cli-check",
       "schedule": "0 */4 * * *"
     }
   ],

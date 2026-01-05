@@ -9,7 +9,7 @@ System validation and optimization for your Gemini Code setup.
 ## Launch Command
 
 ```bash
-npx gemini-code-templates@latest --health-check
+npx gemini-cli-templates@latest --health-check
 ```
 
 ## What Gets Checked

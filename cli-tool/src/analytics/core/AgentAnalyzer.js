@@ -16,7 +16,7 @@ class AgentAnalyzer {
         color: '#3fb950',
         icon: '🔧'
       },
-      'gemini-code-best-practices': {
+      'gemini-cli-best-practices': {
         name: 'Gemini CLI Best Practices',
         description: 'Workflow optimization and setup guidance',
         color: '#4285f4',

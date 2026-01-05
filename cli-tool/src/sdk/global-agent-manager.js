@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const ora = require('ora');
 
 // Global agents directory
-const GLOBAL_AGENTS_DIR = path.join(os.homedir(), '.gemini-code-templates');
+const GLOBAL_AGENTS_DIR = path.join(os.homedir(), '.gemini-cli-templates');
 const AGENTS_DIR = path.join(GLOBAL_AGENTS_DIR, 'agents');
 const LOCAL_BIN_DIR = path.join(GLOBAL_AGENTS_DIR, 'bin');
 
@@ -382,7 +382,7 @@ Please analyze the \${userInput} in the context of this \${projectType} project.
 if (!checkGeminiCLI()) {
   console.error('❌ Gemini CLI not found in PATH');
   console.error('💡 Install Gemini CLI: https://gemini.ai/code');
-  console.error('💡 Or install via npm: npm install -g @google-ai/gemini-code');
+  console.error('💡 Or install via npm: npm install -g @google-ai/gemini-cli');
   process.exit(1);
 }
 

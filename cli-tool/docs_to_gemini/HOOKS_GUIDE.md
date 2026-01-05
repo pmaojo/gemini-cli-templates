@@ -796,7 +796,7 @@ except Exception as e:
 
 ### Understanding MCP Tools in Hooks
 
-Gemini Code hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/gemini-code/mcp) tools. MCP tools follow the naming pattern `mcp__<server>__<tool>`:
+Gemini Code hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/gemini-cli/mcp) tools. MCP tools follow the naming pattern `mcp__<server>__<tool>`:
 
 - `mcp__github__create_issue` - GitHub MCP server's issue creation tool
 - `mcp__database__execute_query` - Database MCP server's query tool
@@ -1210,7 +1210,7 @@ print(json.dumps({'continue': True, 'systemMessage': 'Test successful'}))
 
 Share and discover hooks with the community:
 
-- [Gemini Code Hooks Repository](https://github.com/google/gemini-code-hooks) (example)
+- [Gemini Code Hooks Repository](https://github.com/google/gemini-cli-hooks) (example)
 - Project-specific hook collections
 - Team-shared hook libraries
 
@@ -1289,4 +1289,4 @@ Gemini Code hooks provide powerful automation capabilities that can significantl
 
 Start with simple hooks and gradually build more sophisticated automation as you become comfortable with the system. Remember to prioritize security, test thoroughly, and document your hooks for team collaboration.
 
-For more examples and community resources, see the [Gemini Code documentation](/en/docs/gemini-code) and join the community discussions.
+For more examples and community resources, see the [Gemini Code documentation](/en/docs/gemini-cli) and join the community discussions.

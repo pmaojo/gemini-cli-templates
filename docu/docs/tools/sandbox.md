@@ -9,6 +9,7 @@ Cloud execution environment for safe testing and experimentation.
 ## Setup Requirements
 
 Add to your `.env` file:
+
 ```bash
 ANTHROPIC_API_KEY=your_google_key_here
 E2B_API_KEY=your_e2b_key_here
@@ -19,13 +20,15 @@ Get keys at [console.google.com](https://console.google.com/) and [e2b.dev](http
 ## Launch Commands
 
 ### Basic execution
+
 ```bash
-npx gemini-code-templates@latest --sandbox e2b --prompt "your task"
+npx gemini-cli-templates@latest --sandbox e2b --prompt "your task"
 ```
 
 ### With components
+
 ```bash
-npx gemini-code-templates@latest --sandbox e2b --agent frontend-developer --prompt "optimize React components"
+npx gemini-cli-templates@latest --sandbox e2b --agent frontend-developer --prompt "optimize React components"
 ```
 
 ## Features
@@ -35,14 +38,17 @@ npx gemini-code-templates@latest --sandbox e2b --agent frontend-developer --prom
 - **Component integration** - Use agents, commands, and MCPs in sandbox
 - **Secure execution** - Protected environment for experimental code
 - **Resource scaling** - Handle intensive computational tasks
+
 # With specific environment and timeout
+
 ```
-npx gemini-code-templates@latest --sandbox e2b --agent security/security-auditor --prompt "audit this codebase" --timeout 300
+npx gemini-cli-templates@latest --sandbox e2b --agent security/security-auditor --prompt "audit this codebase" --timeout 300
 ```
 
 ## 🔒 Isolation Features
 
 ### Complete Environment Isolation
+
 - **Sandboxed execution** - No access to your local file system
 - **Network isolation** - Controlled internet access
 - **Process isolation** - Separate process space from your system
@@ -50,6 +56,7 @@ npx gemini-code-templates@latest --sandbox e2b --agent security/security-auditor
 - **Automatic cleanup** - Environment destroyed after execution
 
 ### Security Benefits
+
 - **Safe code testing** - Run potentially harmful code safely
 - **Malware protection** - Isolated from your main system
 - **Data protection** - Local files remain untouched

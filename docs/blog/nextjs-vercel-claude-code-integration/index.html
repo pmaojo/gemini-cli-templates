@@ -27,7 +27,7 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-code-integration/">
+    <meta property="og:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-cli-integration/">
     <meta property="og:title" content="Next.js + Vercel + Gemini CLI Integration: Complete Guide with Agents, Commands and Hooks">
     <meta property="og:description" content="Complete guide to integrate Next.js and Vercel with Gemini CLI. Install 10 development commands, 3 specialized AI agents, and 5 automated hooks for Next.js deployment, optimization, and monitoring.">
     <meta property="og:image" content="https://pmaojo.github.io/Gemini-cli-templates/blog/assets/nextjs-vercel-gemini-cli-templates-cover.png">
@@ -51,7 +51,7 @@
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-code-integration/">
+    <meta property="twitter:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-cli-integration/">
     <meta property="twitter:title" content="Next.js + Vercel + Gemini CLI Integration: Complete Guide with Agents, Commands and Hooks">
     <meta property="twitter:description" content="Complete guide to integrate Next.js and Vercel with Gemini CLI. Install 10 development commands, 3 specialized AI agents, and 5 automated hooks for Next.js deployment, optimization, and monitoring.">
     <meta property="twitter:image" content="https://pmaojo.github.io/Gemini-cli-templates/blog/assets/nextjs-vercel-gemini-cli-templates-cover.png">
@@ -59,7 +59,7 @@
     <!-- Additional SEO -->
     <meta name="keywords" content="Next.js Gemini CLI integration, Vercel Gemini CLI, Next.js AI development, Gemini CLI agents, Next.js automation, Vercel deployment hooks, React Gemini CLI, TypeScript automation, Next.js performance optimization, Vercel monitoring, AI-powered frontend development, Next.js best practices, Gemini CLI templates, Next.js deployment automation, Vercel error monitoring">
     <meta name="author" content="Gemini CLI Templates">
-    <link rel="canonical" href="https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-code-integration/">
+    <link rel="canonical" href="https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-cli-integration/">
     
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/blog.css">
@@ -102,7 +102,7 @@
         "dateModified": "2025-01-31T10:00:00Z",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-code-integration/"
+            "@id": "https://pmaojo.github.io/Gemini-cli-templates/blog/nextjs-vercel-gemini-cli-integration/"
         },
         "keywords": "Next.js Gemini CLI integration, Vercel deployment automation, React AI development, frontend optimization, TypeScript automation",
         "wordCount": "1500",
@@ -737,7 +737,7 @@ class CodeCopy {
         // Check content patterns
         const content = codeElement.textContent;
         
-        if (content.includes('npm ') || content.includes('$ ') || content.includes('gemini-code ')) {
+        if (content.includes('npm ') || content.includes('$ ') || content.includes('gemini-cli ')) {
             return 'bash';
         }
         if (content.includes('import ') && content.includes('from ')) {
@@ -812,8 +812,8 @@ class CodeCopy {
         return text
             .split('\n')
             .map(line => {
-                // Remove prompts like "$ ", "❯ ", "gemini-code> "
-                line = line.replace(/^[\$❯]\s*/, '').replace(/^gemini-code>\s*/, '');
+                // Remove prompts like "$ ", "❯ ", "gemini-cli> "
+                line = line.replace(/^[\$❯]\s*/, '').replace(/^gemini-cli>\s*/, '');
                 
                 // Remove output/result comments (lines starting with # ✓)
                 if (line.trim().startsWith('# ✓') || 

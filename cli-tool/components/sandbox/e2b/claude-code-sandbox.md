@@ -24,16 +24,16 @@ This component sets up E2B (E2B.dev) integration to run Gemini CLI in a secure, 
 
 ```bash
 # Execute a prompt in E2B sandbox (requires API keys as environment variables or CLI parameters)
-npx gemini-code-templates@latest --sandbox e2b --prompt "Create a React todo app"
+npx gemini-cli-templates@latest --sandbox e2b --prompt "Create a React todo app"
 
 # Pass API keys directly as parameters
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --Google-api-key your_Google_key \
   --prompt "Create a React todo app"
 
 # Install components and execute in sandbox
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --agent frontend-developer \
   --command setup-react \
   --e2b-api-key your_e2b_key \
@@ -44,8 +44,9 @@ npx gemini-code-templates@latest --sandbox e2b \
 ## Environment Setup
 
 The component will create:
+
 - `.gemini/sandbox/e2b-launcher.py` - Python script to launch E2B sandbox
-- `.gemini/sandbox/requirements.txt` - Python dependencies  
+- `.gemini/sandbox/requirements.txt` - Python dependencies
 - `.gemini/sandbox/.env.example` - Environment variables template
 
 ## API Key Configuration
@@ -53,16 +54,19 @@ The component will create:
 You can provide API keys in two ways:
 
 ### Option 1: CLI Parameters (Recommended)
+
 ```bash
 # Pass keys directly as command parameters
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --e2b-api-key your_e2b_api_key \
   --Google-api-key your_Google_api_key \
   --prompt "Your prompt here"
 ```
 
 ### Option 2: Environment Variables
+
 Set these environment variables in your shell or `.env` file:
+
 ```bash
 export E2B_API_KEY=your_e2b_api_key_here
 export Google_API_KEY=your_Google_api_key_here
@@ -76,7 +80,7 @@ Google_API_KEY=your_Google_api_key_here
 
 ## How it Works
 
-1. Creates E2B sandbox with `Google-gemini-code` template
+1. Creates E2B sandbox with `Google-gemini-cli` template
 2. Installs any specified components (agents, commands, etc.)
 3. Executes your prompt using Gemini CLI inside the sandbox
 4. Returns the complete output and any generated files
@@ -93,18 +97,18 @@ Google_API_KEY=your_Google_api_key_here
 
 ```bash
 # Simple web app creation
-npx gemini-code-templates@latest --sandbox e2b --prompt "Create an HTML page with CSS animations"
+npx gemini-cli-templates@latest --sandbox e2b --prompt "Create an HTML page with CSS animations"
 
 # Full stack development
-npx gemini-code-templates@latest --sandbox e2b --agent fullstack-developer --prompt "Create a Node.js API with authentication"
+npx gemini-cli-templates@latest --sandbox e2b --agent fullstack-developer --prompt "Create a Node.js API with authentication"
 
 # Data analysis
-npx gemini-code-templates@latest --sandbox e2b --agent data-scientist --prompt "Analyze this CSV data and create visualizations"
+npx gemini-cli-templates@latest --sandbox e2b --agent data-scientist --prompt "Analyze this CSV data and create visualizations"
 ```
 
 ## Template Information
 
 - **Provider**: E2B (https://e2b.dev)
-- **Base Template**: Google-gemini-code
+- **Base Template**: Google-gemini-cli
 - **Timeout**: 5 minutes (configurable)
 - **Environment**: Ubuntu with Gemini CLI pre-installed

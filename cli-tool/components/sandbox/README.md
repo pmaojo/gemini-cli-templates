@@ -5,21 +5,25 @@ Execute Gemini CLI in isolated cloud environments for secure code generation and
 ## Available Sandbox Providers
 
 ### E2B Sandbox (`e2b`)
+
 Run Gemini CLI in E2B's secure cloud environment with pre-configured development tools.
 
-**Component**: `e2b/gemini-code-sandbox.md`
+**Component**: `e2b/gemini-cli-sandbox.md`
 
 **Files Created**:
+
 - `.gemini/sandbox/e2b-launcher.py` - Python launcher script
 - `.gemini/sandbox/requirements.txt` - Python dependencies
 - `.gemini/sandbox/.env.example` - Environment variables template
 
 ### Cloudflare Sandbox (`cloudflare`)
+
 Execute AI-powered code in Cloudflare Workers with global edge deployment and sub-second cold starts.
 
-**Component**: `cloudflare/gemini-code-sandbox.md`
+**Component**: `cloudflare/gemini-cli-sandbox.md`
 
 **Files Created**:
+
 - `.gemini/sandbox/cloudflare/src/index.ts` - Cloudflare Worker source
 - `.gemini/sandbox/cloudflare/launcher.ts` - TypeScript launcher
 - `.gemini/sandbox/cloudflare/monitor.ts` - Monitoring tool
@@ -30,15 +34,16 @@ Execute AI-powered code in Cloudflare Workers with global edge deployment and su
 ## Quick Start
 
 ### E2B Sandbox
+
 ```bash
 # Simple execution with API keys as parameters (recommended)
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --Google-api-key your_Google_key \
   --prompt "Create a React todo app"
 
 # With components installation
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --Google-api-key your_Google_key \
   --agent frontend-developer \
@@ -46,13 +51,14 @@ npx gemini-code-templates@latest --sandbox e2b \
   --prompt "Create a modern todo app with TypeScript"
 
 # Or use environment variables (set E2B_API_KEY and Google_API_KEY)
-npx gemini-code-templates@latest --sandbox e2b --prompt "Create a React todo app"
+npx gemini-cli-templates@latest --sandbox e2b --prompt "Create a React todo app"
 ```
 
 ### Cloudflare Sandbox
+
 ```bash
 # Execute via deployed Cloudflare Worker
-npx gemini-code-templates@latest --sandbox cloudflare \
+npx gemini-cli-templates@latest --sandbox cloudflare \
   --Google-api-key your_Google_key \
   --prompt "Calculate the 10th Fibonacci number"
 
@@ -71,10 +77,12 @@ curl -X POST https://your-worker.workers.dev/execute \
 ## Environment Setup
 
 1. **Get API Keys**:
+
    - E2B API Key: https://e2b.dev/dashboard
    - Google API Key: https://console.Google.com
 
 2. **Create Environment File**:
+
    ```bash
    # In your project/.gemini/sandbox/.env
    E2B_API_KEY=your_e2b_api_key_here
@@ -100,28 +108,32 @@ curl -X POST https://your-worker.workers.dev/execute \
 ## Usage Examples
 
 ### Basic Web Development
+
 ```bash
-npx gemini-code-templates@latest --sandbox e2b --prompt "Create an HTML page with modern CSS animations"
+npx gemini-cli-templates@latest --sandbox e2b --prompt "Create an HTML page with modern CSS animations"
 ```
 
-### Full Stack with Components  
+### Full Stack with Components
+
 ```bash
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --agent fullstack-developer \
   --command setup-node \
   --prompt "Create a Node.js API with JWT authentication"
 ```
 
 ### Data Analysis
+
 ```bash
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --agent data-scientist \
   --prompt "Analyze this CSV data and create visualizations"
 ```
 
 ### Security Audit
+
 ```bash
-npx gemini-code-templates@latest --sandbox e2b \
+npx gemini-cli-templates@latest --sandbox e2b \
   --agent security-auditor \
   --command security-audit \
   --prompt "Review this codebase for security vulnerabilities"
@@ -140,6 +152,7 @@ npx gemini-code-templates@latest --sandbox e2b \
 ## ✅ Production Ready Features (v1.20.3+)
 
 ### Enhanced E2B Integration
+
 - **Automatic File Download**: Generated files are automatically downloaded to local `./e2b-output/` directory
 - **Extended Timeouts**: 15-minute sandbox lifetime with intelligent timeout management
 - **Detailed Logging**: Step-by-step execution monitoring with debugging information
@@ -147,6 +160,7 @@ npx gemini-code-templates@latest --sandbox e2b \
 - **Error Recovery**: Retry logic for connection issues and comprehensive error handling
 
 ### Advanced Debugging Tools
+
 - **Real-time Monitor** (`e2b-monitor.py`): System resource monitoring and performance analysis
 - **Debug Guide** (`SANDBOX_DEBUGGING.md`): Comprehensive troubleshooting documentation
 - **Sandbox State Tracking**: Live monitoring of file system changes and process execution
@@ -162,22 +176,23 @@ The system is designed to support multiple sandbox providers:
 
 ## Sandbox Comparison
 
-| Feature | E2B | Cloudflare | Best For |
-|---------|-----|------------|----------|
-| **Cold Start** | 2-3 seconds | ~100ms | Cloudflare for speed |
-| **Max Duration** | Hours | 30 seconds (Workers) | E2B for long tasks |
-| **Environment** | Full Linux VM | V8 isolates + containers | E2B for flexibility |
-| **Languages** | Any (full OS) | Python, Node.js | E2B for variety |
-| **Global Distribution** | Single region | Edge network | Cloudflare for latency |
-| **Pricing Model** | Usage-based | $5/month flat | Depends on volume |
-| **Setup Complexity** | Low | Medium | E2B for simplicity |
-| **Local Development** | Cloud only | Docker required | E2B for quick start |
-| **Gemini Integration** | Native template | API-based | E2B for turnkey |
-| **File Downloads** | Automatic | API-based | E2B for ease |
+| Feature                 | E2B             | Cloudflare               | Best For               |
+| ----------------------- | --------------- | ------------------------ | ---------------------- |
+| **Cold Start**          | 2-3 seconds     | ~100ms                   | Cloudflare for speed   |
+| **Max Duration**        | Hours           | 30 seconds (Workers)     | E2B for long tasks     |
+| **Environment**         | Full Linux VM   | V8 isolates + containers | E2B for flexibility    |
+| **Languages**           | Any (full OS)   | Python, Node.js          | E2B for variety        |
+| **Global Distribution** | Single region   | Edge network             | Cloudflare for latency |
+| **Pricing Model**       | Usage-based     | $5/month flat            | Depends on volume      |
+| **Setup Complexity**    | Low             | Medium                   | E2B for simplicity     |
+| **Local Development**   | Cloud only      | Docker required          | E2B for quick start    |
+| **Gemini Integration**  | Native template | API-based                | E2B for turnkey        |
+| **File Downloads**      | Automatic       | API-based                | E2B for ease           |
 
 ## Troubleshooting
 
 ### Python Not Found
+
 ```bash
 # Install Python 3.11+
 brew install python3  # macOS
@@ -185,6 +200,7 @@ brew install python3  # macOS
 ```
 
 ### API Keys Not Set
+
 ```bash
 # Create .env file in .gemini/sandbox/
 echo "E2B_API_KEY=your_key_here" >> .gemini/sandbox/.env
@@ -192,6 +208,7 @@ echo "Google_API_KEY=your_key_here" >> .gemini/sandbox/.env
 ```
 
 ### Dependencies Installation Failed
+
 ```bash
 # Manual installation
 cd .gemini/sandbox
@@ -201,19 +218,19 @@ pip3 install -r requirements.txt
 ## Component Architecture
 
 ```
-gemini-code-templates/
+gemini-cli-templates/
 └── cli-tool/
     └── components/
         └── sandbox/
             ├── e2b/                              # E2B provider
-            │   ├── gemini-code-sandbox.md        # Component documentation
+            │   ├── gemini-cli-sandbox.md        # Component documentation
             │   ├── e2b-launcher.py               # Python launcher script
             │   ├── e2b-monitor.py                # Monitoring tool
             │   ├── requirements.txt              # Python dependencies
             │   ├── SANDBOX_DEBUGGING.md          # Debug guide
             │   └── .env.example                  # Environment template
             ├── cloudflare/                       # Cloudflare provider
-            │   ├── gemini-code-sandbox.md        # Component documentation
+            │   ├── gemini-cli-sandbox.md        # Component documentation
             │   ├── src/
             │   │   └── index.ts                  # Worker source code
             │   ├── launcher.ts                   # TypeScript launcher
@@ -235,6 +252,7 @@ The sandbox system integrates seamlessly with the existing Gemini CLI Templates 
 ## Choosing the Right Sandbox
 
 ### Use E2B when you need:
+
 - ✅ Long-running operations (hours)
 - ✅ Full Linux environment access
 - ✅ Quick setup with minimal configuration
@@ -243,6 +261,7 @@ The sandbox system integrates seamlessly with the existing Gemini CLI Templates 
 - ✅ Native Gemini CLI integration
 
 ### Use Cloudflare when you need:
+
 - ✅ Sub-second cold starts
 - ✅ Global edge distribution
 - ✅ Predictable flat-rate pricing

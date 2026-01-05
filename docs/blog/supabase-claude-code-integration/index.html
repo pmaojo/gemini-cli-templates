@@ -27,7 +27,7 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-code-integration/">
+    <meta property="og:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-cli-integration/">
     <meta property="og:title" content="Supabase Gemini CLI Integration Guide: 8 Commands + AI Agents + MCP Server">
     <meta property="og:description" content="Complete guide to integrate Supabase with Gemini CLI. Install 8 database commands, 2 AI agents, and MCP server for automated schema design, migrations, and TypeScript generation.">
     <meta property="og:image" content="https://pmaojo.github.io/Gemini-cli-templates/blog/assets/supabase-gemini-cli-templates-cover.png">
@@ -51,7 +51,7 @@
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-code-integration/">
+    <meta property="twitter:url" content="https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-cli-integration/">
     <meta property="twitter:title" content="Supabase Gemini CLI Integration Guide: 8 Commands + AI Agents + MCP Server">
     <meta property="twitter:description" content="Complete guide to integrate Supabase with Gemini CLI. Install 8 database commands, 2 AI agents, and MCP server for automated schema design, migrations, and TypeScript generation.">
     <meta property="twitter:image" content="https://pmaojo.github.io/Gemini-cli-templates/blog/assets/supabase-gemini-cli-templates-cover.png">
@@ -59,7 +59,7 @@
     <!-- Additional SEO -->
     <meta name="keywords" content="Supabase Gemini CLI integration, MCP server Supabase, Gemini CLI agents, database development AI, Supabase schema architect, PostgreSQL Gemini CLI, AI database tools, Supabase automation, Gemini CLI templates, database migration assistant, Supabase TypeScript generator, real-time database monitoring, Supabase backup automation, database security audit, Google Gemini CLI, AI-powered database development">
     <meta name="author" content="Gemini CLI Templates">
-    <link rel="canonical" href="https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-code-integration/">
+    <link rel="canonical" href="https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-cli-integration/">
     
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/blog.css">
@@ -102,7 +102,7 @@
         "dateModified": "2025-01-28T10:00:00Z",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-code-integration/"
+            "@id": "https://pmaojo.github.io/Gemini-cli-templates/blog/supabase-gemini-cli-integration/"
         },
         "keywords": "Supabase Gemini CLI integration, MCP server, database development AI, schema architect, TypeScript generator, database automation",
         "wordCount": "1200",
@@ -553,7 +553,7 @@ class CodeCopy {
         // Check content patterns
         const content = codeElement.textContent;
         
-        if (content.includes('npm ') || content.includes('$ ') || content.includes('gemini-code ')) {
+        if (content.includes('npm ') || content.includes('$ ') || content.includes('gemini-cli ')) {
             return 'bash';
         }
         if (content.includes('import ') && content.includes('from ')) {
@@ -628,8 +628,8 @@ class CodeCopy {
         return text
             .split('\n')
             .map(line => {
-                // Remove prompts like "$ ", "❯ ", "gemini-code> "
-                line = line.replace(/^[\$❯]\s*/, '').replace(/^gemini-code>\s*/, '');
+                // Remove prompts like "$ ", "❯ ", "gemini-cli> "
+                line = line.replace(/^[\$❯]\s*/, '').replace(/^gemini-cli>\s*/, '');
                 
                 // Remove output/result comments (lines starting with # ✓)
                 if (line.trim().startsWith('# ✓') || 

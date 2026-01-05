@@ -420,8 +420,8 @@ class HealthChecker {
 
   checkGeminiCLIInstallation() {
     try {
-      // Try to find gemini-code package
-      const packagePath = path.join(process.cwd(), 'node_modules', '@google-ai', 'gemini-code');
+      // Try to find gemini-cli package
+      const packagePath = path.join(process.cwd(), 'node_modules', '@google-ai', 'gemini-cli');
       if (fs.existsSync(packagePath)) {
         const packageJson = require(path.join(packagePath, 'package.json'));
         return {

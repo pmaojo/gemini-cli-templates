@@ -8,10 +8,10 @@ Custom sub agents in Gemini Code are specialized AI assistants that can be invok
 
 Sub agents are pre-configured AI personalities that Gemini Code can delegate tasks to. Each sub agent:
 
-* Has a specific purpose and expertise area
-* Uses its own context window separate from the main conversation
-* Can be configured with specific tools it's allowed to use
-* Includes a custom system prompt that guides its behavior
+- Has a specific purpose and expertise area
+- Uses its own context window separate from the main conversation
+- Can be configured with specific tools it's allowed to use
+- Includes a custom system prompt that guides its behavior
 
 When Gemini Code encounters a task that matches a sub agent's expertise, it can delegate that task to the specialized sub agent, which works independently and returns results.
 
@@ -46,6 +46,7 @@ To create your first sub agent:
     ```
     /agents
     ```
+
   </Step>
 
   <Step title="Select 'Create New Agent'">
@@ -66,6 +67,7 @@ To create your first sub agent:
     ```
     > Use the code-reviewer sub agent to check my recent changes
     ```
+
   </Step>
 </Steps>
 
@@ -90,7 +92,7 @@ Each sub agent is defined in a Markdown file with this structure:
 ---
 name: your-sub-agent-name
 description: Description of when this sub agent should be invoked
-tools: tool1, tool2, tool3  # Optional - inherits all tools if omitted
+tools: tool1, tool2, tool3 # Optional - inherits all tools if omitted
 ---
 
 Your sub agent's system prompt goes here. This can be multiple paragraphs
@@ -111,7 +113,7 @@ the sub agent should follow.
 
 ### Available tools
 
-Sub agents can be granted access to any of Gemini Code's internal tools. See the [tools documentation](/en/docs/gemini-code/settings#tools-available-to-gemini) for a complete list of available tools.
+Sub agents can be granted access to any of Gemini Code's internal tools. See the [tools documentation](/en/docs/gemini-cli/settings#tools-available-to-gemini) for a complete list of available tools.
 
 <Tip>
   **Recommended:** Use the `/agents` command to modify tool access - it provides an interactive interface that lists all available tools, including any connected MCP server tools, making it easier to select the ones you need.
@@ -119,8 +121,8 @@ Sub agents can be granted access to any of Gemini Code's internal tools. See the
 
 You have two options for configuring tools:
 
-* **Omit the `tools` field** to inherit all tools from the main thread (default), including MCP tools
-* **Specify individual tools** as a comma-separated list for more granular control (can be edited manually or via `/agents`)
+- **Omit the `tools` field** to inherit all tools from the main thread (default), including MCP tools
+- **Specify individual tools** as a comma-separated list for more granular control (can be edited manually or via `/agents`)
 
 **MCP Tools**: Sub agents can access MCP tools from configured MCP servers. When the `tools` field is omitted, sub agents inherit all MCP tools available to the main thread.
 
@@ -136,12 +138,12 @@ The `/agents` command provides a comprehensive interface for sub agent managemen
 
 This opens an interactive menu where you can:
 
-* View all available sub agents (built-in, user, and project)
-* Create new sub agents with guided setup
-* Edit existing custom sub agents, including their tool access
-* Delete custom sub agents
-* See which sub agents are active when duplicates exist
-* **Easily manage tool permissions** with a complete list of available tools
+- View all available sub agents (built-in, user, and project)
+- Create new sub agents with guided setup
+- Edit existing custom sub agents, including their tool access
+- Delete custom sub agents
+- See which sub agents are active when duplicates exist
+- **Easily manage tool permissions** with a complete list of available tools
 
 ### Direct file management
 
@@ -168,9 +170,9 @@ mkdir -p ~/.gemini/agents
 
 Gemini Code proactively delegates tasks based on:
 
-* The task description in your request
-* The `description` field in sub agent configurations
-* Current context and available tools
+- The task description in your request
+- The `description` field in sub agent configurations
+- Current context and available tools
 
 <Tip>
   To encourage more proactive sub agent use, include phrases like "use PROACTIVELY" or "MUST BE USED" in your `description` field.
@@ -200,11 +202,13 @@ tools: Read, Grep, Glob, Bash
 You are a senior code reviewer ensuring high standards of code quality and security.
 
 When invoked:
+
 1. Run git diff to see recent changes
 2. Focus on modified files
 3. Begin review immediately
 
 Review checklist:
+
 - Code is simple and readable
 - Functions and variables are well-named
 - No duplicated code
@@ -215,6 +219,7 @@ Review checklist:
 - Performance considerations addressed
 
 Provide feedback organized by priority:
+
 - Critical issues (must fix)
 - Warnings (should fix)
 - Suggestions (consider improving)
@@ -234,6 +239,7 @@ tools: Read, Edit, Bash, Grep, Glob
 You are an expert debugger specializing in root cause analysis.
 
 When invoked:
+
 1. Capture error message and stack trace
 2. Identify reproduction steps
 3. Isolate the failure location
@@ -241,6 +247,7 @@ When invoked:
 5. Verify solution works
 
 Debugging process:
+
 - Analyze error messages and logs
 - Check recent code changes
 - Form and test hypotheses
@@ -248,6 +255,7 @@ Debugging process:
 - Inspect variable states
 
 For each issue, provide:
+
 - Root cause explanation
 - Evidence supporting the diagnosis
 - Specific code fix
@@ -269,6 +277,7 @@ tools: Bash, Read, Write
 You are a data scientist specializing in SQL and BigQuery analysis.
 
 When invoked:
+
 1. Understand the data analysis requirement
 2. Write efficient SQL queries
 3. Use BigQuery command line tools (bq) when appropriate
@@ -276,6 +285,7 @@ When invoked:
 5. Present findings clearly
 
 Key practices:
+
 - Write optimized SQL queries with proper filters
 - Use appropriate aggregations and joins
 - Include comments explaining complex logic
@@ -283,6 +293,7 @@ Key practices:
 - Provide data-driven recommendations
 
 For each analysis:
+
 - Explain the query approach
 - Document any assumptions
 - Highlight key findings
@@ -293,15 +304,15 @@ Always ensure queries are efficient and cost-effective.
 
 ## Best practices
 
-* **Start with Gemini-generated agents**: We highly recommend generating your initial sub agent with Gemini and then iterating on it to make it personally yours. This approach gives you the best results - a solid foundation that you can customize to your specific needs.
+- **Start with Gemini-generated agents**: We highly recommend generating your initial sub agent with Gemini and then iterating on it to make it personally yours. This approach gives you the best results - a solid foundation that you can customize to your specific needs.
 
-* **Design focused sub agents**: Create sub agents with single, clear responsibilities rather than trying to make one sub agent do everything. This improves performance and makes sub agents more predictable.
+- **Design focused sub agents**: Create sub agents with single, clear responsibilities rather than trying to make one sub agent do everything. This improves performance and makes sub agents more predictable.
 
-* **Write detailed prompts**: Include specific instructions, examples, and constraints in your system prompts. The more guidance you provide, the better the sub agent will perform.
+- **Write detailed prompts**: Include specific instructions, examples, and constraints in your system prompts. The more guidance you provide, the better the sub agent will perform.
 
-* **Limit tool access**: Only grant tools that are necessary for the sub agent's purpose. This improves security and helps the sub agent focus on relevant actions.
+- **Limit tool access**: Only grant tools that are necessary for the sub agent's purpose. This improves security and helps the sub agent focus on relevant actions.
 
-* **Version control**: Check project sub agents into version control so your team can benefit from and improve them collaboratively.
+- **Version control**: Check project sub agents into version control so your team can benefit from and improve them collaboratively.
 
 ## Advanced usage
 
@@ -319,11 +330,11 @@ Gemini Code intelligently selects sub agents based on context. Make your `descri
 
 ## Performance considerations
 
-* **Context efficiency**: Agents help preserve main context, enabling longer overall sessions
-* **Latency**: Sub agents start off with a clean slate each time they are invoked and may add latency as they gather context that they require to do their job effectively.
+- **Context efficiency**: Agents help preserve main context, enabling longer overall sessions
+- **Latency**: Sub agents start off with a clean slate each time they are invoked and may add latency as they gather context that they require to do their job effectively.
 
 ## Related documentation
 
-* [Slash commands](/en/docs/gemini-code/slash-commands) - Learn about other built-in commands
-* [Settings](/en/docs/gemini-code/settings) - Configure Gemini Code behavior
-* [Hooks](/en/docs/gemini-code/hooks) - Automate workflows with event handlers
+- [Slash commands](/en/docs/gemini-cli/slash-commands) - Learn about other built-in commands
+- [Settings](/en/docs/gemini-cli/settings) - Configure Gemini Code behavior
+- [Hooks](/en/docs/gemini-cli/hooks) - Automate workflows with event handlers

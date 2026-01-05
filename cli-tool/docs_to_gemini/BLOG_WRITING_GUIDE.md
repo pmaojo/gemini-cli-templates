@@ -8,9 +8,9 @@ This guide provides a comprehensive template for creating consistent, SEO-optimi
 docs/blog/
 ├── index.html                              # Blog homepage
 ├── assets/                                 # Shared blog assets
-│   ├── [technology]-gemini-code-templates-cover.png
+│   ├── [technology]-gemini-cli-templates-cover.png
 │   └── aitmpl-[technology]-search.png
-├── [technology-name]-gemini-code-integration/
+├── [technology-name]-gemini-cli-integration/
 │   ├── index.html                          # Article page
 │   └── cover.jpg                          # Article cover image (1200x630)
 └── code-copy.js                           # Copy functionality script
@@ -36,7 +36,7 @@ docs/blog/
     <meta property="og:type" content="article" />
     <meta
       property="og:url"
-      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+      content="https://davila7.github.io/gemini-cli-templates/blog/[slug]/"
     />
     <meta
       property="og:title"
@@ -48,7 +48,7 @@ docs/blog/
     />
     <meta
       property="og:image"
-      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg"
+      content="https://davila7.github.io/gemini-cli-templates/blog/[slug]/cover.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,7 +62,7 @@ docs/blog/
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
-      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+      content="https://davila7.github.io/gemini-cli-templates/blog/[slug]/"
     />
     <meta
       property="twitter:title"
@@ -74,7 +74,7 @@ docs/blog/
     />
     <meta
       property="twitter:image"
-      content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg"
+      content="https://davila7.github.io/gemini-cli-templates/blog/[slug]/cover.jpg"
     />
 
     <!-- Additional SEO -->
@@ -85,7 +85,7 @@ docs/blog/
     <meta name="author" content="Gemini Code Templates" />
     <link
       rel="canonical"
-      href="https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+      href="https://davila7.github.io/gemini-cli-templates/blog/[slug]/"
     />
 
     <!-- Stylesheets -->
@@ -105,7 +105,7 @@ docs/blog/
         "@type": "BlogPosting",
         "headline": "[Technology] and Gemini Code Integration",
         "description": "Learn how to integrate [Technology] with Gemini Code...",
-        "image": "https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg",
+        "image": "https://davila7.github.io/gemini-cli-templates/blog/[slug]/cover.jpg",
         "author": {
           "@type": "Organization",
           "name": "Gemini Code Templates"
@@ -115,14 +115,14 @@ docs/blog/
           "name": "Gemini Code Templates",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://davila7.github.io/gemini-code-templates/static/img/logo.svg"
+            "url": "https://davila7.github.io/gemini-cli-templates/static/img/logo.svg"
           }
         },
         "datePublished": "[ISO_DATE]",
         "dateModified": "[ISO_DATE]",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+          "@id": "https://davila7.github.io/gemini-cli-templates/blog/[slug]/"
         }
       }
     </script>
@@ -165,7 +165,7 @@ docs/blog/
           Blog
         </a>
         <a
-          href="https://github.com/davila7/gemini-code-templates"
+          href="https://github.com/davila7/gemini-cli-templates"
           target="_blank"
           class="header-btn"
         >
@@ -210,7 +210,7 @@ docs/blog/
 
 ```html
 <img
-  src="../assets/[technology]-gemini-code-templates-cover.png"
+  src="../assets/[technology]-gemini-cli-templates-cover.png"
   alt="[Technology] and Gemini Code Integration"
   class="article-cover"
 />
@@ -308,13 +308,13 @@ docs/blog/
 <h3>Install Individual Components</h3>
 <pre><code class="language-bash">
 # Install specific agent
-npx gemini-code-templates@latest --agent [agent-name]
+npx gemini-cli-templates@latest --agent [agent-name]
 
 # Install specific command
-npx gemini-code-templates@latest --command [command-name]
+npx gemini-cli-templates@latest --command [command-name]
 
 # Install MCP server
-npx gemini-code-templates@latest --mcp [technology]</code></pre>
+npx gemini-cli-templates@latest --mcp [technology]</code></pre>
 
 <p><strong>Components will be installed to:</strong></p>
 <ul>
@@ -329,16 +329,16 @@ npx gemini-code-templates@latest --mcp [technology]</code></pre>
 ```html
 <h3>Create Global Agents (Available Anywhere)</h3>
 <pre><code class="language-bash"># Create global agents accessible from any project
-npx gemini-code-templates@latest --create-agent [agent-name]
+npx gemini-cli-templates@latest --create-agent [agent-name]
 
 # List all global agents
-npx gemini-code-templates@latest --list-agents
+npx gemini-cli-templates@latest --list-agents
 
 # Update global agents
-npx gemini-code-templates@latest --update-agent [agent-name]
+npx gemini-cli-templates@latest --update-agent [agent-name]
 
 # Remove global agents  
-npx gemini-code-templates@latest --remove-agent [agent-name]</code></pre>
+npx gemini-cli-templates@latest --remove-agent [agent-name]</code></pre>
 ```
 
 #### Multiple Components
@@ -347,12 +347,12 @@ npx gemini-code-templates@latest --remove-agent [agent-name]</code></pre>
 <h3>Install Multiple Components at Once</h3>
 <pre><code class="language-bash">
 # Install specific commands (comma-separated for multiple)
-npx gemini-code-templates@latest --command [command1],[command2],[command3]
+npx gemini-cli-templates@latest --command [command1],[command2],[command3]
 </code></pre>
 
 <pre><code class="language-bash">
 # Install all [Technology] components in one command
-npx gemini-code-templates@latest \
+npx gemini-cli-templates@latest \
   --command [all-commands-comma-separated] \
   --agent [all-agents-comma-separated] \
   --mcp [technology]</code></pre>
@@ -371,7 +371,7 @@ npx gemini-code-templates@latest \
 ```html
 <h3>Execute Prompt After Installation</h3>
 <pre><code class="language-bash"># Install components and run a prompt immediately
-npx gemini-code-templates@latest \
+npx gemini-cli-templates@latest \
   --command [primary-command] \
   --prompt "[Sample prompt for the technology]"</code></pre>
 ```
@@ -457,7 +457,7 @@ npx gemini-code-templates@latest \
 
 ### File Naming Convention
 
-- **Slug**: `[technology-name]-gemini-code-integration`
+- **Slug**: `[technology-name]-gemini-cli-integration`
 - **Directory**: `docs/blog/[slug]/`
 - **Main File**: `index.html`
 - **Assets**: Use descriptive names with technology prefix

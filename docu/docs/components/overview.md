@@ -18,39 +18,39 @@ Browse and search over 500 Gemini Code components on **[gemini-cli-templates.ver
 ### 🤖 **Agents** (AI Specialists)
 
 ```bash
-npx gemini-code-templates@latest --agent development/frontend-developer
-npx gemini-code-templates@latest --agent security/security-auditor
-npx gemini-code-templates@latest --agent data-ai/ml-engineer
+npx gemini-cli-templates@latest --agent development/frontend-developer
+npx gemini-cli-templates@latest --agent security/security-auditor
+npx gemini-cli-templates@latest --agent data-ai/ml-engineer
 ```
 
 ### ⚡ **Commands** (Slash Commands)
 
 ```bash
-npx gemini-code-templates@latest --command testing/generate-tests
-npx gemini-code-templates@latest --command performance/optimize-bundle
-npx gemini-code-templates@latest --command setup/setup-ci-cd-pipeline
+npx gemini-cli-templates@latest --command testing/generate-tests
+npx gemini-cli-templates@latest --command performance/optimize-bundle
+npx gemini-cli-templates@latest --command setup/setup-ci-cd-pipeline
 ```
 
 ### 🔌 **MCPs** (External Integrations)
 
 ```bash
-npx gemini-code-templates@latest --mcp database/supabase
-npx gemini-code-templates@latest --mcp development/github-integration
-npx gemini-code-templates@latest --mcp browser/playwright-mcp
+npx gemini-cli-templates@latest --mcp database/supabase
+npx gemini-cli-templates@latest --mcp development/github-integration
+npx gemini-cli-templates@latest --mcp browser/playwright-mcp
 ```
 
 ### ⚙️ **Settings** (Gemini Code Configs)
 
 ```bash
-npx gemini-code-templates@latest --setting performance/performance-optimization
-npx gemini-code-templates@latest --setting security/read-only-mode
+npx gemini-cli-templates@latest --setting performance/performance-optimization
+npx gemini-cli-templates@latest --setting security/read-only-mode
 ```
 
 ### 🪝 **Hooks** (Automation)
 
 ```bash
-npx gemini-code-templates@latest --hook git/auto-git-add
-npx gemini-code-templates@latest --hook notifications/discord-notifications
+npx gemini-cli-templates@latest --hook git/auto-git-add
+npx gemini-cli-templates@latest --hook notifications/discord-notifications
 ```
 
 ## 🎯 Quick Search Tips

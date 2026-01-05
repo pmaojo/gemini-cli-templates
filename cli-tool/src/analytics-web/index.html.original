@@ -772,7 +772,7 @@
         <div class="terminal-header">
             <div class="terminal-title">
                 <span class="status-dot"></span>
-                gemini-code-analytics
+                gemini-cli-analytics
             </div>
             <div class="terminal-subtitle">real-time monitoring dashboard</div>
             <div class="terminal-subtitle" id="lastUpdate"></div>

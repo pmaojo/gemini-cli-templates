@@ -880,7 +880,7 @@ async function installIndividualSetting(settingName, targetDir, options) {
           settingsFile = 'managed-settings.json';
         } else if (platform === 'linux' || (process.platform === 'win32' && process.env.WSL_DISTRO_NAME)) {
           // Linux and WSL
-          currentTargetDir = '/etc/gemini-code';
+          currentTargetDir = '/etc/gemini-cli';
           settingsFile = 'managed-settings.json';
         } else if (platform === 'win32') {
           // Windows
@@ -1219,7 +1219,7 @@ async function installIndividualHook(hookName, targetDir, options) {
           settingsFile = 'managed-settings.json';
         } else if (platform === 'linux' || (process.platform === 'win32' && process.env.WSL_DISTRO_NAME)) {
           // Linux and WSL
-          currentTargetDir = '/etc/gemini-code';
+          currentTargetDir = '/etc/gemini-cli';
           settingsFile = 'managed-settings.json';
         } else if (platform === 'win32') {
           // Windows

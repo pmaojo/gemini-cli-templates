@@ -1,6 +1,6 @@
-# Testing Guide for gemini-code-templates
+# Testing Guide for gemini-cli-templates
 
-This guide explains how to test the `gemini-code-templates` CLI tool before publishing.
+This guide explains how to test the `gemini-cli-templates` CLI tool before publishing.
 
 ## Quick Start
 
@@ -73,19 +73,19 @@ make uninstall-dev
 npm link
 
 # Test different scenarios manually
-gemini-code-templates --help
-gemini-code-templates --version
-gemini-code-templates --dry-run
-gemini-code-templates --language javascript-typescript --framework react --yes
-gemini-code-templates --language common --yes
+gemini-cli-templates --help
+gemini-cli-templates --version
+gemini-cli-templates --dry-run
+gemini-cli-templates --language javascript-typescript --framework react --yes
+gemini-cli-templates --language common --yes
 
 # Test in different directories
 mkdir test-project && cd test-project
-gemini-code-templates --language javascript-typescript --framework vue --yes
+gemini-cli-templates --language javascript-typescript --framework vue --yes
 ls -la  # Check created files
 
 # Cleanup
-npm unlink -g gemini-code-templates
+npm unlink -g gemini-cli-templates
 ```
 
 ### 4. **Direct Node Execution**
@@ -152,7 +152,7 @@ make pre-publish
 
 ### Manual Verification Steps:
 
-1. **Interactive Flow**: Start `gemini-code-templates` without flags and go through the full interactive setup
+1. **Interactive Flow**: Start `gemini-cli-templates` without flags and go through the full interactive setup
 2. **Error Scenarios**: Test invalid inputs and edge cases
 3. **File Content**: Verify that created files have correct content
 4. **Framework Detection**: Test in projects with existing package.json files
@@ -198,8 +198,8 @@ npm run build      # If applicable
 
 ```bash
 # Test published version
-npx gemini-code-templates@latest --version
-npx gemini-code-templates@latest --help
+npx gemini-cli-templates@latest --version
+npx gemini-cli-templates@latest --help
 ```
 
 ## Debugging Tests
@@ -208,7 +208,7 @@ npx gemini-code-templates@latest --help
 
 ```bash
 # Add verbose flag to see detailed output
-gemini-code-templates --language javascript-typescript --framework react --dry-run --yes --verbose
+gemini-cli-templates --language javascript-typescript --framework react --dry-run --yes --verbose
 ```
 
 ### Test Specific Scenarios
@@ -216,7 +216,7 @@ gemini-code-templates --language javascript-typescript --framework react --dry-r
 ```bash
 # Create isolated test environment
 mkdir /tmp/test-gemini && cd /tmp/test-gemini
-gemini-code-templates --language javascript-typescript --framework react --yes
+gemini-cli-templates --language javascript-typescript --framework react --yes
 ls -la .gemini/commands/
 cat GEMINI.md
 ```
@@ -243,7 +243,7 @@ npm config set prefix ~/.npm-global
 
 ```bash
 # If linked command isn't found
-which gemini-code-templates
+which gemini-cli-templates
 echo $PATH
 # May need to add npm global bin to PATH
 ```

@@ -27,7 +27,7 @@ Set your Google API key:
 export Google_API_KEY=sk-ant-your-api-key-here
 
 # Or pass directly when using the CLI
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --agent development/frontend-developer \
   --prompt "Create a React component" \
   --Google-api-key sk-ant-your-key
@@ -37,16 +37,16 @@ npx gemini-code-templates@latest --sandbox docker \
 
 ```bash
 # Basic execution
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --prompt "Write a function to calculate factorial"
 
 # With specific agent
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --agent development/python-developer \
   --prompt "Create a data validation script"
 
 # With multiple components
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --agent development/fullstack-developer \
   --command development/setup-testing \
   --prompt "Set up a complete testing environment"
@@ -77,12 +77,14 @@ docker/
 ## How It Works
 
 ### 1. Launcher Phase (docker-launcher.js)
+
 - Checks Docker installation and daemon status
 - Builds container image if it doesn't exist
 - Prepares environment variables and volume mounts
 - Launches container with user prompt
 
 ### 2. Container Phase (execute.js)
+
 - Installs requested components (agents, commands, MCPs, etc.)
 - Executes Gemini Agent SDK with the user's prompt
 - Auto-allows all tool uses (no permission prompts)
@@ -90,6 +92,7 @@ docker/
 - Copies results to mounted output directory
 
 ### 3. Output Phase
+
 - Generated files are saved to `output/` directory
 - Files preserve directory structure
 - Accessible on host machine for inspection
@@ -99,14 +102,14 @@ docker/
 ### Simple Code Generation
 
 ```bash
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --prompt "Create a REST API server with Express.js"
 ```
 
 ### With Specific Agent
 
 ```bash
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --agent security/security-auditor \
   --prompt "Audit this codebase for security vulnerabilities"
 ```
@@ -114,7 +117,7 @@ npx gemini-code-templates@latest --sandbox docker \
 ### Multiple Components
 
 ```bash
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --agent development/frontend-developer \
   --command testing/setup-testing \
   --setting performance/performance-optimization \
@@ -125,7 +128,7 @@ npx gemini-code-templates@latest --sandbox docker \
 
 ```bash
 # 1. Generate initial code
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --agent development/fullstack-developer \
   --prompt "Create a blog API with authentication"
 
@@ -133,7 +136,7 @@ npx gemini-code-templates@latest --sandbox docker \
 ls -la output/
 
 # 3. Iterate on generated code
-npx gemini-code-templates@latest --sandbox docker \
+npx gemini-cli-templates@latest --sandbox docker \
   --prompt "Add pagination to the blog API"
 ```
 
@@ -142,9 +145,11 @@ npx gemini-code-templates@latest --sandbox docker \
 ### Environment Variables
 
 **Required:**
+
 - `Google_API_KEY` - Your Google API key
 
 **Optional:**
+
 - `DOCKER_BUILDKIT=1` - Enable BuildKit for faster builds
 
 ### Docker Image Details
@@ -212,6 +217,7 @@ docker image prune
 **Error:** `Docker is not installed`
 
 **Solution:**
+
 ```bash
 # Install Docker from official site
 # macOS: https://docs.docker.com/desktop/install/mac-install/
@@ -224,6 +230,7 @@ docker image prune
 **Error:** `Docker daemon is not running`
 
 **Solution:**
+
 ```bash
 # macOS/Windows: Start Docker Desktop application
 # Linux: sudo systemctl start docker
@@ -234,6 +241,7 @@ docker image prune
 **Error:** `Google_API_KEY environment variable is required`
 
 **Solution:**
+
 ```bash
 export Google_API_KEY=sk-ant-your-key-here
 ```
@@ -243,6 +251,7 @@ export Google_API_KEY=sk-ant-your-key-here
 **Error:** Failed to build Docker image
 
 **Solution:**
+
 ```bash
 # Check Docker logs
 docker logs <container-id>
@@ -259,6 +268,7 @@ docker system df
 **Error:** Permission denied when accessing output files
 
 **Solution:**
+
 ```bash
 # Check output directory permissions
 ls -la output/
@@ -272,6 +282,7 @@ sudo chown -R $USER:$USER output/
 **Error:** Container failed with code 1
 
 **Solution:**
+
 ```bash
 # Run container interactively for debugging
 docker run -it --rm \
@@ -303,30 +314,33 @@ docker logs <container-id>
 ## Cost Estimation
 
 **Docker:**
+
 - Free and open-source
 - No cloud costs (runs locally)
 - Resource usage: ~500MB disk space, ~512MB RAM during execution
 
 **Google API:**
+
 - Gemini Sonnet 4.5: ~$3 per million input tokens
 - Average request: ~200 tokens = $0.0006 per request
 
 **Example costs for 100 executions:**
+
 - Docker: $0 (local execution)
 - Google: ~$0.06 (avg 200 tokens/request)
 - **Total: ~$0.06**
 
 ## Comparison with Other Providers
 
-| Feature | Docker | E2B | Cloudflare |
-|---------|--------|-----|------------|
-| Execution Location | 🏠 Local | ☁️ Cloud | 🌍 Edge |
-| Setup Complexity | Medium | Easy | Easy |
-| Internet Required | Setup only | Yes | Yes |
-| Cost | Free | Paid | Paid |
-| Privacy | Full control | Third-party | Third-party |
-| Offline Support | Yes | No | No |
-| Best For | Local dev, privacy, offline | Full stack projects | Serverless, global APIs |
+| Feature            | Docker                      | E2B                 | Cloudflare              |
+| ------------------ | --------------------------- | ------------------- | ----------------------- |
+| Execution Location | 🏠 Local                    | ☁️ Cloud            | 🌍 Edge                 |
+| Setup Complexity   | Medium                      | Easy                | Easy                    |
+| Internet Required  | Setup only                  | Yes                 | Yes                     |
+| Cost               | Free                        | Paid                | Paid                    |
+| Privacy            | Full control                | Third-party         | Third-party             |
+| Offline Support    | Yes                         | No                  | No                      |
+| Best For           | Local dev, privacy, offline | Full stack projects | Serverless, global APIs |
 
 ## Development
 
@@ -442,6 +456,7 @@ MIT License - See LICENSE file for details
 ## Support
 
 For issues and questions:
+
 1. Check Docker installation: `docker --version && docker ps`
 2. Verify API key: `echo $Google_API_KEY`
 3. Check container logs: `docker logs <container-id>`

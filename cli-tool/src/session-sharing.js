@@ -213,7 +213,7 @@ class SessionSharing {
    * @returns {Promise<string>} Upload URL
    */
   async uploadToX0(sessionData, conversationId) {
-    const tmpDir = path.join(os.tmpdir(), 'gemini-code-sessions');
+    const tmpDir = path.join(os.tmpdir(), 'gemini-cli-sessions');
     await fs.ensureDir(tmpDir);
 
     const tmpFile = path.join(tmpDir, `session-${conversationId}.json`);

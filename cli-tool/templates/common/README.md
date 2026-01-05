@@ -28,7 +28,7 @@ This folder contains language-agnostic templates and configurations that can be 
 Copy the entire `common/` folder contents to your project root:
 
 ```bash
-cp -r gemini-code-templates/common/* your-project/
+cp -r gemini-cli-templates/common/* your-project/
 ```
 
 ### For Existing Projects
@@ -37,10 +37,10 @@ Merge the relevant files with your existing Gemini Code configuration:
 
 ```bash
 # Copy custom commands
-cp -r gemini-code-templates/common/.gemini/commands/* your-project/.gemini/commands/
+cp -r gemini-cli-templates/common/.gemini/commands/* your-project/.gemini/commands/
 
 # Review and merge GEMINI.md content
-cat gemini-code-templates/common/GEMINI.md >> your-project/GEMINI.md
+cat gemini-cli-templates/common/GEMINI.md >> your-project/GEMINI.md
 ```
 
 ## Customization
@@ -84,11 +84,11 @@ For projects using multiple programming languages:
 
 ```bash
 # Copy common base
-cp -r gemini-code-templates/common/* your-project/
+cp -r gemini-cli-templates/common/* your-project/
 
 # Add language-specific configurations
-cp -r gemini-code-templates/javascript-typescript/.gemini/commands/* your-project/.gemini/commands/
-cp -r gemini-code-templates/python/.gemini/commands/* your-project/.gemini/commands/
+cp -r gemini-cli-templates/javascript-typescript/.gemini/commands/* your-project/.gemini/commands/
+cp -r gemini-cli-templates/python/.gemini/commands/* your-project/.gemini/commands/
 ```
 
 ### Team Standardization

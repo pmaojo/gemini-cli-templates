@@ -37,7 +37,7 @@ async function installComponents() {
   console.log(`   Components: ${componentsToInstall}\n`);
 
   return new Promise((resolve) => {
-    const installCmd = `npx gemini-code-templates@latest ${componentsToInstall} --yes`;
+    const installCmd = `npx gemini-cli-templates@latest ${componentsToInstall} --yes`;
 
     const child = spawn('sh', ['-c', installCmd], {
       stdio: 'inherit',

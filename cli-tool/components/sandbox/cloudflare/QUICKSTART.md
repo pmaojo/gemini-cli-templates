@@ -248,7 +248,7 @@ See the main [README.md](./README.md) for:
 
 - **Documentation**: [README.md](./README.md)
 - **Debugging**: [SANDBOX_DEBUGGING.md](./SANDBOX_DEBUGGING.md)
-- **Component Info**: [gemini-code-sandbox.md](./gemini-code-sandbox.md)
+- **Component Info**: [gemini-cli-sandbox.md](./gemini-cli-sandbox.md)
 - **Cloudflare Docs**: https://developers.cloudflare.com/sandbox/
 - **Google Docs**: https://docs.Google.com/
 

@@ -8,7 +8,7 @@ The goal is to completely rebrand and transform the existing "Gemini Code Templa
 
 ### 2.1 Rebranding & Identity
 
-- **Name Change:** The project/package name must change from `gemini-code-templates` to `gemini-cli-templates`.
+- **Name Change:** The project/package name must change from `gemini-cli-templates` to `gemini-cli-templates`.
 - **Branding:** Update all visual assets, READMEs, and documentation to reflect "Gemini CLI" (Google branding colors, terminology) instead of "Gemini Code" (Google branding).
 - **CLI Command:** The primary executable should be `gemini-templates` (or `npx gemini-cli-templates`).
 

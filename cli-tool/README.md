@@ -1,9 +1,9 @@
-[![npm version](https://img.shields.io/npm/v/gemini-code-templates.svg)](https://www.npmjs.com/package/gemini-code-templates)
-[![npm downloads](https://img.shields.io/npm/dt/gemini-code-templates.svg)](https://www.npmjs.com/package/gemini-code-templates)
+[![npm version](https://img.shields.io/npm/v/gemini-cli-templates.svg)](https://www.npmjs.com/package/gemini-cli-templates)
+[![npm downloads](https://img.shields.io/npm/dt/gemini-cli-templates.svg)](https://www.npmjs.com/package/gemini-cli-templates)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md)
-[![GitHub stars](https://img.shields.io/github/stars/davila7/gemini-code-templates.svg?style=social&label=Star)](https://github.com/davila7/gemini-code-templates)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/davila7/gemini-cli-templates/blob/main/CONTRIBUTING.md)
+[![GitHub stars](https://img.shields.io/github/stars/davila7/gemini-cli-templates.svg?style=social&label=Star)](https://github.com/davila7/gemini-cli-templates)
 
 # Gemini Code Templates
 
@@ -13,13 +13,13 @@
 
 ```bash
 # Interactive setup (recommended)
-npx gemini-code-templates@latest
+npx gemini-cli-templates@latest
 
 # Real-time analytics dashboard
-npx gemini-code-templates@latest --analytics
+npx gemini-cli-templates@latest --analytics
 
 # System health check
-npx gemini-code-templates@latest --health-check
+npx gemini-cli-templates@latest --health-check
 ```
 
 ## ✨ Core Features
@@ -57,7 +57,7 @@ Create AI agents that can be executed from anywhere using the Gemini Code SDK:
 
 ```bash
 # Create a global agent (one-time setup)
-npx gemini-code-templates@latest --create-agent customer-support
+npx gemini-cli-templates@latest --create-agent customer-support
 
 # Use the agent from anywhere
 customer-support "Help me with ticket #12345"
@@ -78,13 +78,13 @@ code-reviewer "Review this PR for security issues"
 
 ```bash
 # List installed global agents
-npx gemini-code-templates@latest --list-agents
+npx gemini-cli-templates@latest --list-agents
 
 # Update an agent to latest version
-npx gemini-code-templates@latest --update-agent customer-support
+npx gemini-cli-templates@latest --update-agent customer-support
 
 # Remove an agent
-npx gemini-code-templates@latest --remove-agent customer-support
+npx gemini-cli-templates@latest --remove-agent customer-support
 ```
 
 ### How It Works
@@ -102,12 +102,12 @@ Install modular capabilities that Gemini loads dynamically using Google's progre
 
 ```bash
 # Install individual skills
-npx gemini-code-templates@latest --skill pdf-processing-pro
-npx gemini-code-templates@latest --skill algorithmic-art
-npx gemini-code-templates@latest --skill mcp-builder
+npx gemini-cli-templates@latest --skill pdf-processing-pro
+npx gemini-cli-templates@latest --skill algorithmic-art
+npx gemini-cli-templates@latest --skill mcp-builder
 
 # Install multiple skills
-npx gemini-code-templates@latest --skill pdf-google,docx,xlsx,pptx
+npx gemini-cli-templates@latest --skill pdf-google,docx,xlsx,pptx
 ```
 
 ### Featured Skills
@@ -171,7 +171,7 @@ Quick links:
 
 ## 🤝 Contributing
 
-We welcome contributions! Browse available templates and components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**, then check our [contributing guidelines](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md).
+We welcome contributions! Browse available templates and components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**, then check our [contributing guidelines](https://github.com/davila7/gemini-cli-templates/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
 
@@ -181,8 +181,8 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 - **🌐 Browse Components**: [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)
 - **📚 Documentation**: [docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app)
-- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
+- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-cli-templates/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/davila7/gemini-cli-templates/discussions)
 
 ---
 

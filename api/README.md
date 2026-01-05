@@ -1,6 +1,6 @@
 # API - Vercel Serverless Functions
 
-Critical infrastructure for gemini-code-templates component ecosystem.
+Critical infrastructure for gemini-cli-templates component ecosystem.
 
 ## ⚠️ CRITICAL ENDPOINTS
 
@@ -22,7 +22,7 @@ Discord bot for component discovery and search.
 
 **Features**: `/search`, `/info`, `/install`, `/popular`, `/random`
 
-### `/api/gemini-code-check` 🟢
+### `/api/gemini-cli-check` 🟢
 
 Monitors Gemini Code releases and sends Discord notifications.
 
@@ -79,11 +79,11 @@ vercel --prod
 ```
 api/
 ├── track-download-supabase.js       # Component download tracking (CRITICAL)
-├── gemini-code-check.js             # Gemini Code changelog monitor
+├── gemini-cli-check.js             # Gemini Code changelog monitor
 ├── _parser-gemini.js                # Changelog parser utility
 ├── discord/
 │   └── interactions.js              # Discord bot handler
-├── gemini-code-monitor/
+├── gemini-cli-monitor/
 │   ├── README.md                    # Detailed docs
 │   ├── check-version.js             # Version checker
 │   ├── discord-notifier.js          # Discord notifications

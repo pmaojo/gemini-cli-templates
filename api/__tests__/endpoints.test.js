@@ -93,9 +93,9 @@ describe('API Endpoints - Critical Tests', () => {
 
   describe('🟢 Gemini Code Changelog Monitor', () => {
 
-    test('GET /api/gemini-code-check should be available', async () => {
+    test('GET /api/gemini-cli-check should be available', async () => {
       const response = await axios.get(
-        `${BASE_URL}/api/gemini-code-check`,
+        `${BASE_URL}/api/gemini-cli-check`,
         {
           timeout: TIMEOUT,
           validateStatus: () => true
@@ -181,7 +181,7 @@ describe('API Endpoints - Critical Tests', () => {
         '/api/track-download-supabase',
         '/api/track-command-usage',
         '/api/discord/interactions',
-        '/api/gemini-code-check'
+        '/api/gemini-cli-check'
       ];
 
       for (const endpoint of endpoints) {
@@ -263,9 +263,9 @@ describe('API Endpoints - Functional Tests', () => {
 
   describe('Gemini Code Monitor - Parser Tests', () => {
 
-    test('GET /api/gemini-code-check should return valid structure', async () => {
+    test('GET /api/gemini-cli-check should return valid structure', async () => {
       const response = await axios.get(
-        `${BASE_URL}/api/gemini-code-check`,
+        `${BASE_URL}/api/gemini-cli-check`,
         {
           timeout: TIMEOUT,
           validateStatus: () => true

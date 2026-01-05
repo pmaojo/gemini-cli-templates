@@ -34,6 +34,7 @@ _Old:_ `GEMINI.md` "Project Overview" injection.
 _New:_ `GEMINI.md` Injection.
 
 - **Format:**
+
   ```markdown
   # Project Context
 
@@ -43,6 +44,7 @@ _New:_ `GEMINI.md` Injection.
 
   [Agent System Prompt content]
   ```
+
 - **Strategy:** Append or replace sections in `GEMINI.md`.
 
 #### B. Commands (Slash Commands)
@@ -75,7 +77,7 @@ _New:_ `~/.gemini/settings.json`.
 
 To handle the "Cool Solution" (Native Conversion), we will implement a **Transformation Pipeline**:
 
-1.  **Source:** Read existing `gemini-code-templates` markdown file.
+1.  **Source:** Read existing `gemini-cli-templates` markdown file.
 2.  **Transform:**
     - `RegexReplace`: `s/Gemini/Gemini/g`, `s/Google/Google/g`.
     - `ContextAwareReplace`: Identify "Project Overview" blocks and retitle to "Context".

@@ -5,8 +5,8 @@ import { neon } from '@neondatabase/serverless';
 import axios from 'axios';
 import { parseVersionChangelog, formatForDiscord, generateSummary } from './_parser-gemini.js';
 
-const NPM_PACKAGE = '@google-ai/gemini-code';
-const CHANGELOG_URL = 'https://raw.githubusercontent.com/googles/gemini-code/main/CHANGELOG.md';
+const NPM_PACKAGE = '@google-ai/gemini-cli';
+const CHANGELOG_URL = 'https://raw.githubusercontent.com/googles/gemini-cli/main/CHANGELOG.md';
 
 // Obtener la última versión de NPM
 async function getLatestNPMVersion() {
@@ -78,7 +78,7 @@ async function sendToDiscord(versionData, parsed, formatted, summary) {
   // Installation
   embed.fields.push({
     name: '📦 Installation',
-    value: `\`\`\`bash\nnpm install -g @google-ai/gemini-code@${versionData.version}\n\`\`\``,
+    value: `\`\`\`bash\nnpm install -g @google-ai/gemini-cli@${versionData.version}\n\`\`\``,
     inline: false
   });
 
@@ -91,7 +91,7 @@ async function sendToDiscord(versionData, parsed, formatted, summary) {
 
   const payload = {
     username: 'Gemini Code Monitor',
-    avatar_url: 'https://raw.githubusercontent.com/googles/gemini-code/main/assets/icon.png',
+    avatar_url: 'https://raw.githubusercontent.com/googles/gemini-cli/main/assets/icon.png',
     embeds: [embed]
   };
 
@@ -162,7 +162,7 @@ export default async function handler(req, res) {
     const summary = generateSummary(parsed.changes);
 
     // 6. Guardar en base de datos
-    const githubUrl = `https://github.com/googles/gemini-code/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
+    const githubUrl = `https://github.com/googles/gemini-cli/blob/main/CHANGELOG.md#${latestVersion.version.replace(/\./g, '')}`;
 
     const versionData = {
       version: latestVersion.version,

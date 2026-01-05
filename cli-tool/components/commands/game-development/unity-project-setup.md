@@ -23,6 +23,7 @@ Set up a complete Unity project with professional development environment and pl
 ## What it creates:
 
 ### Project Structure
+
 ```
 Assets/
 ├── _Project/
@@ -63,6 +64,7 @@ Assets/
 ```
 
 ### Essential Packages
+
 - Universal Render Pipeline (URP)
 - Input System
 - Cinemachine
@@ -73,6 +75,7 @@ Assets/
 - Version Control (if available)
 
 ### Project Settings
+
 - Optimized quality settings for target platforms
 - Input system configuration
 - Physics settings
@@ -80,12 +83,14 @@ Assets/
 - Build settings for multiple platforms
 
 ### Development Tools
+
 - Code formatting rules (.editorconfig)
 - Git configuration with Unity-optimized .gitignore
 - Assembly definition files for better compilation
 - Custom editor scripts for workflow improvement
 
 ### Version Control Setup
+
 - Git repository initialization
 - Unity-specific .gitignore
 - LFS configuration for large assets
@@ -94,12 +99,13 @@ Assets/
 ## Usage:
 
 ```bash
-npx gemini-code-templates@latest --command unity-project-setup
+npx gemini-cli-templates@latest --command unity-project-setup
 ```
 
 ## Interactive Options:
 
 1. **Project Type Selection**
+
    - 2D Game
    - 3D Game
    - Mobile Game
@@ -107,6 +113,7 @@ npx gemini-code-templates@latest --command unity-project-setup
    - Hybrid (2D/3D)
 
 2. **Target Platforms**
+
    - PC (Windows/Mac/Linux)
    - Mobile (iOS/Android)
    - Console (PlayStation/Xbox/Nintendo)
@@ -114,6 +121,7 @@ npx gemini-code-templates@latest --command unity-project-setup
    - VR (Oculus/SteamVR)
 
 3. **Version Control**
+
    - Git
    - Plastic SCM
    - Perforce
@@ -130,6 +138,7 @@ npx gemini-code-templates@latest --command unity-project-setup
 ## Generated Files:
 
 ### Core Scripts
+
 - `GameManager.cs` - Main game controller
 - `SceneLoader.cs` - Scene management system
 - `AudioManager.cs` - Audio system controller
@@ -138,18 +147,21 @@ npx gemini-code-templates@latest --command unity-project-setup
 - `SaveSystem.cs` - Save/load functionality
 
 ### Editor Tools
+
 - `ProjectSetupWindow.cs` - Custom editor window
 - `SceneQuickStart.cs` - Scene setup automation
 - `AssetValidator.cs` - Asset validation tools
 - `BuildAutomation.cs` - Build pipeline helpers
 
 ### Configuration Files
+
 - `ProjectSettings.asset` - Optimized project settings
 - `QualitySettings.asset` - Multi-platform quality tiers
 - `InputActions.inputactions` - Input system configuration
 - `AssemblyDefinitions` - Modular compilation setup
 
 ### Documentation
+
 - `README.md` - Project overview and setup instructions
 - `CONTRIBUTING.md` - Development guidelines
 - `CHANGELOG.md` - Version history template
@@ -169,18 +181,21 @@ npx gemini-code-templates@latest --command unity-project-setup
 ## Platform-Specific Configurations:
 
 ### Mobile
+
 - Touch input configuration
 - Performance optimization settings
 - Battery usage optimization
 - App store submission setup
 
 ### PC
+
 - Multi-resolution support
 - Keyboard/mouse input setup
 - Graphics options menu template
 - Windows/Mac/Linux build configs
 
 ### Console
+
 - Platform-specific input mapping
 - Achievement/trophy integration setup
 - Online services configuration
