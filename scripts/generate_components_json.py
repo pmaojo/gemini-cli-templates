@@ -568,7 +568,7 @@ def generate_components_json():
                     'category': 'languages',
                     'description': f'{language_dir.title()} project template',
                     'files': language_files,
-                    'installCommand': f'npx claude-code-templates@latest --template={language_dir} --yes',
+                    'installCommand': f'npx gemini-cli-templates@latest --template={language_dir} --yes',
                     'downloads': template_downloads
                 }
                 components_data['templates'].append(language_template)
@@ -610,7 +610,7 @@ def generate_components_json():
                                 'language': language_dir,
                                 'description': f'{framework_dir.title()} with {language_dir.title()}',
                                 'files': framework_files,
-                                'installCommand': f'npx claude-code-templates@latest --template={framework_dir} --yes',
+                                'installCommand': f'npx gemini-cli-templates@latest --template={framework_dir} --yes',
                                 'downloads': framework_downloads
                             }
                             components_data['templates'].append(framework_template)
@@ -690,7 +690,7 @@ def generate_components_json():
                         'commandsList': commands_names,
                         'agentsList': agents_names,
                         'mcpServersList': mcps_names,
-                        'installCommand': f'/plugin install {plugin_name}@claude-code-templates',
+                        'installCommand': f'/plugin install {plugin_name}@gemini-cli-templates',
                         'downloads': plugin_downloads
                     }
                     components_data['plugins'].append(plugin_entry)
