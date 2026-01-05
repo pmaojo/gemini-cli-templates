@@ -45,7 +45,10 @@ describe('WebSocketServer', () => {
     webSocketServer = new WebSocketServer(mockHttpServer);
   });
 
-  afterEach(() => {
+  afterEach(async () => {
+    if (webSocketServer && webSocketServer.isRunning) {
+      await webSocketServer.close();
+    }
     jest.clearAllMocks();
   });
 

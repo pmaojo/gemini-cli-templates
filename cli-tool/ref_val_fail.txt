@@ -1,0 +1,144 @@
+
+> gemini-cli-templates@1.28.12 test
+> jest tests/validation/ReferenceValidator.test.js
+
+FAIL tests/validation/ReferenceValidator.test.js
+  ReferenceValidator
+    Safe Content
+      ✓ should pass validation for content with HTTPS URLs (4 ms)
+      ✓ should pass for content without URLs (1 ms)
+    URL Extraction
+      ✓ should extract markdown links (1 ms)
+      ✓ should extract plain URLs
+      ✓ should not duplicate URLs from markdown and plain text (1 ms)
+    Protocol Validation
+      ✓ should error on file:// protocol (2 ms)
+      ✓ should error on javascript: protocol
+      ✕ should error on data: protocol (2 ms)
+      ✓ should warn on HTTP (non-strict mode)
+      ✓ should error on HTTP (strict mode) (2 ms)
+    Private IP Detection
+      ✓ should detect loopback addresses
+      ✓ should detect Class A private IPs (1 ms)
+      ✓ should detect Class B private IPs
+      ✓ should detect Class C private IPs
+      ✓ should warn about localhost references
+    Suspicious TLD Detection
+      ✓ should warn about .tk domains
+      ✓ should warn about .zip domains
+    Image Validation
+      ✓ should validate image URLs
+      ✓ should warn about large data URIs
+      ✕ should allow small data URIs (1 ms)
+    Helper Methods
+      ✓ should correctly identify private IPs
+      ✓ should correctly identify localhost
+      ✓ should correctly identify suspicious TLDs
+    Reference Report Generation
+      ✓ should generate comprehensive reference report
+      ✓ should calculate HTTPS percentage correctly
+    Invalid URLs
+      ✕ should warn about malformed URLs (1 ms)
+    Markdown Link Attacks
+      ✓ should detect javascript in markdown links (1 ms)
+      ✓ should detect vbscript in markdown links
+
+  ● ReferenceValidator › Protocol Validation › should error on data: protocol
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      103 |       const result = await validator.validate(component);
+      104 |
+    > 105 |       expect(result.valid).toBe(false);
+          |                            ^
+      106 |       expect(result.errors).toContainEqual(
+      107 |         expect.objectContaining({
+      108 |           code: 'REF_E002'
+
+      at Object.<anonymous> (tests/validation/ReferenceValidator.test.js:105:28)
+
+  ● ReferenceValidator › Image Validation › should allow small data URIs
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      283 |       const result = await validator.validate(component);
+      284 |
+    > 285 |       expect(result.valid).toBe(true);
+          |                            ^
+      286 |     });
+      287 |   });
+      288 |
+
+      at Object.<anonymous> (tests/validation/ReferenceValidator.test.js:285:28)
+
+  ● ReferenceValidator › Invalid URLs › should warn about malformed URLs
+
+    expect(received).toContainEqual(expected) // deep equality
+
+    Expected value: ObjectContaining {"code": "REF_W005"}
+    Received array: [{"code": "REF_W001", "level": "warning", "message": "Unknown protocol: htp:", "metadata": {"path": "invalid.md", "protocol": "htp:", "url": "htp://malformed"}, "timestamp": "2026-01-05T23:23:10.530Z"}]
+
+      357 |       const result = await validator.validate(component);
+      358 |
+    > 359 |       expect(result.warnings).toContainEqual(
+          |                               ^
+      360 |         expect.objectContaining({
+      361 |           code: 'REF_W005'
+      362 |         })
+
+      at Object.<anonymous> (tests/validation/ReferenceValidator.test.js:359:31)
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |       0 |        0 |       0 |       0 |                   
+ analytics-web/components |       0 |        0 |       0 |       0 |                   
+  ActivityHeatmap.js      |       0 |        0 |       0 |       0 | 7-782             
+  AgentAnalytics.js       |       0 |        0 |       0 |       0 | 7-709             
+  App.js                  |       0 |        0 |       0 |       0 | 7-440             
+  Charts.js               |       0 |        0 |       0 |       0 | 7-113             
+  ConversationTable.js    |       0 |        0 |       0 |       0 | 7-436             
+  DashboardPage.js        |       0 |        0 |       0 |       0 | 7-2289            
+  HeaderComponent.js      |       0 |        0 |       0 |       0 | 7-306             
+  SessionTimer.js         |       0 |        0 |       0 |       0 | 7-598             
+  Sidebar.js              |       0 |        0 |       0 |       0 | 7-187             
+  ToolDisplay.js          |       0 |        0 |       0 |       0 | 7-553             
+ analytics-web/services   |       0 |        0 |       0 |       0 |                   
+  DataService.js          |       0 |        0 |       0 |       0 | 7-449             
+  StateService.js         |       0 |        0 |       0 |       0 | 7-284             
+  WebSocketService.js     |       0 |        0 |       0 |       0 | 7-534             
+ analytics/core           |       0 |        0 |       0 |       0 |                   
+  AgentAnalyzer.js        |       0 |        0 |       0 |       0 | 5-355             
+  ConversationAnalyzer.js |       0 |        0 |       0 |       0 | 1-949             
+  FileWatcher.js          |       0 |        0 |       0 |       0 | 1-420             
+  ProcessDetector.js      |       0 |        0 |       0 |       0 | 1-280             
+  SessionAnalyzer.js      |       0 |        0 |       0 |       0 | 5-686             
+  StateCalculator.js      |       0 |        0 |       0 |       0 | 1-246             
+  YearInReview2025.js     |       0 |        0 |       0 |       0 | 1-983             
+ analytics/data           |       0 |        0 |       0 |       0 |                   
+  DataCache.js            |       0 |        0 |       0 |       0 | 1-685             
+ analytics/notifications  |       0 |        0 |       0 |       0 |                   
+  NotificationManager.js  |       0 |        0 |       0 |       0 | 5-485             
+  WebSocketServer.js      |       0 |        0 |       0 |       0 | 5-526             
+ analytics/utils          |       0 |        0 |       0 |       0 |                   
+  PerformanceMonitor.js   |       0 |        0 |       0 |       0 | 5-466             
+--------------------------|---------|----------|---------|---------|-------------------
+Jest: "global" coverage threshold for statements (70%) not met: 0%
+Jest: "global" coverage threshold for branches (70%) not met: 0%
+Jest: "global" coverage threshold for lines (70%) not met: 0%
+Jest: "global" coverage threshold for functions (70%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for statements (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for branches (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for lines (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for functions (80%) not met: 0%
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 25 passed, 28 total
+Snapshots:   0 total
+Time:        2.613 s
+Ran all test suites matching tests/validation/ReferenceValidator.test.js.

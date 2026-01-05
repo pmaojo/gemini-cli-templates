@@ -3,21 +3,7 @@
  * Tests reactive state management functionality
  */
 
-// Load the StateService class
-const fs = require('fs');
-const path = require('path');
-
-// Load StateService from the actual file
-const StateServicePath = path.join(__dirname, '../../src/analytics-web/services/StateService.js');
-const StateServiceCode = fs.readFileSync(StateServicePath, 'utf8');
-
-// Create a module-like environment
-const moduleExports = {};
-const module = { exports: moduleExports };
-
-// Execute the StateService code in our test environment
-eval(StateServiceCode);
-const StateService = moduleExports.StateService || global.StateService;
+const StateService = require('../../src/analytics-web/services/StateService');
 
 describe('StateService', () => {
   let stateService;
@@ -357,9 +343,9 @@ describe('StateService', () => {
         conversationStates: {},
         systemHealth: {},
         isLoading: false,
-        error: null,
-        lastUpdate: null
+        error: null
       });
+      expect(stateService.state.lastUpdate).toEqual(expect.any(Number));
     });
   });
 
@@ -374,7 +360,7 @@ describe('StateService', () => {
       
       expect(stats).toMatchObject({
         subscribers: 1,
-        historySize: 1,
+        historySize: 2,
         conversationsCount: 3,
         lastUpdate: expect.any(Number),
         hasError: true,

@@ -1,0 +1,118 @@
+
+> gemini-cli-templates@1.28.12 test
+> jest tests/unit/PerformanceMonitor.test.js
+
+FAIL tests/unit/PerformanceMonitor.test.js
+  PerformanceMonitor
+    constructor
+      ✓ should initialize with default options (1 ms)
+      ✓ should merge custom options (1 ms)
+    timer operations
+      ✓ should start and end timers correctly
+      ✓ should handle ending non-existent timer (1 ms)
+      ✓ should record timer metadata
+    counter operations
+      ✓ should increment counters (1 ms)
+      ✓ should handle initial counter value
+    metric recording
+      ✓ should record metrics in categories (1 ms)
+      ✓ should add timestamp if not provided
+      ✓ should limit metric array size (1 ms)
+      ✓ should skip recording when disabled
+    error recording
+      ✓ should record errors
+    request recording
+      ✓ should record successful requests (1 ms)
+      ✓ should record error requests
+    cache recording
+      ✓ should record cache operations
+    WebSocket recording
+      ✓ should record WebSocket events
+    system metrics collection
+      ✓ should collect memory and CPU metrics (1 ms)
+    statistics calculation
+      ✓ should calculate request statistics (1 ms)
+      ✓ should calculate cache hit rate
+      ✓ should include error count (1 ms)
+      ✓ should include memory statistics
+      ✓ should filter by timeframe
+    Express middleware
+      ✓ should create Express middleware function
+      ✕ should track request performance (14 ms)
+    cleanup and memory management
+      ✓ should clean up old metrics
+
+  ● PerformanceMonitor › Express middleware › should track request performance
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      62 |         const duration = performanceMonitor.endTimer(timerName);
+      63 |         
+    > 64 |         expect(duration).toBeGreaterThan(0);
+         |                          ^
+      65 |         expect(performanceMonitor.timers[timerName]).toBeUndefined();
+      66 |         expect(performanceMonitor.metrics.performance).toBeDefined();
+      67 |       }, 20);
+
+      at Timeout._onTimeout (tests/unit/PerformanceMonitor.test.js:64:26)
+
+--------------------------|---------|----------|---------|---------|-------------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s       
+--------------------------|---------|----------|---------|---------|-------------------------
+All files                 |    2.37 |     1.71 |    3.79 |    2.34 |                         
+ analytics-web/components |       0 |        0 |       0 |       0 |                         
+  ActivityHeatmap.js      |       0 |        0 |       0 |       0 | 7-782                   
+  AgentAnalytics.js       |       0 |        0 |       0 |       0 | 7-709                   
+  App.js                  |       0 |        0 |       0 |       0 | 7-440                   
+  Charts.js               |       0 |        0 |       0 |       0 | 7-113                   
+  ConversationTable.js    |       0 |        0 |       0 |       0 | 7-436                   
+  DashboardPage.js        |       0 |        0 |       0 |       0 | 7-2289                  
+  HeaderComponent.js      |       0 |        0 |       0 |       0 | 7-306                   
+  SessionTimer.js         |       0 |        0 |       0 |       0 | 7-598                   
+  Sidebar.js              |       0 |        0 |       0 |       0 | 7-187                   
+  ToolDisplay.js          |       0 |        0 |       0 |       0 | 7-553                   
+ analytics-web/services   |       0 |        0 |       0 |       0 |                         
+  DataService.js          |       0 |        0 |       0 |       0 | 7-449                   
+  StateService.js         |       0 |        0 |       0 |       0 | 7-284                   
+  WebSocketService.js     |       0 |        0 |       0 |       0 | 7-534                   
+ analytics/core           |       0 |        0 |       0 |       0 |                         
+  AgentAnalyzer.js        |       0 |        0 |       0 |       0 | 5-355                   
+  ConversationAnalyzer.js |       0 |        0 |       0 |       0 | 1-949                   
+  FileWatcher.js          |       0 |        0 |       0 |       0 | 1-420                   
+  ProcessDetector.js      |       0 |        0 |       0 |       0 | 1-280                   
+  SessionAnalyzer.js      |       0 |        0 |       0 |       0 | 5-686                   
+  StateCalculator.js      |       0 |        0 |       0 |       0 | 1-246                   
+  YearInReview2025.js     |       0 |        0 |       0 |       0 | 1-983                   
+ analytics/data           |       0 |        0 |       0 |       0 |                         
+  DataCache.js            |       0 |        0 |       0 |       0 | 1-685                   
+ analytics/notifications  |       0 |        0 |       0 |       0 |                         
+  NotificationManager.js  |       0 |        0 |       0 |       0 | 5-485                   
+  WebSocketServer.js      |       0 |        0 |       0 |       0 | 5-526                   
+ analytics/utils          |   79.85 |    65.27 |   85.36 |   80.64 |                         
+  PerformanceMonitor.js   |   79.85 |    65.27 |   85.36 |   80.64 | 46-48,83-94,264,399-436 
+--------------------------|---------|----------|---------|---------|-------------------------
+Jest: "global" coverage threshold for statements (70%) not met: 3.43%
+Jest: "global" coverage threshold for branches (70%) not met: 2.54%
+Jest: "global" coverage threshold for lines (70%) not met: 3.38%
+Jest: "global" coverage threshold for functions (70%) not met: 5.56%
+Jest: "./src/analytics/core/" coverage threshold for statements (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for branches (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for lines (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for functions (80%) not met: 0%
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 24 passed, 25 total
+Snapshots:   0 total
+Time:        1.821 s
+Ran all test suites matching tests/unit/PerformanceMonitor.test.js.
+Jest did not exit one second after the test run has completed.
+
+'This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+(node:44291) [JEST-01] DeprecationWarning: 'log' property was accessed on [Object] after it was soft deleted
+  Jest deletes objects that were set on the global scope between test files to reduce memory leaks.
+  Currently it only "soft" deletes them and emits this warning if those objects were accessed after their deletion.
+  In future versions of Jest, this behavior will change to "on", which will likely fail tests.
+  You can change the behavior in your test configuration now to reduce memory usage.
+(Use `node --trace-deprecation ...` to show where the warning was created)

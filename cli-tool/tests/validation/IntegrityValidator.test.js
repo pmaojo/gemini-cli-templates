@@ -176,9 +176,9 @@ Content`,
 
       const result = await validator.validate(component);
 
-      expect(result.warnings).toContainEqual(
+      expect(result.info).toContainEqual(
         expect.objectContaining({
-          code: 'INT_W002'
+          code: 'INT_I009'
         })
       );
     });

@@ -1,0 +1,93 @@
+FAIL tests/integration/analytics-system.test.js
+  Analytics System Integration
+    Backend Integration
+      ✓ should load and analyze conversation data correctly (1780 ms)
+      ✕ should detect conversation states correctly (230 ms)
+      ✓ should cache data efficiently (7 ms)
+    WebSocket Integration
+      ✓ should handle WebSocket connections and messaging (27 ms)
+      ✓ should broadcast notifications to subscribed clients (14 ms)
+    End-to-End Analytics Flow
+      ✓ should process conversation changes end-to-end (148 ms)
+    Performance Tests
+      ✓ should handle large datasets efficiently (264 ms)
+      ✓ should handle large datasets efficiently (raw analyzer) (112 ms)
+      ✓ should handle large datasets efficiently (caching test) (98 ms)
+      ✓ should handle concurrent operations safely (2 ms)
+
+  ● Analytics System Integration › Backend Integration › should detect conversation states correctly
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "number"
+    Received: "undefined"
+
+      70 |         // tokens/messages might be 0 if mock files are empty, so we just check if they are numbers
+      71 |         expect(typeof conv.tokens).toBe('number');
+    > 72 |         expect(typeof conv.messages).toBe('number');
+         |                                      ^
+      73 |       });
+      74 |     });
+      75 |
+
+      at tests/integration/analytics-system.test.js:72:38
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (tests/integration/analytics-system.test.js:68:26)
+
+--------------------------|---------|----------|---------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                               
+--------------------------|---------|----------|---------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------
+All files                 |   12.77 |     7.74 |   12.67 |   13.09 |                                                                                                                                                 
+ analytics-web/components |       0 |        0 |       0 |       0 |                                                                                                                                                 
+  ActivityHeatmap.js      |       0 |        0 |       0 |       0 | 7-782                                                                                                                                           
+  AgentAnalytics.js       |       0 |        0 |       0 |       0 | 7-709                                                                                                                                           
+  App.js                  |       0 |        0 |       0 |       0 | 7-440                                                                                                                                           
+  Charts.js               |       0 |        0 |       0 |       0 | 7-113                                                                                                                                           
+  ConversationTable.js    |       0 |        0 |       0 |       0 | 7-436                                                                                                                                           
+  DashboardPage.js        |       0 |        0 |       0 |       0 | 7-2289                                                                                                                                          
+  HeaderComponent.js      |       0 |        0 |       0 |       0 | 7-306                                                                                                                                           
+  SessionTimer.js         |       0 |        0 |       0 |       0 | 7-598                                                                                                                                           
+  Sidebar.js              |       0 |        0 |       0 |       0 | 7-187                                                                                                                                           
+  ToolDisplay.js          |       0 |        0 |       0 |       0 | 7-553                                                                                                                                           
+ analytics-web/services   |       0 |        0 |       0 |       0 |                                                                                                                                                 
+  DataService.js          |       0 |        0 |       0 |       0 | 7-449                                                                                                                                           
+  StateService.js         |       0 |        0 |       0 |       0 | 7-284                                                                                                                                           
+  WebSocketService.js     |       0 |        0 |       0 |       0 | 7-534                                                                                                                                           
+ analytics/core           |   23.01 |    13.69 |   24.82 |   23.38 |                                                                                                                                                 
+  AgentAnalyzer.js        |     4.2 |        0 |    3.22 |    4.58 | 41-342                                                                                                                                          
+  ConversationAnalyzer.js |   59.75 |    31.06 |   66.21 |   59.48 | 60-61,85-86,141,147-148,167-178,184-185,244-253,266-309,388-393,420-426,451-478,502-503,508-516,533-561,575,592-651,790-791,843-863,873,896-945 
+  FileWatcher.js          |    6.56 |        0 |     2.7 |    6.61 | 26-415                                                                                                                                          
+  ProcessDetector.js      |   39.72 |    45.45 |   33.33 |   39.72 | 39-40,65,71-80,120,132-137,143-166,190-276                                                                                                      
+  SessionAnalyzer.js      |   19.91 |    12.82 |   20.93 |   20.65 | 58-59,90-165,185-188,208-472,494,498,502,530-536,577-588,604,611,628-673                                                                        
+  StateCalculator.js      |   24.07 |    15.38 |   22.72 |   29.88 | 55-64,70,98-116,139-242                                                                                                                         
+  YearInReview2025.js     |    1.77 |        0 |    1.51 |    1.86 | 24-978                                                                                                                                          
+ analytics/data           |    49.1 |    30.46 |   34.37 |   49.77 |                                                                                                                                                 
+  DataCache.js            |    49.1 |    30.46 |   34.37 |   49.77 | 61-62,102-103,151-161,174-201,212-252,311-312,459-681                                                                                           
+ analytics/notifications  |   43.79 |       25 |   42.85 |   44.32 |                                                                                                                                                 
+  NotificationManager.js  |   24.21 |    10.38 |   23.33 |      24 | 26,54-55,80-287,302-306,322,338-371,387-481                                                                                                     
+  WebSocketServer.js      |   59.25 |    39.24 |    57.5 |    60.5 | 47-48,61,92,122,126,146,158-170,198-217,233-249,269,277-278,289,301,313-331,342-345,375-386,397-407,436-444,485-490,517-520                     
+ analytics/utils          |   14.06 |     7.14 |    7.31 |   15.25 |                                                                                                                                                 
+  PerformanceMonitor.js   |   14.06 |     7.14 |    7.31 |   15.25 | 46-48,59-64,73,81,88-450                                                                                                                        
+--------------------------|---------|----------|---------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------
+Jest: "global" coverage threshold for statements (70%) not met: 8.19%
+Jest: "global" coverage threshold for branches (70%) not met: 4.87%
+Jest: "global" coverage threshold for lines (70%) not met: 8.54%
+Jest: "global" coverage threshold for functions (70%) not met: 6.99%
+Jest: "./src/analytics/core/" coverage threshold for statements (80%) not met: 23.01%
+Jest: "./src/analytics/core/" coverage threshold for branches (80%) not met: 13.69%
+Jest: "./src/analytics/core/" coverage threshold for lines (80%) not met: 23.38%
+Jest: "./src/analytics/core/" coverage threshold for functions (80%) not met: 24.82%
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 9 passed, 10 total
+Snapshots:   0 total
+Time:        6.099 s
+Ran all test suites matching tests/integration/analytics-system.test.js.
+Jest did not exit one second after the test run has completed.
+
+'This usually means that there are asynchronous operations that weren't stopped in your tests. Consider running Jest with `--detectOpenHandles` to troubleshoot this issue.
+(node:35525) [JEST-01] DeprecationWarning: 'log' property was accessed on [Object] after it was soft deleted
+  Jest deletes objects that were set on the global scope between test files to reduce memory leaks.
+  Currently it only "soft" deletes them and emits this warning if those objects were accessed after their deletion.
+  In future versions of Jest, this behavior will change to "on", which will likely fail tests.
+  You can change the behavior in your test configuration now to reduce memory usage.
+(Use `node --trace-deprecation ...` to show where the warning was created)

@@ -12,6 +12,7 @@ This folder contains language-agnostic templates and configurations that can be 
 ### Extensions
 
 - [Conductor](https://github.com/gemini-cli-extensions/conductor) - Context-driven development for Gemini CLI
+- [Jules](https://github.com/gemini-cli-extensions/jules) - Asynchronous AI coding agent for background tasks
 - [Browse all extensions](https://github.com/gemini-cli-extensions)
 
 ### Common Custom Commands
@@ -122,6 +123,7 @@ gemini extensions install <extension-url>
 Recommended Extensions:
 
 - **Conductor**: `gemini extensions install https://github.com/gemini-cli-extensions/conductor`
+- **Jules**: `gemini extensions install https://github.com/gemini-cli-extensions/jules`
 - **More**: Check the [Gemini CLI Extensions](https://github.com/gemini-cli-extensions) organization.
 
 ## Contributing

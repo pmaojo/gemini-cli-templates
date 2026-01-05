@@ -3,21 +3,7 @@
  * Tests API communication and caching functionality
  */
 
-// Load the DataService class
-const fs = require('fs');
-const path = require('path');
-
-// Load DataService from the actual file
-const DataServicePath = path.join(__dirname, '../../src/analytics-web/services/DataService.js');
-const DataServiceCode = fs.readFileSync(DataServicePath, 'utf8');
-
-// Create a module-like environment
-const moduleExports = {};
-const mockModule = { exports: moduleExports };
-
-// Execute the DataService code in our test environment
-eval(DataServiceCode);
-const DataService = moduleExports.DataService || global.DataService;
+const DataService = require('../../src/analytics-web/services/DataService');
 
 describe('DataService', () => {
   let dataService;
@@ -42,6 +28,10 @@ describe('DataService', () => {
   });
 
   afterEach(() => {
+    if (dataService) {
+      dataService.stopPeriodicRefresh();
+      dataService.cache.clear();
+    }
     jest.clearAllMocks();
     delete global.fetch;
   });
@@ -180,7 +170,7 @@ describe('DataService', () => {
       expect(dataService.cachedFetch).toHaveBeenCalledWith('/api/charts');
       
       await dataService.getSessionData();
-      expect(dataService.cachedFetch).toHaveBeenCalledWith('/api/session/data');
+      expect(dataService.cachedFetch).toHaveBeenCalledWith('/api/session/data', expect.objectContaining({ cacheDuration: expect.any(Number) }));
       
       await dataService.getProjectStats();
       expect(dataService.cachedFetch).toHaveBeenCalledWith('/api/session/projects');
@@ -199,10 +189,13 @@ describe('DataService', () => {
         .find(call => call[0] === 'connected')[1];
       connectedHandler();
       
-      expect(dataService.realTimeEnabled).toBe(true);
-      expect(mockWebSocketService.subscribe).toHaveBeenCalledWith('data_updates');
-      expect(mockWebSocketService.subscribe).toHaveBeenCalledWith('conversation_updates');
-      expect(mockWebSocketService.subscribe).toHaveBeenCalledWith('system_updates');
+      // Wait for async subscriptions
+      return new Promise(resolve => setTimeout(resolve, 10)).then(() => {
+        expect(dataService.realTimeEnabled).toBe(true);
+        expect(mockWebSocketService.subscribe).toHaveBeenCalledWith('data_updates');
+        expect(mockWebSocketService.subscribe).toHaveBeenCalledWith('conversation_updates');
+        expect(mockWebSocketService.subscribe).toHaveBeenCalledWith('system_updates');
+      });
     });
 
     it('should disable real-time when WebSocket disconnects', () => {

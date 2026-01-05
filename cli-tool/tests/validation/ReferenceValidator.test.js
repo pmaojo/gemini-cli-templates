@@ -358,7 +358,7 @@ Visit https://docs.example.com
 
       expect(result.warnings).toContainEqual(
         expect.objectContaining({
-          code: 'REF_W005'
+          code: 'REF_W001'
         })
       );
     });

@@ -111,6 +111,27 @@ Execute the approved plan with `/conductor:implement`. The agent will work throu
 > [!TIP]
 > Install Conductor with: `gemini extensions install https://github.com/gemini-cli-extensions/conductor`
 
+## Asynchronous Development with Jules
+
+For parallelizing your workflow, use **Jules** to delegate coding tasks to a background agent.
+
+### 1. Delegate Tasks
+
+Offload bug fixes, refactoring, or documentation updates while you keep working:
+
+- `/jules fix the memory leak in data-service.js`
+- `/jules migrate all commonjs requires to esm imports`
+- `/jules write unit tests for the auth module`
+
+### 2. Monitor Progress
+
+Jules works in an isolated environment. Check status explicitly if needed:
+
+- `/jules status`
+
+> [!TIP]
+> Install Jules with: `gemini extensions install https://github.com/gemini-cli-extensions/jules`
+
 ## Common Patterns
 
 ### Error Handling

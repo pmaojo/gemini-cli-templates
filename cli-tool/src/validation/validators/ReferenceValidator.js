@@ -111,7 +111,8 @@ class ReferenceValidator extends BaseValidator {
     }
 
     // Match plain URLs: http(s)://...
-    const plainUrlPattern = /https?:\/\/[^\s<>"{}|\\^`\[\]]+/g;
+    // Exclude trailing punctuation often found in text (.,;:!?)
+    const plainUrlPattern = /https?:\/\/[^\s<>"{}|\\^`\[\]]*[^\s<>"{}|\\^`\[\].,;:!?)]/g;
     while ((match = plainUrlPattern.exec(content)) !== null) {
       // Avoid duplicates from markdown links
       if (!urls.some(u => u.url === match[0])) {
@@ -252,7 +253,8 @@ class ReferenceValidator extends BaseValidator {
    */
   checkMarkdownLinks(content, path, strictHttps) {
     // Look for markdown links with dangerous protocols
-    const dangerousLinkPattern = /\[([^\]]+)\]\((javascript:|data:|file:|vbscript:)[^)]*\)/gi;
+    // Negative lookbehind (?<!\!) to ignore images
+    const dangerousLinkPattern = /(?<!\!)\[([^\]]+)\]\((javascript:|data:|file:|vbscript:)[^)]*\)/gi;
     const matches = content.matchAll(dangerousLinkPattern);
 
     for (const match of matches) {
@@ -262,7 +264,7 @@ class ReferenceValidator extends BaseValidator {
         {
           path,
           link: match[0],
-          protocol: match[2],
+          protocol: match[2], // Group 1 is text, Group 2 is protocol
           severity: 'critical'
         }
       );
