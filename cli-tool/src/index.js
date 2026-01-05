@@ -4,6 +4,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
 const { execSync } = require('child_process');
+const { execSync } = require('child_process');
 const { detectProject } = require('./utils');
 const { getTemplateConfig, TEMPLATES_CONFIG } = require('./templates');
 const { createPrompts, interactivePrompts } = require('./prompts');
@@ -429,6 +430,22 @@ async function createGeminiConfig(options = {}) {
   if (config.agents && config.agents.length > 0) {
     console.log(chalk.blue('🤖 Installing Gemini CLI agents...'));
     await installAgents(config.agents, targetDir);
+  }
+
+  // Install selected extensions
+  if (config.extensions && config.extensions.length > 0) {
+    console.log(chalk.yellow('🧩 Installing recommended extensions...'));
+    for (const extensionUrl of config.extensions) {
+      try {
+        console.log(chalk.gray(`  Installing ${extensionUrl.split('/').pop()}...`));
+        // Use npx gemini if inside a project, or try global gemini
+        // To be safe, we just try to run the command in the shell
+        execSync(`gemini extensions install ${extensionUrl}`, { stdio: 'inherit' });
+      } catch (error) {
+        console.log(chalk.red(`  ❌ Failed to install extension: ${error.message}`));
+        console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g gemini-chat-cli)'));
+      }
+    }
   }
 
   // Install selected extensions
