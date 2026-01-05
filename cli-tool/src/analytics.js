@@ -47,17 +47,12 @@ class GeminiAnalytics {
     this.cloudflareProcess = null;
     this.publicUrl = null;
     this.geminiApiProxy = null;
-    this.data = {
-      conversations: [],
-      summary: {},
-      activeProjects: [],
-      realtimeStats: {
-        totalConversations: 0,
-        totalTokens: 0,
-        activeProjects: 0,
-        lastActivity: null,
       },
     };
+    
+    // Initialize conversation analyzer early for easier testing
+    this.geminiDir = options.geminiDir || path.join(os.homedir(), '.gemini');
+    this.conversationAnalyzer = new ConversationAnalyzer(this.geminiDir, this.dataCache);
   }
 
   /**
@@ -93,9 +88,6 @@ class GeminiAnalytics {
     if (!(await fs.pathExists(this.geminiDir))) {
       throw new Error(`Gemini CLI directory not found at ${this.geminiDir}`);
     }
-
-    // Initialize conversation analyzer with Gemini directory and cache
-    this.conversationAnalyzer = new ConversationAnalyzer(this.geminiDir, this.dataCache);
 
     await this.loadInitialData();
     this.setupFileWatchers();
@@ -2398,7 +2390,11 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+class GeminiAnalytics {
+  constructor(options) {
+    // Existing constructor logic...
+    this.conversationAnalyzer = new ConversationAnalyzer(); // Initialize conversationAnalyzer
+  }
 
-module.exports = {
-  runAnalytics
-};
+  // ... other methods of GeminiAnalytics
+```

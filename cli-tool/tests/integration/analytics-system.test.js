@@ -32,7 +32,7 @@ describe('Analytics System Integration', () => {
 
   describe('Backend Integration', () => {
     it('should load and analyze conversation data correctly', async () => {
-      const GeminiAnalytics = require('../../src/analytics');
+      const { GeminiAnalytics } = require('../../src/analytics');
       
       const analytics = new GeminiAnalytics();
       analytics.geminiDir = testDataDir;
