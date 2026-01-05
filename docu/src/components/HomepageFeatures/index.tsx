@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Templates for React, Vue, Angular, Django, FastAPI, Rails, and more. 
-        Each includes optimized <code>CLAUDE.md</code> configurations and best practices.
+        Each includes optimized <code>GEMINI.md</code> configurations and best practices.
       </>
     ),
   },

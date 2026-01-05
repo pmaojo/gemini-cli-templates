@@ -15,28 +15,33 @@ Commands are reusable prompts that you can invoke with a simple slash syntax dur
 ## Key Benefits
 
 ### 🚀 Rapid Execution
+
 Execute complex, frequently-used prompts with a simple `/command` syntax.
 
 ### 🔧 Dynamic Arguments
+
 Pass variables to commands using `$ARGUMENTS` placeholder for flexible reuse.
 
 ### 📁 Smart Organization
+
 Organize commands in subdirectories with automatic namespacing and conflict resolution.
 
 ### 🔄 Context Enrichment
+
 Automatically include bash command output and file contents in your prompts.
 
 ### ♻️ Team Collaboration
+
 Share project commands with your team while keeping personal commands private.
 
 ## Command Locations
 
-| Type | Location | Scope | Visibility | Priority |
-|------|----------|-------|------------|----------|
-| **Project Commands** | `.gemini/commands/` | Current project only | Shared with team | Higher |
-| **Personal Commands** | `~/.gemini/commands/` | All projects | Private to user | Lower |
+| Type                  | Location              | Scope                | Visibility       | Priority |
+| --------------------- | --------------------- | -------------------- | ---------------- | -------- |
+| **Project Commands**  | `.gemini/commands/`   | Current project only | Shared with team | Higher   |
+| **Personal Commands** | `~/.gemini/commands/` | All projects         | Private to user  | Lower    |
 
-*When there are name conflicts, project commands take precedence over personal commands.*
+_When there are name conflicts, project commands take precedence over personal commands._
 
 ## Basic Command Format
 
@@ -63,16 +68,19 @@ Include specific instructions and context that Gemini should follow.
 ## Command Configuration
 
 ### Basic Syntax
+
 ```
 /<command-name> [arguments]
 ```
 
 ### Filename to Command Mapping
+
 - **File**: `optimize.md` → **Command**: `/optimize`
 - **File**: `fix-issue.md` → **Command**: `/fix-issue`
 - **File**: `security-review.md` → **Command**: `/security-review`
 
 ### Directory Organization
+
 Commands can be organized in subdirectories for better organization:
 
 ```
@@ -91,12 +99,15 @@ Commands can be organized in subdirectories for better organization:
 ## Frontmatter Configuration
 
 ### `allowed-tools` (Optional)
+
 Restricts which tools the command can use:
+
 ```yaml
 allowed-tools: Read, Edit, Bash(git add:*), Bash(git status:*)
 ```
 
 **Common tool combinations:**
+
 - **Code Analysis**: `Read, Grep, Glob`
 - **File Operations**: `Read, Edit, Write`
 - **Git Operations**: `Bash(git add:*), Bash(git status:*), Bash(git commit:*)`
@@ -104,7 +115,9 @@ allowed-tools: Read, Edit, Bash(git add:*), Bash(git status:*)
 - **Full Access**: Leave empty to inherit all tools
 
 ### `argument-hint` (Optional)
+
 Provides autocomplete guidance for command arguments:
+
 ```yaml
 argument-hint: add [tagId] | remove [tagId] | list
 argument-hint: [issue-number]
@@ -112,7 +125,9 @@ argument-hint: [component-name] [directory]
 ```
 
 ### `description` (Optional)
+
 Brief description shown in `/help`:
+
 ```yaml
 description: Create a git commit with proper formatting
 description: Analyze code performance and suggest optimizations
@@ -120,7 +135,9 @@ description: Generate React component with tests
 ```
 
 ### `model` (Optional)
+
 Specify which Gemini model to use:
+
 ```yaml
 model: gemini-3-5-sonnet-20241022    # Default, balanced performance
 model: gemini-3-5-haiku-20241022     # Faster, simpler tasks
@@ -128,12 +145,15 @@ model: gemini-3-opus-20240229        # Most capable, complex tasks
 ```
 
 ### `disable-model-invocation` (Optional)
+
 Prevent Gemini from automatically invoking this command via the SlashCommand tool:
+
 ```yaml
-disable-model-invocation: true    # Default: false
+disable-model-invocation: true # Default: false
 ```
 
 **Use cases:**
+
 - Commands that should only be manually triggered
 - Commands with side effects that need explicit user approval
 - Commands that are experimental or under development
@@ -143,6 +163,7 @@ disable-model-invocation: true    # Default: false
 ### Dynamic Arguments
 
 #### All Arguments with `$ARGUMENTS`
+
 Capture all arguments passed to the command:
 
 ```markdown
@@ -162,6 +183,7 @@ Fix issue #$ARGUMENTS following our team's coding standards:
 **Usage**: `/fix-issue 123`
 
 #### Individual Arguments with `$1`, `$2`, `$3`
+
 Access specific arguments individually (similar to shell scripts):
 
 ```markdown
@@ -177,6 +199,7 @@ Review PR #$1 with priority $2 and assign to $3.
 **Assignee**: @$3
 
 Focus on:
+
 - Security vulnerabilities
 - Performance implications
 - Code style adherence
@@ -185,11 +208,13 @@ Focus on:
 **Usage**: `/review-pr 456 high alice`
 
 **When to use positional arguments:**
+
 - Access arguments individually in different parts of your command
 - Provide defaults for missing arguments
 - Build structured commands with specific parameter roles
 
 ### Bash Command Integration
+
 Execute commands before the prompt runs using `!` prefix:
 
 ```markdown
@@ -212,6 +237,7 @@ Based on the above repository state, create a well-formatted commit message and 
 ```
 
 ### File References
+
 Include file contents using `@` syntax:
 
 ```markdown
@@ -226,6 +252,7 @@ Test file: @tests/components/UserProfile.test.js
 Types: @types/user.ts
 
 Analyze for:
+
 - Code quality and best practices
 - Test coverage completeness
 - Type safety implementation
@@ -233,6 +260,7 @@ Analyze for:
 ```
 
 ### Extended Thinking Mode
+
 Trigger extended thinking by including specific keywords:
 
 ```markdown
@@ -282,6 +310,7 @@ Create a git commit with proper formatting:
 4. **Add co-authored-by**: Include Gemini attribution
 
 Commit message should be:
+
 - Clear and descriptive
 - Under 50 characters for the title
 - Include detailed body if necessary
@@ -308,17 +337,20 @@ Generate a complete React component with the following specifications:
 ## Requirements
 
 ### 1. Component Structure
+
 - TypeScript functional component with proper typing
 - Props interface with JSDoc comments
 - Default export with named export for testing
 - Proper file naming convention
 
 ### 2. Styling
+
 - CSS Modules or styled-components (detect existing pattern: @src/components/)
 - Responsive design considerations
 - Accessibility attributes
 
 ### 3. Testing
+
 - Jest + React Testing Library test file
 - Test component rendering
 - Test props handling
@@ -326,18 +358,21 @@ Generate a complete React component with the following specifications:
 - Accessibility testing
 
 ### 4. Documentation
+
 - JSDoc comments for component and props
 - Usage examples in component file
 - Storybook story (if Storybook detected: @.storybook/)
 
 ## File Structure to Create
 ```
+
 [directory]/
 ├── ComponentName.tsx
 ├── ComponentName.module.css
 ├── ComponentName.test.tsx
 ├── ComponentName.stories.tsx (if Storybook exists)
 └── index.ts
+
 ```
 
 Follow the existing code patterns from: @src/components/
@@ -360,13 +395,14 @@ model: gemini-3-5-sonnet-20241022
 ## Context Analysis
 
 - API routes: @src/routes/ or @api/
-- Existing tests: @tests/api/ or @__tests__/
+- Existing tests: @tests/api/ or @**tests**/
 - API documentation: @docs/api.md or @README.md
 - Test configuration: @jest.config.js or @vitest.config.js
 
 ## Test Generation Requirements
 
 ### 1. Test Structure
+
 - Comprehensive test suite for the endpoint
 - Happy path testing
 - Error case testing
@@ -374,7 +410,9 @@ model: gemini-3-5-sonnet-20241022
 - Authentication testing (if required)
 
 ### 2. HTTP Methods Testing
+
 For each supported method (GET, POST, PUT, DELETE):
+
 - Valid request/response testing
 - Invalid input validation
 - Status code verification
@@ -382,12 +420,14 @@ For each supported method (GET, POST, PUT, DELETE):
 - Headers verification
 
 ### 3. Test Data
+
 - Mock data generation
 - Fixtures for consistent testing
 - Database seeding (if applicable)
 - Cleanup procedures
 
 ### 4. Integration Testing
+
 - Database interactions
 - External service mocking
 - Middleware testing
@@ -421,11 +461,13 @@ model: gemini-3-5-sonnet-20241022
 ## Code Analysis
 
 ### Frontend Performance
+
 - React components: @src/components/
 - Main application: @src/App.js or @src/App.tsx
 - Build configuration: @webpack.config.js or @vite.config.js or @next.config.js
 
-### Backend Performance  
+### Backend Performance
+
 - Server entry: @src/server.js or @src/index.js
 - Database queries: @src/models/ or @src/db/
 - API routes: @src/routes/ or @api/
@@ -433,24 +475,28 @@ model: gemini-3-5-sonnet-20241022
 ## Analysis Areas
 
 ### 1. Bundle Optimization
+
 - Identify large dependencies
 - Code splitting opportunities
 - Tree shaking effectiveness
 - Dynamic imports usage
 
 ### 2. Runtime Performance
+
 - Component re-render analysis
 - Memory leak detection
 - Event listener optimization
 - Image optimization opportunities
 
 ### 3. Backend Optimization
+
 - Database query efficiency
 - Caching strategies
 - API response times
 - Resource utilization
 
 ### 4. Core Web Vitals
+
 - Largest Contentful Paint (LCP)
 - First Input Delay (FID)
 - Cumulative Layout Shift (CLS)
@@ -482,16 +528,19 @@ model: gemini-3-5-sonnet-20241022
 ## Code Security Analysis
 
 ### Configuration Files
-- Environment variables: @.env* (if exists)
+
+- Environment variables: @.env\* (if exists)
 - Security configurations: @src/config/
 - Database configurations: @src/db/config/
 
 ### Authentication & Authorization
+
 - Auth implementation: @src/auth/ or @src/middleware/auth.js
 - JWT handling: Search for JWT-related code
 - Password hashing: Search for bcrypt, scrypt, argon2
 
 ### Input Validation
+
 - API routes: @src/routes/ or @api/
 - Form validation: @src/components/forms/
 - Database queries: @src/models/
@@ -499,24 +548,28 @@ model: gemini-3-5-sonnet-20241022
 ## OWASP Top 10 Assessment
 
 ### 1. Injection Vulnerabilities
+
 - SQL injection prevention
-- NoSQL injection prevention  
+- NoSQL injection prevention
 - Command injection prevention
 - XSS prevention
 
 ### 2. Broken Authentication
+
 - Session management
 - Multi-factor authentication
 - Password policies
 - Account lockout mechanisms
 
 ### 3. Sensitive Data Exposure
+
 - Data encryption at rest
 - Data encryption in transit
 - API key management
 - Logging security
 
 ### 4. Security Misconfiguration
+
 - Server configuration
 - CORS configuration
 - Security headers
@@ -543,7 +596,7 @@ model: gemini-3-5-sonnet-20241022
 
 ### 6. Database Migration Command
 
-```markdown
+````markdown
 ---
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [migration-name]
@@ -565,13 +618,16 @@ model: gemini-3-5-sonnet-20241022
 ## Migration Requirements
 
 ### 1. Migration Structure
+
 - Timestamp-based filename
-- Clear up/down migration functions  
+- Clear up/down migration functions
 - Proper error handling
 - Transaction wrapping for safety
 
 ### 2. Schema Changes
+
 Based on migration name, determine operation:
+
 - **CREATE**: New table creation
 - **ALTER**: Table modifications
 - **DROP**: Table/column removal
@@ -579,12 +635,14 @@ Based on migration name, determine operation:
 - **DATA**: Data migrations
 
 ### 3. Rollback Strategy
+
 - Complete rollback implementation
 - Data preservation considerations
 - Dependency handling
 - Validation checks
 
 ### 4. Best Practices
+
 - Atomic operations
 - No destructive changes without confirmation
 - Proper indexing
@@ -608,10 +666,12 @@ CREATE TABLE example (
     updated_at TIMESTAMP DEFAULT NOW()
 );
 
--- Down migration  
+-- Down migration
 DROP TABLE IF EXISTS example;
 ```
-```
+````
+
+````
 
 ## Built-in Commands Reference
 
@@ -624,8 +684,8 @@ DROP TABLE IF EXISTS example;
 - `/help` - Show all available commands and usage
 
 ### Development Commands
-- `/init` - Initialize project with CLAUDE.md configuration guide
-- `/memory` - Edit CLAUDE.md memory files for persistent context
+- `/init` - Initialize project with GEMINI.md configuration guide
+- `/memory` - Edit GEMINI.md memory files for persistent context
 - `/review` - Request comprehensive code review
 - `/pr_comments` - View and manage pull request comments
 
@@ -666,11 +726,12 @@ To encourage Gemini to use commands, reference them by name in your prompts:
 > Run /write-unit-test when you are about to start writing tests.
 > Use /security-audit before committing sensitive code changes.
 > Execute /performance-check after implementing new features.
-```
+````
 
 ### Supported Commands
 
 `SlashCommand` tool only supports:
+
 - ✅ User-defined custom commands
 - ✅ Commands with `description` frontmatter field
 - ❌ Built-in commands like `/compact`, `/init` (not supported)
@@ -714,6 +775,7 @@ export SLASH_COMMAND_TOOL_CHAR_BUDGET=20000
 ```
 
 **When budget is exceeded**:
+
 - Gemini sees only a subset of available commands
 - A warning shows in `/context` as "M of N commands"
 - Prioritize important commands by keeping descriptions concise
@@ -721,12 +783,14 @@ export SLASH_COMMAND_TOOL_CHAR_BUDGET=20000
 ### Best Practices
 
 **DO:**
+
 - ✅ Write clear, concise command descriptions
-- ✅ Reference commands explicitly in prompts/CLAUDE.md
+- ✅ Reference commands explicitly in prompts/GEMINI.md
 - ✅ Use `disable-model-invocation` for sensitive operations
 - ✅ Monitor character budget with `/context`
 
 **DON'T:**
+
 - ❌ Assume Gemini will discover commands without references
 - ❌ Write overly long command descriptions
 - ❌ Enable automatic invocation for destructive operations
@@ -734,6 +798,7 @@ export SLASH_COMMAND_TOOL_CHAR_BUDGET=20000
 ## MCP Commands
 
 ### Understanding MCP Commands
+
 MCP (Model Context Protocol) servers can expose prompts as dynamic slash commands:
 
 ```
@@ -741,12 +806,13 @@ MCP (Model Context Protocol) servers can expose prompts as dynamic slash command
 ```
 
 ### Example MCP Commands
+
 ```bash
 # GitHub integration
 /mcp__github__list_prs
 /mcp__github__pr_review 456
 
-# Jira integration  
+# Jira integration
 /mcp__jira__create_issue "Bug title" high
 /mcp__jira__list_issues
 
@@ -756,7 +822,9 @@ MCP (Model Context Protocol) servers can expose prompts as dynamic slash command
 ```
 
 ### MCP Management
+
 Use `/mcp` to:
+
 - View configured MCP servers
 - Check connection status
 - Authenticate with OAuth-enabled servers
@@ -766,32 +834,38 @@ Use `/mcp` to:
 ## Best Practices for Creating Commands
 
 ### 1. Command Design Principles
+
 - **Single Responsibility**: One clear purpose per command
 - **Descriptive Names**: Use clear, action-oriented names
 - **Consistent Patterns**: Follow established naming conventions
 - **Atomic Operations**: Complete tasks that don't require follow-up
 
 ### 2. Effective Prompts
+
 ```markdown
 ## Structure Template
 
 ### Context Section
+
 - Current state analysis
 - Relevant file contents
 - System information
 
-### Requirements Section  
+### Requirements Section
+
 - Clear, numbered requirements
 - Acceptance criteria
 - Quality standards
 
 ### Deliverables Section
+
 - Specific outputs expected
 - Format requirements
 - Documentation needs
 ```
 
 ### 3. Tool Selection Strategy
+
 ```yaml
 # ✅ Focused tool selection
 allowed-tools: Read, Edit, Bash(git add:*), Bash(git status:*)
@@ -801,15 +875,17 @@ allowed-tools: Read, Write, Edit, Bash, WebFetch, WebSearch, Grep, Glob
 ```
 
 ### 4. Argument Design
+
 ```yaml
 # ✅ Clear argument guidance
 argument-hint: [component-name] [directory] [--typescript]
 
-# ❌ Vague guidance  
+# ❌ Vague guidance
 argument-hint: [options]
 ```
 
 ### 5. Command Testing
+
 - **Test with real scenarios** from your projects
 - **Verify argument handling** works correctly
 - **Check bash command execution** produces expected output
@@ -819,6 +895,7 @@ argument-hint: [options]
 ## Common Use Cases
 
 ### Development Workflow
+
 ```bash
 /init                    # Setup project configuration
 /component Button        # Generate React component
@@ -828,6 +905,7 @@ argument-hint: [options]
 ```
 
 ### Debugging & Analysis
+
 ```bash
 /performance            # Analyze performance issues
 /security               # Security audit
@@ -837,6 +915,7 @@ argument-hint: [options]
 ```
 
 ### Database Operations
+
 ```bash
 /migrate create_users   # Create database migration
 /seed                   # Generate test data
@@ -845,8 +924,9 @@ argument-hint: [options]
 ```
 
 ### DevOps & Deployment
+
 ```bash
-/deploy staging         # Deploy to staging environment  
+/deploy staging         # Deploy to staging environment
 /rollback               # Rollback deployment
 /monitor                # Check system health
 /scale                  # Scale application resources
@@ -855,16 +935,18 @@ argument-hint: [options]
 ## Command Organization Strategies
 
 ### By Project Phase
+
 ```
 .gemini/commands/
 ├── setup/              # Project initialization
-├── development/        # Daily development tasks  
+├── development/        # Daily development tasks
 ├── testing/           # Testing and QA
 ├── deployment/        # Deployment and DevOps
 └── maintenance/       # Ongoing maintenance
 ```
 
 ### By Technology Stack
+
 ```
 .gemini/commands/
 ├── frontend/          # React, Vue, Angular commands
@@ -875,6 +957,7 @@ argument-hint: [options]
 ```
 
 ### By Team Role
+
 ```
 ~/.gemini/commands/
 ├── developer/         # General development commands
@@ -886,39 +969,49 @@ argument-hint: [options]
 ## Troubleshooting Common Issues
 
 ### Command Not Found
+
 **Symptoms**: `/command` shows "Command not found"
 **Solutions**:
+
 - Verify file exists in `.gemini/commands/` or `~/.gemini/commands/`
 - Check filename matches command name (without `.md`)
 - Ensure markdown file has proper content
 - Restart Gemini Code session
 
 ### Arguments Not Working
+
 **Symptoms**: `$ARGUMENTS` appears literally in output
 **Solutions**:
+
 - Ensure arguments are provided when calling command
 - Check `argument-hint` frontmatter is correctly formatted
 - Verify `$ARGUMENTS` placement in command content
 
 ### Bash Commands Failing
+
 **Symptoms**: `!command` output shows errors
 **Solutions**:
+
 - Verify `allowed-tools` includes `Bash` or specific commands
 - Test bash commands work in terminal first
 - Check file paths and permissions
 - Ensure commands are available in system PATH
 
 ### File References Not Working
+
 **Symptoms**: `@filename` shows "File not found"
 **Solutions**:
+
 - Verify file paths are correct relative to working directory
 - Check file permissions are readable
 - Use `/add-dir` to add additional working directories
 - Test file references with absolute paths
 
 ### Permission Issues
+
 **Symptoms**: Commands fail with permission errors
 **Solutions**:
+
 - Use `/permissions` to check current access levels
 - Ensure `allowed-tools` includes necessary tools
 - Check file system permissions
@@ -927,6 +1020,7 @@ argument-hint: [options]
 ## Advanced Command Patterns
 
 ### Conditional Logic
+
 ```markdown
 ---
 description: Smart deployment based on environment
@@ -939,22 +1033,26 @@ Analyze the current environment and deploy accordingly:
 **Package.json**: @package.json
 
 If production branch:
+
 1. Run full test suite
-2. Build production assets  
+2. Build production assets
 3. Deploy with zero downtime
 4. Run smoke tests
 
 If staging branch:
+
 1. Run quick tests
 2. Deploy to staging
 3. Send notification to team
 
 If development branch:
+
 1. Deploy to development environment
 2. Skip extensive testing
 ```
 
 ### Multi-Step Workflows
+
 ```markdown
 ---
 allowed-tools: Read, Write, Edit, Bash
@@ -964,26 +1062,31 @@ description: Complete feature implementation workflow
 Implement feature: $ARGUMENTS
 
 ## Step 1: Planning
+
 1. Analyze requirements
 2. Check existing code: @src/
 3. Plan implementation approach
 
-## Step 2: Implementation  
+## Step 2: Implementation
+
 1. Create necessary files
 2. Implement core functionality
 3. Add error handling
 
 ## Step 3: Testing
+
 1. Create unit tests
-2. Create integration tests  
+2. Create integration tests
 3. Run test suite: !`npm test`
 
 ## Step 4: Documentation
+
 1. Update README if needed
 2. Add JSDoc comments
 3. Update API documentation
 
 ## Step 5: Quality Assurance
+
 1. Run linting: !`npm run lint`
 2. Format code: !`npm run format`
 3. Check build: !`npm run build`
@@ -992,6 +1095,7 @@ Complete each step before proceeding to the next.
 ```
 
 ### Environment-Aware Commands
+
 ```markdown
 ---
 description: Environment-specific database operations
@@ -1003,18 +1107,21 @@ description: Environment-specific database operations
 ## Environment-Specific Actions
 
 ### Production Environment
+
 - Use read-only operations only
 - Require explicit confirmation for changes
 - Enable audit logging
 - Use connection pooling
 
-### Staging Environment  
+### Staging Environment
+
 - Allow controlled data modifications
 - Enable detailed logging
 - Use production-like configuration
 - Reset data daily
 
 ### Development Environment
+
 - Allow all operations
 - Use local database
 - Enable debug logging
@@ -1028,7 +1135,7 @@ Execute database operation: $ARGUMENTS
 Gemini Code commands are a powerful automation tool that can significantly improve your development workflow. With this guide, you can create effective commands that:
 
 - **Automate repetitive tasks** with simple slash syntax
-- **Standardize team workflows** through shared project commands  
+- **Standardize team workflows** through shared project commands
 - **Integrate with external tools** via bash commands and MCP
 - **Provide context-aware assistance** through file references and dynamic arguments
 

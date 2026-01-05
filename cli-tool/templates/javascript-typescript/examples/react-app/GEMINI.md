@@ -1,4 +1,4 @@
-# CLAUDE.md - React Application
+# GEMINI.md - React Application
 
 This file provides guidance to Gemini Code when working with React applications using TypeScript.
 
@@ -9,16 +9,19 @@ This is a React application with TypeScript support.
 ## Development Commands
 
 ### Component Development
+
 - **`/component`** - Create React components with TypeScript
 - **`/hooks`** - Create and manage React hooks
 - **`/state-management`** - Implement state management solutions
 
 ### Testing and Quality
+
 - **`/test`** - Run tests and create test files
 - **`/lint`** - Run linting and fix code style issues
 - **`/typescript-migrate`** - Migrate JavaScript files to TypeScript
 
 ### Development Workflow
+
 - **`/npm-scripts`** - Run npm scripts and package management
 - **`/debug`** - Debug React applications
 - **`/refactor`** - Refactor and optimize code
@@ -26,24 +29,28 @@ This is a React application with TypeScript support.
 ## Framework-Specific Guidelines
 
 ### React Best Practices
+
 - Use functional components with hooks
 - Implement proper TypeScript typing for props and state
 - Follow React performance optimization patterns
 - Use proper component composition patterns
 
 ### State Management
+
 - Use useState for local component state
 - Consider useContext for shared state
 - Implement Redux Toolkit for complex state management
 - Use Zustand for lightweight state management
 
 ### Component Architecture
+
 - Keep components small and focused
 - Use custom hooks for reusable logic
 - Implement proper prop drilling prevention
 - Follow component testing best practices
 
 ### Performance Optimization
+
 - Use React.memo for expensive components
 - Implement proper dependency arrays in useEffect
 - Use useMemo and useCallback judiciously
@@ -52,6 +59,7 @@ This is a React application with TypeScript support.
 ## TypeScript Configuration
 
 The project uses strict TypeScript configuration:
+
 - Strict type checking enabled
 - Proper interface definitions for props
 - Generic type support for reusable components

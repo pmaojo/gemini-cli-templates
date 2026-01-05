@@ -16,7 +16,7 @@ npx gemini-code-templates@latest --health-check
 
 - **System requirements** - Node.js, npm, Git, memory, network
 - **Gemini Code setup** - Installation, authentication, permissions
-- **Project configuration** - CLAUDE.md, components, settings, hooks
+- **Project configuration** - GEMINI.md, components, settings, hooks
 - **Component integrity** - Validates installed agents, commands, MCPs
 - **Performance optimization** - Identifies bottlenecks and improvements
 
@@ -33,6 +33,7 @@ npx gemini-code-templates@latest --health-check
 - **Hook execution** - Tests automation trigger functionality
 
 ### Performance Assessment
+
 - **Response times** - Measures Gemini Code performance
 - **Memory usage** - Analyzes resource consumption
 - **File access speed** - Tests file system performance
@@ -42,13 +43,16 @@ npx gemini-code-templates@latest --health-check
 ## 📊 Health Score System
 
 ### Overall Health Percentage
+
 The health check provides an overall score (0-100%) based on:
+
 - **Critical issues** (major impact on functionality)
 - **Warnings** (performance or configuration concerns)
 - **Recommendations** (optimization opportunities)
 - **Best practices** (adherence to recommended setup)
 
 ### Score Categories
+
 - **90-100%**: Excellent - Optimal configuration
 - **75-89%**: Good - Minor improvements possible
 - **60-74%**: Fair - Some issues need attention

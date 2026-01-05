@@ -1,6 +1,6 @@
 ---
 name: Hook Development
-description: This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement prompt-based hooks", "use ${CLAUDE_PLUGIN_ROOT}", "set up event-driven automation", "block dangerous commands", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Gemini CLI plugin hooks with focus on advanced prompt-based hooks API.
+description: This skill should be used when the user asks to "create a hook", "add a PreToolUse/PostToolUse/Stop hook", "validate tool use", "implement prompt-based hooks", "use ${GEMINI_PLUGIN_ROOT}", "set up event-driven automation", "block dangerous commands", or mentions hook events (PreToolUse, PostToolUse, Stop, SubagentStop, SessionStart, SessionEnd, UserPromptSubmit, PreCompact, Notification). Provides comprehensive guidance for creating and implementing Gemini CLI plugin hooks with focus on advanced prompt-based hooks API.
 version: 0.1.0
 ---
 
@@ -11,6 +11,7 @@ version: 0.1.0
 Hooks are event-driven automation scripts that execute in response to Gemini CLI events. Use hooks to validate operations, enforce policies, add context, and integrate external tools into workflows.
 
 **Key capabilities:**
+
 - Validate tool calls before execution (PreToolUse)
 - React to tool results (PostToolUse)
 - Enforce completion standards (Stop, SubagentStop)
@@ -34,6 +35,7 @@ Use LLM-driven decision making for context-aware validation:
 **Supported events:** Stop, SubagentStop, UserPromptSubmit, PreToolUse
 
 **Benefits:**
+
 - Context-aware decisions based on natural language reasoning
 - Flexible evaluation logic without bash scripting
 - Better edge case handling
@@ -46,12 +48,13 @@ Execute bash commands for deterministic checks:
 ```json
 {
   "type": "command",
-  "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/validate.sh",
+  "command": "bash ${GEMINI_PLUGIN_ROOT}/scripts/validate.sh",
   "timeout": 60
 }
 ```
 
 **Use for:**
+
 - Fast deterministic validations
 - File system operations
 - External tool integrations
@@ -75,11 +78,13 @@ Execute bash commands for deterministic checks:
 ```
 
 **Key points:**
+
 - `description` field is optional
 - `hooks` field is required wrapper containing actual hook events
 - This is the **plugin-specific format**
 
 **Example:**
+
 ```json
 {
   "description": "Validation hooks for code quality",
@@ -90,7 +95,7 @@ Execute bash commands for deterministic checks:
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/validate.sh"
+            "command": "${GEMINI_PLUGIN_ROOT}/hooks/validate.sh"
           }
         ]
       }
@@ -112,6 +117,7 @@ Execute bash commands for deterministic checks:
 ```
 
 **Key points:**
+
 - No wrapper - events directly at top level
 - No description field
 - This is the **settings format**
@@ -125,6 +131,7 @@ Execute bash commands for deterministic checks:
 Execute before any tool runs. Use to approve, deny, or modify tool calls.
 
 **Example (prompt-based):**
+
 ```json
 {
   "PreToolUse": [
@@ -142,11 +149,12 @@ Execute before any tool runs. Use to approve, deny, or modify tool calls.
 ```
 
 **Output for PreToolUse:**
+
 ```json
 {
   "hookSpecificOutput": {
     "permissionDecision": "allow|deny|ask",
-    "updatedInput": {"field": "modified_value"}
+    "updatedInput": { "field": "modified_value" }
   },
   "systemMessage": "Explanation for Gemini"
 }
@@ -157,6 +165,7 @@ Execute before any tool runs. Use to approve, deny, or modify tool calls.
 Execute after tool completes. Use to react to results, provide feedback, or log.
 
 **Example:**
+
 ```json
 {
   "PostToolUse": [
@@ -174,6 +183,7 @@ Execute after tool completes. Use to react to results, provide feedback, or log.
 ```
 
 **Output behavior:**
+
 - Exit 0: stdout shown in transcript
 - Exit 2: stderr fed back to Gemini
 - systemMessage included in context
@@ -183,6 +193,7 @@ Execute after tool completes. Use to react to results, provide feedback, or log.
 Execute when main agent considers stopping. Use to validate completeness.
 
 **Example:**
+
 ```json
 {
   "Stop": [
@@ -200,6 +211,7 @@ Execute when main agent considers stopping. Use to validate completeness.
 ```
 
 **Decision output:**
+
 ```json
 {
   "decision": "approve|block",
@@ -219,6 +231,7 @@ Similar to Stop hook, but for subagents.
 Execute when user submits a prompt. Use to add context, validate, or block prompts.
 
 **Example:**
+
 ```json
 {
   "UserPromptSubmit": [
@@ -240,6 +253,7 @@ Execute when user submits a prompt. Use to add context, validate, or block promp
 Execute when Gemini CLI session begins. Use to load context and set environment.
 
 **Example:**
+
 ```json
 {
   "SessionStart": [
@@ -248,7 +262,7 @@ Execute when Gemini CLI session begins. Use to load context and set environment.
       "hooks": [
         {
           "type": "command",
-          "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/load-context.sh"
+          "command": "bash ${GEMINI_PLUGIN_ROOT}/scripts/load-context.sh"
         }
       ]
     }
@@ -256,9 +270,10 @@ Execute when Gemini CLI session begins. Use to load context and set environment.
 }
 ```
 
-**Special capability:** Persist environment variables using `$CLAUDE_ENV_FILE`:
+**Special capability:** Persist environment variables using `$GEMINI_ENV_FILE`:
+
 ```bash
-echo "export PROJECT_TYPE=nodejs" >> "$CLAUDE_ENV_FILE"
+echo "export PROJECT_TYPE=nodejs" >> "$GEMINI_ENV_FILE"
 ```
 
 See `examples/load-context.sh` for complete example.
@@ -323,17 +338,17 @@ Access fields in prompts using `$TOOL_INPUT`, `$TOOL_RESULT`, `$USER_PROMPT`, et
 
 Available in all command hooks:
 
-- `$CLAUDE_PROJECT_DIR` - Project root path
-- `$CLAUDE_PLUGIN_ROOT` - Plugin directory (use for portable paths)
-- `$CLAUDE_ENV_FILE` - SessionStart only: persist env vars here
-- `$CLAUDE_CODE_REMOTE` - Set if running in remote context
+- `$GEMINI_PROJECT_DIR` - Project root path
+- `$GEMINI_PLUGIN_ROOT` - Plugin directory (use for portable paths)
+- `$GEMINI_ENV_FILE` - SessionStart only: persist env vars here
+- `$GEMINI_CODE_REMOTE` - Set if running in remote context
 
-**Always use ${CLAUDE_PLUGIN_ROOT} in hook commands for portability:**
+**Always use ${GEMINI_PLUGIN_ROOT} in hook commands for portability:**
 
 ```json
 {
   "type": "command",
-  "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/validate.sh"
+  "command": "bash ${GEMINI_PLUGIN_ROOT}/scripts/validate.sh"
 }
 ```
 
@@ -371,7 +386,7 @@ In plugins, define hooks in `hooks/hooks.json`:
       "hooks": [
         {
           "type": "command",
-          "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/load-context.sh",
+          "command": "bash ${GEMINI_PLUGIN_ROOT}/scripts/load-context.sh",
           "timeout": 10
         }
       ]
@@ -387,21 +402,25 @@ Plugin hooks merge with user's hooks and run in parallel.
 ### Tool Name Matching
 
 **Exact match:**
+
 ```json
 "matcher": "Write"
 ```
 
 **Multiple tools:**
+
 ```json
 "matcher": "Read|Write|Edit"
 ```
 
 **Wildcard (all tools):**
+
 ```json
 "matcher": "*"
 ```
 
 **Regex patterns:**
+
 ```json
 "matcher": "mcp__.*__delete.*"  // All MCP delete tools
 ```
@@ -471,11 +490,11 @@ See `examples/validate-write.sh` and `examples/validate-bash.sh` for complete ex
 ```bash
 # GOOD: Quoted
 echo "$file_path"
-cd "$CLAUDE_PROJECT_DIR"
+cd "$GEMINI_PROJECT_DIR"
 
 # BAD: Unquoted (injection risk)
 echo $file_path
-cd $CLAUDE_PROJECT_DIR
+cd $GEMINI_PROJECT_DIR
 ```
 
 ### Set Appropriate Timeouts
@@ -502,9 +521,9 @@ All matching hooks run **in parallel**:
     {
       "matcher": "Write",
       "hooks": [
-        {"type": "command", "command": "check1.sh"},  // Parallel
-        {"type": "command", "command": "check2.sh"},  // Parallel
-        {"type": "prompt", "prompt": "Validate..."}   // Parallel
+        { "type": "command", "command": "check1.sh" }, // Parallel
+        { "type": "command", "command": "check2.sh" }, // Parallel
+        { "type": "prompt", "prompt": "Validate..." } // Parallel
       ]
     }
   ]
@@ -512,6 +531,7 @@ All matching hooks run **in parallel**:
 ```
 
 **Design implications:**
+
 - Hooks don't see each other's output
 - Non-deterministic ordering
 - Design for independence
@@ -528,10 +548,11 @@ All matching hooks run **in parallel**:
 Create hooks that activate conditionally by checking for a flag file or configuration:
 
 **Pattern: Flag file activation**
+
 ```bash
 #!/bin/bash
 # Only active when flag file exists
-FLAG_FILE="$CLAUDE_PROJECT_DIR/.enable-strict-validation"
+FLAG_FILE="$GEMINI_PROJECT_DIR/.enable-strict-validation"
 
 if [ ! -f "$FLAG_FILE" ]; then
   # Flag not present, skip validation
@@ -544,10 +565,11 @@ input=$(cat)
 ```
 
 **Pattern: Configuration-based activation**
+
 ```bash
 #!/bin/bash
 # Check configuration for activation
-CONFIG_FILE="$CLAUDE_PROJECT_DIR/.gemini/plugin-config.json"
+CONFIG_FILE="$GEMINI_PROJECT_DIR/.gemini/plugin-config.json"
 
 if [ -f "$CONFIG_FILE" ]; then
   enabled=$(jq -r '.strictMode // false' "$CONFIG_FILE")
@@ -562,6 +584,7 @@ input=$(cat)
 ```
 
 **Use cases:**
+
 - Enable strict validation only when needed
 - Temporary debugging hooks
 - Project-specific hook behavior
@@ -576,12 +599,14 @@ input=$(cat)
 **Important:** Hooks are loaded when Gemini CLI session starts. Changes to hook configuration require restarting Gemini CLI.
 
 **Cannot hot-swap hooks:**
+
 - Editing `hooks/hooks.json` won't affect current session
 - Adding new hook scripts won't be recognized
 - Changing hook commands/prompts won't update
 - Must restart Gemini CLI: exit and run `gemini` again
 
 **To test hook changes:**
+
 1. Edit hook configuration or scripts
 2. Exit Gemini CLI session
 3. Restart: `gemini` or `cc`
@@ -591,6 +616,7 @@ input=$(cat)
 ### Hook Validation at Startup
 
 Hooks are validated when Gemini CLI starts:
+
 - Invalid JSON in hooks.json causes loading failure
 - Missing scripts cause warnings
 - Syntax errors reported in debug mode
@@ -613,7 +639,7 @@ Test command hooks directly:
 
 ```bash
 echo '{"tool_name": "Write", "tool_input": {"file_path": "/test"}}' | \
-  bash ${CLAUDE_PLUGIN_ROOT}/scripts/validate.sh
+  bash ${GEMINI_PLUGIN_ROOT}/scripts/validate.sh
 
 echo "Exit code: $?"
 ```
@@ -631,23 +657,24 @@ echo "$output" | jq .
 
 ### Hook Events Summary
 
-| Event | When | Use For |
-|-------|------|---------|
-| PreToolUse | Before tool | Validation, modification |
-| PostToolUse | After tool | Feedback, logging |
-| UserPromptSubmit | User input | Context, validation |
-| Stop | Agent stopping | Completeness check |
-| SubagentStop | Subagent done | Task validation |
-| SessionStart | Session begins | Context loading |
-| SessionEnd | Session ends | Cleanup, logging |
-| PreCompact | Before compact | Preserve context |
-| Notification | User notified | Logging, reactions |
+| Event            | When           | Use For                  |
+| ---------------- | -------------- | ------------------------ |
+| PreToolUse       | Before tool    | Validation, modification |
+| PostToolUse      | After tool     | Feedback, logging        |
+| UserPromptSubmit | User input     | Context, validation      |
+| Stop             | Agent stopping | Completeness check       |
+| SubagentStop     | Subagent done  | Task validation          |
+| SessionStart     | Session begins | Context loading          |
+| SessionEnd       | Session ends   | Cleanup, logging         |
+| PreCompact       | Before compact | Preserve context         |
+| Notification     | User notified  | Logging, reactions       |
 
 ### Best Practices
 
 **DO:**
+
 - ✅ Use prompt-based hooks for complex logic
-- ✅ Use ${CLAUDE_PLUGIN_ROOT} for portability
+- ✅ Use ${GEMINI_PLUGIN_ROOT} for portability
 - ✅ Validate all inputs in command hooks
 - ✅ Quote all bash variables
 - ✅ Set appropriate timeouts
@@ -655,6 +682,7 @@ echo "$output" | jq .
 - ✅ Test hooks thoroughly
 
 **DON'T:**
+
 - ❌ Use hardcoded paths
 - ❌ Trust user input without validation
 - ❌ Create long-running hooks
@@ -703,7 +731,7 @@ To implement hooks in a plugin:
 2. Decide between prompt-based (flexible) or command (deterministic) hooks
 3. Write hook configuration in `hooks/hooks.json`
 4. For command hooks, create hook scripts
-5. Use ${CLAUDE_PLUGIN_ROOT} for all file references
+5. Use ${GEMINI_PLUGIN_ROOT} for all file references
 6. Validate configuration with `scripts/validate-hook-schema.sh hooks/hooks.json`
 7. Test hooks with `scripts/test-hook.sh` before deployment
 8. Test in Gemini CLI with `gemini --debug`

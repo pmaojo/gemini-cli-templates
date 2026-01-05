@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if command -v osascript >/dev/null 2>&1; then osascript -e 'display notification \"Tool: $CLAUDE_TOOL_NAME completed\" with title \"Gemini CLI\"'; elif command -v notify-send >/dev/null 2>&1; then notify-send 'Gemini CLI' \"Tool: $CLAUDE_TOOL_NAME completed\"; fi"
+            "command": "if command -v osascript >/dev/null 2>&1; then osascript -e 'display notification \"Tool: $GEMINI_TOOL_NAME completed\" with title \"Gemini CLI\"'; elif command -v notify-send >/dev/null 2>&1; then notify-send 'Gemini CLI' \"Tool: $GEMINI_TOOL_NAME completed\"; fi"
           }
         ]
       }

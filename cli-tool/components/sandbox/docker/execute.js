@@ -69,7 +69,7 @@ async function executeQuery() {
     console.log('🤖 Executing Gemini Code...');
     console.log(`   Prompt: "${prompt.substring(0, 80)}${prompt.length > 80 ? '...' : ''}"\n`);
     console.log('─'.repeat(60));
-    console.log('📝 CLAUDE OUTPUT:');
+    console.log('📝 GEMINI OUTPUT:');
     console.log('─'.repeat(60) + '\n');
 
     // Enhance prompt with working directory context

@@ -27,17 +27,17 @@ ls -d worktrees 2>/dev/null      # Alternative
 
 **If found:** Use that directory. If both exist, `.worktrees` wins.
 
-### 2. Check CLAUDE.md
+### 2. Check GEMINI.md
 
 ```bash
-grep -i "worktree.*director" CLAUDE.md 2>/dev/null
+grep -i "worktree.*director" GEMINI.md 2>/dev/null
 ```
 
 **If preference specified:** Use it without asking.
 
 ### 3. Ask User
 
-If no directory exists and no CLAUDE.md preference:
+If no directory exists and no GEMINI.md preference:
 
 ```
 No worktree directory found. Where should I create worktrees?
@@ -62,6 +62,7 @@ grep -q "^\.worktrees/$" .gitignore || grep -q "^worktrees/$" .gitignore
 **If NOT in .gitignore:**
 
 Per Jesse's rule "Fix broken things immediately":
+
 1. Add appropriate line to .gitignore
 2. Commit the change
 3. Proceed with worktree creation
@@ -143,31 +144,35 @@ Ready to implement <feature-name>
 
 ## Quick Reference
 
-| Situation | Action |
-|-----------|--------|
-| `.worktrees/` exists | Use it (verify .gitignore) |
-| `worktrees/` exists | Use it (verify .gitignore) |
-| Both exist | Use `.worktrees/` |
-| Neither exists | Check CLAUDE.md → Ask user |
+| Situation                   | Action                      |
+| --------------------------- | --------------------------- |
+| `.worktrees/` exists        | Use it (verify .gitignore)  |
+| `worktrees/` exists         | Use it (verify .gitignore)  |
+| Both exist                  | Use `.worktrees/`           |
+| Neither exists              | Check GEMINI.md → Ask user  |
 | Directory not in .gitignore | Add it immediately + commit |
-| Tests fail during baseline | Report failures + ask |
-| No package.json/Cargo.toml | Skip dependency install |
+| Tests fail during baseline  | Report failures + ask       |
+| No package.json/Cargo.toml  | Skip dependency install     |
 
 ## Common Mistakes
 
 **Skipping .gitignore verification**
+
 - **Problem:** Worktree contents get tracked, pollute git status
 - **Fix:** Always grep .gitignore before creating project-local worktree
 
 **Assuming directory location**
+
 - **Problem:** Creates inconsistency, violates project conventions
-- **Fix:** Follow priority: existing > CLAUDE.md > ask
+- **Fix:** Follow priority: existing > GEMINI.md > ask
 
 **Proceeding with failing tests**
+
 - **Problem:** Can't distinguish new bugs from pre-existing issues
 - **Fix:** Report failures, get explicit permission to proceed
 
 **Hardcoding setup commands**
+
 - **Problem:** Breaks on projects using different tools
 - **Fix:** Auto-detect from project files (package.json, etc.)
 
@@ -190,14 +195,16 @@ Ready to implement auth feature
 ## Red Flags
 
 **Never:**
+
 - Create worktree without .gitignore verification (project-local)
 - Skip baseline test verification
 - Proceed with failing tests without asking
 - Assume directory location when ambiguous
-- Skip CLAUDE.md check
+- Skip GEMINI.md check
 
 **Always:**
-- Follow directory priority: existing > CLAUDE.md > ask
+
+- Follow directory priority: existing > GEMINI.md > ask
 - Verify .gitignore for project-local
 - Auto-detect and run project setup
 - Verify clean test baseline
@@ -205,9 +212,11 @@ Ready to implement auth feature
 ## Integration
 
 **Called by:**
+
 - **brainstorming** (Phase 4) - REQUIRED when design is approved and implementation follows
 - Any skill needing isolated workspace
 
 **Pairs with:**
+
 - **finishing-a-development-branch** - REQUIRED for cleanup after work complete
 - **executing-plans** or **subagent-driven-development** - Work happens in this worktree

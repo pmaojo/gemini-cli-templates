@@ -35,6 +35,7 @@ No additional auth configuration needed! Gemini CLI handles everything.
 ### Supported Services
 
 **Known OAuth-enabled MCP servers:**
+
 - Asana: `https://mcp.asana.com/sse`
 - GitHub (when available)
 - Google services (when available)
@@ -45,10 +46,12 @@ No additional auth configuration needed! Gemini CLI handles everything.
 OAuth scopes are determined by the MCP server. Users see required scopes during the consent flow.
 
 **Document required scopes in your README:**
+
 ```markdown
 ## Authentication
 
 This plugin requires the following Asana permissions:
+
 - Read tasks and projects
 - Create and update tasks
 - Access workspace data
@@ -57,6 +60,7 @@ This plugin requires the following Asana permissions:
 ### Token Storage
 
 Tokens are stored securely by Gemini CLI:
+
 - Not accessible to plugins
 - Encrypted at rest
 - Automatic refresh
@@ -65,15 +69,18 @@ Tokens are stored securely by Gemini CLI:
 ### Troubleshooting OAuth
 
 **Authentication loop:**
+
 - Clear cached tokens (sign out and sign in)
 - Check OAuth redirect URLs
 - Verify server OAuth configuration
 
 **Scope issues:**
+
 - User may need to re-authorize for new scopes
 - Check server documentation for required scopes
 
 **Token expiration:**
+
 - Gemini CLI auto-refreshes
 - If refresh fails, prompts re-authentication
 
@@ -84,6 +91,7 @@ Tokens are stored securely by Gemini CLI:
 Most common for HTTP and WebSocket servers.
 
 **Configuration:**
+
 ```json
 {
   "api": {
@@ -97,6 +105,7 @@ Most common for HTTP and WebSocket servers.
 ```
 
 **Environment variable:**
+
 ```bash
 export API_TOKEN="your-secret-token-here"
 ```
@@ -106,6 +115,7 @@ export API_TOKEN="your-secret-token-here"
 Alternative to Bearer tokens, often in custom headers.
 
 **Configuration:**
+
 ```json
 {
   "api": {
@@ -124,6 +134,7 @@ Alternative to Bearer tokens, often in custom headers.
 Services may use custom authentication headers.
 
 **Configuration:**
+
 ```json
 {
   "service": {
@@ -164,10 +175,11 @@ export API_SECRET="your-secret-here"
 ### Token Permissions
 
 The API token needs the following permissions:
+
 - Read access to resources
 - Write access for creating items
 - Delete access (optional, for cleanup operations)
-\`\`\`
+  \`\`\`
 ```
 
 ## Environment Variable Authentication (stdio)
@@ -235,12 +247,13 @@ For tokens that change or expire, use a helper script:
   "api": {
     "type": "sse",
     "url": "https://api.example.com",
-    "headersHelper": "${CLAUDE_PLUGIN_ROOT}/scripts/get-headers.sh"
+    "headersHelper": "${GEMINI_PLUGIN_ROOT}/scripts/get-headers.sh"
   }
 }
 ```
 
 **Script (get-headers.sh):**
+
 ```bash
 #!/bin/bash
 # Generate dynamic authentication headers
@@ -269,6 +282,7 @@ EOF
 ### DO
 
 ✅ **Use environment variables:**
+
 ```json
 {
   "headers": {
@@ -290,10 +304,11 @@ EOF
 ### DON'T
 
 ❌ **Hardcode tokens:**
+
 ```json
 {
   "headers": {
-    "Authorization": "Bearer sk-abc123..."  // NEVER!
+    "Authorization": "Bearer sk-abc123..." // NEVER!
   }
 }
 ```
@@ -313,6 +328,7 @@ EOF
 ### Workspace/Tenant Selection
 
 **Via environment variable:**
+
 ```json
 {
   "api": {
@@ -327,6 +343,7 @@ EOF
 ```
 
 **Via URL:**
+
 ```json
 {
   "api": {
@@ -350,18 +367,21 @@ export TENANT_ID="my-company"
 ### Common Issues
 
 **401 Unauthorized:**
+
 - Check token is set correctly
 - Verify token hasn't expired
 - Check token has required permissions
 - Ensure header format is correct
 
 **403 Forbidden:**
+
 - Token valid but lacks permissions
 - Check scope/permissions
 - Verify workspace/tenant ID
 - May need admin approval
 
 **Token not found:**
+
 ```bash
 # Check environment variable is set
 echo $API_TOKEN
@@ -371,6 +391,7 @@ export API_TOKEN="your-token"
 ```
 
 **Token in wrong format:**
+
 ```json
 // Correct
 "Authorization": "Bearer sk-abc123"
@@ -382,17 +403,20 @@ export API_TOKEN="your-token"
 ### Debugging Authentication
 
 **Enable debug mode:**
+
 ```bash
 gemini --debug
 ```
 
 Look for:
+
 - Authentication header values (sanitized)
 - OAuth flow progress
 - Token refresh attempts
 - Authentication errors
 
 **Test authentication separately:**
+
 ```bash
 # Test HTTP endpoint
 curl -H "Authorization: Bearer $API_TOKEN" \
@@ -406,6 +430,7 @@ curl -H "Authorization: Bearer $API_TOKEN" \
 ### From Hardcoded to Environment Variables
 
 **Before:**
+
 ```json
 {
   "headers": {
@@ -415,6 +440,7 @@ curl -H "Authorization: Bearer $API_TOKEN" \
 ```
 
 **After:**
+
 ```json
 {
   "headers": {
@@ -424,6 +450,7 @@ curl -H "Authorization: Bearer $API_TOKEN" \
 ```
 
 **Migration steps:**
+
 1. Add environment variable to plugin README
 2. Update configuration to use ${VAR}
 3. Test with variable set
@@ -433,6 +460,7 @@ curl -H "Authorization: Bearer $API_TOKEN" \
 ### From Basic Auth to OAuth
 
 **Before:**
+
 ```json
 {
   "headers": {
@@ -442,6 +470,7 @@ curl -H "Authorization: Bearer $API_TOKEN" \
 ```
 
 **After:**
+
 ```json
 {
   "type": "sse",
@@ -450,6 +479,7 @@ curl -H "Authorization: Bearer $API_TOKEN" \
 ```
 
 **Benefits:**
+
 - Better security
 - No credential management
 - Automatic token refresh
@@ -468,7 +498,7 @@ Some enterprise services require client certificates.
 ```json
 {
   "secure-api": {
-    "command": "${CLAUDE_PLUGIN_ROOT}/servers/mtls-wrapper",
+    "command": "${GEMINI_PLUGIN_ROOT}/servers/mtls-wrapper",
     "args": ["--cert", "${CLIENT_CERT}", "--key", "${CLIENT_KEY}"],
     "env": {
       "API_URL": "https://secure.example.com"
@@ -493,7 +523,7 @@ echo "{\"Authorization\": \"Bearer $JWT\"}"
 
 ```json
 {
-  "headersHelper": "${CLAUDE_PLUGIN_ROOT}/scripts/generate-jwt.sh"
+  "headersHelper": "${GEMINI_PLUGIN_ROOT}/scripts/generate-jwt.sh"
 }
 ```
 
@@ -541,6 +571,7 @@ EOF
 ## Conclusion
 
 Choose the authentication method that matches your MCP server's requirements:
+
 - **OAuth** for cloud services (easiest for users)
 - **Bearer tokens** for API services
 - **Environment variables** for stdio servers

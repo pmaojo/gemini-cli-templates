@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"[$(date '+%Y-%m-%d %H:%M:%S')] File modified: $CLAUDE_TOOL_FILE_PATH\" >> ~/.gemini/changes.log"
+            "command": "echo \"[$(date '+%Y-%m-%d %H:%M:%S')] File modified: $GEMINI_TOOL_FILE_PATH\" >> ~/.gemini/changes.log"
           }
         ]
       },
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"[$(date '+%Y-%m-%d %H:%M:%S')] File created: $CLAUDE_TOOL_FILE_PATH\" >> ~/.gemini/changes.log"
+            "command": "echo \"[$(date '+%Y-%m-%d %H:%M:%S')] File created: $GEMINI_TOOL_FILE_PATH\" >> ~/.gemini/changes.log"
           }
         ]
       }

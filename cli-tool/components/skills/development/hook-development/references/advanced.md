@@ -14,7 +14,7 @@ Combine command and prompt hooks for layered validation:
       "hooks": [
         {
           "type": "command",
-          "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/quick-check.sh",
+          "command": "bash ${GEMINI_PLUGIN_ROOT}/scripts/quick-check.sh",
           "timeout": 5
         },
         {
@@ -31,6 +31,7 @@ Combine command and prompt hooks for layered validation:
 **Use case:** Fast deterministic checks followed by intelligent analysis
 
 **Example quick-check.sh:**
+
 ```bash
 #!/bin/bash
 input=$(cat)
@@ -65,11 +66,13 @@ input=$(cat)
 ```
 
 **Use cases:**
+
 - Different behavior in CI vs local development
 - Project-specific validation
 - User-specific rules
 
 **Example: Skip certain checks for trusted users:**
+
 ```bash
 #!/bin/bash
 # Skip detailed checks for admin users
@@ -118,7 +121,7 @@ Modify hook behavior based on project configuration:
 
 ```bash
 #!/bin/bash
-cd "$CLAUDE_PROJECT_DIR" || exit 1
+cd "$GEMINI_PROJECT_DIR" || exit 1
 
 # Read project-specific config
 if [ -f ".gemini-hooks-config.json" ]; then
@@ -135,6 +138,7 @@ fi
 ```
 
 **Example .gemini-hooks-config.json:**
+
 ```json
 {
   "strict_mode": true,
@@ -205,17 +209,17 @@ Since hooks run in parallel, design them to be independent:
       "hooks": [
         {
           "type": "command",
-          "command": "bash check-size.sh",      // Independent
+          "command": "bash check-size.sh", // Independent
           "timeout": 2
         },
         {
           "type": "command",
-          "command": "bash check-path.sh",      // Independent
+          "command": "bash check-path.sh", // Independent
           "timeout": 2
         },
         {
           "type": "prompt",
-          "prompt": "Check content safety",     // Independent
+          "prompt": "Check content safety", // Independent
           "timeout": 10
         }
       ]
@@ -231,6 +235,7 @@ All three hooks run simultaneously, reducing total latency.
 Coordinate hooks across different events:
 
 **SessionStart - Set up tracking:**
+
 ```bash
 #!/bin/bash
 # Initialize session tracking
@@ -239,6 +244,7 @@ echo "0" > /tmp/build-count-$$
 ```
 
 **PostToolUse - Track events:**
+
 ```bash
 #!/bin/bash
 input=$(cat)
@@ -254,6 +260,7 @@ fi
 ```
 
 **Stop - Verify based on tracking:**
+
 ```bash
 #!/bin/bash
 test_count=$(cat /tmp/test-count-$$ 2>/dev/null || echo "0")
@@ -410,9 +417,9 @@ Create test scenarios that exercise the full hook workflow:
 #!/bin/bash
 
 # Set up test environment
-export CLAUDE_PROJECT_DIR="/tmp/test-project"
-export CLAUDE_PLUGIN_ROOT="$(pwd)"
-mkdir -p "$CLAUDE_PROJECT_DIR"
+export GEMINI_PROJECT_DIR="/tmp/test-project"
+export GEMINI_PLUGIN_ROOT="$(pwd)"
+mkdir -p "$GEMINI_PROJECT_DIR"
 
 # Test SessionStart hook
 echo '{}' | bash hooks/session-start.sh
@@ -423,7 +430,7 @@ else
 fi
 
 # Clean up
-rm -rf "$CLAUDE_PROJECT_DIR"
+rm -rf "$GEMINI_PROJECT_DIR"
 ```
 
 ## Best Practices for Advanced Hooks

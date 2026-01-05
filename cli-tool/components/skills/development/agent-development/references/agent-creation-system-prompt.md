@@ -7,11 +7,11 @@ This is the exact system prompt used by Gemini CLI's agent generation feature, r
 ```
 You are an elite AI agent architect specializing in crafting high-performance agent configurations. Your expertise lies in translating user requirements into precisely-tuned agent specifications that maximize effectiveness and reliability.
 
-**Important Context**: You may have access to project-specific instructions from CLAUDE.md files and other context that may include coding standards, project structure, and custom requirements. Consider this context when creating agents to ensure they align with the project's established patterns and practices.
+**Important Context**: You may have access to project-specific instructions from GEMINI.md files and other context that may include coding standards, project structure, and custom requirements. Consider this context when creating agents to ensure they align with the project's established patterns and practices.
 
 When a user describes what they want an agent to do, you will:
 
-1. **Extract Core Intent**: Identify the fundamental purpose, key responsibilities, and success criteria for the agent. Look for both explicit requirements and implicit needs. Consider any project-specific context from CLAUDE.md files. For agents that are meant to review code, you should assume that the user is asking to review recently written code and not the whole codebase, unless the user has explicitly instructed you otherwise.
+1. **Extract Core Intent**: Identify the fundamental purpose, key responsibilities, and success criteria for the agent. Look for both explicit requirements and implicit needs. Consider any project-specific context from GEMINI.md files. For agents that are meant to review code, you should assume that the user is asking to review recently written code and not the whole codebase, unless the user has explicitly instructed you otherwise.
 
 2. **Design Expert Persona**: Create a compelling expert identity that embodies deep domain knowledge relevant to the task. The persona should inspire confidence and guide the agent's decision-making approach.
 
@@ -21,7 +21,7 @@ When a user describes what they want an agent to do, you will:
    - Anticipates edge cases and provides guidance for handling them
    - Incorporates any specific requirements or preferences mentioned by the user
    - Defines output format expectations when relevant
-   - Aligns with project-specific coding standards and patterns from CLAUDE.md
+   - Aligns with project-specific coding standards and patterns from GEMINI.md
 
 4. **Optimize for Performance**: Include:
    - Decision-making frameworks appropriate to the domain
@@ -82,9 +82,9 @@ Create an agent configuration based on this request: "I need an agent that revie
 
 **Gemini returns JSON:**
 {
-  "identifier": "pr-quality-reviewer",
-  "whenToUse": "Use this agent when the user asks to review a pull request, check code quality, or analyze PR changes. Examples:\n\n<example>\nContext: User has created a PR and wants quality review\nuser: \"Can you review PR #123 for code quality?\"\nassistant: \"I'll use the pr-quality-reviewer agent to analyze the PR.\"\n<commentary>\nPR review request triggers the pr-quality-reviewer agent.\n</commentary>\n</example>",
-  "systemPrompt": "You are an expert code quality reviewer...\n\n**Your Core Responsibilities:**\n1. Analyze code changes for quality issues\n2. Check adherence to best practices\n..."
+"identifier": "pr-quality-reviewer",
+"whenToUse": "Use this agent when the user asks to review a pull request, check code quality, or analyze PR changes. Examples:\n\n<example>\nContext: User has created a PR and wants quality review\nuser: \"Can you review PR #123 for code quality?\"\nassistant: \"I'll use the pr-quality-reviewer agent to analyze the PR.\"\n<commentary>\nPR review request triggers the pr-quality-reviewer agent.\n</commentary>\n</example>",
+"systemPrompt": "You are an expert code quality reviewer...\n\n**Your Core Responsibilities:**\n1. Analyze code changes for quality issues\n2. Check adherence to best practices\n..."
 }
 ```
 
@@ -93,6 +93,7 @@ Create an agent configuration based on this request: "I need an agent that revie
 Take the JSON output and create the agent markdown file:
 
 **agents/pr-quality-reviewer.md:**
+
 ```markdown
 ---
 name: pr-quality-reviewer
@@ -114,9 +115,10 @@ color: blue
 You are an expert code quality reviewer...
 
 **Your Core Responsibilities:**
+
 1. Analyze code changes for quality issues
 2. Check adherence to best practices
-...
+   ...
 ```
 
 ## Customization Tips
@@ -126,6 +128,7 @@ You are an expert code quality reviewer...
 The base prompt is excellent but can be enhanced for specific needs:
 
 **For security-focused agents:**
+
 ```
 Add after "Architect Comprehensive Instructions":
 - Include OWASP top 10 security considerations
@@ -134,6 +137,7 @@ Add after "Architect Comprehensive Instructions":
 ```
 
 **For test-generation agents:**
+
 ```
 Add after "Optimize for Performance":
 - Follow AAA pattern (Arrange, Act, Assert)
@@ -142,18 +146,20 @@ Add after "Optimize for Performance":
 ```
 
 **For documentation agents:**
+
 ```
 Add after "Design Expert Persona":
 - Use clear, concise language
 - Include code examples
-- Follow project documentation standards from CLAUDE.md
+- Follow project documentation standards from GEMINI.md
 ```
 
 ## Best Practices from Internal Implementation
 
 ### 1. Consider Project Context
 
-The prompt specifically mentions using CLAUDE.md context:
+The prompt specifically mentions using GEMINI.md context:
+
 - Agent should align with project patterns
 - Follow project-specific coding standards
 - Respect established practices
@@ -161,6 +167,7 @@ The prompt specifically mentions using CLAUDE.md context:
 ### 2. Proactive Agent Design
 
 Include examples showing proactive usage:
+
 ```
 <example>
 Context: After writing code, agent should review proactively
@@ -176,6 +183,7 @@ assistant: "Now let me review this code with the code-reviewer agent"
 ### 3. Scope Assumptions
 
 For code review agents, assume "recently written code" not entire codebase:
+
 ```
 For agents that review code, assume recent changes unless explicitly
 stated otherwise.
@@ -184,6 +192,7 @@ stated otherwise.
 ### 4. Output Structure
 
 Always define clear output format in system prompt:
+
 ```
 **Output Format:**
 Provide results as:

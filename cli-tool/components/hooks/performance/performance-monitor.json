@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"$(date +%s.%N),$(ps -o %cpu= -p $$),$(ps -o rss= -p $$),$CLAUDE_TOOL_NAME,start\" >> ~/.gemini/performance.csv"
+            "command": "echo \"$(date +%s.%N),$(ps -o %cpu= -p $$),$(ps -o rss= -p $$),$GEMINI_TOOL_NAME,start\" >> ~/.gemini/performance.csv"
           }
         ]
       }
@@ -18,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"$(date +%s.%N),$(ps -o %cpu= -p $$),$(ps -o rss= -p $$),$CLAUDE_TOOL_NAME,end\" >> ~/.gemini/performance.csv; if [[ $(wc -l < ~/.gemini/performance.csv) -gt 1000 ]]; then tail -n 500 ~/.gemini/performance.csv > ~/.gemini/performance.csv.tmp && mv ~/.gemini/performance.csv.tmp ~/.gemini/performance.csv; fi"
+            "command": "echo \"$(date +%s.%N),$(ps -o %cpu= -p $$),$(ps -o rss= -p $$),$GEMINI_TOOL_NAME,end\" >> ~/.gemini/performance.csv; if [[ $(wc -l < ~/.gemini/performance.csv) -gt 1000 ]]; then tail -n 500 ~/.gemini/performance.csv > ~/.gemini/performance.csv.tmp && mv ~/.gemini/performance.csv.tmp ~/.gemini/performance.csv; fi"
           }
         ]
       }

@@ -1,16 +1,16 @@
 {
   "description": "Connect Gemini CLI with Google Vertex AI to access Google's Gemini models through Google Cloud Platform. Automatically configures all available Gemini models (Sonnet, Haiku, Opus) with enterprise-grade infrastructure, billing, and security. Requires: GCP project with Vertex AI API enabled, authenticated gcloud CLI, and model access approval in Model Garden.",
   "env": {
-    "CLAUDE_CODE_USE_VERTEX": "1",
+    "GEMINI_CODE_USE_VERTEX": "1",
     "CLOUD_ML_REGION": "global",
     "Google_VERTEX_PROJECT_ID": "your-gcp-project-id",
-    "VERTEX_REGION_CLAUDE_3_5_SONNET": "global",
-    "VERTEX_REGION_CLAUDE_3_5_HAIKU": "global",
-    "VERTEX_REGION_CLAUDE_3_7_SONNET": "global",
-    "VERTEX_REGION_CLAUDE_4_0_OPUS": "global",
-    "VERTEX_REGION_CLAUDE_4_0_SONNET": "global",
-    "VERTEX_REGION_CLAUDE_4_1_OPUS": "global",
-    "VERTEX_REGION_CLAUDE_4_5_SONNET": "global",
+    "VERTEX_REGION_GEMINI_3_5_SONNET": "global",
+    "VERTEX_REGION_GEMINI_3_5_HAIKU": "global",
+    "VERTEX_REGION_GEMINI_3_7_SONNET": "global",
+    "VERTEX_REGION_GEMINI_4_0_OPUS": "global",
+    "VERTEX_REGION_GEMINI_4_0_SONNET": "global",
+    "VERTEX_REGION_GEMINI_4_1_OPUS": "global",
+    "VERTEX_REGION_GEMINI_4_5_SONNET": "global",
     "Google_MODEL": "gemini-sonnet-4-5@20250929",
     "Google_SMALL_FAST_MODEL": "gemini-3-5-haiku@20241022"
   }

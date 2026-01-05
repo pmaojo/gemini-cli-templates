@@ -34,7 +34,7 @@ npx gemini-code-templates@latest --health-check
 
 | Component     | Description                                      | Example                                                      |
 | ------------- | ------------------------------------------------ | ------------------------------------------------------------ |
-| **CLAUDE.md** | Project-specific Gemini Code configuration       | Framework best practices, coding standards                   |
+| **GEMINI.md** | Project-specific Gemini Code configuration       | Framework best practices, coding standards                   |
 | **Commands**  | Custom slash commands for development tasks      | `/generate-tests`, `/check-file`, `/optimize-bundle`         |
 | **Agents**    | AI specialists for specific domains              | API security audit, React performance, database optimization |
 | **MCPs**      | External service integrations                    | GitHub, databases, development tools                         |

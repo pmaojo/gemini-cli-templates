@@ -11,6 +11,29 @@ class StateCalculator {
   }
 
   /**
+   * Get time since last activity in milliseconds
+   * @param {Date|string} timestamp - Last activity timestamp
+   * @returns {number} Milliseconds since activity
+   */
+  getTimeSinceLastActivity(timestamp) {
+    if (!timestamp) return 0;
+    const date = new Date(timestamp);
+    if (isNaN(date.getTime())) return 0;
+    return Date.now() - date.getTime();
+  }
+
+  /**
+   * Check if activity is recent (within 1 hour)
+   * @param {Date|string} timestamp - Activity timestamp
+   * @returns {boolean} True if within 1 hour
+   */
+  isRecentActivity(timestamp) {
+    if (!timestamp) return false;
+    const diff = this.getTimeSinceLastActivity(timestamp);
+    return diff > 0 && diff < 3600000; // 1 hour
+  }
+
+  /**
    * Main state determination logic with process information
    * @param {Array} messages - Parsed conversation messages
    * @param {Date} lastModified - File last modification time
@@ -19,11 +42,14 @@ class StateCalculator {
    */
   determineConversationState(messages, lastModified, runningProcess = null) {
     const now = new Date();
-    const fileTimeDiff = now - lastModified;
+    const safeMessages = Array.isArray(messages) ? messages.filter(m => m && m.timestamp) : [];
+    const safeLastModified = lastModified instanceof Date ? lastModified : (lastModified ? new Date(lastModified) : new Date(0));
+    
+    const fileTimeDiff = now - safeLastModified;
     const fileMinutesAgo = fileTimeDiff / (1000 * 60);
 
     // Enhanced detection: Look for real Gemini CLI activity indicators
-    const geminiActivity = this.detectRealGeminiActivity(messages, lastModified);
+    const geminiActivity = this.detectRealGeminiActivity(safeMessages, safeLastModified);
     if (geminiActivity.isActive) {
       return geminiActivity.status;
     }
@@ -144,29 +170,34 @@ class StateCalculator {
    */
   determineConversationStatus(messages, lastModified) {
     const now = new Date();
-    const timeDiff = now - lastModified;
+    const safeMessages = Array.isArray(messages) ? messages.filter(m => m && m.timestamp) : [];
+    const safeLastModified = lastModified instanceof Date ? lastModified : (lastModified ? new Date(lastModified) : new Date(0));
+    
+    const timeDiff = now - safeLastModified;
     const minutesAgo = timeDiff / (1000 * 60);
 
-    if (messages.length === 0) {
-      return minutesAgo < 5 ? 'active' : 'inactive';
+    if (safeMessages.length === 0) {
+      return minutesAgo < 5 ? 'active' : 'idle';
     }
 
     // Sort messages by timestamp
-    const sortedMessages = messages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    const sortedMessages = [...safeMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
     const lastMessage = sortedMessages[sortedMessages.length - 1];
     const lastMessageTime = new Date(lastMessage.timestamp);
     const lastMessageMinutesAgo = (now - lastMessageTime) / (1000 * 60);
 
     // More balanced logic - active conversations and recent activity
-    if (lastMessage.role === 'user' && lastMessageMinutesAgo < 3) {
+    if (lastMessage.role === 'user') {
+      if (lastMessageMinutesAgo < 5) return 'waiting';
       return 'active';
-    } else if (lastMessage.role === 'assistant' && lastMessageMinutesAgo < 5) {
+    } else if (lastMessage.role === 'assistant') {
+      if (lastMessageMinutesAgo < 10) return 'completed';
       return 'active';
     }
 
     // Use file modification time for recent activity
     if (minutesAgo < 5) return 'active';
-    if (minutesAgo < 30) return 'recent';
+    if (minutesAgo < 60) return 'idle';
     return 'inactive';
   }
 

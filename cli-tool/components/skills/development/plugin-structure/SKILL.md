@@ -1,6 +1,6 @@
 ---
 name: Plugin Structure
-description: This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "set up plugin.json", "use ${CLAUDE_PLUGIN_ROOT}", "add commands/agents/skills/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Gemini CLI plugin architecture best practices.
+description: This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "set up plugin.json", "use ${GEMINI_PLUGIN_ROOT}", "add commands/agents/skills/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, manifest configuration, component organization, file naming conventions, or Gemini CLI plugin architecture best practices.
 version: 0.1.0
 ---
 
@@ -11,10 +11,11 @@ version: 0.1.0
 Gemini CLI plugins follow a standardized directory structure with automatic component discovery. Understanding this structure enables creating well-organized, maintainable plugins that integrate seamlessly with Gemini CLI.
 
 **Key concepts:**
+
 - Conventional directory layout for automatic discovery
 - Manifest-driven configuration in `.gemini-plugin/plugin.json`
 - Component-based organization (commands, agents, skills, hooks)
-- Portable path references using `${CLAUDE_PLUGIN_ROOT}`
+- Portable path references using `${GEMINI_PLUGIN_ROOT}`
 - Explicit vs. auto-discovered component loading
 
 ## Directory Structure
@@ -56,6 +57,7 @@ The manifest defines plugin metadata and configuration. Located at `.gemini-plug
 ```
 
 **Name requirements:**
+
 - Use kebab-case format (lowercase with hyphens)
 - Must be unique across installed plugins
 - No spaces or special characters
@@ -100,6 +102,7 @@ Specify custom paths for components (supplements default directories):
 **Important**: Custom paths supplement defaults—they don't replace them. Components in both default directories and custom paths will load.
 
 **Path rules:**
+
 - Must be relative to plugin root
 - Must start with `./`
 - Cannot use absolute paths
@@ -114,6 +117,7 @@ Specify custom paths for components (supplements default directories):
 **Auto-discovery**: All `.md` files in `commands/` load automatically
 
 **Example structure**:
+
 ```
 commands/
 ├── review.md        # /review command
@@ -122,6 +126,7 @@ commands/
 ```
 
 **File format**:
+
 ```markdown
 ---
 name: command-name
@@ -140,6 +145,7 @@ Command implementation instructions...
 **Auto-discovery**: All `.md` files in `agents/` load automatically
 
 **Example structure**:
+
 ```
 agents/
 ├── code-reviewer.md
@@ -148,6 +154,7 @@ agents/
 ```
 
 **File format**:
+
 ```markdown
 ---
 description: Agent role and expertise
@@ -168,6 +175,7 @@ Detailed agent instructions and knowledge...
 **Auto-discovery**: All `SKILL.md` files in skill subdirectories load automatically
 
 **Example structure**:
+
 ```
 skills/
 ├── api-testing/
@@ -183,6 +191,7 @@ skills/
 ```
 
 **SKILL.md format**:
+
 ```markdown
 ---
 name: Skill Name
@@ -204,6 +213,7 @@ Skill instructions and guidance...
 **Registration**: Hooks register automatically when plugin enables
 
 **Example structure**:
+
 ```
 hooks/
 ├── hooks.json           # Hook configuration
@@ -213,16 +223,21 @@ hooks/
 ```
 
 **Configuration format**:
+
 ```json
 {
-  "PreToolUse": [{
-    "matcher": "Write|Edit",
-    "hooks": [{
-      "type": "command",
-      "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/validate.sh",
-      "timeout": 30
-    }]
-  }]
+  "PreToolUse": [
+    {
+      "matcher": "Write|Edit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "bash ${GEMINI_PLUGIN_ROOT}/hooks/scripts/validate.sh",
+          "timeout": 30
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -237,12 +252,13 @@ hooks/
 **Auto-start**: Servers start automatically when plugin enables
 
 **Example format**:
+
 ```json
 {
   "mcpServers": {
     "server-name": {
       "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/servers/server.js"],
+      "args": ["${GEMINI_PLUGIN_ROOT}/servers/server.js"],
       "env": {
         "API_KEY": "${API_KEY}"
       }
@@ -255,28 +271,31 @@ hooks/
 
 ## Portable Path References
 
-### ${CLAUDE_PLUGIN_ROOT}
+### ${GEMINI_PLUGIN_ROOT}
 
-Use `${CLAUDE_PLUGIN_ROOT}` environment variable for all intra-plugin path references:
+Use `${GEMINI_PLUGIN_ROOT}` environment variable for all intra-plugin path references:
 
 ```json
 {
-  "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/run.sh"
+  "command": "bash ${GEMINI_PLUGIN_ROOT}/scripts/run.sh"
 }
 ```
 
 **Why it matters**: Plugins install in different locations depending on:
+
 - User installation method (marketplace, local, npm)
 - Operating system conventions
 - User preferences
 
 **Where to use it**:
+
 - Hook command paths
 - MCP server command arguments
 - Script execution references
 - Resource file paths
 
 **Never use**:
+
 - Hardcoded absolute paths (`/Users/name/plugins/...`)
 - Relative paths from working directory (`./scripts/...` in commands)
 - Home directory shortcuts (`~/plugins/...`)
@@ -284,20 +303,23 @@ Use `${CLAUDE_PLUGIN_ROOT}` environment variable for all intra-plugin path refer
 ### Path Resolution Rules
 
 **In manifest JSON fields** (hooks, MCP servers):
+
 ```json
-"command": "${CLAUDE_PLUGIN_ROOT}/scripts/tool.sh"
+"command": "${GEMINI_PLUGIN_ROOT}/scripts/tool.sh"
 ```
 
 **In component files** (commands, agents, skills):
+
 ```markdown
-Reference scripts at: ${CLAUDE_PLUGIN_ROOT}/scripts/helper.py
+Reference scripts at: ${GEMINI_PLUGIN_ROOT}/scripts/helper.py
 ```
 
 **In executed scripts**:
+
 ```bash
 #!/bin/bash
-# ${CLAUDE_PLUGIN_ROOT} available as environment variable
-source "${CLAUDE_PLUGIN_ROOT}/lib/common.sh"
+# ${GEMINI_PLUGIN_ROOT} available as environment variable
+source "${GEMINI_PLUGIN_ROOT}/lib/common.sh"
 ```
 
 ## File Naming Conventions
@@ -305,16 +327,19 @@ source "${CLAUDE_PLUGIN_ROOT}/lib/common.sh"
 ### Component Files
 
 **Commands**: Use kebab-case `.md` files
+
 - `code-review.md` → `/code-review`
 - `run-tests.md` → `/run-tests`
 - `api-docs.md` → `/api-docs`
 
 **Agents**: Use kebab-case `.md` files describing role
+
 - `test-generator.md`
 - `code-reviewer.md`
 - `performance-analyzer.md`
 
 **Skills**: Use kebab-case directory names
+
 - `api-testing/`
 - `database-migrations/`
 - `error-handling/`
@@ -322,16 +347,19 @@ source "${CLAUDE_PLUGIN_ROOT}/lib/common.sh"
 ### Supporting Files
 
 **Scripts**: Use descriptive kebab-case names with appropriate extensions
+
 - `validate-input.sh`
 - `generate-report.py`
 - `process-data.js`
 
 **Documentation**: Use kebab-case markdown files
+
 - `api-reference.md`
 - `migration-guide.md`
 - `best-practices.md`
 
 **Configuration**: Use standard names
+
 - `hooks.json`
 - `.mcp.json`
 - `plugin.json`
@@ -348,6 +376,7 @@ Gemini CLI automatically discovers and loads components:
 6. **MCP servers**: Loads configuration from `.mcp.json` or manifest
 
 **Discovery timing**:
+
 - Plugin installation: Components register with Gemini CLI
 - Plugin enable: Components become available for use
 - No restart required: Changes take effect on next Gemini CLI session
@@ -359,10 +388,12 @@ Gemini CLI automatically discovers and loads components:
 ### Organization
 
 1. **Logical grouping**: Group related components together
+
    - Put test-related commands, agents, and skills together
    - Create subdirectories in `scripts/` for different purposes
 
 2. **Minimal manifest**: Keep `plugin.json` lean
+
    - Only specify custom paths when necessary
    - Rely on auto-discovery for standard layouts
    - Use inline configuration only for simple cases
@@ -375,10 +406,12 @@ Gemini CLI automatically discovers and loads components:
 ### Naming
 
 1. **Consistency**: Use consistent naming across components
+
    - If command is `test-runner`, name related agent `test-runner-agent`
    - Match skill directory names to their purpose
 
 2. **Clarity**: Use descriptive names that indicate purpose
+
    - Good: `api-integration-testing/`, `code-quality-checker.md`
    - Avoid: `utils/`, `misc.md`, `temp.sh`
 
@@ -389,7 +422,7 @@ Gemini CLI automatically discovers and loads components:
 
 ### Portability
 
-1. **Always use ${CLAUDE_PLUGIN_ROOT}**: Never hardcode paths
+1. **Always use ${GEMINI_PLUGIN_ROOT}**: Never hardcode paths
 2. **Test on multiple systems**: Verify on macOS, Linux, Windows
 3. **Document dependencies**: List required tools and versions
 4. **Avoid system-specific features**: Use portable bash/Python constructs
@@ -406,6 +439,7 @@ Gemini CLI automatically discovers and loads components:
 ### Minimal Plugin
 
 Single command with no dependencies:
+
 ```
 my-plugin/
 ├── .gemini-plugin/
@@ -417,6 +451,7 @@ my-plugin/
 ### Full-Featured Plugin
 
 Complete plugin with all component types:
+
 ```
 my-plugin/
 ├── .gemini-plugin/
@@ -434,6 +469,7 @@ my-plugin/
 ### Skill-Focused Plugin
 
 Plugin providing only skills:
+
 ```
 my-plugin/
 ├── .gemini-plugin/
@@ -448,24 +484,28 @@ my-plugin/
 ## Troubleshooting
 
 **Component not loading**:
+
 - Verify file is in correct directory with correct extension
 - Check YAML frontmatter syntax (commands, agents, skills)
 - Ensure skill has `SKILL.md` (not `README.md` or other name)
 - Confirm plugin is enabled in Gemini CLI settings
 
 **Path resolution errors**:
-- Replace all hardcoded paths with `${CLAUDE_PLUGIN_ROOT}`
+
+- Replace all hardcoded paths with `${GEMINI_PLUGIN_ROOT}`
 - Verify paths are relative and start with `./` in manifest
 - Check that referenced files exist at specified paths
-- Test with `echo $CLAUDE_PLUGIN_ROOT` in hook scripts
+- Test with `echo $GEMINI_PLUGIN_ROOT` in hook scripts
 
 **Auto-discovery not working**:
+
 - Confirm directories are at plugin root (not in `.gemini-plugin/`)
 - Check file naming follows conventions (kebab-case, correct extensions)
 - Verify custom paths in manifest are correct
 - Restart Gemini CLI to reload plugin configuration
 
 **Conflicts between plugins**:
+
 - Use unique, descriptive component names
 - Namespace commands with plugin name if needed
 - Document potential conflicts in plugin README

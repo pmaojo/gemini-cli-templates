@@ -36,7 +36,7 @@ npm run test:detailed
 
 # Test specific frameworks
 npm run test:react    # Test React setup
-npm run test:vue      # Test Vue setup  
+npm run test:vue      # Test Vue setup
 npm run test:node     # Test Node.js setup
 
 # Full test suite
@@ -104,7 +104,7 @@ node bin/create-gemini-config.js --dry-run --language javascript-typescript --fr
 - ✅ **Help & Version**: Basic commands respond correctly
 - ✅ **Language Support**: JavaScript/TypeScript, Common, Python, Rust, Go
 - ✅ **Framework Support**: React, Vue, Angular, Node.js, None
-- ✅ **File Creation**: CLAUDE.md, .gemini directory, settings.json
+- ✅ **File Creation**: GEMINI.md, .gemini directory, settings.json
 - ✅ **Framework Commands**: Framework-specific commands are created
 - ✅ **Dry Run Mode**: Preview mode works without creating files
 - ✅ **Error Handling**: Invalid languages/frameworks are rejected
@@ -112,21 +112,25 @@ node bin/create-gemini-config.js --dry-run --language javascript-typescript --fr
 ### Framework-Specific Tests:
 
 **React:**
+
 - Component creation commands
 - Hooks management commands
 - State management helpers
 
 **Vue.js:**
+
 - Component creation commands
 - Composables helpers
 - Vue 3 patterns
 
 **Angular:**
+
 - Component generation
 - Service creation
 - Dependency injection patterns
 
 **Node.js:**
+
 - API endpoint creation
 - Middleware helpers
 - Database integration
@@ -167,6 +171,7 @@ The `prepublishOnly` script automatically runs tests before publishing:
 ```
 
 This ensures that:
+
 - Templates are synchronized
 - All tests pass
 - Package is ready for publication
@@ -174,6 +179,7 @@ This ensures that:
 ## Test Environments
 
 ### Local Development
+
 ```bash
 npm run dev:link    # Install locally
 # ... test commands ...
@@ -181,6 +187,7 @@ npm run dev:unlink  # Remove when done
 ```
 
 ### CI/CD Pipeline
+
 ```bash
 npm ci              # Clean install
 npm test           # Run test suite
@@ -188,6 +195,7 @@ npm run build      # If applicable
 ```
 
 ### Production Testing
+
 ```bash
 # Test published version
 npx gemini-code-templates@latest --version
@@ -197,21 +205,24 @@ npx gemini-code-templates@latest --help
 ## Debugging Tests
 
 ### Verbose Output
+
 ```bash
 # Add verbose flag to see detailed output
 gemini-code-templates --language javascript-typescript --framework react --dry-run --yes --verbose
 ```
 
 ### Test Specific Scenarios
+
 ```bash
 # Create isolated test environment
 mkdir /tmp/test-gemini && cd /tmp/test-gemini
 gemini-code-templates --language javascript-typescript --framework react --yes
 ls -la .gemini/commands/
-cat CLAUDE.md
+cat GEMINI.md
 ```
 
 ### Check Generated Files
+
 ```bash
 # Verify file content
 find .gemini -name "*.md" -exec echo "=== {} ===" \; -exec cat {} \;
@@ -220,6 +231,7 @@ find .gemini -name "*.md" -exec echo "=== {} ===" \; -exec cat {} \;
 ## Common Issues & Solutions
 
 ### Permission Errors
+
 ```bash
 # If npm link fails due to permissions
 sudo npm link  # Use with caution
@@ -228,6 +240,7 @@ npm config set prefix ~/.npm-global
 ```
 
 ### Command Not Found
+
 ```bash
 # If linked command isn't found
 which gemini-code-templates
@@ -236,6 +249,7 @@ echo $PATH
 ```
 
 ### Template Sync Issues
+
 ```bash
 # Force sync before testing
 npm run sync

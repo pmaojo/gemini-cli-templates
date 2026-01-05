@@ -47,6 +47,15 @@ class GeminiAnalytics {
     this.cloudflareProcess = null;
     this.publicUrl = null;
     this.geminiApiProxy = null;
+    this.data = {
+      conversations: [],
+      summary: {},
+      activeProjects: [],
+      realtimeStats: {
+        totalConversations: 0,
+        totalTokens: 0,
+        activeProjects: 0,
+        lastActivity: null,
       },
     };
     
@@ -2390,11 +2399,7 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-class GeminiAnalytics {
-  constructor(options) {
-    // Existing constructor logic...
-    this.conversationAnalyzer = new ConversationAnalyzer(); // Initialize conversationAnalyzer
-  }
-
-  // ... other methods of GeminiAnalytics
-```
+module.exports = {
+  GeminiAnalytics,
+  runAnalytics
+};

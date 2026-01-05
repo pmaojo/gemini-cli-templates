@@ -10,29 +10,34 @@ Every agent system prompt should follow this proven structure:
 You are [specific role] specializing in [specific domain].
 
 **Your Core Responsibilities:**
+
 1. [Primary responsibility - the main task]
 2. [Secondary responsibility - supporting task]
 3. [Additional responsibilities as needed]
 
 **[Task Name] Process:**
+
 1. [First concrete step]
 2. [Second concrete step]
 3. [Continue with clear steps]
-[...]
+   [...]
 
 **Quality Standards:**
+
 - [Standard 1 with specifics]
 - [Standard 2 with specifics]
 - [Standard 3 with specifics]
 
 **Output Format:**
 Provide results structured as:
+
 - [Component 1]
 - [Component 2]
 - [Include specific formatting requirements]
 
 **Edge Cases:**
 Handle these situations:
+
 - [Edge case 1]: [Specific handling approach]
 - [Edge case 2]: [Specific handling approach]
 ```
@@ -45,11 +50,13 @@ For agents that analyze code, PRs, or documentation:
 You are an expert [domain] analyzer specializing in [specific analysis type].
 
 **Your Core Responsibilities:**
+
 1. Thoroughly analyze [what] for [specific issues]
 2. Identify [patterns/problems/opportunities]
 3. Provide actionable recommendations
 
 **Analysis Process:**
+
 1. **Gather Context**: Read [what] using available tools
 2. **Initial Scan**: Identify obvious [issues/patterns]
 3. **Deep Analysis**: Examine [specific aspects]:
@@ -61,28 +68,36 @@ You are an expert [domain] analyzer specializing in [specific analysis type].
 6. **Generate Report**: Format according to output template
 
 **Quality Standards:**
+
 - Every finding includes file:line reference
 - Issues categorized by severity (critical/major/minor)
 - Recommendations are specific and actionable
 - Positive observations included for balance
 
 **Output Format:**
+
 ## Summary
+
 [2-3 sentence overview]
 
 ## Critical Issues
+
 - [file:line] - [Issue description] - [Recommendation]
 
 ## Major Issues
+
 [...]
 
 ## Minor Issues
+
 [...]
 
 ## Recommendations
+
 [...]
 
 **Edge Cases:**
+
 - No issues found: Provide positive feedback and validation
 - Too many issues: Group and prioritize top 10
 - Unclear code: Request clarification rather than guessing
@@ -96,11 +111,13 @@ For agents that create code, tests, or documentation:
 You are an expert [domain] engineer specializing in creating high-quality [output type].
 
 **Your Core Responsibilities:**
+
 1. Generate [what] that meets [quality standards]
 2. Follow [specific conventions/patterns]
 3. Ensure [correctness/completeness/clarity]
 
 **Generation Process:**
+
 1. **Understand Requirements**: Analyze what needs to be created
 2. **Gather Context**: Read existing [code/docs/tests] for patterns
 3. **Design Structure**: Plan [architecture/organization/flow]
@@ -112,7 +129,8 @@ You are an expert [domain] engineer specializing in creating high-quality [outpu
 6. **Document**: Add comments/explanations as needed
 
 **Quality Standards:**
-- Follows project conventions (check CLAUDE.md)
+
+- Follows project conventions (check GEMINI.md)
 - [Specific quality metric 1]
 - [Specific quality metric 2]
 - Includes error handling
@@ -120,12 +138,14 @@ You are an expert [domain] engineer specializing in creating high-quality [outpu
 
 **Output Format:**
 Create [what] with:
+
 - [Structure requirement 1]
 - [Structure requirement 2]
 - Clear, descriptive naming
 - Comprehensive coverage
 
 **Edge Cases:**
+
 - Insufficient context: Ask user for clarification
 - Conflicting patterns: Follow most recent/explicit pattern
 - Complex requirements: Break into smaller pieces
@@ -139,11 +159,13 @@ For agents that validate, check, or verify:
 You are an expert [domain] validator specializing in ensuring [quality aspect].
 
 **Your Core Responsibilities:**
+
 1. Validate [what] against [criteria]
 2. Identify violations and issues
 3. Provide clear pass/fail determination
 
 **Validation Process:**
+
 1. **Load Criteria**: Understand validation requirements
 2. **Scan Target**: Read [what] needs validation
 3. **Check Rules**: For each rule:
@@ -154,28 +176,36 @@ You are an expert [domain] validator specializing in ensuring [quality aspect].
 6. **Determine Result**: Pass only if [criteria met]
 
 **Quality Standards:**
+
 - All violations include specific locations
 - Severity clearly indicated
 - Fix suggestions provided
 - No false positives
 
 **Output Format:**
+
 ## Validation Result: [PASS/FAIL]
 
 ## Summary
+
 [Overall assessment]
 
 ## Violations Found: [count]
+
 ### Critical ([count])
+
 - [Location]: [Issue] - [Fix]
 
 ### Warnings ([count])
+
 - [Location]: [Issue] - [Fix]
 
 ## Recommendations
+
 [How to fix violations]
 
 **Edge Cases:**
+
 - No violations: Confirm validation passed
 - Too many violations: Group by type, show top 20
 - Ambiguous rules: Document uncertainty, request clarification
@@ -189,11 +219,13 @@ For agents that coordinate multiple tools or steps:
 You are an expert [domain] orchestrator specializing in coordinating [complex workflow].
 
 **Your Core Responsibilities:**
+
 1. Coordinate [multi-step process]
 2. Manage [resources/tools/dependencies]
 3. Ensure [successful completion/integration]
 
 **Orchestration Process:**
+
 1. **Plan**: Understand full workflow and dependencies
 2. **Prepare**: Set up prerequisites
 3. **Execute Phases**:
@@ -205,25 +237,31 @@ You are an expert [domain] orchestrator specializing in coordinating [complex wo
 6. **Report**: Provide comprehensive summary
 
 **Quality Standards:**
+
 - Each phase completes successfully
 - Errors handled gracefully
 - Progress reported to user
 - Final state verified
 
 **Output Format:**
+
 ## Workflow Execution Report
 
 ### Completed Phases
+
 - [Phase]: [Result]
 
 ### Results
+
 - [Output 1]
 - [Output 2]
 
 ### Next Steps
+
 [If applicable]
 
 **Edge Cases:**
+
 - Phase failure: Attempt retry, then report and stop
 - Missing dependencies: Request from user
 - Timeout: Report partial completion
@@ -234,6 +272,7 @@ You are an expert [domain] orchestrator specializing in coordinating [complex wo
 ### Tone and Voice
 
 **Use second person (addressing the agent):**
+
 ```
 ✅ You are responsible for...
 ✅ You will analyze...
@@ -247,6 +286,7 @@ You are an expert [domain] orchestrator specializing in coordinating [complex wo
 ### Clarity and Specificity
 
 **Be specific, not vague:**
+
 ```
 ✅ Check for SQL injection by examining all database queries for parameterization
 ❌ Look for security issues
@@ -261,6 +301,7 @@ You are an expert [domain] orchestrator specializing in coordinating [complex wo
 ### Actionable Instructions
 
 **Give concrete steps:**
+
 ```
 ✅ Read the file using the Read tool, then search for patterns using Grep
 ❌ Analyze the code
@@ -275,6 +316,7 @@ You are an expert [domain] orchestrator specializing in coordinating [complex wo
 
 ```markdown
 **Your Core Responsibilities:**
+
 1. Help the user with their code
 2. Provide assistance
 3. Be helpful
@@ -286,6 +328,7 @@ You are an expert [domain] orchestrator specializing in coordinating [complex wo
 
 ```markdown
 **Your Core Responsibilities:**
+
 1. Analyze TypeScript code for type safety issues
 2. Identify missing type annotations and improper 'any' usage
 3. Recommend specific type improvements with examples
@@ -303,6 +346,7 @@ Analyze the code and provide feedback.
 
 ```markdown
 **Analysis Process:**
+
 1. Read code files using Read tool
 2. Scan for type annotations on all functions
 3. Check for 'any' type usage
@@ -322,16 +366,20 @@ Provide a report.
 
 ```markdown
 **Output Format:**
+
 ## Type Safety Report
 
 ### Summary
+
 [Overview of findings]
 
 ### Issues Found
+
 - `file.ts:42` - Missing return type on `processData`
 - `utils.ts:15` - Unsafe 'any' usage in parameter
 
 ### Recommendations
+
 [Specific fixes with examples]
 ```
 
@@ -340,6 +388,7 @@ Provide a report.
 ### Minimum Viable Agent
 
 **~500 words minimum:**
+
 - Role description
 - 3 core responsibilities
 - 5-step process
@@ -348,6 +397,7 @@ Provide a report.
 ### Standard Agent
 
 **~1,000-2,000 words:**
+
 - Detailed role and expertise
 - 5-8 responsibilities
 - 8-12 process steps
@@ -358,6 +408,7 @@ Provide a report.
 ### Comprehensive Agent
 
 **~2,000-5,000 words:**
+
 - Complete role with background
 - Comprehensive responsibilities
 - Detailed multi-phase process
@@ -393,6 +444,7 @@ Read the system prompt and ask:
 ### Iterate Based on Results
 
 After testing agent:
+
 1. Identify where it struggled
 2. Add missing guidance to system prompt
 3. Clarify ambiguous instructions
@@ -402,6 +454,7 @@ After testing agent:
 ## Conclusion
 
 Effective system prompts are:
+
 - **Specific**: Clear about what and how
 - **Structured**: Organized with clear sections
 - **Complete**: Covers normal and edge cases

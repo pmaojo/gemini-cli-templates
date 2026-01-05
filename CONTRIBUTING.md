@@ -255,7 +255,7 @@ Hooks provide automation triggers for different development events.
 
 ## 📦 Contributing Templates
 
-Templates are complete project configurations that include CLAUDE.md, .gemini/\* files, and .mcp.json.
+Templates are complete project configurations that include GEMINI.md, .gemini/\* files, and .mcp.json.
 
 ### Creating New Templates
 
@@ -271,7 +271,7 @@ Templates are complete project configurations that include CLAUDE.md, .gemini/\*
 
    ```
    your-template-name/
-   ├── CLAUDE.md                    # Main configuration
+   ├── GEMINI.md                    # Main configuration
    ├── .gemini/
    │   ├── settings.json           # Automation hooks
    │   └── commands/               # Template-specific commands
@@ -279,7 +279,7 @@ Templates are complete project configurations that include CLAUDE.md, .gemini/\*
    └── README.md                   # Template documentation
    ```
 
-3. **CLAUDE.md Guidelines**
+3. **GEMINI.md Guidelines**
 
    - Include project-specific configuration
    - Add development commands and workflows
@@ -296,7 +296,7 @@ Templates are complete project configurations that include CLAUDE.md, .gemini/\*
 ### Template Quality Standards
 
 - **Comprehensive Configuration** - Include all necessary Gemini Code setup
-- **Clear Documentation** - Well-documented CLAUDE.md with examples
+- **Clear Documentation** - Well-documented GEMINI.md with examples
 - **Practical Commands** - Useful slash commands for the domain
 - **Proper MCPs** - Relevant external integrations
 - **Testing** - Test template with real projects

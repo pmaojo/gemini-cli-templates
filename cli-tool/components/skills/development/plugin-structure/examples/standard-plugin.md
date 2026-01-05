@@ -50,7 +50,13 @@ code-quality/
   "homepage": "https://docs.example.com/plugins/code-quality",
   "repository": "https://github.com/example/code-quality-plugin",
   "license": "MIT",
-  "keywords": ["code-quality", "linting", "testing", "code-review", "automation"]
+  "keywords": [
+    "code-quality",
+    "linting",
+    "testing",
+    "code-review",
+    "automation"
+  ]
 }
 ```
 
@@ -78,15 +84,17 @@ Run comprehensive linting checks on the project codebase.
 Execute the linting script:
 
 \`\`\`bash
-bash ${CLAUDE_PLUGIN_ROOT}/scripts/run-linter.sh
+bash ${GEMINI_PLUGIN_ROOT}/scripts/run-linter.sh
 \`\`\`
 
 Parse the output and present issues organized by:
+
 - Critical issues (must fix)
 - Warnings (should fix)
 - Style suggestions (optional)
 
 For each issue, show:
+
 - File path and line number
 - Issue description
 - Suggested fix (if available)
@@ -114,6 +122,7 @@ Execute the project test suite and generate coverage reports.
 ## Output
 
 Present results in structured format:
+
 - Test summary (passed/failed/skipped)
 - Coverage percentage by file
 - Critical untested areas
@@ -122,6 +131,7 @@ Present results in structured format:
 ## Integration
 
 After test completion, offer to:
+
 - Fix failing tests
 - Generate tests for untested code (using test-generator agent)
 - Update documentation based on test changes
@@ -167,6 +177,7 @@ Automatically loads `code-standards` skill for project-specific guidelines.
 ## Output Format
 
 For each file reviewed:
+
 - Overall assessment
 - Critical issues (must fix before merge)
 - Important issues (should fix)
@@ -214,6 +225,7 @@ Automatically loads `testing-patterns` skill for project-specific test conventio
 ## Test Quality
 
 Generated tests include:
+
 - Happy path scenarios
 - Edge cases and boundary conditions
 - Error handling verification
@@ -237,6 +249,7 @@ Comprehensive coding standards and best practices for maintaining code quality.
 ## Overview
 
 Enforce consistent code quality through standardized conventions for:
+
 - Code style and formatting
 - Naming conventions
 - Documentation requirements
@@ -265,6 +278,7 @@ Enforce consistent code quality through standardized conventions for:
 ### Function Documentation
 
 Every function must include:
+
 - Purpose description
 - Parameter descriptions with types
 - Return value description with type
@@ -273,6 +287,7 @@ Every function must include:
 ### Module Documentation
 
 Every module must include:
+
 - Module purpose
 - Public API overview
 - Usage examples
@@ -292,17 +307,17 @@ Every module must include:
 
 \`\`\`javascript
 async function processData(data) {
-  try {
-    const result = await transform(data)
-    return result
-  } catch (error) {
-    logger.error('Data processing failed', {
-      data: sanitize(data),
-      error: error.message,
-      stack: error.stack
-    })
-    throw new DataProcessingError('Failed to process data', { cause: error })
-  }
+try {
+const result = await transform(data)
+return result
+} catch (error) {
+logger.error('Data processing failed', {
+data: sanitize(data),
+error: error.message,
+stack: error.stack
+})
+throw new DataProcessingError('Failed to process data', { cause: error })
+}
 }
 \`\`\`
 
@@ -317,6 +332,7 @@ async function processData(data) {
 ## Detailed Guidelines
 
 For comprehensive style guides by language, see:
+
 - `references/style-guide.md`
 ```
 
@@ -349,12 +365,12 @@ Use function expressions for consistency:
 \`\`\`javascript
 // Good
 const calculateTotal = (items) => {
-  return items.reduce((sum, item) => sum + item.price, 0)
+return items.reduce((sum, item) => sum + item.price, 0)
 }
 
 // Bad (inconsistent style)
 function calculateTotal(items) {
-  return items.reduce((sum, item) => sum + item.price, 0)
+return items.reduce((sum, item) => sum + item.price, 0)
 }
 \`\`\`
 
@@ -365,16 +381,16 @@ Prefer async/await over promise chains:
 \`\`\`javascript
 // Good
 async function fetchUserData(userId) {
-  const user = await db.getUser(userId)
-  const orders = await db.getOrders(user.id)
-  return { user, orders }
+const user = await db.getUser(userId)
+const orders = await db.getOrders(user.id)
+return { user, orders }
 }
 
 // Bad
 function fetchUserData(userId) {
-  return db.getUser(userId)
-    .then(user => db.getOrders(user.id)
-      .then(orders => ({ user, orders })))
+return db.getUser(userId)
+.then(user => db.getOrders(user.id)
+.then(orders => ({ user, orders })))
 }
 \`\`\`
 
@@ -385,7 +401,9 @@ function fetchUserData(userId) {
 Order imports: standard library, third-party, local:
 
 \`\`\`python
+
 # Good
+
 import os
 import sys
 
@@ -396,6 +414,7 @@ from app.models import User
 from app.utils import helper
 
 # Bad - mixed order
+
 from app.models import User
 import numpy as np
 import os
@@ -406,18 +425,22 @@ import os
 Use type hints for all function signatures:
 
 \`\`\`python
+
 # Good
+
 def calculate_average(numbers: list[float]) -> float:
-    return sum(numbers) / len(numbers)
+return sum(numbers) / len(numbers)
 
 # Bad
+
 def calculate_average(numbers):
-    return sum(numbers) / len(numbers)
+return sum(numbers) / len(numbers)
 \`\`\`
 
 ## Additional Languages
 
 See language-specific guides for:
+
 - Go: `references/go-style.md`
 - Rust: `references/rust-style.md`
 - Ruby: `references/ruby-style.md`
@@ -445,7 +468,7 @@ See language-specific guides for:
       "hooks": [
         {
           "type": "command",
-          "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/scripts/validate-commit.sh",
+          "command": "bash ${GEMINI_PLUGIN_ROOT}/hooks/scripts/validate-commit.sh",
           "timeout": 45
         }
       ]

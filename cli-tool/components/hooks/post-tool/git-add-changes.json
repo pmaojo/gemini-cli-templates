@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "git add \"$CLAUDE_TOOL_FILE_PATH\" 2>/dev/null || true"
+            "command": "git add \"$GEMINI_TOOL_FILE_PATH\" 2>/dev/null || true"
           }
         ]
       },
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "git add \"$CLAUDE_TOOL_FILE_PATH\" 2>/dev/null || true"
+            "command": "git add \"$GEMINI_TOOL_FILE_PATH\" 2>/dev/null || true"
           }
         ]
       }

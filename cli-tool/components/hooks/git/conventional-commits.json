@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/conventional-commits.py"
+            "command": "python3 \"$GEMINI_PROJECT_DIR\"/.gemini/hooks/conventional-commits.py"
           }
         ]
       }

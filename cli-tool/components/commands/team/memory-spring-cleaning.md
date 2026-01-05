@@ -10,19 +10,20 @@ Clean and synchronize project memory with current implementation patterns: **$AR
 
 ## Current Memory Context
 
-- Memory files: !`find . -name "CLAUDE*.md" | wc -l` CLAUDE.md files in project
+- Memory files: !`find . -name "GEMINI*.md" | wc -l` GEMINI.md files in project
 - Documentation: !`find . -name "README*" -o -name "*.md" | wc -l` total documentation files
-- Last update: !`find . -name "CLAUDE.md" -exec stat -c "%y" {} \; 2>/dev/null | head -1 || echo "No CLAUDE.md found"`
+- Last update: !`find . -name "GEMINI.md" -exec stat -c "%y" {} \; 2>/dev/null | head -1 || echo "No GEMINI.md found"`
 - Implementation drift: Analysis of documented vs actual patterns
 
 ## Task
 
 Execute comprehensive memory cleanup with implementation synchronization:
 
-**Cleanup Scope**: Use $ARGUMENTS to focus on CLAUDE.md files, general documentation, outdated pattern identification, or implementation synchronization
+**Cleanup Scope**: Use $ARGUMENTS to focus on GEMINI.md files, general documentation, outdated pattern identification, or implementation synchronization
 
 **Memory Cleaning Framework**:
-1. **Memory File Discovery** - Locate all CLAUDE.md and documentation files, assess hierarchy and organization, identify redundant content
+
+1. **Memory File Discovery** - Locate all GEMINI.md and documentation files, assess hierarchy and organization, identify redundant content
 2. **Implementation Analysis** - Compare documented patterns with actual code, identify implementation drift, assess accuracy gaps
 3. **Pattern Validation** - Verify documented conventions, validate code examples, check dependency accuracy, assess technology stack alignment
 4. **Content Optimization** - Remove outdated information, consolidate duplicate content, improve organization structure, enhance clarity

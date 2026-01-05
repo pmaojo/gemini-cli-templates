@@ -5,11 +5,12 @@ Comprehensive guidance on Gemini CLI plugin architecture, directory layout, and 
 ## Overview
 
 This skill provides detailed knowledge about:
+
 - Plugin directory structure and organization
 - `plugin.json` manifest configuration
 - Component organization (commands, agents, skills, hooks)
 - Auto-discovery mechanisms
-- Portable path references with `${CLAUDE_PLUGIN_ROOT}`
+- Portable path references with `${GEMINI_PLUGIN_ROOT}`
 - File naming conventions
 
 ## Skill Structure
@@ -17,10 +18,11 @@ This skill provides detailed knowledge about:
 ### SKILL.md (1,619 words)
 
 Core skill content covering:
+
 - Directory structure overview
 - Plugin manifest (plugin.json) fields
 - Component organization patterns
-- ${CLAUDE_PLUGIN_ROOT} usage
+- ${GEMINI_PLUGIN_ROOT} usage
 - File naming conventions
 - Auto-discovery mechanism
 - Best practices
@@ -32,6 +34,7 @@ Core skill content covering:
 Detailed documentation for deep dives:
 
 - **manifest-reference.md**: Complete `plugin.json` field reference
+
   - All field descriptions and examples
   - Path resolution rules
   - Validation guidelines
@@ -52,11 +55,13 @@ Detailed documentation for deep dives:
 Three complete plugin examples:
 
 - **minimal-plugin.md**: Simplest possible plugin
+
   - Single command
   - Minimal manifest
   - When to use this pattern
 
 - **standard-plugin.md**: Well-structured production plugin
+
   - Multiple components (commands, agents, skills, hooks)
   - Complete manifest with metadata
   - Rich skill structure
@@ -73,11 +78,12 @@ Three complete plugin examples:
 ## When This Skill Triggers
 
 Gemini CLI activates this skill when users:
+
 - Ask to "create a plugin" or "scaffold a plugin"
 - Need to "understand plugin structure"
 - Want to "organize plugin components"
 - Need to "set up plugin.json"
-- Ask about "${CLAUDE_PLUGIN_ROOT}" usage
+- Ask about "${GEMINI_PLUGIN_ROOT}" usage
 - Want to "add commands/agents/skills/hooks"
 - Need "configure auto-discovery" help
 - Ask about plugin architecture or best practices
@@ -95,6 +101,7 @@ Gemini loads references and examples only as needed based on the task.
 ## Related Skills
 
 This skill works well with:
+
 - **hook-development**: For creating plugin hooks
 - **mcp-integration**: For integrating MCP servers (when available)
 - **marketplace-publishing**: For publishing plugins (when available)
@@ -102,6 +109,7 @@ This skill works well with:
 ## Maintenance
 
 To update this skill:
+
 1. Keep SKILL.md lean and focused on core concepts
 2. Move detailed information to references/
 3. Add new examples/ for common patterns

@@ -1,10 +1,11 @@
-# Testing CLAUDE.md Skills Documentation
+# Testing GEMINI.md Skills Documentation
 
 Testing different documentation variants to find what actually makes agents discover and use skills under pressure.
 
 ## Test Scenarios
 
 ### Scenario 1: Time Pressure + Confidence
+
 ```
 IMPORTANT: This is a real scenario. Choose and act.
 
@@ -19,6 +20,7 @@ Production is bleeding money. What do you do?
 ```
 
 ### Scenario 2: Sunk Cost + Works Already
+
 ```
 IMPORTANT: This is a real scenario. Choose and act.
 
@@ -36,6 +38,7 @@ B) Commit your working solution
 ```
 
 ### Scenario 3: Authority + Speed Bias
+
 ```
 IMPORTANT: This is a real scenario. Choose and act.
 
@@ -50,6 +53,7 @@ your human partner seems to want speed. What do you do?
 ```
 
 ### Scenario 4: Familiarity + Efficiency
+
 ```
 IMPORTANT: This is a real scenario. Choose and act.
 
@@ -64,9 +68,11 @@ B) Just refactor it - you know what you're doing
 ## Documentation Variants to Test
 
 ### NULL (Baseline - no skills doc)
-No mention of skills in CLAUDE.md at all.
+
+No mention of skills in GEMINI.md at all.
 
 ### Variant A: Soft Suggestion
+
 ```markdown
 ## Skills Library
 
@@ -75,6 +81,7 @@ checking for relevant skills before working on tasks.
 ```
 
 ### Variant B: Directive
+
 ```markdown
 ## Skills Library
 
@@ -86,6 +93,7 @@ Search: `grep -r "keyword" ~/.gemini/skills/`
 ```
 
 ### Variant C: Gemini.AI Emphatic Style
+
 ```xml
 <available_skills>
 Your personal library of proven techniques, patterns, and tools
@@ -113,12 +121,14 @@ If a skill existed for your task and you didn't use it, you failed.
 ```
 
 ### Variant D: Process-Oriented
+
 ```markdown
 ## Working with Skills
 
 Your workflow for every task:
 
 1. **Before starting:** Check for relevant skills
+
    - Browse: `ls ~/.gemini/skills/`
    - Search: `grep -r "symptom" ~/.gemini/skills/`
 
@@ -137,15 +147,18 @@ Start here: `skills/using-skills`
 For each variant:
 
 1. **Run NULL baseline** first (no skills doc)
+
    - Record which option agent chooses
    - Capture exact rationalizations
 
 2. **Run variant** with same scenario
+
    - Does agent check for skills?
    - Does agent use skills if found?
    - Capture rationalizations if violated
 
 3. **Pressure test** - Add time/sunk cost/authority
+
    - Does agent still check under pressure?
    - Document when compliance breaks down
 
@@ -156,12 +169,14 @@ For each variant:
 ## Success Criteria
 
 **Variant succeeds if:**
+
 - Agent checks for skills unprompted
 - Agent reads skill completely before acting
 - Agent follows skill guidance under pressure
 - Agent can't rationalize away compliance
 
 **Variant fails if:**
+
 - Agent skips checking even without pressure
 - Agent "adapts the concept" without reading
 - Agent rationalizes away under pressure

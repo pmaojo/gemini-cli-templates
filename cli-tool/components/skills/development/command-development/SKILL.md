@@ -11,6 +11,7 @@ version: 0.2.0
 Slash commands are frequently-used prompts defined as Markdown files that Gemini executes during interactive sessions. Understanding command structure, frontmatter options, and dynamic features enables creating powerful, reusable workflows.
 
 **Key concepts:**
+
 - Markdown file format for commands
 - YAML frontmatter for configuration
 - Dynamic arguments and file references
@@ -22,6 +23,7 @@ Slash commands are frequently-used prompts defined as Markdown files that Gemini
 ### What is a Slash Command?
 
 A slash command is a Markdown file containing a prompt that Gemini executes when invoked. Commands provide:
+
 - **Reusability**: Define once, use repeatedly
 - **Consistency**: Standardize common workflows
 - **Sharing**: Distribute across team or projects
@@ -34,8 +36,10 @@ A slash command is a Markdown file containing a prompt that Gemini executes when
 When a user invokes `/command-name`, the command content becomes Gemini's instructions. Write commands as directives TO Gemini about what to do, not as messages TO the user.
 
 **Correct approach (instructions for Gemini):**
+
 ```markdown
 Review this code for security vulnerabilities including:
+
 - SQL injection
 - XSS attacks
 - Authentication issues
@@ -44,6 +48,7 @@ Provide specific line numbers and severity ratings.
 ```
 
 **Incorrect approach (messages to user):**
+
 ```markdown
 This command will review your code for security issues.
 You'll receive a report with vulnerability details.
@@ -54,18 +59,21 @@ The first example tells Gemini what to do. The second tells the user what will h
 ### Command Locations
 
 **Project commands** (shared with team):
+
 - Location: `.gemini/commands/`
 - Scope: Available in specific project
 - Label: Shown as "(project)" in `/help`
 - Use for: Team workflows, project-specific tasks
 
 **Personal commands** (available everywhere):
+
 - Location: `~/.gemini/commands/`
 - Scope: Available in all projects
 - Label: Shown as "(user)" in `/help`
 - Use for: Personal workflows, cross-project utilities
 
 **Plugin commands** (bundled with plugins):
+
 - Location: `plugin-name/commands/`
 - Scope: Available when plugin installed
 - Label: Shown as "(plugin-name)" in `/help`
@@ -85,8 +93,10 @@ Commands are Markdown files with `.md` extension:
 ```
 
 **Simple command:**
+
 ```markdown
 Review this code for security vulnerabilities including:
+
 - SQL injection
 - XSS attacks
 - Authentication bypass
@@ -138,6 +148,7 @@ allowed-tools: Read, Write, Edit, Bash(git:*)
 ```
 
 **Patterns:**
+
 - `Read, Write, Edit` - Specific tools
 - `Bash(git:*)` - Bash with git commands only
 - `*` - All tools (rarely needed)
@@ -157,6 +168,7 @@ model: gemini-3-flash
 ```
 
 **Use cases:**
+
 - `haiku` - Fast, simple commands
 - `sonnet` - Standard workflows
 - `opus` - Complex analysis
@@ -174,6 +186,7 @@ argument-hint: [pr-number] [priority] [assignee]
 ```
 
 **Benefits:**
+
 - Helps users understand command arguments
 - Improves command discovery
 - Documents command interface
@@ -208,12 +221,14 @@ Fix issue #$ARGUMENTS following our coding standards and best practices.
 ```
 
 **Usage:**
+
 ```
 > /fix-issue 123
 > /fix-issue 456
 ```
 
 **Expands to:**
+
 ```
 Fix issue #123 following our coding standards...
 Fix issue #456 following our coding standards...
@@ -234,11 +249,13 @@ After review, assign to $3 for follow-up.
 ```
 
 **Usage:**
+
 ```
 > /review-pr 123 high alice
 ```
 
 **Expands to:**
+
 ```
 Review pull request #123 with priority level high.
 After review, assign to alice for follow-up.
@@ -253,11 +270,13 @@ Deploy $1 to $2 environment with options: $3
 ```
 
 **Usage:**
+
 ```
 > /deploy api staging --force --skip-tests
 ```
 
 **Expands to:**
+
 ```
 Deploy api to staging environment with options: --force --skip-tests
 ```
@@ -275,12 +294,14 @@ argument-hint: [file-path]
 ---
 
 Review @$1 for:
+
 - Code quality
 - Best practices
 - Potential bugs
 ```
 
 **Usage:**
+
 ```
 > /review-file src/api/users.ts
 ```
@@ -295,6 +316,7 @@ Reference multiple files:
 Compare @src/old-version.js with @src/new-version.js
 
 Identify:
+
 - Breaking changes
 - New features
 - Bug fixes
@@ -308,6 +330,7 @@ Reference known files without arguments:
 Review @package.json and @tsconfig.json for consistency
 
 Ensure:
+
 - TypeScript version matches
 - Dependencies are aligned
 - Build configuration is correct
@@ -318,6 +341,7 @@ Ensure:
 Commands can execute bash commands inline to dynamically gather context before Gemini processes the command. This is useful for including repository state, environment information, or project-specific context.
 
 **When to use:**
+
 - Include dynamic context (git status, environment vars, etc.)
 - Gather project/repository state
 - Build context-aware workflows
@@ -361,6 +385,7 @@ Organize commands in subdirectories:
 ```
 
 **Benefits:**
+
 - Logical grouping by category
 - Namespace shown in `/help`
 - Easier to find related commands
@@ -390,8 +415,8 @@ argument-hint: [pr-number]
 ---
 
 $IF($1,
-  Review PR #$1,
-  Please provide a PR number. Usage: /review-pr [number]
+Review PR #$1,
+Please provide a PR number. Usage: /review-pr [number]
 )
 ```
 
@@ -444,6 +469,7 @@ allowed-tools: Read, Bash(git:*)
 Files changed: !`git diff --name-only`
 
 Review each file for:
+
 1. Code quality and style
 2. Potential bugs or issues
 3. Test coverage
@@ -475,6 +501,7 @@ argument-hint: [source-file]
 ---
 
 Generate comprehensive documentation for @$1 including:
+
 - Function/class descriptions
 - Parameter documentation
 - Return value descriptions
@@ -502,23 +529,27 @@ PR #$1 Workflow:
 ## Troubleshooting
 
 **Command not appearing:**
+
 - Check file is in correct directory
 - Verify `.md` extension present
 - Ensure valid Markdown format
 - Restart Gemini CLI
 
 **Arguments not working:**
+
 - Verify `$1`, `$2` syntax correct
 - Check `argument-hint` matches usage
 - Ensure no extra spaces
 
 **Bash execution failing:**
+
 - Check `allowed-tools` includes Bash
 - Verify command syntax in backticks
 - Test command in terminal first
 - Check for required permissions
 
 **File references not working:**
+
 - Verify `@` syntax correct
 - Check file path is valid
 - Ensure Read tool allowed
@@ -526,11 +557,12 @@ PR #$1 Workflow:
 
 ## Plugin-Specific Features
 
-### CLAUDE_PLUGIN_ROOT Variable
+### GEMINI_PLUGIN_ROOT Variable
 
-Plugin commands have access to `${CLAUDE_PLUGIN_ROOT}`, an environment variable that resolves to the plugin's absolute path.
+Plugin commands have access to `${GEMINI_PLUGIN_ROOT}`, an environment variable that resolves to the plugin's absolute path.
 
 **Purpose:**
+
 - Reference plugin files portably
 - Execute plugin scripts
 - Load plugin configuration
@@ -544,7 +576,7 @@ description: Analyze using plugin script
 allowed-tools: Bash(node:*)
 ---
 
-Run analysis: !`node ${CLAUDE_PLUGIN_ROOT}/scripts/analyze.js $1`
+Run analysis: !`node ${GEMINI_PLUGIN_ROOT}/scripts/analyze.js $1`
 
 Review results and report findings.
 ```
@@ -553,19 +585,24 @@ Review results and report findings.
 
 ```markdown
 # Execute plugin script
-!`bash ${CLAUDE_PLUGIN_ROOT}/scripts/script.sh`
+
+!`bash ${GEMINI_PLUGIN_ROOT}/scripts/script.sh`
 
 # Load plugin configuration
-@${CLAUDE_PLUGIN_ROOT}/config/settings.json
+
+@${GEMINI_PLUGIN_ROOT}/config/settings.json
 
 # Use plugin template
-@${CLAUDE_PLUGIN_ROOT}/templates/report.md
+
+@${GEMINI_PLUGIN_ROOT}/templates/report.md
 
 # Access plugin resources
-@${CLAUDE_PLUGIN_ROOT}/docs/reference.md
+
+@${GEMINI_PLUGIN_ROOT}/docs/reference.md
 ```
 
 **Why use it:**
+
 - Works across all installations
 - Portable between systems
 - No hardcoded paths needed
@@ -586,12 +623,14 @@ plugin-name/
 ```
 
 **Namespace benefits:**
+
 - Logical command grouping
 - Shown in `/help` output
 - Avoid name conflicts
 - Organize related commands
 
 **Naming conventions:**
+
 - Use descriptive action names
 - Avoid generic names (test, run)
 - Consider plugin-specific prefix
@@ -608,7 +647,7 @@ argument-hint: [environment]
 allowed-tools: Read, Bash(*)
 ---
 
-Load configuration: @${CLAUDE_PLUGIN_ROOT}/config/$1-deploy.json
+Load configuration: @${GEMINI_PLUGIN_ROOT}/config/$1-deploy.json
 
 Deploy to $1 using configuration settings.
 Monitor deployment and report status.
@@ -622,7 +661,7 @@ description: Generate docs from template
 argument-hint: [component]
 ---
 
-Template: @${CLAUDE_PLUGIN_ROOT}/templates/docs.md
+Template: @${GEMINI_PLUGIN_ROOT}/templates/docs.md
 
 Generate documentation for $1 following template structure.
 ```
@@ -635,9 +674,9 @@ description: Complete build workflow
 allowed-tools: Bash(*)
 ---
 
-Build: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/build.sh`
-Test: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/test.sh`
-Package: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/package.sh`
+Build: !`bash ${GEMINI_PLUGIN_ROOT}/scripts/build.sh`
+Test: !`bash ${GEMINI_PLUGIN_ROOT}/scripts/test.sh`
+Package: !`bash ${GEMINI_PLUGIN_ROOT}/scripts/package.sh`
 
 Review outputs and report workflow status.
 ```
@@ -661,17 +700,20 @@ argument-hint: [file-path]
 Initiate comprehensive review of @$1 using the code-reviewer agent.
 
 The agent will analyze:
+
 - Code structure
 - Security issues
 - Performance
 - Best practices
 
 Agent uses plugin resources:
-- ${CLAUDE_PLUGIN_ROOT}/config/rules.json
-- ${CLAUDE_PLUGIN_ROOT}/checklists/review.md
+
+- ${GEMINI_PLUGIN_ROOT}/config/rules.json
+- ${GEMINI_PLUGIN_ROOT}/checklists/review.md
 ```
 
 **Key points:**
+
 - Agent must exist in `plugin/agents/` directory
 - Gemini uses Task tool to launch agent
 - Document agent capabilities
@@ -690,6 +732,7 @@ argument-hint: [api-file]
 Document API in @$1 following plugin standards.
 
 Use the api-docs-standards skill to ensure:
+
 - Complete endpoint documentation
 - Consistent formatting
 - Example quality
@@ -699,6 +742,7 @@ Generate production-ready API docs.
 ```
 
 **Key points:**
+
 - Skill must exist in `plugin/skills/` directory
 - Mention skill name to trigger invocation
 - Document skill purpose
@@ -707,6 +751,7 @@ Generate production-ready API docs.
 ### Hook Coordination
 
 Design commands that work with plugin hooks:
+
 - Commands can prepare state for hooks to process
 - Hooks execute automatically on tool events
 - Commands should document expected hook behavior
@@ -728,7 +773,7 @@ allowed-tools: Bash(node:*), Read
 Target: @$1
 
 Phase 1 - Static Analysis:
-!`node ${CLAUDE_PLUGIN_ROOT}/scripts/lint.js $1`
+!`node ${GEMINI_PLUGIN_ROOT}/scripts/lint.js $1`
 
 Phase 2 - Deep Review:
 Launch code-reviewer agent for detailed analysis.
@@ -737,12 +782,13 @@ Phase 3 - Standards Check:
 Use coding-standards skill for validation.
 
 Phase 4 - Report:
-Template: @${CLAUDE_PLUGIN_ROOT}/templates/review.md
+Template: @${GEMINI_PLUGIN_ROOT}/templates/review.md
 
 Compile findings into report following template.
 ```
 
 **When to use:**
+
 - Complex multi-step workflows
 - Leverage multiple plugin capabilities
 - Require specialized analysis
@@ -763,10 +809,10 @@ argument-hint: [environment]
 Validate environment: !`echo "$1" | grep -E "^(dev|staging|prod)$" || echo "INVALID"`
 
 If $1 is valid environment:
-  Deploy to $1
+Deploy to $1
 Otherwise:
-  Explain valid environments: dev, staging, prod
-  Show usage: /deploy [environment]
+Explain valid environments: dev, staging, prod
+Show usage: /deploy [environment]
 ```
 
 ### File Existence Checks
@@ -780,11 +826,11 @@ argument-hint: [config-file]
 Check file exists: !`test -f $1 && echo "EXISTS" || echo "MISSING"`
 
 If file exists:
-  Process configuration: @$1
+Process configuration: @$1
 Otherwise:
-  Explain where to place config file
-  Show expected format
-  Provide example configuration
+Explain where to place config file
+Show expected format
+Provide example configuration
 ```
 
 ### Plugin Resource Validation
@@ -796,8 +842,9 @@ allowed-tools: Bash(test:*)
 ---
 
 Validate plugin setup:
-- Script: !`test -x ${CLAUDE_PLUGIN_ROOT}/bin/analyze && echo "✓" || echo "✗"`
-- Config: !`test -f ${CLAUDE_PLUGIN_ROOT}/config.json && echo "✓" || echo "✗"`
+
+- Script: !`test -x ${GEMINI_PLUGIN_ROOT}/bin/analyze && echo "✓" || echo "✗"`
+- Config: !`test -f ${GEMINI_PLUGIN_ROOT}/config.json && echo "✓" || echo "✗"`
 
 If all checks pass, run analysis.
 Otherwise, report missing components.
@@ -811,17 +858,18 @@ description: Build with error handling
 allowed-tools: Bash(*)
 ---
 
-Execute build: !`bash ${CLAUDE_PLUGIN_ROOT}/scripts/build.sh 2>&1 || echo "BUILD_FAILED"`
+Execute build: !`bash ${GEMINI_PLUGIN_ROOT}/scripts/build.sh 2>&1 || echo "BUILD_FAILED"`
 
 If build succeeded:
-  Report success and output location
+Report success and output location
 If build failed:
-  Analyze error output
-  Suggest likely causes
-  Provide troubleshooting steps
+Analyze error output
+Suggest likely causes
+Provide troubleshooting steps
 ```
 
 **Best practices:**
+
 - Validate early in command
 - Provide helpful error messages
 - Suggest corrective actions

@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if [[ -f \"$CLAUDE_TOOL_FILE_PATH\" ]]; then cp \"$CLAUDE_TOOL_FILE_PATH\" \"$CLAUDE_TOOL_FILE_PATH.backup.$(date +%s)\" 2>/dev/null || true; fi"
+            "command": "if [[ -f \"$GEMINI_TOOL_FILE_PATH\" ]]; then cp \"$GEMINI_TOOL_FILE_PATH\" \"$GEMINI_TOOL_FILE_PATH.backup.$(date +%s)\" 2>/dev/null || true; fi"
           }
         ]
       }

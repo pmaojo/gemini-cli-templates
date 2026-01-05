@@ -11,6 +11,7 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 ### Configuration
 
 **Basic:**
+
 ```json
 {
   "my-server": {
@@ -21,11 +22,12 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 ```
 
 **With environment:**
+
 ```json
 {
   "my-server": {
-    "command": "${CLAUDE_PLUGIN_ROOT}/servers/custom-server",
-    "args": ["--config", "${CLAUDE_PLUGIN_ROOT}/config.json"],
+    "command": "${GEMINI_PLUGIN_ROOT}/servers/custom-server",
+    "args": ["--config", "${GEMINI_PLUGIN_ROOT}/config.json"],
     "env": {
       "API_KEY": "${MY_API_KEY}",
       "LOG_LEVEL": "debug",
@@ -45,6 +47,7 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 ### Use Cases
 
 **NPM Packages:**
+
 ```json
 {
   "filesystem": {
@@ -55,16 +58,18 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 ```
 
 **Custom Scripts:**
+
 ```json
 {
   "custom": {
-    "command": "${CLAUDE_PLUGIN_ROOT}/servers/my-server.js",
+    "command": "${GEMINI_PLUGIN_ROOT}/servers/my-server.js",
     "args": ["--verbose"]
   }
 }
 ```
 
 **Python Servers:**
+
 ```json
 {
   "python-server": {
@@ -79,7 +84,7 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 
 ### Best Practices
 
-1. **Use absolute paths or ${CLAUDE_PLUGIN_ROOT}**
+1. **Use absolute paths or ${GEMINI_PLUGIN_ROOT}**
 2. **Set PYTHONUNBUFFERED for Python servers**
 3. **Pass configuration via args or env, not stdin**
 4. **Handle server crashes gracefully**
@@ -88,12 +93,14 @@ Execute local MCP servers as child processes with communication via stdin/stdout
 ### Troubleshooting
 
 **Server won't start:**
+
 - Check command exists and is executable
 - Verify file paths are correct
 - Check permissions
 - Review `gemini --debug` logs
 
 **Communication fails:**
+
 - Ensure server uses stdin/stdout correctly
 - Check for stray print/console.log statements
 - Verify JSON-RPC format
@@ -107,6 +114,7 @@ Connect to hosted MCP servers via HTTP with server-sent events for streaming. Be
 ### Configuration
 
 **Basic:**
+
 ```json
 {
   "hosted-service": {
@@ -117,6 +125,7 @@ Connect to hosted MCP servers via HTTP with server-sent events for streaming. Be
 ```
 
 **With headers:**
+
 ```json
 {
   "service": {
@@ -141,6 +150,7 @@ Connect to hosted MCP servers via HTTP with server-sent events for streaming. Be
 ### Authentication
 
 **OAuth (Automatic):**
+
 ```json
 {
   "asana": {
@@ -151,12 +161,14 @@ Connect to hosted MCP servers via HTTP with server-sent events for streaming. Be
 ```
 
 Gemini CLI handles OAuth flow:
+
 1. User prompted to authenticate on first use
 2. Opens browser for OAuth flow
 3. Tokens stored securely
 4. Automatic token refresh
 
 **Custom Headers:**
+
 ```json
 {
   "service": {
@@ -172,6 +184,7 @@ Gemini CLI handles OAuth flow:
 ### Use Cases
 
 **Official Services:**
+
 - Asana: `https://mcp.asana.com/sse`
 - GitHub: `https://mcp.github.com/sse`
 - Other hosted MCP servers
@@ -190,12 +203,14 @@ Deploy your own MCP server and expose via HTTPS + SSE.
 ### Troubleshooting
 
 **Connection refused:**
+
 - Check URL is correct and accessible
 - Verify HTTPS certificate is valid
 - Check network connectivity
 - Review firewall settings
 
 **OAuth fails:**
+
 - Clear cached tokens
 - Check OAuth scopes
 - Verify redirect URLs
@@ -210,6 +225,7 @@ Connect to RESTful MCP servers via standard HTTP requests. Best for token-based 
 ### Configuration
 
 **Basic:**
+
 ```json
 {
   "api": {
@@ -220,6 +236,7 @@ Connect to RESTful MCP servers via standard HTTP requests. Best for token-based 
 ```
 
 **With authentication:**
+
 ```json
 {
   "api": {
@@ -244,6 +261,7 @@ Connect to RESTful MCP servers via standard HTTP requests. Best for token-based 
 ### Authentication
 
 **Token-Based:**
+
 ```json
 {
   "headers": {
@@ -253,6 +271,7 @@ Connect to RESTful MCP servers via standard HTTP requests. Best for token-based 
 ```
 
 **API Key:**
+
 ```json
 {
   "headers": {
@@ -262,6 +281,7 @@ Connect to RESTful MCP servers via standard HTTP requests. Best for token-based 
 ```
 
 **Custom Auth:**
+
 ```json
 {
   "headers": {
@@ -289,12 +309,14 @@ Connect to RESTful MCP servers via standard HTTP requests. Best for token-based 
 ### Troubleshooting
 
 **HTTP errors:**
+
 - 401: Check authentication headers
 - 403: Verify permissions
 - 429: Implement rate limiting
 - 500: Check server logs
 
 **Timeout issues:**
+
 - Increase timeout if needed
 - Check server performance
 - Optimize tool implementations
@@ -308,6 +330,7 @@ Connect to MCP servers via WebSocket for real-time bidirectional communication. 
 ### Configuration
 
 **Basic:**
+
 ```json
 {
   "realtime": {
@@ -318,6 +341,7 @@ Connect to MCP servers via WebSocket for real-time bidirectional communication. 
 ```
 
 **With authentication:**
+
 ```json
 {
   "realtime": {
@@ -358,50 +382,56 @@ Connect to MCP servers via WebSocket for real-time bidirectional communication. 
 ### Troubleshooting
 
 **Connection drops:**
+
 - Implement reconnection logic
 - Check network stability
 - Verify server supports WebSocket
 - Review firewall settings
 
 **Message delivery:**
+
 - Implement message acknowledgment
 - Handle out-of-order messages
 - Buffer during disconnection
 
 ## Comparison Matrix
 
-| Feature | stdio | SSE | HTTP | WebSocket |
-|---------|-------|-----|------|-----------|
-| **Transport** | Process | HTTP/SSE | HTTP | WebSocket |
-| **Direction** | Bidirectional | Server→Client | Request/Response | Bidirectional |
-| **State** | Stateful | Stateful | Stateless | Stateful |
-| **Auth** | Env vars | OAuth/Headers | Headers | Headers |
-| **Use Case** | Local tools | Cloud services | REST APIs | Real-time |
-| **Latency** | Lowest | Medium | Medium | Low |
-| **Setup** | Easy | Medium | Easy | Medium |
-| **Reconnect** | Process respawn | Automatic | N/A | Automatic |
+| Feature       | stdio           | SSE            | HTTP             | WebSocket     |
+| ------------- | --------------- | -------------- | ---------------- | ------------- |
+| **Transport** | Process         | HTTP/SSE       | HTTP             | WebSocket     |
+| **Direction** | Bidirectional   | Server→Client  | Request/Response | Bidirectional |
+| **State**     | Stateful        | Stateful       | Stateless        | Stateful      |
+| **Auth**      | Env vars        | OAuth/Headers  | Headers          | Headers       |
+| **Use Case**  | Local tools     | Cloud services | REST APIs        | Real-time     |
+| **Latency**   | Lowest          | Medium         | Medium           | Low           |
+| **Setup**     | Easy            | Medium         | Easy             | Medium        |
+| **Reconnect** | Process respawn | Automatic      | N/A              | Automatic     |
 
 ## Choosing the Right Type
 
 **Use stdio when:**
+
 - Running local tools or custom servers
 - Need lowest latency
 - Working with file systems or local databases
 - Distributing server with plugin
 
 **Use SSE when:**
+
 - Connecting to hosted services
 - Need OAuth authentication
 - Using official MCP servers (Asana, GitHub)
 - Want automatic reconnection
 
 **Use HTTP when:**
+
 - Integrating with REST APIs
 - Need stateless interactions
 - Using token-based auth
 - Simple request/response pattern
 
 **Use WebSocket when:**
+
 - Need real-time updates
 - Building collaborative features
 - Low-latency critical
@@ -412,6 +442,7 @@ Connect to MCP servers via WebSocket for real-time bidirectional communication. 
 ### From stdio to SSE
 
 **Before (stdio):**
+
 ```json
 {
   "local-server": {
@@ -422,6 +453,7 @@ Connect to MCP servers via WebSocket for real-time bidirectional communication. 
 ```
 
 **After (SSE - deploy server):**
+
 ```json
 {
   "hosted-server": {
@@ -434,6 +466,7 @@ Connect to MCP servers via WebSocket for real-time bidirectional communication. 
 ### From HTTP to WebSocket
 
 **Before (HTTP):**
+
 ```json
 {
   "api": {
@@ -444,6 +477,7 @@ Connect to MCP servers via WebSocket for real-time bidirectional communication. 
 ```
 
 **After (WebSocket):**
+
 ```json
 {
   "realtime": {
@@ -498,6 +532,7 @@ Use environment variables to switch servers:
 ```
 
 Set different values for dev/prod:
+
 - Dev: `API_URL=http://localhost:8080/mcp`
 - Prod: `API_URL=https://api.production.com/mcp`
 
@@ -528,6 +563,7 @@ Set different values for dev/prod:
 ## Conclusion
 
 Choose the MCP server type based on your use case:
+
 - **stdio** for local, custom, or NPM-packaged servers
 - **SSE** for hosted services with OAuth
 - **HTTP** for REST APIs with token auth

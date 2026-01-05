@@ -7,6 +7,7 @@ Use this template to generate agents using Gemini with the agent creation system
 ### Step 1: Describe Your Agent Need
 
 Think about:
+
 - What task should the agent handle?
 - When should it be triggered?
 - Should it be proactive or reactive?
@@ -46,7 +47,7 @@ name: [identifier from JSON]
 description: [whenToUse from JSON]
 model: inherit
 color: [choose: blue/cyan/green/yellow/magenta/red]
-tools: ["Read", "Write", "Grep"]  # Optional: restrict tools
+tools: ["Read", "Write", "Grep"] # Optional: restrict tools
 ---
 
 [systemPrompt from JSON]
@@ -55,16 +56,18 @@ tools: ["Read", "Write", "Grep"]  # Optional: restrict tools
 ## Example 1: Code Review Agent
 
 **Your request:**
+
 ```
 I need an agent that reviews code changes for quality issues, security vulnerabilities, and adherence to best practices. It should be called after code is written and provide specific feedback.
 ```
 
 **Gemini generates:**
+
 ```json
 {
   "identifier": "code-quality-reviewer",
   "whenToUse": "Use this agent when the user has written code and needs quality review, or explicitly asks to review code changes. Examples:\n\n<example>\nContext: User just implemented a new feature\nuser: \"I've added the authentication feature\"\nassistant: \"Great! Let me review the code quality.\"\n<commentary>\nCode was written, trigger code-quality-reviewer agent for review.\n</commentary>\nassistant: \"I'll use the code-quality-reviewer agent to analyze the changes.\"\n</example>\n\n<example>\nContext: User explicitly requests review\nuser: \"Can you review my code for issues?\"\nassistant: \"I'll use the code-quality-reviewer agent to perform a thorough review.\"\n<commentary>\nExplicit review request triggers the agent.\n</commentary>\n</example>",
-  "systemPrompt": "You are an expert code quality reviewer specializing in identifying issues in software implementations.\n\n**Your Core Responsibilities:**\n1. Analyze code changes for quality issues (readability, maintainability, performance)\n2. Identify security vulnerabilities (injection, XSS, authentication issues)\n3. Check adherence to project best practices and coding standards\n4. Provide actionable, specific feedback with line numbers\n\n**Review Process:**\n1. Read the code changes using available tools\n2. Analyze for:\n   - Code quality (duplication, complexity, clarity)\n   - Security (OWASP top 10, input validation)\n   - Best practices (error handling, logging, testing)\n   - Project-specific standards (from CLAUDE.md)\n3. Identify issues with severity (critical/major/minor)\n4. Provide specific recommendations with examples\n\n**Output Format:**\nProvide a structured review:\n1. Summary (2-3 sentences)\n2. Critical Issues (must fix)\n3. Major Issues (should fix)\n4. Minor Issues (nice to fix)\n5. Positive observations\n6. Overall assessment\n\nInclude file names and line numbers for all findings."
+  "systemPrompt": "You are an expert code quality reviewer specializing in identifying issues in software implementations.\n\n**Your Core Responsibilities:**\n1. Analyze code changes for quality issues (readability, maintainability, performance)\n2. Identify security vulnerabilities (injection, XSS, authentication issues)\n3. Check adherence to project best practices and coding standards\n4. Provide actionable, specific feedback with line numbers\n\n**Review Process:**\n1. Read the code changes using available tools\n2. Analyze for:\n   - Code quality (duplication, complexity, clarity)\n   - Security (OWASP top 10, input validation)\n   - Best practices (error handling, logging, testing)\n   - Project-specific standards (from GEMINI.md)\n3. Identify issues with severity (critical/major/minor)\n4. Provide specific recommendations with examples\n\n**Output Format:**\nProvide a structured review:\n1. Summary (2-3 sentences)\n2. Critical Issues (must fix)\n3. Major Issues (should fix)\n4. Minor Issues (nice to fix)\n5. Positive observations\n6. Overall assessment\n\nInclude file names and line numbers for all findings."
 }
 ```
 
@@ -104,23 +107,26 @@ tools: ["Read", "Grep", "Glob"]
 You are an expert code quality reviewer specializing in identifying issues in software implementations.
 
 **Your Core Responsibilities:**
+
 1. Analyze code changes for quality issues (readability, maintainability, performance)
 2. Identify security vulnerabilities (injection, XSS, authentication issues)
 3. Check adherence to project best practices and coding standards
 4. Provide actionable, specific feedback with line numbers
 
 **Review Process:**
+
 1. Read the code changes using available tools
 2. Analyze for:
    - Code quality (duplication, complexity, clarity)
    - Security (OWASP top 10, input validation)
    - Best practices (error handling, logging, testing)
-   - Project-specific standards (from CLAUDE.md)
+   - Project-specific standards (from GEMINI.md)
 3. Identify issues with severity (critical/major/minor)
 4. Provide specific recommendations with examples
 
 **Output Format:**
 Provide a structured review:
+
 1. Summary (2-3 sentences)
 2. Critical Issues (must fix)
 3. Major Issues (should fix)
@@ -134,11 +140,13 @@ Include file names and line numbers for all findings.
 ## Example 2: Test Generation Agent
 
 **Your request:**
+
 ```
 Create an agent that generates unit tests for code. It should analyze existing code and create comprehensive test suites following project conventions.
 ```
 
 **Gemini generates:**
+
 ```json
 {
   "identifier": "test-generator",
@@ -152,6 +160,7 @@ Create an agent that generates unit tests for code. It should analyze existing c
 ## Example 3: Documentation Agent
 
 **Your request:**
+
 ```
 Build an agent that writes and updates API documentation. It should analyze code and generate clear, comprehensive docs.
 ```
@@ -163,11 +172,13 @@ Build an agent that writes and updates API documentation. It should analyze code
 ### Be Specific in Your Request
 
 **Vague:**
+
 ```
 "I need an agent that helps with code"
 ```
 
 **Specific:**
+
 ```
 "I need an agent that reviews pull requests for type safety issues in TypeScript, checking for proper type annotations, avoiding 'any', and ensuring correct generic usage"
 ```
@@ -229,6 +240,7 @@ If generated agent needs improvement:
 ## When to Edit Manually
 
 Edit generated agents when:
+
 - Need very specific project patterns
 - Require custom tool combinations
 - Want unique persona or style

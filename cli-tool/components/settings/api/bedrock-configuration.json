@@ -1,7 +1,7 @@
 {
   "description": "Configure Gemini CLI to use Amazon Bedrock for AI model access. Enables enterprise-grade deployment with AWS billing and compliance features, ideal for organizations already using AWS infrastructure.",
   "env": {
-    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "GEMINI_CODE_USE_BEDROCK": "1",
     "AWS_BEARER_TOKEN_BEDROCK": "your-bedrock-api-key"
   }
 }

@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/prevent-direct-push.py"
+            "command": "python3 \"$GEMINI_PROJECT_DIR\"/.gemini/hooks/prevent-direct-push.py"
           }
         ]
       }

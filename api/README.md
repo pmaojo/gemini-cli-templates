@@ -186,4 +186,4 @@ vercel promote <previous-deployment-url>
 
 ## 📖 More Info
 
-See `../CLAUDE.md` section "API Architecture & Deployment" for detailed documentation.
+See `../GEMINI.md` section "API Architecture & Deployment" for detailed documentation.

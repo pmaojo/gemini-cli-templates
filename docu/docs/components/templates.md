@@ -49,12 +49,12 @@ Templates create a complete setup:
 ├── settings/        # Optimized settings
 └── hooks/           # Workflow automation
 
-CLAUDE.md             # Template-specific instructions
+GEMINI.md             # Template-specific instructions
 ```
 
 ### Configuration
 
-- **CLAUDE.md**: Tailored project instructions
+- **GEMINI.md**: Tailored project instructions
 - **Component configs**: Optimized for the template
 - **Environment setup**: Required variables and setup steps
 

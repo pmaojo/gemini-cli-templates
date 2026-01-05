@@ -65,9 +65,9 @@ test_scenarios() {
         run_test "Installation for $language + $framework" \
             "gemini-code-templates --language $language --framework $framework --yes > /dev/null 2>&1"
         
-        # Check if CLAUDE.md was created
-        run_test "CLAUDE.md exists for $language + $framework" \
-            "[ -f 'CLAUDE.md' ]"
+        # Check if GEMINI.md was created
+        run_test "GEMINI.md exists for $language + $framework" \
+            "[ -f 'GEMINI.md' ]"
         
         # Check if .gemini directory was created
         run_test ".gemini directory exists for $language + $framework" \

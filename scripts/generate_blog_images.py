@@ -81,7 +81,7 @@ def generate_blog_image(title, description, component_type, component_name, inst
 
 LEFT SIDE (40% width):
 - Black background (#000000)
-- Text exactly as "CLAUDE CODE TEMPLATES" in pixelated/retro orange font (#F97316)
+- Text exactly as "GEMINI CODE TEMPLATES" in pixelated/retro orange font (#F97316)
 - Font style: Bold, blocky, retro gaming aesthetic similar to arcade game fonts
 - Stacked vertically with equal spacing between words
 - Centered vertically on left side
@@ -111,7 +111,7 @@ Overall specifications:
 - No decorative elements, gradients, or patterns - just text and divider
 - Clean, modern tech aesthetic similar to terminal/CLI interfaces
 
-The layout divides the image into two sections with a vertical line: left side shows "CLAUDE CODE TEMPLATES" in retro orange font, right side shows component type, name, and install command."""
+The layout divides the image into two sections with a vertical line: left side shows "GEMINI CODE TEMPLATES" in retro orange font, right side shows component type, name, and install command."""
 
     print(f"🎨 Generating image for: {title}")
     print(f"📝 Prompt length: {len(prompt)} chars")

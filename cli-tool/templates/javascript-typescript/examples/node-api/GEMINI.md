@@ -1,4 +1,4 @@
-# CLAUDE.md - Node.js API
+# GEMINI.md - Node.js API
 
 This file provides guidance to Gemini Code when working with Node.js API applications using TypeScript.
 
@@ -9,17 +9,20 @@ This is a Node.js API application with TypeScript and Express.js support.
 ## Development Commands
 
 ### API Development
+
 - **`/route`** - Create API routes and endpoints
 - **`/middleware`** - Create and manage Express middleware
 - **`/api-endpoint`** - Generate complete API endpoints
 - **`/database`** - Set up database operations and models
 
 ### Testing and Quality
+
 - **`/test`** - Run tests and create test files
 - **`/lint`** - Run linting and fix code style issues
 - **`/typescript-migrate`** - Migrate JavaScript files to TypeScript
 
 ### Development Workflow
+
 - **`/npm-scripts`** - Run npm scripts and package management
 - **`/debug`** - Debug Node.js applications
 - **`/refactor`** - Refactor and optimize code
@@ -27,24 +30,28 @@ This is a Node.js API application with TypeScript and Express.js support.
 ## Framework-Specific Guidelines
 
 ### Express.js Best Practices
+
 - Use middleware for cross-cutting concerns
 - Implement proper error handling
 - Follow RESTful API design principles
 - Use proper HTTP status codes
 
 ### Database Integration
+
 - Use TypeORM, Prisma, or Mongoose for database operations
 - Implement proper connection pooling
 - Use migrations for database schema changes
 - Follow repository pattern for data access
 
 ### Security Considerations
+
 - Implement authentication and authorization
 - Use HTTPS in production
 - Validate and sanitize input data
 - Implement rate limiting and CORS
 
 ### Error Handling
+
 - Use centralized error handling middleware
 - Implement proper logging
 - Return consistent error responses
@@ -53,6 +60,7 @@ This is a Node.js API application with TypeScript and Express.js support.
 ## TypeScript Configuration
 
 The project uses strict TypeScript configuration:
+
 - Strict type checking enabled
 - Proper interface definitions for requests/responses
 - Generic type support for database models
@@ -61,6 +69,7 @@ The project uses strict TypeScript configuration:
 ## API Design Patterns
 
 ### RESTful Routes
+
 ```
 GET    /api/users      - Get all users
 GET    /api/users/:id  - Get user by ID
@@ -70,6 +79,7 @@ DELETE /api/users/:id  - Delete user
 ```
 
 ### Request/Response Structure
+
 - Use consistent JSON response format
 - Implement proper status codes
 - Include metadata in responses

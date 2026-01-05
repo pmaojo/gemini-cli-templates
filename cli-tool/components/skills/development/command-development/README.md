@@ -5,6 +5,7 @@ Comprehensive guidance on creating Gemini CLI slash commands, including file for
 ## Overview
 
 This skill provides knowledge about:
+
 - Slash command file format and structure
 - YAML frontmatter configuration fields
 - Dynamic arguments ($ARGUMENTS, $1, $2, etc.)
@@ -12,7 +13,7 @@ This skill provides knowledge about:
 - Bash execution with !` syntax
 - Command organization and namespacing
 - Best practices for command development
-- Plugin-specific features (${CLAUDE_PLUGIN_ROOT}, plugin patterns)
+- Plugin-specific features (${GEMINI_PLUGIN_ROOT}, plugin patterns)
 - Integration with plugin components (agents, skills, hooks)
 - Validation patterns and error handling
 
@@ -23,6 +24,7 @@ This skill provides knowledge about:
 Core skill content covering:
 
 **Fundamentals:**
+
 - Command basics and locations
 - File format (Markdown with optional frontmatter)
 - YAML frontmatter fields overview
@@ -34,7 +36,8 @@ Core skill content covering:
 - Troubleshooting
 
 **Plugin-Specific:**
-- ${CLAUDE_PLUGIN_ROOT} environment variable
+
+- ${GEMINI_PLUGIN_ROOT} environment variable
 - Plugin command discovery and organization
 - Plugin command patterns (configuration, template, multi-script)
 - Integration with plugin components (agents, skills, hooks)
@@ -45,6 +48,7 @@ Core skill content covering:
 Detailed documentation:
 
 - **frontmatter-reference.md**: Complete YAML frontmatter field specifications
+
   - All field descriptions with types and defaults
   - When to use each field
   - Examples and best practices
@@ -52,7 +56,7 @@ Detailed documentation:
 
 - **plugin-features-reference.md**: Plugin-specific command features
   - Plugin command discovery and organization
-  - ${CLAUDE_PLUGIN_ROOT} environment variable usage
+  - ${GEMINI_PLUGIN_ROOT} environment variable usage
   - Plugin command patterns (configuration, template, multi-script)
   - Integration with plugin agents, skills, and hooks
   - Validation patterns and error handling
@@ -62,6 +66,7 @@ Detailed documentation:
 Practical command examples:
 
 - **simple-commands.md**: 10 complete command examples
+
   - Code review commands
   - Testing commands
   - Deployment commands
@@ -82,6 +87,7 @@ Practical command examples:
 ## When This Skill Triggers
 
 Gemini CLI activates this skill when users:
+
 - Ask to "create a slash command" or "add a command"
 - Need to "write a custom command"
 - Want to "define command arguments"
@@ -122,6 +128,7 @@ allowed-tools: Read, Bash(git:*)
 ---
 
 Command prompt content with:
+
 - Arguments: $1, $2, or $ARGUMENTS
 - Files: @path/to/file
 - Bash: !`command here`
@@ -136,24 +143,27 @@ Command prompt content with:
 ### Key Features
 
 **Dynamic arguments:**
+
 - `$ARGUMENTS` - All arguments as single string
 - `$1`, `$2`, `$3` - Positional arguments
 
 **File references:**
+
 - `@path/to/file` - Include file contents
 
 **Bash execution:**
+
 - `!`command`` - Execute and include output
 
 ## Frontmatter Fields Quick Reference
 
-| Field | Purpose | Example |
-|-------|---------|---------|
-| `description` | Brief description for /help | `"Review code for issues"` |
-| `allowed-tools` | Restrict tool access | `Read, Bash(git:*)` |
-| `model` | Specify model | `sonnet`, `opus`, `haiku` |
-| `argument-hint` | Document arguments | `[pr-number] [priority]` |
-| `disable-model-invocation` | Manual-only command | `true` |
+| Field                      | Purpose                     | Example                    |
+| -------------------------- | --------------------------- | -------------------------- |
+| `description`              | Brief description for /help | `"Review code for issues"` |
+| `allowed-tools`            | Restrict tool access        | `Read, Bash(git:*)`        |
+| `model`                    | Specify model               | `sonnet`, `opus`, `haiku`  |
+| `argument-hint`            | Document arguments          | `[pr-number] [priority]`   |
+| `disable-model-invocation` | Manual-only command         | `true`                     |
 
 ## Common Patterns
 
@@ -204,21 +214,25 @@ Recent commits: !`git log --oneline -5`
 ## Development Workflow
 
 1. **Design command:**
+
    - Define purpose and scope
    - Determine required arguments
    - Identify needed tools
 
 2. **Create file:**
+
    - Choose appropriate location
    - Create `.md` file with command name
    - Write basic prompt
 
 3. **Add frontmatter:**
+
    - Start minimal (just description)
    - Add fields as needed (allowed-tools, etc.)
    - Document arguments with argument-hint
 
 4. **Test command:**
+
    - Invoke with `/command-name`
    - Verify arguments work
    - Check bash execution
@@ -243,11 +257,13 @@ Recent commits: !`git log --oneline -5`
 ## Status
 
 **Completed enhancements:**
-- ✓ Plugin command patterns (${CLAUDE_PLUGIN_ROOT}, discovery, organization)
+
+- ✓ Plugin command patterns (${GEMINI_PLUGIN_ROOT}, discovery, organization)
 - ✓ Integration patterns (agents, skills, hooks coordination)
 - ✓ Validation patterns (input, file, resource validation, error handling)
 
 **Remaining enhancements (in progress):**
+
 - Advanced workflows (multi-step command sequences)
 - Testing strategies (how to test commands effectively)
 - Documentation patterns (command documentation best practices)
@@ -256,6 +272,7 @@ Recent commits: !`git log --oneline -5`
 ## Maintenance
 
 To update this skill:
+
 1. Keep SKILL.md focused on core fundamentals
 2. Move detailed specifications to references/
 3. Add new examples/ for different use cases
@@ -266,6 +283,7 @@ To update this skill:
 ## Version History
 
 **v0.1.0** (2025-01-15):
+
 - Initial release with basic command fundamentals
 - Frontmatter field reference
 - 10 simple command examples

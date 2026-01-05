@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to publish (e.g., patch, minor, major, or specific version like 1.15.0)'
+        description: "Version to publish (e.g., patch, minor, major, or specific version like 1.15.0)"
         required: true
-        default: 'patch'
+        default: "patch"
 
 permissions:
   contents: write
@@ -17,7 +17,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,19 +27,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@davila7'
+          node-version: "18"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@davila7"
 
       - name: Configure package for GitHub Packages
         working-directory: ./cli-tool
         run: |
           # Update package.json for GitHub Packages
-          npm pkg set name="@davila7/claude-code-templates"
+          npm pkg set name="@davila7/gemini-cli-templates"
           npm pkg set repository.type="git"
-          npm pkg set repository.url="git+https://github.com/davila7/claude-code-templates.git"
+          npm pkg set repository.url="git+https://github.com/davila7/gemini-cli-templates.git"
           npm pkg set publishConfig.registry="https://npm.pkg.github.com"
-          
+
           echo "Updated package.json for GitHub Packages:"
           cat package.json
 
@@ -69,12 +69,12 @@ jobs:
         run: |
           echo "🎉 Package Published to GitHub Packages!"
           echo "========================================"
-          echo "Package: @davila7/claude-code-templates"
+          echo "Package: @davila7/gemini-cli-templates"
           echo "Version: ${{ env.NEW_VERSION }}"
           echo "Registry: GitHub Packages"
           echo ""
           echo "Install with:"
-          echo "npm install -g @davila7/claude-code-templates --registry=https://npm.pkg.github.com"
+          echo "npm install -g @davila7/gemini-cli-templates --registry=https://npm.pkg.github.com"
           echo ""
           echo "Note: This workflow only publishes to GitHub Packages."
           echo "Main npm registry publication is handled manually."

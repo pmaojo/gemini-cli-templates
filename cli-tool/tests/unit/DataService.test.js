@@ -13,7 +13,7 @@ const DataServiceCode = fs.readFileSync(DataServicePath, 'utf8');
 
 // Create a module-like environment
 const moduleExports = {};
-const module = { exports: moduleExports };
+const mockModule = { exports: moduleExports };
 
 // Execute the DataService code in our test environment
 eval(DataServiceCode);

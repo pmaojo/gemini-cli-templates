@@ -2,11 +2,11 @@
 
 ## Phase 1: Preparation & "The Great Rename"
 
-- [x] **Repo Cleanup:** Remove Gemini-specific legacy files (`.gemini/`, `CLAUDE.md` in root) to clear confusion.
+- [x] **Repo Cleanup:** Remove Gemini-specific legacy files (`.gemini/`, `GEMINI.md` in root) to clear confusion.
 - [x] **Infrastructure Rename:**
   - Rename `cli-tool/package.json` name to `gemini-cli-templates`.
   - Update `README.md` title, badges, and descriptions.
-  - Rename `CLAUDE.md` to `GEMINI.md` in the root.
+  - Rename `GEMINI.md` to `GEMINI.md` in the root.
 - [/] **Mass Text Replacement (Repo-wide):**
   - Run a script to replace "Gemini Code" with "Gemini CLI" in all documentation and comments.
   - Replace "Google" with "Google" where appropriate in docs.
@@ -26,7 +26,7 @@
   - Change target config path to `~/.gemini/settings.json`.
   - Implement `readGeminiConfig()` and `writeGeminiConfig()`.
 - [ ] **Context Logic (`src/managers/ContextManager.js`):**
-  - Change target context file from `CLAUDE.md` to `GEMINI.md`.
+  - Change target context file from `GEMINI.md` to `GEMINI.md`.
   - Update the injection logic to append/replace content in `GEMINI.md`.
 - [ ] **Install Logic (`src/index.js`):**
   - Update `installComponent` to use the new Config and Context managers.

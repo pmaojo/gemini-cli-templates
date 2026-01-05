@@ -1,4 +1,4 @@
-# CLAUDE.md
+# GEMINI.md
 
 This file provides guidance to Gemini CLI (gemini.ai/code) when working with code in this repository.
 
