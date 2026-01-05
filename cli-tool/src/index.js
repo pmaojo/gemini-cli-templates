@@ -4,7 +4,6 @@ const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
 const { execSync } = require('child_process');
-const { execSync } = require('child_process');
 const { detectProject } = require('./utils');
 const { getTemplateConfig, TEMPLATES_CONFIG } = require('./templates');
 const { createPrompts, interactivePrompts } = require('./prompts');

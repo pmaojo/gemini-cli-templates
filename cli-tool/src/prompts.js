@@ -221,6 +221,18 @@ function getStepConfig(stepName, currentAnswers, projectInfo, options, additiona
         pageSize: 10
       };
 
+    case 'extensions':
+      return {
+        type: 'checkbox',
+        name: 'extensions',
+        message: 'Install recommended extensions?',
+        choices: [
+          { name: 'Conductor (Context-driven development)', value: 'https://github.com/gemini-cli-extensions/conductor', checked: true },
+          { name: 'Jules (Async coding agent)', value: 'https://github.com/gemini-cli-extensions/jules', checked: true }
+        ],
+        prefix: chalk.yellow('🧩')
+      };
+
     case 'analytics':
       return {
         type: 'confirm',
