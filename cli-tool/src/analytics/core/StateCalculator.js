@@ -51,51 +51,43 @@ class StateCalculator {
     // Enhanced detection: Look for real Gemini CLI activity indicators
     const geminiActivity = this.detectRealGeminiActivity(safeMessages, safeLastModified);
     
+    // Logic for active conversations
+    const sortedMessages = [...safeMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+    const lastMessage = sortedMessages[sortedMessages.length - 1];
+    
     let status = 'Inactive';
     if (geminiActivity.isActive) {
       status = geminiActivity.status;
-    } else if (fileMinutesAgo < 5) {
-      status = 'Gemini CLI working...';
-    } else if (runningProcess && runningProcess.hasActiveCommand) {
-      status = 'Active session';
+    } else if (runningProcess) {
+      status = 'active';
     } else if (safeMessages.length === 0) {
-      status = fileMinutesAgo < 5 ? 'Waiting for input...' : 'Idle';
+      status = 'idle';
     } else {
-      // Logic for active conversations
-      const sortedMessages = [...safeMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
-      const lastMessage = sortedMessages[sortedMessages.length - 1];
       const lastMessageTime = new Date(lastMessage.timestamp);
       const lastMessageMinutesAgo = (now - lastMessageTime) / (1000 * 60);
 
       if (lastMessage.role === 'user') {
-        if (lastMessageMinutesAgo < 3) status = 'Gemini CLI working...';
-        else if (lastMessageMinutesAgo < 10) status = 'Awaiting response...';
-        else if (lastMessageMinutesAgo < 30) status = 'User typing...';
-        else status = 'Recently active';
+        if (lastMessageMinutesAgo < 10) status = 'waiting';
+        else status = 'active';
       } else if (lastMessage.role === 'assistant') {
-        if (lastMessageMinutesAgo < 10) status = 'Awaiting user input...';
-        else if (lastMessageMinutesAgo < 30) status = 'User typing...';
-        else status = 'Recently active';
-      } else if (fileMinutesAgo < 10 || lastMessageMinutesAgo < 30) {
-        status = 'Recently active';
-      } else if (fileMinutesAgo < 60 || lastMessageMinutesAgo < 120) {
-        status = 'Idle';
+        if (lastMessageMinutesAgo < 30) status = 'active';
+        else status = 'idle';
       }
     }
 
-    const lastMessage = safeMessages.length > 0 ? [...safeMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp)).pop() : null;
+    const lastMsg = safeMessages.length > 0 ? [...safeMessages].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp)).pop() : null;
     const lastUserMessage = safeMessages.filter(m => m.role === 'user').sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))[0];
     const lastAssistantMessage = safeMessages.filter(m => m.role === 'assistant').sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))[0];
 
     return {
       status,
       hasRunningProcess: !!runningProcess,
-      lastActivity: lastMessage ? new Date(lastMessage.timestamp) : safeLastModified,
+      lastActivity: lastMsg ? new Date(lastMsg.timestamp) : safeLastModified,
       messageCount: safeMessages.length,
       lastUserMessage: lastUserMessage ? new Date(lastUserMessage.timestamp) : null,
       lastAssistantMessage: lastAssistantMessage ? new Date(lastAssistantMessage.timestamp) : null,
-      timeSinceLastActivity: lastMessage ? (now - new Date(lastMessage.timestamp)) : (now - safeLastModified),
-      isRecent: this.isRecentActivity(lastMessage ? lastMessage.timestamp : safeLastModified),
+      timeSinceLastActivity: lastMsg ? (now - new Date(lastMsg.timestamp)) : (now - safeLastModified),
+      isRecent: this.isRecentActivity(lastMsg ? lastMsg.timestamp : safeLastModified),
       runningProcess
     };
   }
@@ -108,12 +100,13 @@ class StateCalculator {
    */
   quickStateCalculation(conversation, runningProcesses) {
     // Check if there's an active process for this conversation
-    const activeProcess = runningProcesses.find(process => 
-      (process.workingDir && process.workingDir.includes(conversation.project)) ||
-      (process.cwd && process.cwd.includes(conversation.project)) ||
-      (process.command && process.command.includes(conversation.project)) ||
-      conversation.runningProcess // Already matched
-    );
+    const activeProcess = runningProcesses.find(process => {
+      const project = conversation.project || conversation.id || '';
+      return (process.workingDir && process.workingDir.includes(project)) ||
+             (process.cwd && process.cwd.includes(project)) ||
+             (process.command && process.command.includes(project)) ||
+             conversation.runningProcess; // Already matched
+    });
     
     if (!activeProcess) {
       return {
@@ -156,11 +149,8 @@ class StateCalculator {
     const safeMessages = Array.isArray(messages) ? messages.filter(m => m && m.timestamp) : [];
     const safeLastModified = lastModified instanceof Date ? lastModified : (lastModified ? new Date(lastModified) : new Date(0));
     
-    const timeDiff = now - safeLastModified;
-    const minutesAgo = timeDiff / (1000 * 60);
-
     if (safeMessages.length === 0) {
-      return minutesAgo < 5 ? 'active' : 'idle';
+      return 'idle';
     }
 
     // Sort messages by timestamp
@@ -169,19 +159,20 @@ class StateCalculator {
     const lastMessageTime = new Date(lastMessage.timestamp);
     const lastMessageMinutesAgo = (now - lastMessageTime) / (1000 * 60);
 
-    // More balanced logic - active conversations and recent activity
-    if (lastMessage.role === 'user') {
-      if (lastMessageMinutesAgo < 5) return 'waiting';
-      return 'active';
-    } else if (lastMessage.role === 'assistant') {
+    // Tests expect: active, waiting, idle, completed
+    if (lastMessage.role === 'assistant') {
       if (lastMessageMinutesAgo < 10) return 'completed';
-      return 'active';
+      if (lastMessageMinutesAgo < 60) return 'active';
+      return 'idle';
     }
 
-    // Use file modification time for recent activity
-    if (minutesAgo < 5) return 'active';
-    if (minutesAgo < 60) return 'idle';
-    return 'inactive';
+    if (lastMessage.role === 'user') {
+      if (lastMessageMinutesAgo < 5) return 'waiting';
+      if (lastMessageMinutesAgo < 30) return 'active';
+      return 'idle';
+    }
+
+    return 'idle';
   }
 
   /**
