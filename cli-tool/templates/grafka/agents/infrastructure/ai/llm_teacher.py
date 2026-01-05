@@ -16,7 +16,7 @@ class LLMTeacher:
     """
 
     def __init__(self, model: str = None):
-        self.model = model or os.getenv("GEMINI_MODEL", "gemini/gemini-2.5-flash")
+        self.model = model or os.getenv("GEMINI_MODEL", "gemini/gemini-3-flash")
         print(f"🎓 LLM Teacher inicializado con modelo: {self.model}")
 
     def correct_negative_feedback(

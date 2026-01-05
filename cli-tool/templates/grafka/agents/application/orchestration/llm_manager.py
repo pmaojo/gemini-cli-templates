@@ -184,7 +184,7 @@ You can select multiple tools if needed (they'll execute in sequence).
 
         try:
             response = completion(
-                model=os.getenv("GEMINI_MODEL", "gemini/gemini-2.5-flash"),
+                model=os.getenv("GEMINI_MODEL", "gemini/gemini-3-flash"),
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.1
             )
