@@ -181,7 +181,7 @@ Cypher:"""
 
         # Find all relationships
         # Matches [:RelType] or [r:RelType]
-        rel_matches = re.finditer(r"\[[^\]]*:([a-zA-Z0-9_]+)[^\]]*\]", cypher)
+        rel_matches = re.finditer(r"\[[^\]]*:(\w+)[^\]]*\]", cypher)
 
         for match in rel_matches:
             rel_type = match.group(1)
@@ -195,7 +195,7 @@ Cypher:"""
 
         # Find all Node Labels
         # Matches (:Label) or (n:Label)
-        label_matches = re.finditer(r"\([^\)]*:([a-zA-Z0-9_]+)[^\)]*\)", cypher)
+        label_matches = re.finditer(r"\([^\)]*:(\w+)[^\)]*\)", cypher)
 
         for match in label_matches:
             label = match.group(1)

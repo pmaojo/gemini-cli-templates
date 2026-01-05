@@ -43,9 +43,11 @@ class OntologyValidator:
             classes.add(class_name)
 
         # Add common variations
-        for cls in list(classes):
-            classes.add(cls.lower())
-            classes.add(cls.capitalize())
+        variations = set()
+        for cls in classes:
+            variations.add(cls.lower())
+            variations.add(cls.capitalize())
+        classes.update(variations)
 
         return classes
 
@@ -68,9 +70,11 @@ class OntologyValidator:
             properties.add(prop_name)
 
         # Add common variations
-        for prop in list(properties):
-            properties.add(prop.lower())
-            properties.add(prop.replace('_', ' '))
+        variations = set()
+        for prop in properties:
+            variations.add(prop.lower())
+            variations.add(prop.replace('_', ' '))
+        properties.update(variations)
 
         # Add meta-properties
         properties.add("isA")
@@ -123,13 +127,6 @@ class OntologyValidator:
             errors.append(f"Predicate '{predicate}' not in ontology")
             suggestions["predicate"] = self._find_closest_match(predicate, self.valid_properties)
         else:
-            # 2. Check Domain Constraint (Subject Type)
-            # Note: We can only check this if we know the subject's type.
-            # Here we do a heuristic check if the subject name literally matches a class name
-            # or if we have strict mode enabled.
-            # For now, we'll skip strict type checking unless we can infer type easily.
-            pass
-
             # 3. Check Range Constraint (Object Type)
             # If range is a primitive type (xsd:float), check formatting
             # If range is a Class, check if object is a valid entity of that class
@@ -211,8 +208,8 @@ Return JSON only: ["subject_en", "predicate_en", "object_en"]"""
                 content = content.split("```")[1].replace("json", "").strip()
 
             return tuple(json.loads(content))
-        except Exception as e:
-            # print(f"Translation failed: {e}")
+        except Exception:
+            # print(f"Translation failed")
             return None
 
     def _is_valid_entity(self, entity: str) -> bool:

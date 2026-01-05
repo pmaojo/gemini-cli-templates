@@ -46,37 +46,49 @@ class FormalIntegrator:
             if "error" in result:
                 continue
 
-            if "inferred_triples" in result:
-                # OWL Reasoning Output
-                triples = result.get("inferred_triples", [])
-                rules = result.get("rules_applied", {})
-                if triples:
-                    triples_str = ", ".join([f"({s}, {p}, {o})" for s, p, o in triples[:10]])
-                    evidence_parts.append(f"Logical Deductions (OWL):\n- Inferred Facts: {triples_str}\n- Rules Applied: {json.dumps(rules)}")
-
-            elif "results" in result:
-                # RAG/Search Output
-                items = result.get("results", [])
-                if items:
-                    # Check structure (could be list of dicts or objects)
-                    texts = []
-                    for item in items:
-                        if isinstance(item, dict):
-                            desc = item.get("description") or item.get("content") or str(item)
-                            texts.append(desc[:200])
-                    evidence_parts.append(f"Search Results (Context):\n" + "\n".join([f"- {t}" for t in texts]))
-
-            elif isinstance(result, list):
-                # Cypher/Triple List
-                # Check if it looks like triples or records
-                str_repr = str(result)[:500]
-                evidence_parts.append(f"Graph Data:\n{str_repr}")
-
-            elif isinstance(result, dict):
-                # Generic Dict
-                evidence_parts.append(f"Tool Output:\n{json.dumps(result, default=str)[:500]}")
+            part = self._format_result_part(result)
+            if part:
+                evidence_parts.append(part)
 
         return "\n\n".join(evidence_parts)
+
+    def _format_result_part(self, result: Any) -> Optional[str]:
+        """Format a single tool result into a string part"""
+        if isinstance(result, dict):
+            if "inferred_triples" in result:
+                return self._format_owl_result(result)
+            if "results" in result:
+                return self._format_search_result(result)
+            return f"Tool Output:\n{json.dumps(result, default=str)[:500]}"
+
+        if isinstance(result, list):
+            str_repr = str(result)[:500]
+            return f"Graph Data:\n{str_repr}"
+
+        return None
+
+    def _format_owl_result(self, result: Dict[str, Any]) -> Optional[str]:
+        """Format OWL reasoning output"""
+        triples = result.get("inferred_triples", [])
+        rules = result.get("rules_applied", {})
+        if not triples:
+            return None
+        triples_str = ", ".join([f"({s}, {p}, {o})" for s, p, o in triples[:10]])
+        return f"Logical Deductions (OWL):\n- Inferred Facts: {triples_str}\n- Rules Applied: {json.dumps(rules)}"
+
+    def _format_search_result(self, result: Dict[str, Any]) -> Optional[str]:
+        """Format RAG/Search output"""
+        items = result.get("results", [])
+        if not items:
+            return None
+        texts = []
+        for item in items:
+            if isinstance(item, dict):
+                desc = item.get("description") or item.get("content") or str(item)
+                texts.append(desc[:200])
+        if not texts:
+            return None
+        return "Search Results (Context):\n" + "\n".join([f"- {t}" for t in texts])
 
     async def _generate_with_llm(self, question: str, evidence: str) -> str:
         """Generate response using LLM"""
@@ -114,4 +126,5 @@ Answer:"""
 
     def _fallback_synthesis(self, question: str, evidence: str) -> str:
         """Fallback if LLM is unavailable"""
+        _ = question  # Silence unused parameter warning
         return f"**Analysis based on evidence:**\n\n{evidence}\n\n(Note: LLM synthesis unavailable, showing raw evidence)"

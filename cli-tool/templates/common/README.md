@@ -9,6 +9,11 @@ This folder contains language-agnostic templates and configurations that can be 
 - `GEMINI.md` - Base configuration for Gemini Code with universal best practices
 - `.gemini/commands/` - Custom commands for common development tasks
 
+### Extensions
+
+- [Conductor](https://github.com/gemini-cli-extensions/conductor) - Context-driven development for Gemini CLI
+- [Browse all extensions](https://github.com/gemini-cli-extensions)
+
 ### Common Custom Commands
 
 - `git-workflow.md` - Git operations and workflow automation
@@ -101,6 +106,23 @@ Organizations can use this as a base template and customize it for their specifi
 - **Document Changes**: Keep track of customizations in your project's documentation
 - **Regular Updates**: Periodically review and update your Gemini Code configuration
 - **Team Alignment**: Ensure all team members understand the custom commands and workflows
+
+## Extensions
+
+Gemini CLI can be extended with project-level or system-wide extensions.
+
+### Installing Extensions
+
+To install an extension, use the following command:
+
+```bash
+gemini extensions install <extension-url>
+```
+
+Recommended Extensions:
+
+- **Conductor**: `gemini extensions install https://github.com/gemini-cli-extensions/conductor`
+- **More**: Check the [Gemini CLI Extensions](https://github.com/gemini-cli-extensions) organization.
 
 ## Contributing
 

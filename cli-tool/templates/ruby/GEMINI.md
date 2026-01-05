@@ -250,6 +250,32 @@ BUNDLE_JOBS: "4"
 BUNDLE_RETRY: "3"
 ```
 
+## Agentic Workflow with Conductor
+
+For tasks complex than simple code edits, use **Conductor** for context-driven development.
+
+### 1. Establish Context
+
+Run `/conductor:setup` to define your project's core components:
+
+- **Product**: Users, goals, and high-level features.
+- **Tech Stack**: Language, database, and frameworks.
+- **Workflow**: Testing strategies, coding standards.
+
+### 2. Specify and Plan
+
+Initialize a new unit of work (Track) with `/conductor:newTrack`. This generates:
+
+- **Specs**: Detailed requirements.
+- **Plan**: Actionable to-do list (`plan.md`).
+
+### 3. Implement
+
+Execute the approved plan with `/conductor:implement`. The agent will work through `plan.md`, persisting state so you can pause and resume as needed.
+
+> [!TIP]
+> Install Conductor with: `gemini extensions install https://github.com/gemini-cli-extensions/conductor`
+
 ## Development Workflow
 
 ### Before Starting
