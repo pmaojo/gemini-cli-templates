@@ -7,6 +7,8 @@ import os
 from typing import List, Dict, Tuple, Optional, Any
 import litellm
 
+JSON_MARKER = "```json"
+
 class LLMTeacher:
     """
     Usa un LLM grande (Gemini/GPT) para:
@@ -65,8 +67,8 @@ Reglas:
             content = response.choices[0].message.content
 
             # Limpiar markdown si existe
-            if "```json" in content:
-                content = content.split("```json")[1].split("```")[0].strip()
+            if JSON_MARKER in content:
+                content = content.split(JSON_MARKER)[1].split("```")[0].strip()
             elif "```" in content:
                 content = content.split("```")[1].split("```")[0].strip()
 
@@ -138,8 +140,8 @@ Reglas:
             content = response.choices[0].message.content
 
             # Limpiar markdown
-            if "```json" in content:
-                content = content.split("```json")[1].split("```")[0].strip()
+            if JSON_MARKER in content:
+                content = content.split(JSON_MARKER)[1].split("```")[0].strip()
             elif "```" in content:
                 content = content.split("```")[1].split("```")[0].strip()
 

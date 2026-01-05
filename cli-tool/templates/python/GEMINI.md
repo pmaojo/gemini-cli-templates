@@ -1,4 +1,4 @@
-# CLAUDE.md
+# GEMINI.md
 
 This file provides guidance to Gemini Code (gemini.ai/code) when working with code in this repository.
 
@@ -9,6 +9,7 @@ This is a Python project optimized for modern Python development. The project us
 ## Development Commands
 
 ### Environment Management
+
 - `python -m venv venv` - Create virtual environment
 - `source venv/bin/activate` (Linux/Mac) or `venv\Scripts\activate` (Windows) - Activate virtual environment
 - `deactivate` - Deactivate virtual environment
@@ -16,12 +17,14 @@ This is a Python project optimized for modern Python development. The project us
 - `pip install -r requirements-dev.txt` - Install development dependencies
 
 ### Package Management
+
 - `pip install <package>` - Install a package
 - `pip install -e .` - Install project in development mode
 - `pip freeze > requirements.txt` - Generate requirements file
 - `pip-tools compile requirements.in` - Compile requirements with pip-tools
 
 ### Testing Commands
+
 - `pytest` - Run all tests
 - `pytest -v` - Run tests with verbose output
 - `pytest --cov` - Run tests with coverage report
@@ -31,6 +34,7 @@ This is a Python project optimized for modern Python development. The project us
 - `python -m unittest` - Run tests with unittest
 
 ### Code Quality Commands
+
 - `black .` - Format code with Black
 - `black --check .` - Check code formatting without changes
 - `isort .` - Sort imports
@@ -40,6 +44,7 @@ This is a Python project optimized for modern Python development. The project us
 - `mypy src/` - Run type checking with MyPy
 
 ### Development Tools
+
 - `python -m pip install --upgrade pip` - Upgrade pip
 - `python -c "import sys; print(sys.version)"` - Check Python version
 - `python -m site` - Show Python site information
@@ -48,11 +53,13 @@ This is a Python project optimized for modern Python development. The project us
 ## Technology Stack
 
 ### Core Technologies
+
 - **Python** - Primary programming language (3.8+)
 - **pip** - Package management
 - **venv** - Virtual environment management
 
 ### Common Frameworks
+
 - **Django** - High-level web framework
 - **Flask** - Micro web framework
 - **FastAPI** - Modern API framework with automatic documentation
@@ -60,6 +67,7 @@ This is a Python project optimized for modern Python development. The project us
 - **Pydantic** - Data validation using Python type hints
 
 ### Data Science & ML
+
 - **NumPy** - Numerical computing
 - **Pandas** - Data manipulation and analysis
 - **Matplotlib/Seaborn** - Data visualization
@@ -67,6 +75,7 @@ This is a Python project optimized for modern Python development. The project us
 - **TensorFlow/PyTorch** - Deep learning frameworks
 
 ### Testing Frameworks
+
 - **pytest** - Testing framework
 - **unittest** - Built-in testing framework
 - **pytest-cov** - Coverage plugin for pytest
@@ -74,6 +83,7 @@ This is a Python project optimized for modern Python development. The project us
 - **responses** - Mock HTTP requests
 
 ### Code Quality Tools
+
 - **Black** - Code formatter
 - **isort** - Import sorter
 - **flake8** - Style guide enforcement
@@ -84,6 +94,7 @@ This is a Python project optimized for modern Python development. The project us
 ## Project Structure Guidelines
 
 ### File Organization
+
 ```
 src/
 ├── package_name/
@@ -108,6 +119,7 @@ requirements/
 ```
 
 ### Naming Conventions
+
 - **Files/Modules**: Use snake_case (`user_profile.py`)
 - **Classes**: Use PascalCase (`UserProfile`)
 - **Functions/Variables**: Use snake_case (`get_user_data`)
@@ -117,6 +129,7 @@ requirements/
 ## Python Guidelines
 
 ### Type Hints
+
 - Use type hints for function parameters and return values
 - Import types from `typing` module when needed
 - Use `Optional` for nullable values
@@ -124,6 +137,7 @@ requirements/
 - Document complex types with comments
 
 ### Code Style
+
 - Follow PEP 8 style guide
 - Use meaningful variable and function names
 - Keep functions focused and single-purpose
@@ -131,6 +145,7 @@ requirements/
 - Limit line length to 88 characters (Black default)
 
 ### Best Practices
+
 - Use list comprehensions for simple transformations
 - Prefer `pathlib` over `os.path` for file operations
 - Use context managers (`with` statements) for resource management
@@ -140,6 +155,7 @@ requirements/
 ## Testing Standards
 
 ### Test Structure
+
 - Organize tests to mirror source code structure
 - Use descriptive test names that explain the behavior
 - Follow AAA pattern (Arrange, Act, Assert)
@@ -147,6 +163,7 @@ requirements/
 - Group related tests in classes
 
 ### Coverage Goals
+
 - Aim for 90%+ test coverage
 - Write unit tests for business logic
 - Use integration tests for external dependencies
@@ -154,6 +171,7 @@ requirements/
 - Test error conditions and edge cases
 
 ### pytest Configuration
+
 ```python
 # pytest.ini or pyproject.toml
 [tool.pytest.ini_options]
@@ -167,6 +185,7 @@ addopts = "--cov=src --cov-report=term-missing"
 ## Virtual Environment Setup
 
 ### Creation and Activation
+
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -183,6 +202,7 @@ pip install -r requirements-dev.txt
 ```
 
 ### Requirements Management
+
 - Use `requirements.txt` for production dependencies
 - Use `requirements-dev.txt` for development dependencies
 - Consider using `pip-tools` for dependency resolution
@@ -191,6 +211,7 @@ pip install -r requirements-dev.txt
 ## Django-Specific Guidelines
 
 ### Project Structure
+
 ```
 project_name/
 ├── manage.py
@@ -207,6 +228,7 @@ project_name/
 ```
 
 ### Common Commands
+
 - `python manage.py runserver` - Start development server
 - `python manage.py migrate` - Apply database migrations
 - `python manage.py makemigrations` - Create new migrations
@@ -217,6 +239,7 @@ project_name/
 ## FastAPI-Specific Guidelines
 
 ### Project Structure
+
 ```
 src/
 ├── main.py              # FastAPI application
@@ -236,18 +259,21 @@ src/
 ```
 
 ### Common Commands
+
 - `uvicorn main:app --reload` - Start development server
 - `uvicorn main:app --host 0.0.0.0 --port 8000` - Start production server
 
 ## Security Guidelines
 
 ### Dependencies
+
 - Regularly update dependencies with `pip list --outdated`
 - Use `safety` package to check for known vulnerabilities
 - Pin dependency versions in requirements files
 - Use virtual environments to isolate dependencies
 
 ### Code Security
+
 - Validate input data with Pydantic or similar
 - Use environment variables for sensitive configuration
 - Implement proper authentication and authorization
@@ -257,18 +283,21 @@ src/
 ## Development Workflow
 
 ### Before Starting
+
 1. Check Python version compatibility
 2. Create and activate virtual environment
 3. Install dependencies from requirements files
 4. Run type checking with `mypy`
 
 ### During Development
+
 1. Use type hints for better code documentation
 2. Run tests frequently to catch issues early
 3. Use meaningful commit messages
 4. Format code with Black before committing
 
 ### Before Committing
+
 1. Run full test suite: `pytest`
 2. Check code formatting: `black --check .`
 3. Sort imports: `isort --check-only .`

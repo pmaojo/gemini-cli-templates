@@ -1,10 +1,11 @@
-# CLAUDE.md
+# GEMINI.md
 
 This file provides guidance to Gemini Code (gemini.ai/code) when working with code in this repository.
 
 ## Universal Development Guidelines
 
 ### Code Quality Standards
+
 - Write clean, readable, and maintainable code
 - Follow consistent naming conventions across the project
 - Use meaningful variable and function names
@@ -12,6 +13,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 - Add comments for complex logic and business rules
 
 ### Git Workflow
+
 - Use descriptive commit messages following conventional commits format
 - Create feature branches for new development
 - Keep commits atomic and focused on single changes
@@ -19,6 +21,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 - Maintain a clean commit history
 
 ### Documentation
+
 - Keep README.md files up to date
 - Document public APIs and interfaces
 - Include usage examples for complex features
@@ -26,6 +29,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 - Update documentation when making changes
 
 ### Testing Approach
+
 - Write tests for new features and bug fixes
 - Maintain good test coverage
 - Use descriptive test names that explain the expected behavior
@@ -33,6 +37,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 - Run tests before committing changes
 
 ### Security Best Practices
+
 - Never commit sensitive information (API keys, passwords, tokens)
 - Use environment variables for configuration
 - Validate input data and sanitize outputs
@@ -42,6 +47,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 ## Project Structure Guidelines
 
 ### File Organization
+
 - Group related files in logical directories
 - Use consistent file and folder naming conventions
 - Separate source code from configuration files
@@ -49,6 +55,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 - Organize assets and resources appropriately
 
 ### Configuration Management
+
 - Use configuration files for environment-specific settings
 - Centralize configuration in dedicated files
 - Use environment variables for sensitive or environment-specific data
@@ -58,18 +65,21 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 ## Development Workflow
 
 ### Before Starting Work
+
 1. Pull latest changes from main branch
 2. Create a new feature branch
 3. Review existing code and architecture
 4. Plan the implementation approach
 
 ### During Development
+
 1. Make incremental commits with clear messages
 2. Run tests frequently to catch issues early
 3. Follow established coding standards
 4. Update documentation as needed
 
 ### Before Submitting
+
 1. Run full test suite
 2. Check code quality and formatting
 3. Update documentation if necessary
@@ -78,6 +88,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 ## Common Patterns
 
 ### Error Handling
+
 - Use appropriate error handling mechanisms for the language
 - Provide meaningful error messages
 - Log errors appropriately for debugging
@@ -85,6 +96,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 - Don't expose sensitive information in error messages
 
 ### Performance Considerations
+
 - Profile code for performance bottlenecks
 - Optimize database queries and API calls
 - Use caching where appropriate
@@ -92,6 +104,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 - Monitor and measure performance metrics
 
 ### Code Reusability
+
 - Extract common functionality into reusable modules
 - Use dependency injection for better testability
 - Create utility functions for repeated operations
@@ -101,6 +114,7 @@ This file provides guidance to Gemini Code (gemini.ai/code) when working with co
 ## Review Checklist
 
 Before marking any task as complete:
+
 - [ ] Code follows established conventions
 - [ ] Tests are written and passing
 - [ ] Documentation is updated

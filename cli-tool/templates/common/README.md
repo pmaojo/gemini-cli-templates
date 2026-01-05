@@ -5,10 +5,12 @@ This folder contains language-agnostic templates and configurations that can be 
 ## What's Included
 
 ### Core Files
-- `CLAUDE.md` - Base configuration for Gemini Code with universal best practices
+
+- `GEMINI.md` - Base configuration for Gemini Code with universal best practices
 - `.gemini/commands/` - Custom commands for common development tasks
 
 ### Common Custom Commands
+
 - `git-workflow.md` - Git operations and workflow automation
 - `code-review.md` - Code review and quality assurance tasks
 - `project-setup.md` - Project initialization and configuration
@@ -17,6 +19,7 @@ This folder contains language-agnostic templates and configurations that can be 
 ## How to Use
 
 ### For New Projects
+
 Copy the entire `common/` folder contents to your project root:
 
 ```bash
@@ -24,32 +27,38 @@ cp -r gemini-code-templates/common/* your-project/
 ```
 
 ### For Existing Projects
+
 Merge the relevant files with your existing Gemini Code configuration:
 
 ```bash
 # Copy custom commands
 cp -r gemini-code-templates/common/.gemini/commands/* your-project/.gemini/commands/
 
-# Review and merge CLAUDE.md content
-cat gemini-code-templates/common/CLAUDE.md >> your-project/CLAUDE.md
+# Review and merge GEMINI.md content
+cat gemini-code-templates/common/GEMINI.md >> your-project/GEMINI.md
 ```
 
 ## Customization
 
-### CLAUDE.md
-The base CLAUDE.md file includes:
+### GEMINI.md
+
+The base GEMINI.md file includes:
+
 - Universal development best practices
 - Common project patterns and conventions
 - Git workflow guidelines
 - Code quality standards
 
 Customize it by:
+
 - Adding project-specific information
 - Modifying coding standards to match your team's preferences
 - Including technology-specific guidelines
 
 ### Custom Commands
+
 The included commands are designed to be generic and widely applicable. You can:
+
 - Modify existing commands to match your workflow
 - Add new commands for project-specific tasks
 - Remove commands that don't apply to your project
@@ -65,6 +74,7 @@ This common template is designed to work alongside language-specific templates:
 ## Examples
 
 ### Multi-language Projects
+
 For projects using multiple programming languages:
 
 ```bash
@@ -77,6 +87,7 @@ cp -r gemini-code-templates/python/.gemini/commands/* your-project/.gemini/comma
 ```
 
 ### Team Standardization
+
 Organizations can use this as a base template and customize it for their specific needs:
 
 1. Fork this repository

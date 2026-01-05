@@ -1,4 +1,4 @@
-# CLAUDE.md
+# GEMINI.md
 
 This file provides guidance to Gemini Code (gemini.ai/code) when working with code in this repository.
 
@@ -9,6 +9,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 ## Development Commands
 
 ### Environment Management
+
 - `ruby --version` - Check Ruby version
 - `rbenv versions` - List available Ruby versions (with rbenv)
 - `rbenv install 3.2.0` - Install specific Ruby version
@@ -16,6 +17,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 - `rvm use 3.2.0` - Use specific Ruby version (with RVM)
 
 ### Package Management
+
 - `bundle install` - Install dependencies from Gemfile
 - `bundle update` - Update all gems to latest versions
 - `bundle update <gem_name>` - Update specific gem
@@ -26,6 +28,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 - `gem list` - List installed gems
 
 ### Testing Commands
+
 - `rspec` - Run RSpec tests
 - `rspec spec/models` - Run specific test directory
 - `rspec spec/models/user_spec.rb` - Run specific test file
@@ -36,6 +39,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 - `bundle exec rspec` - Run RSpec with bundled gems
 
 ### Code Quality Commands
+
 - `rubocop` - Run RuboCop linter
 - `rubocop -A` - Auto-correct RuboCop violations
 - `rubocop --only <cop_name>` - Run specific RuboCop cop
@@ -45,6 +49,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 - `bundle audit` - Check for security vulnerabilities in gems
 
 ### Development Tools
+
 - `irb` - Interactive Ruby console
 - `pry` - Enhanced Ruby console (if installed)
 - `ruby -c <file.rb>` - Check Ruby syntax
@@ -53,11 +58,13 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 ## Technology Stack
 
 ### Core Technologies
+
 - **Ruby** - Primary programming language (3.2.0+)
 - **Bundler** - Dependency management
 - **RubyGems** - Package management system
 
 ### Common Frameworks
+
 - **Ruby on Rails** - Full-stack web framework
 - **Sinatra** - Lightweight web framework
 - **Hanami** - Modern web framework
@@ -65,6 +72,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 - **Roda** - Routing tree web framework
 
 ### Testing Frameworks
+
 - **RSpec** - Behavior-driven development testing framework
 - **Minitest** - Built-in testing framework
 - **FactoryBot** - Test data generation
@@ -73,6 +81,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 - **WebMock** - Mock HTTP requests
 
 ### Code Quality Tools
+
 - **RuboCop** - Ruby static code analyzer and formatter
 - **Brakeman** - Static analysis security vulnerability scanner
 - **Reek** - Code smell detector
@@ -80,6 +89,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 - **YARD** - Documentation generation tool
 
 ### Popular Gems
+
 - **Puma** - Web server
 - **Sidekiq** - Background job processing
 - **Redis** - In-memory data structure store
@@ -90,6 +100,7 @@ This is a Ruby project optimized for modern Ruby development. The project uses i
 ## Project Structure Guidelines
 
 ### File Organization
+
 ```
 app/
 ├── models/              # Business logic and data models
@@ -119,6 +130,7 @@ Rakefile              # Rake task definitions
 ```
 
 ### Naming Conventions
+
 - **Files/Modules**: Use snake_case (`user_profile.rb`)
 - **Classes**: Use PascalCase (`UserProfile`)
 - **Methods/Variables**: Use snake_case (`get_user_data`)
@@ -128,6 +140,7 @@ Rakefile              # Rake task definitions
 ## Ruby Guidelines
 
 ### Code Style
+
 - Follow the Ruby Style Guide
 - Use meaningful variable and method names
 - Keep methods focused and single-purpose
@@ -136,6 +149,7 @@ Rakefile              # Rake task definitions
 - Use proper indentation (2 spaces)
 
 ### Best Practices
+
 - Use `bundle exec` for running commands with specific gem versions
 - Write tests for all public methods
 - Use descriptive commit messages
@@ -147,6 +161,7 @@ Rakefile              # Rake task definitions
 ## Testing Standards
 
 ### Test Structure
+
 - Organize tests to mirror source code structure
 - Use descriptive test names that explain the behavior
 - Follow AAA pattern (Arrange, Act, Assert)
@@ -154,6 +169,7 @@ Rakefile              # Rake task definitions
 - Group related tests in context blocks (RSpec)
 
 ### Coverage Goals
+
 - Aim for 90%+ test coverage
 - Write unit tests for models and services
 - Use integration tests for controllers and features
@@ -161,27 +177,28 @@ Rakefile              # Rake task definitions
 - Test error conditions and edge cases
 
 ### RSpec Configuration
+
 ```ruby
 # spec/spec_helper.rb
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
-  
+
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
-  
+
   config.shared_context_metadata_behavior = :apply_to_host_groups
   config.filter_run_when_matching :focus
   config.example_status_persistence_file_path = "spec/examples.txt"
   config.disable_monkey_patching!
   config.warnings = true
-  
+
   if config.files_to_run.one?
     config.default_formatter = "doc"
   end
-  
+
   config.profile_examples = 10
   config.order = :random
   Kernel.srand config.seed
@@ -191,6 +208,7 @@ end
 ## Bundler Configuration
 
 ### Gemfile Best Practices
+
 ```ruby
 # Gemfile
 source 'https://rubygems.org'
@@ -224,6 +242,7 @@ end
 ```
 
 ### Bundle Configuration
+
 ```bash
 # .bundle/config or config/bundle
 BUNDLE_PATH: "vendor/bundle"
@@ -234,18 +253,21 @@ BUNDLE_RETRY: "3"
 ## Development Workflow
 
 ### Before Starting
+
 1. Check Ruby version compatibility
 2. Install dependencies with `bundle install`
 3. Set up database (if applicable)
 4. Run tests to ensure setup is correct
 
 ### During Development
+
 1. Write tests first (TDD approach)
 2. Run tests frequently: `bundle exec rspec`
 3. Use meaningful commit messages
 4. Run code quality checks regularly
 
 ### Before Committing
+
 1. Run full test suite: `bundle exec rspec`
 2. Run linter: `rubocop`
 3. Run security scanner: `brakeman`
@@ -255,12 +277,14 @@ BUNDLE_RETRY: "3"
 ## Security Guidelines
 
 ### Gem Security
+
 - Regularly update gems with `bundle update`
 - Use `bundle audit` to check for known vulnerabilities
 - Pin gem versions in Gemfile.lock
 - Review gem source code for suspicious packages
 
 ### Code Security
+
 - Validate input data
 - Use environment variables for sensitive configuration
 - Implement proper authentication and authorization
@@ -271,6 +295,7 @@ BUNDLE_RETRY: "3"
 ## Performance Considerations
 
 ### Code Performance
+
 - Use proper indexing for database queries
 - Implement caching strategies
 - Profile code with tools like `ruby-prof`
@@ -278,6 +303,7 @@ BUNDLE_RETRY: "3"
 - Use background jobs for heavy operations
 
 ### Gem Performance
+
 - Choose gems wisely based on performance metrics
 - Monitor gem overhead
 - Use lightweight alternatives when possible

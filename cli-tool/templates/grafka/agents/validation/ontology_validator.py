@@ -200,7 +200,7 @@ Original: ({s}, {p}, {o})
 Return JSON only: ["subject_en", "predicate_en", "object_en"]"""
 
             response = completion(
-                model=os.getenv("GEMINI_MODEL", "gemini/gemini-2.5-flash"),
+                model=os.getenv("GEMINI_MODEL", "gemini/gemini-3-flash"),
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.0
             )
