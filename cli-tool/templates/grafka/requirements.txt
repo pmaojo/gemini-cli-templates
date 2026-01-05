@@ -10,3 +10,5 @@ grpcio
 grpcio-tools
 protobuf
 rdflib
+peft
+lightning

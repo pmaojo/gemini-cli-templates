@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "grafka-engine": {
-      "command": "python",
+      "command": ".venv/bin/python",
       "args": ["-m", "agents.infrastructure.web.mcp_server"],
       "env": {
         "PYTHONPATH": "${PWD}",

@@ -40,15 +40,19 @@ class ServerContext:
 
 context = ServerContext()
 
+def log(msg):
+    """Log to stderr to avoid corrupting MCP stdout stream"""
+    print(msg, file=sys.stderr, flush=True)
+
 @mcp.on_startup
 async def initialize():
     """Initialize connections on startup"""
     if not GraphClient:
-        print("Error: Missing dependencies (GraphClient). Did you run setup.sh?", flush=True)
+        log("Error: Missing dependencies (GraphClient). Did you run setup.sh?")
         return
 
     try:
-        print("Initializing Grafka components...", flush=True)
+        log("Initializing Grafka components...")
 
         # 1. Embeddings (CPU friendly default)
         context.embedder = EmbeddingGenerator(model_name="all-MiniLM-L6-v2")
@@ -65,10 +69,10 @@ async def initialize():
             g = Graph()
             if os.path.exists(ontology_path):
                 g.parse(ontology_path)
-                print(f"Loaded ontology from {ontology_path} with {len(g)} triples", flush=True)
+                log(f"Loaded ontology from {ontology_path} with {len(g)} triples")
             context.ontology_graph = g
         except Exception as e:
-            print(f"Warning: Could not load ontology: {e}", flush=True)
+            log(f"Warning: Could not load ontology: {e}")
             context.ontology_graph = None
 
         # 4. Pipeline Engine (DataSyn)
@@ -77,9 +81,9 @@ async def initialize():
         # 5. LLM Manager
         context.pipeline_manager = LLMPipelineManager()
 
-        print("Grafka components initialized successfully.", flush=True)
+        log("Grafka components initialized successfully.")
     except Exception as e:
-        print(f"Error initializing Grafka: {e}", flush=True)
+        log(f"Error initializing Grafka: {e}")
 
 @mcp.tool()
 async def query_knowledge_graph(query: str) -> str:
@@ -97,7 +101,7 @@ async def query_knowledge_graph(query: str) -> str:
         "vector_store": context.vector_store,
         "embedder": context.embedder,
         "pipeline_engine": context.pipeline_engine,
-        "ontology": context.ontology_graph, # Pass the initialized Graph object!
+        "ontology": context.ontology_graph,
         "tenant_id": "default"
     }
 
