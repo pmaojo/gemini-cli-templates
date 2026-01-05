@@ -18,7 +18,7 @@ async function interactivePrompts(projectInfo, options = {}) {
   // Build steps array based on options
   if (!options.language) state.steps.push('language');
   if (!options.framework) state.steps.push('framework');
-  state.steps.push('commands', 'hooks', 'mcps', 'agents', 'analytics', 'confirm');
+  state.steps.push('commands', 'hooks', 'mcps', 'agents', 'extensions', 'analytics', 'confirm');
 
   while (state.currentStep < state.steps.length) {
     const stepName = state.steps[state.currentStep];
