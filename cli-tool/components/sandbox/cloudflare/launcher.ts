@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /**
  * Cloudflare Sandbox Launcher
- * Executes Claude Code prompts using Cloudflare Workers and Sandbox SDK
+ * Executes Gemini Code prompts using Cloudflare Workers and Sandbox SDK
  */
 
-import { query, ClaudeAgentOptions } from '@anthropic-ai/claude-agent-sdk';
+import { query, GeminiAgentOptions } from '@anthropic-ai/gemini-agent-sdk';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -184,13 +184,13 @@ async function executeViaWorker(
 }
 
 async function executeDirectly(config: LauncherConfig): Promise<ExecutionResult> {
-  log('Executing with Claude Agent SDK...');
+  log('Executing with Gemini Agent SDK...');
 
   // Extract agent names for context
   const agents = config.componentsToInstall ? extractAgents(config.componentsToInstall) : [];
 
   try {
-    log('Generating code with Claude Agent SDK...');
+    log('Generating code with Gemini Agent SDK...');
     log(`Working directory: ${process.cwd()}`);
 
     // Detect if this is a web development request
@@ -224,19 +224,19 @@ Requirements:
 - Do NOT include any explanations, ONLY code blocks with filenames`
       : config.prompt;
 
-    // Configure Claude Agent SDK options
-    // Using settingSources: ['project'] to automatically load agents from .claude/ directory
+    // Configure Gemini Agent SDK options
+    // Using settingSources: ['project'] to automatically load agents from .gemini/ directory
     // This is supported in SDK version ^0.1.23 and later
-    const options: ClaudeAgentOptions = {
-      model: 'claude-sonnet-4-5',
+    const options: GeminiAgentOptions = {
+      model: 'gemini-sonnet-4-5',
       apiKey: config.anthropicApiKey,
-      systemPrompt: { type: 'preset', preset: 'claude_code' },
-      // Automatically load agents, settings, and configurations from .claude/ directory
+      systemPrompt: { type: 'preset', preset: 'gemini_code' },
+      // Automatically load agents, settings, and configurations from .gemini/ directory
       settingSources: ['project'],
     };
 
     if (agents.length > 0) {
-      log(`Using agents from .claude/agents/ directory via settingSources`, 'success');
+      log(`Using agents from .gemini/agents/ directory via settingSources`, 'success');
     }
 
     // Collect the full response
@@ -260,11 +260,11 @@ Requirements:
       const err = queryError as Error;
       log(`Query error: ${err.message}`, 'error');
       log(`Stack: ${err.stack}`, 'error');
-      throw new Error(`Claude Agent SDK query failed: ${err.message}`);
+      throw new Error(`Gemini Agent SDK query failed: ${err.message}`);
     }
 
     if (!generatedCode) {
-      throw new Error('Failed to generate code from Claude Agent SDK (empty response)');
+      throw new Error('Failed to generate code from Gemini Agent SDK (empty response)');
     }
 
     log('Code generated successfully', 'success');
@@ -308,16 +308,16 @@ async function installAgents(agents: string[]): Promise<void> {
 
   log(`Installing ${agents.length} agent(s)...`);
 
-  // Create .claude/agents directory
-  const claudeDir = path.join(process.cwd(), '.claude');
-  const agentsDir = path.join(claudeDir, 'agents');
+  // Create .gemini/agents directory
+  const geminiDir = path.join(process.cwd(), '.gemini');
+  const agentsDir = path.join(geminiDir, 'agents');
 
   if (!fs.existsSync(agentsDir)) {
     fs.mkdirSync(agentsDir, { recursive: true });
   }
 
   // Download each agent from GitHub
-  const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/davila7/claude-code-templates/main/cli-tool/components/agents';
+  const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/davila7/gemini-code-templates/main/cli-tool/components/agents';
 
   for (const agent of agents) {
     try {
@@ -336,7 +336,7 @@ async function installAgents(agents: string[]): Promise<void> {
 
       const agentContent = await response.text();
 
-      // Save to .claude/agents/
+      // Save to .gemini/agents/
       const agentFileName = agent.replace(/\//g, '-') + '.md';
       const agentPath = path.join(agentsDir, agentFileName);
 
@@ -348,16 +348,16 @@ async function installAgents(agents: string[]): Promise<void> {
   }
 
   // Create settings.json to reference the agents
-  const settingsPath = path.join(claudeDir, 'settings.json');
+  const settingsPath = path.join(geminiDir, 'settings.json');
   const settings = {
     agents: agents.map(agent => ({
       name: agent.split('/').pop() || agent,
-      path: `.claude/agents/${agent.replace(/\//g, '-')}.md`
+      path: `.gemini/agents/${agent.replace(/\//g, '-')}.md`
     }))
   };
 
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2), 'utf-8');
-  log('Created .claude/settings.json', 'success');
+  log('Created .gemini/settings.json', 'success');
 }
 
 function displayResults(result: ExecutionResult, targetDir?: string) {

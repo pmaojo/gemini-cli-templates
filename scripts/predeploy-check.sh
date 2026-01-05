@@ -144,7 +144,7 @@ echo "------------------------------------"
 CRITICAL_ENDPOINTS=(
     "api/track-download-supabase.js"
     "api/discord/interactions.js"
-    "api/claude-code-check.js"
+    "api/gemini-code-check.js"
 )
 
 for endpoint in "${CRITICAL_ENDPOINTS[@]}"; do

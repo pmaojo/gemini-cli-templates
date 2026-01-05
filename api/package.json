@@ -1,8 +1,8 @@
 {
   "type": "module",
-  "name": "claude-code-templates-api",
+  "name": "gemini-code-templates-api",
   "version": "1.0.0",
-  "description": "API endpoints for claude-code-templates",
+  "description": "API endpoints for gemini-code-templates",
   "scripts": {
     "test": "jest --config jest.config.cjs",
     "test:api": "jest __tests__/endpoints.test.js --config jest.config.cjs",

@@ -86,13 +86,13 @@ async function monitorCodeGeneration(
   anthropic: Anthropic,
   prompt: string
 ): Promise<{ code: string; duration: number }> {
-  logWithTimestamp('🤖 Starting code generation with Claude...');
+  logWithTimestamp('🤖 Starting code generation with Gemini...');
 
   const startTime = Date.now();
 
   try {
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-5',
+      model: 'gemini-sonnet-4-5',
       max_tokens: 4096,
       messages: [
         {

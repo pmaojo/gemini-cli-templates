@@ -11,11 +11,11 @@ load_dotenv()
 
 def scrape_with_rapidapi_jobs():
     """
-    Use RapidAPI Jobs Search to find Claude-related positions
+    Use RapidAPI Jobs Search to find Gemini-related positions
     """
     jobs = []
     try:
-        print("🔍 Searching with RapidAPI Jobs API for Claude positions...")
+        print("🔍 Searching with RapidAPI Jobs API for Gemini positions...")
         
         rapidapi_key = os.getenv("RAPIDAPI_KEY")
         if not rapidapi_key:
@@ -24,12 +24,12 @@ def scrape_with_rapidapi_jobs():
         
         url = "https://jobs-search-realtime-data-api.p.rapidapi.com/jobs/search"
         
-        # Search for Claude-specific terms
+        # Search for Gemini-specific terms
         search_queries = [
-            "Claude Code",
-            "Anthropic Claude", 
-            "Claude AI developer",
-            "Claude assistant engineer"
+            "Gemini Code",
+            "Anthropic Gemini", 
+            "Gemini AI developer",
+            "Gemini assistant engineer"
         ]
         
         headers = {
@@ -63,9 +63,9 @@ def scrape_with_rapidapi_jobs():
                         'salary': extract_salary_from_text(job_data.get('description', ''))
                     }
                     
-                    # Validate it actually mentions Claude
+                    # Validate it actually mentions Gemini
                     full_text = f"{job_data.get('title', '')} {job_data.get('description', '')}"
-                    if is_claude_code_related(full_text):
+                    if is_gemini_code_related(full_text):
                         jobs.append(job)
             
             time.sleep(1)  # Rate limiting
@@ -79,11 +79,11 @@ def scrape_with_rapidapi_jobs():
 
 def scrape_with_serper_jobs():
     """
-    Use Google Serper API to find Claude positions
+    Use Google Serper API to find Gemini positions
     """
     jobs = []
     try:
-        print("🔍 Searching with Google Serper API for Claude positions...")
+        print("🔍 Searching with Google Serper API for Gemini positions...")
         
         serper_key = os.getenv("SERPER_API_KEY")
         if not serper_key:
@@ -95,12 +95,12 @@ def scrape_with_serper_jobs():
         import http.client
         
         search_queries = [
-            "Claude Code developer jobs",
-            "Anthropic Claude engineer hiring", 
-            "Claude AI programming job",
-            "Claude assistant developer position",
+            "Gemini Code developer jobs",
+            "Anthropic Gemini engineer hiring", 
+            "Gemini AI programming job",
+            "Gemini assistant developer position",
             "Anthropic engineer jobs",
-            "Claude developer careers"
+            "Gemini developer careers"
         ]
         
         conn = http.client.HTTPSConnection("google.serper.dev")
@@ -136,7 +136,7 @@ def scrape_with_serper_jobs():
                         
                         # Check if this looks like a job posting
                         full_text = f"{title} {snippet}"
-                        if is_claude_code_related(full_text) and is_job_posting(full_text):
+                        if is_gemini_code_related(full_text) and is_job_posting(full_text):
                             
                             # Extract better job information
                             job_info = extract_job_info_from_serper(title, snippet, link)
@@ -378,13 +378,13 @@ def extract_salary_from_google_job(job_data):
 
 def scrape_github_jobs():
     """
-    Scrape GitHub Jobs for Claude Code positions
+    Scrape GitHub Jobs for Gemini Code positions
     """
     jobs = []
     try:
         # GitHub Jobs API is deprecated, but we can search GitHub Issues/Discussions
         # or use GitHub's search API for job repositories
-        print("🔍 Searching GitHub for Claude Code job postings...")
+        print("🔍 Searching GitHub for Gemini Code job postings...")
         
         # Search in common job posting repositories
         job_repos = [
@@ -395,17 +395,17 @@ def scrape_github_jobs():
         
         headers = {
             'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'claude-code-templates-job-scraper'
+            'User-Agent': 'gemini-code-templates-job-scraper'
         }
         
         github_token = os.getenv("GITHUB_TOKEN")
         if github_token:
             headers['Authorization'] = f'token {github_token}'
         
-        # Search ONLY for Claude-specific job postings
+        # Search ONLY for Gemini-specific job postings
         search_url = "https://api.github.com/search/issues"
         search_params = {
-            'q': '("claude code" OR "anthropic claude" OR "claude ai" OR "claude") AND (hiring OR job OR position OR engineer OR developer) NOT pull NOT merge NOT bug NOT feature',
+            'q': '("gemini code" OR "anthropic gemini" OR "gemini ai" OR "gemini") AND (hiring OR job OR position OR engineer OR developer) NOT pull NOT merge NOT bug NOT feature',
             'sort': 'updated',
             'order': 'desc',
             'per_page': 50
@@ -428,11 +428,11 @@ def scrape_github_jobs():
 
 def scrape_ycombinator_jobs():
     """
-    Scrape YCombinator Who's Hiring threads for Claude Code mentions
+    Scrape YCombinator Who's Hiring threads for Gemini Code mentions
     """
     jobs = []
     try:
-        print("🔍 Searching YC Who's Hiring for Claude Code positions...")
+        print("🔍 Searching YC Who's Hiring for Gemini Code positions...")
         
         # Search HackerNews API for recent "Who is hiring" threads
         hn_search_url = "https://hn.algolia.com/api/v1/search"
@@ -453,7 +453,7 @@ def scrape_ycombinator_jobs():
                     # Get comments from this hiring thread
                     comments_url = f"https://hn.algolia.com/api/v1/search"
                     comment_params = {
-                        'query': 'claude code OR anthropic claude OR claude ai OR claude',
+                        'query': 'gemini code OR anthropic gemini OR gemini ai OR gemini',
                         'tags': f'comment,story_{story_id}',
                         'hitsPerPage': 50
                     }
@@ -482,7 +482,7 @@ def extract_job_from_hn_comment(comment, thread_title):
     """
     text = comment.get('comment_text', '') or ''
     
-    if not is_claude_code_related(text):
+    if not is_gemini_code_related(text):
         return None
     
     # Extract basic info from comment
@@ -538,16 +538,16 @@ def extract_location_from_hn_comment(text):
 
 def scrape_remote_ok():
     """
-    Scrape Remote OK for Claude Code positions
+    Scrape Remote OK for Gemini Code positions
     """
     jobs = []
     try:
-        print("🔍 Searching Remote OK for Claude Code positions...")
+        print("🔍 Searching Remote OK for Gemini Code positions...")
         
         # Remote OK has an API but might be rate limited
         url = "https://remoteok.io/api"
         headers = {
-            'User-Agent': 'claude-code-templates-job-scraper'
+            'User-Agent': 'gemini-code-templates-job-scraper'
         }
         
         response = requests.get(url, headers=headers)
@@ -558,7 +558,7 @@ def scrape_remote_ok():
                 tags = job_data.get('tags', [])
                 tags_str = ' '.join(tags) if isinstance(tags, list) else str(tags)
                 
-                if is_claude_code_related(description + ' ' + tags_str):
+                if is_gemini_code_related(description + ' ' + tags_str):
                     job = {
                         'company': job_data.get('company', 'Unknown'),
                         'company_icon': job_data.get('company_logo', ''),
@@ -580,18 +580,18 @@ def scrape_remote_ok():
 
 def scrape_weworkremotely():
     """
-    Scrape We Work Remotely for Claude Code positions
+    Scrape We Work Remotely for Gemini Code positions
     """
     jobs = []
     try:
-        print("🔍 Searching We Work Remotely for Claude Code positions...")
+        print("🔍 Searching We Work Remotely for Gemini Code positions...")
         
         # We Work Remotely RSS feed approach
         import xml.etree.ElementTree as ET
         
         rss_url = "https://weworkremotely.com/categories/remote-programming-jobs.rss"
         headers = {
-            'User-Agent': 'claude-code-templates-job-scraper'
+            'User-Agent': 'gemini-code-templates-job-scraper'
         }
         
         response = requests.get(rss_url, headers=headers)
@@ -606,7 +606,7 @@ def scrape_weworkremotely():
                 
                 full_text = title + ' ' + description
                 
-                if is_claude_code_related(full_text):
+                if is_gemini_code_related(full_text):
                     # Extract company from title (usually format: "Company: Job Title")
                     company_match = re.match(r'^([^:]+):', title)
                     company = company_match.group(1).strip() if company_match else 'Remote Company'
@@ -632,17 +632,17 @@ def scrape_weworkremotely():
 
 def scrape_indie_hackers():
     """
-    Scrape Indie Hackers for Claude Code positions
+    Scrape Indie Hackers for Gemini Code positions
     """
     jobs = []
     try:
-        print("🔍 Searching Indie Hackers for Claude Code positions...")
+        print("🔍 Searching Indie Hackers for Gemini Code positions...")
         
-        # Use general web search for Indie Hackers job posts mentioning Claude Code
+        # Use general web search for Indie Hackers job posts mentioning Gemini Code
         search_terms = [
-            'site:indiehackers.com "claude code" hiring',
-            'site:indiehackers.com "anthropic claude" job',
-            'site:indiehackers.com "claude ai" developer'
+            'site:indiehackers.com "gemini code" hiring',
+            'site:indiehackers.com "anthropic gemini" job',
+            'site:indiehackers.com "gemini ai" developer'
         ]
         
         # This would require a web search API like Google Custom Search
@@ -662,8 +662,8 @@ def extract_job_from_github_issue(item):
     title = item.get('title', '') or ''
     body = item.get('body', '') or ''
     
-    # Check if it's actually a job posting mentioning Claude Code
-    if not is_claude_code_related(title + ' ' + body):
+    # Check if it's actually a job posting mentioning Gemini Code
+    if not is_gemini_code_related(title + ' ' + body):
         return None
     
     # Extract company name from repository or issue title
@@ -680,32 +680,32 @@ def extract_job_from_github_issue(item):
         'salary': 0
     }
 
-def is_claude_code_related(text):
+def is_gemini_code_related(text):
     """
-    Check if text specifically mentions Claude (very strict filtering)
+    Check if text specifically mentions Gemini (very strict filtering)
     """
     if not text:
         return False
         
     text_lower = str(text).lower()
     
-    # ONLY Claude-specific keywords - must contain "claude"
-    claude_keywords = [
-        'claude code', 'claude-code', 'anthropic claude', 'claude ai', 
-        'claude coder', 'claude assistant', 'claude developer', 'claude engineer',
-        'work with claude', 'using claude', 'claude experience', 'claude integration'
+    # ONLY Gemini-specific keywords - must contain "gemini"
+    gemini_keywords = [
+        'gemini code', 'gemini-code', 'anthropic gemini', 'gemini ai', 
+        'gemini coder', 'gemini assistant', 'gemini developer', 'gemini engineer',
+        'work with gemini', 'using gemini', 'gemini experience', 'gemini integration'
     ]
     
-    # Must explicitly mention Claude in some form
-    has_claude_mention = any(keyword in text_lower for keyword in claude_keywords)
+    # Must explicitly mention Gemini in some form
+    has_gemini_mention = any(keyword in text_lower for keyword in gemini_keywords)
     
-    # Additional check: just "claude" + job context
-    has_claude_word = 'claude' in text_lower
+    # Additional check: just "gemini" + job context
+    has_gemini_word = 'gemini' in text_lower
     job_words = ['hiring', 'position', 'engineer', 'developer', 'role', 'job', 'career', 'experience', 'skills']
     has_job_context = any(word in text_lower for word in job_words)
     
-    # Return True only if Claude is mentioned AND it's in a job context
-    return has_claude_mention or (has_claude_word and has_job_context)
+    # Return True only if Gemini is mentioned AND it's in a job context
+    return has_gemini_mention or (has_gemini_word and has_job_context)
 
 def extract_company_name(title, body, fallback):
     """
@@ -761,7 +761,7 @@ def get_company_icon(company_name):
         # AI/Tech Companies
         'anthropic': 'https://www.anthropic.com/favicon.ico',
         'openai': 'https://openai.com/favicon.ico',
-        'claude code': 'https://www.anthropic.com/favicon.ico',
+        'gemini code': 'https://www.anthropic.com/favicon.ico',
         
         # Major Tech Companies
         'google': 'https://www.google.com/favicon.ico',
@@ -846,8 +846,8 @@ def generate_sample_jobs():
             'company': 'Anthropic',
             'company_icon': 'https://anthropic.com/favicon.ico',
             'location': 'Remote',
-            'description': 'Senior AI Developer to enhance Claude Code capabilities and integrations...',
-            'job_link': 'https://anthropic.com/careers/claude-code-developer',
+            'description': 'Senior AI Developer to enhance Gemini Code capabilities and integrations...',
+            'job_link': 'https://anthropic.com/careers/gemini-code-developer',
             'source': 'Company Website',
             'date_posted': '2025-09-10T10:00:00Z',
             'salary': 150000
@@ -856,8 +856,8 @@ def generate_sample_jobs():
             'company': 'OpenAI',
             'company_icon': 'https://openai.com/favicon.ico', 
             'location': 'San Francisco, CA',
-            'description': 'Looking for engineers experienced with Claude Code and AI development tools...',
-            'job_link': 'https://openai.com/careers/claude-integration-engineer',
+            'description': 'Looking for engineers experienced with Gemini Code and AI development tools...',
+            'job_link': 'https://openai.com/careers/gemini-integration-engineer',
             'source': 'LinkedIn',
             'date_posted': '2025-09-09T14:30:00Z',
             'salary': 140000
@@ -866,8 +866,8 @@ def generate_sample_jobs():
             'company': 'StartupTech',
             'company_icon': 'https://logo.clearbit.com/startuptech.com',
             'location': 'Remote',
-            'description': 'Full-stack developer with Claude Code experience for AI-powered development team...',
-            'job_link': 'https://jobs.startuptech.com/claude-developer-2025',
+            'description': 'Full-stack developer with Gemini Code experience for AI-powered development team...',
+            'job_link': 'https://jobs.startuptech.com/gemini-developer-2025',
             'source': 'AngelList',
             'date_posted': '2025-09-08T09:15:00Z',
             'salary': 90000
@@ -876,7 +876,7 @@ def generate_sample_jobs():
             'company': 'TechCorp',
             'company_icon': 'https://logo.clearbit.com/techcorp.com',
             'location': 'New York, NY',
-            'description': 'Senior Software Engineer - AI Tools (Claude Code, GitHub Copilot, etc.)...',
+            'description': 'Senior Software Engineer - AI Tools (Gemini Code, GitHub Copilot, etc.)...',
             'job_link': 'https://careers.techcorp.com/positions/senior-ai-tools-engineer',
             'source': 'Indeed',
             'date_posted': '2025-09-07T16:45:00Z',
@@ -886,11 +886,11 @@ def generate_sample_jobs():
     
     return sample_jobs
 
-def generate_claude_jobs_json():
+def generate_gemini_jobs_json():
     """
-    Main function to scrape and generate Claude Code jobs JSON
+    Main function to scrape and generate Gemini Code jobs JSON
     """
-    print("🚀 Starting Claude Code jobs scraping...")
+    print("🚀 Starting Gemini Code jobs scraping...")
     
     all_jobs = []
     
@@ -955,7 +955,7 @@ def generate_claude_jobs_json():
     }
     
     # Save to docs directory
-    output_path = 'docs/claude-jobs.json'
+    output_path = 'docs/gemini-jobs.json'
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(jobs_data, f, indent=2, ensure_ascii=False)
@@ -982,4 +982,4 @@ def generate_claude_jobs_json():
         print(f"❌ Error writing to {output_path}: {e}")
 
 if __name__ == '__main__':
-    generate_claude_jobs_json()
+    generate_gemini_jobs_json()

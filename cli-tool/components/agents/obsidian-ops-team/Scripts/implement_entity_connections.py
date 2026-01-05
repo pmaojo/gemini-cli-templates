@@ -9,7 +9,7 @@ from pathlib import Path
 PRIORITY_ENTITIES = {
     'langchain', 'langgraph', 'llm', 'rag', 'embedding', 'vector', 
     'mcp', 'model context protocol', 'api integration', 'function calling',
-    'anthropic', 'openai', 'google', 'claude', 'gpt',
+    'anthropic', 'openai', 'google', 'gemini', 'gpt',
     'autonomous agent', 'ai agent', 'chain of thought', 'prompt engineering',
     'retrieval augmented', 'graphrag', 'multimodal', 'tool use'
 }

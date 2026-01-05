@@ -1,5 +1,5 @@
 {
-  "name": "cloudflare-claude-sandbox",
+  "name": "cloudflare-gemini-sandbox",
   "version": "1.0.0",
   "description": "Cloudflare Workers sandbox for executing Gemini Code with AI-powered code generation",
   "type": "module",
@@ -38,7 +38,7 @@
     "cloudflare",
     "workers",
     "sandbox",
-    "claude",
+    "gemini",
     "anthropic",
     "ai",
     "code-execution",
@@ -49,6 +49,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anthropics/claude-code-templates"
+    "url": "https://github.com/anthropics/gemini-code-templates"
   }
 }

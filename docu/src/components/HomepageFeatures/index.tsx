@@ -14,10 +14,10 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Quick Setup',
     icon: '⚡',
-    command: 'npm install -g claude-code-templates',
+    command: 'npm install -g gemini-code-templates',
     description: (
       <>
-        Install the CLI tool globally and get started with Claude Code templates 
+        Install the CLI tool globally and get started with Gemini Code templates 
         in seconds. No complex configuration required.
       </>
     ),
@@ -35,10 +35,10 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Real-time Analytics',
     icon: '📊',
-    command: 'claude-code-templates --analytics',
+    command: 'gemini-code-templates --analytics',
     description: (
       <>
-        Monitor your Claude Code usage with our comprehensive analytics dashboard. 
+        Monitor your Gemini Code usage with our comprehensive analytics dashboard. 
         Track sessions, token usage, and performance metrics in real-time.
       </>
     ),

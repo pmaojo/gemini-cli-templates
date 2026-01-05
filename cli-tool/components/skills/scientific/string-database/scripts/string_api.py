@@ -25,7 +25,7 @@ def string_map_ids(identifiers: Union[str, List[str]],
                    species: int = 9606,
                    limit: int = 1,
                    echo_query: int = 1,
-                   caller_identity: str = "claude_scientific_skills") -> str:
+                   caller_identity: str = "gemini_scientific_skills") -> str:
     """
     Map protein names, synonyms, and identifiers to STRING IDs.
 
@@ -74,7 +74,7 @@ def string_network(identifiers: Union[str, List[str]],
                    required_score: int = 400,
                    network_type: str = "functional",
                    add_nodes: int = 0,
-                   caller_identity: str = "claude_scientific_skills") -> str:
+                   caller_identity: str = "gemini_scientific_skills") -> str:
     """
     Get protein-protein interaction network data.
 
@@ -127,7 +127,7 @@ def string_network_image(identifiers: Union[str, List[str]],
                         required_score: int = 400,
                         network_flavor: str = "evidence",
                         add_nodes: int = 0,
-                        caller_identity: str = "claude_scientific_skills") -> bytes:
+                        caller_identity: str = "gemini_scientific_skills") -> bytes:
     """
     Get network visualization as PNG image.
 
@@ -175,7 +175,7 @@ def string_interaction_partners(identifiers: Union[str, List[str]],
                                 species: int = 9606,
                                 required_score: int = 400,
                                 limit: int = 10,
-                                caller_identity: str = "claude_scientific_skills") -> str:
+                                caller_identity: str = "gemini_scientific_skills") -> str:
     """
     Get all interaction partners for protein(s).
 
@@ -217,7 +217,7 @@ def string_interaction_partners(identifiers: Union[str, List[str]],
 
 def string_enrichment(identifiers: Union[str, List[str]],
                      species: int = 9606,
-                     caller_identity: str = "claude_scientific_skills") -> str:
+                     caller_identity: str = "gemini_scientific_skills") -> str:
     """
     Perform functional enrichment analysis (Gene Ontology, KEGG, Pfam, etc.).
 
@@ -257,7 +257,7 @@ def string_enrichment(identifiers: Union[str, List[str]],
 def string_ppi_enrichment(identifiers: Union[str, List[str]],
                          species: int = 9606,
                          required_score: int = 400,
-                         caller_identity: str = "claude_scientific_skills") -> str:
+                         caller_identity: str = "gemini_scientific_skills") -> str:
     """
     Test if network has more interactions than expected by chance.
 
@@ -298,7 +298,7 @@ def string_ppi_enrichment(identifiers: Union[str, List[str]],
 
 def string_homology(identifiers: Union[str, List[str]],
                    species: int = 9606,
-                   caller_identity: str = "claude_scientific_skills") -> str:
+                   caller_identity: str = "gemini_scientific_skills") -> str:
     """
     Get homology/similarity scores between proteins.
 

@@ -22,7 +22,7 @@ class LinkSuggester:
         self.entities = {
             'technologies': [
                 'langchain', 'langgraph', 'mcp', 'model context protocol',
-                'graphrag', 'openai', 'anthropic', 'claude', 'gpt', 'llm',
+                'graphrag', 'openai', 'anthropic', 'gemini', 'gpt', 'llm',
                 'ollama', 'huggingface', 'github', 'python', 'javascript',
                 'cloudflare', 'supabase', 'vector database', 'embedding',
                 'ai agent', 'autonomous agent', 'rag', 'retrieval augmented'

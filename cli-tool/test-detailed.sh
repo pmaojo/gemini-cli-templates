@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Detailed test script for claude-code-templates CLI
+# Detailed test script for gemini-code-templates CLI
 set -e
 
 echo "🔬 Starting Detailed CLI Testing..."
 
-TEST_BASE_DIR="/tmp/claude-detailed-test-$(date +%s)"
+TEST_BASE_DIR="/tmp/gemini-detailed-test-$(date +%s)"
 mkdir -p "$TEST_BASE_DIR"
 
 # Colors for output
@@ -59,65 +59,65 @@ test_scenarios() {
         
         # Test dry run
         run_test "Dry run for $language + $framework" \
-            "claude-code-templates --language $language --framework $framework --dry-run --yes > /dev/null 2>&1"
+            "gemini-code-templates --language $language --framework $framework --dry-run --yes > /dev/null 2>&1"
         
         # Test actual installation
         run_test "Installation for $language + $framework" \
-            "claude-code-templates --language $language --framework $framework --yes > /dev/null 2>&1"
+            "gemini-code-templates --language $language --framework $framework --yes > /dev/null 2>&1"
         
         # Check if CLAUDE.md was created
         run_test "CLAUDE.md exists for $language + $framework" \
             "[ -f 'CLAUDE.md' ]"
         
-        # Check if .claude directory was created
-        run_test ".claude directory exists for $language + $framework" \
-            "[ -d '.claude' ]"
+        # Check if .gemini directory was created
+        run_test ".gemini directory exists for $language + $framework" \
+            "[ -d '.gemini' ]"
         
         # Check if settings.json was created (for non-common languages)
         if [ "$language" != "common" ]; then
             run_test "settings.json exists for $language + $framework" \
-                "[ -f '.claude/settings.json' ]"
+                "[ -f '.gemini/settings.json' ]"
             
             # Test hooks functionality
             run_test "settings.json contains hooks for $language" \
-                "grep -q '\"hooks\"' '.claude/settings.json'"
+                "grep -q '\"hooks\"' '.gemini/settings.json'"
             
             run_test "settings.json has valid JSON structure" \
-                "jq . '.claude/settings.json' > /dev/null 2>&1"
+                "jq . '.gemini/settings.json' > /dev/null 2>&1"
             
             # Verify specific hook types exist for non-common languages
             run_test "PreToolUse hooks exist for $language" \
-                "jq '.hooks.PreToolUse' '.claude/settings.json' | grep -q '\['"
+                "jq '.hooks.PreToolUse' '.gemini/settings.json' | grep -q '\['"
             
             run_test "PostToolUse hooks exist for $language" \
-                "jq '.hooks.PostToolUse' '.claude/settings.json' | grep -q '\['"
+                "jq '.hooks.PostToolUse' '.gemini/settings.json' | grep -q '\['"
         fi
         
         # Check for framework-specific commands
         case "$framework" in
             "react")
                 run_test "React component command exists" \
-                    "[ -f '.claude/commands/component.md' ]"
+                    "[ -f '.gemini/commands/component.md' ]"
                 run_test "React hooks command exists" \
-                    "[ -f '.claude/commands/hooks.md' ]"
+                    "[ -f '.gemini/commands/hooks.md' ]"
                 ;;
             "vue")
                 run_test "Vue components command exists" \
-                    "[ -f '.claude/commands/components.md' ]"
+                    "[ -f '.gemini/commands/components.md' ]"
                 run_test "Vue composables command exists" \
-                    "[ -f '.claude/commands/composables.md' ]"
+                    "[ -f '.gemini/commands/composables.md' ]"
                 ;;
             "angular")
                 run_test "Angular components command exists" \
-                    "[ -f '.claude/commands/components.md' ]"
+                    "[ -f '.gemini/commands/components.md' ]"
                 run_test "Angular services command exists" \
-                    "[ -f '.claude/commands/services.md' ]"
+                    "[ -f '.gemini/commands/services.md' ]"
                 ;;
             "node")
                 run_test "Node API endpoint command exists" \
-                    "[ -f '.claude/commands/api-endpoint.md' ]"
+                    "[ -f '.gemini/commands/api-endpoint.md' ]"
                 run_test "Node middleware command exists" \
-                    "[ -f '.claude/commands/middleware.md' ]"
+                    "[ -f '.gemini/commands/middleware.md' ]"
                 ;;
         esac
         
@@ -131,11 +131,11 @@ test_error_scenarios() {
     
     # Invalid language
     run_test "Invalid language handling" \
-        "! claude-code-templates --language invalid-lang --yes > /dev/null 2>&1"
+        "! gemini-code-templates --language invalid-lang --yes > /dev/null 2>&1"
     
     # Invalid framework
     run_test "Invalid framework handling" \
-        "! claude-code-templates --language javascript-typescript --framework invalid-framework --yes > /dev/null 2>&1"
+        "! gemini-code-templates --language javascript-typescript --framework invalid-framework --yes > /dev/null 2>&1"
 }
 
 # Test hooks functionality specifically
@@ -148,29 +148,29 @@ test_hooks_functionality() {
     
     # Test JavaScript/TypeScript hooks
     run_test "JS/TS installation with default hooks" \
-        "claude-code-templates --language javascript-typescript --yes > /dev/null 2>&1"
+        "gemini-code-templates --language javascript-typescript --yes > /dev/null 2>&1"
     
     run_test "JS/TS hooks count verification" \
-        "[ \$(jq '.hooks.PreToolUse | length' '.claude/settings.json') -gt 0 ]"
+        "[ \$(jq '.hooks.PreToolUse | length' '.gemini/settings.json') -gt 0 ]"
     
     run_test "JS/TS PostToolUse hooks verification" \
-        "[ \$(jq '.hooks.PostToolUse | length' '.claude/settings.json') -gt 0 ]"
+        "[ \$(jq '.hooks.PostToolUse | length' '.gemini/settings.json') -gt 0 ]"
     
     run_test "JS/TS Stop hooks verification" \
-        "[ \$(jq '.hooks.Stop | length' '.claude/settings.json') -gt 0 ]"
+        "[ \$(jq '.hooks.Stop | length' '.gemini/settings.json') -gt 0 ]"
     
     # Test specific hook content
     run_test "Console.log detection hook exists" \
-        "jq -r '.hooks.PreToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'console'"
+        "jq -r '.hooks.PreToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'console'"
     
     run_test "Prettier formatting hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'prettier'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'prettier'"
     
     run_test "TypeScript checking hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'tsc'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'tsc'"
     
     run_test "ESLint hook exists in Stop hooks" \
-        "jq -r '.hooks.Stop[].hooks[].command' '.claude/settings.json' | grep -q 'eslint'"
+        "jq -r '.hooks.Stop[].hooks[].command' '.gemini/settings.json' | grep -q 'eslint'"
     
     # Test other languages
     cd "$TEST_BASE_DIR"
@@ -180,13 +180,13 @@ test_hooks_functionality() {
     cd "test-python-hooks"
     
     run_test "Python installation with hooks" \
-        "claude-code-templates --language python --yes > /dev/null 2>&1"
+        "gemini-code-templates --language python --yes > /dev/null 2>&1"
     
     run_test "Python Black formatter hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'black'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'black'"
     
     run_test "Python flake8 hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'flake8'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'flake8'"
     
     # Test Go hooks
     cd "$TEST_BASE_DIR"
@@ -194,13 +194,13 @@ test_hooks_functionality() {
     cd "test-go-hooks"
     
     run_test "Go installation with hooks" \
-        "claude-code-templates --language go --yes > /dev/null 2>&1"
+        "gemini-code-templates --language go --yes > /dev/null 2>&1"
     
     run_test "Go fmt hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'gofmt'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'gofmt'"
     
     run_test "Go vet hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'go vet'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'go vet'"
     
     # Test Rust hooks
     cd "$TEST_BASE_DIR"
@@ -208,13 +208,13 @@ test_hooks_functionality() {
     cd "test-rust-hooks"
     
     run_test "Rust installation with hooks" \
-        "claude-code-templates --language rust --yes > /dev/null 2>&1"
+        "gemini-code-templates --language rust --yes > /dev/null 2>&1"
     
     run_test "Rust fmt hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'rustfmt'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'rustfmt'"
     
     run_test "Rust clippy hook exists" \
-        "jq -r '.hooks.PostToolUse[].hooks[].command' '.claude/settings.json' | grep -q 'clippy'"
+        "jq -r '.hooks.PostToolUse[].hooks[].command' '.gemini/settings.json' | grep -q 'clippy'"
 }
 
 # Test command variants
@@ -226,17 +226,17 @@ test_command_variants() {
     cd "$test_dir"
     
     # Test all command aliases
-    run_test "claude-code-templates command" \
-        "claude-code-templates --version > /dev/null 2>&1"
+    run_test "gemini-code-templates command" \
+        "gemini-code-templates --version > /dev/null 2>&1"
     
-    run_test "create-claude-config command" \
-        "create-claude-config --version > /dev/null 2>&1"
+    run_test "create-gemini-config command" \
+        "create-gemini-config --version > /dev/null 2>&1"
     
-    run_test "claude-code-template command" \
-        "claude-code-template --version > /dev/null 2>&1"
+    run_test "gemini-code-template command" \
+        "gemini-code-template --version > /dev/null 2>&1"
     
-    run_test "claude-init command" \
-        "claude-init --version > /dev/null 2>&1"
+    run_test "gemini-init command" \
+        "gemini-init --version > /dev/null 2>&1"
 }
 
 # Run all tests

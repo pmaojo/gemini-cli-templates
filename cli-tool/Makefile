@@ -1,4 +1,4 @@
-# Makefile for claude-code-templates testing
+# Makefile for gemini-code-templates testing
 
 .PHONY: test test-basic test-detailed test-interactive install-dev uninstall-dev help
 
@@ -10,7 +10,7 @@ install-dev:
 # Uninstall local package
 uninstall-dev:
 	@echo "🔗 Unlinking package..."
-	npm unlink -g claude-code-templates
+	npm unlink -g gemini-code-templates
 
 # Run basic tests
 test-basic: install-dev
@@ -26,39 +26,39 @@ test-detailed: install-dev
 test-react: install-dev
 	@echo "⚛️ Testing React scenario..."
 	@mkdir -p /tmp/test-react
-	@cd /tmp/test-react && claude-code-templates --language javascript-typescript --framework react --dry-run --yes
+	@cd /tmp/test-react && gemini-code-templates --language javascript-typescript --framework react --dry-run --yes
 	@echo "✅ React test completed"
 	@rm -rf /tmp/test-react
 
 test-vue: install-dev
 	@echo "💚 Testing Vue scenario..."
 	@mkdir -p /tmp/test-vue
-	@cd /tmp/test-vue && claude-code-templates --language javascript-typescript --framework vue --dry-run --yes
+	@cd /tmp/test-vue && gemini-code-templates --language javascript-typescript --framework vue --dry-run --yes
 	@echo "✅ Vue test completed"
 	@rm -rf /tmp/test-vue
 
 test-node: install-dev
 	@echo "🟢 Testing Node scenario..."
 	@mkdir -p /tmp/test-node
-	@cd /tmp/test-node && claude-code-templates --language javascript-typescript --framework node --dry-run --yes
+	@cd /tmp/test-node && gemini-code-templates --language javascript-typescript --framework node --dry-run --yes
 	@echo "✅ Node test completed"
 	@rm -rf /tmp/test-node
 
 test-hooks: install-dev
 	@echo "🔧 Testing Hooks functionality..."
 	@mkdir -p /tmp/test-hooks
-	@cd /tmp/test-hooks && claude-code-templates --language javascript-typescript --yes
+	@cd /tmp/test-hooks && gemini-code-templates --language javascript-typescript --yes
 	@echo "Checking hooks installation..."
-	@cd /tmp/test-hooks && [ -f ".claude/settings.json" ] && echo "✅ settings.json created"
-	@cd /tmp/test-hooks && jq '.hooks' ".claude/settings.json" > /dev/null && echo "✅ Hooks structure valid"
-	@cd /tmp/test-hooks && [ $$(jq '.hooks | keys | length' ".claude/settings.json") -gt 0 ] && echo "✅ Hooks configured"
+	@cd /tmp/test-hooks && [ -f ".gemini/settings.json" ] && echo "✅ settings.json created"
+	@cd /tmp/test-hooks && jq '.hooks' ".gemini/settings.json" > /dev/null && echo "✅ Hooks structure valid"
+	@cd /tmp/test-hooks && [ $$(jq '.hooks | keys | length' ".gemini/settings.json") -gt 0 ] && echo "✅ Hooks configured"
 	@rm -rf /tmp/test-hooks
 
 test-python-hooks: install-dev
 	@echo "🐍 Testing Python hooks..."
 	@mkdir -p /tmp/test-python-hooks
-	@cd /tmp/test-python-hooks && claude-code-templates --language python --yes
-	@cd /tmp/test-python-hooks && jq -r '.hooks.PostToolUse[].hooks[].command' ".claude/settings.json" | grep -q "black" && echo "✅ Python Black hook found"
+	@cd /tmp/test-python-hooks && gemini-code-templates --language python --yes
+	@cd /tmp/test-python-hooks && jq -r '.hooks.PostToolUse[].hooks[].command' ".gemini/settings.json" | grep -q "black" && echo "✅ Python Black hook found"
 	@rm -rf /tmp/test-python-hooks
 
 test-all-hooks: test-hooks test-python-hooks
@@ -68,7 +68,7 @@ test-all-hooks: test-hooks test-python-hooks
 test-interactive: install-dev
 	@echo "🎯 Starting interactive test (you'll need to interact)..."
 	@mkdir -p /tmp/test-interactive
-	@cd /tmp/test-interactive && claude-code-templates --dry-run
+	@cd /tmp/test-interactive && gemini-code-templates --dry-run
 	@rm -rf /tmp/test-interactive
 
 # Run all tests
@@ -78,7 +78,7 @@ test: test-basic test-detailed test-all-hooks
 # Check version works
 test-version:
 	@echo "📝 Testing version command..."
-	@claude-code-templates --version
+	@gemini-code-templates --version
 
 # Test before publish
 pre-publish: test test-version

@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Claude Code Templates',
-  tagline: 'Documentation for Claude Code Templates - AITMPL Platform',
+  title: 'Gemini Code Templates',
+  tagline: 'Documentation for Gemini Code Templates - AITMPL Platform',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'davila7', // Usually your GitHub org/user name.
-  projectName: 'claude-code-templates', // Usually your repo name.
+  projectName: 'gemini-code-templates', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -64,7 +64,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/davila7/claude-code-templates/tree/main/docu/',
+            'https://github.com/davila7/gemini-code-templates/tree/main/docu/',
         },
         blog: false, // Disable blog functionality
         theme: {
@@ -93,7 +93,7 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'Claude Code Templates',
+      title: 'Gemini Code Templates',
       logo: {
         alt: 'AITMPL Crystal Ball Logo',
         src: 'img/logo.svg',
@@ -111,7 +111,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: 'https://github.com/davila7/claude-code-templates',
+          href: 'https://github.com/davila7/gemini-code-templates',
           label: 'GitHub',
           position: 'right',
         },
@@ -139,11 +139,11 @@ const config: Config = {
             },
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/davila7/claude-code-templates',
+              href: 'https://github.com/davila7/gemini-code-templates',
             },
             {
               label: 'Issues & Support',
-              href: 'https://github.com/davila7/claude-code-templates/issues',
+              href: 'https://github.com/davila7/gemini-code-templates/issues',
             },
           ],
         },
@@ -152,16 +152,16 @@ const config: Config = {
           items: [
             {
               label: 'Contribute',
-              href: 'https://github.com/davila7/claude-code-templates/blob/main/CONTRIBUTING.md',
+              href: 'https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md',
             },
             {
               label: 'License',
-              href: 'https://github.com/davila7/claude-code-templates/blob/main/LICENSE',
+              href: 'https://github.com/davila7/gemini-code-templates/blob/main/LICENSE',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Claude Code Templates. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Gemini Code Templates. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

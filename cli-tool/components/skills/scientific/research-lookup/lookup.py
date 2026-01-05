@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Research Lookup Tool for Claude Code
+Research Lookup Tool for Gemini Code
 Performs research queries using Perplexity Sonar Pro Search via OpenRouter.
 """
 
@@ -22,7 +22,7 @@ def format_response(result: Dict) -> str:
     response = result["response"]
     citations = result["citations"]
 
-    # Format the output for Claude Code
+    # Format the output for Gemini Code
     output = f"""🔍 **Research Results**
 
 **Query:** {result['query']}
@@ -53,7 +53,7 @@ def format_response(result: Dict) -> str:
 
 
 def main():
-    """Main entry point for Claude Code tool."""
+    """Main entry point for Gemini Code tool."""
     # Check for API key
     if not os.getenv("OPENROUTER_API_KEY"):
         print("❌ Error: OPENROUTER_API_KEY environment variable not set")

@@ -8,7 +8,7 @@ RUN apk --no-cache add \
     python3 \
     py3-pip \
     curl \
-    && npm install -g @anthropic-ai/claude-agent-sdk
+    && npm install -g @anthropic-ai/gemini-agent-sdk
 
 # Create non-root user for security
 RUN adduser -u 10001 -D -s /bin/bash sandboxuser

@@ -19,7 +19,7 @@ if [[ -z "$SESSION_ID" || "$SESSION_ID" == "null" ]]; then
     exit 1
 fi
 
-DEBUG_LOG="$HOME/.claude/debug/${SESSION_ID}.txt"
+DEBUG_LOG="$HOME/.gemini/debug/${SESSION_ID}.txt"
 
 # Wait for file creation (max 5 seconds, 1 second interval)
 for i in {1..5}; do

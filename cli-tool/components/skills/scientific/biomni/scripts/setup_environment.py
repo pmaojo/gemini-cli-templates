@@ -88,7 +88,7 @@ def setup_api_keys() -> Dict[str, str]:
     api_keys = {}
 
     # Anthropic (recommended)
-    print("\n1. Anthropic Claude (Recommended)")
+    print("\n1. Anthropic Gemini (Recommended)")
     print("   Get your API key from: https://console.anthropic.com/")
     anthropic_key = input("   Enter ANTHROPIC_API_KEY (or press Enter to skip): ").strip()
     if anthropic_key:
@@ -201,7 +201,7 @@ import os
 from biomni.agent import A1
 
 # Use environment variables for API keys
-agent = A1(path='{data_path}', llm='claude-sonnet-4-20250514')
+agent = A1(path='{data_path}', llm='gemini-sonnet-4-20250514')
 
 # Simple test query
 result = agent.go("What is the primary function of the TP53 gene?")
@@ -239,7 +239,7 @@ from biomni.agent import A1
 # Initialize agent
 agent = A1(
     path='{data_path}',
-    llm='claude-sonnet-4-20250514'  # or your preferred LLM
+    llm='gemini-sonnet-4-20250514'  # or your preferred LLM
 )
 
 # Example 1: Simple gene query

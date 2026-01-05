@@ -138,7 +138,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         # Create sandbox with monitoring
         log_with_timestamp("Creating E2B sandbox...")
         sbx = Sandbox.create(
-            template="anthropic-claude-code",
+            template="anthropic-gemini-code",
             api_key=e2b_api_key,
             envs={'ANTHROPIC_API_KEY': anthropic_api_key},
             timeout=600
@@ -155,24 +155,24 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         # Install components if specified
         if components_to_install:
             log_with_timestamp(f"📦 Installing components: {components_to_install}")
-            install_command = f"npx claude-code-templates@latest {components_to_install}"
+            install_command = f"npx gemini-code-templates@latest {components_to_install}"
             monitor_sandbox_execution(sbx, install_command, timeout=120)
             monitor_file_system(sbx, "After components installation")
         
-        # Verify Claude Code installation
-        log_with_timestamp("🔍 Verifying Claude Code installation")
-        claude_check = monitor_sandbox_execution(sbx, "which claude", timeout=10)
-        if claude_check.exit_code == 0:
-            version_check = monitor_sandbox_execution(sbx, "claude --version", timeout=10)
-            log_with_timestamp(f"Claude version: {version_check.stdout.strip()}")
+        # Verify Gemini Code installation
+        log_with_timestamp("🔍 Verifying Gemini Code installation")
+        gemini_check = monitor_sandbox_execution(sbx, "which gemini", timeout=10)
+        if gemini_check.exit_code == 0:
+            version_check = monitor_sandbox_execution(sbx, "gemini --version", timeout=10)
+            log_with_timestamp(f"Gemini version: {version_check.stdout.strip()}")
         else:
-            log_with_timestamp("❌ Claude Code not found in PATH", "ERROR")
+            log_with_timestamp("❌ Gemini Code not found in PATH", "ERROR")
         
         # Execute main prompt with monitoring
-        log_with_timestamp("🤖 Executing Claude Code with monitoring")
-        claude_command = f"echo '{prompt}' | claude -p --dangerously-skip-permissions"
+        log_with_timestamp("🤖 Executing Gemini Code with monitoring")
+        gemini_command = f"echo '{prompt}' | gemini -p --dangerously-skip-permissions"
         
-        result = monitor_sandbox_execution(sbx, claude_command, timeout=600)
+        result = monitor_sandbox_execution(sbx, gemini_command, timeout=600)
         
         # Final file system check
         monitor_file_system(sbx, "Final file system state")

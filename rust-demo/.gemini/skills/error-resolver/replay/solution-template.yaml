@@ -1,6 +1,6 @@
 # Error Solution Template
 # Copy this file and fill in details after resolving an error
-# Save to: .claude/error-solutions/<error-signature>.yaml
+# Save to: .gemini/error-solutions/<error-signature>.yaml
 
 # Unique identifier for this solution
 id: ""  # e.g., "nodejs-module-not-found-express"

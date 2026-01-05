@@ -3,7 +3,7 @@
 System Resource Detection Script
 
 Detects available compute resources including CPU, GPU, memory, and disk space.
-Outputs a JSON file that Claude Code can use to make informed decisions about
+Outputs a JSON file that Gemini Code can use to make informed decisions about
 computational approaches (e.g., whether to use Dask, Zarr, Joblib, etc.).
 
 Supports: macOS, Linux, Windows
@@ -243,13 +243,13 @@ def detect_all_resources(output_path: str = None) -> Dict[str, Any]:
     Detect all system resources and save to JSON.
 
     Args:
-        output_path: Optional path to save JSON. Defaults to .claude_resources.json in cwd.
+        output_path: Optional path to save JSON. Defaults to .gemini_resources.json in cwd.
 
     Returns:
         Dictionary containing all resource information.
     """
     if output_path is None:
-        output_path = os.path.join(os.getcwd(), ".claude_resources.json")
+        output_path = os.path.join(os.getcwd(), ".gemini_resources.json")
 
     resources = {
         "timestamp": __import__("datetime").datetime.now().isoformat(),
@@ -357,8 +357,8 @@ def main():
     )
     parser.add_argument(
         "-o", "--output",
-        default=".claude_resources.json",
-        help="Output JSON file path (default: .claude_resources.json)"
+        default=".gemini_resources.json",
+        help="Output JSON file path (default: .gemini_resources.json)"
     )
     parser.add_argument(
         "-v", "--verbose",

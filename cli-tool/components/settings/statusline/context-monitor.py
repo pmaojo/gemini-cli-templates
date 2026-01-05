@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude Code Context Monitor
+Gemini Code Context Monitor
 Real-time context usage monitoring with visual indicators and session analytics
 """
 
@@ -35,7 +35,7 @@ def parse_context_from_transcript(transcript_path):
                         cache_read = usage.get('cache_read_input_tokens', 0)
                         cache_creation = usage.get('cache_creation_input_tokens', 0)
                         
-                        # Estimate context usage (assume 200k context for Claude Sonnet)
+                        # Estimate context usage (assume 200k context for Gemini Sonnet)
                         total_tokens = input_tokens + cache_read + cache_creation
                         if total_tokens > 0:
                             percent_used = min(100, (total_tokens / 200000) * 100)
@@ -192,11 +192,11 @@ def get_session_metrics(cost_data):
 
 def main():
     try:
-        # Read JSON input from Claude Code
+        # Read JSON input from Gemini Code
         data = json.load(sys.stdin)
         
         # Extract information
-        model_name = data.get('model', {}).get('display_name', 'Claude')
+        model_name = data.get('model', {}).get('display_name', 'Gemini')
         workspace = data.get('workspace', {})
         transcript_path = data.get('transcript_path', '')
         cost_data = data.get('cost', {})
@@ -230,7 +230,7 @@ def main():
         
     except Exception as e:
         # Fallback display on any error
-        print(f"\033[94m[Claude]\033[0m \033[93m📁 {os.path.basename(os.getcwd())}\033[0m 🧠 \033[31m[Error: {str(e)[:20]}]\033[0m")
+        print(f"\033[94m[Gemini]\033[0m \033[93m📁 {os.path.basename(os.getcwd())}\033[0m 🧠 \033[31m[Error: {str(e)[:20]}]\033[0m")
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.11
 """
-E2B Claude Code Sandbox Launcher
-Executes Claude Code prompts in isolated E2B cloud sandbox
+E2B Gemini Code Sandbox Launcher
+Executes Gemini Code prompts in isolated E2B cloud sandbox
 """
 
 import os
@@ -91,8 +91,8 @@ def main():
         sys.exit(1)
     
     try:
-        # Create E2B sandbox with Claude Code template with retry logic
-        print("🚀 Creating E2B sandbox with Claude Code...")
+        # Create E2B sandbox with Gemini Code template with retry logic
+        print("🚀 Creating E2B sandbox with Gemini Code...")
         
         # Try creating sandbox with retries for WebSocket issues
         max_retries = 3
@@ -105,7 +105,7 @@ def main():
                     print(f"🔄 Retry {retry_count}/{max_retries - 1} - WebSocket connection...")
                 
                 sbx = Sandbox.create(
-                    template="anthropic-claude-code",
+                    template="anthropic-gemini-code",
                     api_key=e2b_api_key,
                     envs={
                         'ANTHROPIC_API_KEY': anthropic_api_key,
@@ -149,7 +149,7 @@ def main():
         if components_to_install:
             print("📦 Installing specified components...")
             install_result = sbx.commands.run(
-                f"npx claude-code-templates@latest {components_to_install}",
+                f"npx gemini-code-templates@latest {components_to_install}",
                 timeout=120,  # 2 minutes for component installation
             )
             
@@ -177,7 +177,7 @@ def main():
         # Create enhanced prompt with proper instructions
         if agents:
             agent_list = ', '.join(agents)
-            enhanced_prompt = f"""You are Claude Code, an AI assistant specialized in software development. 
+            enhanced_prompt = f"""You are Gemini Code, an AI assistant specialized in software development. 
 
 IMPORTANT INSTRUCTIONS:
 1. Execute the user's request immediately and create the requested code/files
@@ -190,7 +190,7 @@ USER REQUEST: {prompt}
 
 Now, please execute this request and create all necessary files."""
         else:
-            enhanced_prompt = f"""You are Claude Code, an AI assistant specialized in software development.
+            enhanced_prompt = f"""You are Gemini Code, an AI assistant specialized in software development.
 
 IMPORTANT INSTRUCTIONS:
 1. Execute the user's request immediately and create the requested code/files
@@ -202,22 +202,22 @@ USER REQUEST: {prompt}
 
 Now, please execute this request and create all necessary files."""
         
-        # Execute Claude Code with the enhanced prompt
-        print(f"🤖 Executing Claude Code with prompt: '{prompt[:50]}{'...' if len(prompt) > 50 else ''}'")
+        # Execute Gemini Code with the enhanced prompt
+        print(f"🤖 Executing Gemini Code with prompt: '{prompt[:50]}{'...' if len(prompt) > 50 else ''}'")
         if agents:
             print(f"🤝 Using agents: {', '.join(agents)}")
         
-        # First, check if Claude Code is installed and available
-        print("🔍 Checking Claude Code installation...")
-        check_result = sbx.commands.run("which claude", timeout=10)
+        # First, check if Gemini Code is installed and available
+        print("🔍 Checking Gemini Code installation...")
+        check_result = sbx.commands.run("which gemini", timeout=10)
         if check_result.exit_code == 0:
-            print(f"✅ Claude found at: {check_result.stdout.strip()}")
+            print(f"✅ Gemini found at: {check_result.stdout.strip()}")
         else:
-            print("❌ Claude not found, checking PATH...")
+            print("❌ Gemini not found, checking PATH...")
             path_result = sbx.commands.run("echo $PATH", timeout=5)
             print(f"PATH: {path_result.stdout}")
-            ls_result = sbx.commands.run("ls -la /usr/local/bin/ | grep claude", timeout=5)
-            print(f"Claude binaries: {ls_result.stdout}")
+            ls_result = sbx.commands.run("ls -la /usr/local/bin/ | grep gemini", timeout=5)
+            print(f"Gemini binaries: {ls_result.stdout}")
         
         # Check current directory and permissions
         print("🔍 Checking sandbox environment...")
@@ -234,14 +234,14 @@ Now, please execute this request and create all necessary files."""
         else:
             print("❌ Write permission issue")
         
-        # Build Claude Code command with enhanced prompt and better error handling
+        # Build Gemini Code command with enhanced prompt and better error handling
         # Escape single quotes in the enhanced prompt
         escaped_prompt = enhanced_prompt.replace("'", "'\\''")
-        claude_command = f"echo '{escaped_prompt}' | claude -p --dangerously-skip-permissions"
+        gemini_command = f"echo '{escaped_prompt}' | gemini -p --dangerously-skip-permissions"
         
         # Show the original user prompt in the command display (not the enhanced version)
         display_prompt = prompt[:100] + '...' if len(prompt) > 100 else prompt
-        print(f"🚀 Running command: echo '{display_prompt}' | claude -p --dangerously-skip-permissions")
+        print(f"🚀 Running command: echo '{display_prompt}' | gemini -p --dangerously-skip-permissions")
         
         # Show loading message with visual separation
         print("")
@@ -271,7 +271,7 @@ Now, please execute this request and create all necessary files."""
             """Show periodic progress updates if no output for a while"""
             progress_messages = [
                 "⏳ Still processing...",
-                "🔄 Claude Code is working on your request...",
+                "🔄 Gemini Code is working on your request...",
                 "⚙️  Analyzing requirements...",
                 "🛠️  Building solution...",
                 "📝 Generating code...",
@@ -299,7 +299,7 @@ Now, please execute this request and create all necessary files."""
                 # Mark that we've received output and update activity time
                 if not has_output[0]:
                     has_output[0] = True
-                    print("\n🎯 Claude Code started responding:\n")
+                    print("\n🎯 Gemini Code started responding:\n")
                 
                 last_activity[0] = time.time()
                 
@@ -313,7 +313,7 @@ Now, please execute this request and create all necessary files."""
                 # Mark that we've received output and update activity time
                 if not has_output[0]:
                     has_output[0] = True
-                    print("\n🎯 Claude Code started responding:\n")
+                    print("\n🎯 Gemini Code started responding:\n")
                 
                 last_activity[0] = time.time()
                 
@@ -325,7 +325,7 @@ Now, please execute this request and create all necessary files."""
         # Execute with streaming output and extended timeout
         try:
             result = sbx.commands.run(
-                claude_command,
+                gemini_command,
                 timeout=600,  # 10 minutes timeout for complex operations
                 on_stdout=on_stdout,
                 on_stderr=on_stderr
@@ -367,7 +367,7 @@ Now, please execute this request and create all necessary files."""
             -name '*.sh' -o -name '*.bash' -o \
             -name '*.go' -o -name '*.rs' -o -name '*.java' -o \
             -name '*.php' -o -name '*.rb' -o -name '*.swift' \
-        \\) ! -path '*/.npm/*' ! -path '*/.claude/*' ! -path '*/node_modules/*' | head -50""")
+        \\) ! -path '*/.npm/*' ! -path '*/.gemini/*' ! -path '*/node_modules/*' | head -50""")
         if files_result.stdout.strip():
             print(files_result.stdout)
             
@@ -422,7 +422,7 @@ Now, please execute this request and create all necessary files."""
         print("💡 Note: Sandbox will be automatically destroyed")
         
     except Exception as e:
-        print(f"❌ Error executing Claude Code in sandbox: {str(e)}")
+        print(f"❌ Error executing Gemini Code in sandbox: {str(e)}")
         sys.exit(1)
     
     finally:

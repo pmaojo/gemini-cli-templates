@@ -48,7 +48,7 @@ TEMPLATES = {
 
 def get_templates_dir():
     """Get the path to the templates directory."""
-    # Assume script is in .claude/skills/treatment-plans/scripts/
+    # Assume script is in .gemini/skills/treatment-plans/scripts/
     script_dir = Path(__file__).parent
     templates_dir = script_dir.parent / 'assets'
     return templates_dir

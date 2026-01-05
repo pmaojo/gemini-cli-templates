@@ -378,7 +378,7 @@ def generate_components_json():
     """
     components_base_path = 'cli-tool/components'
     templates_base_path = 'cli-tool/templates'
-    plugins_path = '.claude-plugin/marketplace.json'
+    plugins_path = '.gemini-plugin/marketplace.json'
     output_path = 'docs/components.json'
     components_data = {'agents': [], 'commands': [], 'mcps': [], 'settings': [], 'hooks': [], 'sandbox': [], 'skills': [], 'templates': [], 'plugins': []}
 
@@ -547,8 +547,8 @@ def generate_components_json():
                     if os.path.isfile(item_path):
                         language_files.append(item)
                     elif os.path.isdir(item_path) and item != 'examples':
-                        # For directories like .claude, scan recursively
-                        if item == '.claude':
+                        # For directories like .gemini, scan recursively
+                        if item == '.gemini':
                             recursive_files = scan_directory_recursively(item_path, language_path)
                             language_files.extend(recursive_files)
                         else:
@@ -588,8 +588,8 @@ def generate_components_json():
                                 if os.path.isfile(item_path):
                                     framework_files.append(item)
                                 elif os.path.isdir(item_path):
-                                    # For directories like .claude, scan recursively
-                                    if item == '.claude':
+                                    # For directories like .gemini, scan recursively
+                                    if item == '.gemini':
                                         recursive_files = scan_directory_recursively(item_path, framework_path)
                                         framework_files.extend(recursive_files)
                                     else:
@@ -617,8 +617,8 @@ def generate_components_json():
     else:
         print(f"Warning: Templates directory not found: {templates_base_path}")
 
-    # Load components metadata from marketplace.json (Claude Code standard)
-    components_marketplace_path = 'cli-tool/components/.claude-plugin/marketplace.json'
+    # Load components metadata from marketplace.json (Gemini Code standard)
+    components_marketplace_path = 'cli-tool/components/.gemini-plugin/marketplace.json'
     components_marketplace = None
     if os.path.isfile(components_marketplace_path):
         print(f"Loading components metadata from {components_marketplace_path}...")
@@ -716,7 +716,7 @@ def generate_components_json():
         components_data['marketplace'] = marketplace_full_data
         print("✅ Added public marketplace metadata to components.json")
 
-    # Add components marketplace metadata (Claude Code standard)
+    # Add components marketplace metadata (Gemini Code standard)
     if components_marketplace:
         components_data['componentsMarketplace'] = components_marketplace
         print("✅ Added components marketplace metadata to components.json")

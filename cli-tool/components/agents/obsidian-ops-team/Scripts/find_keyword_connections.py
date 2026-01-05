@@ -10,7 +10,7 @@ from pathlib import Path
 PRIORITY_KEYWORDS = {
     'llm', 'langchain', 'langgraph', 'rag', 'embedding', 'vector',
     'agent', 'automation', 'workflow', 'pipeline', 'mcp', 'api',
-    'anthropic', 'openai', 'google', 'claude', 'gpt', 'model',
+    'anthropic', 'openai', 'google', 'gemini', 'gpt', 'model',
     'context', 'protocol', 'fastapi', 'docker', 'cloudflare', 
     'supabase', 'integration', 'framework', 'retrieval', 'augmented',
     'generation', 'prompt', 'engineering', 'multimodal', 'function',

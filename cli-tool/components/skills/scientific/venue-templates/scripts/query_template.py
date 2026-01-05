@@ -73,7 +73,7 @@ TEMPLATES = {
 
 def get_skill_path():
     """Get the path to the venue-templates skill directory."""
-    # Assume script is in .claude/skills/venue-templates/scripts/
+    # Assume script is in .gemini/skills/venue-templates/scripts/
     script_dir = Path(__file__).parent
     skill_dir = script_dir.parent
     return skill_dir

@@ -27,7 +27,7 @@ interface ExecuteResponse {
 
 /**
  * Main Worker handler
- * Receives code execution requests and orchestrates Claude AI + Cloudflare Sandbox
+ * Receives code execution requests and orchestrates Gemini AI + Cloudflare Sandbox
  */
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -49,10 +49,10 @@ export default {
     if (request.method === 'GET' && url.pathname === '/') {
       return new Response(
         JSON.stringify({
-          name: 'Cloudflare Claude Code Sandbox',
+          name: 'Cloudflare Gemini Code Sandbox',
           version: '1.0.0',
           endpoints: {
-            execute: 'POST /execute - Execute code via Claude AI',
+            execute: 'POST /execute - Execute code via Gemini AI',
             health: 'GET /health - Check worker health',
           },
           usage: {
@@ -80,7 +80,7 @@ export default {
         JSON.stringify({
           status: 'healthy',
           timestamp: new Date().toISOString(),
-          worker: 'cloudflare-claude-sandbox',
+          worker: 'cloudflare-gemini-sandbox',
         }),
         {
           headers: {
@@ -122,8 +122,8 @@ export default {
           apiKey: env.ANTHROPIC_API_KEY,
         });
 
-        // Generate code using Claude
-        console.log('Generating code with Claude for:', body.question.substring(0, 100));
+        // Generate code using Gemini
+        console.log('Generating code with Gemini for:', body.question.substring(0, 100));
 
         const language = body.language || 'python';
         const codePrompt =
@@ -150,7 +150,7 @@ Requirements:
 Return ONLY the code, no explanations or markdown formatting.`;
 
         const codeGeneration = await anthropic.messages.create({
-          model: 'claude-sonnet-4-5',
+          model: 'gemini-sonnet-4-5',
           max_tokens: body.maxTokens || 2048,
           messages: [
             {
@@ -165,7 +165,7 @@ Return ONLY the code, no explanations or markdown formatting.`;
 
         if (!generatedCode) {
           return Response.json(
-            { error: 'Failed to generate code from Claude' },
+            { error: 'Failed to generate code from Gemini' },
             { status: 500, headers: corsHeaders }
           );
         }
