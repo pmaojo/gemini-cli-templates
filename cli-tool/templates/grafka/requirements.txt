@@ -1,0 +1,14 @@
+mcp
+fastmcp
+pydantic
+litellm
+qdrant-client
+sentence-transformers
+numpy
+torch
+grpcio
+grpcio-tools
+protobuf
+rdflib
+peft
+lightning

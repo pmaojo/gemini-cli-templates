@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "grafka-engine": {
+      "command": ".venv/bin/python",
+      "args": ["-m", "agents.infrastructure.web.mcp_server"],
+      "env": {
+        "PYTHONPATH": "${PWD}",
+        "GEMINI_MODEL": "gemini/gemini-2.5-flash",
+        "GEMINI_MODEL_REASONING": "gemini/gemini-1.5-pro"
+      },
+      "description": "Grafka Neuro-Symbolic Engine (RAG + Reasoning)"
+    }
+  }
+}
