@@ -25,11 +25,44 @@ function getExtensionCategories() {
 }
 
 /**
+ * Load all extensions from the consolidated extensions.json file
+ * @returns {Object[]} Array of extension objects
+ */
+function loadConsolidatedExtensions() {
+  const extensionsPath = path.join(EXTENSIONS_DIR, 'extensions.json');
+  if (!fs.existsSync(extensionsPath)) {
+    return [];
+  }
+
+  try {
+    const content = fs.readFileSync(extensionsPath, 'utf8');
+    const extensions = JSON.parse(content);
+    // Ensure ID is set
+    return extensions.map(ext => {
+      if (!ext.id) ext.id = ext.name;
+      return ext;
+    });
+  } catch (error) {
+    console.error(`Error loading extensions.json:`, error.message);
+    return [];
+  }
+}
+
+/**
  * Load all extensions from a specific category
  * @param {string} category - Category name (e.g., 'productivity', 'database')
  * @returns {Object[]} Array of extension objects
  */
 function getExtensionsByCategory(category) {
+  // First check consolidated file
+  const allExtensions = loadConsolidatedExtensions();
+  const categoryExtensions = allExtensions.filter(ext => ext.category === category);
+
+  if (categoryExtensions.length > 0) {
+    return categoryExtensions;
+  }
+
+  // Fallback to directory scanning (legacy)
   const categoryPath = path.join(EXTENSIONS_DIR, category);
   
   if (!fs.existsSync(categoryPath)) {
@@ -59,6 +92,13 @@ function getExtensionsByCategory(category) {
  * @returns {Object[]} Array of all extension objects
  */
 function getAllExtensions() {
+  // Try loading from consolidated file first
+  const consolidated = loadConsolidatedExtensions();
+  if (consolidated.length > 0) {
+    return consolidated;
+  }
+
+  // Fallback to category scanning
   const categories = getExtensionCategories();
   let allExtensions = [];
   
@@ -104,6 +144,12 @@ function searchExtensions(query) {
  * @returns {Object|null} Extension object or null if not found
  */
 function getExtensionById(id) {
+  // First check consolidated file
+  const allExtensions = loadConsolidatedExtensions();
+  const found = allExtensions.find(ext => ext.id === id || ext.name === id);
+  if (found) return found;
+
+  // Fallback to directory scanning
   const categories = getExtensionCategories();
   
   for (const category of categories) {

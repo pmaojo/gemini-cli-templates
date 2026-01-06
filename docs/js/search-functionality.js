@@ -139,7 +139,7 @@ async function loadComponentsForSearch() {
             
             if (data) {
                 // Process each category for search
-                const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills'];
+                const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills', 'extensions'];
 
                 for (const category of categories) {
                     if (data[category] && Array.isArray(data[category])) {
@@ -177,7 +177,7 @@ async function loadComponentsForSearch() {
             const data = await response.json();
 
             // Process each category for search
-            const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills'];
+            const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills', 'extensions'];
 
             for (const category of categories) {
                 if (data[category] && Array.isArray(data[category])) {
@@ -212,7 +212,7 @@ async function loadComponentsForSearch() {
         
         // Fallback: try to use cached data if available
         if (window.getSearchData) {
-            const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills'];
+            const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills', 'extensions'];
             for (const category of categories) {
                 const data = window.getSearchData(category);
                 if (data && data.length > 0) {
@@ -481,7 +481,7 @@ function displaySearchResults(results) {
     
     // Render grouped results in specific order
     let html = '';
-    const categoryOrder = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills'];
+    const categoryOrder = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'skills', 'extensions'];
 
     categoryOrder.forEach(category => {
         if (!groupedResults[category]) return;
@@ -521,7 +521,8 @@ function getCategoryIcon(category) {
         settings: '⚙️',
         hooks: '🪝',
         mcps: '🔌',
-        skills: '🎨'
+        skills: '🎨',
+        extensions: '🧩'
     };
     return icons[category] || '📦';
 }
@@ -544,7 +545,8 @@ function generateComponentCard(component, category) {
         mcp: { icon: '🔌', color: '#45b7d1' },
         setting: { icon: '⚙️', color: '#9c88ff' },
         hook: { icon: '🪝', color: '#ff8c42' },
-        skill: { icon: '🎨', color: '#f59e0b' }
+        skill: { icon: '🎨', color: '#f59e0b' },
+        extension: { icon: '🧩', color: '#a855f7' }
     };
     
     const config = typeConfig[component.type];

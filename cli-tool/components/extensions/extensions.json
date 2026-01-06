@@ -1,0 +1,3447 @@
+[
+  {
+    "name": "gemini-cli-prompt-library",
+    "displayName": "Gemini Cli Prompt Library",
+    "description": "Gemini CLI extension: gemini-cli-prompt-library",
+    "repository": "https://github.com/harish-garg/gemini-cli-prompt-library",
+    "author": "harish-garg",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-prompt-library"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-prompt-library"
+  },
+  {
+    "name": "jules",
+    "displayName": "Jules",
+    "description": "Gemini CLI extension: jules",
+    "repository": "https://github.com/gemini-cli-extensions/jules",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "jules"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=jules"
+  },
+  {
+    "name": "terraform-mcp-server",
+    "displayName": "Terraform Mcp Server",
+    "description": "Gemini CLI extension: terraform-mcp-server",
+    "repository": "https://github.com/hashicorp/terraform-mcp-server",
+    "author": "hashicorp",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "terraform-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=terraform-mcp-server"
+  },
+  {
+    "name": "context7",
+    "displayName": "Context7",
+    "description": "Gemini CLI extension: context7",
+    "repository": "https://github.com/upstash/context7",
+    "author": "upstash",
+    "category": "community",
+    "tags": [
+      "community",
+      "context7"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=context7"
+  },
+  {
+    "name": "github-mcp-server",
+    "displayName": "Github Mcp Server",
+    "description": "Gemini CLI extension: github-mcp-server",
+    "repository": "https://github.com/github/github-mcp-server",
+    "author": "github",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "github-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=github-mcp-server"
+  },
+  {
+    "name": "chrome-devtools-mcp",
+    "displayName": "Chrome Devtools Mcp",
+    "description": "Gemini CLI extension: chrome-devtools-mcp",
+    "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "author": "ChromeDevTools",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "chrome-devtools-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=chrome-devtools-mcp"
+  },
+  {
+    "name": "genai-toolbox",
+    "displayName": "Genai Toolbox",
+    "description": "Gemini CLI extension: genai-toolbox",
+    "repository": "https://github.com/googleapis/genai-toolbox",
+    "author": "googleapis",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "genai-toolbox"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=genai-toolbox"
+  },
+  {
+    "name": "clasp",
+    "displayName": "Clasp",
+    "description": "Gemini CLI extension: clasp",
+    "repository": "https://github.com/google/clasp",
+    "author": "google",
+    "category": "community",
+    "tags": [
+      "community",
+      "clasp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=clasp"
+  },
+  {
+    "name": "exa-mcp-server",
+    "displayName": "Exa Mcp Server",
+    "description": "Gemini CLI extension: exa-mcp-server",
+    "repository": "https://github.com/exa-labs/exa-mcp-server",
+    "author": "exa-labs",
+    "category": "community",
+    "tags": [
+      "community",
+      "exa-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=exa-mcp-server"
+  },
+  {
+    "name": "mcp-server-browserbase",
+    "displayName": "Mcp Server Browserbase",
+    "description": "Gemini CLI extension: mcp-server-browserbase",
+    "repository": "https://github.com/browserbase/mcp-server-browserbase",
+    "author": "browserbase",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-server-browserbase"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server-browserbase"
+  },
+  {
+    "name": "mcp-grafana",
+    "displayName": "Mcp Grafana",
+    "description": "Gemini CLI extension: mcp-grafana",
+    "repository": "https://github.com/grafana/mcp-grafana",
+    "author": "grafana",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-grafana"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-grafana"
+  },
+  {
+    "name": "conductor",
+    "displayName": "Conductor",
+    "description": "Gemini CLI extension: conductor",
+    "repository": "https://github.com/gemini-cli-extensions/conductor",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "conductor"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=conductor"
+  },
+  {
+    "name": "mcp-server-kubernetes",
+    "displayName": "Mcp Server Kubernetes",
+    "description": "Gemini CLI extension: mcp-server-kubernetes",
+    "repository": "https://github.com/Flux159/mcp-server-kubernetes",
+    "author": "Flux159",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "mcp-server-kubernetes"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server-kubernetes"
+  },
+  {
+    "name": "ai",
+    "displayName": "Ai",
+    "description": "Gemini CLI extension: ai",
+    "repository": "https://github.com/stripe/ai",
+    "author": "stripe",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "ai"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=ai"
+  },
+  {
+    "name": "elevenlabs-mcp",
+    "displayName": "Elevenlabs Mcp",
+    "description": "Gemini CLI extension: elevenlabs-mcp",
+    "repository": "https://github.com/elevenlabs/elevenlabs-mcp",
+    "author": "elevenlabs",
+    "category": "community",
+    "tags": [
+      "community",
+      "elevenlabs-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=elevenlabs-mcp"
+  },
+  {
+    "name": "terraform-mcp-server",
+    "displayName": "Terraform Mcp Server",
+    "description": "Gemini CLI extension: terraform-mcp-server",
+    "repository": "https://github.com/hashicorp/terraform-mcp-server",
+    "author": "hashicorp",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "terraform-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=terraform-mcp-server"
+  },
+  {
+    "name": "CloudBase-MCP",
+    "displayName": "Cloudbase Mcp",
+    "description": "Gemini CLI extension: CloudBase-MCP",
+    "repository": "https://github.com/TencentCloudBase/CloudBase-MCP",
+    "author": "TencentCloudBase",
+    "category": "database",
+    "tags": [
+      "database",
+      "CloudBase-MCP"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=CloudBase-MCP"
+  },
+  {
+    "name": "mcp-neo4j",
+    "displayName": "Mcp Neo4J",
+    "description": "Gemini CLI extension: mcp-neo4j",
+    "repository": "https://github.com/neo4j-contrib/mcp-neo4j",
+    "author": "neo4j-contrib",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-neo4j"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-neo4j"
+  },
+  {
+    "name": "skills",
+    "displayName": "Skills",
+    "description": "Gemini CLI extension: skills",
+    "repository": "https://github.com/huggingface/skills",
+    "author": "huggingface",
+    "category": "community",
+    "tags": [
+      "community",
+      "skills"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=skills"
+  },
+  {
+    "name": "nanobanana",
+    "displayName": "Nanobanana",
+    "description": "Gemini CLI extension: nanobanana",
+    "repository": "https://github.com/gemini-cli-extensions/nanobanana",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "nanobanana"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=nanobanana"
+  },
+  {
+    "name": "cloud-run-mcp",
+    "displayName": "Cloud Run Mcp",
+    "description": "Gemini CLI extension: cloud-run-mcp",
+    "repository": "https://github.com/GoogleCloudPlatform/cloud-run-mcp",
+    "author": "GoogleCloudPlatform",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "cloud-run-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-run-mcp"
+  },
+  {
+    "name": "open-aware",
+    "displayName": "Open Aware",
+    "description": "Gemini CLI extension: open-aware",
+    "repository": "https://github.com/qodo-ai/open-aware",
+    "author": "qodo-ai",
+    "category": "community",
+    "tags": [
+      "community",
+      "open-aware"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=open-aware"
+  },
+  {
+    "name": "mcp-redis",
+    "displayName": "Mcp Redis",
+    "description": "Gemini CLI extension: mcp-redis",
+    "repository": "https://github.com/redis/mcp-redis",
+    "author": "redis",
+    "category": "database",
+    "tags": [
+      "database",
+      "mcp-redis"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-redis"
+  },
+  {
+    "name": "mcp",
+    "displayName": "Mcp",
+    "description": "Gemini CLI extension: mcp",
+    "repository": "https://github.com/mondaycom/mcp",
+    "author": "mondaycom",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp"
+  },
+  {
+    "name": "flutter",
+    "displayName": "Flutter",
+    "description": "Gemini CLI extension: flutter",
+    "repository": "https://github.com/gemini-cli-extensions/flutter",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "flutter"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=flutter"
+  },
+  {
+    "name": "sonarqube-mcp-server",
+    "displayName": "Sonarqube Mcp Server",
+    "description": "Gemini CLI extension: sonarqube-mcp-server",
+    "repository": "https://github.com/SonarSource/sonarqube-mcp-server",
+    "author": "SonarSource",
+    "category": "community",
+    "tags": [
+      "community",
+      "sonarqube-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=sonarqube-mcp-server"
+  },
+  {
+    "name": "security",
+    "displayName": "Security",
+    "description": "Gemini CLI extension: security",
+    "repository": "https://github.com/gemini-cli-extensions/security",
+    "author": "gemini-cli-extensions",
+    "category": "security",
+    "tags": [
+      "security",
+      "security"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=security"
+  },
+  {
+    "name": "gemini-flow",
+    "displayName": "Gemini Flow",
+    "description": "Gemini CLI extension: gemini-flow",
+    "repository": "https://github.com/clduab11/gemini-flow",
+    "author": "clduab11",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-flow"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-flow"
+  },
+  {
+    "name": "code-review",
+    "displayName": "Code Review",
+    "description": "Gemini CLI extension: code-review",
+    "repository": "https://github.com/gemini-cli-extensions/code-review",
+    "author": "gemini-cli-extensions",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "code-review"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=code-review"
+  },
+  {
+    "name": "jules",
+    "displayName": "Jules",
+    "description": "Gemini CLI extension: jules",
+    "repository": "https://github.com/gemini-cli-extensions/jules",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "jules"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=jules"
+  },
+  {
+    "name": "workspace",
+    "displayName": "Workspace",
+    "description": "Gemini CLI extension: workspace",
+    "repository": "https://github.com/gemini-cli-extensions/workspace",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "workspace"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=workspace"
+  },
+  {
+    "name": "mcp-server-milvus",
+    "displayName": "Mcp Server Milvus",
+    "description": "Gemini CLI extension: mcp-server-milvus",
+    "repository": "https://github.com/zilliztech/mcp-server-milvus",
+    "author": "zilliztech",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-server-milvus"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server-milvus"
+  },
+  {
+    "name": "gemini-cli-prompt-library",
+    "displayName": "Gemini Cli Prompt Library",
+    "description": "Gemini CLI extension: gemini-cli-prompt-library",
+    "repository": "https://github.com/harish-garg/gemini-cli-prompt-library",
+    "author": "harish-garg",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-prompt-library"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-prompt-library"
+  },
+  {
+    "name": "dynatrace-mcp",
+    "displayName": "Dynatrace Mcp",
+    "description": "Gemini CLI extension: dynatrace-mcp",
+    "repository": "https://github.com/dynatrace-oss/dynatrace-mcp",
+    "author": "dynatrace-oss",
+    "category": "observability",
+    "tags": [
+      "observability",
+      "dynatrace-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=dynatrace-mcp"
+  },
+  {
+    "name": "hf-mcp-server",
+    "displayName": "Hf Mcp Server",
+    "description": "Gemini CLI extension: hf-mcp-server",
+    "repository": "https://github.com/huggingface/hf-mcp-server",
+    "author": "huggingface",
+    "category": "community",
+    "tags": [
+      "community",
+      "hf-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=hf-mcp-server"
+  },
+  {
+    "name": "atlassian-mcp-server",
+    "displayName": "Atlassian Mcp Server",
+    "description": "Gemini CLI extension: atlassian-mcp-server",
+    "repository": "https://github.com/atlassian/atlassian-mcp-server",
+    "author": "atlassian",
+    "category": "community",
+    "tags": [
+      "community",
+      "atlassian-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=atlassian-mcp-server"
+  },
+  {
+    "name": "genkit",
+    "displayName": "Genkit",
+    "description": "Gemini CLI extension: genkit",
+    "repository": "https://github.com/gemini-cli-extensions/genkit",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "genkit"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=genkit"
+  },
+  {
+    "name": "postman-mcp-server",
+    "displayName": "Postman Mcp Server",
+    "description": "Gemini CLI extension: postman-mcp-server",
+    "repository": "https://github.com/postmanlabs/postman-mcp-server",
+    "author": "postmanlabs",
+    "category": "community",
+    "tags": [
+      "community",
+      "postman-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=postman-mcp-server"
+  },
+  {
+    "name": "uuv",
+    "displayName": "Uuv",
+    "description": "Gemini CLI extension: uuv",
+    "repository": "https://github.com/e2e-test-quest/uuv",
+    "author": "e2e-test-quest",
+    "category": "community",
+    "tags": [
+      "community",
+      "uuv"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=uuv"
+  },
+  {
+    "name": "mcp-confluent",
+    "displayName": "Mcp Confluent",
+    "description": "Gemini CLI extension: mcp-confluent",
+    "repository": "https://github.com/confluentinc/mcp-confluent",
+    "author": "confluentinc",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-confluent"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-confluent"
+  },
+  {
+    "name": "claude-prompts-mcp",
+    "displayName": "Claude Prompts Mcp",
+    "description": "Gemini CLI extension: claude-prompts-mcp",
+    "repository": "https://github.com/minipuft/claude-prompts-mcp",
+    "author": "minipuft",
+    "category": "community",
+    "tags": [
+      "community",
+      "claude-prompts-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=claude-prompts-mcp"
+  },
+  {
+    "name": "gke-mcp",
+    "displayName": "Gke Mcp",
+    "description": "Gemini CLI extension: gke-mcp",
+    "repository": "https://github.com/GoogleCloudPlatform/gke-mcp",
+    "author": "GoogleCloudPlatform",
+    "category": "community",
+    "tags": [
+      "community",
+      "gke-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gke-mcp"
+  },
+  {
+    "name": "firebase",
+    "displayName": "Firebase",
+    "description": "Gemini CLI extension: firebase",
+    "repository": "https://github.com/gemini-cli-extensions/firebase",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "firebase"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=firebase"
+  },
+  {
+    "name": "gemini-cli-elasticsearch",
+    "displayName": "Gemini Cli Elasticsearch",
+    "description": "Gemini CLI extension: gemini-cli-elasticsearch",
+    "repository": "https://github.com/elastic/gemini-cli-elasticsearch",
+    "author": "elastic",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-elasticsearch"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-elasticsearch"
+  },
+  {
+    "name": "figma-gemini-cli-extension",
+    "displayName": "Figma Gemini Cli Extension",
+    "description": "Gemini CLI extension: figma-gemini-cli-extension",
+    "repository": "https://github.com/figma/figma-gemini-cli-extension",
+    "author": "figma",
+    "category": "community",
+    "tags": [
+      "community",
+      "figma-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=figma-gemini-cli-extension"
+  },
+  {
+    "name": "platform-ai",
+    "displayName": "Platform Ai",
+    "description": "Gemini CLI extension: platform-ai",
+    "repository": "https://github.com/googlemaps/platform-ai",
+    "author": "googlemaps",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "platform-ai"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=platform-ai"
+  },
+  {
+    "name": "slash-criticalthink",
+    "displayName": "Slash Criticalthink",
+    "description": "Gemini CLI extension: slash-criticalthink",
+    "repository": "https://github.com/abagames/slash-criticalthink",
+    "author": "abagames",
+    "category": "community",
+    "tags": [
+      "community",
+      "slash-criticalthink"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=slash-criticalthink"
+  },
+  {
+    "name": "gemini-extension",
+    "displayName": "Gemini Extension",
+    "description": "Gemini CLI extension: gemini-extension",
+    "repository": "https://github.com/endorlabs/gemini-extension",
+    "author": "endorlabs",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-extension"
+  },
+  {
+    "name": "mcp-toolbox",
+    "displayName": "Mcp Toolbox",
+    "description": "Gemini CLI extension: mcp-toolbox",
+    "repository": "https://github.com/gemini-cli-extensions/mcp-toolbox",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-toolbox"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-toolbox"
+  },
+  {
+    "name": "skill-porter",
+    "displayName": "Skill Porter",
+    "description": "Gemini CLI extension: skill-porter",
+    "repository": "https://github.com/jduncan-rva/skill-porter",
+    "author": "jduncan-rva",
+    "category": "community",
+    "tags": [
+      "community",
+      "skill-porter"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=skill-porter"
+  },
+  {
+    "name": "postgres",
+    "displayName": "Postgres",
+    "description": "Gemini CLI extension: postgres",
+    "repository": "https://github.com/gemini-cli-extensions/postgres",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "postgres"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=postgres"
+  },
+  {
+    "name": "GeminiCLI_ComputerUse_Extension",
+    "displayName": "Geminicli_Computeruse_Extension",
+    "description": "Gemini CLI extension: GeminiCLI_ComputerUse_Extension",
+    "repository": "https://github.com/automateyournetwork/GeminiCLI_ComputerUse_Extension",
+    "author": "automateyournetwork",
+    "category": "community",
+    "tags": [
+      "community",
+      "GeminiCLI_ComputerUse_Extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_ComputerUse_Extension"
+  },
+  {
+    "name": "developer-tools",
+    "displayName": "Developer Tools",
+    "description": "Gemini CLI extension: developer-tools",
+    "repository": "https://github.com/googleworkspace/developer-tools",
+    "author": "googleworkspace",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "developer-tools"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=developer-tools"
+  },
+  {
+    "name": "pinecone-mcp",
+    "displayName": "Pinecone Mcp",
+    "description": "Gemini CLI extension: pinecone-mcp",
+    "repository": "https://github.com/pinecone-io/pinecone-mcp",
+    "author": "pinecone-io",
+    "category": "community",
+    "tags": [
+      "community",
+      "pinecone-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=pinecone-mcp"
+  },
+  {
+    "name": "gemini-docs-ext",
+    "displayName": "Gemini Docs Ext",
+    "description": "Gemini CLI extension: gemini-docs-ext",
+    "repository": "https://github.com/markmcd/gemini-docs-ext",
+    "author": "markmcd",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-docs-ext"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-docs-ext"
+  },
+  {
+    "name": "snippets-rules",
+    "displayName": "Snippets Rules",
+    "description": "Gemini CLI extension: snippets-rules",
+    "repository": "https://github.com/firebase/snippets-rules",
+    "author": "firebase",
+    "category": "community",
+    "tags": [
+      "community",
+      "snippets-rules"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=snippets-rules"
+  },
+  {
+    "name": "gemini-cloud-assist-mcp",
+    "displayName": "Gemini Cloud Assist Mcp",
+    "description": "Gemini CLI extension: gemini-cloud-assist-mcp",
+    "repository": "https://github.com/GoogleCloudPlatform/gemini-cloud-assist-mcp",
+    "author": "GoogleCloudPlatform",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "gemini-cloud-assist-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cloud-assist-mcp"
+  },
+  {
+    "name": "gemini-cli-blueprint-extension",
+    "displayName": "Gemini Cli Blueprint Extension",
+    "description": "Gemini CLI extension: gemini-cli-blueprint-extension",
+    "repository": "https://github.com/gplasky/gemini-cli-blueprint-extension",
+    "author": "gplasky",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-blueprint-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-blueprint-extension"
+  },
+  {
+    "name": "adk-agent-extension",
+    "displayName": "Adk Agent Extension",
+    "description": "Gemini CLI extension: adk-agent-extension",
+    "repository": "https://github.com/simonliu-ai-product/adk-agent-extension",
+    "author": "simonliu-ai-product",
+    "category": "community",
+    "tags": [
+      "community",
+      "adk-agent-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=adk-agent-extension"
+  },
+  {
+    "name": "globalping-mcp-server",
+    "displayName": "Globalping Mcp Server",
+    "description": "Gemini CLI extension: globalping-mcp-server",
+    "repository": "https://github.com/jsdelivr/globalping-mcp-server",
+    "author": "jsdelivr",
+    "category": "community",
+    "tags": [
+      "community",
+      "globalping-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=globalping-mcp-server"
+  },
+  {
+    "name": "GeminiCLI_Vision_Extension",
+    "displayName": "Geminicli_Vision_Extension",
+    "description": "Gemini CLI extension: GeminiCLI_Vision_Extension",
+    "repository": "https://github.com/automateyournetwork/GeminiCLI_Vision_Extension",
+    "author": "automateyournetwork",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "GeminiCLI_Vision_Extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_Vision_Extension"
+  },
+  {
+    "name": "gemini-cli-skillz",
+    "displayName": "Gemini Cli Skillz",
+    "description": "Gemini CLI extension: gemini-cli-skillz",
+    "repository": "https://github.com/intellectronica/gemini-cli-skillz",
+    "author": "intellectronica",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-skillz"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-skillz"
+  },
+  {
+    "name": "gcloud",
+    "displayName": "Gcloud",
+    "description": "Gemini CLI extension: gcloud",
+    "repository": "https://github.com/gemini-cli-extensions/gcloud",
+    "author": "gemini-cli-extensions",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "gcloud"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gcloud"
+  },
+  {
+    "name": "ipsw-skill",
+    "displayName": "Ipsw Skill",
+    "description": "Gemini CLI extension: ipsw-skill",
+    "repository": "https://github.com/blacktop/ipsw-skill",
+    "author": "blacktop",
+    "category": "community",
+    "tags": [
+      "community",
+      "ipsw-skill"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=ipsw-skill"
+  },
+  {
+    "name": "outline-driven-development",
+    "displayName": "Outline Driven Development",
+    "description": "Gemini CLI extension: outline-driven-development",
+    "repository": "https://github.com/OutlineDriven/outline-driven-development",
+    "author": "OutlineDriven",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "outline-driven-development"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=outline-driven-development"
+  },
+  {
+    "name": "Spec-Flow",
+    "displayName": "Spec Flow",
+    "description": "Gemini CLI extension: Spec-Flow",
+    "repository": "https://github.com/marcusgoll/Spec-Flow",
+    "author": "marcusgoll",
+    "category": "community",
+    "tags": [
+      "community",
+      "Spec-Flow"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Spec-Flow"
+  },
+  {
+    "name": "bitrise-mcp",
+    "displayName": "Bitrise Mcp",
+    "description": "Gemini CLI extension: bitrise-mcp",
+    "repository": "https://github.com/bitrise-io/bitrise-mcp",
+    "author": "bitrise-io",
+    "category": "community",
+    "tags": [
+      "community",
+      "bitrise-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=bitrise-mcp"
+  },
+  {
+    "name": "cloud-sql-postgresql",
+    "displayName": "Cloud Sql Postgresql",
+    "description": "Gemini CLI extension: cloud-sql-postgresql",
+    "repository": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "cloud-sql-postgresql"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-postgresql"
+  },
+  {
+    "name": "looker",
+    "displayName": "Looker",
+    "description": "Gemini CLI extension: looker",
+    "repository": "https://github.com/gemini-cli-extensions/looker",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "looker"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=looker"
+  },
+  {
+    "name": "mcp-server",
+    "displayName": "Mcp Server",
+    "description": "Gemini CLI extension: mcp-server",
+    "repository": "https://github.com/thoughtspot/mcp-server",
+    "author": "thoughtspot",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server"
+  },
+  {
+    "name": "google-ads-api-developer-assistant",
+    "displayName": "Google Ads Api Developer Assistant",
+    "description": "Gemini CLI extension: google-ads-api-developer-assistant",
+    "repository": "https://github.com/googleads/google-ads-api-developer-assistant",
+    "author": "googleads",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "google-ads-api-developer-assistant"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=google-ads-api-developer-assistant"
+  },
+  {
+    "name": "bigquery-data-analytics",
+    "displayName": "Bigquery Data Analytics",
+    "description": "Gemini CLI extension: bigquery-data-analytics",
+    "repository": "https://github.com/gemini-cli-extensions/bigquery-data-analytics",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "bigquery-data-analytics"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=bigquery-data-analytics"
+  },
+  {
+    "name": "datacommons",
+    "displayName": "Datacommons",
+    "description": "Gemini CLI extension: datacommons",
+    "repository": "https://github.com/gemini-cli-extensions/datacommons",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "datacommons"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=datacommons"
+  },
+  {
+    "name": "vault-mcp-server",
+    "displayName": "Vault Mcp Server",
+    "description": "Gemini CLI extension: vault-mcp-server",
+    "repository": "https://github.com/hashicorp/vault-mcp-server",
+    "author": "hashicorp",
+    "category": "security",
+    "tags": [
+      "security",
+      "vault-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=vault-mcp-server"
+  },
+  {
+    "name": "GeminiCLI_File_Search_Extension",
+    "displayName": "Geminicli_File_Search_Extension",
+    "description": "Gemini CLI extension: GeminiCLI_File_Search_Extension",
+    "repository": "https://github.com/automateyournetwork/GeminiCLI_File_Search_Extension",
+    "author": "automateyournetwork",
+    "category": "community",
+    "tags": [
+      "community",
+      "GeminiCLI_File_Search_Extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_File_Search_Extension"
+  },
+  {
+    "name": "observability",
+    "displayName": "Observability",
+    "description": "Gemini CLI extension: observability",
+    "repository": "https://github.com/gemini-cli-extensions/observability",
+    "author": "gemini-cli-extensions",
+    "category": "observability",
+    "tags": [
+      "observability",
+      "observability"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=observability"
+  },
+  {
+    "name": "mcp-server",
+    "displayName": "Mcp Server",
+    "description": "Gemini CLI extension: mcp-server",
+    "repository": "https://github.com/harness/mcp-server",
+    "author": "harness",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server"
+  },
+  {
+    "name": "firestore-native",
+    "displayName": "Firestore Native",
+    "description": "Gemini CLI extension: firestore-native",
+    "repository": "https://github.com/gemini-cli-extensions/firestore-native",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "firestore-native"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=firestore-native"
+  },
+  {
+    "name": "mysql",
+    "displayName": "Mysql",
+    "description": "Gemini CLI extension: mysql",
+    "repository": "https://github.com/gemini-cli-extensions/mysql",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "mysql"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mysql"
+  },
+  {
+    "name": "dev-mcp-gemini-cli",
+    "displayName": "Dev Mcp Gemini Cli",
+    "description": "Gemini CLI extension: dev-mcp-gemini-cli",
+    "repository": "https://github.com/Shopify/dev-mcp-gemini-cli",
+    "author": "Shopify",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "dev-mcp-gemini-cli"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=dev-mcp-gemini-cli"
+  },
+  {
+    "name": "gemini-cli-prompt-library",
+    "displayName": "Gemini Cli Prompt Library",
+    "description": "Gemini CLI extension: gemini-cli-prompt-library",
+    "repository": "https://github.com/involvex/gemini-cli-prompt-library",
+    "author": "involvex",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-prompt-library"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-prompt-library"
+  },
+  {
+    "name": "sql-server",
+    "displayName": "Sql Server",
+    "description": "Gemini CLI extension: sql-server",
+    "repository": "https://github.com/gemini-cli-extensions/sql-server",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "sql-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=sql-server"
+  },
+  {
+    "name": "stitch",
+    "displayName": "Stitch",
+    "description": "Gemini CLI extension: stitch",
+    "repository": "https://github.com/gemini-cli-extensions/stitch",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "stitch"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=stitch"
+  },
+  {
+    "name": "Chrome-DevTools-MCP",
+    "displayName": "Chrome Devtools Mcp",
+    "description": "Gemini CLI extension: Chrome-DevTools-MCP",
+    "repository": "https://github.com/diegorafs/Chrome-DevTools-MCP",
+    "author": "diegorafs",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "Chrome-DevTools-MCP"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Chrome-DevTools-MCP"
+  },
+  {
+    "name": "gemini-plan-commands",
+    "displayName": "Gemini Plan Commands",
+    "description": "Gemini CLI extension: gemini-plan-commands",
+    "repository": "https://github.com/ddobrin/gemini-plan-commands",
+    "author": "ddobrin",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-plan-commands"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-plan-commands"
+  },
+  {
+    "name": "ToolsForMCPServer-extension",
+    "displayName": "Toolsformcpserver Extension",
+    "description": "Gemini CLI extension: ToolsForMCPServer-extension",
+    "repository": "https://github.com/tanaikech/ToolsForMCPServer-extension",
+    "author": "tanaikech",
+    "category": "community",
+    "tags": [
+      "community",
+      "ToolsForMCPServer-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=ToolsForMCPServer-extension"
+  },
+  {
+    "name": "ScreenshotExtension",
+    "displayName": "Screenshotextension",
+    "description": "Gemini CLI extension: ScreenshotExtension",
+    "repository": "https://github.com/LyalinDotCom/ScreenshotExtension",
+    "author": "LyalinDotCom",
+    "category": "community",
+    "tags": [
+      "community",
+      "ScreenshotExtension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=ScreenshotExtension"
+  },
+  {
+    "name": "gemini-cli-custom-commands",
+    "displayName": "Gemini Cli Custom Commands",
+    "description": "Gemini CLI extension: gemini-cli-custom-commands",
+    "repository": "https://github.com/palladius/gemini-cli-custom-commands",
+    "author": "palladius",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-custom-commands"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-custom-commands"
+  },
+  {
+    "name": "db-context-enrichment",
+    "displayName": "Db Context Enrichment",
+    "description": "Gemini CLI extension: db-context-enrichment",
+    "repository": "https://github.com/GoogleCloudPlatform/db-context-enrichment",
+    "author": "GoogleCloudPlatform",
+    "category": "database",
+    "tags": [
+      "database",
+      "db-context-enrichment"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=db-context-enrichment"
+  },
+  {
+    "name": "alloydb",
+    "displayName": "Alloydb",
+    "description": "Gemini CLI extension: alloydb",
+    "repository": "https://github.com/gemini-cli-extensions/alloydb",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "alloydb"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=alloydb"
+  },
+  {
+    "name": "bigquery-conversational-analytics",
+    "displayName": "Bigquery Conversational Analytics",
+    "description": "Gemini CLI extension: bigquery-conversational-analytics",
+    "repository": "https://github.com/gemini-cli-extensions/bigquery-conversational-analytics",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "bigquery-conversational-analytics"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=bigquery-conversational-analytics"
+  },
+  {
+    "name": "adk-docs-ext",
+    "displayName": "Adk Docs Ext",
+    "description": "Gemini CLI extension: adk-docs-ext",
+    "repository": "https://github.com/derailed-dash/adk-docs-ext",
+    "author": "derailed-dash",
+    "category": "community",
+    "tags": [
+      "community",
+      "adk-docs-ext"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=adk-docs-ext"
+  },
+  {
+    "name": "wandb-mcp-server",
+    "displayName": "Wandb Mcp Server",
+    "description": "Gemini CLI extension: wandb-mcp-server",
+    "repository": "https://github.com/wandb/wandb-mcp-server",
+    "author": "wandb",
+    "category": "database",
+    "tags": [
+      "database",
+      "wandb-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=wandb-mcp-server"
+  },
+  {
+    "name": "GeminiCLI_Packet_Buddy_Extension",
+    "displayName": "Geminicli_Packet_Buddy_Extension",
+    "description": "Gemini CLI extension: GeminiCLI_Packet_Buddy_Extension",
+    "repository": "https://github.com/automateyournetwork/GeminiCLI_Packet_Buddy_Extension",
+    "author": "automateyournetwork",
+    "category": "community",
+    "tags": [
+      "community",
+      "GeminiCLI_Packet_Buddy_Extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_Packet_Buddy_Extension"
+  },
+  {
+    "name": "gemini-agent-creator",
+    "displayName": "Gemini Agent Creator",
+    "description": "Gemini CLI extension: gemini-agent-creator",
+    "repository": "https://github.com/jduncan-rva/gemini-agent-creator",
+    "author": "jduncan-rva",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-agent-creator"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-agent-creator"
+  },
+  {
+    "name": "canva-gemini-extension",
+    "displayName": "Canva Gemini Extension",
+    "description": "Gemini CLI extension: canva-gemini-extension",
+    "repository": "https://github.com/canva-sdks/canva-gemini-extension",
+    "author": "canva-sdks",
+    "category": "community",
+    "tags": [
+      "community",
+      "canva-gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=canva-gemini-extension"
+  },
+  {
+    "name": "study-ai",
+    "displayName": "Study Ai",
+    "description": "Gemini CLI extension: study-ai",
+    "repository": "https://github.com/planetis-m/study-ai",
+    "author": "planetis-m",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "study-ai"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=study-ai"
+  },
+  {
+    "name": "GeminiAutoPM",
+    "displayName": "Geminiautopm",
+    "description": "Gemini CLI extension: GeminiAutoPM",
+    "repository": "https://github.com/rafeekpro/GeminiAutoPM",
+    "author": "rafeekpro",
+    "category": "community",
+    "tags": [
+      "community",
+      "GeminiAutoPM"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiAutoPM"
+  },
+  {
+    "name": "gemini-cli-deep-research",
+    "displayName": "Gemini Cli Deep Research",
+    "description": "Gemini CLI extension: gemini-cli-deep-research",
+    "repository": "https://github.com/allenhutchison/gemini-cli-deep-research",
+    "author": "allenhutchison",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-deep-research"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-deep-research"
+  },
+  {
+    "name": "cli",
+    "displayName": "Cli",
+    "description": "Gemini CLI extension: cli",
+    "repository": "https://github.com/suprsend/cli",
+    "author": "suprsend",
+    "category": "community",
+    "tags": [
+      "community",
+      "cli"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cli"
+  },
+  {
+    "name": "spanner",
+    "displayName": "Spanner",
+    "description": "Gemini CLI extension: spanner",
+    "repository": "https://github.com/gemini-cli-extensions/spanner",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "spanner"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=spanner"
+  },
+  {
+    "name": "chime",
+    "displayName": "Chime",
+    "description": "Gemini CLI extension: chime",
+    "repository": "https://github.com/rebekahx23/chime",
+    "author": "rebekahx23",
+    "category": "community",
+    "tags": [
+      "community",
+      "chime"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=chime"
+  },
+  {
+    "name": "Conductor-Beads",
+    "displayName": "Conductor Beads",
+    "description": "Gemini CLI extension: Conductor-Beads",
+    "repository": "https://github.com/NguyenSiTrung/Conductor-Beads",
+    "author": "NguyenSiTrung",
+    "category": "community",
+    "tags": [
+      "community",
+      "Conductor-Beads"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Conductor-Beads"
+  },
+  {
+    "name": "gemini-kit",
+    "displayName": "Gemini Kit",
+    "description": "Gemini CLI extension: gemini-kit",
+    "repository": "https://github.com/nth5693/gemini-kit",
+    "author": "nth5693",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-kit"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-kit"
+  },
+  {
+    "name": "gemini-system-agents",
+    "displayName": "Gemini System Agents",
+    "description": "Gemini CLI extension: gemini-system-agents",
+    "repository": "https://github.com/jduncan-rva/gemini-system-agents",
+    "author": "jduncan-rva",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-system-agents"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-system-agents"
+  },
+  {
+    "name": "GeminiCLI_ScreenShare_Extension",
+    "displayName": "Geminicli_Screenshare_Extension",
+    "description": "Gemini CLI extension: GeminiCLI_ScreenShare_Extension",
+    "repository": "https://github.com/automateyournetwork/GeminiCLI_ScreenShare_Extension",
+    "author": "automateyournetwork",
+    "category": "community",
+    "tags": [
+      "community",
+      "GeminiCLI_ScreenShare_Extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_ScreenShare_Extension"
+  },
+  {
+    "name": "napalm-geminicli-extension",
+    "displayName": "Napalm Geminicli Extension",
+    "description": "Gemini CLI extension: napalm-geminicli-extension",
+    "repository": "https://github.com/stiltzkin10/napalm-geminicli-extension",
+    "author": "stiltzkin10",
+    "category": "community",
+    "tags": [
+      "community",
+      "napalm-geminicli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=napalm-geminicli-extension"
+  },
+  {
+    "name": "gemini-cli-git",
+    "displayName": "Gemini Cli Git",
+    "description": "Gemini CLI extension: gemini-cli-git",
+    "repository": "https://github.com/ox01024/gemini-cli-git",
+    "author": "ox01024",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "gemini-cli-git"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-git"
+  },
+  {
+    "name": "Gemini-CLI-Extensions",
+    "displayName": "Gemini Cli Extensions",
+    "description": "Gemini CLI extension: Gemini-CLI-Extensions",
+    "repository": "https://github.com/GitLab-Ecosystem/Gemini-CLI-Extensions",
+    "author": "GitLab-Ecosystem",
+    "category": "community",
+    "tags": [
+      "community",
+      "Gemini-CLI-Extensions"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Gemini-CLI-Extensions"
+  },
+  {
+    "name": "pyATS_GeminiCLI_Extension",
+    "displayName": "Pyats_Geminicli_Extension",
+    "description": "Gemini CLI extension: pyATS_GeminiCLI_Extension",
+    "repository": "https://github.com/automateyournetwork/pyATS_GeminiCLI_Extension",
+    "author": "automateyournetwork",
+    "category": "community",
+    "tags": [
+      "community",
+      "pyATS_GeminiCLI_Extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=pyATS_GeminiCLI_Extension"
+  },
+  {
+    "name": "mcp-game-asset-gen",
+    "displayName": "Mcp Game Asset Gen",
+    "description": "Gemini CLI extension: mcp-game-asset-gen",
+    "repository": "https://github.com/Flux159/mcp-game-asset-gen",
+    "author": "Flux159",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-game-asset-gen"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-game-asset-gen"
+  },
+  {
+    "name": "uv-mcp",
+    "displayName": "Uv Mcp",
+    "description": "Gemini CLI extension: uv-mcp",
+    "repository": "https://github.com/saadmanrafat/uv-mcp",
+    "author": "saadmanrafat",
+    "category": "community",
+    "tags": [
+      "community",
+      "uv-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=uv-mcp"
+  },
+  {
+    "name": "gemini-cli-gopls",
+    "displayName": "Gemini Cli Gopls",
+    "description": "Gemini CLI extension: gemini-cli-gopls",
+    "repository": "https://github.com/Menghuan1918/gemini-cli-gopls",
+    "author": "Menghuan1918",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-gopls"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-gopls"
+  },
+  {
+    "name": "archon-gemini-cli-extension",
+    "displayName": "Archon Gemini Cli Extension",
+    "description": "Gemini CLI extension: archon-gemini-cli-extension",
+    "repository": "https://github.com/cwest/archon-gemini-cli-extension",
+    "author": "cwest",
+    "category": "community",
+    "tags": [
+      "community",
+      "archon-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=archon-gemini-cli-extension"
+  },
+  {
+    "name": "joplin-mcp",
+    "displayName": "Joplin Mcp",
+    "description": "Gemini CLI extension: joplin-mcp",
+    "repository": "https://github.com/belsar-ai/joplin-mcp",
+    "author": "belsar-ai",
+    "category": "community",
+    "tags": [
+      "community",
+      "joplin-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=joplin-mcp"
+  },
+  {
+    "name": "chronosphere-mcp",
+    "displayName": "Chronosphere Mcp",
+    "description": "Gemini CLI extension: chronosphere-mcp",
+    "repository": "https://github.com/chronosphereio/chronosphere-mcp",
+    "author": "chronosphereio",
+    "category": "community",
+    "tags": [
+      "community",
+      "chronosphere-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=chronosphere-mcp"
+  },
+  {
+    "name": "gemini-for-kubernetes-development",
+    "displayName": "Gemini For Kubernetes Development",
+    "description": "Gemini CLI extension: gemini-for-kubernetes-development",
+    "repository": "https://github.com/gke-labs/gemini-for-kubernetes-development",
+    "author": "gke-labs",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "gemini-for-kubernetes-development"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-for-kubernetes-development"
+  },
+  {
+    "name": "agentic-integration-wrappers",
+    "displayName": "Agentic Integration Wrappers",
+    "description": "Gemini CLI extension: agentic-integration-wrappers",
+    "repository": "https://github.com/snyk/agentic-integration-wrappers",
+    "author": "snyk",
+    "category": "community",
+    "tags": [
+      "community",
+      "agentic-integration-wrappers"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=agentic-integration-wrappers"
+  },
+  {
+    "name": "cloud-sql-mysql",
+    "displayName": "Cloud Sql Mysql",
+    "description": "Gemini CLI extension: cloud-sql-mysql",
+    "repository": "https://github.com/gemini-cli-extensions/cloud-sql-mysql",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "cloud-sql-mysql"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-mysql"
+  },
+  {
+    "name": "vertex",
+    "displayName": "Vertex",
+    "description": "Gemini CLI extension: vertex",
+    "repository": "https://github.com/gemini-cli-extensions/vertex",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "vertex"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=vertex"
+  },
+  {
+    "name": "angular",
+    "displayName": "Angular",
+    "description": "Gemini CLI extension: angular",
+    "repository": "https://github.com/gemini-cli-extensions/angular",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "angular"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=angular"
+  },
+  {
+    "name": "clix-dev-flow",
+    "displayName": "Clix Dev Flow",
+    "description": "Gemini CLI extension: clix-dev-flow",
+    "repository": "https://github.com/shrwnsan/clix-dev-flow",
+    "author": "shrwnsan",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "clix-dev-flow"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=clix-dev-flow"
+  },
+  {
+    "name": "postman-gemini-cli-extension",
+    "displayName": "Postman Gemini Cli Extension",
+    "description": "Gemini CLI extension: postman-gemini-cli-extension",
+    "repository": "https://github.com/postmanlabs/postman-gemini-cli-extension",
+    "author": "postmanlabs",
+    "category": "community",
+    "tags": [
+      "community",
+      "postman-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=postman-gemini-cli-extension"
+  },
+  {
+    "name": "gemini-mentor",
+    "displayName": "Gemini Mentor",
+    "description": "Gemini CLI extension: gemini-mentor",
+    "repository": "https://github.com/JayadityaGit/gemini-mentor",
+    "author": "JayadityaGit",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-mentor"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-mentor"
+  },
+  {
+    "name": "geminicli-git-tools-extension",
+    "displayName": "Geminicli Git Tools Extension",
+    "description": "Gemini CLI extension: geminicli-git-tools-extension",
+    "repository": "https://github.com/paufortiana/geminicli-git-tools-extension",
+    "author": "paufortiana",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "geminicli-git-tools-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=geminicli-git-tools-extension"
+  },
+  {
+    "name": "gas-fakes-ext",
+    "displayName": "Gas Fakes Ext",
+    "description": "Gemini CLI extension: gas-fakes-ext",
+    "repository": "https://github.com/mhawksey/gas-fakes-ext",
+    "author": "mhawksey",
+    "category": "community",
+    "tags": [
+      "community",
+      "gas-fakes-ext"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gas-fakes-ext"
+  },
+  {
+    "name": "FileSearchStore-extension",
+    "displayName": "Filesearchstore Extension",
+    "description": "Gemini CLI extension: FileSearchStore-extension",
+    "repository": "https://github.com/tanaikech/FileSearchStore-extension",
+    "author": "tanaikech",
+    "category": "community",
+    "tags": [
+      "community",
+      "FileSearchStore-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=FileSearchStore-extension"
+  },
+  {
+    "name": "gemini-cli-telegram-extension",
+    "displayName": "Gemini Cli Telegram Extension",
+    "description": "Gemini CLI extension: gemini-cli-telegram-extension",
+    "repository": "https://github.com/VSKurkin/gemini-cli-telegram-extension",
+    "author": "VSKurkin",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-telegram-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-telegram-extension"
+  },
+  {
+    "name": "extension-browser",
+    "displayName": "Extension Browser",
+    "description": "Gemini CLI extension: extension-browser",
+    "repository": "https://github.com/swissspidy/extension-browser",
+    "author": "swissspidy",
+    "category": "community",
+    "tags": [
+      "community",
+      "extension-browser"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=extension-browser"
+  },
+  {
+    "name": "rill-gemini-extension",
+    "displayName": "Rill Gemini Extension",
+    "description": "Gemini CLI extension: rill-gemini-extension",
+    "repository": "https://github.com/rilldata/rill-gemini-extension",
+    "author": "rilldata",
+    "category": "community",
+    "tags": [
+      "community",
+      "rill-gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=rill-gemini-extension"
+  },
+  {
+    "name": "Gemini_cli_notion_extention",
+    "displayName": "Gemini_Cli_Notion_Extention",
+    "description": "Gemini CLI extension: Gemini_cli_notion_extention",
+    "repository": "https://github.com/gitremko/Gemini_cli_notion_extention",
+    "author": "gitremko",
+    "category": "community",
+    "tags": [
+      "community",
+      "Gemini_cli_notion_extention"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Gemini_cli_notion_extention"
+  },
+  {
+    "name": "wix-mcp",
+    "displayName": "Wix Mcp",
+    "description": "Gemini CLI extension: wix-mcp",
+    "repository": "https://github.com/wix/wix-mcp",
+    "author": "wix",
+    "category": "community",
+    "tags": [
+      "community",
+      "wix-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=wix-mcp"
+  },
+  {
+    "name": "gemini-cli-blender-extension",
+    "displayName": "Gemini Cli Blender Extension",
+    "description": "Gemini CLI extension: gemini-cli-blender-extension",
+    "repository": "https://github.com/xprilion/gemini-cli-blender-extension",
+    "author": "xprilion",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-blender-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-blender-extension"
+  },
+  {
+    "name": "github-issue-agent",
+    "displayName": "Github Issue Agent",
+    "description": "Gemini CLI extension: github-issue-agent",
+    "repository": "https://github.com/enola-dev/github-issue-agent",
+    "author": "enola-dev",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "github-issue-agent"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=github-issue-agent"
+  },
+  {
+    "name": "cloud-sql-sqlserver",
+    "displayName": "Cloud Sql Sqlserver",
+    "description": "Gemini CLI extension: cloud-sql-sqlserver",
+    "repository": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "cloud-sql-sqlserver"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-sqlserver"
+  },
+  {
+    "name": "dataplex",
+    "displayName": "Dataplex",
+    "description": "Gemini CLI extension: dataplex",
+    "repository": "https://github.com/gemini-cli-extensions/dataplex",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "dataplex"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=dataplex"
+  },
+  {
+    "name": "cloud-sql-postgresql-observability",
+    "displayName": "Cloud Sql Postgresql Observability",
+    "description": "Gemini CLI extension: cloud-sql-postgresql-observability",
+    "repository": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql-observability",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "cloud-sql-postgresql-observability"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-postgresql-observability"
+  },
+  {
+    "name": "alloydb-observability",
+    "displayName": "Alloydb Observability",
+    "description": "Gemini CLI extension: alloydb-observability",
+    "repository": "https://github.com/gemini-cli-extensions/alloydb-observability",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "alloydb-observability"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=alloydb-observability"
+  },
+  {
+    "name": "looker-conversational-analytics",
+    "displayName": "Looker Conversational Analytics",
+    "description": "Gemini CLI extension: looker-conversational-analytics",
+    "repository": "https://github.com/gemini-cli-extensions/looker-conversational-analytics",
+    "author": "gemini-cli-extensions",
+    "category": "community",
+    "tags": [
+      "community",
+      "looker-conversational-analytics"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=looker-conversational-analytics"
+  },
+  {
+    "name": "choicely-gemini-cli-extension",
+    "displayName": "Choicely Gemini Cli Extension",
+    "description": "Gemini CLI extension: choicely-gemini-cli-extension",
+    "repository": "https://github.com/choicely/choicely-gemini-cli-extension",
+    "author": "choicely",
+    "category": "community",
+    "tags": [
+      "community",
+      "choicely-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=choicely-gemini-cli-extension"
+  },
+  {
+    "name": "mcp",
+    "displayName": "Mcp",
+    "description": "Gemini CLI extension: mcp",
+    "repository": "https://github.com/visa/mcp",
+    "author": "visa",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp"
+  },
+  {
+    "name": "file-search",
+    "displayName": "File Search",
+    "description": "Gemini CLI extension: file-search",
+    "repository": "https://github.com/mikesmitty/file-search",
+    "author": "mikesmitty",
+    "category": "community",
+    "tags": [
+      "community",
+      "file-search"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=file-search"
+  },
+  {
+    "name": "plan-commands",
+    "displayName": "Plan Commands",
+    "description": "Gemini CLI extension: plan-commands",
+    "repository": "https://github.com/jjdelorme/plan-commands",
+    "author": "jjdelorme",
+    "category": "community",
+    "tags": [
+      "community",
+      "plan-commands"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=plan-commands"
+  },
+  {
+    "name": "gemini-writer-extension",
+    "displayName": "Gemini Writer Extension",
+    "description": "Gemini CLI extension: gemini-writer-extension",
+    "repository": "https://github.com/prefrontalsys/gemini-writer-extension",
+    "author": "prefrontalsys",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-writer-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-writer-extension"
+  },
+  {
+    "name": "mongodb-gemini-extension",
+    "displayName": "Mongodb Gemini Extension",
+    "description": "Gemini CLI extension: mongodb-gemini-extension",
+    "repository": "https://github.com/mongodb-partners/mongodb-gemini-extension",
+    "author": "mongodb-partners",
+    "category": "database",
+    "tags": [
+      "database",
+      "mongodb-gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mongodb-gemini-extension"
+  },
+  {
+    "name": "youtube-to-docs",
+    "displayName": "Youtube To Docs",
+    "description": "Gemini CLI extension: youtube-to-docs",
+    "repository": "https://github.com/DoIT-Artificial-Intelligence/youtube-to-docs",
+    "author": "DoIT-Artificial-Intelligence",
+    "category": "community",
+    "tags": [
+      "community",
+      "youtube-to-docs"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=youtube-to-docs"
+  },
+  {
+    "name": "cloud-sql-mysql-observability",
+    "displayName": "Cloud Sql Mysql Observability",
+    "description": "Gemini CLI extension: cloud-sql-mysql-observability",
+    "repository": "https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "cloud-sql-mysql-observability"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-mysql-observability"
+  },
+  {
+    "name": "cloud-sql-sqlserver-observability",
+    "displayName": "Cloud Sql Sqlserver Observability",
+    "description": "Gemini CLI extension: cloud-sql-sqlserver-observability",
+    "repository": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability",
+    "author": "gemini-cli-extensions",
+    "category": "database",
+    "tags": [
+      "database",
+      "cloud-sql-sqlserver-observability"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-sqlserver-observability"
+  },
+  {
+    "name": "run-long-command",
+    "displayName": "Run Long Command",
+    "description": "Gemini CLI extension: run-long-command",
+    "repository": "https://github.com/stevenAthompson/run-long-command",
+    "author": "stevenAthompson",
+    "category": "community",
+    "tags": [
+      "community",
+      "run-long-command"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=run-long-command"
+  },
+  {
+    "name": "odin-gemini-cli-extension",
+    "displayName": "Odin Gemini Cli Extension",
+    "description": "Gemini CLI extension: odin-gemini-cli-extension",
+    "repository": "https://github.com/OutlineDriven/odin-gemini-cli-extension",
+    "author": "OutlineDriven",
+    "category": "community",
+    "tags": [
+      "community",
+      "odin-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=odin-gemini-cli-extension"
+  },
+  {
+    "name": "self-command",
+    "displayName": "Self Command",
+    "description": "Gemini CLI extension: self-command",
+    "repository": "https://github.com/stevenAthompson/self-command",
+    "author": "stevenAthompson",
+    "category": "community",
+    "tags": [
+      "community",
+      "self-command"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=self-command"
+  },
+  {
+    "name": "gemini_cli_extention_wordpress",
+    "displayName": "Gemini_Cli_Extention_Wordpress",
+    "description": "Gemini CLI extension: gemini_cli_extention_wordpress",
+    "repository": "https://github.com/webmasterarbez/gemini_cli_extention_wordpress",
+    "author": "webmasterarbez",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini_cli_extention_wordpress"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini_cli_extention_wordpress"
+  },
+  {
+    "name": "conductor2",
+    "displayName": "Conductor2",
+    "description": "Gemini CLI extension: conductor2",
+    "repository": "https://github.com/jnorthrup/conductor2",
+    "author": "jnorthrup",
+    "category": "community",
+    "tags": [
+      "community",
+      "conductor2"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=conductor2"
+  },
+  {
+    "name": "chrome-devtools-mcp",
+    "displayName": "Chrome Devtools Mcp",
+    "description": "Gemini CLI extension: chrome-devtools-mcp",
+    "repository": "https://github.com/ctrlShiftBryan/chrome-devtools-mcp",
+    "author": "ctrlShiftBryan",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "chrome-devtools-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=chrome-devtools-mcp"
+  },
+  {
+    "name": "gemini-cli-extension",
+    "displayName": "Gemini Cli Extension",
+    "description": "Gemini CLI extension: gemini-cli-extension",
+    "repository": "https://github.com/sethladd/gemini-cli-extension",
+    "author": "sethladd",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-extension"
+  },
+  {
+    "name": "prprompts-flutter-generator",
+    "displayName": "Prprompts Flutter Generator",
+    "description": "Gemini CLI extension: prprompts-flutter-generator",
+    "repository": "https://github.com/Kandil7/prprompts-flutter-generator",
+    "author": "Kandil7",
+    "category": "community",
+    "tags": [
+      "community",
+      "prprompts-flutter-generator"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=prprompts-flutter-generator"
+  },
+  {
+    "name": "gemini-cli-wakatime",
+    "displayName": "Gemini Cli Wakatime",
+    "description": "Gemini CLI extension: gemini-cli-wakatime",
+    "repository": "https://github.com/EstebanForge/gemini-cli-wakatime",
+    "author": "EstebanForge",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-wakatime"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-wakatime"
+  },
+  {
+    "name": "scribe",
+    "displayName": "Scribe",
+    "description": "Gemini CLI extension: scribe",
+    "repository": "https://github.com/sapientcoffee/scribe",
+    "author": "sapientcoffee",
+    "category": "community",
+    "tags": [
+      "community",
+      "scribe"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=scribe"
+  },
+  {
+    "name": "gemini-cli-ssh-extension",
+    "displayName": "Gemini Cli Ssh Extension",
+    "description": "Gemini CLI extension: gemini-cli-ssh-extension",
+    "repository": "https://github.com/involvex/gemini-cli-ssh-extension",
+    "author": "involvex",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-ssh-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-ssh-extension"
+  },
+  {
+    "name": "gemini-todoist-extension",
+    "displayName": "Gemini Todoist Extension",
+    "description": "Gemini CLI extension: gemini-todoist-extension",
+    "repository": "https://github.com/PatelPratikkumar/gemini-todoist-extension",
+    "author": "PatelPratikkumar",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-todoist-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-todoist-extension"
+  },
+  {
+    "name": "gemini-history-learning",
+    "displayName": "Gemini History Learning",
+    "description": "Gemini CLI extension: gemini-history-learning",
+    "repository": "https://github.com/jduncan-rva/gemini-history-learning",
+    "author": "jduncan-rva",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-history-learning"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-history-learning"
+  },
+  {
+    "name": "gemini-cli-extension-gyaru",
+    "displayName": "Gemini Cli Extension Gyaru",
+    "description": "Gemini CLI extension: gemini-cli-extension-gyaru",
+    "repository": "https://github.com/yuys13/gemini-cli-extension-gyaru",
+    "author": "yuys13",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-extension-gyaru"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-extension-gyaru"
+  },
+  {
+    "name": "ResxMcp",
+    "displayName": "Resxmcp",
+    "description": "Gemini CLI extension: ResxMcp",
+    "repository": "https://github.com/miaofalianhua/ResxMcp",
+    "author": "miaofalianhua",
+    "category": "community",
+    "tags": [
+      "community",
+      "ResxMcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=ResxMcp"
+  },
+  {
+    "name": "geminicli-gitcommit",
+    "displayName": "Geminicli Gitcommit",
+    "description": "Gemini CLI extension: geminicli-gitcommit",
+    "repository": "https://github.com/samucodesh/geminicli-gitcommit",
+    "author": "samucodesh",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "geminicli-gitcommit"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=geminicli-gitcommit"
+  },
+  {
+    "name": "sumcontext_Gemini_CLI_Extension",
+    "displayName": "Sumcontext_Gemini_Cli_Extension",
+    "description": "Gemini CLI extension: sumcontext_Gemini_CLI_Extension",
+    "repository": "https://github.com/wenrolland/sumcontext_Gemini_CLI_Extension",
+    "author": "wenrolland",
+    "category": "community",
+    "tags": [
+      "community",
+      "sumcontext_Gemini_CLI_Extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=sumcontext_Gemini_CLI_Extension"
+  },
+  {
+    "name": "gemini-cli-qwen",
+    "displayName": "Gemini Cli Qwen",
+    "description": "Gemini CLI extension: gemini-cli-qwen",
+    "repository": "https://github.com/jonathanh1/gemini-cli-qwen",
+    "author": "jonathanh1",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-qwen"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-qwen"
+  },
+  {
+    "name": "dev-gas-extension",
+    "displayName": "Dev Gas Extension",
+    "description": "Gemini CLI extension: dev-gas-extension",
+    "repository": "https://github.com/tanaikech/dev-gas-extension",
+    "author": "tanaikech",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "dev-gas-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=dev-gas-extension"
+  },
+  {
+    "name": "gas-development-kit-extension",
+    "displayName": "Gas Development Kit Extension",
+    "description": "Gemini CLI extension: gas-development-kit-extension",
+    "repository": "https://github.com/tanaikech/gas-development-kit-extension",
+    "author": "tanaikech",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "gas-development-kit-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gas-development-kit-extension"
+  },
+  {
+    "name": "arize-tracing-assistant",
+    "displayName": "Arize Tracing Assistant",
+    "description": "Gemini CLI extension: arize-tracing-assistant",
+    "repository": "https://github.com/Arize-ai/arize-tracing-assistant",
+    "author": "Arize-ai",
+    "category": "community",
+    "tags": [
+      "community",
+      "arize-tracing-assistant"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=arize-tracing-assistant"
+  },
+  {
+    "name": "vikunjamcp",
+    "displayName": "Vikunjamcp",
+    "description": "Gemini CLI extension: vikunjamcp",
+    "repository": "https://github.com/idjohnson/vikunjamcp",
+    "author": "idjohnson",
+    "category": "community",
+    "tags": [
+      "community",
+      "vikunjamcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=vikunjamcp"
+  },
+  {
+    "name": "transmit-security-journey-builder",
+    "displayName": "Transmit Security Journey Builder",
+    "description": "Gemini CLI extension: transmit-security-journey-builder",
+    "repository": "https://github.com/TransmitSecurity/transmit-security-journey-builder",
+    "author": "TransmitSecurity",
+    "category": "security",
+    "tags": [
+      "security",
+      "transmit-security-journey-builder"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=transmit-security-journey-builder"
+  },
+  {
+    "name": "co-researcher",
+    "displayName": "Co Researcher",
+    "description": "Gemini CLI extension: co-researcher",
+    "repository": "https://github.com/poemswe/co-researcher",
+    "author": "poemswe",
+    "category": "community",
+    "tags": [
+      "community",
+      "co-researcher"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=co-researcher"
+  },
+  {
+    "name": "gemini-cli-artilect",
+    "displayName": "Gemini Cli Artilect",
+    "description": "Gemini CLI extension: gemini-cli-artilect",
+    "repository": "https://github.com/ToxicFartCloud/gemini-cli-artilect",
+    "author": "ToxicFartCloud",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-artilect"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-artilect"
+  },
+  {
+    "name": "gcp-release-notes",
+    "displayName": "Gcp Release Notes",
+    "description": "Gemini CLI extension: gcp-release-notes",
+    "repository": "https://github.com/danistrebel/gcp-release-notes",
+    "author": "danistrebel",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "gcp-release-notes"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gcp-release-notes"
+  },
+  {
+    "name": "gerrit-mcp-server",
+    "displayName": "Gerrit Mcp Server",
+    "description": "Gemini CLI extension: gerrit-mcp-server",
+    "repository": "https://github.com/GerritCodeReview/gerrit-mcp-server",
+    "author": "GerritCodeReview",
+    "category": "community",
+    "tags": [
+      "community",
+      "gerrit-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gerrit-mcp-server"
+  },
+  {
+    "name": "mcp-amr",
+    "displayName": "Mcp Amr",
+    "description": "Gemini CLI extension: mcp-amr",
+    "repository": "https://github.com/AzureManagedRedis/mcp-amr",
+    "author": "AzureManagedRedis",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-amr"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-amr"
+  },
+  {
+    "name": "mcp-shell-aliases",
+    "displayName": "Mcp Shell Aliases",
+    "description": "Gemini CLI extension: mcp-shell-aliases",
+    "repository": "https://github.com/hestonhamilton/mcp-shell-aliases",
+    "author": "hestonhamilton",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-shell-aliases"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-shell-aliases"
+  },
+  {
+    "name": "copilot-mcp-tool",
+    "displayName": "Copilot Mcp Tool",
+    "description": "Gemini CLI extension: copilot-mcp-tool",
+    "repository": "https://github.com/Aykahshi/copilot-mcp-tool",
+    "author": "Aykahshi",
+    "category": "community",
+    "tags": [
+      "community",
+      "copilot-mcp-tool"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=copilot-mcp-tool"
+  },
+  {
+    "name": "ResxMcp",
+    "displayName": "Resxmcp",
+    "description": "Gemini CLI extension: ResxMcp",
+    "repository": "https://github.com/ThongNehjhj/ResxMcp",
+    "author": "ThongNehjhj",
+    "category": "community",
+    "tags": [
+      "community",
+      "ResxMcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=ResxMcp"
+  },
+  {
+    "name": "gemini-extension-render-com-mcp",
+    "displayName": "Gemini Extension Render Com Mcp",
+    "description": "Gemini CLI extension: gemini-extension-render-com-mcp",
+    "repository": "https://github.com/involvex/gemini-extension-render-com-mcp",
+    "author": "involvex",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-extension-render-com-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-extension-render-com-mcp"
+  },
+  {
+    "name": "comment-driven-tests-extension",
+    "displayName": "Comment Driven Tests Extension",
+    "description": "Gemini CLI extension: comment-driven-tests-extension",
+    "repository": "https://github.com/weitzer-org/comment-driven-tests-extension",
+    "author": "weitzer-org",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "comment-driven-tests-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=comment-driven-tests-extension"
+  },
+  {
+    "name": "google-workspace-inbox",
+    "displayName": "Google Workspace Inbox",
+    "description": "Gemini CLI extension: google-workspace-inbox",
+    "repository": "https://github.com/jduncan-rva/google-workspace-inbox",
+    "author": "jduncan-rva",
+    "category": "community",
+    "tags": [
+      "community",
+      "google-workspace-inbox"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=google-workspace-inbox"
+  },
+  {
+    "name": "gemma3-mcp",
+    "displayName": "Gemma3 Mcp",
+    "description": "Gemini CLI extension: gemma3-mcp",
+    "repository": "https://github.com/maceip/gemma3-mcp",
+    "author": "maceip",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemma3-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemma3-mcp"
+  },
+  {
+    "name": "gemini-cli-babashka",
+    "displayName": "Gemini Cli Babashka",
+    "description": "Gemini CLI extension: gemini-cli-babashka",
+    "repository": "https://github.com/davidpham87/gemini-cli-babashka",
+    "author": "davidpham87",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-babashka"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-babashka"
+  },
+  {
+    "name": "anomalo-gemini-extension",
+    "displayName": "Anomalo Gemini Extension",
+    "description": "Gemini CLI extension: anomalo-gemini-extension",
+    "repository": "https://github.com/datagravity-ai/anomalo-gemini-extension",
+    "author": "datagravity-ai",
+    "category": "community",
+    "tags": [
+      "community",
+      "anomalo-gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=anomalo-gemini-extension"
+  },
+  {
+    "name": "mcp-repo-onboarding",
+    "displayName": "Mcp Repo Onboarding",
+    "description": "Gemini CLI extension: mcp-repo-onboarding",
+    "repository": "https://github.com/rogermt/mcp-repo-onboarding",
+    "author": "rogermt",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-repo-onboarding"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-repo-onboarding"
+  },
+  {
+    "name": "copilot-mcp-server",
+    "displayName": "Copilot Mcp Server",
+    "description": "Gemini CLI extension: copilot-mcp-server",
+    "repository": "https://github.com/wminson/copilot-mcp-server",
+    "author": "wminson",
+    "category": "community",
+    "tags": [
+      "community",
+      "copilot-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=copilot-mcp-server"
+  },
+  {
+    "name": "expert-typst",
+    "displayName": "Expert Typst",
+    "description": "Gemini CLI extension: expert-typst",
+    "repository": "https://github.com/kongdd/expert-typst",
+    "author": "kongdd",
+    "category": "community",
+    "tags": [
+      "community",
+      "expert-typst"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=expert-typst"
+  },
+  {
+    "name": "agent-kit-gemini",
+    "displayName": "Agent Kit Gemini",
+    "description": "Gemini CLI extension: agent-kit-gemini",
+    "repository": "https://github.com/blogic-cz/agent-kit-gemini",
+    "author": "blogic-cz",
+    "category": "community",
+    "tags": [
+      "community",
+      "agent-kit-gemini"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=agent-kit-gemini"
+  },
+  {
+    "name": "netbox-geminicli-extension",
+    "displayName": "Netbox Geminicli Extension",
+    "description": "Gemini CLI extension: netbox-geminicli-extension",
+    "repository": "https://github.com/stiltzkin10/netbox-geminicli-extension",
+    "author": "stiltzkin10",
+    "category": "community",
+    "tags": [
+      "community",
+      "netbox-geminicli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=netbox-geminicli-extension"
+  },
+  {
+    "name": "persona",
+    "displayName": "Persona",
+    "description": "Gemini CLI extension: persona",
+    "repository": "https://github.com/JasperHG90/persona",
+    "author": "JasperHG90",
+    "category": "community",
+    "tags": [
+      "community",
+      "persona"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=persona"
+  },
+  {
+    "name": "git-prompts-mcp-server",
+    "displayName": "Git Prompts Mcp Server",
+    "description": "Gemini CLI extension: git-prompts-mcp-server",
+    "repository": "https://github.com/ceshine/git-prompts-mcp-server",
+    "author": "ceshine",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "git-prompts-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=git-prompts-mcp-server"
+  },
+  {
+    "name": "intelappv4",
+    "displayName": "Intelappv4",
+    "description": "Gemini CLI extension: intelappv4",
+    "repository": "https://github.com/darrinmc1/intelappv4",
+    "author": "darrinmc1",
+    "category": "community",
+    "tags": [
+      "community",
+      "intelappv4"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=intelappv4"
+  },
+  {
+    "name": "mcp-neo4j",
+    "displayName": "Mcp Neo4J",
+    "description": "Gemini CLI extension: mcp-neo4j",
+    "repository": "https://github.com/aiminnovations/mcp-neo4j",
+    "author": "aiminnovations",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-neo4j"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-neo4j"
+  },
+  {
+    "name": "skill-porter",
+    "displayName": "Skill Porter",
+    "description": "Gemini CLI extension: skill-porter",
+    "repository": "https://github.com/AcidicSoil/skill-porter",
+    "author": "AcidicSoil",
+    "category": "community",
+    "tags": [
+      "community",
+      "skill-porter"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=skill-porter"
+  },
+  {
+    "name": "my-code-analyzer",
+    "displayName": "My Code Analyzer",
+    "description": "Gemini CLI extension: my-code-analyzer",
+    "repository": "https://github.com/jmpark333/my-code-analyzer",
+    "author": "jmpark333",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "my-code-analyzer"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=my-code-analyzer"
+  },
+  {
+    "name": "aoc-utils-mcp",
+    "displayName": "Aoc Utils Mcp",
+    "description": "Gemini CLI extension: aoc-utils-mcp",
+    "repository": "https://github.com/derailed-dash/aoc-utils-mcp",
+    "author": "derailed-dash",
+    "category": "community",
+    "tags": [
+      "community",
+      "aoc-utils-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=aoc-utils-mcp"
+  },
+  {
+    "name": "miro-ai",
+    "displayName": "Miro Ai",
+    "description": "Gemini CLI extension: miro-ai",
+    "repository": "https://github.com/miroapp/miro-ai",
+    "author": "miroapp",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "miro-ai"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=miro-ai"
+  },
+  {
+    "name": "ailang_bootstrap",
+    "displayName": "Ailang_Bootstrap",
+    "description": "Gemini CLI extension: ailang_bootstrap",
+    "repository": "https://github.com/sunholo-data/ailang_bootstrap",
+    "author": "sunholo-data",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "ailang_bootstrap"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=ailang_bootstrap"
+  },
+  {
+    "name": "dai-mcp",
+    "displayName": "Dai Mcp",
+    "description": "Gemini CLI extension: dai-mcp",
+    "repository": "https://github.com/patgpt/dai-mcp",
+    "author": "patgpt",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "dai-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=dai-mcp"
+  },
+  {
+    "name": "doc-indexer",
+    "displayName": "Doc Indexer",
+    "description": "Gemini CLI extension: doc-indexer",
+    "repository": "https://github.com/cloud-aspect/doc-indexer",
+    "author": "cloud-aspect",
+    "category": "community",
+    "tags": [
+      "community",
+      "doc-indexer"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=doc-indexer"
+  },
+  {
+    "name": "Liku-AI",
+    "displayName": "Liku Ai",
+    "description": "Gemini CLI extension: Liku-AI",
+    "repository": "https://github.com/TayDa64/Liku-AI",
+    "author": "TayDa64",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "Liku-AI"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Liku-AI"
+  },
+  {
+    "name": "genai-toolbox",
+    "displayName": "Genai Toolbox",
+    "description": "Gemini CLI extension: genai-toolbox",
+    "repository": "https://github.com/anhminhnguyen3110/genai-toolbox",
+    "author": "anhminhnguyen3110",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "genai-toolbox"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=genai-toolbox"
+  },
+  {
+    "name": "prompt-library-extension",
+    "displayName": "Prompt Library Extension",
+    "description": "Gemini CLI extension: prompt-library-extension",
+    "repository": "https://github.com/shotcowboystyle/prompt-library-extension",
+    "author": "shotcowboystyle",
+    "category": "community",
+    "tags": [
+      "community",
+      "prompt-library-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=prompt-library-extension"
+  },
+  {
+    "name": "spec-kit-analyzer",
+    "displayName": "Spec Kit Analyzer",
+    "description": "Gemini CLI extension: spec-kit-analyzer",
+    "repository": "https://github.com/kmoon0001/spec-kit-analyzer",
+    "author": "kmoon0001",
+    "category": "community",
+    "tags": [
+      "community",
+      "spec-kit-analyzer"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=spec-kit-analyzer"
+  },
+  {
+    "name": "cloudflare-mcp",
+    "displayName": "Cloudflare Mcp",
+    "description": "Gemini CLI extension: cloudflare-mcp",
+    "repository": "https://github.com/ZhanZiyuan/cloudflare-mcp",
+    "author": "ZhanZiyuan",
+    "category": "cloud",
+    "tags": [
+      "cloud",
+      "cloudflare-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=cloudflare-mcp"
+  },
+  {
+    "name": "vercel-mcp",
+    "displayName": "Vercel Mcp",
+    "description": "Gemini CLI extension: vercel-mcp",
+    "repository": "https://github.com/ZhanZiyuan/vercel-mcp",
+    "author": "ZhanZiyuan",
+    "category": "community",
+    "tags": [
+      "community",
+      "vercel-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=vercel-mcp"
+  },
+  {
+    "name": "sample-gemini-cli-extension",
+    "displayName": "Sample Gemini Cli Extension",
+    "description": "Gemini CLI extension: sample-gemini-cli-extension",
+    "repository": "https://github.com/tanaikech/sample-gemini-cli-extension",
+    "author": "tanaikech",
+    "category": "community",
+    "tags": [
+      "community",
+      "sample-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=sample-gemini-cli-extension"
+  },
+  {
+    "name": "adk-docs",
+    "displayName": "Adk Docs",
+    "description": "Gemini CLI extension: adk-docs",
+    "repository": "https://github.com/selvasv/adk-docs",
+    "author": "selvasv",
+    "category": "community",
+    "tags": [
+      "community",
+      "adk-docs"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=adk-docs"
+  },
+  {
+    "name": "gitops-extension",
+    "displayName": "Gitops Extension",
+    "description": "Gemini CLI extension: gitops-extension",
+    "repository": "https://github.com/mikebz/gitops-extension",
+    "author": "mikebz",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "gitops-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gitops-extension"
+  },
+  {
+    "name": "gemini-context-extension",
+    "displayName": "Gemini Context Extension",
+    "description": "Gemini CLI extension: gemini-context-extension",
+    "repository": "https://github.com/Beaulewis1977/gemini-context-extension",
+    "author": "Beaulewis1977",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-context-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-context-extension"
+  },
+  {
+    "name": "intelacademyV3",
+    "displayName": "Intelacademyv3",
+    "description": "Gemini CLI extension: intelacademyV3",
+    "repository": "https://github.com/darrinmc1/intelacademyV3",
+    "author": "darrinmc1",
+    "category": "community",
+    "tags": [
+      "community",
+      "intelacademyV3"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=intelacademyV3"
+  },
+  {
+    "name": "claude-devtools",
+    "displayName": "Claude Devtools",
+    "description": "Gemini CLI extension: claude-devtools",
+    "repository": "https://github.com/hitoshura25/claude-devtools",
+    "author": "hitoshura25",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "claude-devtools"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=claude-devtools"
+  },
+  {
+    "name": "Skills-Library",
+    "displayName": "Skills Library",
+    "description": "Gemini CLI extension: Skills-Library",
+    "repository": "https://github.com/Aqualia/Skills-Library",
+    "author": "Aqualia",
+    "category": "community",
+    "tags": [
+      "community",
+      "Skills-Library"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Skills-Library"
+  },
+  {
+    "name": "gemini-extension",
+    "displayName": "Gemini Extension",
+    "description": "Gemini CLI extension: gemini-extension",
+    "repository": "https://github.com/OilpriceAPI/gemini-extension",
+    "author": "OilpriceAPI",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-extension"
+  },
+  {
+    "name": "gemini-slidev-extension",
+    "displayName": "Gemini Slidev Extension",
+    "description": "Gemini CLI extension: gemini-slidev-extension",
+    "repository": "https://github.com/QIanGua/gemini-slidev-extension",
+    "author": "QIanGua",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "gemini-slidev-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-slidev-extension"
+  },
+  {
+    "name": "mcp-performance",
+    "displayName": "Mcp Performance",
+    "description": "Gemini CLI extension: mcp-performance",
+    "repository": "https://github.com/mcclatchy/mcp-performance",
+    "author": "mcclatchy",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-performance"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-performance"
+  },
+  {
+    "name": "post-bridge-mcp",
+    "displayName": "Post Bridge Mcp",
+    "description": "Gemini CLI extension: post-bridge-mcp",
+    "repository": "https://github.com/xSAVIKx/post-bridge-mcp",
+    "author": "xSAVIKx",
+    "category": "community",
+    "tags": [
+      "community",
+      "post-bridge-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=post-bridge-mcp"
+  },
+  {
+    "name": "gemini-screenshot-extension",
+    "displayName": "Gemini Screenshot Extension",
+    "description": "Gemini CLI extension: gemini-screenshot-extension",
+    "repository": "https://github.com/timsonner/gemini-screenshot-extension",
+    "author": "timsonner",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-screenshot-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-screenshot-extension"
+  },
+  {
+    "name": "sdd",
+    "displayName": "Sdd",
+    "description": "Gemini CLI extension: sdd",
+    "repository": "https://github.com/rishops/sdd",
+    "author": "rishops",
+    "category": "community",
+    "tags": [
+      "community",
+      "sdd"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=sdd"
+  },
+  {
+    "name": "wordlift-gemini-cli-extension",
+    "displayName": "Wordlift Gemini Cli Extension",
+    "description": "Gemini CLI extension: wordlift-gemini-cli-extension",
+    "repository": "https://github.com/wordlift/wordlift-gemini-cli-extension",
+    "author": "wordlift",
+    "category": "community",
+    "tags": [
+      "community",
+      "wordlift-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=wordlift-gemini-cli-extension"
+  },
+  {
+    "name": "gemini-witty-sayings",
+    "displayName": "Gemini Witty Sayings",
+    "description": "Gemini CLI extension: gemini-witty-sayings",
+    "repository": "https://github.com/jduncan-rva/gemini-witty-sayings",
+    "author": "jduncan-rva",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-witty-sayings"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-witty-sayings"
+  },
+  {
+    "name": "prompt-library-extension",
+    "displayName": "Prompt Library Extension",
+    "description": "Gemini CLI extension: prompt-library-extension",
+    "repository": "https://github.com/Zlabs-cmd/prompt-library-extension",
+    "author": "Zlabs-cmd",
+    "category": "community",
+    "tags": [
+      "community",
+      "prompt-library-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=prompt-library-extension"
+  },
+  {
+    "name": "java-dev-ai",
+    "displayName": "Java Dev Ai",
+    "description": "Gemini CLI extension: java-dev-ai",
+    "repository": "https://github.com/ddobrin/java-dev-ai",
+    "author": "ddobrin",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "java-dev-ai"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=java-dev-ai"
+  },
+  {
+    "name": "sensei",
+    "displayName": "Sensei",
+    "description": "Gemini CLI extension: sensei",
+    "repository": "https://github.com/mjcc30/sensei",
+    "author": "mjcc30",
+    "category": "community",
+    "tags": [
+      "community",
+      "sensei"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=sensei"
+  },
+  {
+    "name": "github-mcp",
+    "displayName": "Github Mcp",
+    "description": "Gemini CLI extension: github-mcp",
+    "repository": "https://github.com/under-scor/github-mcp",
+    "author": "under-scor",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "github-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=github-mcp"
+  },
+  {
+    "name": "stateful-auth-for-the-github-mcp-server",
+    "displayName": "Stateful Auth For The Github Mcp Server",
+    "description": "Gemini CLI extension: stateful-auth-for-the-github-mcp-server",
+    "repository": "https://github.com/SirKanaad26/stateful-auth-for-the-github-mcp-server",
+    "author": "SirKanaad26",
+    "category": "security",
+    "tags": [
+      "security",
+      "stateful-auth-for-the-github-mcp-server"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=stateful-auth-for-the-github-mcp-server"
+  },
+  {
+    "name": "context7",
+    "displayName": "Context7",
+    "description": "Gemini CLI extension: context7",
+    "repository": "https://github.com/Dalek2023/context7",
+    "author": "Dalek2023",
+    "category": "community",
+    "tags": [
+      "community",
+      "context7"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=context7"
+  },
+  {
+    "name": "conductor",
+    "displayName": "Conductor",
+    "description": "Gemini CLI extension: conductor",
+    "repository": "https://github.com/sky2464/conductor",
+    "author": "sky2464",
+    "category": "community",
+    "tags": [
+      "community",
+      "conductor"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=conductor"
+  },
+  {
+    "name": "IntelAcademyV2",
+    "displayName": "Intelacademyv2",
+    "description": "Gemini CLI extension: IntelAcademyV2",
+    "repository": "https://github.com/darrinmc1/IntelAcademyV2",
+    "author": "darrinmc1",
+    "category": "community",
+    "tags": [
+      "community",
+      "IntelAcademyV2"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=IntelAcademyV2"
+  },
+  {
+    "name": "Madhoush-website",
+    "displayName": "Madhoush Website",
+    "description": "Gemini CLI extension: Madhoush-website",
+    "repository": "https://github.com/omid-ghozatlou/Madhoush-website",
+    "author": "omid-ghozatlou",
+    "category": "community",
+    "tags": [
+      "community",
+      "Madhoush-website"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Madhoush-website"
+  },
+  {
+    "name": "chrome-devtools-mcp",
+    "displayName": "Chrome Devtools Mcp",
+    "description": "Gemini CLI extension: chrome-devtools-mcp",
+    "repository": "https://github.com/BACH-AI-Tools/chrome-devtools-mcp",
+    "author": "BACH-AI-Tools",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "chrome-devtools-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=chrome-devtools-mcp"
+  },
+  {
+    "name": "gitlab-gemini-extension",
+    "displayName": "Gitlab Gemini Extension",
+    "description": "Gemini CLI extension: gitlab-gemini-extension",
+    "repository": "https://github.com/benvenker/gitlab-gemini-extension",
+    "author": "benvenker",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "gitlab-gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gitlab-gemini-extension"
+  },
+  {
+    "name": "articleprocessor",
+    "displayName": "Articleprocessor",
+    "description": "Gemini CLI extension: articleprocessor",
+    "repository": "https://github.com/yuanchenxi95/articleprocessor",
+    "author": "yuanchenxi95",
+    "category": "community",
+    "tags": [
+      "community",
+      "articleprocessor"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=articleprocessor"
+  },
+  {
+    "name": "blender-mcp-gemini-cli-extension",
+    "displayName": "Blender Mcp Gemini Cli Extension",
+    "description": "Gemini CLI extension: blender-mcp-gemini-cli-extension",
+    "repository": "https://github.com/JosephKu/blender-mcp-gemini-cli-extension",
+    "author": "JosephKu",
+    "category": "community",
+    "tags": [
+      "community",
+      "blender-mcp-gemini-cli-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=blender-mcp-gemini-cli-extension"
+  },
+  {
+    "name": "gemini-cli-hubs",
+    "displayName": "Gemini Cli Hubs",
+    "description": "Gemini CLI extension: gemini-cli-hubs",
+    "repository": "https://github.com/pigfoot/gemini-cli-hubs",
+    "author": "pigfoot",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-hubs"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-hubs"
+  },
+  {
+    "name": "r-package-dev-gemini",
+    "displayName": "R Package Dev Gemini",
+    "description": "Gemini CLI extension: r-package-dev-gemini",
+    "repository": "https://github.com/Data-Wise/r-package-dev-gemini",
+    "author": "Data-Wise",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "r-package-dev-gemini"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=r-package-dev-gemini"
+  },
+  {
+    "name": "gemini-logos",
+    "displayName": "Gemini Logos",
+    "description": "Gemini CLI extension: gemini-logos",
+    "repository": "https://github.com/jduncan-rva/gemini-logos",
+    "author": "jduncan-rva",
+    "category": "observability",
+    "tags": [
+      "observability",
+      "gemini-logos"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-logos"
+  },
+  {
+    "name": "piata-ai-new",
+    "displayName": "Piata Ai New",
+    "description": "Gemini CLI extension: piata-ai-new",
+    "repository": "https://github.com/valentinuuiuiu/piata-ai-new",
+    "author": "valentinuuiuiu",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "piata-ai-new"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=piata-ai-new"
+  },
+  {
+    "name": "gemini-email-notifier",
+    "displayName": "Gemini Email Notifier",
+    "description": "Gemini CLI extension: gemini-email-notifier",
+    "repository": "https://github.com/wseabra/gemini-email-notifier",
+    "author": "wseabra",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "gemini-email-notifier"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-email-notifier"
+  },
+  {
+    "name": "gemini-notion-extension",
+    "displayName": "Gemini Notion Extension",
+    "description": "Gemini CLI extension: gemini-notion-extension",
+    "repository": "https://github.com/PatelPratikkumar/gemini-notion-extension",
+    "author": "PatelPratikkumar",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-notion-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-notion-extension"
+  },
+  {
+    "name": "java-dev-assist-extension",
+    "displayName": "Java Dev Assist Extension",
+    "description": "Gemini CLI extension: java-dev-assist-extension",
+    "repository": "https://github.com/grzegorz-golowicz/java-dev-assist-extension",
+    "author": "grzegorz-golowicz",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "java-dev-assist-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=java-dev-assist-extension"
+  },
+  {
+    "name": "gh-mcp",
+    "displayName": "Gh Mcp",
+    "description": "Gemini CLI extension: gh-mcp",
+    "repository": "https://github.com/belsar-ai/gh-mcp",
+    "author": "belsar-ai",
+    "category": "community",
+    "tags": [
+      "community",
+      "gh-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gh-mcp"
+  },
+  {
+    "name": "genai-toolbox",
+    "displayName": "Genai Toolbox",
+    "description": "Gemini CLI extension: genai-toolbox",
+    "repository": "https://github.com/quanghuy-nguyen/genai-toolbox",
+    "author": "quanghuy-nguyen",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "genai-toolbox"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=genai-toolbox"
+  },
+  {
+    "name": "remote-agent-extension",
+    "displayName": "Remote Agent Extension",
+    "description": "Gemini CLI extension: remote-agent-extension",
+    "repository": "https://github.com/derrickchwong/remote-agent-extension",
+    "author": "derrickchwong",
+    "category": "community",
+    "tags": [
+      "community",
+      "remote-agent-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=remote-agent-extension"
+  },
+  {
+    "name": "project-worker",
+    "displayName": "Project Worker",
+    "description": "Gemini CLI extension: project-worker",
+    "repository": "https://github.com/kluth/project-worker",
+    "author": "kluth",
+    "category": "community",
+    "tags": [
+      "community",
+      "project-worker"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=project-worker"
+  },
+  {
+    "name": "superpowers",
+    "displayName": "Superpowers",
+    "description": "Gemini CLI extension: superpowers",
+    "repository": "https://github.com/abudhahir/superpowers",
+    "author": "abudhahir",
+    "category": "community",
+    "tags": [
+      "community",
+      "superpowers"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=superpowers"
+  },
+  {
+    "name": "daily-grind-extension",
+    "displayName": "Daily Grind Extension",
+    "description": "Gemini CLI extension: daily-grind-extension",
+    "repository": "https://github.com/sapientcoffee/daily-grind-extension",
+    "author": "sapientcoffee",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "daily-grind-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=daily-grind-extension"
+  },
+  {
+    "name": "conductor",
+    "displayName": "Conductor",
+    "description": "Gemini CLI extension: conductor",
+    "repository": "https://github.com/fcoury/conductor",
+    "author": "fcoury",
+    "category": "community",
+    "tags": [
+      "community",
+      "conductor"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=conductor"
+  },
+  {
+    "name": "omafit",
+    "displayName": "Omafit",
+    "description": "Gemini CLI extension: omafit",
+    "repository": "https://github.com/matheuscpatricio/omafit",
+    "author": "matheuscpatricio",
+    "category": "community",
+    "tags": [
+      "community",
+      "omafit"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=omafit"
+  },
+  {
+    "name": "neo-mcp",
+    "displayName": "Neo Mcp",
+    "description": "Gemini CLI extension: neo-mcp",
+    "repository": "https://github.com/Benknightdark/neo-mcp",
+    "author": "Benknightdark",
+    "category": "community",
+    "tags": [
+      "community",
+      "neo-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=neo-mcp"
+  },
+  {
+    "name": "task-cli",
+    "displayName": "Task Cli",
+    "description": "Gemini CLI extension: task-cli",
+    "repository": "https://github.com/chrisburlacu1/task-cli",
+    "author": "chrisburlacu1",
+    "category": "productivity",
+    "tags": [
+      "productivity",
+      "task-cli"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=task-cli"
+  },
+  {
+    "name": "mediationverse-gemini-extension",
+    "displayName": "Mediationverse Gemini Extension",
+    "description": "Gemini CLI extension: mediationverse-gemini-extension",
+    "repository": "https://github.com/Data-Wise/mediationverse-gemini-extension",
+    "author": "Data-Wise",
+    "category": "community",
+    "tags": [
+      "community",
+      "mediationverse-gemini-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mediationverse-gemini-extension"
+  },
+  {
+    "name": "fastmcp-gemini-ext",
+    "displayName": "Fastmcp Gemini Ext",
+    "description": "Gemini CLI extension: fastmcp-gemini-ext",
+    "repository": "https://github.com/xprilion/fastmcp-gemini-ext",
+    "author": "xprilion",
+    "category": "community",
+    "tags": [
+      "community",
+      "fastmcp-gemini-ext"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=fastmcp-gemini-ext"
+  },
+  {
+    "name": "gemini-cli-extension_txt-for-ppt",
+    "displayName": "Gemini Cli Extension_Txt For Ppt",
+    "description": "Gemini CLI extension: gemini-cli-extension_txt-for-ppt",
+    "repository": "https://github.com/adamgroenhout/gemini-cli-extension_txt-for-ppt",
+    "author": "adamgroenhout",
+    "category": "community",
+    "tags": [
+      "community",
+      "gemini-cli-extension_txt-for-ppt"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-extension_txt-for-ppt"
+  },
+  {
+    "name": "Liku_AI",
+    "displayName": "Liku_Ai",
+    "description": "Gemini CLI extension: Liku_AI",
+    "repository": "https://github.com/TayDa64/Liku_AI",
+    "author": "TayDa64",
+    "category": "ai-ml",
+    "tags": [
+      "ai-ml",
+      "Liku_AI"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=Liku_AI"
+  },
+  {
+    "name": "agent-orchestrator-extension",
+    "displayName": "Agent Orchestrator Extension",
+    "description": "Gemini CLI extension: agent-orchestrator-extension",
+    "repository": "https://github.com/Nossulenko/agent-orchestrator-extension",
+    "author": "Nossulenko",
+    "category": "community",
+    "tags": [
+      "community",
+      "agent-orchestrator-extension"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=agent-orchestrator-extension"
+  },
+  {
+    "name": "mcp-nanobanana",
+    "displayName": "Mcp Nanobanana",
+    "description": "Gemini CLI extension: mcp-nanobanana",
+    "repository": "https://github.com/Aeven-AI/mcp-nanobanana",
+    "author": "Aeven-AI",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-nanobanana"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-nanobanana"
+  },
+  {
+    "name": "blog-assistant",
+    "displayName": "Blog Assistant",
+    "description": "Gemini CLI extension: blog-assistant",
+    "repository": "https://github.com/jduncan-rva/blog-assistant",
+    "author": "jduncan-rva",
+    "category": "observability",
+    "tags": [
+      "observability",
+      "blog-assistant"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=blog-assistant"
+  },
+  {
+    "name": "migration_proto",
+    "displayName": "Migration_Proto",
+    "description": "Gemini CLI extension: migration_proto",
+    "repository": "https://github.com/benixmaxedis/migration_proto",
+    "author": "benixmaxedis",
+    "category": "community",
+    "tags": [
+      "community",
+      "migration_proto"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=migration_proto"
+  },
+  {
+    "name": "fastmcp-gemini-ext-dep",
+    "displayName": "Fastmcp Gemini Ext Dep",
+    "description": "Gemini CLI extension: fastmcp-gemini-ext-dep",
+    "repository": "https://github.com/xprilion/fastmcp-gemini-ext-dep",
+    "author": "xprilion",
+    "category": "community",
+    "tags": [
+      "community",
+      "fastmcp-gemini-ext-dep"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=fastmcp-gemini-ext-dep"
+  },
+  {
+    "name": "tester-mcp",
+    "displayName": "Tester Mcp",
+    "description": "Gemini CLI extension: tester-mcp",
+    "repository": "https://github.com/xSAVIKx/tester-mcp",
+    "author": "xSAVIKx",
+    "category": "devtools",
+    "tags": [
+      "devtools",
+      "tester-mcp"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=tester-mcp"
+  },
+  {
+    "name": "LikuBuddy",
+    "displayName": "Likubuddy",
+    "description": "Gemini CLI extension: LikuBuddy",
+    "repository": "https://github.com/TayDa64/LikuBuddy",
+    "author": "TayDa64",
+    "category": "community",
+    "tags": [
+      "community",
+      "LikuBuddy"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=LikuBuddy"
+  },
+  {
+    "name": "mcp-nanobanana",
+    "displayName": "Mcp Nanobanana",
+    "description": "Gemini CLI extension: mcp-nanobanana",
+    "repository": "https://github.com/DakineMI/mcp-nanobanana",
+    "author": "DakineMI",
+    "category": "community",
+    "tags": [
+      "community",
+      "mcp-nanobanana"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-nanobanana"
+  },
+  {
+    "name": "expert-proposal",
+    "displayName": "Expert Proposal",
+    "description": "Gemini CLI extension: expert-proposal",
+    "repository": "https://github.com/kongdd/expert-proposal",
+    "author": "kongdd",
+    "category": "community",
+    "tags": [
+      "community",
+      "expert-proposal"
+    ],
+    "installCommand": "npx gemini-cli-templates@latest --extension=expert-proposal"
+  }
+]

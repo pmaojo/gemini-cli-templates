@@ -175,7 +175,7 @@ async function createGeminiConfig(options = {}) {
   }
   
   // Handle multiple components installation (new approach)
-  if (options.agent || options.command || options.mcp || options.setting || options.hook || options.skill) {
+  if (options.agent || options.command || options.mcp || options.setting || options.hook || options.skill || options.extension) {
     // If --workflow is used with components, treat it as YAML
     if (options.workflow) {
       options.yaml = options.workflow;
@@ -1714,7 +1714,8 @@ async function installMultipleComponents(options, targetDir) {
       mcps: [],
       settings: [],
       hooks: [],
-      skills: []
+      skills: [],
+      extensions: []
     };
     
     // Parse comma-separated values for each component type
@@ -1748,7 +1749,12 @@ async function installMultipleComponents(options, targetDir) {
       components.skills = skillsInput.split(',').map(s => s.trim()).filter(s => s);
     }
 
-    const totalComponents = components.agents.length + components.commands.length + components.mcps.length + components.settings.length + components.hooks.length + components.skills.length;
+    if (options.extension) {
+      const extensionsInput = Array.isArray(options.extension) ? options.extension.join(',') : options.extension;
+      components.extensions = extensionsInput.split(',').map(e => e.trim()).filter(e => e);
+    }
+
+    const totalComponents = components.agents.length + components.commands.length + components.mcps.length + components.settings.length + components.hooks.length + components.skills.length + components.extensions.length;
     
     if (totalComponents === 0) {
       console.log(chalk.yellow('⚠️  No components specified to install.'));
@@ -1856,6 +1862,27 @@ async function installMultipleComponents(options, targetDir) {
       console.log(chalk.gray(`   Installing skill: ${skill}`));
       const skillSuccess = await installIndividualSkill(skill, targetDir, { ...options, silent: true });
       if (skillSuccess) successfullyInstalled++;
+    }
+
+    // Install extensions
+    for (const extension of components.extensions) {
+      console.log(chalk.gray(`   Installing extension: ${extension}`));
+      // For extensions, we use the gemini extensions install command
+      const extensionObj = getExtensionById(extension);
+      if (extensionObj && extensionObj.repository) {
+        try {
+          console.log(chalk.blue(`   Executing gemini extensions install ${extensionObj.repository}`));
+          // We use execSync here because it's an external command wrapper
+          execSync(`gemini extensions install ${extensionObj.repository}`, { stdio: 'inherit' });
+          console.log(chalk.green(`✅ Extension "${extension}" installed successfully!`));
+          successfullyInstalled++;
+        } catch (error) {
+          console.log(chalk.red(`❌ Failed to install extension "${extension}": ${error.message}`));
+          console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g gemini-chat-cli)'));
+        }
+      } else {
+        console.log(chalk.red(`❌ Extension "${extension}" not found or missing repository URL`));
+      }
     }
 
     // Handle YAML workflow if provided
