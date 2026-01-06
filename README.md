@@ -8,17 +8,17 @@
 
 ```bash
 # Install a complete development stack
-npx gemini-cli-templates@latest --agent development-team/frontend-developer --command testing/generate-tests --mcp development/github-integration --yes
+npx github:pmaojo/gemini-cli-templates --agent development-team/frontend-developer --command testing/generate-tests --mcp development/github-integration --yes
 
 # Browse and install interactively
-npx gemini-cli-templates@latest
+npx github:pmaojo/gemini-cli-templates
 
 # Install specific components
-npx gemini-cli-templates@latest --agent development-tools/code-reviewer --yes
-npx gemini-cli-templates@latest --command performance/optimize-bundle --yes
-npx gemini-cli-templates@latest --setting performance/mcp-timeouts --yes
-npx gemini-cli-templates@latest --hook git/pre-commit-validation --yes
-npx gemini-cli-templates@latest --mcp database/postgresql-integration --yes
+npx github:pmaojo/gemini-cli-templates --agent development-tools/code-reviewer --yes
+npx github:pmaojo/gemini-cli-templates --command performance/optimize-bundle --yes
+npx github:pmaojo/gemini-cli-templates --setting performance/mcp-timeouts --yes
+npx github:pmaojo/gemini-cli-templates --hook git/pre-commit-validation --yes
+npx github:pmaojo/gemini-cli-templates --mcp database/postgresql-integration --yes
 ```
 
 ## What You Get
@@ -41,7 +41,7 @@ Beyond the template catalog, Gemini CLI Templates includes powerful development 
 Monitor your AI-powered development sessions in real-time with live state detection and performance metrics.
 
 ```bash
-npx gemini-cli-templates@latest --analytics
+npx github:pmaojo/gemini-cli-templates --analytics
 ```
 
 ### 💬 Conversation Monitor
@@ -50,10 +50,10 @@ Mobile-optimized interface to view Gemini responses in real-time with secure rem
 
 ```bash
 # Local access
-npx gemini-cli-templates@latest --chats
+npx github:pmaojo/gemini-cli-templates --chats
 
 # Secure remote access via Cloudflare Tunnel
-npx gemini-cli-templates@latest --chats --tunnel
+npx github:pmaojo/gemini-cli-templates --chats --tunnel
 ```
 
 ### 🔍 Health Check
@@ -61,7 +61,7 @@ npx gemini-cli-templates@latest --chats --tunnel
 Comprehensive diagnostics to ensure your Gemini CLI installation is optimized.
 
 ```bash
-npx gemini-cli-templates@latest --health-check
+npx github:pmaojo/gemini-cli-templates --health-check
 ```
 
 ### 🔌 Plugin Dashboard
@@ -69,7 +69,7 @@ npx gemini-cli-templates@latest --health-check
 View marketplaces, installed plugins, and manage permissions from a unified interface.
 
 ```bash
-npx gemini-cli-templates@latest --plugins
+npx github:pmaojo/gemini-cli-templates --plugins
 ```
 
 ## 📖 Documentation
@@ -120,12 +120,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **🌐 Browse Templates**: [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)
 - **📚 Documentation**: [docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app)
-- **💬 Community**: [GitHub Discussions](https://github.com/davila7/gemini-cli-templates/discussions)
-- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-cli-templates/issues)
+- **💬 Community**: [GitHub Discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
+- **🐛 Issues**: [GitHub Issues](https://github.com/pmaojo/gemini-cli-templates/issues)
 
 ## Stargazers over time
 
-[![Stargazers over time](https://starchart.cc/davila7/gemini-cli-templates.svg?variant=adaptive)](https://starchart.cc/davila7/gemini-cli-templates)
+[![Stargazers over time](https://starchart.cc/pmaojo/gemini-cli-templates.svg?variant=adaptive)](https://starchart.cc/pmaojo/gemini-cli-templates)
 
 ---
 

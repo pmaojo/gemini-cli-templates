@@ -22,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'davila7', // Usually your GitHub org/user name.
+  organizationName: 'pmaojo', // Usually your GitHub org/user name.
   projectName: 'gemini-cli-templates', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -64,7 +64,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/davila7/gemini-cli-templates/tree/main/docu/',
+            'https://github.com/pmaojo/gemini-cli-templates/tree/main/docu/',
         },
         blog: false, // Disable blog functionality
         theme: {
@@ -111,7 +111,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: 'https://github.com/davila7/gemini-cli-templates',
+          href: 'https://github.com/pmaojo/gemini-cli-templates',
           label: 'GitHub',
           position: 'right',
         },
@@ -139,11 +139,11 @@ const config: Config = {
             },
             {
               label: 'GitHub Repository',
-              href: 'https://github.com/davila7/gemini-cli-templates',
+              href: 'https://github.com/pmaojo/gemini-cli-templates',
             },
             {
               label: 'Issues & Support',
-              href: 'https://github.com/davila7/gemini-cli-templates/issues',
+              href: 'https://github.com/pmaojo/gemini-cli-templates/issues',
             },
           ],
         },
@@ -152,11 +152,11 @@ const config: Config = {
           items: [
             {
               label: 'Contribute',
-              href: 'https://github.com/davila7/gemini-cli-templates/blob/main/CONTRIBUTING.md',
+              href: 'https://github.com/pmaojo/gemini-cli-templates/blob/main/CONTRIBUTING.md',
             },
             {
               label: 'License',
-              href: 'https://github.com/davila7/gemini-cli-templates/blob/main/LICENSE',
+              href: 'https://github.com/pmaojo/gemini-cli-templates/blob/main/LICENSE',
             },
           ],
         },

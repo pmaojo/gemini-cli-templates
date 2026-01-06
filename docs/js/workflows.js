@@ -17,7 +17,7 @@ let workflowState = {
 
 // GitHub API configuration
 const GITHUB_CONFIG = {
-    owner: 'davila7',
+    owner: 'pmaojo',
     repo: 'gemini-cli-templates',
     branch: 'main'
 };
@@ -413,7 +413,7 @@ function generateWorkflowYAML() {
 }
 
 function showGenerateModal(hash, yaml) {
-    document.getElementById('workflowCommand').textContent = `npx gemini-cli-templates@latest --workflow:#${hash}`;
+    document.getElementById('workflowCommand').textContent = `npx github:pmaojo/gemini-cli-templates --workflow:#${hash}`;
     document.getElementById('yamlContent').textContent = yaml;
     document.getElementById('generateModal').style.display = 'block';
 }
@@ -505,7 +505,7 @@ function formatComponentName(name) {
 }
 
 function generateInstallCommand(component) {
-    return `npx gemini-cli-templates@latest --${component.type} "${component.path}"`;
+    return `npx github:pmaojo/gemini-cli-templates --${component.type} "${component.path}"`;
 }
 
 function getComponentDescription(component) {

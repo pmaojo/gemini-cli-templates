@@ -17,13 +17,13 @@ Settings modify how Gemini Code behaves in your project. They control performanc
 Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx gemini-cli-templates@latest --setting performance/performance-optimization --yes
+npx github:pmaojo/gemini-cli-templates --setting performance/performance-optimization --yes
 ```
 
 ### Multiple Settings
 
 ```bash
-npx gemini-cli-templates@latest --setting security/read-only-mode,performance/bash-timeouts --yes
+npx github:pmaojo/gemini-cli-templates --setting security/read-only-mode,performance/bash-timeouts --yes
 ```
 
 ## 🔧 Special: Statusline Settings
@@ -33,7 +33,7 @@ Statuslines include Python scripts for real-time monitoring:
 ### Git Branch Monitor
 
 ```bash
-npx gemini-cli-templates@latest --setting statusline/git-branch-statusline --yes
+npx github:pmaojo/gemini-cli-templates --setting statusline/git-branch-statusline --yes
 ```
 
 Shows current Git branch and status in Gemini Code interface.
@@ -41,7 +41,7 @@ Shows current Git branch and status in Gemini Code interface.
 ### Context Monitor
 
 ```bash
-npx gemini-cli-templates@latest --setting statusline/context-monitor --yes
+npx github:pmaojo/gemini-cli-templates --setting statusline/context-monitor --yes
 ```
 
 Displays project context and active files.

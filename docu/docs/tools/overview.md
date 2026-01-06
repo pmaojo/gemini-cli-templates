@@ -13,7 +13,7 @@ Utilities that enhance your Gemini Code development workflow.
 Real-time monitoring of Gemini Code sessions.
 
 ```bash
-npx gemini-cli-templates@latest --analytics
+npx github:pmaojo/gemini-cli-templates --analytics
 ```
 
 ### 🏥 Health Check
@@ -21,7 +21,7 @@ npx gemini-cli-templates@latest --analytics
 System validation and optimization checks.
 
 ```bash
-npx gemini-cli-templates@latest --health-check
+npx github:pmaojo/gemini-cli-templates --health-check
 ```
 
 ### 💬 Chats Interface
@@ -29,7 +29,7 @@ npx gemini-cli-templates@latest --health-check
 Mobile-optimized chat interface.
 
 ```bash
-npx gemini-cli-templates@latest --chats
+npx github:pmaojo/gemini-cli-templates --chats
 ```
 
 ### 🌐 Cloudflare Tunnel
@@ -37,7 +37,7 @@ npx gemini-cli-templates@latest --chats
 Remote access to your tools.
 
 ```bash
-npx gemini-cli-templates@latest --tunnel
+npx github:pmaojo/gemini-cli-templates --tunnel
 ```
 
 ### ☁️ E2B Sandbox
@@ -45,5 +45,5 @@ npx gemini-cli-templates@latest --tunnel
 Cloud execution environment.
 
 ```bash
-npx gemini-cli-templates@latest --sandbox
+npx github:pmaojo/gemini-cli-templates --sandbox
 ```

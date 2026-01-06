@@ -18,7 +18,7 @@ Send details of the vulnerability to [dan.avila7@gmail.com](mailto:dan.avila7@gm
 
 ### GitHub Security Advisories
 
-You can also report vulnerabilities through [GitHub Security Advisories](https://github.com/davila7/gemini-cli-templates/security/advisories/new) for this repository.
+You can also report vulnerabilities through [GitHub Security Advisories](https://github.com/pmaojo/gemini-cli-templates/security/advisories/new) for this repository.
 
 ## What to Include in Your Report
 
@@ -37,7 +37,7 @@ When using Gemini Code Templates:
 
 ### For Users
 
-- **Keep Updated**: Always use the latest version via `npx gemini-cli-templates@latest`
+- **Keep Updated**: Always use the latest version via `npx github:pmaojo/gemini-cli-templates`
 - **Review Templates**: Check generated files before committing to your repository
 - **Audit Hooks**: Review automation hooks before enabling them
 - **Secure Environment**: Use the tool in a secure development environment
@@ -54,7 +54,7 @@ When using Gemini Code Templates:
 - **Maintainer**: Daniel Avila
 - **Website**: [danielavila.me](https://danielavila.me)
 - **Email**: [dan.avila7@gmail.com](mailto:dan.avila7@gmail.com)
-- **GitHub**: [@davila7](https://github.com/davila7)
+- **GitHub**: [@pmaojo](https://github.com/pmaojo)
 
 ## Legal
 

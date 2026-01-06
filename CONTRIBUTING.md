@@ -317,7 +317,7 @@ For advanced contributors who want to improve the CLI tools like analytics, heal
 
 ```bash
 # Clone the repository
-git clone https://github.com/davila7/gemini-cli-templates.git
+git clone https://github.com/pmaojo/gemini-cli-templates.git
 cd gemini-cli-templates
 
 # Navigate to the CLI tool directory
@@ -443,16 +443,16 @@ npm run health-check
 
 ```bash
 # Test component installation
-npx gemini-cli-templates@latest --agent your-agent --dry-run
-npx gemini-cli-templates@latest --command your-command --dry-run
-npx gemini-cli-templates@latest --mcp your-mcp --dry-run
+npx github:pmaojo/gemini-cli-templates --agent your-agent --dry-run
+npx github:pmaojo/gemini-cli-templates --command your-command --dry-run
+npx github:pmaojo/gemini-cli-templates --mcp your-mcp --dry-run
 ```
 
 ### Template Testing
 
 ```bash
 # Test template installation
-npx gemini-cli-templates@latest --template your-template --dry-run
+npx github:pmaojo/gemini-cli-templates --template your-template --dry-run
 
 # Test with specific scenarios
 npm start -- --language python --framework django --dry-run
@@ -534,8 +534,8 @@ npm start -- --dry-run
 
 ### Community Support
 
-- **GitHub Issues** - [Report bugs or request features](https://github.com/davila7/gemini-cli-templates/issues)
-- **GitHub Discussions** - [Join community discussions](https://github.com/davila7/gemini-cli-templates/discussions)
+- **GitHub Issues** - [Report bugs or request features](https://github.com/pmaojo/gemini-cli-templates/issues)
+- **GitHub Discussions** - [Join community discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
 - **Documentation** - [Complete guides at docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app/)
 
 ### Quick Start Guides

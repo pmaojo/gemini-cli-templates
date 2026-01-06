@@ -17,13 +17,13 @@ Hooks are automation scripts that trigger actions when specific events occur in 
 Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx gemini-cli-templates@latest --hook git/auto-git-add --yes
+npx github:pmaojo/gemini-cli-templates --hook git/auto-git-add --yes
 ```
 
 ### Multiple Hooks
 
 ```bash
-npx gemini-cli-templates@latest --hook notifications/discord-notifications,git/smart-commit --yes
+npx github:pmaojo/gemini-cli-templates --hook notifications/discord-notifications,git/smart-commit --yes
 ```
 
 ## ⚙️ Hook Configuration

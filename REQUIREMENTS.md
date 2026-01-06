@@ -10,7 +10,7 @@ The goal is to completely rebrand and transform the existing "Gemini Code Templa
 
 - **Name Change:** The project/package name must change from `gemini-cli-templates` to `gemini-cli-templates`.
 - **Branding:** Update all visual assets, READMEs, and documentation to reflect "Gemini CLI" (Google branding colors, terminology) instead of "Gemini Code" (Google branding).
-- **CLI Command:** The primary executable should be `gemini-templates` (or `npx gemini-cli-templates`).
+- **CLI Command:** The primary executable should be `gemini-templates` (or `npx github:pmaojo/gemini-cli-templates`).
 
 ### 2.2 Infrastructure Migration
 
@@ -57,7 +57,7 @@ The goal is to completely rebrand and transform the existing "Gemini Code Templa
 
 ## 4. Success Criteria
 
-1. User can run `npx gemini-cli-templates` and see a Gemini-branded interface.
+1. User can run `npx github:pmaojo/gemini-cli-templates` and see a Gemini-branded interface.
 2. Installing an "Agent" creates a valid entry in `GEMINI.md` or a context file that Gemini CLI respects.
 3. Installing an "MCP" correctly updates `~/.gemini/settings.json` and the MCP works in Gemini.
 4. The Analytics Dashboard correctly shows "Gemini Working..." status when the user is using the Gemini CLI.

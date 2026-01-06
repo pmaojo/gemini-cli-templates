@@ -205,7 +205,7 @@ class PluginPageManager {
 
         return componentNames.map((name, index) => {
             const formattedName = this.formatComponentName(name);
-            const installCommand = `npx gemini-cli-templates@latest --${componentType} ${name}`;
+            const installCommand = `npx github:pmaojo/gemini-cli-templates --${componentType} ${name}`;
 
             return `
                 <li class="component-item" data-index="${index}">

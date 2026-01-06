@@ -9,7 +9,7 @@ Mobile-first interface for browsing Gemini Code conversations with resume functi
 ## Launch Command
 
 ```bash
-npx gemini-cli-templates@latest --chats
+npx github:pmaojo/gemini-cli-templates --chats
 ```
 
 ## Features
@@ -25,7 +25,7 @@ npx gemini-cli-templates@latest --chats
 Combine with Cloudflare Tunnel for access from anywhere:
 
 ```bash
-npx gemini-cli-templates@latest --chats --tunnel
+npx github:pmaojo/gemini-cli-templates --chats --tunnel
 ```
 
 ---

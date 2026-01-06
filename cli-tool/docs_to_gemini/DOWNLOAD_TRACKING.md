@@ -302,6 +302,6 @@ MIT License - Ver [LICENSE](LICENSE) para detalles.
 
 ## Contacto
 
-- Issues: [GitHub Issues](https://github.com/davila7/gemini-cli-templates/issues)
-- Discussions: [GitHub Discussions](https://github.com/davila7/gemini-cli-templates/discussions)
+- Issues: [GitHub Issues](https://github.com/pmaojo/gemini-cli-templates/issues)
+- Discussions: [GitHub Discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
 - Email: soporte@gemini-cli-templates.com

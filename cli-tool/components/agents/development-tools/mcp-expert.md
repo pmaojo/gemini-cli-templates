@@ -236,7 +236,7 @@ When creating new MCP integrations:
 After creating the MCP, users can install it with:
 
 ```bash
-npx gemini-cli-templates@latest --mcp="stripe-integration" --yes
+npx github:pmaojo/gemini-cli-templates --mcp="stripe-integration" --yes
 ```
 
 This will:

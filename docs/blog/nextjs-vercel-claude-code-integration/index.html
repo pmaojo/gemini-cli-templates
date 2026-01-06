@@ -408,13 +408,13 @@
                 <h3>Install Individual Components</h3>
                 <pre><code class="language-bash">
 # Install specific agent
-npx gemini-cli-templates@latest --agent web-tools/nextjs-architecture-expert
+npx github:pmaojo/gemini-cli-templates --agent web-tools/nextjs-architecture-expert
 
 # Install specific Next.js command
-npx gemini-cli-templates@latest --command nextjs-vercel/nextjs-component-generator
+npx github:pmaojo/gemini-cli-templates --command nextjs-vercel/nextjs-component-generator
 
 # Install specific hook
-npx gemini-cli-templates@latest --hook automation/vercel-auto-deploy</code></pre>
+npx github:pmaojo/gemini-cli-templates --hook automation/vercel-auto-deploy</code></pre>
                 
                 <p><strong>Components will be installed to:</strong></p>
                 <ul>
@@ -426,28 +426,28 @@ npx gemini-cli-templates@latest --hook automation/vercel-auto-deploy</code></pre
 
                 <h3>Create Global Agents (Available Anywhere)</h3>
                 <pre><code class="language-bash"># Create global agents accessible from any project
-npx gemini-cli-templates@latest --create-agent web-tools/nextjs-architecture-expert
-npx gemini-cli-templates@latest --create-agent devops-infrastructure/vercel-deployment-specialist
-npx gemini-cli-templates@latest --create-agent web-tools/react-performance-optimizer
+npx github:pmaojo/gemini-cli-templates --create-agent web-tools/nextjs-architecture-expert
+npx github:pmaojo/gemini-cli-templates --create-agent devops-infrastructure/vercel-deployment-specialist
+npx github:pmaojo/gemini-cli-templates --create-agent web-tools/react-performance-optimizer
 
 # List all global agents
-npx gemini-cli-templates@latest --list-agents
+npx github:pmaojo/gemini-cli-templates --list-agents
 
 # Update global agents
-npx gemini-cli-templates@latest --update-agent web-tools/nextjs-architecture-expert
+npx github:pmaojo/gemini-cli-templates --update-agent web-tools/nextjs-architecture-expert
 
 # Remove global agents  
-npx gemini-cli-templates@latest --remove-agent devops-infrastructure/vercel-deployment-specialist</code></pre>
+npx github:pmaojo/gemini-cli-templates --remove-agent devops-infrastructure/vercel-deployment-specialist</code></pre>
 
                 <h3>Install Multiple Components at Once</h3>
                 <pre><code class="language-bash">
 # Install specific Next.js commands (comma-separated for multiple)
-npx gemini-cli-templates@latest --command nextjs-vercel/nextjs-component-generator,nextjs-vercel/nextjs-bundle-analyzer,nextjs-vercel/nextjs-performance-audit
+npx github:pmaojo/gemini-cli-templates --command nextjs-vercel/nextjs-component-generator,nextjs-vercel/nextjs-bundle-analyzer,nextjs-vercel/nextjs-performance-audit
               </code></pre>      
 
               <pre><code class="language-bash">
 # Install complete Next.js + Vercel stack in one command
-npx gemini-cli-templates@latest \
+npx github:pmaojo/gemini-cli-templates \
   --command nextjs-vercel/nextjs-component-generator,nextjs-vercel/nextjs-bundle-analyzer,nextjs-vercel/nextjs-performance-audit,nextjs-vercel/vercel-deploy-optimize,nextjs-vercel/vercel-edge-function,nextjs-vercel/vercel-env-sync \
   --agent web-tools/nextjs-architecture-expert,devops-infrastructure/vercel-deployment-specialist,web-tools/react-performance-optimizer \
   --hook automation/vercel-auto-deploy,performance/performance-budget-guard,automation/vercel-environment-sync,automation/deployment-health-monitor \
@@ -562,7 +562,7 @@ npx gemini-cli-templates@latest \
                 <p>Shows current build status, deployment URL, and time since last deployment with intuitive icons:</p>
                 <h4>Install:</h4>
                 <pre><code class="language-bash"># Install basic deployment monitor
-npx gemini-cli-templates@latest --setting statusline/vercel-deployment-monitor
+npx github:pmaojo/gemini-cli-templates --setting statusline/vercel-deployment-monitor
                 </code></pre>
                 <h4>Result:</h4>
                 <pre><code class="language-bash">▲ Vercel 🚀 ✅ READY | 🌐 my-app-xyz.vercel.app | ⏰ 5m ago | 📁 my-project</code></pre>
@@ -570,7 +570,7 @@ npx gemini-cli-templates@latest --setting statusline/vercel-deployment-monitor
                 <p>Intelligent error monitoring with desktop notifications and building status tracking:</p>
                 <h4>Install:</h4>
                 <pre><code class="language-bash"># Install error alert system with notifications
-npx gemini-cli-templates@latest --setting statusline/vercel-error-alert-system
+npx github:pmaojo/gemini-cli-templates --setting statusline/vercel-error-alert-system
                 </code></pre>
                 <h4>Result:</h4>
                 <pre><code class="language-bash">▲ Vercel 🚀 🚨 2 errors! | Building: 0 | 📁 my-project</code></pre>
@@ -578,7 +578,7 @@ npx gemini-cli-templates@latest --setting statusline/vercel-error-alert-system
                 <p>Monitors production and preview environments simultaneously with color-coded indicators:</p>
                 <h4>Install:</h4>
                 <pre><code class="language-bash"># Install multi-environment status monitor
-npx gemini-cli-templates@latest --setting statusline/vercel-multi-env-status
+npx github:pmaojo/gemini-cli-templates --setting statusline/vercel-multi-env-status
                 </code></pre>
                 <h4>Result:</h4>
                 <pre>
