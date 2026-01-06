@@ -170,7 +170,13 @@ class DataLoader {
                 { name: 'file-manager', path: 'system/file-manager', category: 'system', type: 'mcp', content: 'File system operations including reading, writing, and organizing files.' },
                 { name: 'redis-cache', path: 'database/redis-cache', category: 'database', type: 'mcp', content: 'Redis caching implementation for improved application performance.' },
                 { name: 'email-service', path: 'communication/email-service', category: 'communication', type: 'mcp', content: 'Email sending and management service with template support.' }
-            ]
+            ],
+            settings: [],
+            hooks: [],
+            skills: [],
+            extensions: [],
+            plugins: [],
+            templates: []
         };
     }
 
@@ -285,14 +291,28 @@ class DataLoader {
             commands: [],
             mcps: [],
             skills: [],
+            extensions: [],
+            settings: [],
+            hooks: [],
+            plugins: [],
             templates: [] // Include templates in pagination structure
         };
 
-        ['agents', 'commands', 'mcps', 'skills'].forEach(type => {
+        // Paginate main component types
+        ['agents', 'commands', 'mcps', 'skills', 'extensions'].forEach(type => {
             if (fullData[type]) {
                 const startIndex = (page - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
                 paginatedData[type] = fullData[type].slice(startIndex, endIndex);
+            }
+        });
+
+        // Include other types without pagination (usually fewer items) or paginate if needed
+        ['settings', 'hooks', 'plugins'].forEach(type => {
+            if (fullData[type]) {
+                // Determine if we should paginate these too (optional, but consistent)
+                // For now, let's include all for these smaller categories unless they grow large
+                paginatedData[type] = fullData[type];
             }
         });
 
@@ -371,6 +391,8 @@ class DataLoader {
                 settings: this.fullComponentsData.settings ? this.fullComponentsData.settings.length : 0,
                 hooks: this.fullComponentsData.hooks ? this.fullComponentsData.hooks.length : 0,
                 skills: this.fullComponentsData.skills ? this.fullComponentsData.skills.length : 0,
+                extensions: this.fullComponentsData.extensions ? this.fullComponentsData.extensions.length : 0,
+                plugins: this.fullComponentsData.plugins ? this.fullComponentsData.plugins.length : 0,
                 templates: this.fullComponentsData.templates ? this.fullComponentsData.templates.length : 0
             };
         }
@@ -383,6 +405,8 @@ class DataLoader {
             settings: this.componentsData?.settings?.length || 0,
             hooks: this.componentsData?.hooks?.length || 0,
             skills: this.componentsData?.skills?.length || 0,
+            extensions: this.componentsData?.extensions?.length || 0,
+            plugins: this.componentsData?.plugins?.length || 0,
             templates: this.componentsData?.templates?.length || 0
         };
     }
