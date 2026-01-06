@@ -519,19 +519,7 @@
     ],
     "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-confluent"
   },
-  {
-    "name": "claude-prompts-mcp",
-    "displayName": "Claude Prompts Mcp",
-    "description": "Gemini CLI extension: claude-prompts-mcp",
-    "repository": "https://github.com/minipuft/claude-prompts-mcp",
-    "author": "minipuft",
-    "category": "community",
-    "tags": [
-      "community",
-      "claude-prompts-mcp"
-    ],
-    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=claude-prompts-mcp"
-  },
+
   {
     "name": "gke-mcp",
     "displayName": "Gke Mcp",
@@ -2755,19 +2743,7 @@
     ],
     "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=intelacademyV3"
   },
-  {
-    "name": "claude-devtools",
-    "displayName": "Claude Devtools",
-    "description": "Gemini CLI extension: claude-devtools",
-    "repository": "https://github.com/hitoshura25/claude-devtools",
-    "author": "hitoshura25",
-    "category": "devtools",
-    "tags": [
-      "devtools",
-      "claude-devtools"
-    ],
-    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=claude-devtools"
-  },
+
   {
     "name": "Skills-Library",
     "displayName": "Skills Library",

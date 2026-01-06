@@ -27,7 +27,7 @@ def scrape_with_rapidapi_jobs():
         # Search for Gemini-specific terms
         search_queries = [
             "Gemini Code",
-            "Anthropic Gemini", 
+            "Google Gemini", 
             "Gemini AI developer",
             "Gemini assistant engineer"
         ]
@@ -96,10 +96,10 @@ def scrape_with_serper_jobs():
         
         search_queries = [
             "Gemini Code developer jobs",
-            "Anthropic Gemini engineer hiring", 
+            "Google Gemini engineer hiring", 
             "Gemini AI programming job",
             "Gemini assistant developer position",
-            "Anthropic engineer jobs",
+            "Google DeepMind engineer jobs",
             "Gemini developer careers"
         ]
         
@@ -204,9 +204,9 @@ def extract_job_info_from_serper(title, snippet, link):
 def extract_company_name_improved(title, snippet, link):
     """Improved company name extraction"""
     
-    # Priority: Check for Anthropic first (most common)
-    if 'anthropic' in (title + snippet + link).lower():
-        return 'Anthropic'
+    # Priority: Check for Google/DeepMind first
+    if 'google' in (title + snippet + link).lower() or 'deepmind' in (title + snippet + link).lower():
+        return 'Google'
     
     # LinkedIn specific extraction
     if 'linkedin.com/jobs/view/' in link:
@@ -287,8 +287,8 @@ def extract_job_title(title, snippet):
     if at_match:
         return at_match.group(1).strip()
     
-    # Anthropic hiring format: "Anthropic hiring Job Title in Location"
-    hiring_match = re.search(r'hiring\s+(.+?)\s+in\s+', title)
+    # Google/DeepMind hiring format
+    hiring_match = re.search(r'(?:Google|DeepMind) hiring\s+(.+?)\s+in\s+', title, re.IGNORECASE)
     if hiring_match:
         return hiring_match.group(1).strip()
     
@@ -405,7 +405,7 @@ def scrape_github_jobs():
         # Search ONLY for Gemini-specific job postings
         search_url = "https://api.github.com/search/issues"
         search_params = {
-            'q': '("gemini code" OR "anthropic gemini" OR "gemini ai" OR "gemini") AND (hiring OR job OR position OR engineer OR developer) NOT pull NOT merge NOT bug NOT feature',
+            'q': '("gemini code" OR "google gemini" OR "gemini ai" OR "gemini") AND (hiring OR job OR position OR engineer OR developer) NOT pull NOT merge NOT bug NOT feature',
             'sort': 'updated',
             'order': 'desc',
             'per_page': 50
@@ -453,7 +453,7 @@ def scrape_ycombinator_jobs():
                     # Get comments from this hiring thread
                     comments_url = f"https://hn.algolia.com/api/v1/search"
                     comment_params = {
-                        'query': 'gemini code OR anthropic gemini OR gemini ai OR gemini',
+                        'query': 'gemini code OR google gemini OR gemini ai OR gemini',
                         'tags': f'comment,story_{story_id}',
                         'hitsPerPage': 50
                     }
@@ -641,7 +641,7 @@ def scrape_indie_hackers():
         # Use general web search for Indie Hackers job posts mentioning Gemini Code
         search_terms = [
             'site:indiehackers.com "gemini code" hiring',
-            'site:indiehackers.com "anthropic gemini" job',
+            'site:indiehackers.com "google gemini" job',
             'site:indiehackers.com "gemini ai" developer'
         ]
         
@@ -691,7 +691,7 @@ def is_gemini_code_related(text):
     
     # ONLY Gemini-specific keywords - must contain "gemini"
     gemini_keywords = [
-        'gemini code', 'gemini-cli', 'anthropic gemini', 'gemini ai', 
+        'gemini code', 'gemini-cli', 'google gemini', 'gemini ai', 
         'gemini coder', 'gemini assistant', 'gemini developer', 'gemini engineer',
         'work with gemini', 'using gemini', 'gemini experience', 'gemini integration'
     ]
