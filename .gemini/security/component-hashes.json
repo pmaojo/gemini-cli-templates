@@ -642,5 +642,138 @@
     "version": "unversioned",
     "timestamp": "2026-01-06T18:15:24.603Z",
     "path": "cli-tool/components/agents/ffmpeg-clip-team/podcast-metadata-specialist.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/podcast-transcriber.md": {
+    "hash": "f7f4d7e9b22bd1adc3a915ddb852e4f13eac0ff136bdaf3445d41d0198149189",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:25.016Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/podcast-transcriber.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/social-media-clip-creator.md": {
+    "hash": "bd9291c587f212fe2263d2f147fddd9c22eadd5400af696bdb6e76ca5fc2c002",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:25.549Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/social-media-clip-creator.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/timestamp-precision-specialist.md": {
+    "hash": "e527b94d4dc17a3374d0e1c87069adb025ac9becfcc4cdaf5e3410598407f944",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:26.194Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/timestamp-precision-specialist.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/video-editor.md": {
+    "hash": "4af4f2c1fd9f2e93e30ae8eb4f728b35b9c5655a449381154feddbd227e1be10",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:26.850Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/video-editor.md"
+  },
+  "cli-tool/components/agents/game-development/3d-artist.md": {
+    "hash": "f0c262daff630e0c3690e0b26a66f017c7889c3c263d3bf1657567d9fc956112",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:26.967Z",
+    "path": "cli-tool/components/agents/game-development/3d-artist.md"
+  },
+  "cli-tool/components/agents/game-development/game-designer.md": {
+    "hash": "a9466460bdf4372cd0081fc7860da756b484bf1e672f7d7af664513aa62f1087",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:27.146Z",
+    "path": "cli-tool/components/agents/game-development/game-designer.md"
+  },
+  "cli-tool/components/agents/game-development/unity-game-developer.md": {
+    "hash": "21763104de61a2b2e4321ebce4e396b813b96d56335fb2de89d190c3c77a1374",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:27.556Z",
+    "path": "cli-tool/components/agents/game-development/unity-game-developer.md"
+  },
+  "cli-tool/components/agents/game-development/unreal-engine-developer.md": {
+    "hash": "2a29a4e72d127224771f66085dd7fa294c6894a712d53fed66b09e86c7aa2246",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:28.200Z",
+    "path": "cli-tool/components/agents/game-development/unreal-engine-developer.md"
+  },
+  "cli-tool/components/agents/git/git-flow-manager.md": {
+    "hash": "91634a8f2f3d71af255b7e1ae1ccd8602754be61c7ac4d4b420ceaf47056bc01",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:28.852Z",
+    "path": "cli-tool/components/agents/git/git-flow-manager.md"
+  },
+  "cli-tool/components/agents/marketing/marketing-culture.md": {
+    "hash": "a5e966d8aadf84326657716114554cb2b74ba11974c194d3a9b4fb3cb50ba167",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:29.279Z",
+    "path": "cli-tool/components/agents/marketing/marketing-culture.md"
+  },
+  "cli-tool/components/agents/marketing/marketing-mvt.md": {
+    "hash": "2741a2162bb59253130fb90c1eab1d3b9f5473c13e02d2eca0d77d4edd2235e0",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:29.671Z",
+    "path": "cli-tool/components/agents/marketing/marketing-mvt.md"
+  },
+  "cli-tool/components/agents/marketing/marketing-xy.md": {
+    "hash": "0914dc716cfbfb53c87b6c28bf2416e4b8653060ba89f410005ed2fac9b2ec00",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:29.987Z",
+    "path": "cli-tool/components/agents/marketing/marketing-xy.md"
+  },
+  "cli-tool/components/agents/mcp-dev-team/mcp-deployment-orchestrator.md": {
+    "hash": "381b05bbe1528a46e37d568d8f00aefbeaa74cfa116bf0a48032e94e0d32a255",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:30.349Z",
+    "path": "cli-tool/components/agents/mcp-dev-team/mcp-deployment-orchestrator.md"
+  },
+  "cli-tool/components/agents/mcp-dev-team/mcp-integration-engineer.md": {
+    "hash": "b9ed3842ecba9c3555fd0aab3f26d9e558f57a826e273ca00f2a50d99f84fc09",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:30.823Z",
+    "path": "cli-tool/components/agents/mcp-dev-team/mcp-integration-engineer.md"
+  },
+  "cli-tool/components/agents/mcp-dev-team/mcp-protocol-specialist.md": {
+    "hash": "cb310b647aa65ae27c8f49485b9930236d630aff3c05942c53d6b80884934d9a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:31.236Z",
+    "path": "cli-tool/components/agents/mcp-dev-team/mcp-protocol-specialist.md"
+  },
+  "cli-tool/components/agents/mcp-dev-team/mcp-registry-navigator.md": {
+    "hash": "19163ee10fe791308612c70e1b1826c08c6adcef9045778bc30e36f5cd69d8ff",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:31.606Z",
+    "path": "cli-tool/components/agents/mcp-dev-team/mcp-registry-navigator.md"
+  },
+  "cli-tool/components/agents/mcp-dev-team/mcp-security-auditor.md": {
+    "hash": "c240fdcc1ad7b139ec353db94dc30b1bb370da787cceede9e99e380fc3f2a8bf",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:32.058Z",
+    "path": "cli-tool/components/agents/mcp-dev-team/mcp-security-auditor.md"
+  },
+  "cli-tool/components/agents/mcp-dev-team/mcp-server-architect.md": {
+    "hash": "9e0b136ee82311eeb46ca1fe29d96875e7e5e1400f6eff74754b634cc5b9db9a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:32.444Z",
+    "path": "cli-tool/components/agents/mcp-dev-team/mcp-server-architect.md"
+  },
+  "cli-tool/components/agents/mcp-dev-team/mcp-testing-engineer.md": {
+    "hash": "48c2b954fd78a91304de05d3af440635b9152bf97138585f900e51f75d7e31ca",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:32.887Z",
+    "path": "cli-tool/components/agents/mcp-dev-team/mcp-testing-engineer.md"
   }
 }
