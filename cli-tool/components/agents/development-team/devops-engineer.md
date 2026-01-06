@@ -109,7 +109,7 @@ jobs:
       with:
         registry: ${{ env.DOCKER_REGISTRY }}
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.DB_PASSWORD }}
 
     - name: Extract metadata
       id: meta

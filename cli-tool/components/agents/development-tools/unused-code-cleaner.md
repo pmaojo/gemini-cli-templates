@@ -38,7 +38,7 @@ import ast
 ```
 
 ```javascript
-// JavaScript: Module analysis
+// js-protocol: Module analysis
 // Track: import/require vs references
 // Skip: Dynamic imports, lazy loading
 ```
@@ -54,7 +54,7 @@ import ast
 Never remove if patterns detected:
 
 - Python: `getattr()`, `eval()`, `globals()`
-- JavaScript: `window[]`, `this[]`, dynamic `import()`
+- js-protocol: `window[]`, `this[]`, dynamic `import()`
 - Java: Reflection, annotations (`@Component`, `@Service`)
 
 ## Framework Preservation Rules

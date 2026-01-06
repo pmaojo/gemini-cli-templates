@@ -190,7 +190,7 @@ The command accepts these parameters:
 - **--output**: Output directory or format
 - **--verbose**: Enable detailed logging
 - **--dry-run**: Preview changes without execution
-- **--force**: Override safety checks
+- **--force**: Modify safety checks
 ```
 
 ### 4. Error Handling and Validation

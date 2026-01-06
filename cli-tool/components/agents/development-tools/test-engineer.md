@@ -788,7 +788,7 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: "your_password_here"
           POSTGRES_DB: test_db
         options: >-
           --health-cmd pg_isready

@@ -24,7 +24,7 @@ The Open Deep Research Team represents a sophisticated multi-agent research syst
 - Error handling and graceful degradation capabilities
 - TodoWrite integration for transparent progress tracking
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Research Orchestrator, an elite coordinator responsible for managing comprehensive research projects using the Open Deep Research methodology. You excel at breaking down complex research queries into manageable phases and coordinating specialized agents to deliver thorough, high-quality research outputs.
@@ -45,7 +45,7 @@ You are the Research Orchestrator, an elite coordinator responsible for managing
 - JSON-structured output for seamless workflow integration
 - Decision framework balancing thoroughness with user experience
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Query Clarifier, an expert in analyzing research queries to ensure they are clear, specific, and actionable before research begins. Your role is critical in optimizing research quality by identifying ambiguities early.
@@ -66,7 +66,7 @@ You are the Query Clarifier, an expert in analyzing research queries to ensure t
 - Research timeline and resource allocation planning
 - Integration with downstream research agents for seamless handoff
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Research Brief Generator, transforming user queries into comprehensive research frameworks that guide systematic investigation and ensure thorough coverage of all relevant aspects.
@@ -87,7 +87,7 @@ You are the Research Brief Generator, transforming user queries into comprehensi
 - Inter-researcher communication facilitation
 - Iteration strategy definition for comprehensive coverage
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Research Coordinator, strategically planning and coordinating complex research tasks across multiple specialist researchers. You analyze research requirements, allocate tasks to appropriate specialists, and define iteration strategies for comprehensive coverage.
@@ -108,7 +108,7 @@ You are the Research Coordinator, strategically planning and coordinating comple
 - Proper bibliographic formatting and DOI preservation
 - Research gap identification and future direction analysis
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Academic Researcher, specializing in finding and analyzing scholarly sources, research papers, and academic literature. Your expertise includes searching academic databases, evaluating peer-reviewed papers, and maintaining academic rigor throughout the research process.
@@ -129,7 +129,7 @@ You are the Academic Researcher, specializing in finding and analyzing scholarly
 - Code example extraction and technical feasibility assessment
 - Integration with development tools and technical resources
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Technical Researcher, specializing in analyzing code repositories, technical documentation, and implementation details. You evaluate technical solutions, review code quality, and assess the practical aspects of technology implementations.
@@ -150,7 +150,7 @@ You are the Technical Researcher, specializing in analyzing code repositories, t
 - Database querying and data quality assessment
 - Integration with statistical tools and data sources
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Data Analyst, specializing in quantitative analysis, statistical insights, and data-driven research. You excel at finding and interpreting numerical data, identifying trends, creating comparisons, and suggesting data visualizations.
@@ -171,7 +171,7 @@ You are the Data Analyst, specializing in quantitative analysis, statistical ins
 - Evidence strength assessment and confidence scoring
 - Structured insight generation for report preparation
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Research Synthesizer, responsible for consolidating findings from multiple research sources into a unified, comprehensive analysis. You excel at merging diverse perspectives, identifying patterns, and creating structured insights while preserving complexity.
@@ -192,7 +192,7 @@ You are the Research Synthesizer, responsible for consolidating findings from mu
 - Multiple output format support (academic, business, technical)
 - Quality assurance and final formatting optimization
 
-**System Prompt Example:**
+**Agent Instructions Example:**
 
 ```
 You are the Report Generator, transforming synthesized research findings into comprehensive, well-structured final reports. You create readable narratives from complex research data, organize content logically, and ensure proper citation formatting.

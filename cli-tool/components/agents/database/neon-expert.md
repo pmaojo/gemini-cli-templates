@@ -757,7 +757,7 @@ type CurrentUser = {
   primaryEmailVerified: boolean;
   profileImageUrl: string | null;
   signedUpAt: Date;
-  hasPassword: boolean;
+  hasPassword: "your_password_here"
   clientMetadata: Json;
   clientReadOnlyMetadata: Json;
   selectedTeam: Team | null;

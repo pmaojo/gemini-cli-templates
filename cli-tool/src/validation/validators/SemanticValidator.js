@@ -262,7 +262,25 @@ class SemanticValidator extends BaseValidator {
       'your_project_id',
       'your_server_key',
       'YOUR_PASSWORD_HERE',
-      'YOUR_API_KEY_HERE'
+      'YOUR_API_KEY_HERE',
+      // Variable references and secrets
+      'var.',
+      'secrets.',
+      '${',
+      '${{',
+      'process.env',
+      'env.',
+      'password_hash',
+      'hashedPassword',
+      'password)',
+      'password,',
+      'password}',
+      'string)',
+      'string;',
+      'string,',
+      'String',
+      'bcrypt',
+      'z.string'
     ];
 
     for (const { pattern, code, message, severity } of this.SENSITIVE_DATA_PATTERNS) {

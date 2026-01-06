@@ -102,7 +102,7 @@ const JWT_SECRET = new TextEncoder().encode(
 
 export async function authMiddleware(request: NextRequest) {
   try {
-    // Get token from cookies or Authorization header
+    // Access the token from cookies or Authorization header
     const token = request.cookies.get('auth-token')?.value ||
       request.headers.get('authorization')?.replace('Bearer ', '');
 

@@ -230,7 +230,7 @@ const JWT_SECRET = new TextEncoder().encode(
 
 export async function GET(request: NextRequest) {
   try {
-    // Extract token from header or cookie
+    // Access the token from header or cookie
     const authHeader = request.headers.get('authorization');
     const cookieToken = request.cookies.get('auth-token')?.value;
     
@@ -317,7 +317,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-async function validateCredentials(username: string, password: string) {
+async function validateCredentials(username: string, password: "your_password_here" {
   // Implement credential validation
   // This would typically involve database lookup
   return null; // Placeholder
