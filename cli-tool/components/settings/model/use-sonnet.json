@@ -1,4 +1,0 @@
-{
-  "description": "Configure Gemini CLI to use Gemini 3.5 Sonnet model.",
-  "model": "gemini-3-5-sonnet-20241022"
-}

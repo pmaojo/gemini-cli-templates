@@ -1,0 +1,4 @@
+{
+  "description": "Configure Gemini CLI to use Gemini 2.5 Flash model.",
+  "model": "gemini-2.5-flash"
+}

@@ -447,7 +447,7 @@ async function createGeminiConfig(options = {}) {
         execSync(`gemini extensions install ${extensionUrl} --yes`, { stdio: 'inherit' });
       } catch (error) {
         console.log(chalk.red(`  ❌ Failed to install extension: ${error.message}`));
-        console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g gemini-chat-cli)'));
+        console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g @google/gemini-cli)'));
       }
     }
   }
@@ -792,7 +792,7 @@ async function installIndividualSetting(settingName, targetDir, options) {
     if (!response.ok) {
       if (response.status === 404) {
         console.log(chalk.red(`❌ Setting "${settingName}" not found`));
-        console.log(chalk.yellow('Available settings: enable-telemetry, disable-telemetry, allow-npm-commands, deny-sensitive-files, use-gemini-2.0-flash, use-gemini-2.0-flash, retention-7-days, retention-90-days'));
+        console.log(chalk.yellow('Available settings: enable-telemetry, disable-telemetry, allow-npm-commands, deny-sensitive-files, use-gemini-2.5-flash, use-gemini-2.5-pro, use-gemini-3-flash, retention-7-days, retention-90-days'));
         console.log(chalk.yellow('Available statuslines: statusline/context-monitor'));
         return;
       }
