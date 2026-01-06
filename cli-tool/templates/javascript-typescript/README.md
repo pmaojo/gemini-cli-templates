@@ -28,7 +28,7 @@ Use the CLI installer to automatically set up this template in your project:
 
 ```bash
 cd your-javascript-project
-npx gemini-cli-templates --language javascript-typescript
+npx github:pmaojo/gemini-cli-templates --language javascript-typescript
 ```
 
 The installer will:
@@ -45,14 +45,14 @@ Copy the template manually for more control:
 
 ```bash
 # Clone the repository
-git clone https://github.com/davila7/gemini-cli-templates.git
+git clone https://github.com/pmaojo/gemini-cli-templates.git
 
 # Copy the JavaScript/TypeScript template
 cp gemini-cli-templates/javascript-typescript/GEMINI.md your-project/
 
 # Then use the CLI to complete the setup
 cd your-project
-npx gemini-cli-templates --language javascript-typescript
+npx github:pmaojo/gemini-cli-templates --language javascript-typescript
 ```
 
 ## 🎨 Framework Support
@@ -193,7 +193,7 @@ The `GEMINI.md` file in this folder contains comprehensive guidance for:
 2. **Run the installer:**
 
    ```bash
-   npx gemini-cli-templates --language javascript-typescript
+   npx github:pmaojo/gemini-cli-templates --language javascript-typescript
    ```
 
 3. **Start Gemini Code:**
@@ -266,7 +266,7 @@ The template adapts to your specific framework needs automatically.
 ### After (With This Template)
 
 ```bash
-npx gemini-cli-templates --language javascript-typescript
+npx github:pmaojo/gemini-cli-templates --language javascript-typescript
 # ✅ Everything configured in 30 seconds!
 ```
 
@@ -291,4 +291,4 @@ Your contributions make this template better for the entire JavaScript/TypeScrip
 
 ---
 
-**Ready to supercharge your JavaScript/TypeScript development?** Run `npx gemini-cli-templates --language javascript-typescript` in your project now!
+**Ready to supercharge your JavaScript/TypeScript development?** Run `npx github:pmaojo/gemini-cli-templates --language javascript-typescript` in your project now!

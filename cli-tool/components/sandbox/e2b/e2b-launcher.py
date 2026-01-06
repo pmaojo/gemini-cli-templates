@@ -149,7 +149,7 @@ def main():
         if components_to_install:
             print("📦 Installing specified components...")
             install_result = sbx.commands.run(
-                f"npx gemini-cli-templates@latest {components_to_install}",
+                f"npx github:pmaojo/gemini-cli-templates {components_to_install}",
                 timeout=120,  # 2 minutes for component installation
             )
             

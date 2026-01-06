@@ -99,7 +99,7 @@ Assets/
 ## Usage:
 
 ```bash
-npx gemini-cli-templates@latest --command unity-project-setup
+npx github:pmaojo/gemini-cli-templates --command unity-project-setup
 ```
 
 ## Interactive Options:

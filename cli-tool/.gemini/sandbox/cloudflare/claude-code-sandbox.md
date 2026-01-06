@@ -66,15 +66,15 @@ This component sets up Cloudflare Sandbox SDK integration to run Gemini Code in 
 
 ```bash
 # Execute a prompt in Cloudflare sandbox
-npx gemini-cli-templates@latest --sandbox cloudflare --prompt "Calculate the 10th Fibonacci number"
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare --prompt "Calculate the 10th Fibonacci number"
 
 # Pass API keys directly
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --google-api-key your_google_key \
   --prompt "Create a web scraper"
 
 # Install components and execute
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --agent frontend-developer \
   --command setup-react \
   --google-api-key your_google_key \
@@ -100,7 +100,7 @@ The component creates:
 
 ### Option 1: CLI Parameters (Recommended)
 ```bash
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --google-api-key your_google_api_key \
   --prompt "Your prompt here"
 ```
@@ -211,19 +211,19 @@ const state = await sandbox.readFile('/data/state.json');
 
 ```bash
 # Mathematical computation
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --prompt "Calculate the 100th Fibonacci number"
 
 # Data analysis
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --prompt "What is the mean of [10, 20, 30, 40, 50]?"
 
 # String manipulation
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --prompt "Reverse the string 'Hello World'"
 
 # Web development
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --agent frontend-developer \
   --prompt "Create a responsive navigation bar"
 ```

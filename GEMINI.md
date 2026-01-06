@@ -515,17 +515,17 @@ Automation triggers for development workflows:
 
 ```bash
 # Install specific components
-npx gemini-cli-templates@latest --agent <name>
-npx gemini-cli-templates@latest --command <name>
-npx gemini-cli-templates@latest --mcp <name>
-npx gemini-cli-templates@latest --setting <name>
-npx gemini-cli-templates@latest --hook <name>
+npx github:pmaojo/gemini-cli-templates --agent <name>
+npx github:pmaojo/gemini-cli-templates --command <name>
+npx github:pmaojo/gemini-cli-templates --mcp <name>
+npx github:pmaojo/gemini-cli-templates --setting <name>
+npx github:pmaojo/gemini-cli-templates --hook <name>
 
 # Batch installation
-npx gemini-cli-templates@latest --agent security-auditor --command security-audit --setting read-only-mode
+npx github:pmaojo/gemini-cli-templates --agent security-auditor --command security-audit --setting read-only-mode
 
 # Interactive mode
-npx gemini-cli-templates@latest
+npx github:pmaojo/gemini-cli-templates
 ```
 
 #### Special Component Features

@@ -231,7 +231,7 @@ curl https://your-worker.workers.dev/health
 The sandbox integrates seamlessly with the main CLI:
 
 ```bash
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --Google-api-key your_key \
   --prompt "Your prompt"
 ```
@@ -240,7 +240,7 @@ npx gemini-cli-templates@latest --sandbox cloudflare \
 Can be combined with agents, commands, and settings:
 
 ```bash
-npx gemini-cli-templates@latest --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --agent frontend-developer \
   --command setup-react \
   --prompt "Create a todo app"

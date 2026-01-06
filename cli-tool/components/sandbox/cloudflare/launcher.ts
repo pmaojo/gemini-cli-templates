@@ -317,7 +317,7 @@ async function installAgents(agents: string[]): Promise<void> {
   }
 
   // Download each agent from GitHub
-  const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/davila7/gemini-cli-templates/main/cli-tool/components/agents';
+  const GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/pmaojo/gemini-cli-templates/main/cli-tool/components/agents';
 
   for (const agent of agents) {
     try {

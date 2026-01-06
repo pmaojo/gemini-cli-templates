@@ -27,7 +27,7 @@ Set your Google API key:
 export Google_API_KEY=sk-ant-your-api-key-here
 
 # Or pass directly when using the CLI
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --agent development/frontend-developer \
   --prompt "Create a React component" \
   --Google-api-key sk-ant-your-key
@@ -37,16 +37,16 @@ npx gemini-cli-templates@latest --sandbox docker \
 
 ```bash
 # Basic execution
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --prompt "Write a function to calculate factorial"
 
 # With specific agent
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --agent development/python-developer \
   --prompt "Create a data validation script"
 
 # With multiple components
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --agent development/fullstack-developer \
   --command development/setup-testing \
   --prompt "Set up a complete testing environment"
@@ -102,14 +102,14 @@ docker/
 ### Simple Code Generation
 
 ```bash
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --prompt "Create a REST API server with Express.js"
 ```
 
 ### With Specific Agent
 
 ```bash
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --agent security/security-auditor \
   --prompt "Audit this codebase for security vulnerabilities"
 ```
@@ -117,7 +117,7 @@ npx gemini-cli-templates@latest --sandbox docker \
 ### Multiple Components
 
 ```bash
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --agent development/frontend-developer \
   --command testing/setup-testing \
   --setting performance/performance-optimization \
@@ -128,7 +128,7 @@ npx gemini-cli-templates@latest --sandbox docker \
 
 ```bash
 # 1. Generate initial code
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --agent development/fullstack-developer \
   --prompt "Create a blog API with authentication"
 
@@ -136,7 +136,7 @@ npx gemini-cli-templates@latest --sandbox docker \
 ls -la output/
 
 # 3. Iterate on generated code
-npx gemini-cli-templates@latest --sandbox docker \
+npx github:pmaojo/gemini-cli-templates --sandbox docker \
   --prompt "Add pagination to the blog API"
 ```
 

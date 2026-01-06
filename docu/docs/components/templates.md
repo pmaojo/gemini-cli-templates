@@ -17,19 +17,19 @@ Templates are complete project configurations that install multiple components t
 Install this component locally in your project. Works with your existing Gemini Code setup.
 
 ```bash
-npx gemini-cli-templates@latest --template react --yes
+npx github:pmaojo/gemini-cli-templates --template react --yes
 ```
 
 ### Template with Directory
 
 ```bash
-npx gemini-cli-templates@latest --template nextjs --directory ./my-app --yes
+npx github:pmaojo/gemini-cli-templates --template nextjs --directory ./my-app --yes
 ```
 
 ### Template with Additional Components
 
 ```bash
-npx gemini-cli-templates@latest \
+npx github:pmaojo/gemini-cli-templates \
   --template react \
   --agent security/security-auditor \
   --hook notifications/slack-notifications

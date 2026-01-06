@@ -261,27 +261,27 @@ def main():
                 if agent_path:
                     # Extract folder/name from path (e.g., development-team/frontend-developer)
                     parts = agent_path.split("/agents/")[1].replace(".md", "")
-                    install_command = f"npx gemini-cli-templates@latest --agent {parts}"
+                    install_command = f"npx github:pmaojo/gemini-cli-templates --agent {parts}"
                 else:
-                    install_command = f"npx gemini-cli-templates@latest --agent {agent_name}"
+                    install_command = f"npx github:pmaojo/gemini-cli-templates --agent {agent_name}"
             except:
-                install_command = f"npx gemini-cli-templates@latest --agent {agent_name}"
+                install_command = f"npx github:pmaojo/gemini-cli-templates --agent {agent_name}"
         elif "mcp" in article_id.lower() or category == "MCP":
             component_type = "MCP"
             component_name = article_id.replace("-mcp", "").replace("-", " ").title()
-            install_command = f"npx gemini-cli-templates@latest --mcp {article_id.replace('-mcp', '')}"
+            install_command = f"npx github:pmaojo/gemini-cli-templates --mcp {article_id.replace('-mcp', '')}"
         elif "skill" in article_id.lower() or category == "Skills":
             component_type = "SKILL"
             component_name = article_id.replace("-skill", "").replace("-", " ").title()
-            install_command = f"npx gemini-cli-templates@latest --skill {article_id}"
+            install_command = f"npx github:pmaojo/gemini-cli-templates --skill {article_id}"
         elif "sandbox" in article_id.lower() or "e2b" in article_id.lower():
             component_type = "SANDBOX"
             component_name = article_id.replace("-", " ").title()
-            install_command = f"npx gemini-cli-templates@latest --sandbox e2b"
+            install_command = f"npx github:pmaojo/gemini-cli-templates --sandbox e2b"
         else:
             component_type = "COMPONENT"
             component_name = article_id.replace("-", " ").title()
-            install_command = f"npx gemini-cli-templates@latest"
+            install_command = f"npx github:pmaojo/gemini-cli-templates"
 
         print(f"\n{'='*60}")
         print(f"📄 Article: {article['title']}")

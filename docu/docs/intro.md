@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **Gemini Code Templates** is an open-source CLI tool that configures Gemini Code projects and provides specialized components to enhance your AI-powered development workflow.
 
-Browse over 500 components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** or contribute to the project on **[GitHub](https://github.com/davila7/gemini-cli-templates)**.
+Browse over 500 components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** or contribute to the project on **[GitHub](https://github.com/pmaojo/gemini-cli-templates)**.
 
 ## What does this CLI do?
 
@@ -21,14 +21,14 @@ Simplifies Gemini Code usage through:
 ### Interactive Installation
 
 ```bash
-npx gemini-cli-templates@latest
+npx github:pmaojo/gemini-cli-templates
 ```
 
 ### Specific Component
 
 ```bash
-npx gemini-cli-templates@latest --agent performance-testing/react-performance-optimization
-npx gemini-cli-templates@latest --command testing/generate-tests
+npx github:pmaojo/gemini-cli-templates --agent performance-testing/react-performance-optimization
+npx github:pmaojo/gemini-cli-templates --command testing/generate-tests
 ```
 
 ## Next Steps

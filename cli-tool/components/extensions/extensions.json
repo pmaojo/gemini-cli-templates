@@ -10,7 +10,7 @@
       "community",
       "gemini-cli-prompt-library"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-prompt-library"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-prompt-library"
   },
   {
     "name": "jules",
@@ -23,7 +23,7 @@
       "community",
       "jules"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=jules"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=jules"
   },
   {
     "name": "terraform-mcp-server",
@@ -36,7 +36,7 @@
       "cloud",
       "terraform-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=terraform-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=terraform-mcp-server"
   },
   {
     "name": "context7",
@@ -49,7 +49,7 @@
       "community",
       "context7"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=context7"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=context7"
   },
   {
     "name": "github-mcp-server",
@@ -62,7 +62,7 @@
       "devtools",
       "github-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=github-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=github-mcp-server"
   },
   {
     "name": "chrome-devtools-mcp",
@@ -75,7 +75,7 @@
       "devtools",
       "chrome-devtools-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=chrome-devtools-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=chrome-devtools-mcp"
   },
   {
     "name": "genai-toolbox",
@@ -88,7 +88,7 @@
       "ai-ml",
       "genai-toolbox"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=genai-toolbox"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=genai-toolbox"
   },
   {
     "name": "clasp",
@@ -101,7 +101,7 @@
       "community",
       "clasp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=clasp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=clasp"
   },
   {
     "name": "exa-mcp-server",
@@ -114,7 +114,7 @@
       "community",
       "exa-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=exa-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=exa-mcp-server"
   },
   {
     "name": "mcp-server-browserbase",
@@ -127,7 +127,7 @@
       "community",
       "mcp-server-browserbase"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server-browserbase"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-server-browserbase"
   },
   {
     "name": "mcp-grafana",
@@ -140,7 +140,7 @@
       "community",
       "mcp-grafana"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-grafana"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-grafana"
   },
   {
     "name": "conductor",
@@ -153,7 +153,7 @@
       "community",
       "conductor"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=conductor"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=conductor"
   },
   {
     "name": "mcp-server-kubernetes",
@@ -166,7 +166,7 @@
       "cloud",
       "mcp-server-kubernetes"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server-kubernetes"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-server-kubernetes"
   },
   {
     "name": "ai",
@@ -179,7 +179,7 @@
       "ai-ml",
       "ai"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=ai"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=ai"
   },
   {
     "name": "elevenlabs-mcp",
@@ -192,7 +192,7 @@
       "community",
       "elevenlabs-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=elevenlabs-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=elevenlabs-mcp"
   },
   {
     "name": "terraform-mcp-server",
@@ -205,7 +205,7 @@
       "cloud",
       "terraform-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=terraform-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=terraform-mcp-server"
   },
   {
     "name": "CloudBase-MCP",
@@ -218,7 +218,7 @@
       "database",
       "CloudBase-MCP"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=CloudBase-MCP"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=CloudBase-MCP"
   },
   {
     "name": "mcp-neo4j",
@@ -231,7 +231,7 @@
       "community",
       "mcp-neo4j"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-neo4j"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-neo4j"
   },
   {
     "name": "skills",
@@ -244,7 +244,7 @@
       "community",
       "skills"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=skills"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=skills"
   },
   {
     "name": "nanobanana",
@@ -257,7 +257,7 @@
       "community",
       "nanobanana"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=nanobanana"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=nanobanana"
   },
   {
     "name": "cloud-run-mcp",
@@ -270,7 +270,7 @@
       "cloud",
       "cloud-run-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-run-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloud-run-mcp"
   },
   {
     "name": "open-aware",
@@ -283,7 +283,7 @@
       "community",
       "open-aware"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=open-aware"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=open-aware"
   },
   {
     "name": "mcp-redis",
@@ -296,7 +296,7 @@
       "database",
       "mcp-redis"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-redis"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-redis"
   },
   {
     "name": "mcp",
@@ -309,7 +309,7 @@
       "community",
       "mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp"
   },
   {
     "name": "flutter",
@@ -322,7 +322,7 @@
       "community",
       "flutter"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=flutter"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=flutter"
   },
   {
     "name": "sonarqube-mcp-server",
@@ -335,7 +335,7 @@
       "community",
       "sonarqube-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=sonarqube-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=sonarqube-mcp-server"
   },
   {
     "name": "security",
@@ -348,7 +348,7 @@
       "security",
       "security"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=security"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=security"
   },
   {
     "name": "gemini-flow",
@@ -361,7 +361,7 @@
       "community",
       "gemini-flow"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-flow"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-flow"
   },
   {
     "name": "code-review",
@@ -374,7 +374,7 @@
       "devtools",
       "code-review"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=code-review"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=code-review"
   },
   {
     "name": "jules",
@@ -387,7 +387,7 @@
       "community",
       "jules"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=jules"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=jules"
   },
   {
     "name": "workspace",
@@ -400,7 +400,7 @@
       "community",
       "workspace"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=workspace"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=workspace"
   },
   {
     "name": "mcp-server-milvus",
@@ -413,7 +413,7 @@
       "community",
       "mcp-server-milvus"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server-milvus"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-server-milvus"
   },
   {
     "name": "gemini-cli-prompt-library",
@@ -426,7 +426,7 @@
       "community",
       "gemini-cli-prompt-library"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-prompt-library"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-prompt-library"
   },
   {
     "name": "dynatrace-mcp",
@@ -439,7 +439,7 @@
       "observability",
       "dynatrace-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=dynatrace-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=dynatrace-mcp"
   },
   {
     "name": "hf-mcp-server",
@@ -452,7 +452,7 @@
       "community",
       "hf-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=hf-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=hf-mcp-server"
   },
   {
     "name": "atlassian-mcp-server",
@@ -465,7 +465,7 @@
       "community",
       "atlassian-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=atlassian-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=atlassian-mcp-server"
   },
   {
     "name": "genkit",
@@ -478,7 +478,7 @@
       "community",
       "genkit"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=genkit"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=genkit"
   },
   {
     "name": "postman-mcp-server",
@@ -491,7 +491,7 @@
       "community",
       "postman-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=postman-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=postman-mcp-server"
   },
   {
     "name": "uuv",
@@ -504,7 +504,7 @@
       "community",
       "uuv"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=uuv"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=uuv"
   },
   {
     "name": "mcp-confluent",
@@ -517,7 +517,7 @@
       "community",
       "mcp-confluent"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-confluent"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-confluent"
   },
   {
     "name": "claude-prompts-mcp",
@@ -530,7 +530,7 @@
       "community",
       "claude-prompts-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=claude-prompts-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=claude-prompts-mcp"
   },
   {
     "name": "gke-mcp",
@@ -543,7 +543,7 @@
       "community",
       "gke-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gke-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gke-mcp"
   },
   {
     "name": "firebase",
@@ -556,7 +556,7 @@
       "community",
       "firebase"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=firebase"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=firebase"
   },
   {
     "name": "gemini-cli-elasticsearch",
@@ -569,7 +569,7 @@
       "community",
       "gemini-cli-elasticsearch"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-elasticsearch"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-elasticsearch"
   },
   {
     "name": "figma-gemini-cli-extension",
@@ -582,7 +582,7 @@
       "community",
       "figma-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=figma-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=figma-gemini-cli-extension"
   },
   {
     "name": "platform-ai",
@@ -595,7 +595,7 @@
       "ai-ml",
       "platform-ai"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=platform-ai"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=platform-ai"
   },
   {
     "name": "slash-criticalthink",
@@ -608,7 +608,7 @@
       "community",
       "slash-criticalthink"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=slash-criticalthink"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=slash-criticalthink"
   },
   {
     "name": "gemini-extension",
@@ -621,7 +621,7 @@
       "community",
       "gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-extension"
   },
   {
     "name": "mcp-toolbox",
@@ -634,7 +634,7 @@
       "community",
       "mcp-toolbox"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-toolbox"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-toolbox"
   },
   {
     "name": "skill-porter",
@@ -647,7 +647,7 @@
       "community",
       "skill-porter"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=skill-porter"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=skill-porter"
   },
   {
     "name": "postgres",
@@ -660,7 +660,7 @@
       "database",
       "postgres"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=postgres"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=postgres"
   },
   {
     "name": "GeminiCLI_ComputerUse_Extension",
@@ -673,7 +673,7 @@
       "community",
       "GeminiCLI_ComputerUse_Extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_ComputerUse_Extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=GeminiCLI_ComputerUse_Extension"
   },
   {
     "name": "developer-tools",
@@ -686,7 +686,7 @@
       "devtools",
       "developer-tools"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=developer-tools"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=developer-tools"
   },
   {
     "name": "pinecone-mcp",
@@ -699,7 +699,7 @@
       "community",
       "pinecone-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=pinecone-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=pinecone-mcp"
   },
   {
     "name": "gemini-docs-ext",
@@ -712,7 +712,7 @@
       "community",
       "gemini-docs-ext"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-docs-ext"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-docs-ext"
   },
   {
     "name": "snippets-rules",
@@ -725,7 +725,7 @@
       "community",
       "snippets-rules"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=snippets-rules"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=snippets-rules"
   },
   {
     "name": "gemini-cloud-assist-mcp",
@@ -738,7 +738,7 @@
       "cloud",
       "gemini-cloud-assist-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cloud-assist-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cloud-assist-mcp"
   },
   {
     "name": "gemini-cli-blueprint-extension",
@@ -751,7 +751,7 @@
       "community",
       "gemini-cli-blueprint-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-blueprint-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-blueprint-extension"
   },
   {
     "name": "adk-agent-extension",
@@ -764,7 +764,7 @@
       "community",
       "adk-agent-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=adk-agent-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=adk-agent-extension"
   },
   {
     "name": "globalping-mcp-server",
@@ -777,7 +777,7 @@
       "community",
       "globalping-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=globalping-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=globalping-mcp-server"
   },
   {
     "name": "GeminiCLI_Vision_Extension",
@@ -790,7 +790,7 @@
       "ai-ml",
       "GeminiCLI_Vision_Extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_Vision_Extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=GeminiCLI_Vision_Extension"
   },
   {
     "name": "gemini-cli-skillz",
@@ -803,7 +803,7 @@
       "community",
       "gemini-cli-skillz"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-skillz"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-skillz"
   },
   {
     "name": "gcloud",
@@ -816,7 +816,7 @@
       "cloud",
       "gcloud"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gcloud"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gcloud"
   },
   {
     "name": "ipsw-skill",
@@ -829,7 +829,7 @@
       "community",
       "ipsw-skill"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=ipsw-skill"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=ipsw-skill"
   },
   {
     "name": "outline-driven-development",
@@ -842,7 +842,7 @@
       "devtools",
       "outline-driven-development"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=outline-driven-development"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=outline-driven-development"
   },
   {
     "name": "Spec-Flow",
@@ -855,7 +855,7 @@
       "community",
       "Spec-Flow"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Spec-Flow"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Spec-Flow"
   },
   {
     "name": "bitrise-mcp",
@@ -868,7 +868,7 @@
       "community",
       "bitrise-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=bitrise-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=bitrise-mcp"
   },
   {
     "name": "cloud-sql-postgresql",
@@ -881,7 +881,7 @@
       "database",
       "cloud-sql-postgresql"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-postgresql"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloud-sql-postgresql"
   },
   {
     "name": "looker",
@@ -894,7 +894,7 @@
       "community",
       "looker"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=looker"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=looker"
   },
   {
     "name": "mcp-server",
@@ -907,7 +907,7 @@
       "community",
       "mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-server"
   },
   {
     "name": "google-ads-api-developer-assistant",
@@ -920,7 +920,7 @@
       "devtools",
       "google-ads-api-developer-assistant"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=google-ads-api-developer-assistant"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=google-ads-api-developer-assistant"
   },
   {
     "name": "bigquery-data-analytics",
@@ -933,7 +933,7 @@
       "community",
       "bigquery-data-analytics"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=bigquery-data-analytics"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=bigquery-data-analytics"
   },
   {
     "name": "datacommons",
@@ -946,7 +946,7 @@
       "community",
       "datacommons"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=datacommons"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=datacommons"
   },
   {
     "name": "vault-mcp-server",
@@ -959,7 +959,7 @@
       "security",
       "vault-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=vault-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=vault-mcp-server"
   },
   {
     "name": "GeminiCLI_File_Search_Extension",
@@ -972,7 +972,7 @@
       "community",
       "GeminiCLI_File_Search_Extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_File_Search_Extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=GeminiCLI_File_Search_Extension"
   },
   {
     "name": "observability",
@@ -985,7 +985,7 @@
       "observability",
       "observability"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=observability"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=observability"
   },
   {
     "name": "mcp-server",
@@ -998,7 +998,7 @@
       "community",
       "mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-server"
   },
   {
     "name": "firestore-native",
@@ -1011,7 +1011,7 @@
       "community",
       "firestore-native"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=firestore-native"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=firestore-native"
   },
   {
     "name": "mysql",
@@ -1024,7 +1024,7 @@
       "database",
       "mysql"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mysql"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mysql"
   },
   {
     "name": "dev-mcp-gemini-cli",
@@ -1037,7 +1037,7 @@
       "devtools",
       "dev-mcp-gemini-cli"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=dev-mcp-gemini-cli"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=dev-mcp-gemini-cli"
   },
   {
     "name": "gemini-cli-prompt-library",
@@ -1050,7 +1050,7 @@
       "community",
       "gemini-cli-prompt-library"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-prompt-library"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-prompt-library"
   },
   {
     "name": "sql-server",
@@ -1063,7 +1063,7 @@
       "database",
       "sql-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=sql-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=sql-server"
   },
   {
     "name": "stitch",
@@ -1076,7 +1076,7 @@
       "community",
       "stitch"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=stitch"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=stitch"
   },
   {
     "name": "Chrome-DevTools-MCP",
@@ -1089,7 +1089,7 @@
       "devtools",
       "Chrome-DevTools-MCP"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Chrome-DevTools-MCP"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Chrome-DevTools-MCP"
   },
   {
     "name": "gemini-plan-commands",
@@ -1102,7 +1102,7 @@
       "community",
       "gemini-plan-commands"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-plan-commands"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-plan-commands"
   },
   {
     "name": "ToolsForMCPServer-extension",
@@ -1115,7 +1115,7 @@
       "community",
       "ToolsForMCPServer-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=ToolsForMCPServer-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=ToolsForMCPServer-extension"
   },
   {
     "name": "ScreenshotExtension",
@@ -1128,7 +1128,7 @@
       "community",
       "ScreenshotExtension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=ScreenshotExtension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=ScreenshotExtension"
   },
   {
     "name": "gemini-cli-custom-commands",
@@ -1141,7 +1141,7 @@
       "community",
       "gemini-cli-custom-commands"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-custom-commands"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-custom-commands"
   },
   {
     "name": "db-context-enrichment",
@@ -1154,7 +1154,7 @@
       "database",
       "db-context-enrichment"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=db-context-enrichment"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=db-context-enrichment"
   },
   {
     "name": "alloydb",
@@ -1167,7 +1167,7 @@
       "database",
       "alloydb"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=alloydb"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=alloydb"
   },
   {
     "name": "bigquery-conversational-analytics",
@@ -1180,7 +1180,7 @@
       "community",
       "bigquery-conversational-analytics"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=bigquery-conversational-analytics"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=bigquery-conversational-analytics"
   },
   {
     "name": "adk-docs-ext",
@@ -1193,7 +1193,7 @@
       "community",
       "adk-docs-ext"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=adk-docs-ext"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=adk-docs-ext"
   },
   {
     "name": "wandb-mcp-server",
@@ -1206,7 +1206,7 @@
       "database",
       "wandb-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=wandb-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=wandb-mcp-server"
   },
   {
     "name": "GeminiCLI_Packet_Buddy_Extension",
@@ -1219,7 +1219,7 @@
       "community",
       "GeminiCLI_Packet_Buddy_Extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_Packet_Buddy_Extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=GeminiCLI_Packet_Buddy_Extension"
   },
   {
     "name": "gemini-agent-creator",
@@ -1232,7 +1232,7 @@
       "community",
       "gemini-agent-creator"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-agent-creator"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-agent-creator"
   },
   {
     "name": "canva-gemini-extension",
@@ -1245,7 +1245,7 @@
       "community",
       "canva-gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=canva-gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=canva-gemini-extension"
   },
   {
     "name": "study-ai",
@@ -1258,7 +1258,7 @@
       "ai-ml",
       "study-ai"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=study-ai"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=study-ai"
   },
   {
     "name": "GeminiAutoPM",
@@ -1271,7 +1271,7 @@
       "community",
       "GeminiAutoPM"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiAutoPM"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=GeminiAutoPM"
   },
   {
     "name": "gemini-cli-deep-research",
@@ -1284,7 +1284,7 @@
       "community",
       "gemini-cli-deep-research"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-deep-research"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-deep-research"
   },
   {
     "name": "cli",
@@ -1297,7 +1297,7 @@
       "community",
       "cli"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cli"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cli"
   },
   {
     "name": "spanner",
@@ -1310,7 +1310,7 @@
       "community",
       "spanner"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=spanner"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=spanner"
   },
   {
     "name": "chime",
@@ -1323,7 +1323,7 @@
       "community",
       "chime"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=chime"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=chime"
   },
   {
     "name": "Conductor-Beads",
@@ -1336,7 +1336,7 @@
       "community",
       "Conductor-Beads"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Conductor-Beads"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Conductor-Beads"
   },
   {
     "name": "gemini-kit",
@@ -1349,7 +1349,7 @@
       "community",
       "gemini-kit"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-kit"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-kit"
   },
   {
     "name": "gemini-system-agents",
@@ -1362,7 +1362,7 @@
       "community",
       "gemini-system-agents"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-system-agents"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-system-agents"
   },
   {
     "name": "GeminiCLI_ScreenShare_Extension",
@@ -1375,7 +1375,7 @@
       "community",
       "GeminiCLI_ScreenShare_Extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=GeminiCLI_ScreenShare_Extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=GeminiCLI_ScreenShare_Extension"
   },
   {
     "name": "napalm-geminicli-extension",
@@ -1388,7 +1388,7 @@
       "community",
       "napalm-geminicli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=napalm-geminicli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=napalm-geminicli-extension"
   },
   {
     "name": "gemini-cli-git",
@@ -1401,7 +1401,7 @@
       "devtools",
       "gemini-cli-git"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-git"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-git"
   },
   {
     "name": "Gemini-CLI-Extensions",
@@ -1414,7 +1414,7 @@
       "community",
       "Gemini-CLI-Extensions"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Gemini-CLI-Extensions"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Gemini-CLI-Extensions"
   },
   {
     "name": "pyATS_GeminiCLI_Extension",
@@ -1427,7 +1427,7 @@
       "community",
       "pyATS_GeminiCLI_Extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=pyATS_GeminiCLI_Extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=pyATS_GeminiCLI_Extension"
   },
   {
     "name": "mcp-game-asset-gen",
@@ -1440,7 +1440,7 @@
       "community",
       "mcp-game-asset-gen"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-game-asset-gen"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-game-asset-gen"
   },
   {
     "name": "uv-mcp",
@@ -1453,7 +1453,7 @@
       "community",
       "uv-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=uv-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=uv-mcp"
   },
   {
     "name": "gemini-cli-gopls",
@@ -1466,7 +1466,7 @@
       "community",
       "gemini-cli-gopls"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-gopls"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-gopls"
   },
   {
     "name": "archon-gemini-cli-extension",
@@ -1479,7 +1479,7 @@
       "community",
       "archon-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=archon-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=archon-gemini-cli-extension"
   },
   {
     "name": "joplin-mcp",
@@ -1492,7 +1492,7 @@
       "community",
       "joplin-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=joplin-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=joplin-mcp"
   },
   {
     "name": "chronosphere-mcp",
@@ -1505,7 +1505,7 @@
       "community",
       "chronosphere-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=chronosphere-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=chronosphere-mcp"
   },
   {
     "name": "gemini-for-kubernetes-development",
@@ -1518,7 +1518,7 @@
       "cloud",
       "gemini-for-kubernetes-development"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-for-kubernetes-development"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-for-kubernetes-development"
   },
   {
     "name": "agentic-integration-wrappers",
@@ -1531,7 +1531,7 @@
       "community",
       "agentic-integration-wrappers"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=agentic-integration-wrappers"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=agentic-integration-wrappers"
   },
   {
     "name": "cloud-sql-mysql",
@@ -1544,7 +1544,7 @@
       "database",
       "cloud-sql-mysql"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-mysql"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloud-sql-mysql"
   },
   {
     "name": "vertex",
@@ -1557,7 +1557,7 @@
       "community",
       "vertex"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=vertex"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=vertex"
   },
   {
     "name": "angular",
@@ -1570,7 +1570,7 @@
       "community",
       "angular"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=angular"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=angular"
   },
   {
     "name": "clix-dev-flow",
@@ -1583,7 +1583,7 @@
       "devtools",
       "clix-dev-flow"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=clix-dev-flow"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=clix-dev-flow"
   },
   {
     "name": "postman-gemini-cli-extension",
@@ -1596,7 +1596,7 @@
       "community",
       "postman-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=postman-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=postman-gemini-cli-extension"
   },
   {
     "name": "gemini-mentor",
@@ -1609,7 +1609,7 @@
       "community",
       "gemini-mentor"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-mentor"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-mentor"
   },
   {
     "name": "geminicli-git-tools-extension",
@@ -1622,7 +1622,7 @@
       "devtools",
       "geminicli-git-tools-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=geminicli-git-tools-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=geminicli-git-tools-extension"
   },
   {
     "name": "gas-fakes-ext",
@@ -1635,7 +1635,7 @@
       "community",
       "gas-fakes-ext"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gas-fakes-ext"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gas-fakes-ext"
   },
   {
     "name": "FileSearchStore-extension",
@@ -1648,7 +1648,7 @@
       "community",
       "FileSearchStore-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=FileSearchStore-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=FileSearchStore-extension"
   },
   {
     "name": "gemini-cli-telegram-extension",
@@ -1661,7 +1661,7 @@
       "community",
       "gemini-cli-telegram-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-telegram-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-telegram-extension"
   },
   {
     "name": "extension-browser",
@@ -1674,7 +1674,7 @@
       "community",
       "extension-browser"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=extension-browser"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=extension-browser"
   },
   {
     "name": "rill-gemini-extension",
@@ -1687,7 +1687,7 @@
       "community",
       "rill-gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=rill-gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=rill-gemini-extension"
   },
   {
     "name": "Gemini_cli_notion_extention",
@@ -1700,7 +1700,7 @@
       "community",
       "Gemini_cli_notion_extention"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Gemini_cli_notion_extention"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Gemini_cli_notion_extention"
   },
   {
     "name": "wix-mcp",
@@ -1713,7 +1713,7 @@
       "community",
       "wix-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=wix-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=wix-mcp"
   },
   {
     "name": "gemini-cli-blender-extension",
@@ -1726,7 +1726,7 @@
       "community",
       "gemini-cli-blender-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-blender-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-blender-extension"
   },
   {
     "name": "github-issue-agent",
@@ -1739,7 +1739,7 @@
       "devtools",
       "github-issue-agent"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=github-issue-agent"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=github-issue-agent"
   },
   {
     "name": "cloud-sql-sqlserver",
@@ -1752,7 +1752,7 @@
       "database",
       "cloud-sql-sqlserver"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-sqlserver"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloud-sql-sqlserver"
   },
   {
     "name": "dataplex",
@@ -1765,7 +1765,7 @@
       "community",
       "dataplex"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=dataplex"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=dataplex"
   },
   {
     "name": "cloud-sql-postgresql-observability",
@@ -1778,7 +1778,7 @@
       "database",
       "cloud-sql-postgresql-observability"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-postgresql-observability"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloud-sql-postgresql-observability"
   },
   {
     "name": "alloydb-observability",
@@ -1791,7 +1791,7 @@
       "database",
       "alloydb-observability"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=alloydb-observability"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=alloydb-observability"
   },
   {
     "name": "looker-conversational-analytics",
@@ -1804,7 +1804,7 @@
       "community",
       "looker-conversational-analytics"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=looker-conversational-analytics"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=looker-conversational-analytics"
   },
   {
     "name": "choicely-gemini-cli-extension",
@@ -1817,7 +1817,7 @@
       "community",
       "choicely-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=choicely-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=choicely-gemini-cli-extension"
   },
   {
     "name": "mcp",
@@ -1830,7 +1830,7 @@
       "community",
       "mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp"
   },
   {
     "name": "file-search",
@@ -1843,7 +1843,7 @@
       "community",
       "file-search"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=file-search"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=file-search"
   },
   {
     "name": "plan-commands",
@@ -1856,7 +1856,7 @@
       "community",
       "plan-commands"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=plan-commands"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=plan-commands"
   },
   {
     "name": "gemini-writer-extension",
@@ -1869,7 +1869,7 @@
       "community",
       "gemini-writer-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-writer-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-writer-extension"
   },
   {
     "name": "mongodb-gemini-extension",
@@ -1882,7 +1882,7 @@
       "database",
       "mongodb-gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mongodb-gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mongodb-gemini-extension"
   },
   {
     "name": "youtube-to-docs",
@@ -1895,7 +1895,7 @@
       "community",
       "youtube-to-docs"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=youtube-to-docs"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=youtube-to-docs"
   },
   {
     "name": "cloud-sql-mysql-observability",
@@ -1908,7 +1908,7 @@
       "database",
       "cloud-sql-mysql-observability"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-mysql-observability"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloud-sql-mysql-observability"
   },
   {
     "name": "cloud-sql-sqlserver-observability",
@@ -1921,7 +1921,7 @@
       "database",
       "cloud-sql-sqlserver-observability"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloud-sql-sqlserver-observability"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloud-sql-sqlserver-observability"
   },
   {
     "name": "run-long-command",
@@ -1934,7 +1934,7 @@
       "community",
       "run-long-command"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=run-long-command"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=run-long-command"
   },
   {
     "name": "odin-gemini-cli-extension",
@@ -1947,7 +1947,7 @@
       "community",
       "odin-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=odin-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=odin-gemini-cli-extension"
   },
   {
     "name": "self-command",
@@ -1960,7 +1960,7 @@
       "community",
       "self-command"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=self-command"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=self-command"
   },
   {
     "name": "gemini_cli_extention_wordpress",
@@ -1973,7 +1973,7 @@
       "community",
       "gemini_cli_extention_wordpress"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini_cli_extention_wordpress"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini_cli_extention_wordpress"
   },
   {
     "name": "conductor2",
@@ -1986,7 +1986,7 @@
       "community",
       "conductor2"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=conductor2"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=conductor2"
   },
   {
     "name": "chrome-devtools-mcp",
@@ -1999,7 +1999,7 @@
       "devtools",
       "chrome-devtools-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=chrome-devtools-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=chrome-devtools-mcp"
   },
   {
     "name": "gemini-cli-extension",
@@ -2012,7 +2012,7 @@
       "community",
       "gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-extension"
   },
   {
     "name": "prprompts-flutter-generator",
@@ -2025,7 +2025,7 @@
       "community",
       "prprompts-flutter-generator"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=prprompts-flutter-generator"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=prprompts-flutter-generator"
   },
   {
     "name": "gemini-cli-wakatime",
@@ -2038,7 +2038,7 @@
       "community",
       "gemini-cli-wakatime"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-wakatime"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-wakatime"
   },
   {
     "name": "scribe",
@@ -2051,7 +2051,7 @@
       "community",
       "scribe"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=scribe"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=scribe"
   },
   {
     "name": "gemini-cli-ssh-extension",
@@ -2064,7 +2064,7 @@
       "community",
       "gemini-cli-ssh-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-ssh-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-ssh-extension"
   },
   {
     "name": "gemini-todoist-extension",
@@ -2077,7 +2077,7 @@
       "community",
       "gemini-todoist-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-todoist-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-todoist-extension"
   },
   {
     "name": "gemini-history-learning",
@@ -2090,7 +2090,7 @@
       "community",
       "gemini-history-learning"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-history-learning"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-history-learning"
   },
   {
     "name": "gemini-cli-extension-gyaru",
@@ -2103,7 +2103,7 @@
       "community",
       "gemini-cli-extension-gyaru"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-extension-gyaru"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-extension-gyaru"
   },
   {
     "name": "ResxMcp",
@@ -2116,7 +2116,7 @@
       "community",
       "ResxMcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=ResxMcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=ResxMcp"
   },
   {
     "name": "geminicli-gitcommit",
@@ -2129,7 +2129,7 @@
       "devtools",
       "geminicli-gitcommit"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=geminicli-gitcommit"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=geminicli-gitcommit"
   },
   {
     "name": "sumcontext_Gemini_CLI_Extension",
@@ -2142,7 +2142,7 @@
       "community",
       "sumcontext_Gemini_CLI_Extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=sumcontext_Gemini_CLI_Extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=sumcontext_Gemini_CLI_Extension"
   },
   {
     "name": "gemini-cli-qwen",
@@ -2155,7 +2155,7 @@
       "community",
       "gemini-cli-qwen"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-qwen"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-qwen"
   },
   {
     "name": "dev-gas-extension",
@@ -2168,7 +2168,7 @@
       "devtools",
       "dev-gas-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=dev-gas-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=dev-gas-extension"
   },
   {
     "name": "gas-development-kit-extension",
@@ -2181,7 +2181,7 @@
       "devtools",
       "gas-development-kit-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gas-development-kit-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gas-development-kit-extension"
   },
   {
     "name": "arize-tracing-assistant",
@@ -2194,7 +2194,7 @@
       "community",
       "arize-tracing-assistant"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=arize-tracing-assistant"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=arize-tracing-assistant"
   },
   {
     "name": "vikunjamcp",
@@ -2207,7 +2207,7 @@
       "community",
       "vikunjamcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=vikunjamcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=vikunjamcp"
   },
   {
     "name": "transmit-security-journey-builder",
@@ -2220,7 +2220,7 @@
       "security",
       "transmit-security-journey-builder"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=transmit-security-journey-builder"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=transmit-security-journey-builder"
   },
   {
     "name": "co-researcher",
@@ -2233,7 +2233,7 @@
       "community",
       "co-researcher"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=co-researcher"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=co-researcher"
   },
   {
     "name": "gemini-cli-artilect",
@@ -2246,7 +2246,7 @@
       "community",
       "gemini-cli-artilect"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-artilect"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-artilect"
   },
   {
     "name": "gcp-release-notes",
@@ -2259,7 +2259,7 @@
       "cloud",
       "gcp-release-notes"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gcp-release-notes"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gcp-release-notes"
   },
   {
     "name": "gerrit-mcp-server",
@@ -2272,7 +2272,7 @@
       "community",
       "gerrit-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gerrit-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gerrit-mcp-server"
   },
   {
     "name": "mcp-amr",
@@ -2285,7 +2285,7 @@
       "community",
       "mcp-amr"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-amr"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-amr"
   },
   {
     "name": "mcp-shell-aliases",
@@ -2298,7 +2298,7 @@
       "community",
       "mcp-shell-aliases"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-shell-aliases"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-shell-aliases"
   },
   {
     "name": "copilot-mcp-tool",
@@ -2311,7 +2311,7 @@
       "community",
       "copilot-mcp-tool"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=copilot-mcp-tool"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=copilot-mcp-tool"
   },
   {
     "name": "ResxMcp",
@@ -2324,7 +2324,7 @@
       "community",
       "ResxMcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=ResxMcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=ResxMcp"
   },
   {
     "name": "gemini-extension-render-com-mcp",
@@ -2337,7 +2337,7 @@
       "community",
       "gemini-extension-render-com-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-extension-render-com-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-extension-render-com-mcp"
   },
   {
     "name": "comment-driven-tests-extension",
@@ -2350,7 +2350,7 @@
       "devtools",
       "comment-driven-tests-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=comment-driven-tests-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=comment-driven-tests-extension"
   },
   {
     "name": "google-workspace-inbox",
@@ -2363,7 +2363,7 @@
       "community",
       "google-workspace-inbox"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=google-workspace-inbox"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=google-workspace-inbox"
   },
   {
     "name": "gemma3-mcp",
@@ -2376,7 +2376,7 @@
       "community",
       "gemma3-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemma3-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemma3-mcp"
   },
   {
     "name": "gemini-cli-babashka",
@@ -2389,7 +2389,7 @@
       "community",
       "gemini-cli-babashka"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-babashka"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-babashka"
   },
   {
     "name": "anomalo-gemini-extension",
@@ -2402,7 +2402,7 @@
       "community",
       "anomalo-gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=anomalo-gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=anomalo-gemini-extension"
   },
   {
     "name": "mcp-repo-onboarding",
@@ -2415,7 +2415,7 @@
       "community",
       "mcp-repo-onboarding"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-repo-onboarding"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-repo-onboarding"
   },
   {
     "name": "copilot-mcp-server",
@@ -2428,7 +2428,7 @@
       "community",
       "copilot-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=copilot-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=copilot-mcp-server"
   },
   {
     "name": "expert-typst",
@@ -2441,7 +2441,7 @@
       "community",
       "expert-typst"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=expert-typst"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=expert-typst"
   },
   {
     "name": "agent-kit-gemini",
@@ -2454,7 +2454,7 @@
       "community",
       "agent-kit-gemini"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=agent-kit-gemini"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=agent-kit-gemini"
   },
   {
     "name": "netbox-geminicli-extension",
@@ -2467,7 +2467,7 @@
       "community",
       "netbox-geminicli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=netbox-geminicli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=netbox-geminicli-extension"
   },
   {
     "name": "persona",
@@ -2480,7 +2480,7 @@
       "community",
       "persona"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=persona"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=persona"
   },
   {
     "name": "git-prompts-mcp-server",
@@ -2493,7 +2493,7 @@
       "devtools",
       "git-prompts-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=git-prompts-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=git-prompts-mcp-server"
   },
   {
     "name": "intelappv4",
@@ -2506,7 +2506,7 @@
       "community",
       "intelappv4"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=intelappv4"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=intelappv4"
   },
   {
     "name": "mcp-neo4j",
@@ -2519,7 +2519,7 @@
       "community",
       "mcp-neo4j"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-neo4j"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-neo4j"
   },
   {
     "name": "skill-porter",
@@ -2532,7 +2532,7 @@
       "community",
       "skill-porter"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=skill-porter"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=skill-porter"
   },
   {
     "name": "my-code-analyzer",
@@ -2545,7 +2545,7 @@
       "devtools",
       "my-code-analyzer"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=my-code-analyzer"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=my-code-analyzer"
   },
   {
     "name": "aoc-utils-mcp",
@@ -2558,7 +2558,7 @@
       "community",
       "aoc-utils-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=aoc-utils-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=aoc-utils-mcp"
   },
   {
     "name": "miro-ai",
@@ -2571,7 +2571,7 @@
       "ai-ml",
       "miro-ai"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=miro-ai"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=miro-ai"
   },
   {
     "name": "ailang_bootstrap",
@@ -2584,7 +2584,7 @@
       "ai-ml",
       "ailang_bootstrap"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=ailang_bootstrap"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=ailang_bootstrap"
   },
   {
     "name": "dai-mcp",
@@ -2597,7 +2597,7 @@
       "ai-ml",
       "dai-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=dai-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=dai-mcp"
   },
   {
     "name": "doc-indexer",
@@ -2610,7 +2610,7 @@
       "community",
       "doc-indexer"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=doc-indexer"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=doc-indexer"
   },
   {
     "name": "Liku-AI",
@@ -2623,7 +2623,7 @@
       "ai-ml",
       "Liku-AI"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Liku-AI"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Liku-AI"
   },
   {
     "name": "genai-toolbox",
@@ -2636,7 +2636,7 @@
       "ai-ml",
       "genai-toolbox"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=genai-toolbox"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=genai-toolbox"
   },
   {
     "name": "prompt-library-extension",
@@ -2649,7 +2649,7 @@
       "community",
       "prompt-library-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=prompt-library-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=prompt-library-extension"
   },
   {
     "name": "spec-kit-analyzer",
@@ -2662,7 +2662,7 @@
       "community",
       "spec-kit-analyzer"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=spec-kit-analyzer"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=spec-kit-analyzer"
   },
   {
     "name": "cloudflare-mcp",
@@ -2675,7 +2675,7 @@
       "cloud",
       "cloudflare-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=cloudflare-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=cloudflare-mcp"
   },
   {
     "name": "vercel-mcp",
@@ -2688,7 +2688,7 @@
       "community",
       "vercel-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=vercel-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=vercel-mcp"
   },
   {
     "name": "sample-gemini-cli-extension",
@@ -2701,7 +2701,7 @@
       "community",
       "sample-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=sample-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=sample-gemini-cli-extension"
   },
   {
     "name": "adk-docs",
@@ -2714,7 +2714,7 @@
       "community",
       "adk-docs"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=adk-docs"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=adk-docs"
   },
   {
     "name": "gitops-extension",
@@ -2727,7 +2727,7 @@
       "devtools",
       "gitops-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gitops-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gitops-extension"
   },
   {
     "name": "gemini-context-extension",
@@ -2740,7 +2740,7 @@
       "community",
       "gemini-context-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-context-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-context-extension"
   },
   {
     "name": "intelacademyV3",
@@ -2753,7 +2753,7 @@
       "community",
       "intelacademyV3"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=intelacademyV3"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=intelacademyV3"
   },
   {
     "name": "claude-devtools",
@@ -2766,7 +2766,7 @@
       "devtools",
       "claude-devtools"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=claude-devtools"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=claude-devtools"
   },
   {
     "name": "Skills-Library",
@@ -2779,7 +2779,7 @@
       "community",
       "Skills-Library"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Skills-Library"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Skills-Library"
   },
   {
     "name": "gemini-extension",
@@ -2792,7 +2792,7 @@
       "community",
       "gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-extension"
   },
   {
     "name": "gemini-slidev-extension",
@@ -2805,7 +2805,7 @@
       "devtools",
       "gemini-slidev-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-slidev-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-slidev-extension"
   },
   {
     "name": "mcp-performance",
@@ -2818,7 +2818,7 @@
       "community",
       "mcp-performance"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-performance"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-performance"
   },
   {
     "name": "post-bridge-mcp",
@@ -2831,7 +2831,7 @@
       "community",
       "post-bridge-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=post-bridge-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=post-bridge-mcp"
   },
   {
     "name": "gemini-screenshot-extension",
@@ -2844,7 +2844,7 @@
       "community",
       "gemini-screenshot-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-screenshot-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-screenshot-extension"
   },
   {
     "name": "sdd",
@@ -2857,7 +2857,7 @@
       "community",
       "sdd"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=sdd"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=sdd"
   },
   {
     "name": "wordlift-gemini-cli-extension",
@@ -2870,7 +2870,7 @@
       "community",
       "wordlift-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=wordlift-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=wordlift-gemini-cli-extension"
   },
   {
     "name": "gemini-witty-sayings",
@@ -2883,7 +2883,7 @@
       "community",
       "gemini-witty-sayings"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-witty-sayings"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-witty-sayings"
   },
   {
     "name": "prompt-library-extension",
@@ -2896,7 +2896,7 @@
       "community",
       "prompt-library-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=prompt-library-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=prompt-library-extension"
   },
   {
     "name": "java-dev-ai",
@@ -2909,7 +2909,7 @@
       "ai-ml",
       "java-dev-ai"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=java-dev-ai"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=java-dev-ai"
   },
   {
     "name": "sensei",
@@ -2922,7 +2922,7 @@
       "community",
       "sensei"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=sensei"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=sensei"
   },
   {
     "name": "github-mcp",
@@ -2935,7 +2935,7 @@
       "devtools",
       "github-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=github-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=github-mcp"
   },
   {
     "name": "stateful-auth-for-the-github-mcp-server",
@@ -2948,7 +2948,7 @@
       "security",
       "stateful-auth-for-the-github-mcp-server"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=stateful-auth-for-the-github-mcp-server"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=stateful-auth-for-the-github-mcp-server"
   },
   {
     "name": "context7",
@@ -2961,7 +2961,7 @@
       "community",
       "context7"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=context7"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=context7"
   },
   {
     "name": "conductor",
@@ -2974,7 +2974,7 @@
       "community",
       "conductor"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=conductor"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=conductor"
   },
   {
     "name": "IntelAcademyV2",
@@ -2987,7 +2987,7 @@
       "community",
       "IntelAcademyV2"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=IntelAcademyV2"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=IntelAcademyV2"
   },
   {
     "name": "Madhoush-website",
@@ -3000,7 +3000,7 @@
       "community",
       "Madhoush-website"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Madhoush-website"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Madhoush-website"
   },
   {
     "name": "chrome-devtools-mcp",
@@ -3013,7 +3013,7 @@
       "devtools",
       "chrome-devtools-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=chrome-devtools-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=chrome-devtools-mcp"
   },
   {
     "name": "gitlab-gemini-extension",
@@ -3026,7 +3026,7 @@
       "devtools",
       "gitlab-gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gitlab-gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gitlab-gemini-extension"
   },
   {
     "name": "articleprocessor",
@@ -3039,7 +3039,7 @@
       "community",
       "articleprocessor"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=articleprocessor"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=articleprocessor"
   },
   {
     "name": "blender-mcp-gemini-cli-extension",
@@ -3052,7 +3052,7 @@
       "community",
       "blender-mcp-gemini-cli-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=blender-mcp-gemini-cli-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=blender-mcp-gemini-cli-extension"
   },
   {
     "name": "gemini-cli-hubs",
@@ -3065,7 +3065,7 @@
       "community",
       "gemini-cli-hubs"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-hubs"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-hubs"
   },
   {
     "name": "r-package-dev-gemini",
@@ -3078,7 +3078,7 @@
       "devtools",
       "r-package-dev-gemini"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=r-package-dev-gemini"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=r-package-dev-gemini"
   },
   {
     "name": "gemini-logos",
@@ -3091,7 +3091,7 @@
       "observability",
       "gemini-logos"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-logos"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-logos"
   },
   {
     "name": "piata-ai-new",
@@ -3104,7 +3104,7 @@
       "ai-ml",
       "piata-ai-new"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=piata-ai-new"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=piata-ai-new"
   },
   {
     "name": "gemini-email-notifier",
@@ -3117,7 +3117,7 @@
       "ai-ml",
       "gemini-email-notifier"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-email-notifier"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-email-notifier"
   },
   {
     "name": "gemini-notion-extension",
@@ -3130,7 +3130,7 @@
       "community",
       "gemini-notion-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-notion-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-notion-extension"
   },
   {
     "name": "java-dev-assist-extension",
@@ -3143,7 +3143,7 @@
       "devtools",
       "java-dev-assist-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=java-dev-assist-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=java-dev-assist-extension"
   },
   {
     "name": "gh-mcp",
@@ -3156,7 +3156,7 @@
       "community",
       "gh-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gh-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gh-mcp"
   },
   {
     "name": "genai-toolbox",
@@ -3169,7 +3169,7 @@
       "ai-ml",
       "genai-toolbox"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=genai-toolbox"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=genai-toolbox"
   },
   {
     "name": "remote-agent-extension",
@@ -3182,7 +3182,7 @@
       "community",
       "remote-agent-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=remote-agent-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=remote-agent-extension"
   },
   {
     "name": "project-worker",
@@ -3195,7 +3195,7 @@
       "community",
       "project-worker"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=project-worker"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=project-worker"
   },
   {
     "name": "superpowers",
@@ -3208,7 +3208,7 @@
       "community",
       "superpowers"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=superpowers"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=superpowers"
   },
   {
     "name": "daily-grind-extension",
@@ -3221,7 +3221,7 @@
       "ai-ml",
       "daily-grind-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=daily-grind-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=daily-grind-extension"
   },
   {
     "name": "conductor",
@@ -3234,7 +3234,7 @@
       "community",
       "conductor"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=conductor"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=conductor"
   },
   {
     "name": "omafit",
@@ -3247,7 +3247,7 @@
       "community",
       "omafit"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=omafit"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=omafit"
   },
   {
     "name": "neo-mcp",
@@ -3260,7 +3260,7 @@
       "community",
       "neo-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=neo-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=neo-mcp"
   },
   {
     "name": "task-cli",
@@ -3273,7 +3273,7 @@
       "productivity",
       "task-cli"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=task-cli"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=task-cli"
   },
   {
     "name": "mediationverse-gemini-extension",
@@ -3286,7 +3286,7 @@
       "community",
       "mediationverse-gemini-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mediationverse-gemini-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mediationverse-gemini-extension"
   },
   {
     "name": "fastmcp-gemini-ext",
@@ -3299,7 +3299,7 @@
       "community",
       "fastmcp-gemini-ext"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=fastmcp-gemini-ext"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=fastmcp-gemini-ext"
   },
   {
     "name": "gemini-cli-extension_txt-for-ppt",
@@ -3312,7 +3312,7 @@
       "community",
       "gemini-cli-extension_txt-for-ppt"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=gemini-cli-extension_txt-for-ppt"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=gemini-cli-extension_txt-for-ppt"
   },
   {
     "name": "Liku_AI",
@@ -3325,7 +3325,7 @@
       "ai-ml",
       "Liku_AI"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=Liku_AI"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=Liku_AI"
   },
   {
     "name": "agent-orchestrator-extension",
@@ -3338,7 +3338,7 @@
       "community",
       "agent-orchestrator-extension"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=agent-orchestrator-extension"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=agent-orchestrator-extension"
   },
   {
     "name": "mcp-nanobanana",
@@ -3351,7 +3351,7 @@
       "community",
       "mcp-nanobanana"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-nanobanana"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-nanobanana"
   },
   {
     "name": "blog-assistant",
@@ -3364,7 +3364,7 @@
       "observability",
       "blog-assistant"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=blog-assistant"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=blog-assistant"
   },
   {
     "name": "migration_proto",
@@ -3377,7 +3377,7 @@
       "community",
       "migration_proto"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=migration_proto"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=migration_proto"
   },
   {
     "name": "fastmcp-gemini-ext-dep",
@@ -3390,7 +3390,7 @@
       "community",
       "fastmcp-gemini-ext-dep"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=fastmcp-gemini-ext-dep"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=fastmcp-gemini-ext-dep"
   },
   {
     "name": "tester-mcp",
@@ -3403,7 +3403,7 @@
       "devtools",
       "tester-mcp"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=tester-mcp"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=tester-mcp"
   },
   {
     "name": "LikuBuddy",
@@ -3416,7 +3416,7 @@
       "community",
       "LikuBuddy"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=LikuBuddy"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=LikuBuddy"
   },
   {
     "name": "mcp-nanobanana",
@@ -3429,7 +3429,7 @@
       "community",
       "mcp-nanobanana"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=mcp-nanobanana"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=mcp-nanobanana"
   },
   {
     "name": "expert-proposal",
@@ -3442,6 +3442,6 @@
       "community",
       "expert-proposal"
     ],
-    "installCommand": "npx gemini-cli-templates@latest --extension=expert-proposal"
+    "installCommand": "npx github:pmaojo/gemini-cli-templates --extension=expert-proposal"
   }
 ]

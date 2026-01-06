@@ -777,7 +777,7 @@
             <div class="terminal-subtitle">real-time monitoring dashboard</div>
             <div class="terminal-subtitle" id="lastUpdate"></div>
             
-            <a href="https://github.com/davila7/gemini-cli-templates" target="_blank" class="github-star-btn" title="Give us a star on GitHub to support the project!">
+            <a href="https://github.com/pmaojo/gemini-cli-templates" target="_blank" class="github-star-btn" title="Give us a star on GitHub to support the project!">
                 <span class="star-icon">⭐</span>
                 <span>Star on GitHub</span>
             </a>

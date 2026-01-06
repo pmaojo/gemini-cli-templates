@@ -537,7 +537,7 @@ function generateComponentCard(component, category) {
     if (componentPath.endsWith('.md') || componentPath.endsWith('.json')) {
         componentPath = componentPath.replace(/\.(md|json)$/, '');
     }
-    const installCommand = `npx gemini-cli-templates@latest --${component.type}=${componentPath} --yes`;
+    const installCommand = `npx github:pmaojo/gemini-cli-templates --${component.type}=${componentPath} --yes`;
     
     const typeConfig = {
         agent: { icon: '🤖', color: '#ff6b6b' },
@@ -631,7 +631,7 @@ function generateInstallCommand(component, category) {
         categoryParam = category.slice(0, -1); // 'setting' or 'hook'
     }
     
-    return `npx gemini-cli-templates@latest --${categoryParam}=${name} --yes`;
+    return `npx github:pmaojo/gemini-cli-templates --${categoryParam}=${name} --yes`;
 }
 
 /**

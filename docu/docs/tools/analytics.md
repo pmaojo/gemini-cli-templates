@@ -9,7 +9,7 @@ Real-time monitoring of your Gemini Code sessions through a web interface.
 ## Launch Command
 
 ```bash
-npx gemini-cli-templates@latest --analytics
+npx github:pmaojo/gemini-cli-templates --analytics
 ```
 
 Opens automatically at `http://localhost:3333`.
