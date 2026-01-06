@@ -380,7 +380,7 @@ def generate_components_json():
     templates_base_path = 'cli-tool/templates'
     plugins_path = '.gemini-plugin/marketplace.json'
     output_path = 'docs/components.json'
-    components_data = {'agents': [], 'commands': [], 'mcps': [], 'settings': [], 'hooks': [], 'sandbox': [], 'skills': [], 'templates': [], 'plugins': []}
+    components_data = {'agents': [], 'commands': [], 'mcps': [], 'settings': [], 'hooks': [], 'sandbox': [], 'skills': [], 'templates': [], 'plugins': [], 'extensions': []}
 
     # Run security validation
     security_metadata = run_security_validation()
@@ -629,6 +629,93 @@ def generate_components_json():
         except Exception as e:
             print(f"⚠️ Error reading components metadata from {components_marketplace_path}: {e}")
 
+    # Scan extensions from cli-tool/components/extensions/ and add them as plugins
+    extensions_path = 'cli-tool/components/extensions'
+    if os.path.isdir(extensions_path):
+        print(f"Scanning for extensions in {extensions_path}...")
+
+        # Check for consolidated extensions.json
+        extensions_json_path = os.path.join(extensions_path, 'extensions.json')
+        if os.path.isfile(extensions_json_path):
+            try:
+                with open(extensions_json_path, 'r', encoding='utf-8') as f:
+                    all_extensions = json.load(f)
+
+                for ext in all_extensions:
+                    name = ext.get('name', '')
+                    # Look up download count
+                    extension_download_key = f"plugins/{name}"
+                    extension_downloads = download_stats.get(extension_download_key, 0)
+
+                    extension_entry = {
+                        'name': name,
+                        'id': name,
+                        'type': 'extension',
+                        'category': ext.get('category', 'community'),
+                        'description': ext.get('description', ''),
+                        'version': ext.get('version', '1.0.0'),
+                        'keywords': ext.get('tags', []),
+                        'author': ext.get('author', 'Community'),
+                        'commands': 0,
+                        'agents': 0,
+                        'mcpServers': 0,
+                        'installCommand': ext.get('installCommand', f"npx gemini-cli-templates@latest --extension={name}"),
+                        'downloads': extension_downloads,
+                        'displayName': ext.get('displayName', name),
+                        'repository': ext.get('repository', '')
+                    }
+                    components_data['extensions'].append(extension_entry)
+
+                print(f"  Processed {len(all_extensions)} extensions from extensions.json")
+
+            except Exception as e:
+                print(f"⚠️ Error reading extensions.json: {e}")
+
+        # Also scan individual files if any (legacy or additional)
+        for category in os.listdir(extensions_path):
+            category_path = os.path.join(extensions_path, category)
+            if os.path.isdir(category_path):
+                for file_name in os.listdir(category_path):
+                    if file_name.endswith('.json'):
+                        file_path = os.path.join(category_path, file_name)
+                        try:
+                            with open(file_path, 'r', encoding='utf-8') as f:
+                                extension_data = json.load(f)
+
+                            name = extension_data.get('name', os.path.splitext(file_name)[0])
+
+                            # Check if already added from extensions.json
+                            if any(e['name'] == name for e in components_data['extensions']):
+                                continue
+
+                            # Look up download count for this extension
+                            # Extensions are treated as plugins in the download stats
+                            extension_download_key = f"plugins/{name}"
+                            extension_downloads = download_stats.get(extension_download_key, 0)
+
+                            extension_entry = {
+                                'name': name,
+                                'id': name,
+                                'type': 'extension',
+                                'category': category,
+                                'description': extension_data.get('description', ''),
+                                'version': extension_data.get('version', '1.0.0'),
+                                'keywords': extension_data.get('tags', []),
+                                'author': extension_data.get('author', 'Community'),
+                                'commands': 0, # Placeholder
+                                'agents': 0, # Placeholder
+                                'mcpServers': 0, # Placeholder
+                                'installCommand': f"npx gemini-cli-templates@latest --extension={name}",
+                                'downloads': extension_downloads,
+                                'displayName': extension_data.get('displayName', name),
+                                'repository': extension_data.get('repository', '')
+                            }
+                            components_data['extensions'].append(extension_entry)
+                            print(f"  Processed extension: {category}/{name}")
+
+                        except Exception as e:
+                            print(f"⚠️ Error reading extension {file_path}: {e}")
+
     # Scan plugins from marketplace.json and store marketplace data
     marketplace_full_data = None
     if os.path.isfile(plugins_path):
@@ -643,6 +730,12 @@ def generate_components_json():
             if 'plugins' in marketplace_data:
                 for plugin in marketplace_data['plugins']:
                     plugin_name = plugin.get('name', '')
+
+                    # Avoid duplicates if extension with same name was already added
+                    if any(p['name'] == plugin_name for p in components_data['plugins']):
+                        print(f"  Skipping duplicate plugin from marketplace.json: {plugin_name}")
+                        continue
+
                     plugin_description = plugin.get('description', '')
                     plugin_version = plugin.get('version', '1.0.0')
                     plugin_keywords = plugin.get('keywords', [])
@@ -704,8 +797,8 @@ def generate_components_json():
 
     # Sort components alphabetically
     for component_type in components_data:
-        if component_type in ['templates', 'plugins']:
-            # Sort templates and plugins by name since they don't have path
+        if component_type in ['templates', 'plugins', 'extensions']:
+            # Sort templates, plugins and extensions by name since they don't have path
             components_data[component_type].sort(key=lambda x: x['name'])
         else:
             # Sort other components by path

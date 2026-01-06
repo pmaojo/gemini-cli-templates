@@ -10,7 +10,7 @@
         console.log('Generating search data files...');
         
         // Create separate files for each category
-        const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'templates'];
+        const categories = ['agents', 'commands', 'settings', 'hooks', 'mcps', 'templates', 'extensions'];
         
         for (const category of categories) {
             if (data[category] && Array.isArray(data[category])) {

@@ -462,6 +462,13 @@ class IndexPageManager {
             });
         }
 
+        if (this.componentsData.extensions && Array.isArray(this.componentsData.extensions)) {
+            this.componentsData.extensions.forEach(component => {
+                const category = component.category || 'general';
+                this.availableCategories.extensions.add(category);
+            });
+        }
+
         // Collect categories from templates (use language as category for language templates)
         if (this.componentsData.templates && Array.isArray(this.componentsData.templates)) {
             this.componentsData.templates.forEach(template => {
@@ -501,6 +508,7 @@ class IndexPageManager {
             case 'settings':
             case 'hooks':
             case 'skills':
+            case 'extensions':
                 this.displayComponents(grid, this.currentFilter);
                 break;
             default:
@@ -718,7 +726,8 @@ class IndexPageManager {
             mcp: { icon: '🔌', color: '#45b7d1' },
             setting: { icon: '⚙️', color: '#9c88ff' },
             hook: { icon: '🪝', color: '#ff8c42' },
-            skill: { icon: '🎨', color: '#f59e0b' }
+            skill: { icon: '🎨', color: '#f59e0b' },
+            extension: { icon: '🧩', color: '#10b981' }
         };
         
         const config = typeConfig[component.type];
@@ -915,6 +924,7 @@ class IndexPageManager {
         const settingsBtn = document.querySelector('[data-filter="settings"]');
         const hooksBtn = document.querySelector('[data-filter="hooks"]');
         const skillsBtn = document.querySelector('[data-filter="skills"]');
+        const extensionsBtn = document.querySelector('[data-filter="extensions"]');
         const templatesBtn = document.querySelector('[data-filter="templates"]');
 
         if (agentsBtn) {
@@ -934,6 +944,9 @@ class IndexPageManager {
         }
         if (skillsBtn) {
             skillsBtn.innerHTML = `<span class="new-label">NEW</span><span class="chip-icon">🎨</span>skills (${totalCounts.skills})`;
+        }
+        if (extensionsBtn) {
+            extensionsBtn.innerHTML = `<span class="chip-icon">🧩</span>extensions (${totalCounts.extensions})`;
         }
         if (templatesBtn) {
             templatesBtn.innerHTML = `<span class="chip-icon">📦</span>templates (${totalCounts.templates})`;
@@ -978,6 +991,12 @@ class IndexPageManager {
                 name: 'Skill',
                 description: 'Add modular capabilities with progressive disclosure',
                 color: '#f59e0b'
+            },
+            extensions: {
+                icon: '🧩',
+                name: 'Extension',
+                description: 'Add community-built extensions to your CLI',
+                color: '#10b981'
             }
         };
         
@@ -1376,6 +1395,11 @@ function showCategoryFilters(componentType) {
                 const skills = dataLoader.getComponentsByType('skill');
                 console.log('Skills data:', skills);
                 categories = getUniqueCategories(skills);
+                break;
+            case 'extensions':
+                const extensions = dataLoader.getComponentsByType('extension');
+                console.log('Extensions data:', extensions);
+                categories = getUniqueCategories(extensions);
                 break;
             case 'templates':
                 const templates = dataLoader.getComponentsByType('template');
