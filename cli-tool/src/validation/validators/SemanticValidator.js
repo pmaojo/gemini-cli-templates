@@ -282,7 +282,8 @@ class SemanticValidator extends BaseValidator {
       'bcrypt',
       'z.string',
       '{',   // Object start
-      '...'  // Spread operator
+      '...',  // Spread operator
+      'await' // Async code
     ];
 
     for (const { pattern, code, message, severity } of this.SENSITIVE_DATA_PATTERNS) {
