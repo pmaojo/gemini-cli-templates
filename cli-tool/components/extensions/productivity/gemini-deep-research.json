@@ -1,0 +1,10 @@
+{
+  "name": "gemini-deep-research",
+  "displayName": "Deep Research",
+  "description": "Advanced research capabilities with multi-source synthesis",
+  "repository": "https://github.com/gemini-cli-extensions/gemini-deep-research",
+  "author": "Community",
+  "category": "productivity",
+  "tags": ["research", "synthesis", "analysis"],
+  "recommended": false
+}

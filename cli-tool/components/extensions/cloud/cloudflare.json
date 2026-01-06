@@ -1,0 +1,10 @@
+{
+  "name": "cloudflare",
+  "displayName": "Cloudflare",
+  "description": "Cloudflare CDN and edge computing integration",
+  "repository": "https://github.com/gemini-cli-extensions/cloudflare-mcp",
+  "author": "Community",
+  "category": "cloud",
+  "tags": ["cloudflare", "cdn", "edge"],
+  "recommended": false
+}

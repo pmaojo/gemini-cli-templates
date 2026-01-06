@@ -1,0 +1,10 @@
+{
+  "name": "dataplex",
+  "displayName": "Dataplex",
+  "description": "Google Dataplex data management integration",
+  "repository": "https://github.com/gemini-cli-extensions/dataplex",
+  "author": "Google",
+  "category": "cloud",
+  "tags": ["dataplex", "data", "google-cloud"],
+  "recommended": false
+}

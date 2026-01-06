@@ -1,0 +1,10 @@
+{
+  "name": "bigquery",
+  "displayName": "BigQuery",
+  "description": "Google BigQuery data analytics and conversational queries",
+  "repository": "https://github.com/gemini-cli-extensions/bigquery-data-analytics",
+  "author": "Google",
+  "category": "database",
+  "tags": ["bigquery", "analytics", "data", "google-cloud"],
+  "recommended": false
+}

@@ -1,0 +1,10 @@
+{
+  "name": "dev-flow",
+  "displayName": "Dev Flow",
+  "description": "Development workflow automation and project management",
+  "repository": "https://github.com/gemini-cli-extensions/dev-flow",
+  "author": "Community",
+  "category": "productivity",
+  "tags": ["workflow", "automation", "project-management"],
+  "recommended": false
+}

@@ -1,0 +1,10 @@
+{
+  "name": "spanner",
+  "displayName": "Spanner",
+  "description": "Google Cloud Spanner globally distributed database integration",
+  "repository": "https://github.com/gemini-cli-extensions/spanner",
+  "author": "Google",
+  "category": "database",
+  "tags": ["spanner", "distributed", "google-cloud"],
+  "recommended": false
+}

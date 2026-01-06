@@ -1,0 +1,10 @@
+{
+  "name": "redis",
+  "displayName": "Redis",
+  "description": "Redis cache and data structure store integration",
+  "repository": "https://github.com/gemini-cli-extensions/redis",
+  "author": "Community",
+  "category": "database",
+  "tags": ["redis", "cache", "database"],
+  "recommended": false
+}

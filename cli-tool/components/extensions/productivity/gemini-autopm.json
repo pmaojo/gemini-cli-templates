@@ -1,0 +1,10 @@
+{
+  "name": "gemini-autopm",
+  "displayName": "Auto PM",
+  "description": "Automated project management and task tracking",
+  "repository": "https://github.com/gemini-cli-extensions/gemini-autopm",
+  "author": "Community",
+  "category": "productivity",
+  "tags": ["project-management", "tasks", "automation"],
+  "recommended": false
+}

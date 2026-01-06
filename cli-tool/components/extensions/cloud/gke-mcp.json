@@ -1,0 +1,10 @@
+{
+  "name": "gke-mcp",
+  "displayName": "GKE",
+  "description": "Google Kubernetes Engine cluster management",
+  "repository": "https://github.com/gemini-cli-extensions/gke-mcp",
+  "author": "Google",
+  "category": "cloud",
+  "tags": ["kubernetes", "gke", "containers", "google-cloud"],
+  "recommended": false
+}

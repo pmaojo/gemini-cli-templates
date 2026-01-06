@@ -1,0 +1,10 @@
+{
+  "name": "conductor",
+  "displayName": "Conductor",
+  "description": "Context-driven development with persistent state management for complex tasks",
+  "repository": "https://github.com/gemini-cli-extensions/conductor",
+  "author": "Google",
+  "category": "productivity",
+  "tags": ["planning", "workflow", "state-management", "tracks"],
+  "recommended": true
+}

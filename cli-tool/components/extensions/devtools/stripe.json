@@ -1,0 +1,10 @@
+{
+  "name": "stripe",
+  "displayName": "Stripe",
+  "description": "Stripe payment processing integration",
+  "repository": "https://github.com/gemini-cli-extensions/stripe",
+  "author": "Stripe",
+  "category": "devtools",
+  "tags": ["stripe", "payments", "api"],
+  "recommended": false
+}

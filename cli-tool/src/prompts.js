@@ -7,6 +7,8 @@ const { getAvailableLanguages, getFrameworksForLanguage } = require('./templates
 const { getCommandsForLanguageAndFramework } = require('./command-scanner');
 const { getHooksForLanguage, getMCPsForLanguage } = require('./hook-scanner');
 const { getAgentsForLanguageAndFramework, getInstalledAgents, formatAgentChoices } = require('./agents');
+const { getExtensionsForPrompt, getExtensionStats } = require('./extension-scanner');
+
 
 async function interactivePrompts(projectInfo, options = {}) {
   const state = {
@@ -222,15 +224,15 @@ function getStepConfig(stepName, currentAnswers, projectInfo, options, additiona
       };
 
     case 'extensions':
+      const extensionChoices = getExtensionsForPrompt();
+      const extensionStats = getExtensionStats();
       return {
         type: 'checkbox',
         name: 'extensions',
-        message: 'Install recommended extensions?',
-        choices: [
-          { name: 'Conductor (Context-driven development)', value: 'https://github.com/gemini-cli-extensions/conductor', checked: true },
-          { name: 'Jules (Async coding agent)', value: 'https://github.com/gemini-cli-extensions/jules', checked: true }
-        ],
-        prefix: chalk.yellow('🧩')
+        message: `Install extensions? (${extensionStats.total} available, ${extensionStats.recommended} recommended)`,
+        choices: extensionChoices,
+        prefix: chalk.yellow('🧩'),
+        pageSize: 15
       };
 
     case 'analytics':

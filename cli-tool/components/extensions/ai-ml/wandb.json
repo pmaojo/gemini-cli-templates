@@ -1,0 +1,10 @@
+{
+  "name": "wandb",
+  "displayName": "Weights & Biases",
+  "description": "W&B experiment tracking and model registry",
+  "repository": "https://github.com/gemini-cli-extensions/wandb-mcp-server",
+  "author": "W&B",
+  "category": "ai-ml",
+  "tags": ["wandb", "experiment-tracking", "ml"],
+  "recommended": false
+}

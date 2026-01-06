@@ -1,0 +1,10 @@
+{
+  "name": "gemini-prompt-library",
+  "displayName": "Prompt Library",
+  "description": "Curated collection of prompts for common tasks",
+  "repository": "https://github.com/gemini-cli-extensions/gemini-cli-prompt-library",
+  "author": "Community",
+  "category": "productivity",
+  "tags": ["prompts", "templates", "library"],
+  "recommended": false
+}

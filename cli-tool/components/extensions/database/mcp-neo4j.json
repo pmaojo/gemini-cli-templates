@@ -1,0 +1,10 @@
+{
+  "name": "mcp-neo4j",
+  "displayName": "Neo4j",
+  "description": "Neo4j graph database integration",
+  "repository": "https://github.com/gemini-cli-extensions/mcp-neo4j",
+  "author": "Community",
+  "category": "database",
+  "tags": ["neo4j", "graph", "database"],
+  "recommended": false
+}

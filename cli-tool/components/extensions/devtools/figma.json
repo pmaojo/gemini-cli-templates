@@ -1,0 +1,10 @@
+{
+  "name": "figma",
+  "displayName": "Figma",
+  "description": "Figma design tool integration",
+  "repository": "https://github.com/gemini-cli-extensions/Figma",
+  "author": "Community",
+  "category": "devtools",
+  "tags": ["figma", "design", "ui"],
+  "recommended": false
+}

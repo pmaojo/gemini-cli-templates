@@ -1,0 +1,10 @@
+{
+  "name": "mongodb",
+  "displayName": "MongoDB",
+  "description": "MongoDB database integration and document operations",
+  "repository": "https://github.com/gemini-cli-extensions/mongodb",
+  "author": "Community",
+  "category": "database",
+  "tags": ["mongodb", "nosql", "database"],
+  "recommended": false
+}
