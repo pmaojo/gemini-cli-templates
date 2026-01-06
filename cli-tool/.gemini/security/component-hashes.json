@@ -1,0 +1,2704 @@
+{
+  "components/agents/ai-specialists/ai-ethics-advisor.md": {
+    "hash": "53f35a5804d1f9556b5cd6c6bb6daa74253b2fb9bc0bc8ed35ecb8bcaf68cc78",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:50.522Z",
+    "path": "components/agents/ai-specialists/ai-ethics-advisor.md"
+  },
+  "components/agents/ai-specialists/hackathon-ai-strategist.md": {
+    "hash": "755f8e86bfd3a5200f76f7240802617d31ad532d521326f157780cec9b93666e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:50.627Z",
+    "path": "components/agents/ai-specialists/hackathon-ai-strategist.md"
+  },
+  "components/agents/ai-specialists/llms-maintainer.md": {
+    "hash": "8d887de4850f9b69b58341c6d65326e9da248198c09f56b736f1c1deca1b235c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:50.696Z",
+    "path": "components/agents/ai-specialists/llms-maintainer.md"
+  },
+  "components/agents/ai-specialists/model-evaluator.md": {
+    "hash": "b40d2b74bc1ff7bfcb5ed7e455963d3ea1b6592717a3e101b88bf9c3c377fb3a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:50.763Z",
+    "path": "components/agents/ai-specialists/model-evaluator.md"
+  },
+  "components/agents/ai-specialists/prompt-engineer.md": {
+    "hash": "1e7386938be379433bce9e7983e6c0cc1c409e55f8dbe6116d41b4765edf33ce",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:50.833Z",
+    "path": "components/agents/ai-specialists/prompt-engineer.md"
+  },
+  "components/agents/ai-specialists/search-specialist.md": {
+    "hash": "6d07f2e877246b09335fefa455b66ad893132bfe48b8fbf54345bf442410209f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:50.887Z",
+    "path": "components/agents/ai-specialists/search-specialist.md"
+  },
+  "components/agents/ai-specialists/task-decomposition-expert.md": {
+    "hash": "3771eddcf41608fd39ed17cc87b28119e9f809540410b6c78978f0752dff729e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:50.943Z",
+    "path": "components/agents/ai-specialists/task-decomposition-expert.md"
+  },
+  "components/agents/api-graphql/graphql-architect.md": {
+    "hash": "14db786cbd02797d0a42f5a7be1a5851591d6a74a729f414ce4c6faefdb3372c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.013Z",
+    "path": "components/agents/api-graphql/graphql-architect.md"
+  },
+  "components/agents/api-graphql/graphql-performance-optimizer.md": {
+    "hash": "ed3e8c43b2e2bca5f4141fa90f4af27e98f15d6211d878270b5fdede42d774db",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.087Z",
+    "path": "components/agents/api-graphql/graphql-performance-optimizer.md"
+  },
+  "components/agents/api-graphql/graphql-security-specialist.md": {
+    "hash": "f2991c08957d3f31c8ce88ab79be7487aa393f49a405042f22b99c932b4bc03b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.157Z",
+    "path": "components/agents/api-graphql/graphql-security-specialist.md"
+  },
+  "components/agents/blockchain-web3/smart-contract-auditor.md": {
+    "hash": "3c4cfdd94dd05abd0bc57a2c348365f2cdb3d9002035b21a67990b2354cf3335",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.233Z",
+    "path": "components/agents/blockchain-web3/smart-contract-auditor.md"
+  },
+  "components/agents/blockchain-web3/smart-contract-specialist.md": {
+    "hash": "03d6bbe941e807767a900c529332ed8f324c1e2e6cd329bc2f7fb7feb531fa4b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.305Z",
+    "path": "components/agents/blockchain-web3/smart-contract-specialist.md"
+  },
+  "components/agents/blockchain-web3/web3-integration-specialist.md": {
+    "hash": "b1c15a68d41be92f8e73826c299fc0e3a2f36939fd40fa82a1abe75c3af30a9d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.360Z",
+    "path": "components/agents/blockchain-web3/web3-integration-specialist.md"
+  },
+  "components/agents/business-marketing/business-analyst.md": {
+    "hash": "9d6c9f163746a12269c99d1bdc1eefa84597e232f0505f9ef3f480cb8be5c1e6",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.415Z",
+    "path": "components/agents/business-marketing/business-analyst.md"
+  },
+  "components/agents/business-marketing/content-marketer.md": {
+    "hash": "8b2f5daf6f14e9810aaffc725bdf2395a8792c631f43b9d9526173823d92ea65",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.517Z",
+    "path": "components/agents/business-marketing/content-marketer.md"
+  },
+  "components/agents/business-marketing/customer-support.md": {
+    "hash": "d69329674589a0ec3a00ea2739e108c4c6fa076f6a1d16f96697db64cecb6b54",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.584Z",
+    "path": "components/agents/business-marketing/customer-support.md"
+  },
+  "components/agents/business-marketing/legal-advisor.md": {
+    "hash": "3c8547b453dee86d72cb7493aa25eed8305d65cd0ac966f1668fb1ec182fbc20",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.652Z",
+    "path": "components/agents/business-marketing/legal-advisor.md"
+  },
+  "components/agents/business-marketing/marketing-attribution-analyst.md": {
+    "hash": "1e68d4b5b3ef42205148103bd239548233ea1bc7f5215cb21f70ecf8443039e7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.721Z",
+    "path": "components/agents/business-marketing/marketing-attribution-analyst.md"
+  },
+  "components/agents/business-marketing/payment-integration.md": {
+    "hash": "91d1e3a3e0bce867bd3bd20a69a2be787e898d39d2bd9d486ddf9556aa813f5e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.793Z",
+    "path": "components/agents/business-marketing/payment-integration.md"
+  },
+  "components/agents/business-marketing/product-strategist.md": {
+    "hash": "0bd22d85f5595006eb28454644f8fd7b0b5836ad61e6b2aed450b5ab6a11c9bc",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.864Z",
+    "path": "components/agents/business-marketing/product-strategist.md"
+  },
+  "components/agents/business-marketing/risk-manager.md": {
+    "hash": "f32a7d9c74772b8c15789ff7ad9d707460ca3328c2eef35eaa8bb0df804fd1df",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:51.935Z",
+    "path": "components/agents/business-marketing/risk-manager.md"
+  },
+  "components/agents/business-marketing/sales-automator.md": {
+    "hash": "5deb0632c569bccc327e7e902f2cf1ef3d4709a4eef934f205d6dea5d371c478",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.008Z",
+    "path": "components/agents/business-marketing/sales-automator.md"
+  },
+  "components/agents/data-ai/ai-engineer.md": {
+    "hash": "90d3dd88f89d4833e47173b90a8b62b46394faabe83702943f08358fb0313e80",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.077Z",
+    "path": "components/agents/data-ai/ai-engineer.md"
+  },
+  "components/agents/data-ai/computer-vision-engineer.md": {
+    "hash": "7926f7c733e97cd1b44f3090e2b161e1488129900ba74caf8eb0bb6343d8d472",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.143Z",
+    "path": "components/agents/data-ai/computer-vision-engineer.md"
+  },
+  "components/agents/data-ai/data-engineer.md": {
+    "hash": "8fbc45fc932ce83dc9e3e137ff16f56e76b66d4cd4c7cd96e483b2cd5f1c8626",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.218Z",
+    "path": "components/agents/data-ai/data-engineer.md"
+  },
+  "components/agents/data-ai/data-scientist.md": {
+    "hash": "d8aee9c21881a09286d76ed95aa19cdea2fb31d2f6bd73d9c8fbb91235c9e9ad",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.294Z",
+    "path": "components/agents/data-ai/data-scientist.md"
+  },
+  "components/agents/data-ai/ml-engineer.md": {
+    "hash": "d9cc2018c0fc6293bee9b936168b1db7a47e28dd7661c9cb6155df335820f2a4",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.373Z",
+    "path": "components/agents/data-ai/ml-engineer.md"
+  },
+  "components/agents/data-ai/mlops-engineer.md": {
+    "hash": "144c2196f3d30b37d222fc5fbb404ae7daeaa48039ac7bdbe8fed9562dff490b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.452Z",
+    "path": "components/agents/data-ai/mlops-engineer.md"
+  },
+  "components/agents/data-ai/nlp-engineer.md": {
+    "hash": "17263c3d2601af5cc6be653bb048bc68579828d1ea66caecefb8b2020e7d781a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.533Z",
+    "path": "components/agents/data-ai/nlp-engineer.md"
+  },
+  "components/agents/data-ai/quant-analyst.md": {
+    "hash": "9e371504627839d95515e6a5068de6c11da9eba3b9d616ff8f77daa35edd964a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.614Z",
+    "path": "components/agents/data-ai/quant-analyst.md"
+  },
+  "components/agents/database/database-admin.md": {
+    "hash": "41392436e8ada139fca1fa5f107207957992e45bea04e6f706913e6e8132f437",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.691Z",
+    "path": "components/agents/database/database-admin.md"
+  },
+  "components/agents/database/database-architect.md": {
+    "hash": "d5275d2c4482652868c8f6e841c28e299c4ceff447b56184d210cbf0732f4e98",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.769Z",
+    "path": "components/agents/database/database-architect.md"
+  },
+  "components/agents/database/database-optimization.md": {
+    "hash": "912b0f4ef72a54d86ff242089856044b42491c8650168403e0c9c4fab9cd168a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.840Z",
+    "path": "components/agents/database/database-optimization.md"
+  },
+  "components/agents/database/database-optimizer.md": {
+    "hash": "593a7e3863e8334def431f450b1b87dc7bbabd553f3ae528648131e7ae72aeef",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:52.917Z",
+    "path": "components/agents/database/database-optimizer.md"
+  },
+  "components/agents/database/neon-auth-specialist.md": {
+    "hash": "ca322b27fdb0608d3cc069e895c5280f99726be26139bac7e07ed0254c266634",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.001Z",
+    "path": "components/agents/database/neon-auth-specialist.md"
+  },
+  "components/agents/database/neon-database-architect.md": {
+    "hash": "4fb64f161a87022b3a1cd05e7d55869d57ea6b5c28565c52ddb08956a904a91a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.093Z",
+    "path": "components/agents/database/neon-database-architect.md"
+  },
+  "components/agents/database/neon-expert.md": {
+    "hash": "4f4ed8c14649a3d21ad938f164c6e3c0f09908f2a5b9234a437c1fd004e6fb4a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.177Z",
+    "path": "components/agents/database/neon-expert.md"
+  },
+  "components/agents/database/nosql-specialist.md": {
+    "hash": "447d55ec54233eba3d5c38ef4033550859e8c1bcc13db038bfff71b7d5eb1a15",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.243Z",
+    "path": "components/agents/database/nosql-specialist.md"
+  },
+  "components/agents/database/supabase-schema-architect.md": {
+    "hash": "60831c94e73eae9e58641df6feecec853cd17563acb2894d9f0caa10dfc05729",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.334Z",
+    "path": "components/agents/database/supabase-schema-architect.md"
+  },
+  "components/agents/deep-research-team/academic-researcher.md": {
+    "hash": "2313dee6c5e30114c6e53273775ccc0ce122e90d71863ddb8df224c8526b2af2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.416Z",
+    "path": "components/agents/deep-research-team/academic-researcher.md"
+  },
+  "components/agents/deep-research-team/agent-overview.md": {
+    "hash": "deae0c87d4a3193f8802d94b47699fbc47de9bb309b8f33285152ad203aef585",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.483Z",
+    "path": "components/agents/deep-research-team/agent-overview.md"
+  },
+  "components/agents/deep-research-team/competitive-intelligence-analyst.md": {
+    "hash": "fa7040a78534adb982c1099c3e5605eece18e4be88b1878f01f124e7849a5d04",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.534Z",
+    "path": "components/agents/deep-research-team/competitive-intelligence-analyst.md"
+  },
+  "components/agents/deep-research-team/data-analyst.md": {
+    "hash": "1a1ab4a0ead420578e115d2e94937856f97d102f1ab5d65882cf7b8d2b7ea976",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.604Z",
+    "path": "components/agents/deep-research-team/data-analyst.md"
+  },
+  "components/agents/deep-research-team/fact-checker.md": {
+    "hash": "b59fae17a7c5fc6b253dc9f488f741422c5edd674be78dd310fc2d482cc9199b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.659Z",
+    "path": "components/agents/deep-research-team/fact-checker.md"
+  },
+  "components/agents/deep-research-team/nia-oracle.md": {
+    "hash": "31a43cc0de49012d77c897c17858ff2061e5e2a458e79544cd222d1fb05539fc",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.777Z",
+    "path": "components/agents/deep-research-team/nia-oracle.md"
+  },
+  "components/agents/deep-research-team/query-clarifier.md": {
+    "hash": "4db4b1b75ab38ce5609b290737cc172d277ed2b1c41b13fe9293180e4e8a2871",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.840Z",
+    "path": "components/agents/deep-research-team/query-clarifier.md"
+  },
+  "components/agents/deep-research-team/report-generator.md": {
+    "hash": "6cb73477f53141c4dd20ad25517fc382a1e08f2e88ff833c69077e5216d84ae2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.892Z",
+    "path": "components/agents/deep-research-team/report-generator.md"
+  },
+  "components/agents/deep-research-team/research-brief-generator.md": {
+    "hash": "1c292cf76f0a98a0d51cb9add48d7d31d101d43920a7eedd796dbcc7de26f41b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:53.943Z",
+    "path": "components/agents/deep-research-team/research-brief-generator.md"
+  },
+  "components/agents/deep-research-team/research-coordinator.md": {
+    "hash": "0959d6a03ddebae8941b360b29acc10134f799ad0c53e0970112defa5e43f02b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.000Z",
+    "path": "components/agents/deep-research-team/research-coordinator.md"
+  },
+  "components/agents/deep-research-team/research-orchestrator.md": {
+    "hash": "b2fdfba3cba6c8466965fb867a0255ea64d18222a8b80fd93b162e03cb4f820d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.047Z",
+    "path": "components/agents/deep-research-team/research-orchestrator.md"
+  },
+  "components/agents/deep-research-team/research-synthesizer.md": {
+    "hash": "6a1dd44e41cd6b4c36aa6c9bb0dfa3dac7af2f63252e493f1c61fccb319cd791",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.109Z",
+    "path": "components/agents/deep-research-team/research-synthesizer.md"
+  },
+  "components/agents/deep-research-team/technical-researcher.md": {
+    "hash": "fd434046bd2b7b591b045de37e6b0e25833eeda177c52dcfbb74f0e2acc06e97",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.190Z",
+    "path": "components/agents/deep-research-team/technical-researcher.md"
+  },
+  "components/agents/development-team/backend-architect.md": {
+    "hash": "312a4d9e71a8351924d88eb1299e76a7765bfeda594605dd0529e7f6425ca046",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.239Z",
+    "path": "components/agents/development-team/backend-architect.md"
+  },
+  "components/agents/development-team/cli-ui-designer.md": {
+    "hash": "ff33896a64980af827ffc7f76936f5ef14bff2b2c0305a69130cdbab1fbdc63c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.305Z",
+    "path": "components/agents/development-team/cli-ui-designer.md"
+  },
+  "components/agents/development-team/devops-engineer.md": {
+    "hash": "95ce089bec0ca1e0450a9f908fce913de7100cc662fd342bb7f6580d29a2277c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.372Z",
+    "path": "components/agents/development-team/devops-engineer.md"
+  },
+  "components/agents/development-team/frontend-developer.md": {
+    "hash": "821db1aa16117a942180e3183c4fdedd93d8addf6df7f8f1f4079fd6b4c293b2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.418Z",
+    "path": "components/agents/development-team/frontend-developer.md"
+  },
+  "components/agents/development-team/fullstack-developer.md": {
+    "hash": "82de31ce003cddc241c28d8442a1a32daacef0bebfe37c1969eb945aebe26568",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.486Z",
+    "path": "components/agents/development-team/fullstack-developer.md"
+  },
+  "components/agents/development-team/ios-developer.md": {
+    "hash": "dd879933b91b61bbdd873d17fe860646f8a8e51611f4ff8b15bc9f6183288e1f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.552Z",
+    "path": "components/agents/development-team/ios-developer.md"
+  },
+  "components/agents/development-team/mobile-developer.md": {
+    "hash": "2d03bfaab462d634846a0896863ac0b3e8ae8c3515eb0378048b92f74b186d35",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.623Z",
+    "path": "components/agents/development-team/mobile-developer.md"
+  },
+  "components/agents/development-team/ui-ux-designer.md": {
+    "hash": "b000b3d05e9d6acbad39f16e3001d8a701783f56951b2adfd756252eff1e7841",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.690Z",
+    "path": "components/agents/development-team/ui-ux-designer.md"
+  },
+  "components/agents/development-tools/code-reviewer.md": {
+    "hash": "a59dd1e392d25fdd1329fcee6fa478aee9b3fce8ded7ebc5cf79a7318ea5a0e7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.761Z",
+    "path": "components/agents/development-tools/code-reviewer.md"
+  },
+  "components/agents/development-tools/command-expert.md": {
+    "hash": "d906367cc28066daa0c6600bab2e9da149b4f695879374fdc546e07f18f17e25",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.830Z",
+    "path": "components/agents/development-tools/command-expert.md"
+  },
+  "components/agents/development-tools/context-manager.md": {
+    "hash": "9d0766db8aad1908153f878c97902b4eff1291ce8e4da0b5ad73fde1f8046871",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.876Z",
+    "path": "components/agents/development-tools/context-manager.md"
+  },
+  "components/agents/development-tools/debugger.md": {
+    "hash": "83d97d2fd42341b503f4fbbc9244eb146c3a601269056b803fdc39048b6385a4",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.925Z",
+    "path": "components/agents/development-tools/debugger.md"
+  },
+  "components/agents/development-tools/dx-optimizer.md": {
+    "hash": "e20f342bcb981dbc8619c219141096c9a745672fddd9260174bb42974da3488d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:54.993Z",
+    "path": "components/agents/development-tools/dx-optimizer.md"
+  },
+  "components/agents/development-tools/error-detective.md": {
+    "hash": "c2158052952eded51e5f98d7768c1893ab4f65aa35c6acfcb33f291f70f8b507",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.063Z",
+    "path": "components/agents/development-tools/error-detective.md"
+  },
+  "components/agents/development-tools/flutter-go-reviewer.md": {
+    "hash": "14b01d154485cb411aca5ef6dc151ae2eec2d9ad969db717df1640b2b396c63f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.130Z",
+    "path": "components/agents/development-tools/flutter-go-reviewer.md"
+  },
+  "components/agents/development-tools/mcp-expert.md": {
+    "hash": "4333e606e5c7e0278378a795dfaef7ae775fdc3bca17eab44f0e3d773b23ca9c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.197Z",
+    "path": "components/agents/development-tools/mcp-expert.md"
+  },
+  "components/agents/development-tools/performance-profiler.md": {
+    "hash": "29fddded53af55b7e6d58d96d543694a2980c22837b83ba0167a8629f1199260",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.255Z",
+    "path": "components/agents/development-tools/performance-profiler.md"
+  },
+  "components/agents/development-tools/slack-expert.md": {
+    "hash": "9505fcb877288f8a89d4f02cd12052f3cbcb94c35c34dfcbd650842932cbbbec",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.327Z",
+    "path": "components/agents/development-tools/slack-expert.md"
+  },
+  "components/agents/development-tools/test-engineer.md": {
+    "hash": "0295c2db8fbc7afc1b47893a52d3d199340279a023fd2c58c634b16b4d32d5cd",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.397Z",
+    "path": "components/agents/development-tools/test-engineer.md"
+  },
+  "components/agents/development-tools/unused-code-cleaner.md": {
+    "hash": "8fb8ce04a9a0ac14fcb2fdf8931d20f7319a45860f52ce845e584b12732ad4ae",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.445Z",
+    "path": "components/agents/development-tools/unused-code-cleaner.md"
+  },
+  "components/agents/devops-infrastructure/cloud-architect.md": {
+    "hash": "e489d0883ed20f5f29e0d79ef04e1313dab0b7ceb2c34db0f86e736c3a583ab6",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.494Z",
+    "path": "components/agents/devops-infrastructure/cloud-architect.md"
+  },
+  "components/agents/devops-infrastructure/deployment-engineer.md": {
+    "hash": "2b8899107b015a05c287d46868b7356fb0a6bcd85f2c9a30d9946579606e8f4e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.560Z",
+    "path": "components/agents/devops-infrastructure/deployment-engineer.md"
+  },
+  "components/agents/devops-infrastructure/devops-troubleshooter.md": {
+    "hash": "6579c1083c3c01f2ebfd0cafcb129fee7e572d02746642b4554075d72d984e80",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.629Z",
+    "path": "components/agents/devops-infrastructure/devops-troubleshooter.md"
+  },
+  "components/agents/devops-infrastructure/monitoring-specialist.md": {
+    "hash": "a74bb1122d92973a44c44f1a851d43ae00d6ab00765e482e7683fc46d4a13ba2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.694Z",
+    "path": "components/agents/devops-infrastructure/monitoring-specialist.md"
+  },
+  "components/agents/devops-infrastructure/network-engineer.md": {
+    "hash": "5811dbdf2e7742609d598bb91391ff354e5f290d48580177011638d58930ceba",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.784Z",
+    "path": "components/agents/devops-infrastructure/network-engineer.md"
+  },
+  "components/agents/devops-infrastructure/security-engineer.md": {
+    "hash": "d6f9966127002ca40b164d363f82b25da9993eabfdbcda8c6b8cd2abd4e2643f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.851Z",
+    "path": "components/agents/devops-infrastructure/security-engineer.md"
+  },
+  "components/agents/devops-infrastructure/terraform-specialist.md": {
+    "hash": "8a70fca9482ca0906c38d16659483ac22556ff47c6fe02452c1ead157dd59184",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.932Z",
+    "path": "components/agents/devops-infrastructure/terraform-specialist.md"
+  },
+  "components/agents/devops-infrastructure/vercel-deployment-specialist.md": {
+    "hash": "80496d9c38515b28241c2e826c2b8a245d3c82f1bec3b808048a5c5bd9bf4073",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:55.999Z",
+    "path": "components/agents/devops-infrastructure/vercel-deployment-specialist.md"
+  },
+  "components/agents/documentation/api-documenter.md": {
+    "hash": "6796f489549a5440c9606322db9d5eec28c65d694677083160c75965059f06eb",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.064Z",
+    "path": "components/agents/documentation/api-documenter.md"
+  },
+  "components/agents/documentation/changelog-generator.md": {
+    "hash": "4aa7cdc825956715aa4de03b6130579b2f0e47bf0d42c87f1c0b5d9a43505ef7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.132Z",
+    "path": "components/agents/documentation/changelog-generator.md"
+  },
+  "components/agents/documentation/docusaurus-expert.md": {
+    "hash": "ee92f57fd0da1543b89726c95f996487162eee2af8d6fd3e066bb8fd7b5203ba",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.201Z",
+    "path": "components/agents/documentation/docusaurus-expert.md"
+  },
+  "components/agents/documentation/technical-writer.md": {
+    "hash": "475a4fa464ffbe11d046b7a2976d768dd4555e8e99585344a485af216a7faacf",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.275Z",
+    "path": "components/agents/documentation/technical-writer.md"
+  },
+  "components/agents/expert-advisors/agent-expert.md": {
+    "hash": "1f4d10d6aec709fc75f961ef61c916c98c732c0f6f87ccb656378b61f543fb64",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.343Z",
+    "path": "components/agents/expert-advisors/agent-expert.md"
+  },
+  "components/agents/expert-advisors/architect-review.md": {
+    "hash": "a8d77bc4a054d479beb313144d216a529f47dca534151a344fb74cf76ebb2df2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.423Z",
+    "path": "components/agents/expert-advisors/architect-review.md"
+  },
+  "components/agents/expert-advisors/dependency-manager.md": {
+    "hash": "1b1a23b723a1f76a811ffb6460415cb69acb32c37e567619237a16f68126669d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.471Z",
+    "path": "components/agents/expert-advisors/dependency-manager.md"
+  },
+  "components/agents/expert-advisors/documentation-expert.md": {
+    "hash": "4365832dd2ec4ce9fceaf69fe2de640e7b3772200bd3809f91ff976c35b70208",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.520Z",
+    "path": "components/agents/expert-advisors/documentation-expert.md"
+  },
+  "components/agents/ffmpeg-clip-team/audio-mixer.md": {
+    "hash": "c554a636da2f587b67cf32075b71d77462306c63bbf4d68ba4dd35766d97919b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.572Z",
+    "path": "components/agents/ffmpeg-clip-team/audio-mixer.md"
+  },
+  "components/agents/ffmpeg-clip-team/audio-quality-controller.md": {
+    "hash": "f430ea140bf5b8c240510e56f5907293a5ec83b66c331d4cbf9a9b47606a015e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.634Z",
+    "path": "components/agents/ffmpeg-clip-team/audio-quality-controller.md"
+  },
+  "components/agents/ffmpeg-clip-team/podcast-content-analyzer.md": {
+    "hash": "82713c8ff18b3e70e8de712b9abaed266dc669e854f5a3afec9a6307e7248742",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.698Z",
+    "path": "components/agents/ffmpeg-clip-team/podcast-content-analyzer.md"
+  },
+  "components/agents/ffmpeg-clip-team/podcast-metadata-specialist.md": {
+    "hash": "3d934071fdac68b5808e78eea235dc9e82dba755348df71294b32b0b5fbd6888",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.763Z",
+    "path": "components/agents/ffmpeg-clip-team/podcast-metadata-specialist.md"
+  },
+  "components/agents/ffmpeg-clip-team/podcast-transcriber.md": {
+    "hash": "f7f4d7e9b22bd1adc3a915ddb852e4f13eac0ff136bdaf3445d41d0198149189",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.830Z",
+    "path": "components/agents/ffmpeg-clip-team/podcast-transcriber.md"
+  },
+  "components/agents/ffmpeg-clip-team/social-media-clip-creator.md": {
+    "hash": "bd9291c587f212fe2263d2f147fddd9c22eadd5400af696bdb6e76ca5fc2c002",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.895Z",
+    "path": "components/agents/ffmpeg-clip-team/social-media-clip-creator.md"
+  },
+  "components/agents/ffmpeg-clip-team/timestamp-precision-specialist.md": {
+    "hash": "e527b94d4dc17a3374d0e1c87069adb025ac9becfcc4cdaf5e3410598407f944",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:56.963Z",
+    "path": "components/agents/ffmpeg-clip-team/timestamp-precision-specialist.md"
+  },
+  "components/agents/ffmpeg-clip-team/video-editor.md": {
+    "hash": "4af4f2c1fd9f2e93e30ae8eb4f728b35b9c5655a449381154feddbd227e1be10",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.029Z",
+    "path": "components/agents/ffmpeg-clip-team/video-editor.md"
+  },
+  "components/agents/game-development/3d-artist.md": {
+    "hash": "f0c262daff630e0c3690e0b26a66f017c7889c3c263d3bf1657567d9fc956112",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.093Z",
+    "path": "components/agents/game-development/3d-artist.md"
+  },
+  "components/agents/game-development/game-designer.md": {
+    "hash": "a9466460bdf4372cd0081fc7860da756b484bf1e672f7d7af664513aa62f1087",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.191Z",
+    "path": "components/agents/game-development/game-designer.md"
+  },
+  "components/agents/game-development/unity-game-developer.md": {
+    "hash": "c75b3dfdf86dce5cdce15524526eee8e26193e0abd860ac711310c723bdee882",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.264Z",
+    "path": "components/agents/game-development/unity-game-developer.md"
+  },
+  "components/agents/game-development/unreal-engine-developer.md": {
+    "hash": "2a29a4e72d127224771f66085dd7fa294c6894a712d53fed66b09e86c7aa2246",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.314Z",
+    "path": "components/agents/game-development/unreal-engine-developer.md"
+  },
+  "components/agents/git/git-flow-manager.md": {
+    "hash": "91634a8f2f3d71af255b7e1ae1ccd8602754be61c7ac4d4b420ceaf47056bc01",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.384Z",
+    "path": "components/agents/git/git-flow-manager.md"
+  },
+  "components/agents/marketing/marketing-culture.md": {
+    "hash": "a5e966d8aadf84326657716114554cb2b74ba11974c194d3a9b4fb3cb50ba167",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.450Z",
+    "path": "components/agents/marketing/marketing-culture.md"
+  },
+  "components/agents/marketing/marketing-mvt.md": {
+    "hash": "2741a2162bb59253130fb90c1eab1d3b9f5473c13e02d2eca0d77d4edd2235e0",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.502Z",
+    "path": "components/agents/marketing/marketing-mvt.md"
+  },
+  "components/agents/marketing/marketing-xy.md": {
+    "hash": "0914dc716cfbfb53c87b6c28bf2416e4b8653060ba89f410005ed2fac9b2ec00",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.555Z",
+    "path": "components/agents/marketing/marketing-xy.md"
+  },
+  "components/agents/mcp-dev-team/mcp-deployment-orchestrator.md": {
+    "hash": "381b05bbe1528a46e37d568d8f00aefbeaa74cfa116bf0a48032e94e0d32a255",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.609Z",
+    "path": "components/agents/mcp-dev-team/mcp-deployment-orchestrator.md"
+  },
+  "components/agents/mcp-dev-team/mcp-integration-engineer.md": {
+    "hash": "b9ed3842ecba9c3555fd0aab3f26d9e558f57a826e273ca00f2a50d99f84fc09",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.680Z",
+    "path": "components/agents/mcp-dev-team/mcp-integration-engineer.md"
+  },
+  "components/agents/mcp-dev-team/mcp-protocol-specialist.md": {
+    "hash": "cb310b647aa65ae27c8f49485b9930236d630aff3c05942c53d6b80884934d9a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.748Z",
+    "path": "components/agents/mcp-dev-team/mcp-protocol-specialist.md"
+  },
+  "components/agents/mcp-dev-team/mcp-registry-navigator.md": {
+    "hash": "19163ee10fe791308612c70e1b1826c08c6adcef9045778bc30e36f5cd69d8ff",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.814Z",
+    "path": "components/agents/mcp-dev-team/mcp-registry-navigator.md"
+  },
+  "components/agents/mcp-dev-team/mcp-security-auditor.md": {
+    "hash": "4e55df2cf28aa443c260aafff786dc60ffefb7a5f91fc26a28fddadf099573ce",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.882Z",
+    "path": "components/agents/mcp-dev-team/mcp-security-auditor.md"
+  },
+  "components/agents/mcp-dev-team/mcp-server-architect.md": {
+    "hash": "9e0b136ee82311eeb46ca1fe29d96875e7e5e1400f6eff74754b634cc5b9db9a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:57.934Z",
+    "path": "components/agents/mcp-dev-team/mcp-server-architect.md"
+  },
+  "components/agents/mcp-dev-team/mcp-testing-engineer.md": {
+    "hash": "b0dd1e67cb13c6f96607c15c250c5d6d94ff8ab0d409796aa52eb34ef28c7bd7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.004Z",
+    "path": "components/agents/mcp-dev-team/mcp-testing-engineer.md"
+  },
+  "components/agents/modernization/architecture-modernizer.md": {
+    "hash": "fe160d14308a08912f31f7fb0abb6e3070294e96b2b5856794068d46930dad4e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.053Z",
+    "path": "components/agents/modernization/architecture-modernizer.md"
+  },
+  "components/agents/modernization/cloud-migration-specialist.md": {
+    "hash": "d18fc8b655f5d8f02e642a8f7b5b4366fe71b854648d17ec3092ffa10680fc07",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.117Z",
+    "path": "components/agents/modernization/cloud-migration-specialist.md"
+  },
+  "components/agents/modernization/legacy-modernizer.md": {
+    "hash": "290d105f80dfa7144a497725542aff5d56a4c79ebb018168d3811270b4b928f2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.189Z",
+    "path": "components/agents/modernization/legacy-modernizer.md"
+  },
+  "components/agents/obsidian-ops-team/connection-agent.md": {
+    "hash": "1b8ea776f7ef60deaa3587d4cc41565a4706f3cdf5e09dfae8868db1256449d1",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.257Z",
+    "path": "components/agents/obsidian-ops-team/connection-agent.md"
+  },
+  "components/agents/obsidian-ops-team/content-curator.md": {
+    "hash": "beb213bda875ed8cf7c53ec5e9602c1101fab971581cc758177829dabca4a7e0",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.325Z",
+    "path": "components/agents/obsidian-ops-team/content-curator.md"
+  },
+  "components/agents/obsidian-ops-team/metadata-agent.md": {
+    "hash": "69f446da50ae56748d09c146e2d794e01e41294f0f3fd752d769b46a11d38cba",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.398Z",
+    "path": "components/agents/obsidian-ops-team/metadata-agent.md"
+  },
+  "components/agents/obsidian-ops-team/moc-agent.md": {
+    "hash": "d288517bb6c2953ab9829a7c2f7e4161962f27f8f10a4577dab4ca85528e331b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.468Z",
+    "path": "components/agents/obsidian-ops-team/moc-agent.md"
+  },
+  "components/agents/obsidian-ops-team/review-agent.md": {
+    "hash": "b2ad59b8c8f3426e81937984cd19ebdbc2779ee90774c81beb60be9b2d35e456",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.533Z",
+    "path": "components/agents/obsidian-ops-team/review-agent.md"
+  },
+  "components/agents/obsidian-ops-team/tag-agent.md": {
+    "hash": "8a66d224989c2a5acbe090e1697b4d00d51bb0b1ce2d1c0b54b3c903222a65f4",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.602Z",
+    "path": "components/agents/obsidian-ops-team/tag-agent.md"
+  },
+  "components/agents/obsidian-ops-team/vault-optimizer.md": {
+    "hash": "9129382bb63f9f5a6707281994e1337949df4d58ea0ead04b16326cf7794ebcc",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.666Z",
+    "path": "components/agents/obsidian-ops-team/vault-optimizer.md"
+  },
+  "components/agents/ocr-extraction-team/document-structure-analyzer.md": {
+    "hash": "93d9f04528e7b2ede2e4ad32a5f999a8325edb017a33afeade1c8d47d1457604",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.731Z",
+    "path": "components/agents/ocr-extraction-team/document-structure-analyzer.md"
+  },
+  "components/agents/ocr-extraction-team/markdown-syntax-formatter.md": {
+    "hash": "9f7d888147d8a691f24330f8e30d0464d7cddd2d57b7198f8d31a37ee7aeace7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.808Z",
+    "path": "components/agents/ocr-extraction-team/markdown-syntax-formatter.md"
+  },
+  "components/agents/ocr-extraction-team/ocr-grammar-fixer.md": {
+    "hash": "2e612d1771e83cad3f5142689a2010137f4349fccf1f0ebccd311dd3cec256d3",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.873Z",
+    "path": "components/agents/ocr-extraction-team/ocr-grammar-fixer.md"
+  },
+  "components/agents/ocr-extraction-team/ocr-preprocessing-optimizer.md": {
+    "hash": "2cf6e6285b97d4f84d833deb1eb0ac60b3ad56f01da4b858b8313e6dd97659d5",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:58.938Z",
+    "path": "components/agents/ocr-extraction-team/ocr-preprocessing-optimizer.md"
+  },
+  "components/agents/ocr-extraction-team/ocr-quality-assurance.md": {
+    "hash": "150e0c6adf4943b18e6c934f63b43806e0bbb5684d804ac6f59bd0533e857727",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.006Z",
+    "path": "components/agents/ocr-extraction-team/ocr-quality-assurance.md"
+  },
+  "components/agents/ocr-extraction-team/text-comparison-validator.md": {
+    "hash": "d657dc8ce79aca77c155994e04b8083e9de3d019942e2a2238ddef99b3716cd7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.072Z",
+    "path": "components/agents/ocr-extraction-team/text-comparison-validator.md"
+  },
+  "components/agents/ocr-extraction-team/visual-analysis-ocr.md": {
+    "hash": "07e97fcf4e4bf5dd5a15ff3ec8162c6e528244e9239de2fe9b7f25df8613e065",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.139Z",
+    "path": "components/agents/ocr-extraction-team/visual-analysis-ocr.md"
+  },
+  "components/agents/performance-testing/load-testing-specialist.md": {
+    "hash": "fef5a92e7d9801d78ad532b565353606dc481fb5af4e0c8bd28b4ee2d11adb3f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.208Z",
+    "path": "components/agents/performance-testing/load-testing-specialist.md"
+  },
+  "components/agents/performance-testing/performance-engineer.md": {
+    "hash": "212a72a8e6517db11596d2d7e2c98a854c47a8aec3f2bad92738fde81ff8288e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.278Z",
+    "path": "components/agents/performance-testing/performance-engineer.md"
+  },
+  "components/agents/performance-testing/react-performance-optimization.md": {
+    "hash": "007a0898325271c04cec3a791642c722e3b981b407b6c563ad95d6878056fe03",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.343Z",
+    "path": "components/agents/performance-testing/react-performance-optimization.md"
+  },
+  "components/agents/performance-testing/test-automator.md": {
+    "hash": "f9b52967f1143ecf46e6d8220af554b9f402708f89f11727af367b58454ae61f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.410Z",
+    "path": "components/agents/performance-testing/test-automator.md"
+  },
+  "components/agents/performance-testing/web-vitals-optimizer.md": {
+    "hash": "78c794582b3c63aca0e4a1446135c9f3e2cc2ccf2aee39a47ac73a93a10c4396",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.476Z",
+    "path": "components/agents/performance-testing/web-vitals-optimizer.md"
+  },
+  "components/agents/podcast-creator-team/academic-research-synthesizer.md": {
+    "hash": "35169b7a12626d09dde59119de407c92ce90b766cba8585b147d941ef34c8070",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.546Z",
+    "path": "components/agents/podcast-creator-team/academic-research-synthesizer.md"
+  },
+  "components/agents/podcast-creator-team/comprehensive-researcher.md": {
+    "hash": "4c574c783d0c224e36f05a728d28f2c23ddf1674c2fb9912a825ac00ebfa63c1",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.593Z",
+    "path": "components/agents/podcast-creator-team/comprehensive-researcher.md"
+  },
+  "components/agents/podcast-creator-team/episode-orchestrator.md": {
+    "hash": "34f60a95884ebaf30c1c5061f45fd4c08836092650161a1077f0ea68ea299219",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.662Z",
+    "path": "components/agents/podcast-creator-team/episode-orchestrator.md"
+  },
+  "components/agents/podcast-creator-team/guest-outreach-coordinator.md": {
+    "hash": "76fe78701c4c67043a6b62fe689360c77aa237c513a351df88651672ac3c3f5c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.727Z",
+    "path": "components/agents/podcast-creator-team/guest-outreach-coordinator.md"
+  },
+  "components/agents/podcast-creator-team/market-research-analyst.md": {
+    "hash": "f27ee54117dd742177a4440278342ba9738bae5255db2aa598979bf4f930c721",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.821Z",
+    "path": "components/agents/podcast-creator-team/market-research-analyst.md"
+  },
+  "components/agents/podcast-creator-team/podcast-editor.md": {
+    "hash": "8680ef3c0e11c76d3deec0641b9ee55a0a436fd1a870697664df251d2f5d331f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.893Z",
+    "path": "components/agents/podcast-creator-team/podcast-editor.md"
+  },
+  "components/agents/podcast-creator-team/podcast-trend-scout.md": {
+    "hash": "96b57e4332c46ccb55cd966218ba0cee8cf60294ef991ec00976591f704d4b2a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:04:59.962Z",
+    "path": "components/agents/podcast-creator-team/podcast-trend-scout.md"
+  },
+  "components/agents/podcast-creator-team/project-supervisor-orchestrator.md": {
+    "hash": "51341b50c3b7ec6a0db76258405d9f5c4a176675e2ac4cf4bcd9f387734d978d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.037Z",
+    "path": "components/agents/podcast-creator-team/project-supervisor-orchestrator.md"
+  },
+  "components/agents/podcast-creator-team/seo-podcast-optimizer.md": {
+    "hash": "ba775226d5a137c9528ea58c7b0de73afaf034c9dedf0c01558227ee47f29e4e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.105Z",
+    "path": "components/agents/podcast-creator-team/seo-podcast-optimizer.md"
+  },
+  "components/agents/podcast-creator-team/social-media-copywriter.md": {
+    "hash": "bbb139bae94d7c45acbe904f05c236d541a1b8a9a2dec15690ddaf6efb741feb",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.151Z",
+    "path": "components/agents/podcast-creator-team/social-media-copywriter.md"
+  },
+  "components/agents/podcast-creator-team/twitter-ai-influencer-manager.md": {
+    "hash": "ff39c2713816445a565c04baf76acdaf7e3b9d8ebf6c8e2e1f17f56bf20eeb88",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.217Z",
+    "path": "components/agents/podcast-creator-team/twitter-ai-influencer-manager.md"
+  },
+  "components/agents/programming-languages/c-pro.md": {
+    "hash": "5f1e620cf8aad75d7a185b716bb9a7af16faab304f0bba421ab7f3e76ffb21a8",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.283Z",
+    "path": "components/agents/programming-languages/c-pro.md"
+  },
+  "components/agents/programming-languages/c-sharp-pro.md": {
+    "hash": "6191b9528f7f4410045290b76f555f157a087dc39c2ae9ab41acaa74965ccc1f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.355Z",
+    "path": "components/agents/programming-languages/c-sharp-pro.md"
+  },
+  "components/agents/programming-languages/cpp-pro.md": {
+    "hash": "d1b5ce67a0c86d5fb0c462d02fc3b214fda991a6773b8a9a8c02b4f3cbc47b32",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.424Z",
+    "path": "components/agents/programming-languages/cpp-pro.md"
+  },
+  "components/agents/programming-languages/golang-pro.md": {
+    "hash": "dd47b605c69bc6c8aaa9fd6d5856a2dd37c11026e9195d3711c2e82ca8544a36",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.503Z",
+    "path": "components/agents/programming-languages/golang-pro.md"
+  },
+  "components/agents/programming-languages/javascript-pro.md": {
+    "hash": "41c14399f60d60c92f8633148b09b39e92cb833ac6fce0ee225a284a38745674",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.587Z",
+    "path": "components/agents/programming-languages/javascript-pro.md"
+  },
+  "components/agents/programming-languages/php-pro.md": {
+    "hash": "57f8331a0b35f536b8a71db29fe6ba8a58623ca11afa4b5dc9124ba6e1e64dee",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.693Z",
+    "path": "components/agents/programming-languages/php-pro.md"
+  },
+  "components/agents/programming-languages/python-pro.md": {
+    "hash": "9adef237e921ce182c5f777919a3ac97301cdd35db0fcf69762e1ade795eeb50",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.767Z",
+    "path": "components/agents/programming-languages/python-pro.md"
+  },
+  "components/agents/programming-languages/rust-pro.md": {
+    "hash": "83c10caa2ea4f91ad56a48cac4b1a934e7f23868d3e18ffbd5b55838137924be",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.836Z",
+    "path": "components/agents/programming-languages/rust-pro.md"
+  },
+  "components/agents/programming-languages/shell-scripting-pro.md": {
+    "hash": "14ab5c5d4c2b17abd58b53902e6a9868c631f3c6e35775c8c469149a5b7d4b86",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.906Z",
+    "path": "components/agents/programming-languages/shell-scripting-pro.md"
+  },
+  "components/agents/programming-languages/sql-pro.md": {
+    "hash": "4613b66cae038a7b3c3fa48d962c32d78601bda6b00597eff7f23966b0877851",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:00.974Z",
+    "path": "components/agents/programming-languages/sql-pro.md"
+  },
+  "components/agents/programming-languages/typescript-pro.md": {
+    "hash": "78a08778b820c90b3f399706f90e4e81852a85f3dcf3ddeec748a2933695708d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.044Z",
+    "path": "components/agents/programming-languages/typescript-pro.md"
+  },
+  "components/agents/realtime/supabase-realtime-optimizer.md": {
+    "hash": "f7d6bae4b1fb5fcbc2b9aede482bf00bc299919b04f866c0d5f4e9dd822b9f79",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.110Z",
+    "path": "components/agents/realtime/supabase-realtime-optimizer.md"
+  },
+  "components/agents/security/api-security-audit.md": {
+    "hash": "d62bd97a89aab4096718f95b1ffbc3e6302ff758fb16399ca0ac84bd7d735c80",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.175Z",
+    "path": "components/agents/security/api-security-audit.md"
+  },
+  "components/agents/security/compliance-specialist.md": {
+    "hash": "67e27cada96ed7b7db45187c7f8d54487b1640bae9612a2af3ba8024efab2b8d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.244Z",
+    "path": "components/agents/security/compliance-specialist.md"
+  },
+  "components/agents/security/incident-responder.md": {
+    "hash": "dcf9ce0709e6f5e59e0972349c9a718bde09271310e62ab9d32bd25f0928cd4e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.310Z",
+    "path": "components/agents/security/incident-responder.md"
+  },
+  "components/agents/security/penetration-tester.md": {
+    "hash": "9b1181029033a0d9905ca5bffadc869d5be00617f78e40620107134879360329",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.380Z",
+    "path": "components/agents/security/penetration-tester.md"
+  },
+  "components/agents/security/security-auditor.md": {
+    "hash": "858de4c9ec78f9102c43aa81ddf51b76648ff67cf9862b11a142c2df04f57dfe",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.447Z",
+    "path": "components/agents/security/security-auditor.md"
+  },
+  "components/agents/web-tools/nextjs-architecture-expert.md": {
+    "hash": "ebec4c5a3937b41b820894b331ae981a0ee442a6c45713ab44ceef324facf495",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.512Z",
+    "path": "components/agents/web-tools/nextjs-architecture-expert.md"
+  },
+  "components/agents/web-tools/react-performance-optimizer.md": {
+    "hash": "94f26660b95918d8d4011e0a0f19944f176736602fe9b85df24dacf06d3388c6",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.580Z",
+    "path": "components/agents/web-tools/react-performance-optimizer.md"
+  },
+  "components/agents/web-tools/seo-analyzer.md": {
+    "hash": "9fe36d074942a08d1cbe53719cce5794965a96a1d05454f2242d900c3dbbf421",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.648Z",
+    "path": "components/agents/web-tools/seo-analyzer.md"
+  },
+  "components/agents/web-tools/url-context-validator.md": {
+    "hash": "8a7bcd1dec2bffb7ac846210e9ae68b971b92012ca2579e2474c7261ab9d0e02",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.714Z",
+    "path": "components/agents/web-tools/url-context-validator.md"
+  },
+  "components/agents/web-tools/url-link-extractor.md": {
+    "hash": "160e78f6379352217b27b1effd56f88f35b6a7aeee29f82e60299ec70e7d7483",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.781Z",
+    "path": "components/agents/web-tools/url-link-extractor.md"
+  },
+  "components/agents/web-tools/web-accessibility-checker.md": {
+    "hash": "715953d1070315a08ddeaa3cefe34ec586f8d98a6cf10bfab4d68b95cbff134c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.870Z",
+    "path": "components/agents/web-tools/web-accessibility-checker.md"
+  },
+  "components/commands/automation/act.md": {
+    "hash": "764058d54247e4ddd5306a980802c05e25cfcf15f2e480d29fb7ff6dee8d0fa2",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.940Z",
+    "path": "components/commands/automation/act.md"
+  },
+  "components/commands/automation/ci-pipeline.md": {
+    "hash": "a26a5736cd45e6f1c27a074beb3d9954e4e1ef7e2cc796ae42d3676e638269fb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:01.988Z",
+    "path": "components/commands/automation/ci-pipeline.md"
+  },
+  "components/commands/automation/husky.md": {
+    "hash": "bb51d0e3856148272b8e9732c658b681b967276d9be7d56715b4a996f59dd21a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.040Z",
+    "path": "components/commands/automation/husky.md"
+  },
+  "components/commands/automation/workflow-orchestrator.md": {
+    "hash": "e88fec65778b425f9f2952d92e28209edcfbafd69f12f3bda273a6fc5bfb79ba",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.089Z",
+    "path": "components/commands/automation/workflow-orchestrator.md"
+  },
+  "components/commands/database/supabase-backup-manager.md": {
+    "hash": "910d765ba24fc913289330b6465b2122b711926f69f67389533160fd13ed57d5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.138Z",
+    "path": "components/commands/database/supabase-backup-manager.md"
+  },
+  "components/commands/database/supabase-data-explorer.md": {
+    "hash": "f621cd6d01fcdd0f7318ba623750cffd077891f63e0726b72bb38b20aec10d5f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.186Z",
+    "path": "components/commands/database/supabase-data-explorer.md"
+  },
+  "components/commands/database/supabase-migration-assistant.md": {
+    "hash": "0099025b9f50ecfa27b259ef40cdbf2387b9fa8c1ea9818beb2874be14baf0fa",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.235Z",
+    "path": "components/commands/database/supabase-migration-assistant.md"
+  },
+  "components/commands/database/supabase-performance-optimizer.md": {
+    "hash": "7de2fd6f029a6a1bbdcea815456cd975059dbc9a9c6a3a0ef455952954f26683",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.285Z",
+    "path": "components/commands/database/supabase-performance-optimizer.md"
+  },
+  "components/commands/database/supabase-realtime-monitor.md": {
+    "hash": "80f92288399c597a27f1a7bea371ffb64f5eea71b1f62348149976eae257facf",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.334Z",
+    "path": "components/commands/database/supabase-realtime-monitor.md"
+  },
+  "components/commands/database/supabase-schema-sync.md": {
+    "hash": "46378e9fb5c3939378936a8fc67538f722fe6450a9ad2516a1e3a9c263a3c18c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.383Z",
+    "path": "components/commands/database/supabase-schema-sync.md"
+  },
+  "components/commands/database/supabase-security-audit.md": {
+    "hash": "1175fdc9826e6911e3cbeea18dc66007a6ced23f8cd488535cbdbb2ce993200c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.435Z",
+    "path": "components/commands/database/supabase-security-audit.md"
+  },
+  "components/commands/database/supabase-type-generator.md": {
+    "hash": "9e99e5053954f40010af94a9ef33c19c195ea5edfa4098ef90e1541476e4e464",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.486Z",
+    "path": "components/commands/database/supabase-type-generator.md"
+  },
+  "components/commands/deployment/add-changelog.md": {
+    "hash": "0ebab56c44a9283e8c65a9f4f04ad26675c893fe99456dbd7c6fe9694e62f05e",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.535Z",
+    "path": "components/commands/deployment/add-changelog.md"
+  },
+  "components/commands/deployment/blue-green-deployment.md": {
+    "hash": "ff741d42982efbf2f6079112d793f7918cdf956a296372fc5cc5c8bc94dbdd46",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.585Z",
+    "path": "components/commands/deployment/blue-green-deployment.md"
+  },
+  "components/commands/deployment/changelog-demo-command.md": {
+    "hash": "d38561e18fb4d8db9dfacb26ac7cbb0cf2df1d05d8316e90a91e63e7288127b6",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.634Z",
+    "path": "components/commands/deployment/changelog-demo-command.md"
+  },
+  "components/commands/deployment/ci-setup.md": {
+    "hash": "4adbedaa8cdf21076a159293ad0f7d41130e21770f6f5bc5295068b0cbcc9157",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.683Z",
+    "path": "components/commands/deployment/ci-setup.md"
+  },
+  "components/commands/deployment/containerize-application.md": {
+    "hash": "417e30a5a551a8b1b3f2786e78f95513dbc51beb364e73a9891981407c8d1ff5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.732Z",
+    "path": "components/commands/deployment/containerize-application.md"
+  },
+  "components/commands/deployment/deployment-monitoring.md": {
+    "hash": "a57123d182248d12e2c371c3bb422af1b2c86b864edd0a22ca18b94fb4584e36",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.780Z",
+    "path": "components/commands/deployment/deployment-monitoring.md"
+  },
+  "components/commands/deployment/hotfix-deploy.md": {
+    "hash": "bffe758760fab82c83ce1f9c78e37ef6e4b6c23ea0bc095e5319967cf1f7799b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.830Z",
+    "path": "components/commands/deployment/hotfix-deploy.md"
+  },
+  "components/commands/deployment/prepare-release.md": {
+    "hash": "770971aaab1a456ce1599a839b24874f155ff6bc8734fc2a6d2e38788121057b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.880Z",
+    "path": "components/commands/deployment/prepare-release.md"
+  },
+  "components/commands/deployment/rollback-deploy.md": {
+    "hash": "21fe0fb64f92e3b90587cca6826996c4e0e8dbd7f93ecb8ceb6b1112d146682a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.928Z",
+    "path": "components/commands/deployment/rollback-deploy.md"
+  },
+  "components/commands/deployment/setup-automated-releases.md": {
+    "hash": "69680c0d02249b7277f65c61a918db83708ede365b5e62a3c5cbe08b6fb1ef02",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:02.977Z",
+    "path": "components/commands/deployment/setup-automated-releases.md"
+  },
+  "components/commands/deployment/setup-kubernetes-deployment.md": {
+    "hash": "da8fe5561dad6b46e85c7008d2845e2ea4e5a6276be356f131ea010f9f7e6d33",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.025Z",
+    "path": "components/commands/deployment/setup-kubernetes-deployment.md"
+  },
+  "components/commands/documentation/create-architecture-documentation.md": {
+    "hash": "581d87dc45bae9ea66990f7a83c1d2a81f0a7d34dfaf12be19911f611e9ba6cb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.077Z",
+    "path": "components/commands/documentation/create-architecture-documentation.md"
+  },
+  "components/commands/documentation/create-onboarding-guide.md": {
+    "hash": "b882244620d22a966fe8d54bbb7ebe3c2e54fe4acaafb4a9f52321ac5d03bdd4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.127Z",
+    "path": "components/commands/documentation/create-onboarding-guide.md"
+  },
+  "components/commands/documentation/doc-api.md": {
+    "hash": "4a4fa3e24b5d6322366a30e3056bbb846b216039112bdca9a9a1f1b92b2a0438",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.175Z",
+    "path": "components/commands/documentation/doc-api.md"
+  },
+  "components/commands/documentation/docs-maintenance.md": {
+    "hash": "13d99ca8e46976b46869c9f8c406953080e2d1829de64a408090e3fa34022864",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.224Z",
+    "path": "components/commands/documentation/docs-maintenance.md"
+  },
+  "components/commands/documentation/generate-api-documentation.md": {
+    "hash": "e03883d37686269fd3b0fd63696936265b8417b2934ccf6aebf9cab7d69f48dc",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.272Z",
+    "path": "components/commands/documentation/generate-api-documentation.md"
+  },
+  "components/commands/documentation/interactive-documentation.md": {
+    "hash": "e0731709b324ba386780f5d48a35ce4717175244f0562e0c1474198c1ce8a72f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.331Z",
+    "path": "components/commands/documentation/interactive-documentation.md"
+  },
+  "components/commands/documentation/load-llms-txt.md": {
+    "hash": "066aa51df2f5c845d9a3b5a5a92830939526f0466f201ad046c49e2ff4898b89",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.381Z",
+    "path": "components/commands/documentation/load-llms-txt.md"
+  },
+  "components/commands/documentation/migration-guide.md": {
+    "hash": "1ce9e5f7118b471b8c42cfa651f82c4c132aaaa5ab333d6631680e88229a541d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.430Z",
+    "path": "components/commands/documentation/migration-guide.md"
+  },
+  "components/commands/documentation/troubleshooting-guide.md": {
+    "hash": "c5d7a34daffbbe92f5032edd6cdbeb12ec342c7671b070d0149c75975513f2ac",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.480Z",
+    "path": "components/commands/documentation/troubleshooting-guide.md"
+  },
+  "components/commands/documentation/update-docs.md": {
+    "hash": "65f7efa0f37fd881c7a94c61bb4d727f14ad2a66d1738aacedb7af4d3196c9bd",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.557Z",
+    "path": "components/commands/documentation/update-docs.md"
+  },
+  "components/commands/game-development/game-analytics-integration.md": {
+    "hash": "c92fc816eaf726aa8bbda48eea1227c968eea99342d8ed553e926da410f47a53",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.607Z",
+    "path": "components/commands/game-development/game-analytics-integration.md"
+  },
+  "components/commands/game-development/game-asset-pipeline.md": {
+    "hash": "dd9dc8d3f56ed4ef97988126a1442ac15f95f1bc0adbce02a3e2e1e21711f6b2",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.656Z",
+    "path": "components/commands/game-development/game-asset-pipeline.md"
+  },
+  "components/commands/game-development/game-performance-profiler.md": {
+    "hash": "1918c1e188e097a23c577d15725137c9e37e21d2ff7b615aad33e65b71191149",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.703Z",
+    "path": "components/commands/game-development/game-performance-profiler.md"
+  },
+  "components/commands/game-development/game-testing-framework.md": {
+    "hash": "6a20501eca61bea0f8c2b0abd41c2b441f96f3392548a62e959525e6669aa58b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.751Z",
+    "path": "components/commands/game-development/game-testing-framework.md"
+  },
+  "components/commands/game-development/unity-project-setup.md": {
+    "hash": "f026cb46a40daa5436d344590be0446f0cea060b79ffe9f58e874b37c7ad5df7",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.800Z",
+    "path": "components/commands/game-development/unity-project-setup.md"
+  },
+  "components/commands/git/feature.md": {
+    "hash": "779f3bc08264a20bfe873e597aed9cb804b545031737a964c91bca6ecaa17b5f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.848Z",
+    "path": "components/commands/git/feature.md"
+  },
+  "components/commands/git/finish.md": {
+    "hash": "f72da951b42492c6fdd0991c9bc570537f4d5e2f7d154159ac6fff47c6272d70",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.895Z",
+    "path": "components/commands/git/finish.md"
+  },
+  "components/commands/git/flow-status.md": {
+    "hash": "d3badd6ba225a5a8e390d3c75da8d55db8bbf0c4139ea96c8fbfc7e6dd6e56a7",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.948Z",
+    "path": "components/commands/git/flow-status.md"
+  },
+  "components/commands/git/hotfix.md": {
+    "hash": "7ba6cd6c015c228d4fdc5727d0f1bdeeecf0e3ec2ff51473ffb3e24068fbff88",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:03.997Z",
+    "path": "components/commands/git/hotfix.md"
+  },
+  "components/commands/git/release.md": {
+    "hash": "a7134b23c7fc94b7eb4776104e1bc9846894914a966b7b0eebb870fa402deef5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.046Z",
+    "path": "components/commands/git/release.md"
+  },
+  "components/commands/git-workflow/branch-cleanup.md": {
+    "hash": "19a9b9fe9293281a15a8907f8f4f74ed088d531dccb29546cc57c0a7470fdb28",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.096Z",
+    "path": "components/commands/git-workflow/branch-cleanup.md"
+  },
+  "components/commands/git-workflow/commit.md": {
+    "hash": "924f138e16c8fe863150e57be05cde482b9db4baba2c3069145c4cc9d7cea44c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.146Z",
+    "path": "components/commands/git-workflow/commit.md"
+  },
+  "components/commands/git-workflow/create-pr.md": {
+    "hash": "735ed69d0265693b008d1bea76bad9807d8825506d7d2b526ed3da8f9a28dfad",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.195Z",
+    "path": "components/commands/git-workflow/create-pr.md"
+  },
+  "components/commands/git-workflow/create-pull-request.md": {
+    "hash": "de5f5e27ca578c150caa77cc7adae50ecc528f7985a740dda17e16948678f259",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.248Z",
+    "path": "components/commands/git-workflow/create-pull-request.md"
+  },
+  "components/commands/git-workflow/create-worktrees.md": {
+    "hash": "4f6d3d69180f72a95eb8fc2604b92db31f581fdbc039ca03c31ded93dd144fa6",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.301Z",
+    "path": "components/commands/git-workflow/create-worktrees.md"
+  },
+  "components/commands/git-workflow/fix-github-issue.md": {
+    "hash": "8574a56cd6558c4b147c7612cb57e4e1f0932e64baaf70ead03bd18a73944a21",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.354Z",
+    "path": "components/commands/git-workflow/fix-github-issue.md"
+  },
+  "components/commands/git-workflow/gemini-review.md": {
+    "hash": "b88f31dc595ce8bad4e8b30e153329e3928f86e9704138832a3fe040a20f2ac5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.406Z",
+    "path": "components/commands/git-workflow/gemini-review.md"
+  },
+  "components/commands/git-workflow/git-bisect-helper.md": {
+    "hash": "6fad09763984706c0ffbc2d9ee06db21cc8d5ca96a634d3de19a8f53c9b46dd0",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.456Z",
+    "path": "components/commands/git-workflow/git-bisect-helper.md"
+  },
+  "components/commands/git-workflow/pr-review.md": {
+    "hash": "cde28114246739b29defbcbcb3f380b5b389193ed4815096cae7b3440d12812d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.504Z",
+    "path": "components/commands/git-workflow/pr-review.md"
+  },
+  "components/commands/git-workflow/update-branch-name.md": {
+    "hash": "dd82a3cae667200b283ce032ca78112d533c289cb4c1efefe4945b686ddcb44a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.555Z",
+    "path": "components/commands/git-workflow/update-branch-name.md"
+  },
+  "components/commands/marketing/publisher-all.md": {
+    "hash": "985bd1a129ab882e7ea5a8b501eafba5a6b963d14b2320b2a060b53743529edf",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.605Z",
+    "path": "components/commands/marketing/publisher-all.md"
+  },
+  "components/commands/marketing/publisher-devto.md": {
+    "hash": "e59b4861d34012a23360240b829743ce41f970f2c350c281870222a9cb08f7cb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.652Z",
+    "path": "components/commands/marketing/publisher-devto.md"
+  },
+  "components/commands/marketing/publisher-linkedin.md": {
+    "hash": "1f1ea8e89d2608441024932de051b7e1f2963041aeaaf7f20d994b411087b6c8",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.701Z",
+    "path": "components/commands/marketing/publisher-linkedin.md"
+  },
+  "components/commands/marketing/publisher-medium.md": {
+    "hash": "e6eef2c9a56137f9267ee9eaea9cb9cff9bab103d75c7eaabc2144e4afd9be33",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.749Z",
+    "path": "components/commands/marketing/publisher-medium.md"
+  },
+  "components/commands/marketing/publisher-x.md": {
+    "hash": "b767e208ef8bdef502b98e55f4c90a86ed39e35b7cee943a48f2b560c44d7394",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.819Z",
+    "path": "components/commands/marketing/publisher-x.md"
+  },
+  "components/commands/marketing/tribe-launch.md": {
+    "hash": "4fd70e87653ae0953aa88ca91192db5c205021781d7be634f8d1875ec1e81566",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.868Z",
+    "path": "components/commands/marketing/tribe-launch.md"
+  },
+  "components/commands/marketing/tribe-map.md": {
+    "hash": "20e13d30890316347b0f916e14233b4fecadf314b6a64412ece15c07a88ab47b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.922Z",
+    "path": "components/commands/marketing/tribe-map.md"
+  },
+  "components/commands/marketing/tribe-scout.md": {
+    "hash": "5542e2bfea589c9577278bde98ab36b0d989c33214a05273c477b5e3750077d4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:04.973Z",
+    "path": "components/commands/marketing/tribe-scout.md"
+  },
+  "components/commands/nextjs-vercel/nextjs-api-tester.md": {
+    "hash": "6373226c3b72e2d26ab6e19997aa0bde9e1e237d1afab9d6c37aaba970204f7c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.027Z",
+    "path": "components/commands/nextjs-vercel/nextjs-api-tester.md"
+  },
+  "components/commands/nextjs-vercel/nextjs-bundle-analyzer.md": {
+    "hash": "e1d72681b74817a55128b41fbf0f59e9a19cd2cab344cd4cf444ee608b35f5bb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.077Z",
+    "path": "components/commands/nextjs-vercel/nextjs-bundle-analyzer.md"
+  },
+  "components/commands/nextjs-vercel/nextjs-component-generator.md": {
+    "hash": "a8eb8bc15a43382f5ce6ffae83428cfc05be2aff9750963d8e9353861a80af9d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.127Z",
+    "path": "components/commands/nextjs-vercel/nextjs-component-generator.md"
+  },
+  "components/commands/nextjs-vercel/nextjs-middleware-creator.md": {
+    "hash": "736a25175362454e19ec6058641f73f458dd6983fedbeb95d3a182bbb19c1e64",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.177Z",
+    "path": "components/commands/nextjs-vercel/nextjs-middleware-creator.md"
+  },
+  "components/commands/nextjs-vercel/nextjs-migration-helper.md": {
+    "hash": "972dd029add494735b4881a0e16d12e2aba2b5912319510b17d44fbfb88d0a36",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.225Z",
+    "path": "components/commands/nextjs-vercel/nextjs-migration-helper.md"
+  },
+  "components/commands/nextjs-vercel/nextjs-performance-audit.md": {
+    "hash": "7416639fc2ae3d454bccf7ab50fdbe7e300cd91ad5f60af0930c59255ff60981",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.276Z",
+    "path": "components/commands/nextjs-vercel/nextjs-performance-audit.md"
+  },
+  "components/commands/nextjs-vercel/nextjs-scaffold.md": {
+    "hash": "c422c53d58fe02d37f0dec24f0d7a8e2d0f977b5e5ecab6ccfae3a800619f6c6",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.326Z",
+    "path": "components/commands/nextjs-vercel/nextjs-scaffold.md"
+  },
+  "components/commands/nextjs-vercel/vercel-deploy-optimize.md": {
+    "hash": "b762809d17d7972d6ee60a6c8786e1d8932be17580b9a33702e21b25a6b238d3",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.377Z",
+    "path": "components/commands/nextjs-vercel/vercel-deploy-optimize.md"
+  },
+  "components/commands/nextjs-vercel/vercel-edge-function.md": {
+    "hash": "dbba532f304628c66588a04dc82b8d20f8ca27ac2f00f4dc96e82929377ecfbd",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.425Z",
+    "path": "components/commands/nextjs-vercel/vercel-edge-function.md"
+  },
+  "components/commands/nextjs-vercel/vercel-env-sync.md": {
+    "hash": "c13e4b60c5dd3d6486466aedb56f0f44f9fa0a1c59ac13a23d5b6ff12a22755e",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.471Z",
+    "path": "components/commands/nextjs-vercel/vercel-env-sync.md"
+  },
+  "components/commands/orchestration/archive.md": {
+    "hash": "4d67347711ccfc002f0350eaee6b53dcd61ff9eca5e5c7694641e7e9e7f95fca",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.523Z",
+    "path": "components/commands/orchestration/archive.md"
+  },
+  "components/commands/orchestration/commit.md": {
+    "hash": "da93d98e2523c50d83bc2609ec285a4b965cb137ceaaf03aa7a2a27aeaa887f3",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.575Z",
+    "path": "components/commands/orchestration/commit.md"
+  },
+  "components/commands/orchestration/find.md": {
+    "hash": "c6b71f2b08533498f4fe9a6b4d6cc838049831f401829d021486d1a71203861d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.627Z",
+    "path": "components/commands/orchestration/find.md"
+  },
+  "components/commands/orchestration/log.md": {
+    "hash": "d33e1c3af92769e9433e2442551b0f83c76c75997dda101bff2c5382450c91fd",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.678Z",
+    "path": "components/commands/orchestration/log.md"
+  },
+  "components/commands/orchestration/move.md": {
+    "hash": "90230cd0897610b6b6bcd873970acf88bc9a7f9c178c63b3ad724161d95da8e5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.732Z",
+    "path": "components/commands/orchestration/move.md"
+  },
+  "components/commands/orchestration/optimize.md": {
+    "hash": "752c7add7dad3b548bdf8c2d2d44312e890022e7907ee2e59fa6462d658f3a9f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.783Z",
+    "path": "components/commands/orchestration/optimize.md"
+  },
+  "components/commands/orchestration/remove.md": {
+    "hash": "0c7ac32916efd0bec6ff614e441cb2ead51818b8c5bae0855265195ddd64858b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.836Z",
+    "path": "components/commands/orchestration/remove.md"
+  },
+  "components/commands/orchestration/report.md": {
+    "hash": "3e3e09b42282aa79fcb1551c6765381e08d493ecc80b47eeadf41f6044990956",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.889Z",
+    "path": "components/commands/orchestration/report.md"
+  },
+  "components/commands/orchestration/resume.md": {
+    "hash": "a2da9ee7052538a30bb2625c48d26e840e10748e898a71a238c7db25da8c30c3",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:05.942Z",
+    "path": "components/commands/orchestration/resume.md"
+  },
+  "components/commands/orchestration/start.md": {
+    "hash": "32554a2ac869a2a9b45aec3634ed83c7ed18bb0bb10730e9b4266269eed336e6",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.049Z",
+    "path": "components/commands/orchestration/start.md"
+  },
+  "components/commands/orchestration/status.md": {
+    "hash": "fd12f73d147e4ac92b9ba47163c029f0b6ec26283cbf858805cc9d716614174d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.105Z",
+    "path": "components/commands/orchestration/status.md"
+  },
+  "components/commands/orchestration/sync.md": {
+    "hash": "39b56f8d34b886e5ec2a5b96fbb7860627ab0067724a3a7dc7be426972e9e05b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.151Z",
+    "path": "components/commands/orchestration/sync.md"
+  },
+  "components/commands/performance/add-performance-monitoring.md": {
+    "hash": "8b84f1b18fd885efa42dfa24766c957ab711f1dd36537d3e16fc936130af66ee",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.200Z",
+    "path": "components/commands/performance/add-performance-monitoring.md"
+  },
+  "components/commands/performance/implement-caching-strategy.md": {
+    "hash": "fcc8ccf4ed5fb5f2e5cec02c9fbf88629f8cab7b3cf3728c36517b95674902fe",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.247Z",
+    "path": "components/commands/performance/implement-caching-strategy.md"
+  },
+  "components/commands/performance/optimize-api-performance.md": {
+    "hash": "3574b431071fcc312b9f86763a2a5f9d83f1df52a0cb03bbf5c32adf56845403",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.314Z",
+    "path": "components/commands/performance/optimize-api-performance.md"
+  },
+  "components/commands/performance/optimize-build.md": {
+    "hash": "16e67b9ae7618c875c75f129f6da83862a98871c308e18053e2076d27c00f1a9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.364Z",
+    "path": "components/commands/performance/optimize-build.md"
+  },
+  "components/commands/performance/optimize-bundle-size.md": {
+    "hash": "42b0d0ccf0139c76daf23453e291d64527e439f235d18b6c48a60ad877d64507",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.414Z",
+    "path": "components/commands/performance/optimize-bundle-size.md"
+  },
+  "components/commands/performance/optimize-database-performance.md": {
+    "hash": "476d12bb665bccb839eb33d91b75712641ad19bb554757802576a731d07e7eaf",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.463Z",
+    "path": "components/commands/performance/optimize-database-performance.md"
+  },
+  "components/commands/performance/optimize-memory-usage.md": {
+    "hash": "bee9c8c7228dc0974453be303b9b4c3633584f78acc55559e9ed109e240a241f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.510Z",
+    "path": "components/commands/performance/optimize-memory-usage.md"
+  },
+  "components/commands/performance/performance-audit.md": {
+    "hash": "0b54ba2410799f3fb6e5d566c957be307533e2529e9913e64a4353eb8dcd152e",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.561Z",
+    "path": "components/commands/performance/performance-audit.md"
+  },
+  "components/commands/performance/setup-cdn-optimization.md": {
+    "hash": "32d97302a0f88ea6ce3cb47df33a5814122f04ea8d890f65652bdb6ccac3e00a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.610Z",
+    "path": "components/commands/performance/setup-cdn-optimization.md"
+  },
+  "components/commands/performance/system-behavior-simulator.md": {
+    "hash": "e4319d0fa6e6704bc2ca0340c4cab3fd022584d59c7eb30d81a77a20ea42e27c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.661Z",
+    "path": "components/commands/performance/system-behavior-simulator.md"
+  },
+  "components/commands/project-management/add-package.md": {
+    "hash": "70086fe515549b332b3e65ed62e463e6ba4bd5f344ca16db34768f33f8193f95",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.713Z",
+    "path": "components/commands/project-management/add-package.md"
+  },
+  "components/commands/project-management/add-to-changelog.md": {
+    "hash": "cb519ed3295c762b309cd6fbc77bc8f56c9f261ad66cda39c92579248c77a6f3",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.762Z",
+    "path": "components/commands/project-management/add-to-changelog.md"
+  },
+  "components/commands/project-management/create-feature.md": {
+    "hash": "b4e5a16cf43bdec74d24b4565ea7bd8ed64e5222d8b3751f1af89efcae54ff01",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.813Z",
+    "path": "components/commands/project-management/create-feature.md"
+  },
+  "components/commands/project-management/create-jtbd.md": {
+    "hash": "855eb42c9cf0b76e7d1eaace614cdb78891be6aa4a135f696029d8e41468d8b5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.862Z",
+    "path": "components/commands/project-management/create-jtbd.md"
+  },
+  "components/commands/project-management/create-prd.md": {
+    "hash": "4925ca3cd4342ac7a8afcf5e1c5db6ced643daa33a562a46e2d3206f3664ccb5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.909Z",
+    "path": "components/commands/project-management/create-prd.md"
+  },
+  "components/commands/project-management/create-prp.md": {
+    "hash": "958c64bc77d871dbfd090462d396e8f1c6d5c7b859b3375eb2776924a3688a78",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:06.958Z",
+    "path": "components/commands/project-management/create-prp.md"
+  },
+  "components/commands/project-management/init-project.md": {
+    "hash": "b9f3d320db055d560bd95461b8d38dec44b7215653a9075e88c9dc0cdb40b53c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.008Z",
+    "path": "components/commands/project-management/init-project.md"
+  },
+  "components/commands/project-management/milestone-tracker.md": {
+    "hash": "3a23c8830fe017095432494f8d4a6208fddeb816bc4019298c5d9f3875d5683b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.058Z",
+    "path": "components/commands/project-management/milestone-tracker.md"
+  },
+  "components/commands/project-management/pac-configure.md": {
+    "hash": "62f0c7ae4871d1be40213b5a953944c452d6dd6347b7cddebd04b2edaee025dc",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.109Z",
+    "path": "components/commands/project-management/pac-configure.md"
+  },
+  "components/commands/project-management/pac-create-epic.md": {
+    "hash": "fd4c05fe7e99e318cbc8a25f11254305d267fbb39a087a0b53f269b7f1ed9096",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.158Z",
+    "path": "components/commands/project-management/pac-create-epic.md"
+  },
+  "components/commands/project-management/pac-create-ticket.md": {
+    "hash": "f5a0800f79cdecdeab7bdbdbc3049a733b9dcbee186f0f5c49087b76bd7d8de5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.214Z",
+    "path": "components/commands/project-management/pac-create-ticket.md"
+  },
+  "components/commands/project-management/pac-update-status.md": {
+    "hash": "d51089d1abe42de293d0cecc19c2734e1c9d1a1c306628158d1ad769789368f8",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.263Z",
+    "path": "components/commands/project-management/pac-update-status.md"
+  },
+  "components/commands/project-management/pac-validate.md": {
+    "hash": "8a9bba7972a5e6076beab60e28ff655964977a10fc360d92eb1b9f73d8230303",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.309Z",
+    "path": "components/commands/project-management/pac-validate.md"
+  },
+  "components/commands/project-management/project-health-check.md": {
+    "hash": "899be3400d776093ab96bdb229ed11af2bf1f81117fc18eed96b01d8b05e3ebd",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.357Z",
+    "path": "components/commands/project-management/project-health-check.md"
+  },
+  "components/commands/project-management/project-timeline-simulator.md": {
+    "hash": "fe3c31423c014170857c41b7bd2b3de8c40f0465fdd8b95c548ddbdbe7c294da",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.403Z",
+    "path": "components/commands/project-management/project-timeline-simulator.md"
+  },
+  "components/commands/project-management/project-to-linear.md": {
+    "hash": "de67c4a009c89b19250876947883ca3d376d0dbd4c3ec4348af2c2fea82b1249",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.451Z",
+    "path": "components/commands/project-management/project-to-linear.md"
+  },
+  "components/commands/project-management/release.md": {
+    "hash": "dab3c369ce71e911ae68811d3d4ea25c95930f9a33f90887d4a3bcbeba3b7536",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.500Z",
+    "path": "components/commands/project-management/release.md"
+  },
+  "components/commands/project-management/todo.md": {
+    "hash": "2e90d967e88919102342d4dce0a0de479dedba419025cbaf7c1a961c1d87714d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.549Z",
+    "path": "components/commands/project-management/todo.md"
+  },
+  "components/commands/security/add-authentication-system.md": {
+    "hash": "29af0af625e71d40b9e34fd7d03fc2d2d289065b2aa4f212ce6fd5618c83e8ae",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.596Z",
+    "path": "components/commands/security/add-authentication-system.md"
+  },
+  "components/commands/security/dependency-audit.md": {
+    "hash": "aa31686ee3693796e26599e9c86cba03d4e472bbd69dc91b3244bd84fdaca7c8",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.694Z",
+    "path": "components/commands/security/dependency-audit.md"
+  },
+  "components/commands/security/penetration-test.md": {
+    "hash": "069ddea303725b8fd8dedef140f5de13ba44a49747f6eb72c602aece648f6fa0",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.759Z",
+    "path": "components/commands/security/penetration-test.md"
+  },
+  "components/commands/security/secrets-scanner.md": {
+    "hash": "6f4635833aed62cef6af87b596f13e0bd228c5f6242b65e17782e24c73ccb905",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.808Z",
+    "path": "components/commands/security/secrets-scanner.md"
+  },
+  "components/commands/security/security-audit.md": {
+    "hash": "8be96c7921f9bf87987df65aacce6d278706b0c52c22058fb1a555888ea15748",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.858Z",
+    "path": "components/commands/security/security-audit.md"
+  },
+  "components/commands/security/security-hardening.md": {
+    "hash": "2a8fe30335ca511c3f10cbe9045ce86d335dbadeb9017607ecbc1b6f8452bcf6",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.907Z",
+    "path": "components/commands/security/security-hardening.md"
+  },
+  "components/commands/setup/create-database-migrations.md": {
+    "hash": "1438fd5a1789c276e5f7ff24de34acd9061203c10759071257c5cef7c766f6f6",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:07.955Z",
+    "path": "components/commands/setup/create-database-migrations.md"
+  },
+  "components/commands/setup/design-database-schema.md": {
+    "hash": "0c7841e9fd5fc0b2c45e830f34ac2a93e005ac804ebbb25d5bc7275fd8918f5a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.003Z",
+    "path": "components/commands/setup/design-database-schema.md"
+  },
+  "components/commands/setup/design-rest-api.md": {
+    "hash": "7ab19c2e0befb171bd19ce7ade81bb47c8dc892f931e5a583511d5ff98c8db51",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.051Z",
+    "path": "components/commands/setup/design-rest-api.md"
+  },
+  "components/commands/setup/implement-graphql-api.md": {
+    "hash": "181219f1b3771e441f15173027e91f524f5c3d60a28607061e306700737e9ea9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.102Z",
+    "path": "components/commands/setup/implement-graphql-api.md"
+  },
+  "components/commands/setup/migrate-to-typescript.md": {
+    "hash": "ba32a8d3a6445fad285e2e1efd8a7322d3bd9418bbba75206bcb74fd59022b92",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.150Z",
+    "path": "components/commands/setup/migrate-to-typescript.md"
+  },
+  "components/commands/setup/setup-ci-cd-pipeline.md": {
+    "hash": "6f633980b64bf495bedf01cbc1c6c1a9c0a6cf951992958a23eec2f84521f086",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.196Z",
+    "path": "components/commands/setup/setup-ci-cd-pipeline.md"
+  },
+  "components/commands/setup/setup-development-environment.md": {
+    "hash": "23ae14357f0293433aea7ceb12b801df4429dab2e8c4f1edace4923097d589ac",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.245Z",
+    "path": "components/commands/setup/setup-development-environment.md"
+  },
+  "components/commands/setup/setup-docker-containers.md": {
+    "hash": "54f7203ce324640ef20d91b0b3c204b7146edcaa7f9c87f10bb3ec6fbcb2e1f7",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.294Z",
+    "path": "components/commands/setup/setup-docker-containers.md"
+  },
+  "components/commands/setup/setup-formatting.md": {
+    "hash": "6283915412217e6759381280799d00b75b89ccd0dd27d652b10605f76b4c4b2d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.341Z",
+    "path": "components/commands/setup/setup-formatting.md"
+  },
+  "components/commands/setup/setup-linting.md": {
+    "hash": "ffcca4b7a0e88aafc62d3f0c99d15e16d16217a4713e3815998544759d531253",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.390Z",
+    "path": "components/commands/setup/setup-linting.md"
+  },
+  "components/commands/setup/setup-monitoring-observability.md": {
+    "hash": "859ac1a42a5ea2e1cafe19e7f3c3011a3dbeda1431d69bceb953b4992a4c5ad9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.439Z",
+    "path": "components/commands/setup/setup-monitoring-observability.md"
+  },
+  "components/commands/setup/setup-monorepo.md": {
+    "hash": "9a3302b01f63328c95304f8f0451514b1a6301184a1f0e2b3cfd3e0b004dbac0",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.490Z",
+    "path": "components/commands/setup/setup-monorepo.md"
+  },
+  "components/commands/setup/setup-rate-limiting.md": {
+    "hash": "a63b8017fb1ba66d6904cd10129b9ebe5da6a281eb2813ad963db831533d3b80",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.538Z",
+    "path": "components/commands/setup/setup-rate-limiting.md"
+  },
+  "components/commands/setup/update-dependencies.md": {
+    "hash": "2421e5640bf0307121b8f1e33124b7a496ebf9525c51586c27a25864c753d3bd",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.589Z",
+    "path": "components/commands/setup/update-dependencies.md"
+  },
+  "components/commands/setup/vercel-analytics.md": {
+    "hash": "28eed5ce1d4212d940b1a5ceda9bd289f09a35b6d90f9059c6a2f162abf35cd0",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.638Z",
+    "path": "components/commands/setup/vercel-analytics.md"
+  },
+  "components/commands/simulation/business-scenario-explorer.md": {
+    "hash": "167a8a37faf1fdbe623c014c4e12578739c9ea5033382cba4edd752f92429153",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.688Z",
+    "path": "components/commands/simulation/business-scenario-explorer.md"
+  },
+  "components/commands/simulation/constraint-modeler.md": {
+    "hash": "62bb720c9f904953108810ac75dc1a14a7210456274a8f1fcf8c5978bc3e29bf",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.737Z",
+    "path": "components/commands/simulation/constraint-modeler.md"
+  },
+  "components/commands/simulation/decision-tree-explorer.md": {
+    "hash": "36efcf6fd8e3eccc644e3bbedf841da015547c631d7718b41058b917dd9a776d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.788Z",
+    "path": "components/commands/simulation/decision-tree-explorer.md"
+  },
+  "components/commands/simulation/digital-twin-creator.md": {
+    "hash": "d6254f062cc2a409e73c688d2e907aaab8a0c1a379e50644eba48653f97b33f9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.835Z",
+    "path": "components/commands/simulation/digital-twin-creator.md"
+  },
+  "components/commands/simulation/future-scenario-generator.md": {
+    "hash": "322b4f6a23b22cfb21148af88766c25bb58dc6c0084fe2d485a7e75a076a032d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.889Z",
+    "path": "components/commands/simulation/future-scenario-generator.md"
+  },
+  "components/commands/simulation/market-response-modeler.md": {
+    "hash": "5feba675fa2410857fe9f60b4c452a3efcac0dc8580f3828b44343293d93080f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.939Z",
+    "path": "components/commands/simulation/market-response-modeler.md"
+  },
+  "components/commands/simulation/monte-carlo-simulator.md": {
+    "hash": "f0e020e8f6684da1baeefeac22eb3763dd78a5e51bfc9d459cc1401b3851c8db",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:08.989Z",
+    "path": "components/commands/simulation/monte-carlo-simulator.md"
+  },
+  "components/commands/simulation/simulation-calibrator.md": {
+    "hash": "d06e1aa95bee7fd6a0f4ca589b2f99f2813f122eb7077d18fa3fe9e927a1a2b9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.038Z",
+    "path": "components/commands/simulation/simulation-calibrator.md"
+  },
+  "components/commands/simulation/system-dynamics-modeler.md": {
+    "hash": "167e17b41d1e38653e2be5c19a5910a0b0ab72cf51afc998f97360793de2984d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.086Z",
+    "path": "components/commands/simulation/system-dynamics-modeler.md"
+  },
+  "components/commands/simulation/timeline-compressor.md": {
+    "hash": "628a8b344bc1477a53cd82db704662c3a35219de3d510f642944670caf540694",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.136Z",
+    "path": "components/commands/simulation/timeline-compressor.md"
+  },
+  "components/commands/svelte/svelte-a11y.md": {
+    "hash": "7fc0c9cca2291015b940d164d4d86b7fb08c4d18034970df39d3a6aee2e6b88b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.216Z",
+    "path": "components/commands/svelte/svelte-a11y.md"
+  },
+  "components/commands/svelte/svelte-component.md": {
+    "hash": "56109a26d1a276fada36019b30cdef73e538374e5bbb39cb5fedd8528b3d70f1",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.275Z",
+    "path": "components/commands/svelte/svelte-component.md"
+  },
+  "components/commands/svelte/svelte-debug.md": {
+    "hash": "855e5a7474daa493d8ee91af2ec1f1c8dc35f10ad3d42916f36c2c01c904f40b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.325Z",
+    "path": "components/commands/svelte/svelte-debug.md"
+  },
+  "components/commands/svelte/svelte-migrate.md": {
+    "hash": "af97c82564badfa8bfe32f54bc0679453c3e3379b7e335a7522ccad4e004a6c3",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.376Z",
+    "path": "components/commands/svelte/svelte-migrate.md"
+  },
+  "components/commands/svelte/svelte-optimize.md": {
+    "hash": "db117d74207dccf2fca086467ea95643beded25d0a3e574742a5f49817fd1e2a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.431Z",
+    "path": "components/commands/svelte/svelte-optimize.md"
+  },
+  "components/commands/svelte/svelte-scaffold.md": {
+    "hash": "222dcbb6c01959fd2cadefb410129282b0a2d0509692d5898bd528afe500607b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.485Z",
+    "path": "components/commands/svelte/svelte-scaffold.md"
+  },
+  "components/commands/svelte/svelte-storybook-migrate.md": {
+    "hash": "b799754a74228df4c961f484a68f9a14b30cf8ecf30a5fe89245b097c0186820",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.536Z",
+    "path": "components/commands/svelte/svelte-storybook-migrate.md"
+  },
+  "components/commands/svelte/svelte-storybook-mock.md": {
+    "hash": "4ccfa0d1556e98dc08245271a982c6b2e06efcec01beda51e35880665b54d98a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.587Z",
+    "path": "components/commands/svelte/svelte-storybook-mock.md"
+  },
+  "components/commands/svelte/svelte-storybook-setup.md": {
+    "hash": "a35f47530c316a017b0fd232a566478cd8c0f4990ed6349b24c9eabb99741e49",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.638Z",
+    "path": "components/commands/svelte/svelte-storybook-setup.md"
+  },
+  "components/commands/svelte/svelte-storybook-story.md": {
+    "hash": "e2adcfbc9007056a5a995d9f8abc0dc2b51250f7c7c9e1e62cd514fd2a87e41f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.689Z",
+    "path": "components/commands/svelte/svelte-storybook-story.md"
+  },
+  "components/commands/svelte/svelte-storybook-troubleshoot.md": {
+    "hash": "a4f3233e74ed2103b66840579e4efb041cc236557b8ff0863d983832c7c0a8e0",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.748Z",
+    "path": "components/commands/svelte/svelte-storybook-troubleshoot.md"
+  },
+  "components/commands/svelte/svelte-storybook.md": {
+    "hash": "959553018be7eddc51b20d31542065a585000025fe77eabb3c4b86e6b059f463",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.803Z",
+    "path": "components/commands/svelte/svelte-storybook.md"
+  },
+  "components/commands/svelte/svelte-test-coverage.md": {
+    "hash": "f5b8e4c13c11a3ccd9423ad226295b3041e7e0c82c0f28a2b6d2c7b968e15339",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.855Z",
+    "path": "components/commands/svelte/svelte-test-coverage.md"
+  },
+  "components/commands/svelte/svelte-test-fix.md": {
+    "hash": "cdbe79ca440592c5c64d0fe87c734a76fde671b5108fdffbd478323392521910",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.908Z",
+    "path": "components/commands/svelte/svelte-test-fix.md"
+  },
+  "components/commands/svelte/svelte-test-setup.md": {
+    "hash": "ac475f6a693e85f5d06a00ab1b0bce54bc4f52c962cfdaa4d34084aedbe0bb85",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:09.959Z",
+    "path": "components/commands/svelte/svelte-test-setup.md"
+  },
+  "components/commands/svelte/svelte-test.md": {
+    "hash": "daa4c0a27bbf61a413db9da9742857ed30d32b57ca6f6e526bbbf3060f46767a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.011Z",
+    "path": "components/commands/svelte/svelte-test.md"
+  },
+  "components/commands/sync/bidirectional-sync.md": {
+    "hash": "fe88decf4a3d8bafc72f38a8158cb6f135216821d1400c1dda688bbfd6754cf8",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.065Z",
+    "path": "components/commands/sync/bidirectional-sync.md"
+  },
+  "components/commands/sync/bulk-import-issues.md": {
+    "hash": "b7cecf5b9b511fbfecda14ece9b764916bae3fcf5db41df19d017ddcd79708c4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.114Z",
+    "path": "components/commands/sync/bulk-import-issues.md"
+  },
+  "components/commands/sync/cross-reference-manager.md": {
+    "hash": "a374a401fe08b58327e4d4d5aeefd727ba729b2d1bae82a69fc58aca0b2dde03",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.164Z",
+    "path": "components/commands/sync/cross-reference-manager.md"
+  },
+  "components/commands/sync/issue-to-linear-task.md": {
+    "hash": "08ad6c9476d7975e1ce3bbd5e3858471a4dc7655f29b9ed2a14fa79722c6e73b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.213Z",
+    "path": "components/commands/sync/issue-to-linear-task.md"
+  },
+  "components/commands/sync/linear-task-to-issue.md": {
+    "hash": "22f3b29b995bb81fff051354d61dc6c9df23ad9f115d22a4bf593b302c48e54b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.263Z",
+    "path": "components/commands/sync/linear-task-to-issue.md"
+  },
+  "components/commands/sync/sync-automation-setup.md": {
+    "hash": "231c7462a7dfb8243b75526e78703e292c25d4a890fc7a9189e79c5396d66b67",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.313Z",
+    "path": "components/commands/sync/sync-automation-setup.md"
+  },
+  "components/commands/sync/sync-conflict-resolver.md": {
+    "hash": "2e248e9f55766fd79acfe6cd940add32624fa03073c6d72318a33550ff6cb0b4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.369Z",
+    "path": "components/commands/sync/sync-conflict-resolver.md"
+  },
+  "components/commands/sync/sync-health-monitor.md": {
+    "hash": "094121fcca8c4a3b1c33e739c6577d2e8f323d26c7e66e426d22d83ab0a42570",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.419Z",
+    "path": "components/commands/sync/sync-health-monitor.md"
+  },
+  "components/commands/sync/sync-issues-to-linear.md": {
+    "hash": "5fc3e6aeb6615e9e10ae252604aff94ee5d463ebcf56b3cb04b3b01c3f4f0766",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.470Z",
+    "path": "components/commands/sync/sync-issues-to-linear.md"
+  },
+  "components/commands/sync/sync-linear-to-issues.md": {
+    "hash": "f6e1a9ca48de5b133486add26e5386c2e7472266eaa5979792e7f851ee23320d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.520Z",
+    "path": "components/commands/sync/sync-linear-to-issues.md"
+  },
+  "components/commands/sync/sync-migration-assistant.md": {
+    "hash": "b163d15028b65a6961a60cb7d1f4adac16a5ff1132910465c9819cbd6f567398",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.570Z",
+    "path": "components/commands/sync/sync-migration-assistant.md"
+  },
+  "components/commands/sync/sync-pr-to-task.md": {
+    "hash": "db12719e439c7d8444cd35b1b0a2f452b9d660daa1a1ed407878f823da8dd139",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.619Z",
+    "path": "components/commands/sync/sync-pr-to-task.md"
+  },
+  "components/commands/sync/sync-status.md": {
+    "hash": "b7e3094859f602dbc69f90d27d981f210a7e1cdb4b107ef7630cfb6e0cb83c0f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.670Z",
+    "path": "components/commands/sync/sync-status.md"
+  },
+  "components/commands/sync/task-from-pr.md": {
+    "hash": "82162c6763f08ad9d1c39290dd291ae6cd8d6aa4610f57f6d8dd1e323f0c6fd9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.716Z",
+    "path": "components/commands/sync/task-from-pr.md"
+  },
+  "components/commands/team/architecture-review.md": {
+    "hash": "ff29b80e9b50a27bf3d30332c50e09d781f36f8e6c3e34fbd328a7a3e205926e",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.762Z",
+    "path": "components/commands/team/architecture-review.md"
+  },
+  "components/commands/team/decision-quality-analyzer.md": {
+    "hash": "cf4c5603c12518210a5c2faa47996030cb237dc3ff7edb974789e98b059f9fa4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.831Z",
+    "path": "components/commands/team/decision-quality-analyzer.md"
+  },
+  "components/commands/team/dependency-mapper.md": {
+    "hash": "5d518971fc09550f0c6639f1488f64fc2d65f58b497db0c882dcffa3fd53a28f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.879Z",
+    "path": "components/commands/team/dependency-mapper.md"
+  },
+  "components/commands/team/estimate-assistant.md": {
+    "hash": "70cad449235b4f7053cf7cf0a3bc9a2ce85c5660255acf7a89f7a9e10d157a9a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.924Z",
+    "path": "components/commands/team/estimate-assistant.md"
+  },
+  "components/commands/team/issue-triage.md": {
+    "hash": "02878db5ade6a3f81eba4c1d37cc008811d6fcda4d18aadf277087db14ae9cdb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:10.973Z",
+    "path": "components/commands/team/issue-triage.md"
+  },
+  "components/commands/team/memory-spring-cleaning.md": {
+    "hash": "dffee4623940d81c283b5538ec7adca408a9054dda295a98f0219a6bacaef749",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.022Z",
+    "path": "components/commands/team/memory-spring-cleaning.md"
+  },
+  "components/commands/team/migration-assistant.md": {
+    "hash": "9c221fc9fe2d7cb74d5071706e5ebbc30da9007ce0c12b1f59e27441c42a873c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.072Z",
+    "path": "components/commands/team/migration-assistant.md"
+  },
+  "components/commands/team/retrospective-analyzer.md": {
+    "hash": "8e2fe7a98ced05284bb4f136ae60960b80f9b2263e0a535c3892f45b6de2ee26",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.120Z",
+    "path": "components/commands/team/retrospective-analyzer.md"
+  },
+  "components/commands/team/session-learning-capture.md": {
+    "hash": "e0ea247d5080e4e1f7c7119428f3f8a7b0b9ab3c89ab42a23ae1427adafb3059",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.171Z",
+    "path": "components/commands/team/session-learning-capture.md"
+  },
+  "components/commands/team/sprint-planning.md": {
+    "hash": "884a6cbf8fdeb8caaacac9b1cfacf153f4fdb8f405936abb635b2bb8470ac97d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.219Z",
+    "path": "components/commands/team/sprint-planning.md"
+  },
+  "components/commands/team/standup-report.md": {
+    "hash": "1129da8db0e9793899d65b1072d4e40d526fd42f577aae5c8303a6b7a7f0f4d1",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.267Z",
+    "path": "components/commands/team/standup-report.md"
+  },
+  "components/commands/team/team-knowledge-mapper.md": {
+    "hash": "352f38d0d152307d58087ae77aac39ff5676458b4ae0ef295d3a30927347df56",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.350Z",
+    "path": "components/commands/team/team-knowledge-mapper.md"
+  },
+  "components/commands/team/team-velocity-tracker.md": {
+    "hash": "7f949632b639989773e2c90b796a6be71f914da7778724f3fde06a0e3ce3396c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.406Z",
+    "path": "components/commands/team/team-velocity-tracker.md"
+  },
+  "components/commands/team/team-workload-balancer.md": {
+    "hash": "bcc9b9ea4f337acf5cf3a8f57aedb35d307d2d69406f76f8ac70a0b760ec4298",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.457Z",
+    "path": "components/commands/team/team-workload-balancer.md"
+  },
+  "components/commands/testing/add-mutation-testing.md": {
+    "hash": "f7a41580418088cace2baebf5f813c0559b66ac500a4b1e7913a883a7f6b9e3e",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.507Z",
+    "path": "components/commands/testing/add-mutation-testing.md"
+  },
+  "components/commands/testing/add-property-based-testing.md": {
+    "hash": "a7bd1190e3b4058185d0fcf99cdd3a1c2d98aecc04fde376f4e39c8e7ffedd38",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.557Z",
+    "path": "components/commands/testing/add-property-based-testing.md"
+  },
+  "components/commands/testing/e2e-setup.md": {
+    "hash": "363b9c1707744ac94ad479730e45c4016182d1e89dfc89cd9b1a44d68869df04",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.607Z",
+    "path": "components/commands/testing/e2e-setup.md"
+  },
+  "components/commands/testing/generate-test-cases.md": {
+    "hash": "5bce5f3fc182fd19b081198ff198a020540b9503f13de60d1c7db9cc2a77be84",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.656Z",
+    "path": "components/commands/testing/generate-test-cases.md"
+  },
+  "components/commands/testing/generate-tests.md": {
+    "hash": "b997fd141e561213785b7d1b606bd8f9cef8235b3c3ce1e019d46d8c91e7ffbd",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.706Z",
+    "path": "components/commands/testing/generate-tests.md"
+  },
+  "components/commands/testing/setup-comprehensive-testing.md": {
+    "hash": "1e831fc4eabe84adc234924fdb26aad3c845dc8c4a289b854aef38d227534e49",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.757Z",
+    "path": "components/commands/testing/setup-comprehensive-testing.md"
+  },
+  "components/commands/testing/setup-load-testing.md": {
+    "hash": "f59947428014cb4899362d4bf44e485c50190b710f443e14b6ef0aa8ed6dffe7",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.808Z",
+    "path": "components/commands/testing/setup-load-testing.md"
+  },
+  "components/commands/testing/setup-visual-testing.md": {
+    "hash": "b6f8cbd44b5eb5392f6823bac637c2f1e756dc0eaf7249ca3ef34fb5456c952c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.858Z",
+    "path": "components/commands/testing/setup-visual-testing.md"
+  },
+  "components/commands/testing/test-automation-orchestrator.md": {
+    "hash": "ffa4ec1a3d90325524e574cb6dd07af5d0d34ef71ec1d493f3a9530a000e0532",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.908Z",
+    "path": "components/commands/testing/test-automation-orchestrator.md"
+  },
+  "components/commands/testing/test-changelog-automation.md": {
+    "hash": "6b5f3a7970949fedd9ca96aea39a737e9c7ba32f27ff5bd7e60518b8b4e4ec64",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:11.957Z",
+    "path": "components/commands/testing/test-changelog-automation.md"
+  },
+  "components/commands/testing/test-coverage.md": {
+    "hash": "c57fc8feafed78dccec80d8609c8b0dcbb56c42fe9524f4670d06d4f6e041f29",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.006Z",
+    "path": "components/commands/testing/test-coverage.md"
+  },
+  "components/commands/testing/test-quality-analyzer.md": {
+    "hash": "8784786815a9542fde5b184b5d842b334b16786cb4ad337b9cc1203405d4aa96",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.053Z",
+    "path": "components/commands/testing/test-quality-analyzer.md"
+  },
+  "components/commands/testing/testing_plan_integration.md": {
+    "hash": "d0594f32c8471653a3ece4f34c0bf2d1de3bf00bbf5a902de5af05a1e3b02f8f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.101Z",
+    "path": "components/commands/testing/testing_plan_integration.md"
+  },
+  "components/commands/testing/write-tests.md": {
+    "hash": "85bf1675a5db793eea28f2327230489dafbea0396adc939c8b31353310f45fbf",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.150Z",
+    "path": "components/commands/testing/write-tests.md"
+  },
+  "components/commands/utilities/all-tools.md": {
+    "hash": "ed164e275345090bd482e7c7e9f6e8ab3c2717471fb6a4fdf893965b5fd9f31a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.202Z",
+    "path": "components/commands/utilities/all-tools.md"
+  },
+  "components/commands/utilities/architecture-scenario-explorer.md": {
+    "hash": "4f3dc7a9a2596d3a46ac85b5de5cea05f68c7866045a6f318301475b1619a113",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.260Z",
+    "path": "components/commands/utilities/architecture-scenario-explorer.md"
+  },
+  "components/commands/utilities/check-file.md": {
+    "hash": "87ca19818dbe8602b3fa3ed1237535389b65b31a0ce0c1ac9b175832deb7c4ad",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.311Z",
+    "path": "components/commands/utilities/check-file.md"
+  },
+  "components/commands/utilities/clean-branches.md": {
+    "hash": "1154f438db13e1a16797cc88ce6d938be91e42d1734c558db6fcc28c27534bc4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.362Z",
+    "path": "components/commands/utilities/clean-branches.md"
+  },
+  "components/commands/utilities/clean.md": {
+    "hash": "052059af0733199a9e568e134345e3abaed182a7bb11aff250f0c723b2506a5b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.412Z",
+    "path": "components/commands/utilities/clean.md"
+  },
+  "components/commands/utilities/code-permutation-tester.md": {
+    "hash": "d720b9eb33cb4f86cb2fd18ede28db3fec19bb2896dc707b762a16bd1e53ed8b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.492Z",
+    "path": "components/commands/utilities/code-permutation-tester.md"
+  },
+  "components/commands/utilities/code-review.md": {
+    "hash": "723da07774e3ecaeaaf4ba4ae78aca80f35a59031e612bc08871c2d625e585ec",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.546Z",
+    "path": "components/commands/utilities/code-review.md"
+  },
+  "components/commands/utilities/code-to-task.md": {
+    "hash": "75150fff7c867b162146e68cbc4d9d41a07b1487978cb74cd85ad40552841acb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.595Z",
+    "path": "components/commands/utilities/code-to-task.md"
+  },
+  "components/commands/utilities/context-prime.md": {
+    "hash": "3bc797ac610d159f16f79d564f9f774fcbc1079f7bfb484bbce9624f9961185d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.643Z",
+    "path": "components/commands/utilities/context-prime.md"
+  },
+  "components/commands/utilities/debug-error.md": {
+    "hash": "d7a8ce503d76327862a58f7b043e69eeae119171069bb6de930b5d356d9ad8f3",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.693Z",
+    "path": "components/commands/utilities/debug-error.md"
+  },
+  "components/commands/utilities/directory-deep-dive.md": {
+    "hash": "e1595219b50ec1eafedc0b501517bf68b3517070d6b20ba6af8ab3dea277af41",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.750Z",
+    "path": "components/commands/utilities/directory-deep-dive.md"
+  },
+  "components/commands/utilities/explain-code.md": {
+    "hash": "e953ab5831729e0fffc69e8d1e820d1f0b7e159a85ae706d0113bcd301e4abcd",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.798Z",
+    "path": "components/commands/utilities/explain-code.md"
+  },
+  "components/commands/utilities/fix-issue.md": {
+    "hash": "9e59d6500bb7fd1107c53abaa472c73956848286b95d47206e3c259ff5a40786",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.849Z",
+    "path": "components/commands/utilities/fix-issue.md"
+  },
+  "components/commands/utilities/generate-linear-worklog.md": {
+    "hash": "5860c8beae032d39387a5406138b4517d8e225a36b5fa433a610f00ad3994931",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.898Z",
+    "path": "components/commands/utilities/generate-linear-worklog.md"
+  },
+  "components/commands/utilities/git-status.md": {
+    "hash": "0f4c73571275ea67ab5ca8302c2a6faf4c7c92453ea166b719e102dce180819f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.946Z",
+    "path": "components/commands/utilities/git-status.md"
+  },
+  "components/commands/utilities/initref.md": {
+    "hash": "d1241fe124f791cee9b41cba40de3892496a590e452c07aa58d5b8256f3fac3f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:12.997Z",
+    "path": "components/commands/utilities/initref.md"
+  },
+  "components/commands/utilities/prime.md": {
+    "hash": "5b14157df0a5208edf574b7b730399e86fdf25c02a3cb7bf68923f714e014e74",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:13.046Z",
+    "path": "components/commands/utilities/prime.md"
+  },
+  "components/commands/utilities/refactor-code.md": {
+    "hash": "119abfd916d078b6314a0d70d3c68d668e7fa07e86c5ab7097274d435ca825d6",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:13.096Z",
+    "path": "components/commands/utilities/refactor-code.md"
+  },
+  "components/commands/utilities/ultra-think.md": {
+    "hash": "1bf6e6db1bc9d9325bd360ec86c6541e276eb96393f7af0e959f418488956a65",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T19:05:13.145Z",
+    "path": "components/commands/utilities/ultra-think.md"
+  }
+}

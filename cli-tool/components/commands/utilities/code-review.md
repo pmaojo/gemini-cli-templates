@@ -1,8 +1,7 @@
 ---
 name: "code-review"
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: "|"
-  [file-path] | [commit-hash] | --full
+argument-hint: "[file-path] | [commit-hash] | --full"
 description: Comprehensive code quality review with security, performance, and architecture analysis
 ---
 

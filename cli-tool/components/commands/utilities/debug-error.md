@@ -2,7 +2,7 @@
 name: debug-error
 description: Analyze and debug error messages or stack traces.
 allowed-tools: Read, Bash
-argument-hint: "[error-message]" | --log-file=[path]
+argument-hint: "[error-message] | --log-file=[path]"
 ---
 
 # Debug Error
