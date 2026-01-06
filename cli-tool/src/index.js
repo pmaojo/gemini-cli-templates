@@ -390,7 +390,11 @@ async function createGeminiConfig(options = {}) {
       framework: options.framework || projectInfo.detectedFramework || 'none',
       features: [],
       hooks: defaultHooks,
-      mcps: defaultMCPs
+      mcps: defaultMCPs,
+      extensions: [
+        'https://github.com/gemini-cli-extensions/conductor',
+        'https://github.com/gemini-cli-extensions/jules'
+      ]
     };
   } else {
     // Interactive prompts with back navigation
@@ -447,21 +451,7 @@ async function createGeminiConfig(options = {}) {
     }
   }
 
-  // Install selected extensions
-  if (config.extensions && config.extensions.length > 0) {
-    console.log(chalk.yellow('🧩 Installing recommended extensions...'));
-    for (const extensionUrl of config.extensions) {
-      try {
-        console.log(chalk.gray(`  Installing ${extensionUrl.split('/').pop()}...`));
-        // Use npx gemini if inside a project, or try global gemini
-        // To be safe, we just try to run the command in the shell
-        execSync(`gemini extensions install ${extensionUrl}`, { stdio: 'inherit' });
-      } catch (error) {
-        console.log(chalk.red(`  ❌ Failed to install extension: ${error.message}`));
-        console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g gemini-chat-cli)'));
-      }
-    }
-  }
+  
   
   if (options.dryRun) {
     console.log(chalk.yellow('🔍 Dry run - showing what would be copied:'));
