@@ -1,4 +1,5 @@
 ---
+name: "issue-to-linear-task"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [issue-number] | --team | --project | --close-github | --skip-comments
 description: Convert individual GitHub issues to Linear tasks with comprehensive data preservation

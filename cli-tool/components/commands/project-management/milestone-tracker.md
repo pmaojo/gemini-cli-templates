@@ -1,4 +1,5 @@
 ---
+name: "milestone-tracker"
 allowed-tools: Bash, Read, Grep, Glob
 argument-hint: [time-period] | --sprint | --quarter | --all
 description: Track and analyze project milestone progress with predictive analytics

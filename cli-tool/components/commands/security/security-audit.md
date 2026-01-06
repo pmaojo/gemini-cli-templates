@@ -1,4 +1,5 @@
 ---
+name: "security-audit"
 allowed-tools: Read, Bash, Grep, Glob
 argument-hint: [focus-area] | --full
 description: Perform comprehensive security assessment and vulnerability analysis

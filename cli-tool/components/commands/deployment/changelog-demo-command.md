@@ -1,4 +1,5 @@
 ---
+name: "changelog-demo-command"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [format] | --generate | --validate | --demo
 description: Demonstrate changelog automation features with real examples and validation

@@ -1,4 +1,5 @@
 ---
+name: "create-onboarding-guide"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [role-type] | --developer | --designer | --devops | --comprehensive | --interactive
 description: Create comprehensive developer onboarding guide with environment setup, workflows, and interactive tutorials

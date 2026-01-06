@@ -1,4 +1,5 @@
 ---
+name: "troubleshooting-guide"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [system-component] | --application | --database | --network | --deployment | --comprehensive
 description: Generate systematic troubleshooting documentation with diagnostic procedures, common issues, and automated solutions

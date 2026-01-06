@@ -1,4 +1,5 @@
 ---
+name: "vercel-analytics"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint:
 description: Set up Vercel Analytics and Speed Insights for React/Vite projects

@@ -1,4 +1,5 @@
 ---
+name: "publisher-linkedin"
 allowed-tools: Read, Write, Bash, Glob, WebFetch
 argument-hint: <input> [lang] [custom-file-path]
 description: Generate LinkedIn posts from blog content with automatic media attachment via LinkedIn API

@@ -1,4 +1,5 @@
 ---
+name: "nextjs-performance-audit"
 allowed-tools: Read, Edit, Bash
 argument-hint: [--lighthouse] [--bundle] [--runtime] [--all]
 description: Comprehensive Next.js performance audit with actionable optimization recommendations

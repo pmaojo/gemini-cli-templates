@@ -1,4 +1,5 @@
 ---
+name: "testing_plan_integration"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: |
   [target-code] | [test-type] | --rust | --inline | --file | --mock

@@ -1,4 +1,5 @@
 ---
+name: "svelte-component"
 allowed-tools: Read, Write, Edit
 argument-hint: [component-name] [--typescript] [--story]
 description: Create new Svelte components with best practices, TypeScript support, and testing

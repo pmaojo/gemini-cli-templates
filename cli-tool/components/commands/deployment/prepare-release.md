@@ -1,4 +1,5 @@
 ---
+name: "prepare-release"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [version-type] | patch | minor | major | --pre-release | --hotfix
 description: Prepare and validate release packages with comprehensive testing, documentation, and automation

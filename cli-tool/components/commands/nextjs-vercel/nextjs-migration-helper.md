@@ -1,4 +1,5 @@
 ---
+name: "nextjs-migration-helper"
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 argument-hint: [--pages-to-app] [--js-to-ts] [--class-to-hooks] [--analyze]
 description: Comprehensive Next.js migration assistant for Pages Router to App Router, JavaScript to TypeScript, and modern patterns

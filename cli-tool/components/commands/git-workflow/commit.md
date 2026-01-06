@@ -1,4 +1,5 @@
 ---
+name: "commit"
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*), Bash(git log:*)
 argument-hint: [message] | --no-verify | --amend
 description: Create well-formatted commits with conventional commit format and emoji

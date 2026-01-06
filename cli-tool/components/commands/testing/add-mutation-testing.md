@@ -1,4 +1,5 @@
 ---
+name: "add-mutation-testing"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [language] | --javascript | --java | --python | --rust | --go | --csharp
 description: Setup comprehensive mutation testing with framework selection and CI integration

@@ -1,4 +1,5 @@
 ---
+name: "migrate-to-typescript"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [migration-strategy] | --gradual | --complete | --strict | --incremental
 description: Migrate JavaScript project to TypeScript with proper typing and tooling setup

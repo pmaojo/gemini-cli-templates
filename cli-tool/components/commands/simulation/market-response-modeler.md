@@ -1,4 +1,5 @@
 ---
+name: "market-response-modeler"
 allowed-tools: Read, Write, Edit, WebSearch
 argument-hint: [market-trigger] | --product-launch | --pricing-change | --marketing-campaign | --competitive-response
 description: Model comprehensive market and customer responses with segment analysis, behavioral prediction, and optimization

@@ -1,4 +1,5 @@
 ---
+name: "create-settings-command"
 description: "Create plugin settings file with user preferences"
 allowed-tools: ["Write", "AskUserQuestion"]
 ---

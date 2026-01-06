@@ -1,4 +1,5 @@
 ---
+name: "sync-issues-to-linear"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [sync-scope] | --state | --label | --assignee | --milestone
 description: Sync GitHub issues to Linear workspace with comprehensive field mapping and rate limit management

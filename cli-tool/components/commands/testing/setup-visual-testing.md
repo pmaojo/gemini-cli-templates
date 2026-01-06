@@ -1,4 +1,5 @@
 ---
+name: "setup-visual-testing"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [testing-scope] | --components | --pages | --responsive | --cross-browser | --accessibility
 description: Setup comprehensive visual regression testing with cross-browser and responsive testing

@@ -1,4 +1,5 @@
 ---
+name: "supabase-backup-manager"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [operation] | --backup | --restore | --schedule | --validate | --cleanup
 description: Manage Supabase database backups with automated scheduling and recovery procedures

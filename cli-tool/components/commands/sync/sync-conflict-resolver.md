@@ -1,4 +1,5 @@
 ---
+name: "sync-conflict-resolver"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [action] | detect | resolve | analyze | configure | report
 description: Resolve synchronization conflicts with intelligent strategies and automated resolution

@@ -1,4 +1,5 @@
 ---
+name: "security-hardening"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [focus-area] | --headers | --auth | --encryption | --infrastructure
 description: Harden application security configuration with comprehensive security controls

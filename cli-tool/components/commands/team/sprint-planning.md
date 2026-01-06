@@ -1,4 +1,5 @@
 ---
+name: "sprint-planning"
 allowed-tools: Read, WebSearch
 argument-hint: [sprint-duration] | [start-date] [duration]
 description: Plan and organize sprint workflows with Linear integration and capacity analysis

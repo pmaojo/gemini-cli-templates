@@ -1,4 +1,5 @@
 ---
+name: "release"
 allowed-tools: Bash(git:*), Read, Edit, Write
 argument-hint: <version>
 description: Create a new Git Flow release branch from develop with version bumping and changelog generation

@@ -1,4 +1,5 @@
 ---
+name: "flow-status"
 allowed-tools: Bash(git:*), Read
 description: Display comprehensive Git Flow status including branch type, sync status, changes, and merge targets
 ---

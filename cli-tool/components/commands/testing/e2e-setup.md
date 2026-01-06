@@ -1,4 +1,5 @@
 ---
+name: "e2e-setup"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [framework] | --cypress | --playwright | --webdriver | --puppeteer | --mobile
 description: Configure comprehensive end-to-end testing suite with framework selection and CI integration

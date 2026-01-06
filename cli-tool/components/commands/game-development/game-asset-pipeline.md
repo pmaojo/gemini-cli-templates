@@ -1,4 +1,5 @@
 ---
+name: "game-asset-pipeline"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [pipeline-type] | --art | --audio | --models | --textures | --comprehensive
 description: Use PROACTIVELY to build automated game asset processing pipelines with optimization, validation, and multi-platform delivery systems

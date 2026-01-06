@@ -1,4 +1,5 @@
 ---
+name: "simulation-calibrator"
 allowed-tools: Read, Write, Edit, WebSearch
 argument-hint: [simulation-type] | --business | --technical | --behavioral | --strategic
 description: Calibrate simulation accuracy with systematic validation, bias detection, and continuous improvement

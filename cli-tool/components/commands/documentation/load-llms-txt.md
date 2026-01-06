@@ -1,4 +1,5 @@
 ---
+name: "load-llms-txt"
 allowed-tools: Bash, WebFetch
 argument-hint: [data-source] | --xatu | --custom-url | --validate
 description: Load and process external documentation context from llms.txt files or custom sources

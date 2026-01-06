@@ -1,4 +1,5 @@
 ---
+name: "nextjs-scaffold"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [project-name] [--typescript] [--tailwind] [--app-router]
 description: Create a new Next.js application with best practices and optimal configuration

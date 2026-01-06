@@ -1,4 +1,5 @@
 ---
+name: "setup-docker-containers"
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: [environment-type] | --development | --production | --microservices | --compose
 description: Setup Docker containerization with multi-stage builds and development workflows

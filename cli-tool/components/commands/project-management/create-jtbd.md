@@ -1,4 +1,5 @@
 ---
+name: "create-jtbd"
 allowed-tools: Read, Write, Edit, Grep, Glob
 argument-hint: [feature-name] | --template | --interactive
 description: Create Jobs-to-be-Done (JTBD) analysis for product features
