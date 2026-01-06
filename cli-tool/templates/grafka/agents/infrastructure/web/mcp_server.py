@@ -81,6 +81,10 @@ async def initialize():
         # 5. LLM Manager
         context.pipeline_manager = LLMPipelineManager()
 
+        # 6. Graph Client
+        context.graph_client = GraphClient()
+        context.graph_client.connect()
+
         log("Grafka components initialized successfully.")
     except Exception as e:
         log(f"Error initializing Grafka: {e}")

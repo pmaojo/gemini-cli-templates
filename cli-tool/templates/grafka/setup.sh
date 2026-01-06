@@ -25,4 +25,8 @@ echo "📥 Installing Python dependencies..."
 source .venv/bin/activate
 pip install -r requirements.txt
 
+echo "🛠️ Generating gRPC stubs..."
+mkdir -p agents/infrastructure/persistence/proto
+python3 -m grpc_tools.protoc -I./crates/semantic-engine/proto --python_out=./agents/infrastructure/persistence/ --grpc_python_out=./agents/infrastructure/persistence/ ./crates/semantic-engine/proto/semantic_engine.proto
+
 echo "✅ Setup complete! run 'gemini run start-engine' to launch."
