@@ -439,15 +439,27 @@ async function createGeminiConfig(options = {}) {
   // Install selected extensions
   if (config.extensions && config.extensions.length > 0) {
     console.log(chalk.yellow('🧩 Installing recommended extensions...'));
-    for (const extensionUrl of config.extensions) {
-      try {
-        console.log(chalk.gray(`  Installing ${extensionUrl.split('/').pop()}...`));
-        // Use npx gemini if inside a project, or try global gemini
-        // To be safe, we just try to run the command in the shell
-        execSync(`gemini extensions install ${extensionUrl} --yes`, { stdio: 'inherit' });
-      } catch (error) {
-        console.log(chalk.red(`  ❌ Failed to install extension: ${error.message}`));
-        console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g @google/gemini-cli)'));
+    // Check if gemini command exists
+    let geminiAvailable = false;
+    try {
+      execSync('which gemini', { stdio: 'ignore' });
+      geminiAvailable = true;
+    } catch (e) {
+      console.log(chalk.yellow('  ⚠️  Gemini CLI not found in PATH. Skipping auto-installation of extensions.'));
+      console.log(chalk.gray('  To install them manually, run: gemini extensions install <url>'));
+    }
+
+    if (geminiAvailable) {
+      for (const extensionUrl of config.extensions) {
+        try {
+          console.log(chalk.gray(`  Installing ${extensionUrl.split('/').pop()}...`));
+          // Remove --yes as it might not be supported by all gemini versions or might cause issues
+          // If the command requires interaction, stdio: inherit allows the user to interact
+          execSync(`gemini extensions install ${extensionUrl}`, { stdio: 'inherit' });
+        } catch (error) {
+          console.log(chalk.yellow(`  ⚠️  Could not auto-install extension: ${error.message.split('\n')[0]}`));
+          console.log(chalk.gray(`  Please install manually: gemini extensions install ${extensionUrl}`));
+        }
       }
     }
   }
