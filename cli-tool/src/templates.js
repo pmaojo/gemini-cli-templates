@@ -145,6 +145,36 @@ const TEMPLATES_CONFIG = {
       { source: 'grafka/ontology', destination: 'ontology' },
       { source: 'grafka/.gemini/commands', destination: '.gemini/commands' }
     ]
+  },
+  'kthulu': {
+    name: 'Kthulu (Go + Frontend)',
+    description: 'Full-stack Go backend with React frontend and MCP integration',
+    files: [
+      { source: 'kthulu/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'kthulu/.mcp.json', destination: '.mcp.json' },
+      { source: 'kthulu/setup.sh', destination: 'setup.sh' },
+      { source: 'kthulu/.gemini/commands', destination: '.gemini/commands' }
+    ]
+  },
+  'apicentric': {
+    name: 'Apicentric (API Simulator)',
+    description: 'API Simulator and Registry platform',
+    files: [
+      { source: 'apicentric/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'apicentric/.mcp.json', destination: '.mcp.json' },
+      { source: 'apicentric/setup.sh', destination: 'setup.sh' },
+      { source: 'apicentric/services', destination: 'services' },
+      { source: 'apicentric/.gemini/commands', destination: '.gemini/commands' }
+    ]
+  },
+  'hexanorm': {
+    name: 'Hexanorm (Hexagonal)',
+    description: 'Hexagonal Architecture Stack with TypeScript',
+    files: [
+      { source: 'hexanorm/GEMINI.md', destination: 'GEMINI.md' },
+      { source: 'hexanorm/.mcp.json', destination: '.mcp.json' },
+      { source: 'hexanorm/setup.sh', destination: 'setup.sh' }
+    ]
   }
 };
 
