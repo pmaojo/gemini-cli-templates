@@ -34,7 +34,7 @@ Create professional LinkedIn posts from any content source with optional media a
 3. **Generate Professional LinkedIn Post**
    - Use thought leadership tone for English
    - Use professional business tone (敬語) for Japanese
-   - Extract key insights from actual content
+   - Extract core insights from actual content
    - Include relevant hashtags (2-4 max)
    - Add link to full article
 

@@ -48,7 +48,7 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: strong_password
           POSTGRES_DB: test_db
         options: >-
           --health-cmd pg_isready
@@ -683,7 +683,7 @@ alertmanager:
               storage: 10Gi
 
 grafana:
-  adminPassword: "secure-password"
+  adminPassword: "strong_password"
   persistence:
     enabled: true
     storageClassName: gp3

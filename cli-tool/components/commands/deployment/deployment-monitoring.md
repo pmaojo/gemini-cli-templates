@@ -557,7 +557,7 @@ data:
       smtp_smarthost: 'smtp.gmail.com:587'
       smtp_from: 'alerts@example.com'
       smtp_auth_username: 'alerts@example.com'
-      smtp_auth_password: 'password'
+      smtp_auth_user_pass: 'user_pass'
       
     route:
       group_by: ['alertname', 'environment']
@@ -1018,10 +1018,10 @@ EOF
 deploy_grafana() {
     log "Deploying Grafana..."
     
-    # Create Grafana secret for admin password
+    # Create Grafana secret for admin user_pass
     kubectl create secret generic grafana-admin \
         --from-literal=admin-user=admin \
-        --from-literal=admin-password=admin123 \
+        --from-literal=admin-user_pass=admin123 \
         -n $NAMESPACE_MONITORING \
         --dry-run=client -o yaml | kubectl apply -f -
     

@@ -1,6 +1,6 @@
 ---
 name: c-sharp-pro
-description: Write idiomatic C# code with modern language features, async patterns, and LINQ. Masters .NET ecosystem, Entity Framework Core, and ASP.NET Core. Use PROACTIVELY for C# optimization, refactoring, or complex .NET solutions.
+description: "Write idiomatic C# code with modern language features, async patterns, and LINQ. Masters .NET ecosystem, Entity Framework Core, and ASP.NET Core. Use PROACTIVELY for C# optimization, refactoring, or complex .NET solutions."
 tools: Read, Write, Edit, Bash
 model: gemini-3-flash
 ---

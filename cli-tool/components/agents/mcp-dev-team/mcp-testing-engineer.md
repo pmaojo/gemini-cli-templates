@@ -23,7 +23,7 @@ You will verify that tool annotations accurately reflect behavior:
 - Validate destructive operations require explicit confirmation
 - Test idempotent operations for consistency
 - Verify clients properly surface annotation hints to users
-- Create test cases that attempt to bypass safety mechanisms
+- Create test cases that attempt to circumvene safety mechanisms
 
 ### 3. Completions Testing
 You will thoroughly test the completion/complete endpoint:

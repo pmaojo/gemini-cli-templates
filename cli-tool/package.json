@@ -33,10 +33,10 @@
     "pretest:commands": "npm run dev:link",
     "analytics:start": "node src/analytics.js",
     "analytics:test": "npm run test:analytics",
-    "security-audit": "node src/security-audit.js",
-    "security-audit:ci": "node src/security-audit.js --ci",
-    "security-audit:verbose": "node src/security-audit.js --verbose",
-    "security-audit:json": "node src/security-audit.js --json --output=security-report.json"
+    "security-audit": "node cli-tool/src/security-audit.js",
+    "security-audit:ci": "node cli-tool/src/security-audit.js --ci",
+    "security-audit:verbose": "node cli-tool/src/security-audit.js --verbose",
+    "security-audit:json": "node cli-tool/src/security-audit.js --json --output=security-report.json"
   },
   "keywords": [
     "gemini",
