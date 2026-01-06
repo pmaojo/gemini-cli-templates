@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "apicentric": {
+      "command": "apicentric",
+      "args": [
+        "mcp"
+      ],
+      "env": {
+        "APICENTRIC_HOME": "${PWD}"
+      }
+    }
+  }
+}

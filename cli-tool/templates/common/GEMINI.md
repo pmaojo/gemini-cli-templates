@@ -108,8 +108,7 @@ Initialize a new unit of work (Track) with `/conductor:newTrack`. This generates
 
 Execute the approved plan with `/conductor:implement`. The agent will work through `plan.md`, persisting state so you can pause and resume as needed.
 
-> [!TIP]
-> Install Conductor with: `gemini extensions install https://github.com/gemini-cli-extensions/conductor`
+> **Tip:** Install Conductor with: `gemini extensions install https://github.com/gemini-cli-extensions/conductor`
 
 ## Asynchronous Development with Jules
 
@@ -129,8 +128,7 @@ Jules works in an isolated environment. Check status explicitly if needed:
 
 - `/jules status`
 
-> [!TIP]
-> Install Jules with: `gemini extensions install https://github.com/gemini-cli-extensions/jules`
+> **Tip:** Install Jules with: `gemini extensions install https://github.com/gemini-cli-extensions/jules`
 
 ## Common Patterns
 
