@@ -2,7 +2,7 @@
 name: ultra-think
 description: Deep reasoning and problem-solving for complex tasks.
 allowed-tools: none
-argument-hint: [problem-description]
+argument-hint: "[problem-description]"
 usage: gemini ultra-think "How to optimize this recursive algorithm?"
 examples:
   - gemini ultra-think "Design a scalable microservices architecture"

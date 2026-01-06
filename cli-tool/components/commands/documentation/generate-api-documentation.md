@@ -1,7 +1,7 @@
 ---
 name: "generate-api-documentation"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [output-format] | --swagger-ui | --redoc | --postman | --insomnia | --multi-format
+argument-hint: "[output-format] | --swagger-ui | --redoc | --postman | --insomnia | --multi-format"
 description: Auto-generate API reference documentation with multiple output formats and automated deployment
 ---
 

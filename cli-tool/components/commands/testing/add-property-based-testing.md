@@ -1,7 +1,7 @@
 ---
 name: "add-property-based-testing"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [language] | --javascript | --python | --java | --haskell | --rust | --clojure
+argument-hint: "[language] | --javascript | --python | --java | --haskell | --rust | --clojure"
 description: Implement property-based testing with framework selection and invariant identification
 ---
 

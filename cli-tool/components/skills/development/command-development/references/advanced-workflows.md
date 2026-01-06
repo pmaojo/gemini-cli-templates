@@ -23,7 +23,7 @@ Commands that guide users through multi-step processes:
 ```markdown
 ---
 description: Complete PR review workflow
-argument-hint: [pr-number]
+argument-hint: "[pr-number]"
 allowed-tools: Bash(gh:*), Read, Grep
 ---
 

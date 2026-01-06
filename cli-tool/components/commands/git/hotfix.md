@@ -1,7 +1,7 @@
 ---
 name: "hotfix"
 allowed-tools: Bash(git:*), Read, Edit, Write
-argument-hint: <hotfix-name>
+argument-hint: "<hotfix-name>"
 description: Create a new Git Flow hotfix branch from main for emergency production fixes
 ---
 

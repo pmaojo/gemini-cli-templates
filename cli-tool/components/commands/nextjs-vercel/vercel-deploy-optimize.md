@@ -1,7 +1,7 @@
 ---
 name: "vercel-deploy-optimize"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [environment] [--analyze] [--preview]
+argument-hint: "[environment] [--analyze] [--preview]"
 description: Optimize and deploy Next.js application to Vercel with performance monitoring
 ---
 

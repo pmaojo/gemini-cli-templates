@@ -1,7 +1,7 @@
 ---
 name: "publisher-all"
 allowed-tools: Read, Write, Bash, Glob, WebFetch
-argument-hint: <input> [lang]
+argument-hint: "<input> [lang]"
 description: Generate content for ALL platforms at once (X, LinkedIn, Medium, Dev.to)
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: "project-to-linear"
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: [project-description] | --team-id | --create-new | --epic-name
+argument-hint: "[project-description] | --team-id | --create-new | --epic-name"
 description: Sync project structure and requirements to Linear workspace with comprehensive task breakdown
 ---
 

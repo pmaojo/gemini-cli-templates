@@ -1,7 +1,7 @@
 ---
 name: "supabase-performance-optimizer"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [optimization-type] | --queries | --indexes | --storage | --rls | --functions
+argument-hint: "[optimization-type] | --queries | --indexes | --storage | --rls | --functions"
 description: Optimize Supabase database performance with intelligent analysis and recommendations
 ---
 

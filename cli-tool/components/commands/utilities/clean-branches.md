@@ -2,7 +2,7 @@
 name: clean-branches
 description: Clean up merged, stale, or deleted local git branches interactively.
 allowed-tools: Bash, Git
-argument-hint: --merged | --stale | --force | --dry-run
+argument-hint: "--merged | --stale | --force | --dry-run"
 ---
 
 # Clean Branches

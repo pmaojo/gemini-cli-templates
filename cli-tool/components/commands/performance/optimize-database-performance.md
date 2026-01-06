@@ -1,7 +1,7 @@
 ---
 name: "optimize-database-performance"
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: [database-type] | --postgresql | --mysql | --mongodb
+argument-hint: "[database-type] | --postgresql | --mysql | --mongodb"
 description: Optimize database queries, indexing, and performance for improved response times and scalability
 ---
 

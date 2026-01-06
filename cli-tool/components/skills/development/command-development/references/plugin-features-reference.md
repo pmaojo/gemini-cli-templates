@@ -272,7 +272,7 @@ Commands that use plugin templates:
 ```markdown
 ---
 description: Generate documentation from template
-argument-hint: [component-name]
+argument-hint: "[component-name]"
 ---
 
 Template: @${GEMINI_PLUGIN_ROOT}/templates/component-docs.md

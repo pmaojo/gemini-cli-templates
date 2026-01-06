@@ -1,7 +1,7 @@
 ---
 name: "sync-linear-to-issues"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [sync-scope] | --team | --project | --priority | --states
+argument-hint: "[sync-scope] | --team | --project | --priority | --states"
 description: Sync Linear tasks to GitHub issues with state mapping and attachment handling
 ---
 

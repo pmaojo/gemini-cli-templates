@@ -2,7 +2,7 @@
 name: prime
 description: Prime the AI with project context and instructions.
 allowed-tools: Read
-argument-hint: [instruction-file]
+argument-hint: "[instruction-file]"
 ---
 
 # Prime

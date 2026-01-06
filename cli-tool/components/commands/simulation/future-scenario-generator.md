@@ -1,7 +1,7 @@
 ---
 name: "future-scenario-generator"
 allowed-tools: Read, Write, Edit, WebSearch
-argument-hint: [time-horizon] | --near-term | --medium-term | --long-term | --disruption-focus
+argument-hint: "[time-horizon] | --near-term | --medium-term | --long-term | --disruption-focus"
 description: Generate comprehensive future scenarios with plausibility scoring, trend integration, and strategic implications
 ---
 

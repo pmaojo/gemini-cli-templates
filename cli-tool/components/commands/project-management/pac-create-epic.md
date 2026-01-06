@@ -1,7 +1,7 @@
 ---
 name: "pac-create-epic"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [epic-name] | --name | --description | --owner
+argument-hint: "[epic-name] | --name | --description | --owner"
 description: Create new PAC epic following Product as Code specification
 ---
 

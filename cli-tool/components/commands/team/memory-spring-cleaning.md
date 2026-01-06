@@ -1,7 +1,7 @@
 ---
 name: "memory-spring-cleaning"
 allowed-tools: Read, Write, Edit, Glob
-argument-hint: [scope] | --gemini-md | --documentation | --outdated-patterns | --implementation-sync
+argument-hint: "[scope] | --gemini-md | --documentation | --outdated-patterns | --implementation-sync"
 description: Clean and organize project memory files with implementation synchronization and pattern updates
 ---
 

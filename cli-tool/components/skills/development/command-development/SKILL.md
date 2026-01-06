@@ -181,7 +181,7 @@ model: gemini-3-flash
 
 ```yaml
 ---
-argument-hint: [pr-number] [priority] [assignee]
+argument-hint: "[pr-number] [priority] [assignee]"
 ---
 ```
 

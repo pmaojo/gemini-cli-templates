@@ -34,7 +34,7 @@ Practical examples of commands designed for Gemini CLI plugins, demonstrating pl
 ```markdown
 ---
 description: Analyze code quality using plugin tools
-argument-hint: [file-path]
+argument-hint: "[file-path]"
 allowed-tools: Bash(node:*), Read
 ---
 

@@ -1,7 +1,7 @@
 ---
 name: "testing_plan_integration"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: |
+argument-hint: "|"
   [target-code] | [test-type] | --rust | --inline | --file | --mock
 description: Create comprehensive integration testing plan with inline tests and refactoring recommendations
 ---

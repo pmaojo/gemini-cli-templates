@@ -1,7 +1,7 @@
 ---
 name: "linear-task-to-issue"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [task-id] | --repo | --milestone | --close-linear | --skip-attachments
+argument-hint: "[task-id] | --repo | --milestone | --close-linear | --skip-attachments"
 description: Convert Linear tasks to GitHub issues with relationship preservation and metadata mapping
 ---
 

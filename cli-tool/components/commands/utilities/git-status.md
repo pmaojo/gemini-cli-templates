@@ -2,7 +2,7 @@
 name: git-status
 description: Enhanced git status with contextual information and suggestions.
 allowed-tools: Git, Bash
-argument-hint: --verbose | --short
+argument-hint: "--verbose | --short"
 ---
 
 # Git Status

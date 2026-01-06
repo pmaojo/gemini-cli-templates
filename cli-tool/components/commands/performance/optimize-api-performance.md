@@ -1,7 +1,7 @@
 ---
 name: "optimize-api-performance"
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: [api-type] | --rest | --graphql | --grpc
+argument-hint: "[api-type] | --rest | --graphql | --grpc"
 description: Comprehensive API performance optimization with response time reduction, throughput improvement, and scalability enhancements
 ---
 

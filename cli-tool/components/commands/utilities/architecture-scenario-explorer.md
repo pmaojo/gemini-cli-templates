@@ -2,7 +2,7 @@
 name: architecture-scenario-explorer
 description: Explore architectural decisions through scenario simulation and trade-off analysis.
 allowed-tools: Read, Write, Bash
-argument-hint: [scenario] | --simulation | --tradeoff | --report
+argument-hint: "[scenario] | --simulation | --tradeoff | --report"
 ---
 
 # Architecture Scenario Explorer

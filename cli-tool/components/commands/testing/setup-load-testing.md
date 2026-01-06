@@ -1,7 +1,7 @@
 ---
 name: "setup-load-testing"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [testing-type] | --capacity | --stress | --spike | --endurance | --volume
+argument-hint: "[testing-type] | --capacity | --stress | --spike | --endurance | --volume"
 description: Configure comprehensive load testing with performance metrics and bottleneck identification
 ---
 

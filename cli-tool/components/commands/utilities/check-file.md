@@ -2,7 +2,7 @@
 name: check-file
 description: Detailed file analysis for potential issues, code quality, and security vulnerabilities.
 allowed-tools: Read, Bash
-argument-hint: [file-path]
+argument-hint: "[file-path]"
 ---
 
 # Check File

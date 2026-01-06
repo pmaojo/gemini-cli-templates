@@ -99,7 +99,7 @@ Prioritize issues by severity.
 ```markdown
 ---
 description: Run tests for specific file
-argument-hint: [test-file]
+argument-hint: "[test-file]"
 allowed-tools: Bash(npm:*), Bash(jest:*)
 ---
 

@@ -19,7 +19,7 @@ YAML frontmatter is optional metadata at the start of command files:
 description: Brief description
 allowed-tools: Read, Write
 model: gemini-3-flash
-argument-hint: [arg1] [arg2]
+argument-hint: "[arg1] [arg2]"
 ---
 
 Command prompt content here...

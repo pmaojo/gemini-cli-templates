@@ -1,7 +1,7 @@
 ---
 name: "pac-create-ticket"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [ticket-name] | --epic | --type | --assignee | --priority
+argument-hint: "[ticket-name] | --epic | --type | --assignee | --priority"
 description: Create new PAC ticket within an epic following Product as Code specification
 ---
 

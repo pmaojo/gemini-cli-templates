@@ -1,7 +1,7 @@
 ---
 name: "supabase-data-explorer"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [table-name] | --query [sql] | --export | --inspect
+argument-hint: "[table-name] | --query [sql] | --export | --inspect"
 description: Explore and analyze Supabase database data with intelligent querying and visualization
 ---
 

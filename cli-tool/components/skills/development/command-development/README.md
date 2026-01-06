@@ -131,7 +131,7 @@ Gemini loads references and examples as needed based on task.
 ```markdown
 ---
 description: Brief description
-argument-hint: [arg1] [arg2]
+argument-hint: "[arg1] [arg2]"
 allowed-tools: Read, Bash(git:*)
 ---
 

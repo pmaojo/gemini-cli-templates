@@ -2,7 +2,7 @@
 name: initref
 description: Initialize project reference documentation and structure.
 allowed-tools: Write, Bash
-argument-hint: --force | --template=[name]
+argument-hint: "--force | --template=[name]"
 ---
 
 # Init Reference

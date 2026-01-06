@@ -2,7 +2,7 @@
 name: directory-deep-dive
 description: Recursively analyze directory structure and content summaries.
 allowed-tools: Read, Bash
-argument-hint: [path] | --depth=[n] | --ignore=[patterns]
+argument-hint: "[path] | --depth=[n] | --ignore=[patterns]"
 ---
 
 # Directory Deep Dive

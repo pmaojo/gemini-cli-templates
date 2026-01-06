@@ -2,7 +2,7 @@
 name: clean
 description: Clean build artifacts, temporary files, and caches from the project.
 allowed-tools: Bash
-argument-hint: --all | --build | --cache | --deps
+argument-hint: "--all | --build | --cache | --deps"
 ---
 
 # Clean Project

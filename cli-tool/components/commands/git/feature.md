@@ -1,7 +1,7 @@
 ---
 name: "feature"
 allowed-tools: Bash(git:*)
-argument-hint: <feature-name>
+argument-hint: "<feature-name>"
 description: Create a new Git Flow feature branch from develop with proper naming and tracking
 ---
 

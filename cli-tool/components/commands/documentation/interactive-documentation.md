@@ -1,7 +1,7 @@
 ---
 name: "interactive-documentation"
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [platform] | --docusaurus | --gitbook | --notion | --storybook | --jupyter | --comprehensive
+argument-hint: "[platform] | --docusaurus | --gitbook | --notion | --storybook | --jupyter | --comprehensive"
 description: Use PROACTIVELY to create interactive documentation platforms with live examples, code playgrounds, and user engagement features
 ---
 

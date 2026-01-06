@@ -1,7 +1,7 @@
 ---
 name: "vercel-edge-function"
 allowed-tools: Read, Write, Edit
-argument-hint: [function-name] [--auth] [--geo] [--transform] [--proxy]
+argument-hint: "[function-name] [--auth] [--geo] [--transform] [--proxy]"
 description: Generate optimized Vercel Edge Functions with geolocation, authentication, and data transformation
 ---
 
