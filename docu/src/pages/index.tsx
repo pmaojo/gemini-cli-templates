@@ -41,7 +41,7 @@ function HomepageHeader() {
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="https://davila7.github.io/claude-code-templates/">
+            to="https://pmaojo.github.io/claude-code-templates/">
             📦 Browse Templates
           </Link>
         </div>

@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
   {
     title: 'Quick Setup',
     icon: '⚡',
-    command: 'npm install -g claude-code-templates',
+    command: 'npm install -g github:pmaojo/gemini-cli-templates',
     description: (
       <>
         Install the CLI tool globally and get started with Claude Code templates 

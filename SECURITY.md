@@ -16,7 +16,7 @@ If you discover a security vulnerability in Gemini Code Templates, please report
 Send details of the vulnerability to [dan.avila7@gmail.com](mailto:dan.avila7@gmail.com) with the subject line "SECURITY: Gemini Code Templates Vulnerability Report"
 
 ### GitHub Security Advisories
-You can also report vulnerabilities through [GitHub Security Advisories](https://github.com/davila7/gemini-code-templates/security/advisories/new) for this repository.
+You can also report vulnerabilities through [GitHub Security Advisories](https://github.com/pmaojo/gemini-code-templates/security/advisories/new) for this repository.
 
 ## What to Include in Your Report
 
@@ -50,7 +50,7 @@ When using Gemini Code Templates:
 - **Maintainer**: Daniel Avila
 - **Website**: [danielavila.me](https://danielavila.me)
 - **Email**: [dan.avila7@gmail.com](mailto:dan.avila7@gmail.com)
-- **GitHub**: [@davila7](https://github.com/davila7)
+- **GitHub**: [@pmaojo](https://github.com/pmaojo)
 
 ## Legal
 

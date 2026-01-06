@@ -710,7 +710,7 @@ class IndexPageManager {
         if (componentPath.endsWith('.json')) {
             componentPath = componentPath.replace(/\.json$/, '');
         }
-        const installCommand = `npx gemini-cli-templates@latest --${component.type}=${componentPath} --yes`;
+        const installCommand = `npx github:pmaojo/gemini-cli-templates --${component.type}=${componentPath} --yes`;
         
         const typeConfig = {
             agent: { icon: '🤖', color: '#ff6b6b' },
@@ -1142,7 +1142,7 @@ class IndexPageManager {
     // Fetch templates configuration from GitHub
     async fetchTemplatesConfig() {
         const GITHUB_CONFIG = {
-            owner: 'davila7',
+            owner: 'pmaojo',
             repo: 'gemini-cli-templates',
             branch: 'main',
             templatesPath: 'cli-tool/src/templates.js'
@@ -1777,8 +1777,8 @@ function showComponentContributeModal(type) {
                                 <h4>Test Your Template</h4>
                                 <p>Test your template installation:</p>
                                 <div class="step-command">
-                                    <code>npx gemini-cli-templates@latest --template=your-template-name --yes</code>
-                                    <button class="copy-btn" onclick="copyToClipboard('npx gemini-cli-templates@latest --template=your-template-name --yes')">Copy</button>
+                                    <code>npx github:pmaojo/gemini-cli-templates --template=your-template-name --yes</code>
+                                    <button class="copy-btn" onclick="copyToClipboard('npx github:pmaojo/gemini-cli-templates --template=your-template-name --yes')">Copy</button>
                                 </div>
                             </div>
                         </div>

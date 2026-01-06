@@ -286,6 +286,6 @@ MIT License - Ver [LICENSE](LICENSE) para detalles.
 
 ## Contacto
 
-- Issues: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
-- Discussions: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
+- Issues: [GitHub Issues](https://github.com/pmaojo/gemini-code-templates/issues)
+- Discussions: [GitHub Discussions](https://github.com/pmaojo/gemini-code-templates/discussions)
 - Email: soporte@gemini-code-templates.com

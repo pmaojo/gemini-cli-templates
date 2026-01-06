@@ -39,7 +39,7 @@ Copy the template manually for more control:
 
 ```bash
 # Clone the repository
-git clone https://github.com/davila7/gemini-code-templates.git
+git clone https://github.com/pmaojo/gemini-code-templates.git
 
 # Copy the JavaScript/TypeScript template
 cp gemini-code-templates/javascript-typescript/CLAUDE.md your-project/

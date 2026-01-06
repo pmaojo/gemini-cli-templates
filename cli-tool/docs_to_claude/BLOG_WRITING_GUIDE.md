@@ -31,10 +31,10 @@ docs/blog/
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/">
+    <meta property="og:url" content="https://pmaojo.github.io/gemini-code-templates/blog/[slug]/">
     <meta property="og:title" content="[Technology] and Gemini Code Integration">
     <meta property="og:description" content="Learn how to integrate [Technology] with Gemini Code...">
-    <meta property="og:image" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg">
+    <meta property="og:image" content="https://pmaojo.github.io/gemini-code-templates/blog/[slug]/cover.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="article:published_time" content="[ISO_DATE]">
@@ -45,15 +45,15 @@ docs/blog/
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/">
+    <meta property="twitter:url" content="https://pmaojo.github.io/gemini-code-templates/blog/[slug]/">
     <meta property="twitter:title" content="[Technology] and Gemini Code Integration">
     <meta property="twitter:description" content="Learn how to integrate [Technology] with Gemini Code...">
-    <meta property="twitter:image" content="https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg">
+    <meta property="twitter:image" content="https://pmaojo.github.io/gemini-code-templates/blog/[slug]/cover.jpg">
     
     <!-- Additional SEO -->
     <meta name="keywords" content="[Technology], Gemini Code, MCP, [Domain], AI Development, Google">
     <meta name="author" content="Gemini Code Templates">
-    <link rel="canonical" href="https://davila7.github.io/gemini-code-templates/blog/[slug]/">
+    <link rel="canonical" href="https://pmaojo.github.io/gemini-code-templates/blog/[slug]/">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../../css/styles.css">
@@ -69,7 +69,7 @@ docs/blog/
         "@type": "BlogPosting",
         "headline": "[Technology] and Gemini Code Integration",
         "description": "Learn how to integrate [Technology] with Gemini Code...",
-        "image": "https://davila7.github.io/gemini-code-templates/blog/[slug]/cover.jpg",
+        "image": "https://pmaojo.github.io/gemini-code-templates/blog/[slug]/cover.jpg",
         "author": {
             "@type": "Organization",
             "name": "Gemini Code Templates"
@@ -79,14 +79,14 @@ docs/blog/
             "name": "Gemini Code Templates",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://davila7.github.io/gemini-code-templates/static/img/logo.svg"
+                "url": "https://pmaojo.github.io/gemini-code-templates/static/img/logo.svg"
             }
         },
         "datePublished": "[ISO_DATE]",
         "dateModified": "[ISO_DATE]",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://davila7.github.io/gemini-code-templates/blog/[slug]/"
+            "@id": "https://pmaojo.github.io/gemini-code-templates/blog/[slug]/"
         }
     }
     </script>
@@ -123,7 +123,7 @@ docs/blog/
                     </svg>
                     Blog
                 </a>
-                <a href="https://github.com/davila7/gemini-code-templates" target="_blank" class="header-btn">
+                <a href="https://github.com/pmaojo/gemini-code-templates" target="_blank" class="header-btn">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0c-6.626 0-12 5.373-12 12..."/>
                     </svg>

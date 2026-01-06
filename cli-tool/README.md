@@ -2,8 +2,8 @@
 [![npm downloads](https://img.shields.io/npm/dt/gemini-code-templates.svg)](https://www.npmjs.com/package/gemini-code-templates)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md)
-[![GitHub stars](https://img.shields.io/github/stars/davila7/gemini-code-templates.svg?style=social&label=Star)](https://github.com/davila7/gemini-code-templates)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/pmaojo/gemini-code-templates/blob/main/CONTRIBUTING.md)
+[![GitHub stars](https://img.shields.io/github/stars/pmaojo/gemini-code-templates.svg?style=social&label=Star)](https://github.com/pmaojo/gemini-code-templates)
 
 # Gemini Code Templates
 
@@ -164,7 +164,7 @@ Quick links:
 
 ## 🤝 Contributing
 
-We welcome contributions! Browse available templates and components at **[aitmpl.com](https://aitmpl.com)**, then check our [contributing guidelines](https://github.com/davila7/gemini-code-templates/blob/main/CONTRIBUTING.md).
+We welcome contributions! Browse available templates and components at **[aitmpl.com](https://aitmpl.com)**, then check our [contributing guidelines](https://github.com/pmaojo/gemini-code-templates/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
 
@@ -174,8 +174,8 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 - **🌐 Browse Components**: [aitmpl.com](https://aitmpl.com)
 - **📚 Documentation**: [docs.aitmpl.com](https://docs.aitmpl.com)
-- **🐛 Issues**: [GitHub Issues](https://github.com/davila7/gemini-code-templates/issues)
-- **💬 Discussions**: [GitHub Discussions](https://github.com/davila7/gemini-code-templates/discussions)
+- **🐛 Issues**: [GitHub Issues](https://github.com/pmaojo/gemini-code-templates/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/pmaojo/gemini-code-templates/discussions)
 
 ---
 

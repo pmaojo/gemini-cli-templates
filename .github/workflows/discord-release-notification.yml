@@ -64,7 +64,7 @@ jobs:
                   },
                   {
                     "name": "📥 Installation",
-                    "value": "\`\`\`bash\nnpm install -g claude-code-templates\n# or with npx\nnpx claude-code-templates@latest --help\n\`\`\`",
+                    "value": "\`\`\`bash\nnpm install -g github:pmaojo/gemini-cli-templates\n# or with npx\nnpx github:pmaojo/gemini-cli-templates --help\n\`\`\`",
                     "inline": false
                   }
                 ],

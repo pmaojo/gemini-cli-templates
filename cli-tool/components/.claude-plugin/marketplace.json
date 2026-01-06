@@ -9,7 +9,7 @@
       "category": "development",
       "keywords": ["frontend", "react", "typescript", "ui", "responsive", "accessibility"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     },
     {
       "name": "backend-architect",
@@ -20,7 +20,7 @@
       "category": "development",
       "keywords": ["backend", "api", "microservices", "database", "architecture", "scalability"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     },
     {
       "name": "fullstack-developer",
@@ -31,7 +31,7 @@
       "category": "development",
       "keywords": ["fullstack", "frontend", "backend", "database", "api", "typescript"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     },
     {
       "name": "devops-engineer",
@@ -42,7 +42,7 @@
       "category": "devops",
       "keywords": ["devops", "ci-cd", "infrastructure", "kubernetes", "docker", "terraform"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     },
     {
       "name": "mobile-developer",
@@ -53,7 +53,7 @@
       "category": "mobile",
       "keywords": ["mobile", "react-native", "flutter", "ios", "android", "cross-platform"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     },
     {
       "name": "ios-developer",
@@ -64,7 +64,7 @@
       "category": "mobile",
       "keywords": ["ios", "swift", "swiftui", "uikit", "core-data", "xcode"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     },
     {
       "name": "ui-ux-designer",
@@ -75,7 +75,7 @@
       "category": "design",
       "keywords": ["ui", "ux", "design", "wireframes", "prototyping", "accessibility"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     },
     {
       "name": "cli-ui-designer",
@@ -86,7 +86,7 @@
       "category": "design",
       "keywords": ["cli", "terminal", "ui", "command-line", "design", "web"],
       "license": "MIT",
-      "repository": "https://github.com/davila7/gemini-code-templates"
+      "repository": "https://github.com/pmaojo/gemini-code-templates"
     }
   ]
 }

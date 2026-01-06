@@ -1481,7 +1481,7 @@ async function getAvailableAgentsFromGitHub() {
         const responseText = await response.text();
         if (responseText.includes('rate limit')) {
           console.log(chalk.red('❌ GitHub API rate limit exceeded'));
-          console.log(chalk.yellow('💡 Install locally with: npm install -g gemini-cli-templates'));
+          console.log(chalk.yellow('💡 Install locally with: npm install -g github:pmaojo/gemini-cli-templates'));
           
           // Return comprehensive fallback list
           return [

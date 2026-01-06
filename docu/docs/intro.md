@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **Gemini Code Templates** is an open-source CLI tool that configures Gemini Code projects and provides specialized components to enhance your AI-powered development workflow.
 
-Browse over 500 components at **[aitmpl.com](https://aitmpl.com)** or contribute to the project on **[GitHub](https://github.com/davila7/gemini-code-templates)**.
+Browse over 500 components at **[aitmpl.com](https://aitmpl.com)** or contribute to the project on **[GitHub](https://github.com/pmaojo/gemini-code-templates)**.
 
 ## What does this CLI do?
 

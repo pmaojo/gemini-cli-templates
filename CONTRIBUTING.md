@@ -286,7 +286,7 @@ For advanced contributors who want to improve the CLI tools like analytics, heal
 #### Project Setup
 ```bash
 # Clone the repository
-git clone https://github.com/davila7/gemini-code-templates.git
+git clone https://github.com/pmaojo/gemini-code-templates.git
 cd gemini-code-templates
 
 # Navigate to the CLI tool directory
@@ -483,8 +483,8 @@ npm start -- --dry-run
 ## 📞 Getting Help
 
 ### Community Support
-- **GitHub Issues** - [Report bugs or request features](https://github.com/davila7/gemini-code-templates/issues)
-- **GitHub Discussions** - [Join community discussions](https://github.com/davila7/gemini-code-templates/discussions)
+- **GitHub Issues** - [Report bugs or request features](https://github.com/pmaojo/gemini-code-templates/issues)
+- **GitHub Discussions** - [Join community discussions](https://github.com/pmaojo/gemini-code-templates/discussions)
 - **Documentation** - [Complete guides at docs.aitmpl.com](https://docs.aitmpl.com/)
 
 ### Quick Start Guides
