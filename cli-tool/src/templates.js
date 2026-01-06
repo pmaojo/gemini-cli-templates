@@ -15,7 +15,6 @@ const TEMPLATES_CONFIG = {
     files: [
       { source: 'javascript-typescript/GEMINI.md', destination: 'GEMINI.md' },
       { source: 'javascript-typescript/.gemini', destination: '.gemini' },
-      { source: 'javascript-typescript/.gemini/settings.json', destination: '.gemini/settings.json' },
       { source: 'javascript-typescript/.mcp.json', destination: '.mcp.json' }
     ],
     frameworks: {
@@ -51,7 +50,6 @@ const TEMPLATES_CONFIG = {
     files: [
       { source: 'python/GEMINI.md', destination: 'GEMINI.md' },
       { source: 'python/.gemini', destination: '.gemini' },
-      { source: 'python/.gemini/settings.json', destination: '.gemini/settings.json' },
       { source: 'python/.mcp.json', destination: '.mcp.json' }
     ],
     frameworks: {
@@ -82,7 +80,6 @@ const TEMPLATES_CONFIG = {
     files: [
       { source: 'ruby/GEMINI.md', destination: 'GEMINI.md' },
       { source: 'ruby/.gemini', destination: '.gemini' },
-      { source: 'ruby/.gemini/settings.json', destination: '.gemini/settings.json' },
       { source: 'ruby/.mcp.json', destination: '.mcp.json' }
     ],
     frameworks: {
@@ -123,7 +120,6 @@ const TEMPLATES_CONFIG = {
     files: [
       { source: 'marketing/GEMINI.md', destination: 'GEMINI.md' },
       { source: 'marketing/.gemini', destination: '.gemini' },
-      { source: 'marketing/.gemini/settings.json', destination: '.gemini/settings.json' },
       { source: 'marketing/.mcp.json', destination: '.mcp.json' }
     ],
     frameworks: {
