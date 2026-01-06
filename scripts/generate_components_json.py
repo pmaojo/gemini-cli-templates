@@ -610,7 +610,7 @@ def generate_components_json():
                                 'language': language_dir,
                                 'description': f'{framework_dir.title()} with {language_dir.title()}',
                                 'files': framework_files,
-                                'installCommand': f'npx github:pmaojo/gemini-cli-templates --template={framework_dir} --yes',
+                                'installCommand': f'npx github:pmaojo/gemini-cli-templates --template={language_dir} --framework={framework_dir} --yes',
                                 'downloads': framework_downloads
                             }
                             components_data['templates'].append(framework_template)

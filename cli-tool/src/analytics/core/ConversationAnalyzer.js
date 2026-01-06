@@ -74,18 +74,35 @@ class ConversationAnalyzer {
       // Search for .jsonl files recursively in all subdirectories
       const findJsonlFiles = async (dir) => {
         const files = [];
-        const items = await fs.readdir(dir);
+        let items = [];
+        
+        try {
+          items = await fs.readdir(dir);
+        } catch (err) {
+          return []; // Skip directories we can't read
+        }
+
+        const EXCLUDED_DIRS = ['.git', 'node_modules', 'antigravity-browser-profile', '.npm', '.cache'];
 
         for (const item of items) {
+          // Skip hidden files and common non-project directories
+          if (EXCLUDED_DIRS.includes(item)) continue;
+          
           const itemPath = path.join(dir, item);
-          const stats = await fs.stat(itemPath);
+          
+          try {
+            const stats = await fs.stat(itemPath);
 
-          if (stats.isDirectory()) {
-            // Recursively search subdirectories
-            const subFiles = await findJsonlFiles(itemPath);
-            files.push(...subFiles);
-          } else if (item.endsWith('.jsonl')) {
-            files.push(itemPath);
+            if (stats.isDirectory()) {
+              // Recursively search subdirectories
+              const subFiles = await findJsonlFiles(itemPath);
+              files.push(...subFiles);
+            } else if (item.endsWith('.jsonl')) {
+              files.push(itemPath);
+            }
+          } catch (statErr) {
+            // Skip files that might telah disappeared (transient Chromium files)
+            continue;
           }
         }
 

@@ -42,11 +42,14 @@ class FileWatcher {
    * Setup watcher for conversation files (.jsonl)
    */
   setupConversationWatcher() {
+    const EXCLUDED_DIRS = ['.git', 'node_modules', 'antigravity-browser-profile', '.npm', '.cache'];
+    
     const conversationWatcher = chokidar.watch([
       path.join(this.geminiDir, '**/*.jsonl')
     ], {
       persistent: true,
       ignoreInitial: true,
+      ignored: EXCLUDED_DIRS.map(d => `**/${d}/**`)
     });
 
     conversationWatcher.on('change', async (filePath) => {
@@ -81,10 +84,15 @@ class FileWatcher {
    * Setup watcher for project directories
    */
   setupProjectWatcher() {
+    const EXCLUDED_DIRS = ['.git', 'node_modules', 'antigravity-browser-profile', '.npm', '.cache'];
+
     const projectWatcher = chokidar.watch(this.geminiDir, {
       persistent: true,
       ignoreInitial: true,
       depth: 2, // Increased depth to catch subdirectories
+      ignored: (path, stats) => {
+        return EXCLUDED_DIRS.some(d => path.includes(d));
+      }
     });
 
     projectWatcher.on('addDir', async () => {
@@ -160,6 +168,7 @@ class FileWatcher {
     const fs = require('fs');
     try {
       // Get file stats
+      if (!fs.existsSync(filePath)) return;
       const stats = fs.statSync(filePath);
       const now = Date.now();
       const fileSize = stats.size;
