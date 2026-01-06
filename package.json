@@ -28,11 +28,13 @@
     "express": "^4.18.2",
     "fs-extra": "^11.1.1",
     "inquirer": "^8.2.6",
+    "js-yaml": "^4.1.1",
     "open": "^8.4.2",
     "ora": "^5.4.1",
     "qrcode": "^1.5.4",
     "uuid": "^11.1.0",
-    "ws": "^8.18.3"
+    "ws": "^8.18.3",
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
     "@vercel/node": "^3.0.0"
