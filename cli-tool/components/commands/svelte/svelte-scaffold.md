@@ -1,3 +1,8 @@
+---
+name: svelte-scaffold
+description: "Scaffold new SvelteKit projects, features, or modules with best practices and optimal project structure."
+---
+
 # /svelte:scaffold
 
 Scaffold new SvelteKit projects, features, or modules with best practices and optimal project structure.

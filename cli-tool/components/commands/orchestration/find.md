@@ -1,3 +1,8 @@
+---
+name: find
+description: "Search and locate tasks across all orchestrations using various criteria."
+---
+
 # Task Find Command
 
 Search and locate tasks across all orchestrations using various criteria.

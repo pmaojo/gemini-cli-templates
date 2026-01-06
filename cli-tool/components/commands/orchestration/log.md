@@ -1,3 +1,8 @@
+---
+name: log
+description: "Log work from orchestrated tasks to external project management tools like Linear, Obsidian, Jira, or GitHub Issues."
+---
+
 # Orchestration Log Command
 
 Log work from orchestrated tasks to external project management tools like Linear, Obsidian, Jira, or GitHub Issues.

@@ -1,3 +1,8 @@
+---
+name: svelte-storybook-migrate
+description: "Migrate Storybook configurations and stories to newer versions, including Svelte CSF v5 and @storybook/sveltekit framework."
+---
+
 # /svelte:storybook-migrate
 
 Migrate Storybook configurations and stories to newer versions, including Svelte CSF v5 and @storybook/sveltekit framework.

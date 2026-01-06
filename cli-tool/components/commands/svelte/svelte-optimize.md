@@ -1,3 +1,8 @@
+---
+name: svelte-optimize
+description: "Optimize Svelte/SvelteKit applications for performance, including bundle size reduction, rendering optimization, and loading performance."
+---
+
 # /svelte:optimize
 
 Optimize Svelte/SvelteKit applications for performance, including bundle size reduction, rendering optimization, and loading performance.

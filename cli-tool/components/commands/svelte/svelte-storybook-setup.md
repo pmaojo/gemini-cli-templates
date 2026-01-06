@@ -1,3 +1,8 @@
+---
+name: svelte-storybook-setup
+description: "Initialize and configure Storybook for SvelteKit projects with optimal settings and structure."
+---
+
 # /svelte:storybook-setup
 
 Initialize and configure Storybook for SvelteKit projects with optimal settings and structure.

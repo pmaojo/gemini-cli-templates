@@ -1,3 +1,8 @@
+---
+name: svelte-storybook-story
+description: "Create comprehensive Storybook stories for Svelte components using modern patterns and best practices."
+---
+
 # /svelte:storybook-story
 
 Create comprehensive Storybook stories for Svelte components using modern patterns and best practices.
