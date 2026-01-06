@@ -87,112 +87,112 @@
     "hash": "b1c15a68d41be92f8e73826c299fc0e3a2f36939fd40fa82a1abe75c3af30a9d",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:08.675Z",
+    "timestamp": "2026-01-06T18:21:52.751Z",
     "path": "cli-tool/components/agents/blockchain-web3/web3-integration-specialist.md"
   },
   "cli-tool/components/agents/business-marketing/business-analyst.md": {
     "hash": "9d6c9f163746a12269c99d1bdc1eefa84597e232f0505f9ef3f480cb8be5c1e6",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:08.769Z",
+    "timestamp": "2026-01-06T18:21:52.969Z",
     "path": "cli-tool/components/agents/business-marketing/business-analyst.md"
   },
   "cli-tool/components/agents/business-marketing/content-marketer.md": {
     "hash": "8b2f5daf6f14e9810aaffc725bdf2395a8792c631f43b9d9526173823d92ea65",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:08.848Z",
+    "timestamp": "2026-01-06T18:21:53.338Z",
     "path": "cli-tool/components/agents/business-marketing/content-marketer.md"
   },
   "cli-tool/components/agents/business-marketing/customer-support.md": {
     "hash": "d69329674589a0ec3a00ea2739e108c4c6fa076f6a1d16f96697db64cecb6b54",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:08.964Z",
+    "timestamp": "2026-01-06T18:21:53.591Z",
     "path": "cli-tool/components/agents/business-marketing/customer-support.md"
   },
   "cli-tool/components/agents/business-marketing/legal-advisor.md": {
     "hash": "3c8547b453dee86d72cb7493aa25eed8305d65cd0ac966f1668fb1ec182fbc20",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.053Z",
+    "timestamp": "2026-01-06T18:21:53.964Z",
     "path": "cli-tool/components/agents/business-marketing/legal-advisor.md"
   },
   "cli-tool/components/agents/business-marketing/marketing-attribution-analyst.md": {
     "hash": "1e68d4b5b3ef42205148103bd239548233ea1bc7f5215cb21f70ecf8443039e7",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.137Z",
+    "timestamp": "2026-01-06T18:21:54.277Z",
     "path": "cli-tool/components/agents/business-marketing/marketing-attribution-analyst.md"
   },
   "cli-tool/components/agents/business-marketing/payment-integration.md": {
     "hash": "91d1e3a3e0bce867bd3bd20a69a2be787e898d39d2bd9d486ddf9556aa813f5e",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.229Z",
+    "timestamp": "2026-01-06T18:21:54.649Z",
     "path": "cli-tool/components/agents/business-marketing/payment-integration.md"
   },
   "cli-tool/components/agents/business-marketing/product-strategist.md": {
     "hash": "0bd22d85f5595006eb28454644f8fd7b0b5836ad61e6b2aed450b5ab6a11c9bc",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.353Z",
+    "timestamp": "2026-01-06T18:21:54.937Z",
     "path": "cli-tool/components/agents/business-marketing/product-strategist.md"
   },
   "cli-tool/components/agents/business-marketing/risk-manager.md": {
     "hash": "f32a7d9c74772b8c15789ff7ad9d707460ca3328c2eef35eaa8bb0df804fd1df",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.454Z",
+    "timestamp": "2026-01-06T18:21:55.298Z",
     "path": "cli-tool/components/agents/business-marketing/risk-manager.md"
   },
   "cli-tool/components/agents/business-marketing/sales-automator.md": {
     "hash": "5deb0632c569bccc327e7e902f2cf1ef3d4709a4eef934f205d6dea5d371c478",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.533Z",
+    "timestamp": "2026-01-06T18:21:55.885Z",
     "path": "cli-tool/components/agents/business-marketing/sales-automator.md"
   },
   "cli-tool/components/agents/data-ai/ai-engineer.md": {
     "hash": "90d3dd88f89d4833e47173b90a8b62b46394faabe83702943f08358fb0313e80",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.632Z",
+    "timestamp": "2026-01-06T18:21:56.222Z",
     "path": "cli-tool/components/agents/data-ai/ai-engineer.md"
   },
   "cli-tool/components/agents/data-ai/computer-vision-engineer.md": {
     "hash": "7926f7c733e97cd1b44f3090e2b161e1488129900ba74caf8eb0bb6343d8d472",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.727Z",
+    "timestamp": "2026-01-06T18:21:56.585Z",
     "path": "cli-tool/components/agents/data-ai/computer-vision-engineer.md"
   },
   "cli-tool/components/agents/data-ai/data-engineer.md": {
     "hash": "8fbc45fc932ce83dc9e3e137ff16f56e76b66d4cd4c7cd96e483b2cd5f1c8626",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.846Z",
+    "timestamp": "2026-01-06T18:21:56.962Z",
     "path": "cli-tool/components/agents/data-ai/data-engineer.md"
   },
   "cli-tool/components/agents/data-ai/data-scientist.md": {
     "hash": "d8aee9c21881a09286d76ed95aa19cdea2fb31d2f6bd73d9c8fbb91235c9e9ad",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:09.934Z",
+    "timestamp": "2026-01-06T18:21:57.362Z",
     "path": "cli-tool/components/agents/data-ai/data-scientist.md"
   },
   "cli-tool/components/agents/data-ai/ml-engineer.md": {
     "hash": "d9cc2018c0fc6293bee9b936168b1db7a47e28dd7661c9cb6155df335820f2a4",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:10.023Z",
+    "timestamp": "2026-01-06T18:21:57.768Z",
     "path": "cli-tool/components/agents/data-ai/ml-engineer.md"
   },
   "cli-tool/components/agents/data-ai/mlops-engineer.md": {
     "hash": "144c2196f3d30b37d222fc5fbb404ae7daeaa48039ac7bdbe8fed9562dff490b",
     "type": "agent",
     "version": "unversioned",
-    "timestamp": "2026-01-06T18:15:10.119Z",
+    "timestamp": "2026-01-06T18:21:58.092Z",
     "path": "cli-tool/components/agents/data-ai/mlops-engineer.md"
   },
   "cli-tool/components/agents/data-ai/nlp-engineer.md": {
