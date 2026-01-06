@@ -251,29 +251,54 @@ class SemanticValidator extends BaseValidator {
    * Check for sensitive data (passwords, API keys, etc.)
    */
   checkSensitiveData(content, path) {
+    const commonPlaceholders = [
+      'your_password_here',
+      'your_api_key_here',
+      'your_secret_here',
+      'your_token_here',
+      'your_neon_connection_string',
+      'strong_password',
+      'your_client_key',
+      'your_project_id',
+      'your_server_key',
+      'YOUR_PASSWORD_HERE',
+      'YOUR_API_KEY_HERE'
+    ];
+
     for (const { pattern, code, message, severity } of this.SENSITIVE_DATA_PATTERNS) {
       const matches = content.matchAll(pattern);
       const matchArray = Array.from(matches);
 
       if (matchArray.length > 0) {
-        const contexts = matchArray.map(m => {
+        const contexts = [];
+        
+        for (const m of matchArray) {
+          const valuePart = m[0].split(/[:=]/)[1]?.trim();
+          
+          // Skip common placeholders
+          if (valuePart && commonPlaceholders.some(p => valuePart.includes(p))) {
+            continue;
+          }
+
           const lineInfo = this.getLineFromIndex(content, m.index);
-          return {
+          contexts.push({
             text: m[0].replace(/[:=].*/, ':=<REDACTED>'), // Redact the value
             index: m.index,
             line: lineInfo.line,
             column: lineInfo.column,
             position: lineInfo.position,
             lineText: lineInfo.lineText.replace(/[:=].*/, ':=<REDACTED>') // Redact in line text too
-          };
-        });
+          });
+        }
 
-        this.addError(code, message, {
-          path,
-          severity,
-          matches: contexts.length,
-          examples: contexts.slice(0, 3)
-        });
+        if (contexts.length > 0) {
+          this.addError(code, message, {
+            path,
+            severity,
+            matches: contexts.length,
+            examples: contexts.slice(0, 3)
+          });
+        }
       }
     }
   }
@@ -282,6 +307,9 @@ class SemanticValidator extends BaseValidator {
    * Check for HTML/Script injection attempts
    */
   checkHtmlInjection(content, path) {
+    // Skip checking inside code blocks
+    const contentWithoutCodeBlocks = content.replace(/```[\s\S]*?```/g, '');
+    
     const dangerousTags = [
       { tag: '<script', code: 'SEM_E014', message: '<script> tag detected (XSS risk)' },
       { tag: '<iframe', code: 'SEM_E015', message: '<iframe> tag detected (injection risk)' },
@@ -291,7 +319,7 @@ class SemanticValidator extends BaseValidator {
     ];
 
     for (const { tag, code, message } of dangerousTags) {
-      const lowerContent = content.toLowerCase();
+      const lowerContent = contentWithoutCodeBlocks.toLowerCase();
       if (lowerContent.includes(tag.toLowerCase())) {
         const index = lowerContent.indexOf(tag.toLowerCase());
         const lineInfo = this.getLineFromIndex(content, index);

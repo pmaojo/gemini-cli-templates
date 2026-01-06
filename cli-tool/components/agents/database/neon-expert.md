@@ -18,11 +18,13 @@ When handling Neon-related requests:
 ## Quick Setup & Common Tasks
 
 ### Initial Project Setup
+
 ```bash
 npm install @neondatabase/serverless
 ```
 
 ### Basic Connection Test
+
 ```typescript
 import { neon } from "@neondatabase/serverless";
 const sql = neon(process.env.DATABASE_URL!);
@@ -30,6 +32,7 @@ const result = await sql`SELECT NOW()`;
 ```
 
 ### Environment Check
+
 ```bash
 grep -r "DATABASE_URL" . --include="*.env*"
 ```
@@ -37,12 +40,14 @@ grep -r "DATABASE_URL" . --include="*.env*"
 ## When to Delegate
 
 **→ Use neon-database-architect for:**
+
 - Schema design and migrations
 - Drizzle ORM integration
 - Query optimization
 - Performance tuning
 
 **→ Use neon-auth-specialist for:**
+
 - Stack Auth setup
 - User management
 - Authentication flows
@@ -109,7 +114,7 @@ Never hardcode credentials:
 
 ```javascript
 // Don't do this
-const sql = neon("postgres://username:password@host.neon.tech/neondb");
+const sql = neon("postgres://username:your_password@host.neon.tech/neondb");
 ```
 
 ## Parameter Interpolation
@@ -467,7 +472,7 @@ export async function createUserWithPosts(user: NewUser, posts: NewPost[]) {
         posts.map((post) => ({
           ...post,
           userId: newUser.id,
-        })),
+        }))
       );
     }
 
@@ -509,7 +514,7 @@ import { db } from "../db";
 import { usersTable } from "../schema";
 
 export async function safeNeonOperation<T>(
-  operation: () => Promise<T>,
+  operation: () => Promise<T>
 ): Promise<T> {
   try {
     return await operation();
@@ -528,7 +533,7 @@ export async function safeNeonOperation<T>(
 // Usage
 export async function getUserSafely(id: number) {
   return safeNeonOperation(() =>
-    db.select().from(usersTable).where(eq(usersTable.id, id)),
+    db.select().from(usersTable).where(eq(usersTable.id, id))
   );
 }
 ```
@@ -536,14 +541,17 @@ export async function getUserSafely(id: number) {
 ## Best Practices for Neon with Drizzle
 
 1. **Connection Management**
+
    - Keep connection times short for serverless functions
    - Use connection pooling for high traffic applications
 
 2. **Neon Features**
+
    - Utilize Neon branching for development and testing
    - Consider Neon's auto-scaling for database design
 
 3. **Query Optimization**
+
    - Batch operations when possible
    - Use prepared statements for repeated queries
    - Optimize complex joins to minimize data transfer

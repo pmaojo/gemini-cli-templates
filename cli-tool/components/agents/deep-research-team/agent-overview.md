@@ -1,3 +1,8 @@
+---
+name: agent-overview
+description: Agent Overview agent part of the Deep Research Team.
+---
+
 [Open Deep Research Team Diagram](../../../images/research_team_diagram.html)
 
 ## Open Deep Research Team Agent Overview
