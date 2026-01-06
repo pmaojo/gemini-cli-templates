@@ -73,7 +73,6 @@ async function main() {
   const args = process.argv.slice(2);
   const ciMode = args.includes('--ci');
   const verbose = args.includes('--verbose') || args.includes('-v');
-  const verbose = args.includes('--verbose') || args.includes('-v');
   const jsonOutput = args.includes('--json');
   const updateRegistry = args.includes('--update-registry');
   const outputFile = args.find(arg => arg.startsWith('--output='))?.split('=')[1];
