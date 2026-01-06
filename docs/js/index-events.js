@@ -23,6 +23,7 @@ class IndexPageManager {
             settings: new Set(),
             hooks: new Set(),
             skills: new Set(),
+            extensions: new Set(),
             templates: new Set(),
             plugins: new Set()
         };
@@ -420,54 +421,18 @@ class IndexPageManager {
         this.availableCategories.templates.clear();
         
         // Collect categories from each component type
-        if (this.componentsData.agents && Array.isArray(this.componentsData.agents)) {
-            this.componentsData.agents.forEach(component => {
-                const category = component.category || 'general';
-                this.availableCategories.agents.add(category);
-            });
-        }
+        const types = ['agents', 'commands', 'mcps', 'settings', 'hooks', 'skills', 'extensions', 'plugins'];
         
-        if (this.componentsData.commands && Array.isArray(this.componentsData.commands)) {
-            this.componentsData.commands.forEach(component => {
-                const category = component.category || 'general';  
-                this.availableCategories.commands.add(category);
-            });
-        }
-        
-        if (this.componentsData.mcps && Array.isArray(this.componentsData.mcps)) {
-            this.componentsData.mcps.forEach(component => {
-                const category = component.category || 'general';
-                this.availableCategories.mcps.add(category);
-            });
-        }
-        
-        if (this.componentsData.settings && Array.isArray(this.componentsData.settings)) {
-            this.componentsData.settings.forEach(component => {
-                const category = component.category || 'general';
-                this.availableCategories.settings.add(category);
-            });
-        }
-        
-        if (this.componentsData.hooks && Array.isArray(this.componentsData.hooks)) {
-            this.componentsData.hooks.forEach(component => {
-                const category = component.category || 'general';
-                this.availableCategories.hooks.add(category);
-            });
-        }
-
-        if (this.componentsData.skills && Array.isArray(this.componentsData.skills)) {
-            this.componentsData.skills.forEach(component => {
-                const category = component.category || 'general';
-                this.availableCategories.skills.add(category);
-            });
-        }
-
-        if (this.componentsData.extensions && Array.isArray(this.componentsData.extensions)) {
-            this.componentsData.extensions.forEach(component => {
-                const category = component.category || 'general';
-                this.availableCategories.extensions.add(category);
-            });
-        }
+        types.forEach(type => {
+            if (this.componentsData[type] && Array.isArray(this.componentsData[type])) {
+                this.componentsData[type].forEach(component => {
+                    const category = component.category || 'general';
+                    if (this.availableCategories[type]) {
+                        this.availableCategories[type].add(category);
+                    }
+                });
+            }
+        });
 
         // Collect categories from templates (use language as category for language templates)
         if (this.componentsData.templates && Array.isArray(this.componentsData.templates)) {

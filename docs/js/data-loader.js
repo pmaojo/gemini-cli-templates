@@ -257,7 +257,7 @@ class DataLoader {
         if (!this.componentsData) return [];
 
         const allComponents = [];
-        ['agents', 'commands', 'mcps', 'skills'].forEach(type => {
+        ['agents', 'commands', 'mcps', 'skills', 'extensions', 'settings', 'hooks', 'plugins'].forEach(type => {
             if (this.componentsData[type]) {
                 allComponents.push(...this.componentsData[type]);
             }
