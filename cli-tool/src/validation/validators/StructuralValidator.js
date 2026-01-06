@@ -24,7 +24,7 @@ class StructuralValidator extends BaseValidator {
 
     // Required fields by component type
     this.REQUIRED_FIELDS = {
-      agent: ['name', 'description', 'tools'],
+      agent: ['name', 'description'],
       command: ['name', 'description'],
       mcp: ['name', 'description', 'command'],
       setting: ['name', 'description'],
@@ -33,7 +33,7 @@ class StructuralValidator extends BaseValidator {
 
     // Optional but recommended fields
     this.RECOMMENDED_FIELDS = {
-      agent: ['model'],
+      agent: ['tools', 'model'],
       command: ['usage', 'examples'],
       mcp: ['args'],
       setting: ['type'],
@@ -300,7 +300,7 @@ class StructuralValidator extends BaseValidator {
       return;
     }
 
-    const validModels = ['gemini-2.0-flash', 'opus', 'gemini-3-flash', 'gemini-2.0-pro-exp-02-05', 'gemini-3-5-gemini-2.0-flash', 'gemini-3-opus', 'gemini-3-gemini-2.0-flash'];
+    const validModels = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-2.5-pro', 'gemini-2.0-pro', 'gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-3-flash'];
 
     if (!validModels.includes(model)) {
       this.addWarning(
