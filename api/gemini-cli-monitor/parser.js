@@ -1,4 +1,4 @@
-// Parser del CHANGELOG.md de Gemini Code
+// Parser del CHANGELOG.md de Gemini CLI
 
 /**
  * Extrae la sección de una versión específica del changelog
@@ -179,7 +179,7 @@ function detectCategory(description) {
     'Performance': ['performance', 'speed', 'faster', 'optimize', 'cache'],
     'UI/UX': ['ui', 'ux', 'interface', 'display', 'output'],
     'API': ['api', 'endpoint', 'rest', 'graphql'],
-    'Models': ['model', 'sonnet', 'opus', 'haiku', 'gemini'],
+    'Models': ['model', 'flash', 'pro', 'flash-lite', 'gemini', 'gemini-3'],
     'MCP': ['mcp', 'model context protocol'],
     'Agents': ['agent', 'subagent', 'explore'],
     'Settings': ['setting', 'config', 'configuration'],

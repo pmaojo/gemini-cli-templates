@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Cloudflare Sandbox Launcher
- * Executes Gemini Code prompts using Cloudflare Workers and Sandbox SDK
+ * Executes Gemini CLI prompts using Cloudflare Workers and Sandbox SDK
  */
 
 import Google from '@google/generative-ai';
@@ -204,7 +204,7 @@ async function executeDirectly(config: LauncherConfig): Promise<ExecutionResult>
   if (config.componentsToInstall) {
     const agents = extractAgents(config.componentsToInstall);
     if (agents.length > 0) {
-      enhancedPrompt = `You are Gemini Code, an AI assistant specialized in software development.
+      enhancedPrompt = `You are Gemini CLI, an AI assistant specialized in software development.
 
 IMPORTANT INSTRUCTIONS:
 1. Execute the user's request immediately and create the requested code/files

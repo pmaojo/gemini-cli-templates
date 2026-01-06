@@ -1,6 +1,6 @@
-# Blog Writing Guide - Gemini Code Templates
+# Blog Writing Guide - Gemini CLI Templates
 
-This guide provides a comprehensive template for creating consistent, SEO-optimized blog articles for Gemini Code Templates. Use this structure for articles about technologies, companies, or trends related to Gemini Code integration.
+This guide provides a comprehensive template for creating consistent, SEO-optimized blog articles for Gemini CLI Templates. Use this structure for articles about technologies, companies, or trends related to Gemini CLI integration.
 
 ## 📁 File Structure
 
@@ -26,10 +26,10 @@ docs/blog/
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[Technology] and Gemini Code Integration</title>
+    <title>[Technology] and Gemini CLI Integration</title>
     <meta
       name="description"
-      content="Learn how to integrate [Technology] with Gemini Code using MCP servers, specialized agents, and automated commands for lightning-fast [domain] development."
+      content="Learn how to integrate [Technology] with Gemini CLI using MCP servers, specialized agents, and automated commands for lightning-fast [domain] development."
     />
 
     <!-- Open Graph / Facebook -->
@@ -40,11 +40,11 @@ docs/blog/
     />
     <meta
       property="og:title"
-      content="[Technology] and Gemini Code Integration"
+      content="[Technology] and Gemini CLI Integration"
     />
     <meta
       property="og:description"
-      content="Learn how to integrate [Technology] with Gemini Code..."
+      content="Learn how to integrate [Technology] with Gemini CLI..."
     />
     <meta
       property="og:image"
@@ -53,10 +53,10 @@ docs/blog/
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="article:published_time" content="[ISO_DATE]" />
-    <meta property="article:author" content="Gemini Code Templates" />
+    <meta property="article:author" content="Gemini CLI Templates" />
     <meta property="article:section" content="[Category]" />
     <meta property="article:tag" content="[Technology]" />
-    <meta property="article:tag" content="Gemini Code" />
+    <meta property="article:tag" content="Gemini CLI" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -66,11 +66,11 @@ docs/blog/
     />
     <meta
       property="twitter:title"
-      content="[Technology] and Gemini Code Integration"
+      content="[Technology] and Gemini CLI Integration"
     />
     <meta
       property="twitter:description"
-      content="Learn how to integrate [Technology] with Gemini Code..."
+      content="Learn how to integrate [Technology] with Gemini CLI..."
     />
     <meta
       property="twitter:image"
@@ -80,9 +80,9 @@ docs/blog/
     <!-- Additional SEO -->
     <meta
       name="keywords"
-      content="[Technology], Gemini Code, MCP, [Domain], AI Development, Google"
+      content="[Technology], Gemini CLI, MCP, [Domain], AI Development, Google"
     />
-    <meta name="author" content="Gemini Code Templates" />
+    <meta name="author" content="Gemini CLI Templates" />
     <link
       rel="canonical"
       href="https://pmaojo.github.io/gemini-cli-templates/blog/[slug]/"
@@ -103,16 +103,16 @@ docs/blog/
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "[Technology] and Gemini Code Integration",
-        "description": "Learn how to integrate [Technology] with Gemini Code...",
+        "headline": "[Technology] and Gemini CLI Integration",
+        "description": "Learn how to integrate [Technology] with Gemini CLI...",
         "image": "https://pmaojo.github.io/gemini-cli-templates/blog/[slug]/cover.jpg",
         "author": {
           "@type": "Organization",
-          "name": "Gemini Code Templates"
+          "name": "Gemini CLI Templates"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "Gemini Code Templates",
+          "name": "Gemini CLI Templates",
           "logo": {
             "@type": "ImageObject",
             "url": "https://pmaojo.github.io/gemini-cli-templates/static/img/logo.svg"
@@ -185,9 +185,9 @@ docs/blog/
 ```html
 <header class="article-header">
   <div class="container">
-    <h1 class="article-title">How to use Gemini Code with [Technology]</h1>
+    <h1 class="article-title">How to use Gemini CLI with [Technology]</h1>
     <p class="article-subtitle">
-      Learn how to integrate [Technology] with Gemini Code using MCP, Agents,
+      Learn how to integrate [Technology] with Gemini CLI using MCP, Agents,
       and Commands for faster [domain] development.
     </p>
     <div class="article-meta-full">
@@ -211,7 +211,7 @@ docs/blog/
 ```html
 <img
   src="../assets/[technology]-gemini-cli-templates-cover.png"
-  alt="[Technology] and Gemini Code Integration"
+  alt="[Technology] and Gemini CLI Integration"
   class="article-cover"
 />
 ```
@@ -219,9 +219,9 @@ docs/blog/
 ### 2. Technology Stack Overview
 
 ```html
-<h2>[Technology] Stack for Gemini Code</h2>
+<h2>[Technology] Stack for Gemini CLI</h2>
 <p>
-  Gemini Code Templates offers [X] pre-built components for [Technology]
+  Gemini CLI Templates offers [X] pre-built components for [Technology]
   integration:
 </p>
 ```
@@ -284,7 +284,7 @@ docs/blog/
       <td>🔌 <strong>[Technology] MCP Server</strong></td>
       <td>
         Direct integration with [Technology] API through Model Context Protocol
-        for seamless Gemini Code interaction.
+        for seamless Gemini CLI interaction.
       </td>
     </tr>
   </tbody>
@@ -295,7 +295,7 @@ docs/blog/
 
 ```html
 <h2>Browse all components on gemini-cli-templates.vercel.app</h2>
-<p>Before installing, you can explore all available [Technology] components on the official Gemini Code Templates website:</p>
+<p>Before installing, you can explore all available [Technology] components on the official Gemini CLI Templates website:</p>
 <p>Visit <strong><a href="https://gemini-cli-templates.vercel.app-templates.vercel.app" target="_bgemini-cli-templates.vercel.app"noopener">gemini-cli-templates.vercel.app</a></strong> and search for "[technology]" to see:</p>
 <img src="../assets/aitmpl-[technology]-search.png" alt="Searching for [Technology] components on gemini-cli-templates.vercel.app" loading="lazy">
 ```
@@ -381,7 +381,7 @@ npx github:pmaojo/gemini-cli-templates \
 ```html
 <h2>Where Components Are Installed</h2>
 <p>
-  The installation creates a standard Gemini Code structure with components
+  The installation creates a standard Gemini CLI structure with components
   organized as follows:
 </p>
 
@@ -398,7 +398,7 @@ npx github:pmaojo/gemini-cli-templates \
 └── src/ # Your application code</code></pre>
 
 <p>
-  That's it! Gemini Code will automatically detect all components and you can
+  That's it! Gemini CLI will automatically detect all components and you can
   start using them immediately.
 </p>
 ```
@@ -438,9 +438,9 @@ npx github:pmaojo/gemini-cli-templates \
 
 ### SEO Optimization
 
-- **Title**: "How to use Gemini Code with [Technology]"
+- **Title**: "How to use Gemini CLI with [Technology]"
 - **Meta Description**: Max 160 characters, include key terms
-- **Keywords**: Technology name, Gemini Code, MCP, Agents, Commands, AI Development
+- **Keywords**: Technology name, Gemini CLI, MCP, Agents, Commands, AI Development
 - **Headers**: Use proper H2, H3 hierarchy
 - **Alt Text**: Descriptive alt text for all images
 - **Internal Links**: Link to main site and other relevant articles
@@ -449,7 +449,7 @@ npx github:pmaojo/gemini-cli-templates \
 ### Visual Assets Required
 
 1. **Cover Image**: 1200x630 pixels for social sharing
-2. **Hero Image**: Technology + Gemini Code branded image
+2. **Hero Image**: Technology + Gemini CLI branded image
 3. **AITMPL Search Screenshot**: Show search results for the technology
 4. **Component Icons**: Use appropriate emojis (🤖 for agents, ⚡ for commands, 🔌 for MCP)
 

@@ -1,4 +1,4 @@
-# Common Gemini Code Templates
+# Common Gemini CLI Templates
 
 This folder contains language-agnostic templates and configurations that can be used across different programming languages and project types.
 
@@ -6,7 +6,7 @@ This folder contains language-agnostic templates and configurations that can be 
 
 ### Core Files
 
-- `GEMINI.md` - Base configuration for Gemini Code with universal best practices
+- `GEMINI.md` - Base configuration for Gemini CLI with universal best practices
 - `.gemini/commands/` - Custom commands for common development tasks
 
 ### Extensions
@@ -34,7 +34,7 @@ cp -r gemini-cli-templates/common/* your-project/
 
 ### For Existing Projects
 
-Merge the relevant files with your existing Gemini Code configuration:
+Merge the relevant files with your existing Gemini CLI configuration:
 
 ```bash
 # Copy custom commands
@@ -105,7 +105,7 @@ Organizations can use this as a base template and customize it for their specifi
 
 - **Start Simple**: Begin with the common template and add complexity as needed
 - **Document Changes**: Keep track of customizations in your project's documentation
-- **Regular Updates**: Periodically review and update your Gemini Code configuration
+- **Regular Updates**: Periodically review and update your Gemini CLI configuration
 - **Team Alignment**: Ensure all team members understand the custom commands and workflows
 
 ## Extensions

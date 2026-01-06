@@ -2,7 +2,7 @@
 
 ## Overview
 
-Complete implementation of Cloudflare Workers sandbox for executing Gemini Code with AI-powered code generation. This sandbox leverages Cloudflare's global edge network to provide ultra-fast, isolated code execution.
+Complete implementation of Cloudflare Workers sandbox for executing Gemini CLI with AI-powered code generation. This sandbox leverages Cloudflare's global edge network to provide ultra-fast, isolated code execution.
 
 ## What Was Built
 
@@ -227,7 +227,7 @@ curl https://your-worker.workers.dev/health
 
 ## Integration Points
 
-### With Gemini Code Templates CLI
+### With Gemini CLI Templates CLI
 The sandbox integrates seamlessly with the main CLI:
 
 ```bash
@@ -341,7 +341,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
 ✅ Local development support
 ✅ Production deployment guide
 ✅ Debugging and troubleshooting guides
-✅ Integration with Gemini Code Templates
+✅ Integration with Gemini CLI Templates
 ✅ Security best practices implemented
 ✅ Performance optimizations included
 ✅ Cost analysis provided

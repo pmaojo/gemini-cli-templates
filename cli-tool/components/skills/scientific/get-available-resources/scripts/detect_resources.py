@@ -3,7 +3,7 @@
 System Resource Detection Script
 
 Detects available compute resources including CPU, GPU, memory, and disk space.
-Outputs a JSON file that Gemini Code can use to make informed decisions about
+Outputs a JSON file that Gemini CLI can use to make informed decisions about
 computational approaches (e.g., whether to use Dask, Zarr, Joblib, etc.).
 
 Supports: macOS, Linux, Windows

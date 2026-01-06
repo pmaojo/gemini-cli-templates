@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-Browse and search over 500 Gemini Code components on **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+Browse and search over 500 Gemini CLI components on **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
 
 ## 🌐 How to Use gemini-cli-templates.vercel.app-templates.vercel.app
 
@@ -39,7 +39,7 @@ npx github:pmaojo/gemini-cli-templates --mcp development/github-integration
 npx github:pmaojo/gemini-cli-templates --mcp browser/playwright-mcp
 ```
 
-### ⚙️ **Settings** (Gemini Code Configs)
+### ⚙️ **Settings** (Gemini CLI Configs)
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --setting performance/performance-optimization

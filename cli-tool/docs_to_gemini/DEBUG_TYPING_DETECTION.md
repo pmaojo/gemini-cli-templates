@@ -54,11 +54,11 @@ window.app.components.agents.lastMessageTime
 
 ## 🔧 Test Manual
 
-1. **Envía un mensaje como usuario** → Banner debe mostrar "Gemini Code working..."
+1. **Envía un mensaje como usuario** → Banner debe mostrar "Gemini CLI working..."
 2. **Gemini responde** → Banner debe mostrar estado basado en contenido
 3. **Espera 30 segundos SIN escribir nada** → Banner debe cambiar a "User typing..."
 4. **Empieza a escribir** → Verifica logs en ambos lados
-5. **Envía mensaje** → Banner debe cambiar inmediatamente a "Gemini Code working..."
+5. **Envía mensaje** → Banner debe cambiar inmediatamente a "Gemini CLI working..."
 
 ## 🐛 Posibles Problemas
 

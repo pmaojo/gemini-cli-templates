@@ -2,7 +2,7 @@
 name: "gemini-review"
 allowed-tools: Bash(gh:*), Read, Grep, TodoWrite, Edit, MultiEdit
 argument-hint: "[pr-number] | --analyze-only | --preview | --priority high|medium|low"
-description: Transform Gemini Code Assist PR reviews into prioritized TodoLists with automated execution
+description: Transform Gemini CLI Assist PR reviews into prioritized TodoLists with automated execution
 model: gemini-sonnet-4-5-20250929
 ---
 
@@ -10,7 +10,7 @@ model: gemini-sonnet-4-5-20250929
 
 ## Why This Command Exists
 
-**The Problem**: Gemini Code Assist provides free, automated PR reviews on GitHub. But AI-generated reviews often get ignored because they lack the urgency of human feedback.
+**The Problem**: Gemini CLI Assist provides free, automated PR reviews on GitHub. But AI-generated reviews often get ignored because they lack the urgency of human feedback.
 
 **The Pain Point**: Manually asking Gemini CLI to:
 
@@ -34,7 +34,7 @@ model: gemini-sonnet-4-5-20250929
 
 ## Triggers
 
-- PR has Gemini Code Assist review comments waiting to be addressed
+- PR has Gemini CLI Assist review comments waiting to be addressed
 - Need to convert AI feedback into structured action items
 - Want to systematically process automated review feedback
 - Reduce manual context switching between GitHub and development
@@ -193,7 +193,7 @@ _Note: User reviews and confirms TodoList before any code modifications are made
 
 **Will:**
 
-- Fetch and analyze Gemini Code Assist review comments from GitHub PRs
+- Fetch and analyze Gemini CLI Assist review comments from GitHub PRs
 - Categorize and prioritize review feedback systematically
 - Generate TodoLists with priority ordering and effort estimates
 - Provide decision reasoning and trade-off analysis
@@ -297,14 +297,14 @@ _Note: User reviews and confirms TodoList before any code modifications are made
 ## Tool Requirements
 
 - **GitHub CLI** (`gh`) installed and authenticated
-- **Repository** must have Gemini Code Assist configured as PR reviewer
+- **Repository** must have Gemini CLI Assist configured as PR reviewer
 - **Current branch** must have associated PR or provide PR number explicitly
 
-## Setup Gemini Code Assist
+## Setup Gemini CLI Assist
 
-If you haven't set up Gemini Code Assist yet:
+If you haven't set up Gemini CLI Assist yet:
 
-1. Visit [Gemini Code Assist GitHub App](https://developers.google.com/gemini-cli-assist/docs/set-up-code-assist-github)
+1. Visit [Gemini CLI Assist GitHub App](https://developers.google.com/gemini-cli-assist/docs/set-up-code-assist-github)
 2. Install the app on your organization/account
 3. Select repositories for integration
 4. Gemini will automatically review PRs with `/gemini` tag or auto-review
@@ -318,7 +318,7 @@ If you haven't set up Gemini Code Assist yet:
 
 ## Limitations
 
-- Only supports Gemini Code Assist reviews (not GitHub Copilot, CodeRabbit, etc.)
+- Only supports Gemini CLI Assist reviews (not GitHub Copilot, CodeRabbit, etc.)
 - Requires GitHub CLI access and authentication
 - Analysis quality depends on Gemini review quality
 - Cannot modify reviews or re-trigger Gemini analysis

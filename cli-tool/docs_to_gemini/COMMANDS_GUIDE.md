@@ -1,10 +1,10 @@
-# Complete Guide to Creating Gemini Code Commands
+# Complete Guide to Creating Gemini CLI Commands
 
-This guide teaches you how to create custom slash commands for Gemini Code using `.md` files with optional YAML frontmatter configuration.
+This guide teaches you how to create custom slash commands for Gemini CLI using `.md` files with optional YAML frontmatter configuration.
 
-## What are Gemini Code Commands?
+## What are Gemini CLI Commands?
 
-Commands are reusable prompts that you can invoke with a simple slash syntax during your Gemini Code sessions. Each command:
+Commands are reusable prompts that you can invoke with a simple slash syntax during your Gemini CLI sessions. Each command:
 
 - **Has a specific purpose** and can be customized with arguments
 - **Can execute bash commands** before running the prompt
@@ -680,7 +680,7 @@ DROP TABLE IF EXISTS example;
 - `/agents` - Manage and configure custom AI subagents
 - `/clear` - Clear conversation history for fresh start
 - `/compact [instructions]` - Compress conversation with optional focus
-- `/config` - View and modify Gemini Code configuration
+- `/config` - View and modify Gemini CLI configuration
 - `/help` - Show all available commands and usage
 
 ### Development Commands
@@ -692,7 +692,7 @@ DROP TABLE IF EXISTS example;
 ### System Commands
 - `/bug` - Report issues to Google development team
 - `/cost` - Display token usage and billing information
-- `/doctor` - Health check for Gemini Code installation
+- `/doctor` - Health check for Gemini CLI installation
 - `/model` - Select or change AI model (Flash/Flash-Lite/Pro)
 - `/status` - View account and system status information
 
@@ -976,7 +976,7 @@ argument-hint: [options]
 - Verify file exists in `.gemini/commands/` or `~/.gemini/commands/`
 - Check filename matches command name (without `.md`)
 - Ensure markdown file has proper content
-- Restart Gemini Code session
+- Restart Gemini CLI session
 
 ### Arguments Not Working
 
@@ -1132,7 +1132,7 @@ Execute database operation: $ARGUMENTS
 
 ## Conclusion
 
-Gemini Code commands are a powerful automation tool that can significantly improve your development workflow. With this guide, you can create effective commands that:
+Gemini CLI commands are a powerful automation tool that can significantly improve your development workflow. With this guide, you can create effective commands that:
 
 - **Automate repetitive tasks** with simple slash syntax
 - **Standardize team workflows** through shared project commands

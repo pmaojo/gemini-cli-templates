@@ -1,6 +1,6 @@
-# Gemini Code Templates - Modular Architecture
+# Gemini CLI Templates - Modular Architecture
 
-This document provides detailed technical documentation for the modular architecture implementation of the Gemini Code Templates analytics dashboard.
+This document provides detailed technical documentation for the modular architecture implementation of the Gemini CLI Templates analytics dashboard.
 
 ## Overview
 
@@ -69,7 +69,7 @@ const quickState = stateCalculator.quickStateCalculation(conversation, processes
 ```
 
 #### ProcessDetector.js
-Manages detection and monitoring of running Gemini Code processes.
+Manages detection and monitoring of running Gemini CLI processes.
 
 **Key Features:**
 - Cross-platform process detection (macOS, Linux, Windows)

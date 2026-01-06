@@ -159,17 +159,17 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
             monitor_sandbox_execution(sbx, install_command, timeout=120)
             monitor_file_system(sbx, "After components installation")
         
-        # Verify Gemini Code installation
-        log_with_timestamp("🔍 Verifying Gemini Code installation")
+        # Verify Gemini CLI installation
+        log_with_timestamp("🔍 Verifying Gemini CLI installation")
         gemini_check = monitor_sandbox_execution(sbx, "which gemini", timeout=10)
         if gemini_check.exit_code == 0:
             version_check = monitor_sandbox_execution(sbx, "gemini --version", timeout=10)
             log_with_timestamp(f"Gemini version: {version_check.stdout.strip()}")
         else:
-            log_with_timestamp("❌ Gemini Code not found in PATH", "ERROR")
+            log_with_timestamp("❌ Gemini CLI not found in PATH", "ERROR")
         
         # Execute main prompt with monitoring
-        log_with_timestamp("🤖 Executing Gemini Code with monitoring")
+        log_with_timestamp("🤖 Executing Gemini CLI with monitoring")
         gemini_command = f"echo '{prompt}' | gemini -p --dangerously-skip-permissions"
         
         result = monitor_sandbox_execution(sbx, gemini_command, timeout=600)

@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     command: 'npm install -g gemini-cli-templates',
     description: (
       <>
-        Install the CLI tool globally and get started with Gemini Code templates 
+        Install the CLI tool globally and get started with Gemini CLI templates 
         in seconds. No complex configuration required.
       </>
     ),
@@ -38,7 +38,7 @@ const FeatureList: FeatureItem[] = [
     command: 'gemini-cli-templates --analytics',
     description: (
       <>
-        Monitor your Gemini Code usage with our comprehensive analytics dashboard. 
+        Monitor your Gemini CLI usage with our comprehensive analytics dashboard. 
         Track sessions, token usage, and performance metrics in real-time.
       </>
     ),

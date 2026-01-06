@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Script to generate blog images using Google Gemini 2.5 Flash Image (nano banana)
-Generates banners and workflow diagrams for Gemini Code component blogs
+Script to generate blog images using Google Gemini 3 (flash nanobanana pro)
+Generates banners and workflow diagrams for Gemini CLI component blogs
 """
 
 import os
@@ -19,17 +19,17 @@ if not API_KEY:
     raise ValueError("GOOGLE_API_KEY not found in environment variables. Check your .env file.")
 
 OUTPUT_DIR = Path(__file__).parent.parent / "docs/blog/assets"
-MODEL = "gemini-2.0-flash-exp-image-generation"  # Using Gemini 2.0 Flash Exp with image generation
+MODEL = "gemini-3"  # Using Gemini 3 (flash-nanobanana-pro)
 
 # Blog definitions with prompts
 BLOGS = [
     {
         "id": "frontend-developer-agent",
-        "title": "Gemini Code Frontend Developer Agent: Complete 2025 Tutorial",
+        "title": "Gemini CLI Frontend Developer Agent: Complete 2025 Tutorial",
         "banner_prompt": """Create a professional tech banner image with these elements:
         - Dark terminal/coding background with subtle grid pattern
         - Text overlay in bright green monospace font: 'Frontend Developer Agent'
-        - Subtitle in smaller text: 'Complete 2025 Tutorial - Gemini Code'
+        - Subtitle in smaller text: 'Complete 2025 Tutorial - Gemini CLI'
         - Include subtle React, Vue, and Next.js logo icons in corners
         - Modern code editor aesthetic with syntax highlighting in background
         - Color scheme: Dark (#1a1a1a) with neon green (#00ff41) accents

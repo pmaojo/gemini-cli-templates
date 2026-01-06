@@ -1,6 +1,6 @@
-# Gemini Code Changelog Monitor
+# Gemini CLI Changelog Monitor
 
-Sistema automatizado para monitorear releases de Gemini Code y enviar notificaciones a Discord.
+Sistema automatizado para monitorear releases de Gemini CLI y enviar notificaciones a Discord.
 
 ## 🚀 Características
 
@@ -50,7 +50,7 @@ En Vercel, agrega estas variables:
 # Neon Database
 NEON_DATABASE_URL=postgresql://user:password@host/database?sslmode=require
 
-# Discord Webhook (específico para Gemini Code changelog)
+# Discord Webhook (específico para Gemini CLI changelog)
 DISCORD_WEBHOOK_URL_CHANGELOG=https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEBHOOK_TOKEN
 
 # O usa el webhook general (fallback)
@@ -141,7 +141,7 @@ Si tienes NPM Pro:
 Crea `.github/workflows/check-gemini-cli.yml`:
 
 ```yaml
-name: Check Gemini Code Updates
+name: Check Gemini CLI Updates
 
 on:
   schedule:
@@ -299,7 +299,7 @@ El parser clasifica automáticamente los cambios:
 
 El embed incluye:
 
-- **Título**: 🚀 Gemini Code [version] Released
+- **Título**: 🚀 Gemini CLI [version] Released
 - **Color**: Purple (#8B5CF6) - color de Gemini
 - **Fields**:
   - ⚠️ Breaking Changes (si hay)
@@ -387,12 +387,12 @@ SELECT * FROM monitoring_metadata;
 
 ## 📚 Referencias
 
-- [Gemini Code GitHub](https://github.com/googles/gemini-cli)
-- [Gemini Code NPM](https://www.npmjs.com/package/@google-ai/gemini-cli)
+- [Gemini CLI GitHub](https://github.com/googles/gemini-cli)
+- [Gemini CLI NPM](https://www.npmjs.com/package/@google-ai/gemini-cli)
 - [Neon Database Docs](https://neon.tech/docs)
 - [Discord Webhooks](https://discord.com/developers/docs/resources/webhook)
 - [Vercel Functions](https://vercel.com/docs/functions)
 
 ---
 
-**Made with ❤️ for the Gemini Code community**
+**Made with ❤️ for the Gemini CLI community**

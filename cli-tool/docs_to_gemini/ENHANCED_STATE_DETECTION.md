@@ -6,7 +6,7 @@
 
 **Flujo Optimizado:**
 ```javascript
-Mensaje del Usuario aparece en WebSocket → INMEDIATAMENTE "Gemini Code working..."
+Mensaje del Usuario aparece en WebSocket → INMEDIATAMENTE "Gemini CLI working..."
 Mensaje de Gemini aparece en WebSocket → Analizar contenido → Estado específico
 ```
 
@@ -43,7 +43,7 @@ Si no hay nuevo mensaje del usuario → "User typing..."
 ### Flujo 1: Usuario Envía Mensaje
 ```
 1. Usuario escribe y envía mensaje
-2. Mensaje aparece vía WebSocket → INMEDIATAMENTE "Gemini Code working..."
+2. Mensaje aparece vía WebSocket → INMEDIATAMENTE "Gemini CLI working..."
 3. Gemini responde con herramientas → "Executing tools..." / "Analyzing code..."
 4. Herramientas completan → "Analyzing results..."
 5. Gemini responde con texto → Análisis de contenido → Estado final
@@ -79,7 +79,7 @@ Si no hay nuevo mensaje del usuario → "User typing..."
 ## 🧪 Casos de Prueba
 
 ### Test 1: Usuario Envía Mensaje
-- ✅ Banner cambia inmediatamente a "Gemini Code working..."
+- ✅ Banner cambia inmediatamente a "Gemini CLI working..."
 - ✅ Si Gemini usa herramientas, estado cambia a "Executing tools..."
 - ✅ Al completarse, cambia a estado basado en respuesta
 
@@ -89,13 +89,13 @@ Si no hay nuevo mensaje del usuario → "User typing..."
 - ✅ `webfetch` → "Fetching data..."
 
 ### Test 3: Estados Contextuales
-- ✅ Mensajes con "let me", "i'll" → "Gemini Code working..."
+- ✅ Mensajes con "let me", "i'll" → "Gemini CLI working..."
 - ✅ Mensajes con "completed" → "Task completed"
 - ✅ Mensajes con "?" → "Awaiting user input..."
 
 ### Test 4: Detección de Escritura
 - ✅ Después de respuesta de Gemini, esperar 30s → "User typing..."
-- ✅ Al enviar mensaje, inmediatamente → "Gemini Code working..."
+- ✅ Al enviar mensaje, inmediatamente → "Gemini CLI working..."
 
 ## 🔍 Debugging y Logs
 

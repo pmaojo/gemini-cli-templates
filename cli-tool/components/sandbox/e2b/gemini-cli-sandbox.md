@@ -1,5 +1,5 @@
 ---
-name: "gemini-code-sandbox"
+name: "gemini-cli-sandbox"
 description: "Execute Gemini CLI in an isolated E2B cloud sandbox environment."
 author: "Gemini CLI Templates"
 version: "1.0.0"

@@ -1,6 +1,6 @@
 ---
 name: "effort"
-description: "**Add effort set to `\"high\"` during migration.** This is the default configuration for best performance with Pro 4.5."
+description: '**Add effort set to `"high"` during migration.** This is the default configuration for best performance with Gemini 3.'
 author: "Gemini CLI Templates"
 version: "1.0.0"
 category: "references"
@@ -8,26 +8,27 @@ category: "references"
 
 # Effort Parameter (Beta)
 
-**Add effort set to `"high"` during migration.** This is the default configuration for best performance with Pro 4.5.
+**Add effort set to `"high"` during migration.** This is the default configuration for best performance with Gemini 3.
 
 ## Overview
 
 Effort controls how eagerly Gemini spends tokens. It affects all tokens: thinking, text responses, and function calls.
 
-| Effort | Use Case |
-|--------|----------|
-| `high` | Best performance, deep reasoning (default) |
-| `medium` | Balance of cost/latency vs. performance |
-| `low` | Simple, high-volume queries; significant token savings |
+| Effort   | Use Case                                               |
+| -------- | ------------------------------------------------------ |
+| `high`   | Best performance, deep reasoning (default)             |
+| `medium` | Balance of cost/latency vs. performance                |
+| `low`    | Simple, high-volume queries; significant token savings |
 
 ## Implementation
 
 Requires beta flag `effort-2025-11-24` in API calls.
 
 **Python SDK:**
+
 ```python
 response = client.messages.create(
-    model="gemini-opus-4-5-20251101",
+    model="gemini-3",
     max_tokens=1024,
     betas=["effort-2025-11-24"],
     output_config={
@@ -38,9 +39,10 @@ response = client.messages.create(
 ```
 
 **TypeScript SDK:**
+
 ```typescript
 const response = await client.messages.create({
-  model: "gemini-opus-4-5-20251101",
+  model: "gemini-3",
   max_tokens: 1024,
   betas: ["effort-2025-11-24"],
   output_config: {
@@ -51,11 +53,12 @@ const response = await client.messages.create({
 ```
 
 **Raw API:**
+
 ```json
 {
-  "model": "gemini-opus-4-5-20251101",
+  "model": "gemini-3",
   "max_tokens": 1024,
-  "Google-beta": "effort-2025-11-24",
+  "Gemini-beta": "effort-2025-11-24",
   "output_config": {
     "effort": "high"
   },

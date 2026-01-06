@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # Additional Tools
 
-Utilities that enhance your Gemini Code development workflow.
+Utilities that enhance your Gemini CLI development workflow.
 
 ## Available Tools
 
 ### 📊 Analytics Dashboard
 
-Real-time monitoring of Gemini Code sessions.
+Real-time monitoring of Gemini CLI sessions.
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --analytics

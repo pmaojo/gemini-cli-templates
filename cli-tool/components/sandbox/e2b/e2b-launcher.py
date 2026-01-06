@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.11
 """
-E2B Gemini Code Sandbox Launcher
-Executes Gemini Code prompts in isolated E2B cloud sandbox
+E2B Gemini CLI Sandbox Launcher
+Executes Gemini CLI prompts in isolated E2B cloud sandbox
 """
 
 import os
@@ -91,8 +91,8 @@ def main():
         sys.exit(1)
     
     try:
-        # Create E2B sandbox with Gemini Code template with retry logic
-        print("🚀 Creating E2B sandbox with Gemini Code...")
+        # Create E2B sandbox with Gemini CLI template with retry logic
+        print("🚀 Creating E2B sandbox with Gemini CLI...")
         
         # Try creating sandbox with retries for WebSocket issues
         max_retries = 3
@@ -177,7 +177,7 @@ def main():
         # Create enhanced prompt with proper instructions
         if agents:
             agent_list = ', '.join(agents)
-            enhanced_prompt = f"""You are Gemini Code, an AI assistant specialized in software development. 
+            enhanced_prompt = f"""You are Gemini CLI, an AI assistant specialized in software development. 
 
 IMPORTANT INSTRUCTIONS:
 1. Execute the user's request immediately and create the requested code/files
@@ -190,7 +190,7 @@ USER REQUEST: {prompt}
 
 Now, please execute this request and create all necessary files."""
         else:
-            enhanced_prompt = f"""You are Gemini Code, an AI assistant specialized in software development.
+            enhanced_prompt = f"""You are Gemini CLI, an AI assistant specialized in software development.
 
 IMPORTANT INSTRUCTIONS:
 1. Execute the user's request immediately and create the requested code/files
@@ -202,13 +202,13 @@ USER REQUEST: {prompt}
 
 Now, please execute this request and create all necessary files."""
         
-        # Execute Gemini Code with the enhanced prompt
-        print(f"🤖 Executing Gemini Code with prompt: '{prompt[:50]}{'...' if len(prompt) > 50 else ''}'")
+        # Execute Gemini CLI with the enhanced prompt
+        print(f"🤖 Executing Gemini CLI with prompt: '{prompt[:50]}{'...' if len(prompt) > 50 else ''}'")
         if agents:
             print(f"🤝 Using agents: {', '.join(agents)}")
         
-        # First, check if Gemini Code is installed and available
-        print("🔍 Checking Gemini Code installation...")
+        # First, check if Gemini CLI is installed and available
+        print("🔍 Checking Gemini CLI installation...")
         check_result = sbx.commands.run("which gemini", timeout=10)
         if check_result.exit_code == 0:
             print(f"✅ Gemini found at: {check_result.stdout.strip()}")
@@ -234,7 +234,7 @@ Now, please execute this request and create all necessary files."""
         else:
             print("❌ Write permission issue")
         
-        # Build Gemini Code command with enhanced prompt and better error handling
+        # Build Gemini CLI command with enhanced prompt and better error handling
         # Escape single quotes in the enhanced prompt
         escaped_prompt = enhanced_prompt.replace("'", "'\\''")
         gemini_command = f"echo '{escaped_prompt}' | gemini -p --dangerously-skip-permissions"
@@ -271,7 +271,7 @@ Now, please execute this request and create all necessary files."""
             """Show periodic progress updates if no output for a while"""
             progress_messages = [
                 "⏳ Still processing...",
-                "🔄 Gemini Code is working on your request...",
+                "🔄 Gemini CLI is working on your request...",
                 "⚙️  Analyzing requirements...",
                 "🛠️  Building solution...",
                 "📝 Generating code...",
@@ -299,7 +299,7 @@ Now, please execute this request and create all necessary files."""
                 # Mark that we've received output and update activity time
                 if not has_output[0]:
                     has_output[0] = True
-                    print("\n🎯 Gemini Code started responding:\n")
+                    print("\n🎯 Gemini CLI started responding:\n")
                 
                 last_activity[0] = time.time()
                 
@@ -313,7 +313,7 @@ Now, please execute this request and create all necessary files."""
                 # Mark that we've received output and update activity time
                 if not has_output[0]:
                     has_output[0] = True
-                    print("\n🎯 Gemini Code started responding:\n")
+                    print("\n🎯 Gemini CLI started responding:\n")
                 
                 last_activity[0] = time.time()
                 
@@ -422,7 +422,7 @@ Now, please execute this request and create all necessary files."""
         print("💡 Note: Sandbox will be automatically destroyed")
         
     except Exception as e:
-        print(f"❌ Error executing Gemini Code in sandbox: {str(e)}")
+        print(f"❌ Error executing Gemini CLI in sandbox: {str(e)}")
         sys.exit(1)
     
     finally:

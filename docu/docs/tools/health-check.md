@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Health Check
 
-System validation and optimization for your Gemini Code setup.
+System validation and optimization for your Gemini CLI setup.
 
 ## Launch Command
 
@@ -15,7 +15,7 @@ npx github:pmaojo/gemini-cli-templates --health-check
 ## What Gets Checked
 
 - **System requirements** - Node.js, npm, Git, memory, network
-- **Gemini Code setup** - Installation, authentication, permissions
+- **Gemini CLI setup** - Installation, authentication, permissions
 - **Project configuration** - GEMINI.md, components, settings, hooks
 - **Component integrity** - Validates installed agents, commands, MCPs
 - **Performance optimization** - Identifies bottlenecks and improvements
@@ -34,7 +34,7 @@ npx github:pmaojo/gemini-cli-templates --health-check
 
 ### Performance Assessment
 
-- **Response times** - Measures Gemini Code performance
+- **Response times** - Measures Gemini CLI performance
 - **Memory usage** - Analyzes resource consumption
 - **File access speed** - Tests file system performance
 - **Network latency** - Measures API communication speed
@@ -61,4 +61,4 @@ The health check provides an overall score (0-100%) based on:
 
 ---
 
-**Next:** Try the [Chats Interface](./chats) for mobile-optimized Gemini Code conversations.
+**Next:** Try the [Chats Interface](./chats) for mobile-optimized Gemini CLI conversations.

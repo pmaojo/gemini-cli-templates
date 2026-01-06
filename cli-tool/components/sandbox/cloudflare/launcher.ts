@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Cloudflare Sandbox Launcher
- * Executes Gemini Code prompts using Cloudflare Workers and Sandbox SDK
+ * Executes Gemini CLI prompts using Cloudflare Workers and Sandbox SDK
  */
 
 import { query, GeminiAgentOptions } from '@anthropic-ai/gemini-agent-sdk';

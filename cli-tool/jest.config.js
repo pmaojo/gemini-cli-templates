@@ -1,5 +1,5 @@
 /**
- * Jest Configuration for Gemini Code Templates Analytics
+ * Jest Configuration for Gemini CLI Templates Analytics
  * Phase 4: Testing & Optimization
  */
 module.exports = {

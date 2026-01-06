@@ -91,7 +91,7 @@ describe('API Endpoints - Critical Tests', () => {
 
   });
 
-  describe('🟢 Gemini Code Changelog Monitor', () => {
+  describe('🟢 Gemini CLI Changelog Monitor', () => {
 
     test('GET /api/gemini-cli-check should be available', async () => {
       const response = await axios.get(
@@ -261,7 +261,7 @@ describe('API Endpoints - Functional Tests', () => {
 
   });
 
-  describe('Gemini Code Monitor - Parser Tests', () => {
+  describe('Gemini CLI Monitor - Parser Tests', () => {
 
     test('GET /api/gemini-cli-check should return valid structure', async () => {
       const response = await axios.get(

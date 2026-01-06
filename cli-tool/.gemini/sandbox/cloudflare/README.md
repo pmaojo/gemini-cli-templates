@@ -1,6 +1,6 @@
-# Cloudflare Gemini Code Sandbox
+# Cloudflare Gemini CLI Sandbox
 
-Execute Gemini Code in isolated Cloudflare Workers sandboxes with AI-powered code generation.
+Execute Gemini CLI in isolated Cloudflare Workers sandboxes with AI-powered code generation.
 
 ## Quick Start
 

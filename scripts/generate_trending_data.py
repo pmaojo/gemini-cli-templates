@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Trending Data Generator Script
-Fetches download data from Supabase and generates trending-data.json for the Gemini Code Templates project.
+Fetches download data from Supabase and generates trending-data.json for the Gemini CLI Templates project.
 """
 
 import json

@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Chats Interface
 
-Mobile-first interface for browsing Gemini Code conversations with resume functionality.
+Mobile-first interface for browsing Gemini CLI conversations with resume functionality.
 
 ## Launch Command
 
@@ -18,7 +18,7 @@ npx github:pmaojo/gemini-cli-templates --chats
 - **Copy functionality** - Click to copy resume command to clipboard with visual feedback
 - **Mobile-optimized** - Touch-friendly design with responsive layout
 - **Real-time monitoring** - Live conversation state detection and updates
-- **Conversation browsing** - View and navigate through all your Gemini Code conversations
+- **Conversation browsing** - View and navigate through all your Gemini CLI conversations
 
 ## 🌐 Remote Access
 

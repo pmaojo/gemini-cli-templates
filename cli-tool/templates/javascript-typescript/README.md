@@ -1,16 +1,16 @@
 # JavaScript/TypeScript Templates
 
-**Gemini Code configuration template optimized for modern JavaScript and TypeScript development**
+**Gemini CLI configuration template optimized for modern JavaScript and TypeScript development**
 
-This folder contains a comprehensive Gemini Code template specifically designed for JavaScript and TypeScript projects, supporting popular frameworks like React, Vue.js, Angular, and Node.js.
+This folder contains a comprehensive Gemini CLI template specifically designed for JavaScript and TypeScript projects, supporting popular frameworks like React, Vue.js, Angular, and Node.js.
 
 ## 📁 What's in This Folder
 
-This template provides the foundation for JavaScript/TypeScript development with Gemini Code:
+This template provides the foundation for JavaScript/TypeScript development with Gemini CLI:
 
 ### 📄 Files Included
 
-- **`GEMINI.md`** - Complete JavaScript/TypeScript development guidance for Gemini Code
+- **`GEMINI.md`** - Complete JavaScript/TypeScript development guidance for Gemini CLI
 - **`README.md`** - This documentation file
 
 ### 🎯 Template Features
@@ -57,7 +57,7 @@ npx github:pmaojo/gemini-cli-templates --language javascript-typescript
 
 ## 🎨 Framework Support
 
-This template automatically configures Gemini Code for:
+This template automatically configures Gemini CLI for:
 
 ### Frontend Frameworks
 
@@ -196,7 +196,7 @@ The `GEMINI.md` file in this folder contains comprehensive guidance for:
    npx github:pmaojo/gemini-cli-templates --language javascript-typescript
    ```
 
-3. **Start Gemini Code:**
+3. **Start Gemini CLI:**
 
    ```bash
    gemini
@@ -245,7 +245,7 @@ The template adapts to your specific framework needs automatically.
 
 ## 📖 Learn More
 
-- **Main Project**: [Gemini Code Templates](../README.md)
+- **Main Project**: [Gemini CLI Templates](../README.md)
 - **Common Templates**: [Universal patterns](../common/README.md)
 - **Python Templates**: [Python development](../python/README.md)
 - **CLI Tool**: [Automated installer](../cli-tool/README.md)

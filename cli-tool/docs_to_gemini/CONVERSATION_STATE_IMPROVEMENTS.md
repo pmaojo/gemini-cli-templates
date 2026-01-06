@@ -54,7 +54,7 @@ Successfully enhanced the conversation state banner (`#conversation-state-banner
 
 | State | Trigger | Visual |
 |-------|---------|--------|
-| `Gemini Code working...` | User sent message or Gemini indicates work | 🤖 Blue pulse |
+| `Gemini CLI working...` | User sent message or Gemini indicates work | 🤖 Blue pulse |
 | `Executing tools...` | Tool use without results | 🔧 Green pulse |
 | `Analyzing results...` | Tool use with results | 📊 Purple pulse |
 | `Analyzing code...` | Read/grep tools | 🔍 Purple pulse |
@@ -99,7 +99,7 @@ Wait 2s for complete message → If no new message after assistant response →
 
 ### State Transition Logic
 ```
-User message → "Gemini Code working..." → Tool execution → "Executing tools..." → 
+User message → "Gemini CLI working..." → Tool execution → "Executing tools..." → 
 Tool results → "Analyzing results..." → Text response → Content analysis → 
 Final state ("Task completed", "Awaiting user input...", etc.)
 ```
@@ -151,4 +151,4 @@ The conversation state detection system has been significantly improved with:
 - **Enhanced visual feedback** with appropriate animations
 - **Robust error handling** and fallback mechanisms
 
-The system now provides much more accurate and responsive conversation state information, greatly improving the user experience for monitoring Gemini Code sessions.
+The system now provides much more accurate and responsive conversation state information, greatly improving the user experience for monitoring Gemini CLI sessions.

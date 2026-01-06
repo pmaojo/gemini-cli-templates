@@ -14,7 +14,7 @@ Hooks are automation scripts that trigger actions when specific events occur in 
 
 ### 📦 Basic Installation
 
-Install this component locally in your project. Works with your existing Gemini Code setup.
+Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --hook git/auto-git-add --yes

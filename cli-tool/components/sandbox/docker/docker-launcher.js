@@ -2,7 +2,7 @@
 
 /**
  * Docker Sandbox Launcher
- * Orchestrates Docker container execution for Gemini Code
+ * Orchestrates Docker container execution for Gemini CLI
  */
 
 import { spawn, execSync } from 'child_process';

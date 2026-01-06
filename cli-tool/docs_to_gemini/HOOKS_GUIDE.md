@@ -1,10 +1,10 @@
-# Complete Guide to Gemini Code Hooks
+# Complete Guide to Gemini CLI Hooks
 
-This guide teaches you how to create and configure custom hooks for Gemini Code to automate workflows, validate operations, and enhance your development experience.
+This guide teaches you how to create and configure custom hooks for Gemini CLI to automate workflows, validate operations, and enhance your development experience.
 
-## What are Gemini Code Hooks?
+## What are Gemini CLI Hooks?
 
-Hooks are automated scripts that execute at specific points during Gemini Code sessions. Each hook:
+Hooks are automated scripts that execute at specific points during Gemini CLI sessions. Each hook:
 
 - **Responds to specific events** like tool usage, prompt submission, or session start/end
 - **Can validate, modify, or block operations** based on your criteria
@@ -16,7 +16,7 @@ Hooks are automated scripts that execute at specific points during Gemini Code s
 
 ### 🔄 Automated Workflows
 
-Execute custom scripts automatically when specific events occur during Gemini Code sessions.
+Execute custom scripts automatically when specific events occur during Gemini CLI sessions.
 
 ### 🛡️ Enhanced Security
 
@@ -24,7 +24,7 @@ Validate and block potentially dangerous operations before they execute.
 
 ### 📊 Session Monitoring
 
-Track usage patterns, log operations, and gather analytics from your Gemini Code sessions.
+Track usage patterns, log operations, and gather analytics from your Gemini CLI sessions.
 
 ### 🔧 Custom Validation
 
@@ -38,7 +38,7 @@ Provide immediate feedback to Gemini based on the results of operations.
 
 ### Configuration Files
 
-Hooks are configured in your Gemini Code settings files with the following priority order:
+Hooks are configured in your Gemini CLI settings files with the following priority order:
 
 | Type                       | Location                      | Scope           | Usage                                  |
 | -------------------------- | ----------------------------- | --------------- | -------------------------------------- |
@@ -79,7 +79,7 @@ Each hook is defined using event-based configuration:
 - **PreToolUse**: Before Gemini executes a tool
 - **PostToolUse**: After Gemini executes a tool successfully
 - **UserPromptSubmit**: When user submits a prompt
-- **Notification**: When Gemini Code sends notifications
+- **Notification**: When Gemini CLI sends notifications
 - **Stop**: When Gemini finishes responding
 - **SubagentStop**: When a subagent completes
 - **SessionStart**: When a session begins or resumes
@@ -200,7 +200,7 @@ For tool-based events (PreToolUse, PostToolUse):
 
 **Matchers**:
 
-- `startup` - Normal Gemini Code startup
+- `startup` - Normal Gemini CLI startup
 - `resume` - Resumed from `--resume`, `--continue`, or `/resume`
 - `clear` - After `/clear` command
 
@@ -796,7 +796,7 @@ except Exception as e:
 
 ### Understanding MCP Tools in Hooks
 
-Gemini Code hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/gemini-cli/mcp) tools. MCP tools follow the naming pattern `mcp__<server>__<tool>`:
+Gemini CLI hooks work seamlessly with [Model Context Protocol (MCP)](/en/docs/gemini-cli/mcp) tools. MCP tools follow the naming pattern `mcp__<server>__<tool>`:
 
 - `mcp__github__create_issue` - GitHub MCP server's issue creation tool
 - `mcp__database__execute_query` - Database MCP server's query tool
@@ -1086,7 +1086,7 @@ def validate_input(input_data):
 
 ### Security Best Practices
 
-1. **Input Sanitization**: Always validate and sanitize inputs from Gemini Code
+1. **Input Sanitization**: Always validate and sanitize inputs from Gemini CLI
 2. **Path Security**: Check for directory traversal attacks (`../` patterns)
 3. **Command Injection**: Never pass user input directly to shell commands
 4. **File Permissions**: Use minimal required permissions for hook scripts
@@ -1210,7 +1210,7 @@ print(json.dumps({'continue': True, 'systemMessage': 'Test successful'}))
 
 Share and discover hooks with the community:
 
-- [Gemini Code Hooks Repository](https://github.com/google/gemini-cli-hooks) (example)
+- [Gemini CLI Hooks Repository](https://github.com/google/gemini-cli-hooks) (example)
 - Project-specific hook collections
 - Team-shared hook libraries
 
@@ -1279,7 +1279,7 @@ if __name__ == "__main__":
 
 ## Conclusion
 
-Gemini Code hooks provide powerful automation capabilities that can significantly enhance your development workflow. With hooks, you can:
+Gemini CLI hooks provide powerful automation capabilities that can significantly enhance your development workflow. With hooks, you can:
 
 - **Automate repetitive tasks** like code formatting and testing
 - **Enhance security** through validation and monitoring
@@ -1289,4 +1289,4 @@ Gemini Code hooks provide powerful automation capabilities that can significantl
 
 Start with simple hooks and gradually build more sophisticated automation as you become comfortable with the system. Remember to prioritize security, test thoroughly, and document your hooks for team collaboration.
 
-For more examples and community resources, see the [Gemini Code documentation](/en/docs/gemini-cli) and join the community discussions.
+For more examples and community resources, see the [Gemini CLI documentation](/en/docs/gemini-cli) and join the community discussions.

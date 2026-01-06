@@ -8,13 +8,13 @@ Custom slash commands that automate development workflows. Browse and install fr
 
 ## ⚡ What are Commands?
 
-Commands are custom slash commands for Gemini Code that automate common development tasks. Type `/command-name` in Gemini Code to execute them.
+Commands are custom slash commands for Gemini CLI that automate common development tasks. Type `/command-name` in Gemini CLI to execute them.
 
 ## Installation
 
 ### 📦 Basic Installation
 
-Install this component locally in your project. Works with your existing Gemini Code setup.
+Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --command testing/generate-tests --yes
@@ -28,7 +28,7 @@ npx github:pmaojo/gemini-cli-templates --command setup/setup-testing,performance
 
 ## 💡 Usage After Installation
 
-Once installed, use commands in Gemini Code:
+Once installed, use commands in Gemini CLI:
 
 ```
 /generate-tests

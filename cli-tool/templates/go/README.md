@@ -1,8 +1,8 @@
-# Go Gemini Code Templates
+# Go Gemini CLI Templates
 
 ## Coming Soon! 🚧
 
-We're actively working on creating comprehensive Gemini Code templates for Go development.
+We're actively working on creating comprehensive Gemini CLI templates for Go development.
 
 ### What to Expect
 - Best practices for Go project structure

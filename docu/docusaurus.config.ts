@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Gemini Code Templates',
-  tagline: 'Documentation for Gemini Code Templates - AITMPL Platform',
+  title: 'Gemini CLI Templates',
+  tagline: 'Documentation for Gemini CLI Templates - AITMPL Platform',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -93,7 +93,7 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'Gemini Code Templates',
+      title: 'Gemini CLI Templates',
       logo: {
         alt: 'AITMPL Crystal Ball Logo',
         src: 'img/logo.svg',
@@ -161,7 +161,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Gemini Code Templates. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Gemini CLI Templates. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

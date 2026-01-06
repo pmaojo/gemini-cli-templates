@@ -1,6 +1,6 @@
--- Schema para tracking de versiones de Gemini Code en Neon Database
+-- Schema para tracking de versiones de Gemini CLI en Neon Database
 
--- Tabla principal: versiones de Gemini Code
+-- Tabla principal: versiones de Gemini CLI
 CREATE TABLE IF NOT EXISTS gemini_code_versions (
   id SERIAL PRIMARY KEY,
   version VARCHAR(50) NOT NULL UNIQUE,
@@ -83,7 +83,7 @@ VALUES (NULL, 0, 0)
 ON CONFLICT DO NOTHING;
 
 -- Comentarios para documentación
-COMMENT ON TABLE gemini_code_versions IS 'Almacena todas las versiones de Gemini Code detectadas';
+COMMENT ON TABLE gemini_code_versions IS 'Almacena todas las versiones de Gemini CLI detectadas';
 COMMENT ON TABLE gemini_code_changes IS 'Cambios individuales extraídos del changelog de cada versión';
 COMMENT ON TABLE discord_notifications_log IS 'Log de todas las notificaciones enviadas a Discord';
 COMMENT ON TABLE monitoring_metadata IS 'Metadata del sistema de monitoreo (última verificación, errores, etc)';

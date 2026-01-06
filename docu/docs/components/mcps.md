@@ -4,17 +4,17 @@ sidebar_position: 5
 
 # MCPs (Model Context Protocol)
 
-External service integrations that extend Gemini Code with real-time data access. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+External service integrations that extend Gemini CLI with real-time data access. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
 
 ## 🔌 What are MCPs?
 
-MCPs connect Gemini Code to external services, databases, and APIs. They provide real-time access to live data and services during conversations.
+MCPs connect Gemini CLI to external services, databases, and APIs. They provide real-time access to live data and services during conversations.
 
 ## Installation
 
 ### 📦 Basic Installation
 
-Install this component locally in your project. Works with your existing Gemini Code setup.
+Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --mcp database/supabase --yes
@@ -60,7 +60,7 @@ MCPs provide real-time data access:
 
 ## 📁 MCP Categories
 
-Browse MCPs by integration type to connect Gemini Code with external services:
+Browse MCPs by integration type to connect Gemini CLI with external services:
 
 ### Database Integrations
 

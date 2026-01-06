@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Cloudflare Tunnel
 
-Secure remote access to your Gemini Code tools from anywhere.
+Secure remote access to your Gemini CLI tools from anywhere.
 
 ## Launch Commands
 

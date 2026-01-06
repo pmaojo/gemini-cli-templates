@@ -36520,10 +36520,10 @@
             {
               "level": "error",
               "code": "STRUCT_E002",
-              "message": "Invalid YAML syntax in frontmatter: bad indentation of a mapping entry (2:28)\n\n 1 | allowed-tools: Bash(gh:*), Read, Grep, TodoWrite, Edit, Mul ...\n 2 | argument-hint: [pr-number] | --analyze-only | --preview | - ...\n--------------------------------^\n 3 | description: Transform Gemini Code Assist PR reviews into p ...\n 4 | model: gemini-sonnet-4-5-20250929",
+              "message": "Invalid YAML syntax in frontmatter: bad indentation of a mapping entry (2:28)\n\n 1 | allowed-tools: Bash(gh:*), Read, Grep, TodoWrite, Edit, Mul ...\n 2 | argument-hint: [pr-number] | --analyze-only | --preview | - ...\n--------------------------------^\n 3 | description: Transform Gemini CLI Assist PR reviews into p ...\n 4 | model: gemini-sonnet-4-5-20250929",
               "metadata": {
                 "path": "cli-tool/components/commands/git-workflow/gemini-review.md",
-                "error": "bad indentation of a mapping entry (2:28)\n\n 1 | allowed-tools: Bash(gh:*), Read, Grep, TodoWrite, Edit, Mul ...\n 2 | argument-hint: [pr-number] | --analyze-only | --preview | - ...\n--------------------------------^\n 3 | description: Transform Gemini Code Assist PR reviews into p ...\n 4 | model: gemini-sonnet-4-5-20250929"
+                "error": "bad indentation of a mapping entry (2:28)\n\n 1 | allowed-tools: Bash(gh:*), Read, Grep, TodoWrite, Edit, Mul ...\n 2 | argument-hint: [pr-number] | --analyze-only | --preview | - ...\n--------------------------------^\n 3 | description: Transform Gemini CLI Assist PR reviews into p ...\n 4 | model: gemini-sonnet-4-5-20250929"
               },
               "timestamp": "2026-01-06T18:14:16.765Z"
             }

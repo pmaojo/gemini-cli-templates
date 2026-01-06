@@ -1,6 +1,6 @@
 # Security Policy
 
-Thank you for helping us keep Gemini Code Templates and the systems they interact with secure.
+Thank you for helping us keep Gemini CLI Templates and the systems they interact with secure.
 
 ## Reporting Security Issues
 
@@ -10,11 +10,11 @@ The security of our CLI tool and the templates it generates is our top priority.
 
 ## How to Report a Vulnerability
 
-If you discover a security vulnerability in Gemini Code Templates, please report it to us in one of the following ways:
+If you discover a security vulnerability in Gemini CLI Templates, please report it to us in one of the following ways:
 
 ### Email
 
-Send details of the vulnerability to [dan.avila7@gmail.com](mailto:dan.avila7@gmail.com) with the subject line "SECURITY: Gemini Code Templates Vulnerability Report"
+Send details of the vulnerability to [dan.avila7@gmail.com](mailto:dan.avila7@gmail.com) with the subject line "SECURITY: Gemini CLI Templates Vulnerability Report"
 
 ### GitHub Security Advisories
 
@@ -33,7 +33,7 @@ To help us understand and resolve the issue quickly, please include:
 
 ## Security Best Practices
 
-When using Gemini Code Templates:
+When using Gemini CLI Templates:
 
 ### For Users
 
@@ -66,4 +66,4 @@ This security policy is designed to encourage responsible security research. We 
 - Do not perform testing on systems they do not own
 - Report vulnerabilities through the channels described above
 
-Thank you for helping keep Gemini Code Templates secure!
+Thank you for helping keep Gemini CLI Templates secure!

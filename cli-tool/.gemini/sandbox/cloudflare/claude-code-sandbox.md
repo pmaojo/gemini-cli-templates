@@ -1,14 +1,14 @@
-# Cloudflare Gemini Code Sandbox
+# Cloudflare Gemini CLI Sandbox
 
-Execute Gemini Code in an isolated Cloudflare Workers sandbox environment with AI-powered code execution.
+Execute Gemini CLI in an isolated Cloudflare Workers sandbox environment with AI-powered code execution.
 
 ## Description
 
-This component sets up Cloudflare Sandbox SDK integration to run Gemini Code in a secure, isolated cloud environment. Built on Cloudflare's container-based sandboxes with Durable Objects for persistent execution.
+This component sets up Cloudflare Sandbox SDK integration to run Gemini CLI in a secure, isolated cloud environment. Built on Cloudflare's container-based sandboxes with Durable Objects for persistent execution.
 
 ## Features
 
-- **Isolated Execution**: Run Gemini Code in secure Cloudflare Workers sandboxes
+- **Isolated Execution**: Run Gemini CLI in secure Cloudflare Workers sandboxes
 - **AI Code Executor**: Turn natural language into executable Python/Node.js code
 - **Real-time Streaming**: Stream execution output as it happens
 - **Persistent Storage**: Use Durable Objects for stateful sandbox sessions

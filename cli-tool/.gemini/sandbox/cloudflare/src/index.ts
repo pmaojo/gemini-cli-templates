@@ -49,7 +49,7 @@ export default {
     if (request.method === 'GET' && url.pathname === '/') {
       return new Response(
         JSON.stringify({
-          name: 'Cloudflare Gemini Code Sandbox',
+          name: 'Cloudflare Gemini CLI Sandbox',
           version: '1.0.0',
           endpoints: {
             execute: 'POST /execute - Execute code via Gemini AI',

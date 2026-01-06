@@ -2,14 +2,14 @@
 
 ## 1. Project Overview
 
-The goal is to completely rebrand and transform the existing "Gemini Code Templates" project into "Gemini CLI Templates". This tool will serve as the premier resource for users of the Google Gemini CLI (`@google/gemini-cli`), providing ready-to-use agents, commands, settings, and integrations, just as the original did for Gemini Code.
+The goal is to completely rebrand and transform the existing "Gemini CLI Templates" project into "Gemini CLI Templates". This tool will serve as the premier resource for users of the Google Gemini CLI (`@google/gemini-cli`), providing ready-to-use agents, commands, settings, and integrations, just as the original did for Gemini CLI.
 
 ## 2. Core Requirements
 
 ### 2.1 Rebranding & Identity
 
 - **Name Change:** The project/package name must change from `gemini-cli-templates` to `gemini-cli-templates`.
-- **Branding:** Update all visual assets, READMEs, and documentation to reflect "Gemini CLI" (Google branding colors, terminology) instead of "Gemini Code" (Google branding).
+- **Branding:** Update all visual assets, READMEs, and documentation to reflect "Gemini CLI" (Google branding colors, terminology) instead of "Gemini CLI" (Google branding).
 - **CLI Command:** The primary executable should be `gemini-templates` (or `npx github:pmaojo/gemini-cli-templates`).
 
 ### 2.2 Infrastructure Migration
@@ -46,7 +46,7 @@ The goal is to completely rebrand and transform the existing "Gemini Code Templa
 
 ## 3. Compatibility Matrix
 
-| Feature             | Old (Gemini Code)      | New (Gemini CLI)           |
+| Feature             | Old (Gemini CLI)      | New (Gemini CLI)           |
 | :------------------ | :--------------------- | :------------------------- |
 | **Project Context** | `GEMINI.md`            | `GEMINI.md`                |
 | **Global Config**   | `.gemini/config.json`  | `~/.gemini/settings.json`  |

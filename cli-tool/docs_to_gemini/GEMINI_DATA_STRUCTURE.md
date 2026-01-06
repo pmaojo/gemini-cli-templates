@@ -1,7 +1,7 @@
-# Gemini Code Data Structure Documentation
+# Gemini CLI Data Structure Documentation
 
 ## Overview
-This document provides comprehensive information about the data structures and formats found in the `.gemini` directory, used by Gemini Code and the Analytics Dashboard.
+This document provides comprehensive information about the data structures and formats found in the `.gemini` directory, used by Gemini CLI and the Analytics Dashboard.
 
 ## Directory Structure
 
@@ -17,7 +17,7 @@ This document provides comprehensive information about the data structures and f
 ├── statsig/                     # Analytics and feature flags
 │   ├── logs/
 │   └── user_overrides.json
-└── settings.json               # Global Gemini Code settings
+└── settings.json               # Global Gemini CLI settings
 ```
 
 ## JSONL Conversation Format
@@ -132,7 +132,7 @@ Each conversation is stored in a JSONL (JSON Lines) file where each line represe
 | `timestamp` | ISO String | When the message was created | `"2025-07-01T19:06:05.237Z"` |
 | `type` | String | Message type: `"user"` or `"assistant"` | `"user"` |
 | `sessionId` | String | Session identifier for the conversation | `"ae93d7b5-1c54-4578-b208-603b48a88c5e"` |
-| `version` | String | Gemini Code version that created this message | `"1.0.35"` |
+| `version` | String | Gemini CLI version that created this message | `"1.0.35"` |
 | `cwd` | String | Current working directory when message was sent | `"/Users/user/project"` |
 | `userType` | String | Type of user: `"external"` (CLI) or other | `"external"` |
 | `isSidechain` | Boolean | Whether this is a sidechain conversation | `false` |
@@ -397,4 +397,4 @@ Watch for changes in:
 3. **Chunk Processing**: Process large files in smaller chunks
 4. **Incremental Updates**: Track file modification times
 
-This documentation provides a complete reference for working with Gemini Code data structures and can be updated as new formats or features are discovered.
+This documentation provides a complete reference for working with Gemini CLI data structures and can be updated as new formats or features are discovered.

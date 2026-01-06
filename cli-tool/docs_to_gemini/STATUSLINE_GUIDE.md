@@ -1,10 +1,10 @@
-# Complete Guide to Creating Gemini Code Status Lines
+# Complete Guide to Creating Gemini CLI Status Lines
 
-This guide teaches you how to create custom status lines for Gemini Code that display contextual information at the bottom of your interface, similar to terminal prompts in shells like Oh-my-zsh.
+This guide teaches you how to create custom status lines for Gemini CLI that display contextual information at the bottom of your interface, similar to terminal prompts in shells like Oh-my-zsh.
 
-## What are Gemini Code Status Lines?
+## What are Gemini CLI Status Lines?
 
-Status lines are customizable information displays that appear at the bottom of the Gemini Code interface. Each status line:
+Status lines are customizable information displays that appear at the bottom of the Gemini CLI interface. Each status line:
 
 - **Shows contextual information** about your current session, model, directory, and project
 - **Updates automatically** when conversation messages change (max every 300ms)
@@ -132,7 +132,7 @@ Your status line script receives comprehensive session data via stdin:
 #### Session Identity
 - `session_id`: Unique session identifier
 - `transcript_path`: Path to conversation transcript
-- `version`: Gemini Code version
+- `version`: Gemini CLI version
 - `output_style.name`: Current output style
 
 ## Complete Status Line Examples
@@ -772,7 +772,7 @@ DURATION_MS=$(echo "$input" | jq -r '.cost.total_duration_ms')
 LINES_NET=$(($(echo "$input" | jq -r '.cost.total_lines_added') - $(echo "$input" | jq -r '.cost.total_lines_removed')))
 
 # Build a comprehensive but single-line status
-# (Note: Only the first line of output is used by Gemini Code)
+# (Note: Only the first line of output is used by Gemini CLI)
 STATUS_PARTS=()
 STATUS_PARTS+=("[$MODEL]")
 STATUS_PARTS+=("📁 $DIR")
@@ -1110,7 +1110,7 @@ time echo 'test-json' | ~/.gemini/statusline.sh
 
 ## Conclusion
 
-Gemini Code status lines provide a powerful way to customize your development interface with contextual information that matters to you. With status lines, you can:
+Gemini CLI status lines provide a powerful way to customize your development interface with contextual information that matters to you. With status lines, you can:
 
 - **Monitor session metrics** like cost, duration, and productivity
 - **Display project context** including git status, environment, and dependencies  
@@ -1120,4 +1120,4 @@ Gemini Code status lines provide a powerful way to customize your development in
 
 Start with simple status lines and gradually add more sophisticated features as you become comfortable with the system. The key is finding the right balance of information density and visual clarity for your workflow.
 
-For more advanced customization and community examples, explore the Gemini Code documentation and share your status line configurations with other developers.
+For more advanced customization and community examples, explore the Gemini CLI documentation and share your status line configurations with other developers.

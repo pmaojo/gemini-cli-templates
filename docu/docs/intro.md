@@ -2,15 +2,15 @@
 sidebar_position: 1
 ---
 
-# Gemini Code Templates
+# Gemini CLI Templates
 
-**Gemini Code Templates** is an open-source CLI tool that configures Gemini Code projects and provides specialized components to enhance your AI-powered development workflow.
+**Gemini CLI Templates** is an open-source CLI tool that configures Gemini CLI projects and provides specialized components to enhance your AI-powered development workflow.
 
 Browse over 500 components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** or contribute to the project on **[GitHub](https://github.com/pmaojo/gemini-cli-templates)**.
 
 ## What does this CLI do?
 
-Simplifies Gemini Code usage through:
+Simplifies Gemini CLI usage through:
 
 - **🔍 Pre-configured components**: Over 500 agents, commands, and configurations ready to use
 - **📦 Automatic installation**: Complete project setup or individual components

@@ -14,7 +14,7 @@ Templates are complete project configurations that install multiple components t
 
 ### 📦 Basic Installation
 
-Install this component locally in your project. Works with your existing Gemini Code setup.
+Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --template react --yes

@@ -1,6 +1,6 @@
-# Contributing to Gemini Code Templates
+# Contributing to Gemini CLI Templates
 
-We welcome contributions! Help us make Gemini Code even better for everyone.
+We welcome contributions! Help us make Gemini CLI even better for everyone.
 
 **📋 Before contributing, please read our [Code of Conduct](CODE_OF_CONDUCT.md) to ensure a respectful and inclusive environment for all community members.**
 
@@ -67,7 +67,7 @@ Agents are AI specialists for specific domains (security, performance, framework
 
 ### ⚡ Adding Commands
 
-Commands are custom slash commands that extend Gemini Code functionality.
+Commands are custom slash commands that extend Gemini CLI functionality.
 
 1. **Create Command File**
 
@@ -119,7 +119,7 @@ Commands are custom slash commands that extend Gemini Code functionality.
 
 ### 🔌 Adding MCPs (Model Context Protocol)
 
-MCPs provide external service integrations for Gemini Code.
+MCPs provide external service integrations for Gemini CLI.
 
 1. **Create MCP File**
 
@@ -169,7 +169,7 @@ MCPs provide external service integrations for Gemini Code.
 
 ### ⚙️ Adding Settings
 
-Settings configure Gemini Code behavior and performance.
+Settings configure Gemini CLI behavior and performance.
 
 1. **Create Settings File**
 
@@ -295,7 +295,7 @@ Templates are complete project configurations that include GEMINI.md, .gemini/\*
 
 ### Template Quality Standards
 
-- **Comprehensive Configuration** - Include all necessary Gemini Code setup
+- **Comprehensive Configuration** - Include all necessary Gemini CLI setup
 - **Clear Documentation** - Well-documented GEMINI.md with examples
 - **Practical Commands** - Useful slash commands for the domain
 - **Proper MCPs** - Relevant external integrations
@@ -335,7 +335,7 @@ npm test
 
 ### 📊 Analytics Dashboard Development
 
-The analytics dashboard provides real-time monitoring of Gemini Code sessions.
+The analytics dashboard provides real-time monitoring of Gemini CLI sessions.
 
 #### Development Workflow
 
@@ -416,11 +416,11 @@ npm run chats:test
 
 ### 🔍 Health Check Development
 
-Comprehensive diagnostics tool for Gemini Code installations.
+Comprehensive diagnostics tool for Gemini CLI installations.
 
 #### Health Check Categories
 
-- **Installation Validation** - Gemini Code setup verification
+- **Installation Validation** - Gemini CLI setup verification
 - **Configuration Check** - Settings and file validation
 - **Performance Analysis** - Memory, disk, network diagnostics
 - **Security Audit** - Permission and access checks
@@ -556,4 +556,4 @@ All contributors are recognized in our:
 - **Release Notes** for significant contributions
 - **Community Discussions** for helpful contributions
 
-Thank you for helping make Gemini Code Templates better for everyone! 🚀
+Thank you for helping make Gemini CLI Templates better for everyone! 🚀

@@ -14,13 +14,13 @@ Agents are specialized AI assistants that understand specific domains and provid
 
 ### 📦 Basic Installation
 
-Install this component locally in your project. Works with your existing Gemini Code setup.
+Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --agent development/frontend-developer --yes
 ```
 
-### 🌍 Global Agent (Gemini Code SDK)
+### 🌍 Global Agent (Gemini CLI SDK)
 
 Create a global AI agent accessible from anywhere with zero configuration. Perfect for automation and CI/CD workflows.
 
@@ -36,11 +36,11 @@ frontend-developer "your prompt here"
 
 ✅ Works in scripts, CI/CD, npm tasks  
 ✅ Auto-detects project context  
-✅ Powered by Gemini Code SDK
+✅ Powered by Gemini CLI SDK
 
 ### ☁️ Run in E2B Sandbox (Cloud Execution)
 
-**NEW** Execute Gemini Code with this component in an isolated cloud environment using E2B. Perfect for testing complex projects without affecting your local system.
+**NEW** Execute Gemini CLI with this component in an isolated cloud environment using E2B. Perfect for testing complex projects without affecting your local system.
 
 #### 🔑 Setup API Keys
 
@@ -48,7 +48,7 @@ Add to your `.env` file:
 
 ```bash
 ANTHROPIC_API_KEY=your_google_key_here
-# Required for Gemini Code access
+# Required for Gemini CLI access
 E2B_API_KEY=your_e2b_key_here
 ```
 
@@ -65,7 +65,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b --agent development/fronten
 **Requirements:**
 • Valid E2B API key  
 • Internet connection  
-• Gemini Code v1.0.0+
+• Gemini CLI v1.0.0+
 
 ## 📁 Agent Categories
 

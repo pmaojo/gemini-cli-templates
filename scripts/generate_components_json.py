@@ -617,7 +617,7 @@ def generate_components_json():
     else:
         print(f"Warning: Templates directory not found: {templates_base_path}")
 
-    # Load components metadata from marketplace.json (Gemini Code standard)
+    # Load components metadata from marketplace.json (Gemini CLI standard)
     components_marketplace_path = 'cli-tool/components/.gemini-plugin/marketplace.json'
     components_marketplace = None
     if os.path.isfile(components_marketplace_path):
@@ -809,7 +809,7 @@ def generate_components_json():
         components_data['marketplace'] = marketplace_full_data
         print("✅ Added public marketplace metadata to components.json")
 
-    # Add components marketplace metadata (Gemini Code standard)
+    # Add components marketplace metadata (Gemini CLI standard)
     if components_marketplace:
         components_data['componentsMarketplace'] = components_marketplace
         print("✅ Added components marketplace metadata to components.json")

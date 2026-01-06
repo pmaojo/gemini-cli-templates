@@ -24,7 +24,7 @@ Discord bot for component discovery and search.
 
 ### `/api/gemini-cli-check` 🟢
 
-Monitors Gemini Code releases and sends Discord notifications.
+Monitors Gemini CLI releases and sends Discord notifications.
 
 **Frequency**: Every 4 hours (Vercel Cron)
 
@@ -79,7 +79,7 @@ vercel --prod
 ```
 api/
 ├── track-download-supabase.js       # Component download tracking (CRITICAL)
-├── gemini-cli-check.js             # Gemini Code changelog monitor
+├── gemini-cli-check.js             # Gemini CLI changelog monitor
 ├── _parser-gemini.js                # Changelog parser utility
 ├── discord/
 │   └── interactions.js              # Discord bot handler

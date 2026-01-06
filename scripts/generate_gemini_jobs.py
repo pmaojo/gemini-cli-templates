@@ -26,7 +26,7 @@ def scrape_with_rapidapi_jobs():
         
         # Search for Gemini-specific terms
         search_queries = [
-            "Gemini Code",
+            "Gemini CLI",
             "Google Gemini", 
             "Gemini AI developer",
             "Gemini assistant engineer"
@@ -95,7 +95,7 @@ def scrape_with_serper_jobs():
         import http.client
         
         search_queries = [
-            "Gemini Code developer jobs",
+            "Gemini CLI developer jobs",
             "Google Gemini engineer hiring", 
             "Gemini AI programming job",
             "Gemini assistant developer position",
@@ -378,13 +378,13 @@ def extract_salary_from_google_job(job_data):
 
 def scrape_github_jobs():
     """
-    Scrape GitHub Jobs for Gemini Code positions
+    Scrape GitHub Jobs for Gemini CLI positions
     """
     jobs = []
     try:
         # GitHub Jobs API is deprecated, but we can search GitHub Issues/Discussions
         # or use GitHub's search API for job repositories
-        print("🔍 Searching GitHub for Gemini Code job postings...")
+        print("🔍 Searching GitHub for Gemini CLI job postings...")
         
         # Search in common job posting repositories
         job_repos = [
@@ -428,11 +428,11 @@ def scrape_github_jobs():
 
 def scrape_ycombinator_jobs():
     """
-    Scrape YCombinator Who's Hiring threads for Gemini Code mentions
+    Scrape YCombinator Who's Hiring threads for Gemini CLI mentions
     """
     jobs = []
     try:
-        print("🔍 Searching YC Who's Hiring for Gemini Code positions...")
+        print("🔍 Searching YC Who's Hiring for Gemini CLI positions...")
         
         # Search HackerNews API for recent "Who is hiring" threads
         hn_search_url = "https://hn.algolia.com/api/v1/search"
@@ -538,11 +538,11 @@ def extract_location_from_hn_comment(text):
 
 def scrape_remote_ok():
     """
-    Scrape Remote OK for Gemini Code positions
+    Scrape Remote OK for Gemini CLI positions
     """
     jobs = []
     try:
-        print("🔍 Searching Remote OK for Gemini Code positions...")
+        print("🔍 Searching Remote OK for Gemini CLI positions...")
         
         # Remote OK has an API but might be rate limited
         url = "https://remoteok.io/api"
@@ -580,11 +580,11 @@ def scrape_remote_ok():
 
 def scrape_weworkremotely():
     """
-    Scrape We Work Remotely for Gemini Code positions
+    Scrape We Work Remotely for Gemini CLI positions
     """
     jobs = []
     try:
-        print("🔍 Searching We Work Remotely for Gemini Code positions...")
+        print("🔍 Searching We Work Remotely for Gemini CLI positions...")
         
         # We Work Remotely RSS feed approach
         import xml.etree.ElementTree as ET
@@ -632,13 +632,13 @@ def scrape_weworkremotely():
 
 def scrape_indie_hackers():
     """
-    Scrape Indie Hackers for Gemini Code positions
+    Scrape Indie Hackers for Gemini CLI positions
     """
     jobs = []
     try:
-        print("🔍 Searching Indie Hackers for Gemini Code positions...")
+        print("🔍 Searching Indie Hackers for Gemini CLI positions...")
         
-        # Use general web search for Indie Hackers job posts mentioning Gemini Code
+        # Use general web search for Indie Hackers job posts mentioning Gemini CLI
         search_terms = [
             'site:indiehackers.com "gemini code" hiring',
             'site:indiehackers.com "google gemini" job',
@@ -662,7 +662,7 @@ def extract_job_from_github_issue(item):
     title = item.get('title', '') or ''
     body = item.get('body', '') or ''
     
-    # Check if it's actually a job posting mentioning Gemini Code
+    # Check if it's actually a job posting mentioning Gemini CLI
     if not is_gemini_code_related(title + ' ' + body):
         return None
     
@@ -846,7 +846,7 @@ def generate_sample_jobs():
             'company': 'Anthropic',
             'company_icon': 'https://anthropic.com/favicon.ico',
             'location': 'Remote',
-            'description': 'Senior AI Developer to enhance Gemini Code capabilities and integrations...',
+            'description': 'Senior AI Developer to enhance Gemini CLI capabilities and integrations...',
             'job_link': 'https://anthropic.com/careers/gemini-cli-developer',
             'source': 'Company Website',
             'date_posted': '2025-09-10T10:00:00Z',
@@ -856,7 +856,7 @@ def generate_sample_jobs():
             'company': 'OpenAI',
             'company_icon': 'https://openai.com/favicon.ico', 
             'location': 'San Francisco, CA',
-            'description': 'Looking for engineers experienced with Gemini Code and AI development tools...',
+            'description': 'Looking for engineers experienced with Gemini CLI and AI development tools...',
             'job_link': 'https://openai.com/careers/gemini-integration-engineer',
             'source': 'LinkedIn',
             'date_posted': '2025-09-09T14:30:00Z',
@@ -866,7 +866,7 @@ def generate_sample_jobs():
             'company': 'StartupTech',
             'company_icon': 'https://logo.clearbit.com/startuptech.com',
             'location': 'Remote',
-            'description': 'Full-stack developer with Gemini Code experience for AI-powered development team...',
+            'description': 'Full-stack developer with Gemini CLI experience for AI-powered development team...',
             'job_link': 'https://jobs.startuptech.com/gemini-developer-2025',
             'source': 'AngelList',
             'date_posted': '2025-09-08T09:15:00Z',
@@ -876,7 +876,7 @@ def generate_sample_jobs():
             'company': 'TechCorp',
             'company_icon': 'https://logo.clearbit.com/techcorp.com',
             'location': 'New York, NY',
-            'description': 'Senior Software Engineer - AI Tools (Gemini Code, GitHub Copilot, etc.)...',
+            'description': 'Senior Software Engineer - AI Tools (Gemini CLI, GitHub Copilot, etc.)...',
             'job_link': 'https://careers.techcorp.com/positions/senior-ai-tools-engineer',
             'source': 'Indeed',
             'date_posted': '2025-09-07T16:45:00Z',
@@ -888,9 +888,9 @@ def generate_sample_jobs():
 
 def generate_gemini_jobs_json():
     """
-    Main function to scrape and generate Gemini Code jobs JSON
+    Main function to scrape and generate Gemini CLI jobs JSON
     """
-    print("🚀 Starting Gemini Code jobs scraping...")
+    print("🚀 Starting Gemini CLI jobs scraping...")
     
     all_jobs = []
     

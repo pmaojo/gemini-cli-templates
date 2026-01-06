@@ -1,4 +1,4 @@
-// Vercel Function: Monitor de Gemini Code Changelog
+// Vercel Function: Monitor de Gemini CLI Changelog
 // Se activa con webhooks de NPM o puede ser llamado manualmente
 
 import { neon } from '@neondatabase/serverless';
@@ -102,7 +102,7 @@ export default async function handler(req, res) {
   try {
     const sql = getNeonClient();
 
-    console.log('🔍 Checking for new Gemini Code version...');
+    console.log('🔍 Checking for new Gemini CLI version...');
 
     // Obtener última versión de NPM
     const latestVersion = await getLatestNPMVersion();

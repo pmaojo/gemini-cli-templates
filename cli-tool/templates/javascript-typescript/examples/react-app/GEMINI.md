@@ -1,6 +1,6 @@
 # GEMINI.md - React Application
 
-This file provides guidance to Gemini Code when working with React applications using TypeScript.
+This file provides guidance to Gemini CLI when working with React applications using TypeScript.
 
 ## Project Type
 

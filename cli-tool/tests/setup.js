@@ -170,7 +170,7 @@ global.testUtils = {
     type,
     data,
     timestamp: Date.now(),
-    server: 'Gemini Code Analytics'
+    server: 'Gemini CLI Analytics'
   }),
   
   /**

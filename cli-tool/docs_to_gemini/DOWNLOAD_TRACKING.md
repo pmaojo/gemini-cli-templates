@@ -1,6 +1,6 @@
 # Download Tracking System
 
-Sistema de seguimiento de descargas anónimo para Gemini Code Templates, inspirado en npm analytics.
+Sistema de seguimiento de descargas anónimo para Gemini CLI Templates, inspirado en npm analytics.
 
 ## Descripción
 

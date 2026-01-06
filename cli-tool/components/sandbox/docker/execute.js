@@ -26,7 +26,7 @@ console.log('🐳 Docker Sandbox Executor');
 console.log('═══════════════════════════════════════\n');
 
 /**
- * Install Gemini Code components if specified
+ * Install Gemini CLI components if specified
  */
 async function installComponents() {
   if (!componentsToInstall || componentsToInstall.trim() === '') {
@@ -62,11 +62,11 @@ async function installComponents() {
 }
 
 /**
- * Execute Gemini Code query using Agent SDK
+ * Execute Gemini CLI query using Agent SDK
  */
 async function executeQuery() {
   try {
-    console.log('🤖 Executing Gemini Code...');
+    console.log('🤖 Executing Gemini CLI...');
     console.log(`   Prompt: "${prompt.substring(0, 80)}${prompt.length > 80 ? '...' : ''}"\n`);
     console.log('─'.repeat(60));
     console.log('📝 GEMINI OUTPUT:');

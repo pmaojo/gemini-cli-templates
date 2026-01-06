@@ -1,19 +1,19 @@
 # Sub agents
 
-> Create and use specialized AI sub agents in Gemini Code for task-specific workflows and improved context management.
+> Create and use specialized AI sub agents in Gemini CLI for task-specific workflows and improved context management.
 
-Custom sub agents in Gemini Code are specialized AI assistants that can be invoked to handle specific types of tasks. They enable more efficient problem-solving by providing task-specific configurations with customized system prompts, tools and a separate context window.
+Custom sub agents in Gemini CLI are specialized AI assistants that can be invoked to handle specific types of tasks. They enable more efficient problem-solving by providing task-specific configurations with customized system prompts, tools and a separate context window.
 
 ## What are sub agents?
 
-Sub agents are pre-configured AI personalities that Gemini Code can delegate tasks to. Each sub agent:
+Sub agents are pre-configured AI personalities that Gemini CLI can delegate tasks to. Each sub agent:
 
 - Has a specific purpose and expertise area
 - Uses its own context window separate from the main conversation
 - Can be configured with specific tools it's allowed to use
 - Includes a custom system prompt that guides its behavior
 
-When Gemini Code encounters a task that matches a sub agent's expertise, it can delegate that task to the specialized sub agent, which works independently and returns results.
+When Gemini CLI encounters a task that matches a sub agent's expertise, it can delegate that task to the specialized sub agent, which works independently and returns results.
 
 ## Key benefits
 
@@ -113,7 +113,7 @@ the sub agent should follow.
 
 ### Available tools
 
-Sub agents can be granted access to any of Gemini Code's internal tools. See the [tools documentation](/en/docs/gemini-cli/settings#tools-available-to-gemini) for a complete list of available tools.
+Sub agents can be granted access to any of Gemini CLI's internal tools. See the [tools documentation](/en/docs/gemini-cli/settings#tools-available-to-gemini) for a complete list of available tools.
 
 <Tip>
   **Recommended:** Use the `/agents` command to modify tool access - it provides an interactive interface that lists all available tools, including any connected MCP server tools, making it easier to select the ones you need.
@@ -168,7 +168,7 @@ mkdir -p ~/.gemini/agents
 
 ### Automatic delegation
 
-Gemini Code proactively delegates tasks based on:
+Gemini CLI proactively delegates tasks based on:
 
 - The task description in your request
 - The `description` field in sub agent configurations
@@ -326,7 +326,7 @@ For complex workflows, you can chain multiple sub agents:
 
 ### Dynamic sub agent selection
 
-Gemini Code intelligently selects sub agents based on context. Make your `description` fields specific and action-oriented for best results.
+Gemini CLI intelligently selects sub agents based on context. Make your `description` fields specific and action-oriented for best results.
 
 ## Performance considerations
 
@@ -336,5 +336,5 @@ Gemini Code intelligently selects sub agents based on context. Make your `descri
 ## Related documentation
 
 - [Slash commands](/en/docs/gemini-cli/slash-commands) - Learn about other built-in commands
-- [Settings](/en/docs/gemini-cli/settings) - Configure Gemini Code behavior
+- [Settings](/en/docs/gemini-cli/settings) - Configure Gemini CLI behavior
 - [Hooks](/en/docs/gemini-cli/hooks) - Automate workflows with event handlers

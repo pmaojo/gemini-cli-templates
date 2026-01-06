@@ -1,10 +1,10 @@
-# Complete Guide to Creating Gemini Code Agents
+# Complete Guide to Creating Gemini CLI Agents
 
-This guide teaches you how to create specialized agents (subagents) for Gemini Code using `.md` files with YAML frontmatter configuration.
+This guide teaches you how to create specialized agents (subagents) for Gemini CLI using `.md` files with YAML frontmatter configuration.
 
-## What are Gemini Code Agents?
+## What are Gemini CLI Agents?
 
-Agents are specialized AI assistants that Gemini Code can use for specific tasks. Each agent:
+Agents are specialized AI assistants that Gemini CLI can use for specific tasks. Each agent:
 
 - **Has a specific purpose** and area of expertise
 - **Uses its own context** separate from the main conversation
@@ -495,7 +495,7 @@ head -20 .gemini/agents/your-agent.md
 
 ### Agent Testing
 ```bash
-# In Gemini Code, use slash command
+# In Gemini CLI, use slash command
 /agents
 ```
 
@@ -556,7 +556,7 @@ Orchestrates deployment with these steps:
 
 ## Conclusion
 
-Gemini Code agents are a powerful tool for automating and specializing your development workflow. With this guide, you can create effective agents that:
+Gemini CLI agents are a powerful tool for automating and specializing your development workflow. With this guide, you can create effective agents that:
 
 - **Automate repetitive tasks**
 - **Maintain consistent standards**

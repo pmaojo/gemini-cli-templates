@@ -1,6 +1,6 @@
 # Flask Project Configuration
 
-This file provides specific guidance for Flask web application development using Gemini Code.
+This file provides specific guidance for Flask web application development using Gemini CLI.
 
 ## Project Overview
 

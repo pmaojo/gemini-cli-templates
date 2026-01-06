@@ -1,6 +1,6 @@
 # Cloudflare Sandbox Quick Start Guide
 
-Get your Cloudflare Gemini Code Sandbox running in under 5 minutes.
+Get your Cloudflare Gemini CLI Sandbox running in under 5 minutes.
 
 ## Prerequisites Checklist
 

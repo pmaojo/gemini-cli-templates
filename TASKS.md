@@ -8,7 +8,7 @@
   - Update `README.md` title, badges, and descriptions.
   - Rename `GEMINI.md` to `GEMINI.md` in the root.
 - [/] **Mass Text Replacement (Repo-wide):**
-  - Run a script to replace "Gemini Code" with "Gemini CLI" in all documentation and comments.
+  - Run a script to replace "Gemini CLI" with "Gemini CLI" in all documentation and comments.
   - Replace "Google" with "Google" where appropriate in docs.
 
 ## Phase 2: Content Migration (The "Cool Solution")

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Skills Dashboard provides an elegant, modern interface to view and explore Gemini Code Skills with an interactive progressive context loading visualization.
+The Skills Dashboard provides an elegant, modern interface to view and explore Gemini CLI Skills with an interactive progressive context loading visualization.
 
 ## Features
 
@@ -171,7 +171,7 @@ Comprehensive skill with:
 
 ### Progressive Loading Strategy
 
-The visualization mirrors Gemini Code's actual loading behavior:
+The visualization mirrors Gemini CLI's actual loading behavior:
 
 1. **Main Context**: Loaded when skill is invoked
 2. **Skill Discovery**: Loaded when referenced in conversation
@@ -260,7 +260,7 @@ Potential improvements:
 
 ## Credits
 
-Built with ❤️ for Gemini Code Templates
+Built with ❤️ for Gemini CLI Templates
 
 - Modern CSS Grid layout
 - Vanilla JavaScript for maximum performance

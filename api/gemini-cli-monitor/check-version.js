@@ -3,7 +3,7 @@
 
 import { neon } from '@neondatabase/serverless';
 import axios from 'axios';
-import { parseVersionChangelog, formatForDiscord, generateSummary } from './_parser-gemini.js';
+import { parseVersionChangelog, formatForDiscord, generateSummary } from './parser.js';
 
 const NPM_PACKAGE = '@google-ai/gemini-cli';
 const CHANGELOG_URL = 'https://raw.githubusercontent.com/googles/gemini-cli/main/CHANGELOG.md';
@@ -27,13 +27,13 @@ async function sendToDiscord(versionData, parsed, formatted, summary) {
   }
 
   const embed = {
-    title: `🚀 Gemini Code ${versionData.version} Released`,
-    description: `A new version of Gemini Code is available with **${summary.total} changes**!`,
+    title: `🚀 Gemini CLI ${versionData.version} Released`,
+    description: `A new version of Gemini CLI is available with **${summary.total} changes**!`,
     url: versionData.githubUrl,
     color: 0x8B5CF6, // Purple
     fields: [],
     footer: {
-      text: 'Gemini Code Changelog Monitor',
+      text: 'Gemini CLI Changelog Monitor',
       icon_url: 'https://avatars.githubusercontent.com/u/100788936?s=200&v=4'
     },
     timestamp: new Date().toISOString()
@@ -90,7 +90,7 @@ async function sendToDiscord(versionData, parsed, formatted, summary) {
   });
 
   const payload = {
-    username: 'Gemini Code Monitor',
+    username: 'Gemini CLI Monitor',
     avatar_url: 'https://raw.githubusercontent.com/googles/gemini-cli/main/assets/icon.png',
     embeds: [embed]
   };
@@ -113,7 +113,7 @@ export default async function handler(req, res) {
   try {
     const sql = neon(process.env.NEON_DATABASE_URL);
 
-    console.log('🔍 Checking for new Gemini Code version...');
+    console.log('🔍 Checking for new Gemini CLI version...');
 
     // 1. Obtener última versión de NPM
     const latestVersion = await getLatestNPMVersion();

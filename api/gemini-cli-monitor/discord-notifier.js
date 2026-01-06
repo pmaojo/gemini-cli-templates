@@ -1,4 +1,4 @@
-// Notificador de Discord para Gemini Code Changelog
+// Notificador de Discord para Gemini CLI Changelog
 
 import { neon } from '@neondatabase/serverless';
 import axios from 'axios';
@@ -40,7 +40,7 @@ export async function sendDiscordNotification(versionData) {
   }
 
   const payload = {
-    username: 'Gemini Code Monitor',
+    username: 'Gemini CLI Monitor',
     avatar_url: 'https://raw.githubusercontent.com/googles/gemini-cli/main/assets/icon.png',
     embeds: [embed]
   };
@@ -65,13 +65,13 @@ export async function sendDiscordNotification(versionData) {
  */
 function buildDiscordEmbed({ version, changes, summary, npmUrl, githubUrl }) {
   const embed = {
-    title: `🚀 Gemini Code ${version} Released`,
-    description: `A new version of Gemini Code is available with **${summary.total} changes**!`,
+    title: `🚀 Gemini CLI ${version} Released`,
+    description: `A new version of Gemini CLI is available with **${summary.total} changes**!`,
     url: githubUrl,
     color: 0x8B5CF6, // Purple (Gemini color)
     fields: [],
     footer: {
-      text: 'Gemini Code Changelog Monitor',
+      text: 'Gemini CLI Changelog Monitor',
       icon_url: 'https://avatars.githubusercontent.com/u/100788936?s=200&v=4'
     },
     timestamp: new Date().toISOString()

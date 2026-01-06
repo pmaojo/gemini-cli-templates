@@ -97,5 +97,5 @@ echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "✅ Settings file structure is valid"
 echo ""
-echo "Reminder: Changes to this file require restarting Gemini Code"
+echo "Reminder: Changes to this file require restarting Gemini CLI"
 exit 0

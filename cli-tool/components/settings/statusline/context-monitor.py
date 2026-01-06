@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Gemini Code Context Monitor
+Gemini CLI Context Monitor
 Real-time context usage monitoring with visual indicators and session analytics
 """
 
@@ -192,7 +192,7 @@ def get_session_metrics(cost_data):
 
 def main():
     try:
-        # Read JSON input from Gemini Code
+        # Read JSON input from Gemini CLI
         data = json.load(sys.stdin)
         
         # Extract information

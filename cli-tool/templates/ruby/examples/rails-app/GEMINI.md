@@ -1,6 +1,6 @@
 # Rails 8 Project Configuration
 
-This file provides specific guidance for Ruby on Rails 8 web application development using Gemini Code.
+This file provides specific guidance for Ruby on Rails 8 web application development using Gemini CLI.
 
 ## Project Overview
 

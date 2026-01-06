@@ -1,4 +1,4 @@
-// Parser del CHANGELOG.md de Gemini Code
+// Parser del CHANGELOG.md de Gemini CLI
 
 /**
  * Extrae la sección de una versión específica del changelog

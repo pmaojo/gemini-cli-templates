@@ -1,6 +1,6 @@
 # GEMINI.md - Node.js API
 
-This file provides guidance to Gemini Code when working with Node.js API applications using TypeScript.
+This file provides guidance to Gemini CLI when working with Node.js API applications using TypeScript.
 
 ## Project Type
 

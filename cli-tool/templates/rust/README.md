@@ -1,8 +1,8 @@
-# Rust Gemini Code Templates
+# Rust Gemini CLI Templates
 
 ## Coming Soon! 🚧
 
-We're actively working on creating comprehensive Gemini Code templates for Rust development.
+We're actively working on creating comprehensive Gemini CLI templates for Rust development.
 
 ### What to Expect
 - Best practices for Rust project structure

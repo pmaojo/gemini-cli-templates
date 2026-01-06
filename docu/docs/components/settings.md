@@ -4,17 +4,17 @@ sidebar_position: 3
 
 # Settings
 
-Gemini Code configurations that customize behavior and performance. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+Gemini CLI configurations that customize behavior and performance. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
 
 ## ⚙️ What are Settings?
 
-Settings modify how Gemini Code behaves in your project. They control performance, security, interface, and workflow preferences.
+Settings modify how Gemini CLI behaves in your project. They control performance, security, interface, and workflow preferences.
 
 ## Installation
 
 ### 📦 Basic Installation
 
-Install this component locally in your project. Works with your existing Gemini Code setup.
+Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
 npx github:pmaojo/gemini-cli-templates --setting performance/performance-optimization --yes
@@ -36,7 +36,7 @@ Statuslines include Python scripts for real-time monitoring:
 npx github:pmaojo/gemini-cli-templates --setting statusline/git-branch-statusline --yes
 ```
 
-Shows current Git branch and status in Gemini Code interface.
+Shows current Git branch and status in Gemini CLI interface.
 
 ### Context Monitor
 
@@ -57,17 +57,17 @@ Settings are installed to:
 
 ### Environment Impact
 
-- **Performance settings** affect Gemini Code speed
+- **Performance settings** affect Gemini CLI speed
 - **Security settings** may restrict functionality
 - **Git settings** change version control behavior
 
 ## 📁 Setting Categories
 
-Browse settings by functional area to customize Gemini Code behavior:
+Browse settings by functional area to customize Gemini CLI behavior:
 
 ### Performance
 
-Optimize Gemini Code speed and resource usage. Examples: `performance-optimization` for faster execution, `bash-timeouts` for command limits, `memory-optimization` for resource management.
+Optimize Gemini CLI speed and resource usage. Examples: `performance-optimization` for faster execution, `bash-timeouts` for command limits, `memory-optimization` for resource management.
 
 ### Security
 
@@ -79,7 +79,7 @@ Version control and Git workflow configurations. Examples: `allow-git-operations
 
 ### Interface
 
-Customize Gemini Code appearance and interaction. Examples: `dark-mode` for visual preference, `compact-mode` for space efficiency, `keyboard-shortcuts` for productivity.
+Customize Gemini CLI appearance and interaction. Examples: `dark-mode` for visual preference, `compact-mode` for space efficiency, `keyboard-shortcuts` for productivity.
 
 ### Statuslines
 
