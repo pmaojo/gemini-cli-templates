@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "A comprehensive Gemini skill designed to help marketing teams plan, execute, and measure marketing campaigns across all channels."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "executing-marketing-campaigns"
+---
+
 # Marketing Skill for Gemini
 
 A comprehensive Gemini skill designed to help marketing teams plan, execute, and measure marketing campaigns across all channels.

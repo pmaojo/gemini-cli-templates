@@ -1,3 +1,11 @@
+---
+name: "ecg_cardiac"
+description: "Process electrocardiogram (ECG) and photoplethysmography (PPG) signals for cardiovascular analysis. This module provides comprehensive tools for R-peak detection, waveform delineation, quality assessment, and heart rate analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ECG and Cardiac Signal Processing
 
 ## Overview

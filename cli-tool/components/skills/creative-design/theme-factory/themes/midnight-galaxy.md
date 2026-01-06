@@ -1,3 +1,11 @@
+---
+name: "midnight-galaxy"
+description: "A dramatic and cosmic theme with deep purples and mystical tones for impactful presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Midnight Galaxy
 
 A dramatic and cosmic theme with deep purples and mystical tones for impactful presentations.

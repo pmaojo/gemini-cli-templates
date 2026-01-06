@@ -1,3 +1,11 @@
+---
+name: "clinical_decision_algorithms"
+description: "Clinical decision algorithms provide systematic, step-by-step guidance for diagnosis, treatment selection, and patient management. This guide covers algorithm development, validation, and visual presentation using decision trees and flowcharts."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Clinical Decision Algorithms Guide
 
 ## Overview

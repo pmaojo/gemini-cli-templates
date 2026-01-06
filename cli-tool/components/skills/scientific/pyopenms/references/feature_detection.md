@@ -1,3 +1,11 @@
+---
+name: "feature_detection"
+description: "Feature detection identifies persistent signals (chromatographic peaks) in LC-MS data. Feature linking combines features across multiple samples for quantitative comparison."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Feature Detection and Linking
 
 ## Overview

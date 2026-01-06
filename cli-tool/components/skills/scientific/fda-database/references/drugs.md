@@ -1,3 +1,11 @@
+---
+name: "drugs"
+description: "This reference covers all FDA drug-related API endpoints accessible through openFDA."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FDA Drug Databases
 
 This reference covers all FDA drug-related API endpoints accessible through openFDA.

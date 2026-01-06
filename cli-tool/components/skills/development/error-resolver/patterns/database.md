@@ -1,3 +1,11 @@
+---
+name: "database"
+description: "Common database errors across PostgreSQL, MySQL, MongoDB, Redis, and SQLite."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # Database Error Patterns
 
 Common database errors across PostgreSQL, MySQL, MongoDB, Redis, and SQLite.

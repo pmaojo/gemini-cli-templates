@@ -1,3 +1,11 @@
+---
+name: "machine_learning"
+description: "This reference covers Vaex's machine learning capabilities including transformers, encoders, feature engineering, model integration, and building ML pipelines on large datasets."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Machine Learning Integration
 
 This reference covers Vaex's machine learning capabilities including transformers, encoders, feature engineering, model integration, and building ML pipelines on large datasets.

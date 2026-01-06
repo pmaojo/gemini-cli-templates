@@ -1,3 +1,11 @@
+---
+name: "algorithms"
+description: "Qiskit supports a wide range of quantum algorithms for optimization, chemistry, machine learning, and physics simulations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Quantum Algorithms and Applications
 
 Qiskit supports a wide range of quantum algorithms for optimization, chemistry, machine learning, and physics simulations.

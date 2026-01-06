@@ -1,3 +1,11 @@
+---
+name: "figures_tables"
+description: "Figures and tables are essential components of scientific papers, serving to display data patterns, summarize results, and provide evidence for conclusions. Effective visual displays enhance comprehension and can sustain reader interest while illustrating trends, patterns, and relationships not easily conveyed through text alone."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Figures and Tables Best Practices
 
 ## Overview

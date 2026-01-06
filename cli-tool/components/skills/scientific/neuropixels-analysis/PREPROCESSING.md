@@ -1,3 +1,11 @@
+---
+name: "PREPROCESSING"
+description: "Comprehensive preprocessing techniques for Neuropixels neural recordings."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "neuropixels-analysis"
+---
+
 # Neuropixels Preprocessing Reference
 
 Comprehensive preprocessing techniques for Neuropixels neural recordings.

@@ -1,3 +1,11 @@
+---
+name: "eda"
+description: "Electrodermal Activity (EDA), also known as Galvanic Skin Response (GSR) or Skin Conductance (SC), measures the electrical conductance of the skin, reflecting sympathetic nervous system arousal and sweat gland activity. EDA is widely used in psychophysiology, affective computing, and lie detection."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Electrodermal Activity (EDA) Analysis
 
 ## Overview

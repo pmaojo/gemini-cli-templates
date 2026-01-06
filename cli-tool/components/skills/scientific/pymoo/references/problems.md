@@ -1,3 +1,11 @@
+---
+name: "problems"
+description: "Comprehensive reference for benchmark optimization problems in pymoo."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymoo Test Problems Reference
 
 Comprehensive reference for benchmark optimization problems in pymoo.

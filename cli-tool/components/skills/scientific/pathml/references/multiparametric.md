@@ -1,3 +1,11 @@
+---
+name: "multiparametric"
+description: "PathML provides specialized support for multiparametric imaging technologies that simultaneously measure multiple markers at single-cell resolution. These techniques include CODEX, Vectra multiplex immunofluorescence, MERFISH, and other spatial proteomics and transcriptomics platforms. PathML handles the unique data structures, processing requirements, and quantification workflows specific to each technology."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Multiparametric Imaging
 
 ## Overview

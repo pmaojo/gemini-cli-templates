@@ -1,3 +1,11 @@
+---
+name: "botanical-garden"
+description: "A fresh and organic theme featuring vibrant garden-inspired colors for lively presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Botanical Garden
 
 A fresh and organic theme featuring vibrant garden-inspired colors for lively presentations.

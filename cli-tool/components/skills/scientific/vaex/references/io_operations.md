@@ -1,3 +1,11 @@
+---
+name: "io_operations"
+description: "This reference covers file input/output operations, format conversions, export strategies, and working with various data formats in Vaex."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # I/O Operations
 
 This reference covers file input/output operations, format conversions, export strategies, and working with various data formats in Vaex.

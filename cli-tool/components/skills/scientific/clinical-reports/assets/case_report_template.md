@@ -1,3 +1,11 @@
+---
+name: "case_report_template"
+description: "[Insert descriptive title that includes \"Case Report\" or \"Case Study\" and indicates the clinical focus]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Clinical Case Report Template
 
 ## Title

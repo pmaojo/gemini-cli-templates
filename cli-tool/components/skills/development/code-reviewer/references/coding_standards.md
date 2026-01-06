@@ -1,3 +1,11 @@
+---
+name: "coding_standards"
+description: "This reference guide provides comprehensive information for code reviewer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Coding Standards
 
 ## Overview

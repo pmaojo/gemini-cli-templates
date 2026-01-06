@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Create professional, publication-ready research posters for conferences and academic presentations using LaTeX."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "latex-posters"
+---
+
 # LaTeX Research Poster Generation Skill
 
 Create professional, publication-ready research posters for conferences and academic presentations using LaTeX.

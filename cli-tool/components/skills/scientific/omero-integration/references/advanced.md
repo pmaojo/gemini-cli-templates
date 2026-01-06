@@ -1,3 +1,11 @@
+---
+name: "advanced"
+description: "This reference covers advanced OMERO operations including permissions, deletion, filesets, and administrative tasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Advanced Features
 
 This reference covers advanced OMERO operations including permissions, deletion, filesets, and administrative tasks.

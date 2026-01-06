@@ -1,3 +1,11 @@
+---
+name: "configuration"
+description: "This guide covers configuring apps through dxapp.json metadata and managing dependencies including system packages, Python libraries, and Docker containers."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DNAnexus App Configuration and Dependencies
 
 ## Overview

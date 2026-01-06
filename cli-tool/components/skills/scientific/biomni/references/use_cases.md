@@ -1,3 +1,11 @@
+---
+name: "use_cases"
+description: "Comprehensive examples demonstrating biomni across biomedical research domains."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Biomni Use Cases and Examples
 
 Comprehensive examples demonstrating biomni across biomedical research domains.

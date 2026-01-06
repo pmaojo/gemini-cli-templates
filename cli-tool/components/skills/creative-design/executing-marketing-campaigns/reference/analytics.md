@@ -1,3 +1,11 @@
+---
+name: "analytics"
+description: "Understand where to measure at each stage:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Marketing Analytics & Measurement
 
 ## Marketing Funnel Framework

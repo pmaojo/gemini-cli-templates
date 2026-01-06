@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "A comprehensive Gemini skill for IT operations professionals, covering infrastructure management, monitoring, incident response, automation, and disaster recovery."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "it-operations"
+---
+
 # IT Operations Expert
 
 A comprehensive Gemini skill for IT operations professionals, covering infrastructure management, monitoring, incident response, automation, and disaster recovery.

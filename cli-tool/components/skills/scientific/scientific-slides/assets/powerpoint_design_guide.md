@@ -1,3 +1,11 @@
+---
+name: "powerpoint_design_guide"
+description: "This guide provides comprehensive instructions for creating professional scientific presentations using PowerPoint, with emphasis on integration with the pptx skill for programmatic creation and best practices for scientific content."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # PowerPoint Design Guide for Scientific Presentations
 
 ## Overview

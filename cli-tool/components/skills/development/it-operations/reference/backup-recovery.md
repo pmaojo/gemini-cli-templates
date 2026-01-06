@@ -1,3 +1,11 @@
+---
+name: "backup-recovery"
+description: "Comprehensive guide to backup strategies, disaster recovery planning, business continuity, and data protection for IT operations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Backup and Disaster Recovery
 
 Comprehensive guide to backup strategies, disaster recovery planning, business continuity, and data protection for IT operations.

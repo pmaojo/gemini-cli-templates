@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Execute Gemini CLI in isolated cloud environments for secure code generation and development."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "sandbox"
+---
+
 # Gemini CLI Sandbox Components
 
 Execute Gemini CLI in isolated cloud environments for secure code generation and development.

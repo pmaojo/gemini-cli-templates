@@ -1,3 +1,11 @@
+---
+name: "gpu"
+description: "Run functions on GPUs with the `gpu` parameter:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # GPU Acceleration on Modal
 
 ## Quick Start

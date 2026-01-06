@@ -1,3 +1,11 @@
+---
+name: "noise"
+description: "This guide covers noise models, noisy simulation, characterization, and error mitigation in Cirq."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Noise Modeling and Mitigation
 
 This guide covers noise models, noisy simulation, characterization, and error mitigation in Cirq.

@@ -1,3 +1,11 @@
+---
+name: "policies"
+description: "PufferLib policies are standard PyTorch modules with optional utilities for observation processing and LSTM integration. The framework provides default architectures and tools while allowing full flexibility in policy design."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PufferLib Policies Guide
 
 ## Overview

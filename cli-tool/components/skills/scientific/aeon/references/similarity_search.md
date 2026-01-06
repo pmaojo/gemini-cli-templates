@@ -1,3 +1,11 @@
+---
+name: "similarity_search"
+description: "Aeon provides tools for finding similar patterns within and across time series, including subsequence search, motif discovery, and approximate nearest neighbors."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Similarity Search
 
 Aeon provides tools for finding similar patterns within and across time series, including subsequence search, motif discovery, and approximate nearest neighbors.

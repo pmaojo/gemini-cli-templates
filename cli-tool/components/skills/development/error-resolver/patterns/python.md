@@ -1,3 +1,11 @@
+---
+name: "python"
+description: "Common Python errors with diagnosis and solutions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # Python Error Patterns
 
 Common Python errors with diagnosis and solutions.

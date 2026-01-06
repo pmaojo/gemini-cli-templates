@@ -1,3 +1,11 @@
+---
+name: "cox-models"
+description: "Cox proportional hazards models are semi-parametric models that relate covariates to the time of an event. The hazard function for individual *i* is expressed as:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Cox Proportional Hazards Models
 
 ## Overview

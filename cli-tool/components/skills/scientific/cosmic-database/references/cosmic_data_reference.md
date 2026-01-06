@@ -1,3 +1,11 @@
+---
+name: "cosmic_data_reference"
+description: "COSMIC (Catalogue of Somatic Mutations in Cancer) is the world's largest and most comprehensive resource for exploring the impact of somatic mutations in human cancer. Maintained by the Wellcome Sanger Institute, it catalogs millions of mutations across thousands of cancer types."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # COSMIC Database Reference
 
 ## Overview

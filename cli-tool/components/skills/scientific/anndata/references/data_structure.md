@@ -1,3 +1,11 @@
+---
+name: "data_structure"
+description: "The AnnData object stores a data matrix with associated annotations, providing a flexible framework for managing experimental data and metadata."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # AnnData Object Structure
 
 The AnnData object stores a data matrix with associated annotations, providing a flexible framework for managing experimental data and metadata.

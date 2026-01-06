@@ -1,3 +1,11 @@
+---
+name: "core_concepts"
+description: "This reference covers TorchDrug's fundamental architecture, design principles, and technical implementation details."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Core Concepts and Technical Details
 
 ## Overview

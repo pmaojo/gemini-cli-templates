@@ -1,3 +1,11 @@
+---
+name: "grants_requirements"
+description: "Comprehensive requirements and formatting guidelines for major federal and private foundation grant programs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Grant Proposal Requirements
 
 Comprehensive requirements and formatting guidelines for major federal and private foundation grant programs.

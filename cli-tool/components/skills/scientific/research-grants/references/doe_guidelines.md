@@ -1,3 +1,11 @@
+---
+name: "doe_guidelines"
+description: "**Mission**: Ensure America's security and prosperity by addressing energy, environmental, and nuclear challenges through transformative science and technology solutions"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DOE (Department of Energy) Grant Writing Guidelines
 
 ## Agency Overview

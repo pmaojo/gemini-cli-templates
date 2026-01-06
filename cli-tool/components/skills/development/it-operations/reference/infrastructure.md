@@ -1,3 +1,11 @@
+---
+name: "infrastructure"
+description: "Comprehensive guide to server management, network operations, capacity planning, and infrastructure operations for IT teams."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Infrastructure Management
 
 Comprehensive guide to server management, network operations, capacity planning, and infrastructure operations for IT teams.

@@ -1,3 +1,11 @@
+---
+name: "peer_review_standards"
+description: "Peer review ensures that clinical manuscripts meet standards for scientific rigor, ethical conduct, and clear communication before publication."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Peer Review Standards for Clinical Manuscripts
 
 ## Overview of Clinical Manuscript Peer Review

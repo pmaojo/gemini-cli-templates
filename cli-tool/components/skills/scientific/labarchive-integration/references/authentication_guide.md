@@ -1,3 +1,11 @@
+---
+name: "authentication_guide"
+description: "API access requires an Enterprise LabArchives license. Contact your LabArchives administrator or sales@labarchives.com to:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LabArchives Authentication Guide
 
 ## Prerequisites

@@ -1,3 +1,11 @@
+---
+name: "mlops_production_patterns"
+description: "World-class mlops production patterns for senior ml/ai engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Mlops Production Patterns
 
 ## Overview

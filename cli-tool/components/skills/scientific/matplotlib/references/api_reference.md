@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides a quick reference for the most commonly used matplotlib classes and methods."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matplotlib API Reference
 
 This document provides a quick reference for the most commonly used matplotlib classes and methods.

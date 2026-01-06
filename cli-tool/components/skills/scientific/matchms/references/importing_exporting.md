@@ -1,3 +1,11 @@
+---
+name: "importing_exporting"
+description: "This document details all file format support in matchms for loading and saving mass spectrometry data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matchms Importing and Exporting Reference
 
 This document details all file format support in matchms for loading and saving mass spectrometry data.

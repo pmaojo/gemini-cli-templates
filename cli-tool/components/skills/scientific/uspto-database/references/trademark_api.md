@@ -1,3 +1,11 @@
+---
+name: "trademark_api"
+description: "USPTO provides two main APIs for trademark data:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # USPTO Trademark APIs Reference
 
 ## Overview

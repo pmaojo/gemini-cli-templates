@@ -1,3 +1,11 @@
+---
+name: "fragments_scaffolds"
+description: "Scaffolds represent the core structure of molecules, useful for identifying structural families and analyzing structure-activity relationships (SAR)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Datamol Fragments and Scaffolds Reference
 
 ## Scaffolds Module (`datamol.scaffold`)

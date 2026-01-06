@@ -1,3 +1,11 @@
+---
+name: "environments"
+description: "PufferLib provides the PufferEnv API for creating high-performance custom environments, and the Ocean suite containing 20+ pre-built environments. Environments support both single-agent and multi-agent scenarios with native vectorization."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PufferLib Environments Guide
 
 ## Overview

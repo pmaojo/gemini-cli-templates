@@ -1,3 +1,11 @@
+---
+name: "data_management"
+description: "PathML provides efficient data management solutions for handling large-scale pathology datasets through HDF5 storage, tile management strategies, and optimized batch processing workflows. The framework enables seamless storage and retrieval of images, masks, features, and metadata in formats optimized for machine learning pipelines and downstream analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Management & Storage
 
 ## Overview

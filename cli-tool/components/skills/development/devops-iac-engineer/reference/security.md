@@ -1,3 +1,11 @@
+---
+name: "security"
+description: "- **Multiple layers of security controls**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # DevSecOps & Security Best Practices
 
 ## Security Principles

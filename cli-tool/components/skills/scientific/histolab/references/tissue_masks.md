@@ -1,3 +1,11 @@
+---
+name: "tissue_masks"
+description: "Tissue masks are binary representations that identify tissue regions within whole slide images. They are essential for filtering out background, artifacts, and non-tissue areas during tile extraction. Histolab provides several mask classes to accommodate different tissue segmentation needs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Tissue Masks
 
 ## Overview

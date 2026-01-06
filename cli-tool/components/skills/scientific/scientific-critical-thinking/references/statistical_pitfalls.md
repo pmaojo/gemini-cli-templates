@@ -1,3 +1,11 @@
+---
+name: "statistical_pitfalls"
+description: "**Misconception:** p = .05 means 5% chance the null hypothesis is true."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Statistical Pitfalls
 
 ## P-Value Misinterpretations

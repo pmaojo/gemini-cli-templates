@@ -1,3 +1,11 @@
+---
+name: "plugin-commands"
+description: "Practical examples of commands designed for Gemini CLI plugins, demonstrating plugin-specific patterns and features."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Plugin Command Examples
 
 Practical examples of commands designed for Gemini CLI plugins, demonstrating plugin-specific patterns and features.

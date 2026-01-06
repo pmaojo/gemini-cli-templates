@@ -1,3 +1,11 @@
+---
+name: "rag_system_architecture"
+description: "World-class rag system architecture for senior ml/ai engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Rag System Architecture
 
 ## Overview

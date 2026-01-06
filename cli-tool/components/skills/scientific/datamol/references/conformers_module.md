@@ -1,3 +1,11 @@
+---
+name: "conformers_module"
+description: "The `datamol.conformers` module provides tools for generating and analyzing 3D molecular conformations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Datamol Conformers Module Reference
 
 The `datamol.conformers` module provides tools for generating and analyzing 3D molecular conformations.

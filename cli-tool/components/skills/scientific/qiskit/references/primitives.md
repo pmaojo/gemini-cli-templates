@@ -1,3 +1,11 @@
+---
+name: "primitives"
+description: "Primitives are the fundamental building blocks for executing quantum circuits. Qiskit provides two main primitives: **Sampler** (for measuring bitstrings) and **Estimator** (for computing expectation values)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Qiskit Primitives
 
 Primitives are the fundamental building blocks for executing quantum circuits. Qiskit provides two main primitives: **Sampler** (for measuring bitstrings) and **Estimator** (for computing expectation values).

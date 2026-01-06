@@ -1,3 +1,11 @@
+---
+name: "quality_checklist"
+description: "Use this checklist to ensure treatment plans meet professional standards for completeness, quality, safety, and regulatory compliance. Review each section before finalizing the plan."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Treatment Plan Quality Assurance Checklist
 
 ## Overview

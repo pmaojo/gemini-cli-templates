@@ -1,3 +1,11 @@
+---
+name: "sequence_files"
+description: "Pysam provides the `FastaFile` class for indexed, random access to FASTA reference sequences. FASTA files must be indexed with `samtools faidx` before use."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Working with Sequence Files (FASTA/FASTQ)
 
 ## FASTA Files

@@ -1,3 +1,11 @@
+---
+name: "paper2poster"
+description: "Paper2Poster automatically generates professional academic posters from research papers. The system extracts key content, designs visually appealing layouts, and creates print-ready posters suitable for conferences, symposiums, and academic presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Paper2Poster: Academic Poster Generation
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "descriptors_viz"
+description: "The descriptors module provides tools for computing molecular properties and descriptors."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Datamol Descriptors and Visualization Reference
 
 ## Descriptors Module (`datamol.descriptors`)

@@ -1,3 +1,11 @@
+---
+name: "resources"
+description: "Each Modal container has default reservations:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # CPU, Memory, and Disk Resources
 
 ## Default Resources

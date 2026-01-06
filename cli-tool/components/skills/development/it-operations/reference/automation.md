@@ -1,3 +1,11 @@
+---
+name: "automation"
+description: "Comprehensive guide to IT automation, scripting, configuration management, orchestration tools, and reducing operational toil."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Automation and Orchestration
 
 Comprehensive guide to IT automation, scripting, configuration management, orchestration tools, and reducing operational toil.

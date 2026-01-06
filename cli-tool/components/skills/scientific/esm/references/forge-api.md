@@ -1,3 +1,11 @@
+---
+name: "forge-api"
+description: "Forge is EvolutionaryScale's cloud platform for scalable protein design and inference. It provides API access to the full ESM3 model family, including large models not available for local execution."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Forge API Reference
 
 ## Overview

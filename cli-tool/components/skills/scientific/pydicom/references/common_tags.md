@@ -1,3 +1,11 @@
+---
+name: "common_tags"
+description: "This document provides a comprehensive list of commonly used DICOM tags organized by category. Tags can be accessed in pydicom using attribute notation (e.g., `ds.PatientName`) or tag tuple notation (e.g., `ds[0x0010, 0x0010]`)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common DICOM Tags Reference
 
 This document provides a comprehensive list of commonly used DICOM tags organized by category. Tags can be accessed in pydicom using attribute notation (e.g., `ds.PatientName`) or tag tuple notation (e.g., `ds[0x0010, 0x0010]`).

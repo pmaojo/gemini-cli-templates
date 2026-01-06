@@ -1,3 +1,11 @@
+---
+name: "circuits"
+description: "Create circuits using the `QuantumCircuit` class:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Quantum Circuit Building
 
 ## Creating a Quantum Circuit

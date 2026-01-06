@@ -1,3 +1,11 @@
+---
+name: "distances"
+description: "Aeon provides specialized distance functions for measuring similarity between time series, compatible with both aeon and scikit-learn estimators."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Distance Metrics
 
 Aeon provides specialized distance functions for measuring similarity between time series, compatible with both aeon and scikit-learn estimators.

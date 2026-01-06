@@ -1,3 +1,11 @@
+---
+name: "examples"
+description: "This document provides practical examples for common molfeat use cases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Molfeat Usage Examples
 
 This document provides practical examples for common molfeat use cases.

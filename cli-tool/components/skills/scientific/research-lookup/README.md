@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "This skill provides real-time research information lookup using Perplexity's Sonar Pro Search model through OpenRouter."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "research-lookup"
+---
+
 # Research Lookup Skill
 
 This skill provides real-time research information lookup using Perplexity's Sonar Pro Search model through OpenRouter.

@@ -1,3 +1,11 @@
+---
+name: "research_pipeline"
+description: "The main class for orchestrating research workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Research Pipeline API Reference
 
 ## Core Classes

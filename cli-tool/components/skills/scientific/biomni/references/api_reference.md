@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Comprehensive API documentation for the biomni framework."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Biomni API Reference
 
 Comprehensive API documentation for the biomni framework.

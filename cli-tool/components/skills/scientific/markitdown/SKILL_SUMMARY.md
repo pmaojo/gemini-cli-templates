@@ -1,3 +1,11 @@
+---
+name: "SKILL_SUMMARY"
+description: "A comprehensive skill for using Microsoft's MarkItDown tool has been created for the Gemini Scientific Writer. This skill enables conversion of 15+ file formats to Markdown, optimized for LLM processing and scientific workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "markitdown"
+---
+
 # MarkItDown Skill - Creation Summary
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "preprocessing"
+description: "PyHealth provides comprehensive data processing utilities to transform raw healthcare data into model-ready formats. Processors handle feature extraction, sequence processing, signal transformation, and label preparation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyHealth Data Preprocessing and Processors
 
 ## Overview

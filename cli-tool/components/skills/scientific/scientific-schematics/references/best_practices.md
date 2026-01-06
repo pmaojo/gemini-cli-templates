@@ -1,3 +1,11 @@
+---
+name: "best_practices"
+description: "This guide provides publication standards, accessibility guidelines, and best practices for creating high-quality scientific diagrams that meet journal requirements and communicate effectively to all readers."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Best Practices for Scientific Diagrams
 
 ## Overview

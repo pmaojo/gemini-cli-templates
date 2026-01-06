@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Professional clinical decision support documents for medical professionals in pharmaceutical and clinical research settings."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "clinical-decision-support"
+---
+
 # Clinical Decision Support Skill
 
 Professional clinical decision support documents for medical professionals in pharmaceutical and clinical research settings.

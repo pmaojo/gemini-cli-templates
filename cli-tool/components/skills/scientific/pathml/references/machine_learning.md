@@ -1,3 +1,11 @@
+---
+name: "machine_learning"
+description: "PathML provides comprehensive machine learning capabilities for computational pathology, including pre-built models for nucleus detection and segmentation, PyTorch-integrated training workflows, public dataset access, and ONNX-based inference deployment. The framework seamlessly bridges image preprocessing with deep learning to enable end-to-end pathology ML pipelines."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Machine Learning
 
 ## Overview

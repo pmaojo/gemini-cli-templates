@@ -1,3 +1,11 @@
+---
+name: "brand_guidelines"
+description: "- **Formal**: Legal documents, investor communications, crisis responses"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Brand Voice & Style Guidelines
 
 ## Brand Voice Framework

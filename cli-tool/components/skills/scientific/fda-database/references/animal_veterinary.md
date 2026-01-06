@@ -1,3 +1,11 @@
+---
+name: "animal_veterinary"
+description: "This reference covers FDA animal and veterinary medicine API endpoints accessible through openFDA."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FDA Animal and Veterinary Databases
 
 This reference covers FDA animal and veterinary medicine API endpoints accessible through openFDA.

@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Comprehensive guidance on creating Gemini CLI slash commands, including file format, frontmatter options, dynamic arguments, and best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "command-development"
+---
+
 # Command Development Skill
 
 Comprehensive guidance on creating Gemini CLI slash commands, including file format, frontmatter options, dynamic arguments, and best practices.

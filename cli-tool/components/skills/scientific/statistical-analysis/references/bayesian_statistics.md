@@ -1,3 +1,11 @@
+---
+name: "bayesian_statistics"
+description: "This document provides guidance on conducting and interpreting Bayesian statistical analyses, which offer an alternative framework to frequentist (classical) statistics."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Bayesian Statistical Analysis
 
 This document provides guidance on conducting and interpreting Bayesian statistical analyses, which offer an alternative framework to frequentist (classical) statistics.

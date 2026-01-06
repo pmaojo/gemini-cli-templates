@@ -1,3 +1,11 @@
+---
+name: "case_report_guidelines"
+description: "The CARE guidelines provide a framework for transparent and complete reporting of clinical cases. The CARE checklist ensures that case reports contain all necessary information for readers to assess the validity and applicability of the findings."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Clinical Case Report Guidelines
 
 ## CARE Guidelines (CAse REport)

@@ -1,3 +1,11 @@
+---
+name: "annotation-validation"
+description: "This document covers data curation, validation, schema management, and annotation best practices in LaminDB."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaminDB Annotation & Validation
 
 This document covers data curation, validation, schema management, and annotation best practices in LaminDB.

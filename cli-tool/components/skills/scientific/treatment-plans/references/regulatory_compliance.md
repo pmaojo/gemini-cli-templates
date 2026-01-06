@@ -1,3 +1,11 @@
+---
+name: "regulatory_compliance"
+description: "Treatment plans must comply with multiple federal and state regulations governing healthcare documentation, patient privacy, billing practices, and quality standards. This reference provides comprehensive guidance on regulatory requirements affecting treatment plan development and implementation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Regulatory Compliance for Treatment Plans
 
 ## Overview

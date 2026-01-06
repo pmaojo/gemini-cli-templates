@@ -1,3 +1,11 @@
+---
+name: "common_workflows"
+description: "This document provides practical examples of common bioinformatics workflows using pysam, demonstrating how to combine different file types and operations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Bioinformatics Workflows with Pysam
 
 ## Overview

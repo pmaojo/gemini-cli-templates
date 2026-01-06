@@ -1,3 +1,11 @@
+---
+name: "svelte:a11y"
+description: "Audit and improve accessibility in Svelte/SvelteKit applications, ensuring WCAG compliance and inclusive user experiences."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:a11y
 
 Audit and improve accessibility in Svelte/SvelteKit applications, ensuring WCAG compliance and inclusive user experiences.

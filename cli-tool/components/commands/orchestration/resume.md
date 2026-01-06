@@ -1,3 +1,11 @@
+---
+name: "resume"
+description: "Resume work on existing task orchestrations after session loss or context switch."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestration Resume Command
 
 Resume work on existing task orchestrations after session loss or context switch.

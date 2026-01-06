@@ -1,3 +1,11 @@
+---
+name: "condition-based-waiting"
+description: "Flaky tests often guess at timing with arbitrary delays. This creates race conditions where tests pass on fast machines but fail under load or in CI."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "systematic-debugging"
+---
+
 # Condition-Based Waiting
 
 ## Overview

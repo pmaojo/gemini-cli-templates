@@ -1,3 +1,11 @@
+---
+name: "transformation"
+description: "This guide covers circuit optimization, compilation, and manipulation using Cirq's transformation framework."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Circuit Transformations
 
 This guide covers circuit optimization, compilation, and manipulation using Cirq's transformation framework.

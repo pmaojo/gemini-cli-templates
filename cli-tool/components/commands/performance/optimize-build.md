@@ -1,3 +1,11 @@
+---
+name: "optimize-build"
+description: "Optimize build processes and speed"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "performance"
+---
+
 # Optimize Build Command
 
 Optimize build processes and speed

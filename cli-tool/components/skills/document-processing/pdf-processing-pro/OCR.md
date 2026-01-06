@@ -1,3 +1,11 @@
+---
+name: "OCR"
+description: "Extract text from scanned PDFs and image-based documents."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "pdf-processing-pro"
+---
+
 # PDF OCR Processing Guide
 
 Extract text from scanned PDFs and image-based documents.

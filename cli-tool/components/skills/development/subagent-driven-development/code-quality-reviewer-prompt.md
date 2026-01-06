@@ -1,3 +1,11 @@
+---
+name: "code-quality-reviewer-prompt"
+description: "Use this template when dispatching a code quality reviewer subagent."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "subagent-driven-development"
+---
+
 # Code Quality Reviewer Prompt Template
 
 Use this template when dispatching a code quality reviewer subagent.

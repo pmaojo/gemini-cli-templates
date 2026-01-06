@@ -1,3 +1,11 @@
+---
+name: "setup-deployment"
+description: "This document covers installation, configuration, instance management, storage options, and deployment strategies for LaminDB."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaminDB Setup & Deployment
 
 This document covers installation, configuration, instance management, storage options, and deployment strategies for LaminDB.

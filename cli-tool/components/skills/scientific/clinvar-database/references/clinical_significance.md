@@ -1,3 +1,11 @@
+---
+name: "clinical_significance"
+description: "ClinVar uses standardized terminology to describe the clinical significance of genetic variants. Understanding these classifications is critical for interpreting variant reports and making informed research or clinical decisions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ClinVar Clinical Significance Interpretation Guide
 
 ## Overview

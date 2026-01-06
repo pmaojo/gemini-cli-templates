@@ -1,3 +1,11 @@
+---
+name: "biomarker_classification"
+description: "Biomarkers are measurable indicators of biological state or condition. In clinical decision support, biomarkers guide diagnosis, prognosis, treatment selection, and monitoring. This guide covers genomic, proteomic, and molecular biomarkers with emphasis on clinical actionability."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Biomarker Classification and Interpretation Guide
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "theory"
+description: "This document explains the theoretical foundations of SHAP (SHapley Additive exPlanations), including Shapley values from game theory, the principles that make SHAP unique, and connections to other explanation methods."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SHAP Theoretical Foundation
 
 This document explains the theoretical foundations of SHAP (SHapley Additive exPlanations), including Shapley values from game theory, the principles that make SHAP unique, and connections to other explanation methods.

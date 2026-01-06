@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "A comprehensive Gemini skill designed to help DevOps teams implement infrastructure as code, manage cloud platforms, deploy containerized applications, and maintain reliable production systems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "devops-iac-engineer"
+---
+
 # DevOps IaC Engineer Skill for Gemini
 
 A comprehensive Gemini skill designed to help DevOps teams implement infrastructure as code, manage cloud platforms, deploy containerized applications, and maintain reliable production systems.

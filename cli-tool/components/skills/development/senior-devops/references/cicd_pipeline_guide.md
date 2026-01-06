@@ -1,3 +1,11 @@
+---
+name: "cicd_pipeline_guide"
+description: "This reference guide provides comprehensive information for senior devops."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Cicd Pipeline Guide
 
 ## Overview

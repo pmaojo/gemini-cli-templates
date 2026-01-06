@@ -1,3 +1,11 @@
+---
+name: "ooxml"
+description: "**Important: Read this entire document before starting.** Critical XML schema rules and formatting requirements are covered throughout. Incorrect implementation can create invalid PPTX files that PowerPoint cannot open."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "pptx"
+---
+
 # Office Open XML Technical Reference for PowerPoint
 
 **Important: Read this entire document before starting.** Critical XML schema rules and formatting requirements are covered throughout. Incorrect implementation can create invalid PPTX files that PowerPoint cannot open.

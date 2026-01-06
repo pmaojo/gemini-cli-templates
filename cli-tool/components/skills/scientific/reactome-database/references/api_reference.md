@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides comprehensive reference information for Reactome's REST APIs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Reactome API Reference
 
 This document provides comprehensive reference information for Reactome's REST APIs.

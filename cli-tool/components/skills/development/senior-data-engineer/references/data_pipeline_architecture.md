@@ -1,3 +1,11 @@
+---
+name: "data_pipeline_architecture"
+description: "World-class data pipeline architecture for senior data engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Pipeline Architecture
 
 ## Overview

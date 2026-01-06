@@ -1,3 +1,11 @@
+---
+name: "sunset-boulevard"
+description: "A warm and vibrant theme inspired by golden hour sunsets, perfect for energetic and creative presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Sunset Boulevard
 
 A warm and vibrant theme inspired by golden hour sunsets, perfect for energetic and creative presentations.

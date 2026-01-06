@@ -1,3 +1,11 @@
+---
+name: "distributed_training"
+description: "PyTorch Lightning provides several strategies for training large models efficiently across multiple GPUs, nodes, and machines. Choose the right strategy based on model size and hardware configuration."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Distributed Training - Comprehensive Guide
 
 ## Overview

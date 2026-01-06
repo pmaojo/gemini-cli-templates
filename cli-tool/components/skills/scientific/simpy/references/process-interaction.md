@@ -1,3 +1,11 @@
+---
+name: "process-interaction"
+description: "This guide covers the mechanisms for processes to interact and synchronize in SimPy simulations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SimPy Process Interaction
 
 This guide covers the mechanisms for processes to interact and synchronize in SimPy simulations.

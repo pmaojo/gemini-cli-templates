@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "All LabArchives API calls follow this URL pattern:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LabArchives API Reference
 
 ## API Structure

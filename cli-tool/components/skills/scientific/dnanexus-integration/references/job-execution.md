@@ -1,3 +1,11 @@
+---
+name: "job-execution"
+description: "Jobs are the fundamental execution units on DNAnexus. When an applet or app runs, a job is created and executed on a worker node in an isolated Linux environment with constant API access."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DNAnexus Job Execution and Workflows
 
 ## Overview

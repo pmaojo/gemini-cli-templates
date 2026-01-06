@@ -1,3 +1,11 @@
+---
+name: "content"
+description: "**1. Attention**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Content Creation Guidelines
 
 ## Copywriting Fundamentals

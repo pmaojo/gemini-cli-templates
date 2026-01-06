@@ -1,3 +1,11 @@
+---
+name: "additional_features"
+description: "This document covers additional protocols.io API features including user profiles, recently published protocols, experiment records, and notifications."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Additional Features
 
 ## Overview

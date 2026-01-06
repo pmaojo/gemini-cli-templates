@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides detailed reference information for the BRENDA (BRaunschweig ENzyme DAtabase) SOAP API and the Python client implementation. BRENDA is the world's most comprehensive enzyme information system, containing over 45,000 enzymes with millions of kinetic data points."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # BRENDA Database API Reference
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "rules_catalog"
+description: "Comprehensive catalog of all available medicinal chemistry rules, structural alerts, and filters in medchem."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Medchem Rules and Filters Catalog
 
 Comprehensive catalog of all available medicinal chemistry rules, structural alerts, and filters in medchem.

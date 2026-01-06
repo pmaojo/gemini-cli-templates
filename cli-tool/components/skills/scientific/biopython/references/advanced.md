@@ -1,3 +1,11 @@
+---
+name: "advanced"
+description: "```python"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Advanced Biopython Features
 
 ## Sequence Motifs with Bio.motifs

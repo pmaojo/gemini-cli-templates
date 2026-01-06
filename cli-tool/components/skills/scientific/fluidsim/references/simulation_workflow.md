@@ -1,3 +1,11 @@
+---
+name: "simulation_workflow"
+description: "Follow these steps to run a fluidsim simulation:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Simulation Workflow
 
 ## Standard Workflow

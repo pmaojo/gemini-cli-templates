@@ -1,3 +1,11 @@
+---
+name: "matrices-linear-algebra"
+description: "This document covers SymPy's matrix operations, linear algebra capabilities, and solving systems of linear equations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SymPy Matrices and Linear Algebra
 
 This document covers SymPy's matrix operations, linear algebra capabilities, and solving systems of linear equations.

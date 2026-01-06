@@ -1,3 +1,11 @@
+---
+name: "board_governance_investor_relations"
+description: "- **Size**: 7-9 members (odd number for voting)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Board Governance & Investor Relations Guide
 
 ## Board of Directors Management

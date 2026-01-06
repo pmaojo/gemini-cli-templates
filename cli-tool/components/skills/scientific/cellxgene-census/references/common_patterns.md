@@ -1,3 +1,11 @@
+---
+name: "common_patterns"
+description: "Use when exploring available data without loading expression matrices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Query Patterns and Best Practices
 
 ## Query Pattern Categories

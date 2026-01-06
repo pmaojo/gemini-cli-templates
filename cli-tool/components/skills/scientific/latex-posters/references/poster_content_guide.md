@@ -1,3 +1,11 @@
+---
+name: "poster_content_guide"
+description: "Content is king in research posters. This guide covers writing strategies, section-specific guidance, visual-text balance, and best practices for communicating research effectively in poster format."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Research Poster Content Guide
 
 ## Overview

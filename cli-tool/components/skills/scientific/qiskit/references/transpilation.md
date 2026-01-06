@@ -1,3 +1,11 @@
+---
+name: "transpilation"
+description: "Transpilation is the process of rewriting a quantum circuit to match the topology and gate set of a specific quantum device, while optimizing for execution on noisy quantum computers."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Circuit Transpilation and Optimization
 
 Transpilation is the process of rewriting a quantum circuit to match the topology and gate set of a specific quantum device, while optimizing for execution on noisy quantum computers.

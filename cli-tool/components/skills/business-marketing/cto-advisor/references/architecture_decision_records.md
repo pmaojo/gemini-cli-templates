@@ -1,3 +1,11 @@
+---
+name: "architecture_decision_records"
+description: "Architecture Decision Records capture important architectural decisions made along with their context and consequences. They help maintain institutional knowledge and explain why systems are built the way they are."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Architecture Decision Records (ADR) Framework
 
 ## What is an ADR?

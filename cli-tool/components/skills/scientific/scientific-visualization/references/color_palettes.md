@@ -1,3 +1,11 @@
+---
+name: "color_palettes"
+description: "Color choice in scientific visualization is critical for accessibility, clarity, and accurate data representation. This reference provides colorblind-friendly palettes and best practices for color usage."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scientific Color Palettes and Guidelines
 
 ## Overview

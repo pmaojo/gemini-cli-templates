@@ -1,3 +1,11 @@
+---
+name: "integrations"
+description: "This document covers LaminDB integrations with workflow managers, MLOps platforms, visualization tools, and other third-party systems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaminDB Integrations
 
 This document covers LaminDB integrations with workflow managers, MLOps platforms, visualization tools, and other third-party systems.

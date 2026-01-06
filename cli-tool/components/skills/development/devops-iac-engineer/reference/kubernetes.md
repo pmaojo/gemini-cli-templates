@@ -1,3 +1,11 @@
+---
+name: "kubernetes"
+description: "- **Control Plane**: API Server, Scheduler, Controller Manager, etcd"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Kubernetes & Container Orchestration
 
 ## Kubernetes Architecture Essentials

@@ -1,3 +1,11 @@
+---
+name: "microscopy_imaging_formats"
+description: "This reference covers file formats used in microscopy, medical imaging, remote sensing, and scientific image analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Microscopy and Imaging File Formats Reference
 
 This reference covers file formats used in microscopy, medical imaging, remote sensing, and scientific image analysis.

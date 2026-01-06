@@ -1,3 +1,11 @@
+---
+name: "journals_formatting"
+description: "Comprehensive formatting requirements and submission guidelines for major scientific journals across disciplines."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Journal Formatting Requirements
 
 Comprehensive formatting requirements and submission guidelines for major scientific journals across disciplines.

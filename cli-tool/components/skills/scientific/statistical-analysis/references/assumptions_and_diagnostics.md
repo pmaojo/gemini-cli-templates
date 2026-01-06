@@ -1,3 +1,11 @@
+---
+name: "assumptions_and_diagnostics"
+description: "This document provides comprehensive guidance on checking and validating statistical assumptions for various analyses."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Statistical Assumptions and Diagnostic Procedures
 
 This document provides comprehensive guidance on checking and validating statistical assumptions for various analyses.

@@ -1,3 +1,11 @@
+---
+name: "experiments"
+description: "Adaptyv provides multiple experimental assay types for comprehensive protein characterization. Each experiment type has specific applications, workflows, and data outputs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Experiment Types and Workflows
 
 ## Overview

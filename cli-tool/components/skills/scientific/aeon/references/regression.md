@@ -1,3 +1,11 @@
+---
+name: "regression"
+description: "Aeon provides time series regressors across 9 categories for predicting continuous values from temporal sequences."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Time Series Regression
 
 Aeon provides time series regressors across 9 categories for predicting continuous values from temporal sequences.

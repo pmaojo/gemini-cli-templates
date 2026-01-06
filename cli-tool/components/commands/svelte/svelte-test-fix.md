@@ -1,3 +1,11 @@
+---
+name: "svelte:test-fix"
+description: "Troubleshoot and fix failing tests in Svelte/SvelteKit projects, including debugging test issues and resolving common testing problems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:test-fix
 
 Troubleshoot and fix failing tests in Svelte/SvelteKit projects, including debugging test issues and resolving common testing problems.

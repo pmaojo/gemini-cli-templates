@@ -1,3 +1,11 @@
+---
+name: "api_endpoints"
+description: "Comprehensive documentation of all 17 API endpoint categories available in the Ensembl REST API (Release 115, September 2025)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Ensembl REST API Endpoints Reference
 
 Comprehensive documentation of all 17 API endpoint categories available in the Ensembl REST API (Release 115, September 2025).

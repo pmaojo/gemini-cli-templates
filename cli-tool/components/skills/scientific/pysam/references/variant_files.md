@@ -1,3 +1,11 @@
+---
+name: "variant_files"
+description: "Pysam provides the `VariantFile` class for reading and writing VCF (Variant Call Format) and BCF (binary VCF) files. These files contain information about genetic variants, including SNPs, indels, and structural variants."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Working with Variant Files (VCF/BCF)
 
 ## Overview

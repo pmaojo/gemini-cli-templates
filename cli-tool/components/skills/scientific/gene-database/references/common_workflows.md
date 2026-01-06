@@ -1,3 +1,11 @@
+---
+name: "common_workflows"
+description: "This document provides examples of common workflows and use cases for working with NCBI Gene database."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Gene Database Workflows
 
 This document provides examples of common workflows and use cases for working with NCBI Gene database.

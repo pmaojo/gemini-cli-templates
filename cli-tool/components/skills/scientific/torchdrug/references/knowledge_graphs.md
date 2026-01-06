@@ -1,3 +1,11 @@
+---
+name: "knowledge_graphs"
+description: "Knowledge graphs represent structured information as entities and relations in a graph format. TorchDrug provides comprehensive support for knowledge graph completion (link prediction) using embedding-based models and neural reasoning approaches."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Knowledge Graph Reasoning
 
 ## Overview

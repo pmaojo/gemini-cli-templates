@@ -1,3 +1,11 @@
+---
+name: "units"
+description: "The `astropy.units` module handles defining, converting between, and performing arithmetic with physical quantities."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Units and Quantities (astropy.units)
 
 The `astropy.units` module handles defining, converting between, and performing arithmetic with physical quantities.

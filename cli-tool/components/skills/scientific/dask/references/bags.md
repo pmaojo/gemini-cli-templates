@@ -1,3 +1,11 @@
+---
+name: "bags"
+description: "Dask Bag implements functional operations including `map`, `filter`, `fold`, and `groupby` on generic Python objects. It processes data in parallel while maintaining a small memory footprint through Python iterators. Bags function as \"a parallel version of PyToolz or a Pythonic version of the PySpark RDD.\""
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Dask Bags
 
 ## Overview

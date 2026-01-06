@@ -1,3 +1,11 @@
+---
+name: "real-time"
+description: "This guide covers real-time simulation capabilities in SimPy, where simulation time is synchronized with wall-clock time."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SimPy Real-Time Simulations
 
 This guide covers real-time simulation capabilities in SimPy, where simulation time is synchronized with wall-clock time.

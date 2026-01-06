@@ -1,3 +1,11 @@
+---
+name: "medical_coding"
+description: "Healthcare data uses multiple coding systems and standards. PyHealth's MedCode module enables translation and mapping between medical coding systems through ontology lookups and cross-system mappings."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyHealth Medical Code Translation
 
 ## Overview

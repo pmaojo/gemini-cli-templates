@@ -1,3 +1,11 @@
+---
+name: "epochs_events"
+description: "Event-related analysis examines physiological responses time-locked to specific stimuli or events. NeuroKit2 provides tools for event detection, epoch creation, averaging, and event-related feature extraction across all signal types."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Epochs and Event-Related Analysis
 
 ## Overview

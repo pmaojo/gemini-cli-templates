@@ -1,3 +1,11 @@
+---
+name: "treatment_plan_standards"
+description: "Treatment plans are comprehensive documents that outline systematic approaches to addressing patient health conditions through evidence-based interventions, measurable goals, and structured follow-up. This reference provides professional standards, documentation requirements, and legal considerations for creating high-quality treatment plans across all medical specialties."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 % Treatment Plan Standards and Best Practices
 % Professional guidelines for treatment plan documentation
 % Last updated: 2025

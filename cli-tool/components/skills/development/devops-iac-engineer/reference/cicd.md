@@ -1,3 +1,11 @@
+---
+name: "cicd"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # CI/CD Pipelines & GitOps
 
 ## CI/CD Pipeline Stages

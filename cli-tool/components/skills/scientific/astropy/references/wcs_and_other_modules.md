@@ -1,3 +1,11 @@
+---
+name: "wcs_and_other_modules"
+description: "The WCS module manages transformations between pixel coordinates in images and world coordinates (e.g., celestial coordinates)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # WCS and Other Astropy Modules
 
 ## World Coordinate System (astropy.wcs)

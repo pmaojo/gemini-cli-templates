@@ -1,3 +1,11 @@
+---
+name: "cosmology"
+description: "The `astropy.cosmology` subpackage provides tools for cosmological calculations based on various cosmological models."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Cosmological Calculations (astropy.cosmology)
 
 The `astropy.cosmology` subpackage provides tools for cosmological calculations based on various cosmological models.

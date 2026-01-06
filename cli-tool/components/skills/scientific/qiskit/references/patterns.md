@@ -1,3 +1,11 @@
+---
+name: "patterns"
+description: "Qiskit Patterns provide a general framework for solving domain-specific quantum computing problems in four stages: Map, Optimize, Execute, and Post-process."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Qiskit Patterns: The Four-Step Workflow
 
 Qiskit Patterns provide a general framework for solving domain-specific quantum computing problems in four stages: Map, Optimize, Execute, and Post-process.

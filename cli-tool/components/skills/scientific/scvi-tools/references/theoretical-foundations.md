@@ -1,3 +1,11 @@
+---
+name: "theoretical-foundations"
+description: "This document explains the mathematical and statistical principles underlying scvi-tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Theoretical Foundations of scvi-tools
 
 This document explains the mathematical and statistical principles underlying scvi-tools.

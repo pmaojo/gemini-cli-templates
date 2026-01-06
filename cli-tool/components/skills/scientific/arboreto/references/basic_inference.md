@@ -1,3 +1,11 @@
+---
+name: "basic_inference"
+description: "Arboreto requires gene expression data in one of two formats:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Basic GRN Inference with Arboreto
 
 ## Input Data Requirements

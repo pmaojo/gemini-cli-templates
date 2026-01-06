@@ -1,3 +1,11 @@
+---
+name: "authentication"
+description: "Benchling supports three authentication methods, each suited for different use cases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Benchling Authentication Reference
 
 ## Authentication Methods

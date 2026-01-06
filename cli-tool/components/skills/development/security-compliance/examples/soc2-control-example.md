@@ -1,3 +1,11 @@
+---
+name: "soc2-control-example"
+description: "The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events to meet the entity's objectives."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # SOC 2 Control Documentation Example
 
 ## Control: CC6.1 - Logical Access Controls

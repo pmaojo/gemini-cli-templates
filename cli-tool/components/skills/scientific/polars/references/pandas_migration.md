@@ -1,3 +1,11 @@
+---
+name: "pandas_migration"
+description: "This guide helps you migrate from pandas to Polars with comprehensive operation mappings and key differences."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pandas to Polars Migration Guide
 
 This guide helps you migrate from pandas to Polars with comprehensive operation mappings and key differences.

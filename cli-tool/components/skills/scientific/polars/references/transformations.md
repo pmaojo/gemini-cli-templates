@@ -1,3 +1,11 @@
+---
+name: "transformations"
+description: "Comprehensive guide to joins, concatenation, and reshaping operations in Polars."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Polars Data Transformations
 
 Comprehensive guide to joins, concatenation, and reshaping operations in Polars.

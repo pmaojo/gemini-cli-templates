@@ -1,3 +1,11 @@
+---
+name: "example_usage"
+description: "This document provides practical examples of using MarkItDown in various scenarios."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # MarkItDown Example Usage
 
 This document provides practical examples of using MarkItDown in various scenarios.

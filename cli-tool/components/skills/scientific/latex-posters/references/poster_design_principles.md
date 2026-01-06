@@ -1,3 +1,11 @@
+---
+name: "poster_design_principles"
+description: "Effective poster design balances visual appeal, readability, and scientific content. This guide covers typography, color theory, visual hierarchy, accessibility, and evidence-based design principles for research posters."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Research Poster Design Principles
 
 ## Overview

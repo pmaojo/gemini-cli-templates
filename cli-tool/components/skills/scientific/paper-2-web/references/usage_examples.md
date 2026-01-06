@@ -1,3 +1,11 @@
+---
+name: "usage_examples"
+description: "**Scenario**: Preparing for a major conference presentation with website, poster, and video."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Usage Examples and Workflows
 
 ## Complete Workflow Examples

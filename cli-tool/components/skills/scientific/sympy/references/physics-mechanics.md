@@ -1,3 +1,11 @@
+---
+name: "physics-mechanics"
+description: "This document covers SymPy's physics modules including classical mechanics, quantum mechanics, vector analysis, units, optics, continuum mechanics, and control systems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SymPy Physics and Mechanics
 
 This document covers SymPy's physics modules including classical mechanics, quantum mechanics, vector analysis, units, optics, continuum mechanics, and control systems.

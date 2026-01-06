@@ -1,3 +1,11 @@
+---
+name: "simple-commands"
+description: "Basic slash command patterns for common use cases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Simple Command Examples
 
 Basic slash command patterns for common use cases.

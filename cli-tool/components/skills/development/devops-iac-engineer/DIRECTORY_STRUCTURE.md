@@ -1,3 +1,11 @@
+---
+name: "DIRECTORY_STRUCTURE"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "devops-iac-engineer"
+---
+
 # DevOps IaC Engineer Skill - Directory Structure & Quick Reference
 
 ## Complete Directory Structure

@@ -1,3 +1,11 @@
+---
+name: "cli_operations"
+description: "Complete guide for operating CocoIndex flows using the CLI."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # CLI Operations Reference
 
 Complete guide for operating CocoIndex flows using the CLI.

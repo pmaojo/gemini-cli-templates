@@ -1,3 +1,11 @@
+---
+name: "patient_cohort_analysis"
+description: "Patient cohort analysis involves systematically studying groups of patients to identify patterns, compare outcomes, and derive clinical insights. In pharmaceutical and clinical research settings, cohort analysis is essential for understanding treatment effectiveness, biomarker correlations, and patient stratification."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Patient Cohort Analysis Guide
 
 ## Overview

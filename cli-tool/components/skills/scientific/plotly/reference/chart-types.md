@@ -1,3 +1,11 @@
+---
+name: "chart-types"
+description: "Comprehensive guide to chart types organized by category."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Plotly Chart Types
 
 Comprehensive guide to chart types organized by category.

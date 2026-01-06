@@ -1,3 +1,11 @@
+---
+name: "leadership_organizational_culture"
+description: "1. **Visionary Leadership**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Leadership & Organizational Culture Guide
 
 ## Leadership Philosophy

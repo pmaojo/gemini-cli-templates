@@ -1,3 +1,11 @@
+---
+name: "rois"
+description: "This reference covers creating, retrieving, and analyzing ROIs in OMERO."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Regions of Interest (ROIs)
 
 This reference covers creating, retrieving, and analyzing ROIs in OMERO.

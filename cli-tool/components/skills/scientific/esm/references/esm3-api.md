@@ -1,3 +1,11 @@
+---
+name: "esm3-api"
+description: "ESM3 is a frontier multimodal generative language model that reasons over the sequence, structure, and function of proteins. It uses iterative masked language modeling to simultaneously generate across these three modalities."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ESM3 API Reference
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "transformations"
+description: "Aeon provides extensive transformation capabilities for preprocessing, feature extraction, and representation learning from time series data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Transformations
 
 Aeon provides extensive transformation capabilities for preprocessing, feature extraction, and representation learning from time series data.

@@ -1,3 +1,11 @@
+---
+name: "advanced-topics"
+description: "This document covers SymPy's advanced mathematical capabilities including geometry, number theory, combinatorics, logic and sets, statistics, polynomials, and special functions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SymPy Advanced Topics
 
 This document covers SymPy's advanced mathematical capabilities including geometry, number theory, combinatorics, logic and sets, statistics, polynomials, and special functions.

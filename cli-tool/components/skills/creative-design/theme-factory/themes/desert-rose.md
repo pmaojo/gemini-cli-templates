@@ -1,3 +1,11 @@
+---
+name: "desert-rose"
+description: "A soft and sophisticated theme with dusty, muted tones perfect for elegant presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Desert Rose
 
 A soft and sophisticated theme with dusty, muted tones perfect for elegant presentations.

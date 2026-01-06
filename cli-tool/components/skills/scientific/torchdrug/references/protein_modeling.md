@@ -1,3 +1,11 @@
+---
+name: "protein_modeling"
+description: "TorchDrug provides extensive support for protein-related tasks including sequence analysis, structure prediction, property prediction, and protein-protein interactions. Proteins are represented as graphs where nodes are amino acid residues and edges represent spatial or sequential relationships."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Protein Modeling
 
 ## Overview

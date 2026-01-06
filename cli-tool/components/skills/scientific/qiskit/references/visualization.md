@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "Qiskit provides comprehensive visualization tools for quantum circuits, measurement results, and quantum states."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Visualization in Qiskit
 
 Qiskit provides comprehensive visualization tools for quantum circuits, measurement results, and quantum states.

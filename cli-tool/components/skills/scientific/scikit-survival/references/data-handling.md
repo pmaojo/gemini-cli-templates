@@ -1,3 +1,11 @@
+---
+name: "data-handling"
+description: "Survival data in scikit-survival is represented using structured arrays with two fields:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Handling and Preprocessing
 
 ## Understanding Survival Data

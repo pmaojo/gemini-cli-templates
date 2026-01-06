@@ -1,3 +1,11 @@
+---
+name: "callbacks"
+description: "This document provides comprehensive information about the callback system in Stable Baselines3 for monitoring and controlling training."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Stable Baselines3 Callback System
 
 This document provides comprehensive information about the callback system in Stable Baselines3 for monitoring and controlling training.

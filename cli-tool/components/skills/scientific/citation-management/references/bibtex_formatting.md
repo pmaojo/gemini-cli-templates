@@ -1,3 +1,11 @@
+---
+name: "bibtex_formatting"
+description: "Comprehensive guide to BibTeX entry types, required fields, formatting conventions, and best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # BibTeX Formatting Guide
 
 Comprehensive guide to BibTeX entry types, required fields, formatting conventions, and best practices.

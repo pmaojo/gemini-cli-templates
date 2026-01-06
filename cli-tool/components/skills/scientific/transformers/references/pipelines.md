@@ -1,3 +1,11 @@
+---
+name: "pipelines"
+description: "Pipelines provide the simplest way to use pre-trained models for inference. They abstract away tokenization, model loading, and post-processing, offering a unified interface for dozens of tasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pipeline API Reference
 
 ## Overview

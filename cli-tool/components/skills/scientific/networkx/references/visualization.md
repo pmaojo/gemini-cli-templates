@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "```python"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # NetworkX Graph Visualization
 
 ## Basic Drawing with Matplotlib

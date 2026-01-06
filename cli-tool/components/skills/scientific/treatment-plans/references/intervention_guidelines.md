@@ -1,3 +1,11 @@
+---
+name: "intervention_guidelines"
+description: "This reference provides comprehensive guidance on selecting, implementing, and documenting evidence-based interventions across pharmacological, non-pharmacological, and procedural treatment modalities. These guidelines support treatment plan development with current best practices and clinical recommendations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Evidence-Based Intervention Guidelines
 
 ## Overview

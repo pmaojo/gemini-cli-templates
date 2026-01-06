@@ -1,3 +1,11 @@
+---
+name: "transformations_workflows"
+description: "This reference documents pymatgen's transformation framework and provides recipes for common materials science workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymatgen Transformations and Common Workflows
 
 This reference documents pymatgen's transformation framework and provides recipes for common materials science workflows.

@@ -1,3 +1,11 @@
+---
+name: "census_schema"
+description: "The CZ CELLxGENE Census is a versioned collection of single-cell data built on the TileDB-SOMA framework. This reference documents the data structure, available metadata fields, and query syntax."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # CZ CELLxGENE Census Data Schema Reference
 
 ## Overview

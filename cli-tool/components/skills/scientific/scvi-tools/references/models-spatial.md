@@ -1,3 +1,11 @@
+---
+name: "models-spatial"
+description: "This document covers models for analyzing spatially-resolved transcriptomics data in scvi-tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Spatial Transcriptomics Models
 
 This document covers models for analyzing spatially-resolved transcriptomics data in scvi-tools.

@@ -1,3 +1,11 @@
+---
+name: "data-management"
+description: "Latch provides comprehensive data management through cloud storage abstractions (LatchFile, LatchDir) and a structured Registry system for organizing experimental data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Management
 
 ## Overview

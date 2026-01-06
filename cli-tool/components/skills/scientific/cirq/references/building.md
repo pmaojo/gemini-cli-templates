@@ -1,3 +1,11 @@
+---
+name: "building"
+description: "This guide covers circuit construction in Cirq, including qubits, gates, operations, and circuit patterns."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Building Quantum Circuits
 
 This guide covers circuit construction in Cirq, including qubits, gates, operations, and circuit patterns.

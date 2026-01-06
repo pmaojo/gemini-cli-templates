@@ -1,3 +1,11 @@
+---
+name: "advanced_features"
+description: "1. [Templates and Layers](#templates-and-layers)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Advanced Features in PennyLane
 
 ## Table of Contents

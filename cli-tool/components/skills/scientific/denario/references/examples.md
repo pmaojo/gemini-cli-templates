@@ -1,3 +1,11 @@
+---
+name: "examples"
+description: "This example demonstrates a full research pipeline from data to publication."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Denario Examples
 
 ## Complete End-to-End Research Example

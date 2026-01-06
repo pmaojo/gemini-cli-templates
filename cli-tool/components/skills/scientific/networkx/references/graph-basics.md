@@ -1,3 +1,11 @@
+---
+name: "graph-basics"
+description: "NetworkX supports four main graph classes:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # NetworkX Graph Basics
 
 ## Graph Types

@@ -1,3 +1,11 @@
+---
+name: "llm_integration_guide"
+description: "World-class llm integration guide for senior ml/ai engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Llm Integration Guide
 
 ## Overview

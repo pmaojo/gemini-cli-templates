@@ -1,3 +1,11 @@
+---
+name: "SPIKE_SORTING"
+description: "Comprehensive guide to spike sorting Neuropixels data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "neuropixels-analysis"
+---
+
 # Spike Sorting Reference
 
 Comprehensive guide to spike sorting Neuropixels data.

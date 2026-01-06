@@ -1,3 +1,11 @@
+---
+name: "io_module"
+description: "The `datamol.io` module provides comprehensive file handling for molecular data across multiple formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Datamol I/O Module Reference
 
 The `datamol.io` module provides comprehensive file handling for molecular data across multiple formats.

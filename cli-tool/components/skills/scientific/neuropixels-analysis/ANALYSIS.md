@@ -1,3 +1,11 @@
+---
+name: "ANALYSIS"
+description: "Comprehensive guide to quality metrics, visualization, and analysis of sorted Neuropixels data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "neuropixels-analysis"
+---
+
 # Post-Processing & Analysis Reference
 
 Comprehensive guide to quality metrics, visualization, and analysis of sorted Neuropixels data.

@@ -1,3 +1,11 @@
+---
+name: "differential-expression"
+description: "This document provides detailed information about differential expression (DE) analysis using scvi-tools' probabilistic framework."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Differential Expression Analysis in scvi-tools
 
 This document provides detailed information about differential expression (DE) analysis using scvi-tools' probabilistic framework.

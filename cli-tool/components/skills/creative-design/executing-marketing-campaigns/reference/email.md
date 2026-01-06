@@ -1,3 +1,11 @@
+---
+name: "email"
+description: "**Welcome Series** (new subscriber or customer)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Email Marketing Guide
 
 ## Email Marketing Fundamentals

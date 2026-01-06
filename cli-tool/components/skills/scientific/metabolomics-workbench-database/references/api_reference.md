@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "All API requests use the following base URL:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Metabolomics Workbench REST API Reference
 
 ## Base URL

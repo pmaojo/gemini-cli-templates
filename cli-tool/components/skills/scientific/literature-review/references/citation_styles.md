@@ -1,3 +1,11 @@
+---
+name: "citation_styles"
+description: "This document provides detailed guidelines for formatting citations in various academic styles commonly used in literature reviews."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Citation Styles Reference
 
 This document provides detailed guidelines for formatting citations in various academic styles commonly used in literature reviews.

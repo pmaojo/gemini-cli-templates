@@ -1,3 +1,11 @@
+---
+name: "algorithms"
+description: "This document provides detailed characteristics of all RL algorithms in Stable Baselines3 to help select the right algorithm for specific tasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Stable Baselines3 Algorithm Reference
 
 This document provides detailed characteristics of all RL algorithms in Stable Baselines3 to help select the right algorithm for specific tasks.

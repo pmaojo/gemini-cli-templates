@@ -1,3 +1,11 @@
+---
+name: "effort"
+description: "**Add effort set to `\"high\"` during migration.** This is the default configuration for best performance with Opus 4.5."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Effort Parameter (Beta)
 
 **Add effort set to `"high"` during migration.** This is the default configuration for best performance with Opus 4.5.

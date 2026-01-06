@@ -1,3 +1,11 @@
+---
+name: "performance"
+description: "This reference covers Vaex's performance features including lazy evaluation, caching, memory management, async operations, and optimization strategies for processing massive datasets."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Performance and Optimization
 
 This reference covers Vaex's performance features including lazy evaluation, caching, memory management, async operations, and optimization strategies for processing massive datasets.

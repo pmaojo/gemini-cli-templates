@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Complete technical reference for programmatic access to the ZINC database, covering API endpoints, query syntax, parameters, response formats, and advanced usage patterns for ZINC22, ZINC20, and legacy versions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ZINC Database API Reference
 
 ## Overview

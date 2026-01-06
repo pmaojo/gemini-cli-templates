@@ -1,3 +1,11 @@
+---
+name: "test-academic"
+description: "You have access to the systematic debugging skill at skills/debugging/systematic-debugging"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "systematic-debugging"
+---
+
 # Academic Test: Systematic Debugging Skill
 
 You have access to the systematic debugging skill at skills/debugging/systematic-debugging

@@ -1,3 +1,11 @@
+---
+name: "bio_module"
+description: "The Bio module provides unified functions for processing and analyzing multiple physiological signals simultaneously. It acts as a wrapper that coordinates signal-specific processing functions and enables integrated multi-modal analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Multi-Signal Integration (Bio Module)
 
 ## Overview

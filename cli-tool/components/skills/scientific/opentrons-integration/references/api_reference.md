@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "| Method | Description | Returns |"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Opentrons Python Protocol API v2 Reference
 
 ## Protocol Context Methods

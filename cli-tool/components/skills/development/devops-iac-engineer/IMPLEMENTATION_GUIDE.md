@@ -1,3 +1,11 @@
+---
+name: "IMPLEMENTATION_GUIDE"
+description: "Use this checklist to ensure the DevOps IaC Engineer Skill is properly deployed and ready for your team."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "devops-iac-engineer"
+---
+
 # DevOps IaC Engineer Skill - Implementation Guide
 
 ## Deployment Checklist

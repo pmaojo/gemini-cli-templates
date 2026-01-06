@@ -1,3 +1,11 @@
+---
+name: "parsing-techniques"
+description: "Complete guide to parsing `.gemini/plugin-name.local.md` files in bash scripts."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Settings File Parsing Techniques
 
 Complete guide to parsing `.gemini/plugin-name.local.md` files in bash scripts.

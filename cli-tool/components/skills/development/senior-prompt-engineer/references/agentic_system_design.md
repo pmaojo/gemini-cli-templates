@@ -1,3 +1,11 @@
+---
+name: "agentic_system_design"
+description: "World-class agentic system design for senior prompt engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Agentic System Design
 
 ## Overview

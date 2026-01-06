@@ -1,3 +1,11 @@
+---
+name: "models"
+description: "PyHealth provides 33+ models for healthcare prediction tasks, ranging from simple baselines to state-of-the-art deep learning architectures. Models are organized into general-purpose architectures and healthcare-specific models."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyHealth Models
 
 ## Overview

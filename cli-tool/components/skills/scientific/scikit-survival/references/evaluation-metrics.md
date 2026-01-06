@@ -1,3 +1,11 @@
+---
+name: "evaluation-metrics"
+description: "Evaluating survival models requires specialized metrics that account for censored data. scikit-survival provides three main categories of metrics:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Evaluation Metrics for Survival Models
 
 ## Overview

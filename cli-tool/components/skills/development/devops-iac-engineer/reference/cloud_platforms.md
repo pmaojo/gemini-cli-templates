@@ -1,3 +1,11 @@
+---
+name: "cloud_platforms"
+description: "- **Strengths**: Market leader, most services, mature ecosystem"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Cloud Platforms: AWS, Azure, GCP
 
 ## Cloud Platform Selection

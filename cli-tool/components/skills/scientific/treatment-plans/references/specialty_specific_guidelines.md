@@ -1,3 +1,11 @@
+---
+name: "specialty_specific_guidelines"
+description: "This reference provides detailed guidelines for developing treatment plans specific to each of the six template types: general medical, rehabilitation, mental health, chronic disease management, perioperative, and pain management. Each section includes specialty-specific considerations, clinical pearls, and best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Specialty-Specific Treatment Plan Guidelines
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "bioinformatics_genomics_formats"
+description: "This reference covers file formats used in genomics, transcriptomics, sequence analysis, and related bioinformatics applications."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Bioinformatics and Genomics File Formats Reference
 
 This reference covers file formats used in genomics, transcriptomics, sequence analysis, and related bioinformatics applications.

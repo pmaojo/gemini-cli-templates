@@ -1,3 +1,11 @@
+---
+name: "scheduled-jobs"
+description: "Schedule functions to run automatically at regular intervals or specific times."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scheduled Jobs and Cron
 
 ## Basic Scheduling

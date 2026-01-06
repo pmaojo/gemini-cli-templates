@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Complete reference documentation for the ClinPGx REST API."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ClinPGx API Reference
 
 Complete reference documentation for the ClinPGx REST API.

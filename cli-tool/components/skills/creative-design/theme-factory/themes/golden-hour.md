@@ -1,3 +1,11 @@
+---
+name: "golden-hour"
+description: "A rich and warm autumnal palette that creates an inviting and sophisticated atmosphere."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Golden Hour
 
 A rich and warm autumnal palette that creates an inviting and sophisticated atmosphere.

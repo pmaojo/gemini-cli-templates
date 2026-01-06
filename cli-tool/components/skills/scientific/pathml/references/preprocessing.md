@@ -1,3 +1,11 @@
+---
+name: "preprocessing"
+description: "PathML provides a modular preprocessing architecture based on composable transforms organized into pipelines. Transforms are individual operations that modify images, create masks, or extract features. Pipelines chain transforms together to create reproducible, scalable preprocessing workflows for computational pathology."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Preprocessing Pipelines & Transforms
 
 ## Overview

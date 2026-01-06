@@ -1,3 +1,11 @@
+---
+name: "scripts"
+description: "This reference covers creating OMERO.scripts for server-side processing and batch operations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scripts & Batch Operations
 
 This reference covers creating OMERO.scripts for server-side processing and batch operations.

@@ -1,3 +1,11 @@
+---
+name: "available_featurizers"
+description: "This document provides a comprehensive catalog of all featurizers available in molfeat, organized by category."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Available Featurizers in Molfeat
 
 This document provides a comprehensive catalog of all featurizers available in molfeat, organized by category.

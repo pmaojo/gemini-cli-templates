@@ -1,3 +1,11 @@
+---
+name: "citation_checklist"
+description: "Use this checklist to ensure your citations are accurate, complete, and properly formatted before final submission."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Citation Quality Checklist
 
 Use this checklist to ensure your citations are accurate, complete, and properly formatted before final submission.

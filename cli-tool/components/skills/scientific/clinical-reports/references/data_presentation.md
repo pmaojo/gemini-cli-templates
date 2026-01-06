@@ -1,3 +1,11 @@
+---
+name: "data_presentation"
+description: "**General guidelines:**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Presentation in Clinical Reports
 
 ## Tables for Clinical Data

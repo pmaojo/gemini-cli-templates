@@ -1,3 +1,11 @@
+---
+name: "html2pptx"
+description: "Convert HTML slides to PowerPoint presentations with accurate positioning using the `html2pptx.js` library."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "pptx"
+---
+
 # HTML to PowerPoint Guide
 
 Convert HTML slides to PowerPoint presentations with accurate positioning using the `html2pptx.js` library.

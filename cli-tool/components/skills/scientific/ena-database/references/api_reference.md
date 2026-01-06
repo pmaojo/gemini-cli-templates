@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Comprehensive reference for the European Nucleotide Archive REST APIs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ENA API Reference
 
 Comprehensive reference for the European Nucleotide Archive REST APIs.

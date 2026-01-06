@@ -1,3 +1,11 @@
+---
+name: "advanced-workflows"
+description: "Multi-step command sequences and composition patterns for complex workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Advanced Workflow Patterns
 
 Multi-step command sequences and composition patterns for complex workflows.

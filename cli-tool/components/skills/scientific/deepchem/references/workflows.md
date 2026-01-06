@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document provides detailed workflows for common DeepChem use cases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DeepChem Workflows
 
 This document provides detailed workflows for common DeepChem use cases.

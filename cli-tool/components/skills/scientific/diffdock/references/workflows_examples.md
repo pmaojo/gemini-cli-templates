@@ -1,3 +1,11 @@
+---
+name: "workflows_examples"
+description: "This document provides practical workflows and usage examples for common DiffDock tasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DiffDock Workflows and Examples
 
 This document provides practical workflows and usage examples for common DiffDock tasks.

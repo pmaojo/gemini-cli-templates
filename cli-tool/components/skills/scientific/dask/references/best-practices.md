@@ -1,3 +1,11 @@
+---
+name: "best-practices"
+description: "Before implementing parallel computing with Dask, explore these alternatives:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Dask Best Practices
 
 ## Performance Optimization Principles

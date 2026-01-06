@@ -1,3 +1,11 @@
+---
+name: "evaluation"
+description: "This document provides guidance on creating comprehensive evaluations for MCP servers. Evaluations test whether LLMs can effectively use your MCP server to answer realistic, complex questions using only the tools provided."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # MCP Server Evaluation Guide
 
 ## Overview

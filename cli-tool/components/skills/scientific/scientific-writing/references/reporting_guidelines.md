@@ -1,3 +1,11 @@
+---
+name: "reporting_guidelines"
+description: "Reporting guidelines are evidence-based recommendations for what information should be included when reporting specific types of research studies. They provide checklists and flow diagrams to ensure complete, accurate, and transparent reporting, which is essential for readers to assess study validity and for other researchers to replicate the work."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Reporting Guidelines for Scientific Studies
 
 ## Overview

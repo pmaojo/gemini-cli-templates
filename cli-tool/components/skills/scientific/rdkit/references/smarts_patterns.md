@@ -1,3 +1,11 @@
+---
+name: "smarts_patterns"
+description: "This document provides a collection of commonly used SMARTS patterns for substructure searching in RDKit."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common SMARTS Patterns for RDKit
 
 This document provides a collection of commonly used SMARTS patterns for substructure searching in RDKit.

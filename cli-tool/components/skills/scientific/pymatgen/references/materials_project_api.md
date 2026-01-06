@@ -1,3 +1,11 @@
+---
+name: "materials_project_api"
+description: "This reference documents how to access and use the Materials Project database through pymatgen's API integration."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Materials Project API Reference
 
 This reference documents how to access and use the Materials Project database through pymatgen's API integration.

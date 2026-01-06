@@ -1,3 +1,11 @@
+---
+name: "core_concepts"
+description: "Expressions are the foundation of Polars' API. They are composable units that describe data transformations without executing them immediately."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Polars Core Concepts
 
 ## Expressions

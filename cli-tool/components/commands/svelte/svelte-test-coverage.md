@@ -1,3 +1,11 @@
+---
+name: "svelte:test-coverage"
+description: "Analyze test coverage, identify testing gaps, and provide recommendations for improving test coverage in Svelte/SvelteKit projects."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:test-coverage
 
 Analyze test coverage, identify testing gaps, and provide recommendations for improving test coverage in Svelte/SvelteKit projects.

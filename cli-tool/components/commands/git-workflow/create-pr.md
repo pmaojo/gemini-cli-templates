@@ -1,3 +1,11 @@
+---
+name: "create-pr"
+description: "Create a new branch, commit changes, and submit a pull request."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "git-workflow"
+---
+
 # Create Pull Request Command
 
 Create a new branch, commit changes, and submit a pull request.

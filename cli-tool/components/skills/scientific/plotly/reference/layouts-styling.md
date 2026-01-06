@@ -1,3 +1,11 @@
+---
+name: "layouts-styling"
+description: "```python"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Layouts, Styling, and Customization
 
 ## Subplots

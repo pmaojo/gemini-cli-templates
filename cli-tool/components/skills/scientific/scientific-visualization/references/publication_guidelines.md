@@ -1,3 +1,11 @@
+---
+name: "publication_guidelines"
+description: "Scientific figures must be clear, accurate, and accessible. Publication-ready figures follow these fundamental principles:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Publication-Ready Figure Guidelines
 
 ## Core Principles

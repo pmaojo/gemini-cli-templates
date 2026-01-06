@@ -1,3 +1,11 @@
+---
+name: "technology_evaluation_framework"
+description: "- Core features needed"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Technology Evaluation Framework
 
 ## Evaluation Process

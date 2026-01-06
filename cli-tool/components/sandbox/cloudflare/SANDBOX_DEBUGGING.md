@@ -1,3 +1,11 @@
+---
+name: "SANDBOX_DEBUGGING"
+description: "**File**: `launcher.ts`"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "cloudflare"
+---
+
 # Cloudflare Sandbox Debugging Guide
 
 ## 🔍 Available Monitoring Tools

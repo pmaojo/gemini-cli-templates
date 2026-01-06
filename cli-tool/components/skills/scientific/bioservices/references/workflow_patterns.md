@@ -1,3 +1,11 @@
+---
+name: "workflow_patterns"
+description: "This document describes detailed multi-step workflows for common bioinformatics tasks using BioServices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # BioServices: Common Workflow Patterns
 
 This document describes detailed multi-step workflows for common bioinformatics tasks using BioServices.

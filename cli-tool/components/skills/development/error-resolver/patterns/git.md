@@ -1,3 +1,11 @@
+---
+name: "git"
+description: "Common Git errors with diagnosis and solutions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # Git Error Patterns
 
 Common Git errors with diagnosis and solutions.

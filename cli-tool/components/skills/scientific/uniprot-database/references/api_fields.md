@@ -1,3 +1,11 @@
+---
+name: "api_fields"
+description: "Complete list of available fields for customizing UniProt API queries. Use these fields with the `fields` parameter to retrieve only the data you need."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # UniProt API Fields Reference
 
 Complete list of available fields for customizing UniProt API queries. Use these fields with the `fields` parameter to retrieve only the data you need.

@@ -1,3 +1,11 @@
+---
+name: "archive"
+description: "Properly archive completed orchestrations while preserving valuable data, metrics, and lessons learned for future reference."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestration Archive Command
 
 Properly archive completed orchestrations while preserving valuable data, metrics, and lessons learned for future reference.

@@ -1,3 +1,11 @@
+---
+name: "dataops_best_practices"
+description: "World-class dataops best practices for senior data engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Dataops Best Practices
 
 ## Overview

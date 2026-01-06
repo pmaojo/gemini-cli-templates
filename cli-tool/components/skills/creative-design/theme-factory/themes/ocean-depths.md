@@ -1,3 +1,11 @@
+---
+name: "ocean-depths"
+description: "A professional and calming maritime theme that evokes the serenity of deep ocean waters."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Ocean Depths
 
 A professional and calming maritime theme that evokes the serenity of deep ocean waters.

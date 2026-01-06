@@ -1,3 +1,11 @@
+---
+name: "real-world-examples"
+description: "Detailed analysis of how production plugins use the `.gemini/plugin-name.local.md` pattern."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Real-World Plugin Settings Examples
 
 Detailed analysis of how production plugins use the `.gemini/plugin-name.local.md` pattern.

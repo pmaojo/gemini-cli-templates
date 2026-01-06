@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Comprehensive skill for writing competitive research grant proposals focused on four major U.S. funding agencies:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "research-grants"
+---
+
 # Research Grants Skill
 
 ## Overview

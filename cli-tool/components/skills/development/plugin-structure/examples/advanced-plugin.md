@@ -1,3 +1,11 @@
+---
+name: "advanced-plugin"
+description: "A complex, enterprise-grade plugin with MCP integration and advanced organization."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Advanced Plugin Example
 
 A complex, enterprise-grade plugin with MCP integration and advanced organization.

@@ -1,3 +1,11 @@
+---
+name: "models-specialized"
+description: "This document covers models for specialized single-cell data modalities in scvi-tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Specialized Modality Models
 
 This document covers models for specialized single-cell data modalities in scvi-tools.

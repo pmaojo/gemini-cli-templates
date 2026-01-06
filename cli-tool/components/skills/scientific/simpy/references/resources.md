@@ -1,3 +1,11 @@
+---
+name: "resources"
+description: "This guide covers all resource types in SimPy for modeling congestion points and resource allocation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SimPy Shared Resources
 
 This guide covers all resource types in SimPy for modeling congestion points and resource allocation.

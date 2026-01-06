@@ -1,3 +1,11 @@
+---
+name: "timing_guidelines"
+description: "Proper timing is critical for professional scientific presentations. This guide provides detailed guidelines for slide counts, time allocation, pacing strategies, and practice techniques to ensure your presentation fits the allotted time while maintaining engagement and clarity."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Presentation Timing Guidelines
 
 ## Overview

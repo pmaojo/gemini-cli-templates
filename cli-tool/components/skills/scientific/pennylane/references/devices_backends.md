@@ -1,3 +1,11 @@
+---
+name: "devices_backends"
+description: "1. [Built-in Simulators](#built-in-simulators)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Devices and Backends in PennyLane
 
 ## Table of Contents

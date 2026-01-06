@@ -1,3 +1,11 @@
+---
+name: "constraints_mcdm"
+description: "Reference for constraint handling and multi-criteria decision making in pymoo."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymoo Constraints and Decision Making Reference
 
 Reference for constraint handling and multi-criteria decision making in pymoo.

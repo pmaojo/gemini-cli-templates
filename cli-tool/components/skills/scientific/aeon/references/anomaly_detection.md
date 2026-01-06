@@ -1,3 +1,11 @@
+---
+name: "anomaly_detection"
+description: "Aeon provides anomaly detection methods for identifying unusual patterns in time series at both series and collection levels."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Anomaly Detection
 
 Aeon provides anomaly detection methods for identifying unusual patterns in time series at both series and collection levels.

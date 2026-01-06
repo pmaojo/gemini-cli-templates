@@ -1,3 +1,11 @@
+---
+name: "computer_vision_architectures"
+description: "World-class computer vision architectures for senior computer vision engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Computer Vision Architectures
 
 ## Overview

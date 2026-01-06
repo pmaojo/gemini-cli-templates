@@ -1,3 +1,11 @@
+---
+name: "futures"
+description: "Dask futures extend Python's `concurrent.futures` interface, enabling immediate (non-lazy) task execution. Unlike delayed computations (used in DataFrames, Arrays, and Bags), futures provide more flexibility in situations where computations may evolve over time or require dynamic workflow construction."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Dask Futures
 
 ## Overview

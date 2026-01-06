@@ -1,3 +1,11 @@
+---
+name: "social_media_optimization"
+description: "**Audience**: B2B professionals, decision-makers, thought leaders"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Social Media Optimization Guide
 
 ## Platform-Specific Best Practices

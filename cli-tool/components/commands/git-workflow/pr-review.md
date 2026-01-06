@@ -1,3 +1,11 @@
+---
+name: "pr-review"
+description: "**PR Link/Number**: $ARGUMENTS"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "git-workflow"
+---
+
 # PR Review
 
 **PR Link/Number**: $ARGUMENTS

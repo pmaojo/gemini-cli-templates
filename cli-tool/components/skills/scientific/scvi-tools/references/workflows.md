@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document covers common workflows, best practices, and advanced usage patterns for scvi-tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Workflows and Best Practices
 
 This document covers common workflows, best practices, and advanced usage patterns for scvi-tools.

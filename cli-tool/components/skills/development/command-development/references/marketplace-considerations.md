@@ -1,3 +1,11 @@
+---
+name: "marketplace-considerations"
+description: "Guidelines for creating commands designed for distribution and marketplace success."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Marketplace Considerations for Commands
 
 Guidelines for creating commands designed for distribution and marketplace success.

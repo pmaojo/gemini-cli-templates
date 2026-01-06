@@ -1,3 +1,11 @@
+---
+name: "QUICK_REFERENCE"
+description: "```bash"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "markitdown"
+---
+
 # MarkItDown Quick Reference
 
 ## Installation

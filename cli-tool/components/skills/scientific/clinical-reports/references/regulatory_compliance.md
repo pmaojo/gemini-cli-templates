@@ -1,3 +1,11 @@
+---
+name: "regulatory_compliance"
+description: "HIPAA Privacy Rule protects individually identifiable health information (Protected Health Information, PHI). All clinical reports must comply with HIPAA requirements for privacy and security."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Regulatory Compliance for Clinical Reports
 
 ## HIPAA (Health Insurance Portability and Accountability Act)

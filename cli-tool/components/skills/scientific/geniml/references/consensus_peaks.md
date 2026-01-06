@@ -1,3 +1,11 @@
+---
+name: "consensus_peaks"
+description: "Geniml provides tools for building genomic \"universes\" — standardized reference sets of consensus peaks from collections of BED files. These universes represent genomic regions where analyzed datasets show significant coverage overlap, serving as reference vocabularies for tokenization and analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Consensus Peaks: Universe Building
 
 ## Overview

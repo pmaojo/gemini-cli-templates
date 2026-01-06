@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Skill for generating **concise, clinician-focused** medical treatment plans across all clinical specialties. Provides LaTeX/PDF templates with SMART goal frameworks, evidence-based interventions, regulatory compliance, and validation tools for patient-centered care planning."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "treatment-plans"
+---
+
 # Treatment Plans Skill
 
 ## Overview

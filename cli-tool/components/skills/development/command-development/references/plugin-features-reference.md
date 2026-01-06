@@ -1,3 +1,11 @@
+---
+name: "plugin-features-reference"
+description: "This reference covers features and patterns specific to commands bundled in Gemini CLI plugins."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Plugin-Specific Command Features Reference
 
 This reference covers features and patterns specific to commands bundled in Gemini CLI plugins.

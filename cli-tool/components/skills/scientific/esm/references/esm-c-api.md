@@ -1,3 +1,11 @@
+---
+name: "esm-c-api"
+description: "ESM C (Cambrian) is a family of protein language models optimized for representation learning and efficient embedding generation. Designed as a drop-in replacement for ESM2, ESM C provides significant improvements in speed and quality across all model sizes."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ESM C API Reference
 
 ## Overview

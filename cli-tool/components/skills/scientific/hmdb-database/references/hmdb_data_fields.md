@@ -1,3 +1,11 @@
+---
+name: "hmdb_data_fields"
+description: "This document provides detailed information about the data fields available in HMDB metabolite entries."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # HMDB Data Fields Reference
 
 This document provides detailed information about the data fields available in HMDB metabolite entries.

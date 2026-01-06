@@ -1,3 +1,11 @@
+---
+name: "poster_quality_checklist"
+description: "Use this comprehensive checklist before printing or presenting your research poster."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Research Poster Quality Checklist
 
 Use this comprehensive checklist before printing or presenting your research poster.

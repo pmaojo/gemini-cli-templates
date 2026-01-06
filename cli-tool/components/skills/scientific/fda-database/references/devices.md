@@ -1,3 +1,11 @@
+---
+name: "devices"
+description: "This reference covers all FDA medical device-related API endpoints accessible through openFDA."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FDA Medical Device Databases
 
 This reference covers all FDA medical device-related API endpoints accessible through openFDA.

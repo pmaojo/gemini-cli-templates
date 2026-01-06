@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This reference provides a concise overview of commonly used Zarr functions, parameters, and patterns for quick lookup during development."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Zarr Python Quick Reference
 
 This reference provides a concise overview of commonly used Zarr functions, parameters, and patterns for quick lookup during development.

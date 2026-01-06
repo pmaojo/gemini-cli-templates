@@ -1,3 +1,11 @@
+---
+name: "report_structure_guide"
+description: "Detailed guidance for writing each section of a comprehensive market research report."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Market Research Report Structure Guide
 
 Detailed guidance for writing each section of a comprehensive market research report.

@@ -1,3 +1,11 @@
+---
+name: "medical_terminology"
+description: "**Purpose:** Comprehensive clinical terminology for electronic health records"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Medical Terminology and Coding Standards
 
 ## Standard Nomenclature Systems

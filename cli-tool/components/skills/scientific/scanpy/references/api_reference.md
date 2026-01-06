@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Quick reference for commonly used scanpy functions organized by module."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scanpy API Quick Reference
 
 Quick reference for commonly used scanpy functions organized by module.

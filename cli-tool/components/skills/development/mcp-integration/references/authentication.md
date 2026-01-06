@@ -1,3 +1,11 @@
+---
+name: "authentication"
+description: "Complete guide to authentication methods for MCP servers in Gemini CLI plugins."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # MCP Authentication Patterns
 
 Complete guide to authentication methods for MCP servers in Gemini CLI plugins.

@@ -1,3 +1,11 @@
+---
+name: "query_syntax"
+description: "Comprehensive guide to UniProt search query syntax for constructing complex searches."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # UniProt Query Syntax Reference
 
 Comprehensive guide to UniProt search query syntax for constructing complex searches.

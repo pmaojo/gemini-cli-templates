@@ -1,3 +1,11 @@
+---
+name: "nih_guidelines"
+description: "**Mission**: To seek fundamental knowledge about the nature and behavior of living systems and to apply that knowledge to enhance health, lengthen life, and reduce illness and disability"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # NIH (National Institutes of Health) Grant Writing Guidelines
 
 ## Agency Overview

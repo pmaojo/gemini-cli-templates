@@ -1,3 +1,11 @@
+---
+name: "coverage"
+description: "The uniwig module generates coverage tracks from sequencing data, providing efficient conversion of genomic intervals to coverage profiles."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Coverage Analysis with Uniwig
 
 The uniwig module generates coverage tracks from sequencing data, providing efficient conversion of genomic intervals to coverage profiles.

@@ -1,3 +1,11 @@
+---
+name: "example_gbm_cohort"
+description: "This example demonstrates a patient cohort analysis stratified by molecular biomarkers, similar to the GBM Mesenchymal-Immune-Active cluster analysis provided as reference."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Example: GBM Molecular Subtype Cohort Analysis
 
 ## Clinical Context

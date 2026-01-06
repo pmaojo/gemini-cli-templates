@@ -1,3 +1,11 @@
+---
+name: "module_reference"
+description: "Comprehensive parameter reference for all gget modules."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # gget Module Reference
 
 Comprehensive parameter reference for all gget modules.

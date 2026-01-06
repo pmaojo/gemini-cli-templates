@@ -1,3 +1,11 @@
+---
+name: "authentication"
+description: "The protocols.io API supports two types of access tokens for authentication, enabling access to both public and private content."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Protocols.io Authentication
 
 ## Overview

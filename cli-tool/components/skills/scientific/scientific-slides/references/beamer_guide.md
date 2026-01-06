@@ -1,3 +1,11 @@
+---
+name: "beamer_guide"
+description: "Beamer is a LaTeX document class for creating presentations with professional, consistent formatting. It's particularly well-suited for scientific presentations containing equations, code, algorithms, and citations. This guide covers Beamer basics, themes, customization, and advanced features for effective scientific talks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaTeX Beamer Guide for Scientific Presentations
 
 ## Overview

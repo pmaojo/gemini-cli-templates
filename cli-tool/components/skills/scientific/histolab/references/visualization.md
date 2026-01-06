@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "Histolab provides several built-in visualization methods to help inspect slides, preview tile locations, visualize masks, and assess extraction quality. Proper visualization is essential for validating preprocessing pipelines, debugging extraction issues, and presenting results."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Visualization
 
 ## Overview

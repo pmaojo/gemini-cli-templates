@@ -1,3 +1,11 @@
+---
+name: "standard-plugin"
+description: "A well-structured plugin with commands, agents, and skills."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Standard Plugin Example
 
 A well-structured plugin with commands, agents, and skills.

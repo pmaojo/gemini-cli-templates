@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document provides complete workflows for common tasks using the ETE Toolkit."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ETE Toolkit Common Workflows
 
 This document provides complete workflows for common tasks using the ETE Toolkit.

@@ -1,3 +1,11 @@
+---
+name: "nih_specific_aims_template"
+description: "**CRITICAL**: Exactly 1 page, 0.5-inch margins, 11-point font minimum"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # NIH Specific Aims Page Template
 
 **CRITICAL**: Exactly 1 page, 0.5-inch margins, 11-point font minimum

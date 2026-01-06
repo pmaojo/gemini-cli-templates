@@ -1,3 +1,11 @@
+---
+name: "signal_processing"
+description: "PyOpenMS provides algorithms for processing raw mass spectrometry data including smoothing, filtering, peak picking, centroiding, normalization, and deconvolution."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Signal Processing
 
 ## Overview

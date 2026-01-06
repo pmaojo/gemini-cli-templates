@@ -1,3 +1,11 @@
+---
+name: "optimization"
+description: "1. [Built-in Optimizers](#built-in-optimizers)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Optimization in PennyLane
 
 ## Table of Contents

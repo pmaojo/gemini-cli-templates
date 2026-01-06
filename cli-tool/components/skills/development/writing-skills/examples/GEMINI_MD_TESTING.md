@@ -1,3 +1,11 @@
+---
+name: "GEMINI_MD_TESTING"
+description: "Testing different documentation variants to find what actually makes agents discover and use skills under pressure."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Testing GEMINI.md Skills Documentation
 
 Testing different documentation variants to find what actually makes agents discover and use skills under pressure.

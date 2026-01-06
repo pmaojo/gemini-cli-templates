@@ -1,3 +1,11 @@
+---
+name: "overlap"
+description: "The overlaprs module provides efficient overlap detection between genomic intervals using the Integrated Genome Database (IGD) data structure."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Overlap Detection and IGD
 
 The overlaprs module provides efficient overlap detection between genomic intervals using the Integrated Genome Database (IGD) data structure.

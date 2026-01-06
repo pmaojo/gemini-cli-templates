@@ -1,3 +1,11 @@
+---
+name: "complexity"
+description: "Complexity measures quantify the irregularity, unpredictability, and multiscale structure of time series signals. NeuroKit2 provides comprehensive entropy, fractal dimension, and nonlinear dynamics measures for assessing physiological signal complexity."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Complexity and Entropy Analysis
 
 ## Overview

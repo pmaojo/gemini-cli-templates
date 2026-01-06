@@ -1,3 +1,11 @@
+---
+name: "quality_checklist"
+description: "- [ ] All required sections present"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Clinical Report Quality Assurance Checklist
 
 ## General Quality Standards

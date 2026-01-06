@@ -1,3 +1,11 @@
+---
+name: "defense-in-depth"
+description: "When you fix a bug caused by invalid data, adding validation at one place feels sufficient. But that single check can be bypassed by different code paths, refactoring, or mocks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "systematic-debugging"
+---
+
 # Defense-in-Depth Validation
 
 ## Overview

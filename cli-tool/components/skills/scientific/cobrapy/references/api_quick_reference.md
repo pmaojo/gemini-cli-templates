@@ -1,3 +1,11 @@
+---
+name: "api_quick_reference"
+description: "This document provides quick reference for common COBRApy functions, signatures, and usage patterns."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # COBRApy API Quick Reference
 
 This document provides quick reference for common COBRApy functions, signatures, and usage patterns.

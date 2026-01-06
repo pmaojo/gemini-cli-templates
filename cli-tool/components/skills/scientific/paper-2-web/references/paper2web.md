@@ -1,3 +1,11 @@
+---
+name: "paper2web"
+description: "Paper2Web converts academic papers into interactive, explorable academic homepages. Unlike traditional approaches (direct generation, template-based, or HTML conversion), Paper2Web creates layout-aware, interactive websites through an iterative refinement process."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Paper2Web: Academic Homepage Generation
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "arrays"
+description: "Dask Array implements NumPy's ndarray interface using blocked algorithms. It coordinates many NumPy arrays arranged into a grid to enable computation on datasets larger than available memory, utilizing parallelism across multiple cores."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Dask Arrays
 
 ## Overview

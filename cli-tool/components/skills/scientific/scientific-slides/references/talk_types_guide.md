@@ -1,3 +1,11 @@
+---
+name: "talk_types_guide"
+description: "Different presentation contexts require different approaches, structures, and emphasis. This guide provides detailed guidance for common scientific talk types: conference presentations, academic seminars, thesis defenses, grant pitches, and journal club presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scientific Talk Types Guide
 
 ## Overview

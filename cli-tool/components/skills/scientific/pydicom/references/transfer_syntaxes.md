@@ -1,3 +1,11 @@
+---
+name: "transfer_syntaxes"
+description: "This document provides a comprehensive reference for DICOM transfer syntaxes and compression formats. Transfer syntaxes define how DICOM data is encoded, including byte ordering, compression method, and other encoding rules."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DICOM Transfer Syntaxes Reference
 
 This document provides a comprehensive reference for DICOM transfer syntaxes and compression formats. Transfer syntaxes define how DICOM data is encoded, including byte ordering, compression method, and other encoding rules.

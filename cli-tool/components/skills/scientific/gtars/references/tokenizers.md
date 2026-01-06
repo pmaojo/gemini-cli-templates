@@ -1,3 +1,11 @@
+---
+name: "tokenizers"
+description: "Tokenizers convert genomic regions into discrete tokens for machine learning applications, particularly useful for training genomic deep learning models."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Genomic Tokenizers
 
 Tokenizers convert genomic regions into discrete tokens for machine learning applications, particularly useful for training genomic deep learning models.

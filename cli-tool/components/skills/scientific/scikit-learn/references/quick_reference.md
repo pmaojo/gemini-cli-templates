@@ -1,3 +1,11 @@
+---
+name: "quick_reference"
+description: "```python"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scikit-learn Quick Reference
 
 ## Common Import Patterns

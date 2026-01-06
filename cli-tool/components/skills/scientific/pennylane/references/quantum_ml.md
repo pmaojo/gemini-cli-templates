@@ -1,3 +1,11 @@
+---
+name: "quantum_ml"
+description: "1. [Hybrid Quantum-Classical Models](#hybrid-quantum-classical-models)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Quantum Machine Learning with PennyLane
 
 ## Table of Contents

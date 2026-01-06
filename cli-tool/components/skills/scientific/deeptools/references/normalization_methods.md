@@ -1,3 +1,11 @@
+---
+name: "normalization_methods"
+description: "This document explains the various normalization methods available in deepTools and when to use each one."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # deepTools Normalization Methods
 
 This document explains the various normalization methods available in deepTools and when to use each one.

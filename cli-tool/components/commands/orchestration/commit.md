@@ -1,3 +1,11 @@
+---
+name: "commit"
+description: "Create git commits aligned with task completion, maintaining clean version control synchronized with task progress."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestration Commit Command
 
 Create git commits aligned with task completion, maintaining clean version control synchronized with task progress.

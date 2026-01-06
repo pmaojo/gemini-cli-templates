@@ -1,3 +1,11 @@
+---
+name: "file_io"
+description: "PyOpenMS supports multiple mass spectrometry file formats for reading and writing. This guide covers file handling strategies and format-specific operations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # File I/O and Data Formats
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "presentation_structure"
+description: "Effective scientific presentations follow a clear narrative structure that guides the audience through your research story. This guide provides structure templates for different talk lengths and contexts, helping you organize content for maximum impact and clarity."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Presentation Structure Guide
 
 ## Overview

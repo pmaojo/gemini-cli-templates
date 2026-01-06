@@ -1,3 +1,11 @@
+---
+name: "tool-usage"
+description: "Complete guide to using MCP tools effectively in Gemini CLI plugin commands and agents."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Using MCP Tools in Commands and Agents
 
 Complete guide to using MCP tools effectively in Gemini CLI plugin commands and agents.

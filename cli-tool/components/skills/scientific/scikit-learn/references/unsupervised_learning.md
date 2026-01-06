@@ -1,3 +1,11 @@
+---
+name: "unsupervised_learning"
+description: "Unsupervised learning discovers patterns in unlabeled data through clustering, dimensionality reduction, and density estimation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Unsupervised Learning Reference
 
 ## Overview

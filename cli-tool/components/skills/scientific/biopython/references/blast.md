@@ -1,3 +1,11 @@
+---
+name: "blast"
+description: "Bio.Blast provides tools for running BLAST searches (both locally and via NCBI web services) and parsing BLAST results in various formats. The module handles the complexity of submitting queries and parsing outputs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # BLAST Operations with Bio.Blast
 
 ## Overview

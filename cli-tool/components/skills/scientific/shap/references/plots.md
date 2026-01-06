@@ -1,3 +1,11 @@
+---
+name: "plots"
+description: "This document provides comprehensive information about all SHAP plotting functions, their parameters, use cases, and best practices for visualizing model explanations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SHAP Visualization Reference
 
 This document provides comprehensive information about all SHAP plotting functions, their parameters, use cases, and best practices for visualizing model explanations.

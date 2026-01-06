@@ -1,3 +1,11 @@
+---
+name: "models"
+description: "The transformers library provides flexible model loading with automatic architecture detection, device management, and configuration control."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Model Loading and Management
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "experiment_design_frameworks"
+description: "World-class experiment design frameworks for senior data scientist."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Experiment Design Frameworks
 
 ## Overview

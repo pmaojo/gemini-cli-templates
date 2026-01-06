@@ -1,3 +1,11 @@
+---
+name: "core-concepts"
+description: "This document covers the fundamental concepts and building blocks of LaminDB: Artifacts, Records, Runs, Transforms, Features, and data lineage tracking."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaminDB Core Concepts
 
 This document covers the fundamental concepts and building blocks of LaminDB: Artifacts, Records, Runs, Transforms, Features, and data lineage tracking.

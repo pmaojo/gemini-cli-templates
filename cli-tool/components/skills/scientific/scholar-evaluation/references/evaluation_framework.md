@@ -1,3 +1,11 @@
+---
+name: "evaluation_framework"
+description: "This document provides detailed evaluation criteria, rubrics, and quality indicators for each dimension of the ScholarEval framework. Use these standards when conducting systematic evaluations of scholarly work."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ScholarEval Evaluation Framework
 
 ## Overview

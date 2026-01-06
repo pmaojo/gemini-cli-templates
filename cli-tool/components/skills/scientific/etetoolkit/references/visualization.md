@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "Complete guide to tree visualization with ETE Toolkit."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ETE Toolkit Visualization Guide
 
 Complete guide to tree visualization with ETE Toolkit.

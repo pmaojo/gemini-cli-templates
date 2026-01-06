@@ -1,3 +1,11 @@
+---
+name: "MOTION_CORRECTION"
+description: "Mechanical drift during acute probe insertion is a major challenge for Neuropixels recordings. This guide covers detection, estimation, and correction of motion artifacts."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "neuropixels-analysis"
+---
+
 # Motion/Drift Correction Reference
 
 Mechanical drift during acute probe insertion is a major challenge for Neuropixels recordings. This guide covers detection, estimation, and correction of motion artifacts.

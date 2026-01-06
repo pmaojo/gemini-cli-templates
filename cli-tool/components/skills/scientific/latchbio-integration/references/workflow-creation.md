@@ -1,3 +1,11 @@
+---
+name: "workflow-creation"
+description: "The Latch SDK enables defining serverless bioinformatics workflows using Python decorators and deploying them with automatic containerization and UI generation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Workflow Creation and Registration
 
 ## Overview

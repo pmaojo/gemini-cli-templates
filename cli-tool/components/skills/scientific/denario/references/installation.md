@@ -1,3 +1,11 @@
+---
+name: "installation"
+description: "- **Python**: Version 3.12 or higher (required)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Installation Guide
 
 ## System Requirements

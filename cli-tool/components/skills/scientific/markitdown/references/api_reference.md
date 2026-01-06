@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "The main class for converting files to Markdown."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # MarkItDown API Reference
 
 ## Core Classes

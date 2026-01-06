@@ -1,3 +1,11 @@
+---
+name: "plotting_guide"
+description: "Comprehensive guide for creating publication-quality visualizations from Neuropixels data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Plotting Guide
 
 Comprehensive guide for creating publication-quality visualizations from Neuropixels data.

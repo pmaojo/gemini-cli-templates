@@ -1,3 +1,11 @@
+---
+name: "persuasion-principles"
+description: "LLMs respond to the same persuasion principles as humans. Understanding this psychology helps you design more effective skills - not to manipulate, but to ensure critical practices are followed even under pressure."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "writing-skills"
+---
+
 # Persuasion Principles for Skill Design
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "security-operations"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Security Operations & Incident Response
 
 ## Security Operations Center (SOC)

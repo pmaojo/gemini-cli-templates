@@ -1,3 +1,11 @@
+---
+name: "backends"
+description: "Qiskit is backend-agnostic and supports execution on simulators and real quantum hardware from multiple providers."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Hardware Backends and Execution
 
 Qiskit is backend-agnostic and supports execution on simulators and real quantum hardware from multiple providers.

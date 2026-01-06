@@ -1,3 +1,11 @@
+---
+name: "verified-workflows"
+description: "Latch Verified Workflows are production-ready, pre-built bioinformatics pipelines developed and maintained by Latch engineers. These workflows are used by top pharmaceutical companies and biotech firms for research and discovery."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Verified Workflows
 
 ## Overview

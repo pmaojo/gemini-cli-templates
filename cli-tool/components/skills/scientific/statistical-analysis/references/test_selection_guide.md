@@ -1,3 +1,11 @@
+---
+name: "test_selection_guide"
+description: "This guide provides a decision tree for selecting appropriate statistical tests based on research questions, data types, and study designs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Statistical Test Selection Guide
 
 This guide provides a decision tree for selecting appropriate statistical tests based on research questions, data types, and study designs.

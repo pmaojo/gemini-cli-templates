@@ -1,3 +1,11 @@
+---
+name: "advanced"
+description: "This reference covers advanced hook patterns and techniques for sophisticated automation workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Advanced Hook Use Cases
 
 This reference covers advanced hook patterns and techniques for sophisticated automation workflows.

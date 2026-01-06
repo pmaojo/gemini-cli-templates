@@ -1,3 +1,11 @@
+---
+name: "specific_aims_guide"
+description: "The **Specific Aims page** is the most important page of your entire NIH grant application. It's the first thing reviewers read, often determines their initial impression, and may be the only page read by some panel members before scoring begins."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # NIH Specific Aims Page: The Complete Guide
 
 ## Overview

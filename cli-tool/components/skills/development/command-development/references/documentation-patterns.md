@@ -1,3 +1,11 @@
+---
+name: "documentation-patterns"
+description: "Strategies for creating self-documenting, maintainable commands with excellent user experience."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Command Documentation Patterns
 
 Strategies for creating self-documenting, maintainable commands with excellent user experience.

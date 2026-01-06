@@ -1,3 +1,11 @@
+---
+name: "rust"
+description: "Common Rust errors with diagnosis and solutions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # Rust Error Patterns
 
 Common Rust errors with diagnosis and solutions.

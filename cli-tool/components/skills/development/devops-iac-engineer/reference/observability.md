@@ -1,3 +1,11 @@
+---
+name: "observability"
+description: "- **Definition**: Numeric measurements over time"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Observability: Monitoring, Logging & Tracing
 
 ## The Three Pillars of Observability

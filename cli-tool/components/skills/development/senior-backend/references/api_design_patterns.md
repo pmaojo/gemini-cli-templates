@@ -1,3 +1,11 @@
+---
+name: "api_design_patterns"
+description: "This reference guide provides comprehensive information for senior backend."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Api Design Patterns
 
 ## Overview

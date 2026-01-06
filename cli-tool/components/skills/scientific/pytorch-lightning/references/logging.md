@@ -1,3 +1,11 @@
+---
+name: "logging"
+description: "PyTorch Lightning supports multiple logging integrations for experiment tracking and visualization. By default, Lightning uses TensorBoard, but you can easily switch to or combine multiple loggers."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Logging - Comprehensive Guide
 
 ## Overview

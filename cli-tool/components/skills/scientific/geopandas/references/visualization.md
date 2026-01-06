@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "GeoPandas provides plotting through matplotlib integration."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Mapping and Visualization
 
 GeoPandas provides plotting through matplotlib integration.

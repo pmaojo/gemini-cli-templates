@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Comprehensive skill for writing clinical reports including case reports, diagnostic reports, clinical trial reports, and patient documentation. Provides full support with templates, regulatory compliance, and validation tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "clinical-reports"
+---
+
 # Clinical Reports Skill
 
 ## Overview

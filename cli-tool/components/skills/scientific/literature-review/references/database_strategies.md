@@ -1,3 +1,11 @@
+---
+name: "database_strategies"
+description: "This document provides comprehensive guidance for searching multiple literature databases systematically and effectively."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Literature Database Search Strategies
 
 This document provides comprehensive guidance for searching multiple literature databases systematically and effectively.

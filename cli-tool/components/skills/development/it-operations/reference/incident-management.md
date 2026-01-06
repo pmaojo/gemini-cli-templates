@@ -1,3 +1,11 @@
+---
+name: "incident-management"
+description: "Comprehensive guide to incident response, root cause analysis, post-mortems, and building resilient incident management processes."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Incident Management
 
 Comprehensive guide to incident response, root cause analysis, post-mortems, and building resilient incident management processes.

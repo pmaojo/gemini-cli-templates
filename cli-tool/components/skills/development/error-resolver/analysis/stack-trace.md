@@ -1,3 +1,11 @@
+---
+name: "stack-trace"
+description: "How to read and analyze stack traces across different languages."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "analysis"
+---
+
 # Stack Trace Analysis Guide
 
 How to read and analyze stack traces across different languages.

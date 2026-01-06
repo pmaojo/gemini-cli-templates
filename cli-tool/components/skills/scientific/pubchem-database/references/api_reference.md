@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "PubChem is the world's largest freely available chemical database maintained by the National Center for Biotechnology Information (NCBI). It contains over 110 million unique chemical structures and over 270 million bioactivities from more than 770 data sources."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PubChem API Reference
 
 ## Overview

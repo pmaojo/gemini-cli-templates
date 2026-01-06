@@ -1,3 +1,11 @@
+---
+name: "discrete_choice"
+description: "This document provides comprehensive guidance on discrete choice models in statsmodels, including binary, multinomial, count, and ordinal models."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Discrete Choice Models Reference
 
 This document provides comprehensive guidance on discrete choice models in statsmodels, including binary, multinomial, count, and ordinal models.

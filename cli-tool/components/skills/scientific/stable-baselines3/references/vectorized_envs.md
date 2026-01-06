@@ -1,3 +1,11 @@
+---
+name: "vectorized_envs"
+description: "This document provides comprehensive information about vectorized environments in Stable Baselines3 for efficient parallel training."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Vectorized Environments in Stable Baselines3
 
 This document provides comprehensive information about vectorized environments in Stable Baselines3 for efficient parallel training.

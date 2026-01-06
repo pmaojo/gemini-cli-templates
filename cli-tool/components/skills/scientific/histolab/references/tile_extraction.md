@@ -1,3 +1,11 @@
+---
+name: "tile_extraction"
+description: "Tile extraction is the process of cropping smaller, manageable regions from large whole slide images. Histolab provides three main extraction strategies, each suited for different analysis needs. All tilers share common parameters and provide methods for previewing and extracting tiles."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Tile Extraction
 
 ## Overview

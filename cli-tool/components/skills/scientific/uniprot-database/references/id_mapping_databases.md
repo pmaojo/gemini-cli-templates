@@ -1,3 +1,11 @@
+---
+name: "id_mapping_databases"
+description: "Complete list of databases supported by the UniProt ID Mapping service. Use these database names when calling the ID mapping API."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # UniProt ID Mapping Databases
 
 Complete list of databases supported by the UniProt ID Mapping service. Use these database names when calling the ID mapping API.

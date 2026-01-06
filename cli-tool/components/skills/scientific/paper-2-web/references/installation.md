@@ -1,3 +1,11 @@
+---
+name: "installation"
+description: "- **GPU**: NVIDIA A6000 (48GB minimum) required for video generation with talking-head features"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Installation and Configuration
 
 ## System Requirements

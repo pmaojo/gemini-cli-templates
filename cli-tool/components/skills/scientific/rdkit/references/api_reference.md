@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides a comprehensive reference for RDKit's Python API, organized by functionality."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # RDKit API Reference
 
 This document provides a comprehensive reference for RDKit's Python API, organized by functionality.

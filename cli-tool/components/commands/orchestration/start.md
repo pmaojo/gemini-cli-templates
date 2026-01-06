@@ -1,3 +1,11 @@
+---
+name: "start"
+description: "Initiates the task orchestration workflow using the three-agent system (task-orchestrator, task-decomposer, and dependency-analyzer) to create a comprehensive execution plan."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestrate Tasks Command
 
 Initiates the task orchestration workflow using the three-agent system (task-orchestrator, task-decomposer, and dependency-analyzer) to create a comprehensive execution plan.

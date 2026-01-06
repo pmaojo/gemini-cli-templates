@@ -1,3 +1,11 @@
+---
+name: "databases"
+description: "Bio.Entrez provides programmatic access to NCBI's Entrez databases, including PubMed, GenBank, Gene, Protein, Nucleotide, and many others. It handles all the complexity of API calls, rate limiting, and data parsing."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Database Access with Bio.Entrez
 
 ## Overview

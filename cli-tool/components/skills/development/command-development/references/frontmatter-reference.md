@@ -1,3 +1,11 @@
+---
+name: "frontmatter-reference"
+description: "Complete reference for YAML frontmatter fields in slash commands."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Command Frontmatter Reference
 
 Complete reference for YAML frontmatter fields in slash commands.

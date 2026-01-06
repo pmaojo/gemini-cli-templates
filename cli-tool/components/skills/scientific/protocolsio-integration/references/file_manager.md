@@ -1,3 +1,11 @@
+---
+name: "file_manager"
+description: "The File Manager API enables file operations within protocols.io workspaces, including uploading files, organizing folders, searching content, and managing file lifecycle. This is useful for attaching data files, images, documents, and other resources to protocols."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # File Manager API
 
 ## Overview

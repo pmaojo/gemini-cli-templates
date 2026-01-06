@@ -1,3 +1,11 @@
+---
+name: "conferences_formatting"
+description: "Comprehensive formatting requirements and submission guidelines for major academic conferences across disciplines."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Conference Formatting Requirements
 
 Comprehensive formatting requirements and submission guidelines for major academic conferences across disciplines.

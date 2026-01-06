@@ -1,3 +1,11 @@
+---
+name: "metadata"
+description: "This reference covers creating and managing annotations in OMERO, including tags, key-value pairs, file attachments, and comments."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Metadata & Annotations
 
 This reference covers creating and managing annotations in OMERO, including tags, key-value pairs, file attachments, and comments.

@@ -1,3 +1,11 @@
+---
+name: "chemistry_molecular_formats"
+description: "This reference covers file formats commonly used in computational chemistry, cheminformatics, molecular modeling, and related fields."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Chemistry and Molecular File Formats Reference
 
 This reference covers file formats commonly used in computational chemistry, cheminformatics, molecular modeling, and related fields.

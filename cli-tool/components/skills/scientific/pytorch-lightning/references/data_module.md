@@ -1,3 +1,11 @@
+---
+name: "data_module"
+description: "A LightningDataModule is a reusable, shareable class that encapsulates all data processing steps in PyTorch Lightning. It solves the problem of scattered data preparation logic by standardizing how datasets are managed and shared across projects."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LightningDataModule - Comprehensive Guide
 
 ## Overview

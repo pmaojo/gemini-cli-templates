@@ -1,3 +1,11 @@
+---
+name: "data_access"
+description: "This reference covers navigating OMERO's hierarchical data structure and retrieving objects."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Access & Retrieval
 
 This reference covers navigating OMERO's hierarchical data structure and retrieving objects.

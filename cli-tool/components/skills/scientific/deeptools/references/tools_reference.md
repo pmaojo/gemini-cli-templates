@@ -1,3 +1,11 @@
+---
+name: "tools_reference"
+description: "This document provides a comprehensive reference for all deepTools command-line utilities organized by category."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # deepTools Complete Tool Reference
 
 This document provides a comprehensive reference for all deepTools command-line utilities organized by category.

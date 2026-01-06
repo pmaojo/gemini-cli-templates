@@ -1,3 +1,11 @@
+---
+name: "update-branch-name"
+description: "Follow these steps to update the current branch name:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "git-workflow"
+---
+
 # Update Branch Name
 
 Follow these steps to update the current branch name:

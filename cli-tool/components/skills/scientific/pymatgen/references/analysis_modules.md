@@ -1,3 +1,11 @@
+---
+name: "analysis_modules"
+description: "This reference documents pymatgen's extensive analysis capabilities for materials characterization, property prediction, and computational analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymatgen Analysis Modules Reference
 
 This reference documents pymatgen's extensive analysis capabilities for materials characterization, property prediction, and computational analysis.

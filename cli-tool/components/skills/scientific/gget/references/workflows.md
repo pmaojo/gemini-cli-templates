@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "Extended workflow examples demonstrating how to combine multiple gget modules for common bioinformatics tasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # gget Workflow Examples
 
 Extended workflow examples demonstrating how to combine multiple gget modules for common bioinformatics tasks.

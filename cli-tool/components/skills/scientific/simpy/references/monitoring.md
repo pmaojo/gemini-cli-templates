@@ -1,3 +1,11 @@
+---
+name: "monitoring"
+description: "This guide covers techniques for collecting data and monitoring simulation behavior in SimPy."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SimPy Monitoring and Data Collection
 
 This guide covers techniques for collecting data and monitoring simulation behavior in SimPy.

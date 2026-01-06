@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Execute Gemini CLI in isolated Cloudflare Workers sandboxes with AI-powered code generation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "cloudflare"
+---
+
 # Cloudflare Gemini CLI Sandbox
 
 Execute Gemini CLI in isolated Cloudflare Workers sandboxes with AI-powered code generation.

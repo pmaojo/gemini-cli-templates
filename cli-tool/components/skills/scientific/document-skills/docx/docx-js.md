@@ -1,3 +1,11 @@
+---
+name: "docx-js"
+description: "Generate .docx files with JavaScript/TypeScript."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "docx"
+---
+
 # DOCX Library Tutorial
 
 Generate .docx files with JavaScript/TypeScript.

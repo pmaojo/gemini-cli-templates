@@ -1,3 +1,11 @@
+---
+name: "scientific_method"
+description: "- Knowledge derives from observable, measurable evidence"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scientific Method Core Principles
 
 ## Fundamental Principles

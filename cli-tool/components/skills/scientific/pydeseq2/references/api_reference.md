@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides comprehensive API reference for PyDESeq2 classes, methods, and utilities."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyDESeq2 API Reference
 
 This document provides comprehensive API reference for PyDESeq2 classes, methods, and utilities.

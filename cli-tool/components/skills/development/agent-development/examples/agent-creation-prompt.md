@@ -1,3 +1,11 @@
+---
+name: "agent-creation-prompt"
+description: "Use this template to generate agents using Gemini with the agent creation system prompt."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # AI-Assisted Agent Generation Template
 
 Use this template to generate agents using Gemini with the agent creation system prompt.

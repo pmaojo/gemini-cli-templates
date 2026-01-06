@@ -1,3 +1,11 @@
+---
+name: "time_evolution"
+description: "QuTiP provides multiple solvers for quantum dynamics:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # QuTiP Time Evolution and Dynamics Solvers
 
 ## Overview

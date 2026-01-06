@@ -1,3 +1,11 @@
+---
+name: "review_template"
+description: "**Authors**: [Author Names and Affiliations]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # [Literature Review Title]
 
 **Authors**: [Author Names and Affiliations]

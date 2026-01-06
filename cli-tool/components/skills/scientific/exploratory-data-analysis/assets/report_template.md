@@ -1,3 +1,11 @@
+---
+name: "report_template"
+description: "**Generated:** {TIMESTAMP}"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Exploratory Data Analysis Report: {FILENAME}
 
 **Generated:** {TIMESTAMP}

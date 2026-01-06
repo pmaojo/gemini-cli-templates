@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "A comprehensive skill pack for security professionals implementing defense-in-depth security architectures, achieving compliance with industry frameworks, conducting threat modeling and risk assessments, managing security operations and incident response, and embedding security throughout the SDLC."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "security-compliance"
+---
+
 # Security & Compliance Expert
 
 A comprehensive skill pack for security professionals implementing defense-in-depth security architectures, achieving compliance with industry frameworks, conducting threat modeling and risk assessments, managing security operations and incident response, and embedding security throughout the SDLC.

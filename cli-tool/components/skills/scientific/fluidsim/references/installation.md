@@ -1,3 +1,11 @@
+---
+name: "installation"
+description: "- Python >= 3.9"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FluidSim Installation
 
 ## Requirements

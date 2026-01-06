@@ -1,3 +1,11 @@
+---
+name: "best_practices"
+description: "Guidelines for efficient and effective use of AnnData."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Best Practices
 
 Guidelines for efficient and effective use of AnnData.

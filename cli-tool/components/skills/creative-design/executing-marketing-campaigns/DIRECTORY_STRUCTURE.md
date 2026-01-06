@@ -1,3 +1,11 @@
+---
+name: "DIRECTORY_STRUCTURE"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "executing-marketing-campaigns"
+---
+
 # Marketing Skill - Directory Structure & Quick Reference
 
 ## Complete Directory Structure

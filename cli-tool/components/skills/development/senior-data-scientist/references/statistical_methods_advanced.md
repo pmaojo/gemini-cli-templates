@@ -1,3 +1,11 @@
+---
+name: "statistical_methods_advanced"
+description: "World-class statistical methods advanced for senior data scientist."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Statistical Methods Advanced
 
 ## Overview

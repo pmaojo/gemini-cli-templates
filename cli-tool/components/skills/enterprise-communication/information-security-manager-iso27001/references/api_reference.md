@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This is a placeholder for detailed reference documentation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Reference Documentation for Information Security Manager Iso27001
 
 This is a placeholder for detailed reference documentation.

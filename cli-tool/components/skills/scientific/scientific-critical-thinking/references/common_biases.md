@@ -1,3 +1,11 @@
+---
+name: "common_biases"
+description: "**Description:** Tendency to search for, interpret, and recall information that confirms preexisting beliefs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Biases in Scientific Research
 
 ## Cognitive Biases Affecting Researchers

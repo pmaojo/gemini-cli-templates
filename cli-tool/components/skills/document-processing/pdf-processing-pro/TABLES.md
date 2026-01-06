@@ -1,3 +1,11 @@
+---
+name: "TABLES"
+description: "Advanced table extraction strategies for production environments."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "pdf-processing-pro"
+---
+
 # PDF Table Extraction Guide
 
 Advanced table extraction strategies for production environments.

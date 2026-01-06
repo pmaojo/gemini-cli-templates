@@ -1,3 +1,11 @@
+---
+name: "llm_configuration"
+description: "Denario requires API credentials from supported LLM providers to power its multiagent research system. The system is built on AG2 and LangGraph, which support multiple LLM backends."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LLM API Configuration
 
 ## Overview

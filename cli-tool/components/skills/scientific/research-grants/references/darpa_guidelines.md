@@ -1,3 +1,11 @@
+---
+name: "darpa_guidelines"
+description: "**Mission**: Make pivotal investments in breakthrough technologies for national security"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DARPA (Defense Advanced Research Projects Agency) Grant Writing Guidelines
 
 ## Agency Overview

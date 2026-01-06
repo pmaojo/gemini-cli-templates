@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "This reference covers Vaex's visualization capabilities for creating plots, heatmaps, and interactive visualizations of large datasets."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Visualization
 
 This reference covers Vaex's visualization capabilities for creating plots, heatmaps, and interactive visualizations of large datasets.

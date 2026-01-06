@@ -1,3 +1,11 @@
+---
+name: "proteomics_metabolomics_formats"
+description: "This reference covers file formats specific to proteomics, metabolomics, lipidomics, and related omics workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Proteomics and Metabolomics File Formats Reference
 
 This reference covers file formats specific to proteomics, metabolomics, lipidomics, and related omics workflows.

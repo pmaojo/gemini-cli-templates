@@ -1,3 +1,11 @@
+---
+name: "api_guide"
+description: "**Base URL:** `https://api.openalex.org`"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # OpenAlex API Complete Guide
 
 ## Base Information

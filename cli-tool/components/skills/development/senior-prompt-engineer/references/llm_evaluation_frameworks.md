@@ -1,3 +1,11 @@
+---
+name: "llm_evaluation_frameworks"
+description: "World-class llm evaluation frameworks for senior prompt engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Llm Evaluation Frameworks
 
 ## Overview

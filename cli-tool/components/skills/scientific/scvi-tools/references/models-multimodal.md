@@ -1,3 +1,11 @@
+---
+name: "models-multimodal"
+description: "This document covers models for joint analysis of multiple data modalities in scvi-tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Multimodal and Multi-omics Integration Models
 
 This document covers models for joint analysis of multiple data modalities in scvi-tools.

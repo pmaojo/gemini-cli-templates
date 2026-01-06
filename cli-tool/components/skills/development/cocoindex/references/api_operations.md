@@ -1,3 +1,11 @@
+---
+name: "api_operations"
+description: "Guide for operating CocoIndex flows programmatically using Python APIs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # API Operations Reference
 
 Guide for operating CocoIndex flows programmatically using Python APIs.

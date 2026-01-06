@@ -1,3 +1,11 @@
+---
+name: "advanced"
+description: "For time-periodic Hamiltonians H(t + T) = H(t)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # QuTiP Advanced Features
 
 ## Floquet Theory

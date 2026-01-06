@@ -1,3 +1,11 @@
+---
+name: "secrets"
+description: "Create secrets at https://modal.com/secrets"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Secrets and Environment Variables
 
 ## Creating Secrets

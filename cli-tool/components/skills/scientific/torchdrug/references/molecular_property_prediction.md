@@ -1,3 +1,11 @@
+---
+name: "molecular_property_prediction"
+description: "Molecular property prediction involves predicting chemical, physical, or biological properties of molecules from their structure. TorchDrug provides comprehensive support for both classification and regression tasks on molecular graphs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Molecular Property Prediction
 
 ## Overview

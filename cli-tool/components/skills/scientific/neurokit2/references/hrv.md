@@ -1,3 +1,11 @@
+---
+name: "hrv"
+description: "Heart Rate Variability (HRV) reflects the variation in time intervals between consecutive heartbeats, providing insights into autonomic nervous system regulation, cardiovascular health, and psychological state. NeuroKit2 provides comprehensive HRV analysis across time, frequency, and nonlinear domains."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Heart Rate Variability (HRV) Analysis
 
 ## Overview

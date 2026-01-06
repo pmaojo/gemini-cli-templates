@@ -1,3 +1,11 @@
+---
+name: "IMPLEMENTATION_SUMMARY"
+description: "Complete implementation of Cloudflare Workers sandbox for executing Gemini CLI with AI-powered code generation. This sandbox leverages Cloudflare's global edge network to provide ultra-fast, isolated code execution."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "cloudflare"
+---
+
 # Cloudflare Sandbox Implementation Summary
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "sync"
+description: "Synchronize task status with git commits, ensuring consistency between version control and task tracking."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestration Sync Command
 
 Synchronize task status with git commits, ensuring consistency between version control and task tracking.

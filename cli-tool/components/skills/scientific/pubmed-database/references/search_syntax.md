@@ -1,3 +1,11 @@
+---
+name: "search_syntax"
+description: "PubMed supports standard Boolean operators to combine search terms:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PubMed Search Syntax and Field Tags
 
 ## Boolean Operators

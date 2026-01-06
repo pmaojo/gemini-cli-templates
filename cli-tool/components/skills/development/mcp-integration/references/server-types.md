@@ -1,3 +1,11 @@
+---
+name: "server-types"
+description: "Complete reference for all MCP server types supported in Gemini CLI plugins."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # MCP Server Types: Deep Dive
 
 Complete reference for all MCP server types supported in Gemini CLI plugins.

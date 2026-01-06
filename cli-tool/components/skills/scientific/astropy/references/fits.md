@@ -1,3 +1,11 @@
+---
+name: "fits"
+description: "The `astropy.io.fits` module provides comprehensive tools for reading, writing, and manipulating FITS (Flexible Image Transport System) files."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FITS File Handling (astropy.io.fits)
 
 The `astropy.io.fits` module provides comprehensive tools for reading, writing, and manipulating FITS (Flexible Image Transport System) files.

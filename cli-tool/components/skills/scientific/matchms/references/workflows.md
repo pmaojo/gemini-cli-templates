@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document provides detailed examples of common mass spectrometry analysis workflows using matchms."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matchms Common Workflows
 
 This document provides detailed examples of common mass spectrometry analysis workflows using matchms.

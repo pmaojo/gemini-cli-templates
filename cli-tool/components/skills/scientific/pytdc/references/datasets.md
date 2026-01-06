@@ -1,3 +1,11 @@
+---
+name: "datasets"
+description: "This document provides a comprehensive catalog of all available datasets in the Therapeutics Data Commons, organized by task category."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # TDC Datasets Comprehensive Catalog
 
 This document provides a comprehensive catalog of all available datasets in the Therapeutics Data Commons, organized by task category.

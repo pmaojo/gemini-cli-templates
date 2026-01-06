@@ -1,3 +1,11 @@
+---
+name: "outcome_analysis"
+description: "Rigorous outcome analysis is essential for clinical decision support documents. This guide covers survival analysis, response assessment, statistical testing, and data visualization for patient cohort analyses and treatment evaluation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Outcome Analysis and Statistical Methods Guide
 
 ## Overview

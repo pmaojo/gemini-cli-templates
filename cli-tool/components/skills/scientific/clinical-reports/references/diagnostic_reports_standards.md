@@ -1,3 +1,11 @@
+---
+name: "diagnostic_reports_standards"
+description: "The ACR provides comprehensive practice parameters for diagnostic imaging reporting to ensure quality, consistency, and communication effectiveness."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Diagnostic Reports Standards
 
 ## Radiology Reporting Standards

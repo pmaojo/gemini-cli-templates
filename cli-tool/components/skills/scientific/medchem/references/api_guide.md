@@ -1,3 +1,11 @@
+---
+name: "api_guide"
+description: "Comprehensive reference for all medchem modules and functions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Medchem API Reference
 
 Comprehensive reference for all medchem modules and functions.

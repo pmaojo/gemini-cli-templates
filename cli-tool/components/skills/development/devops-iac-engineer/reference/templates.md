@@ -1,3 +1,11 @@
+---
+name: "templates"
+description: "See [terraform.md](terraform.md) for the complete VPC module implementation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Ready-to-Use DevOps Templates
 
 ## Terraform Templates

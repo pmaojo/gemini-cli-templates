@@ -1,3 +1,11 @@
+---
+name: "tasks"
+description: "PyHealth provides 20+ predefined clinical prediction tasks for common healthcare AI applications. Each task function transforms raw patient data into structured input-output pairs for model training."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyHealth Clinical Prediction Tasks
 
 ## Overview

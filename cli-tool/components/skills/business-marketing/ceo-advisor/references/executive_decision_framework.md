@@ -1,3 +1,11 @@
+---
+name: "executive_decision_framework"
+description: "**D** - Define the problem clearly"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Executive Decision Framework
 
 ## Decision-Making Process

@@ -1,3 +1,11 @@
+---
+name: "system_design_workflows"
+description: "This reference guide provides comprehensive information for senior architect."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # System Design Workflows
 
 ## Overview

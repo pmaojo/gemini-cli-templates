@@ -1,3 +1,11 @@
+---
+name: "plot_types"
+description: "Comprehensive guide to different plot types in matplotlib with examples and use cases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matplotlib Plot Types Guide
 
 Comprehensive guide to different plot types in matplotlib with examples and use cases.

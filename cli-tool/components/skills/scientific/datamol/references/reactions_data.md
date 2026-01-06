@@ -1,3 +1,11 @@
+---
+name: "reactions_data"
+description: "The reactions module enables programmatic application of chemical transformations using SMARTS reaction patterns."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Datamol Reactions and Data Modules Reference
 
 ## Reactions Module (`datamol.reactions`)

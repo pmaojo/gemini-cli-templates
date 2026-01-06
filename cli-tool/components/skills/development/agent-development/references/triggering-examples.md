@@ -1,3 +1,11 @@
+---
+name: "triggering-examples"
+description: "Complete guide to writing effective `<example>` blocks in agent descriptions for reliable triggering."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Agent Triggering Examples: Best Practices
 
 Complete guide to writing effective `<example>` blocks in agent descriptions for reliable triggering.

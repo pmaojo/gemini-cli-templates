@@ -1,3 +1,11 @@
+---
+name: "patentsearch_api"
+description: "The PatentSearch API is USPTO's modern ElasticSearch-based patent search system that replaced the legacy PatentsView API in May 2025. It provides access to patent data through June 30, 2025, with regular updates."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PatentSearch API Reference
 
 ## Overview

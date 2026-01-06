@@ -1,3 +1,11 @@
+---
+name: "trainer"
+description: "The Trainer automates training workflows after organizing PyTorch code into a LightningModule. It handles loop details, device management, callbacks, gradient operations, checkpointing, and distributed training automatically."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Trainer - Comprehensive Guide
 
 ## Overview

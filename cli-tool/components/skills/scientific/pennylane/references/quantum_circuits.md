@@ -1,3 +1,11 @@
+---
+name: "quantum_circuits"
+description: "1. [Basic Gates and Operations](#basic-gates-and-operations)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Quantum Circuits in PennyLane
 
 ## Table of Contents

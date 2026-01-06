@@ -1,3 +1,11 @@
+---
+name: "datasets_reference"
+description: "This document provides a comprehensive catalog of all datasets available in `torch_geometric.datasets`."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyTorch Geometric Datasets Reference
 
 This document provides a comprehensive catalog of all datasets available in `torch_geometric.datasets`.

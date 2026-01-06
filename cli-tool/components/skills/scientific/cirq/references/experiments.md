@@ -1,3 +1,11 @@
+---
+name: "experiments"
+description: "This guide covers designing and executing quantum experiments, including parameter sweeps, data collection, and using the ReCirq framework."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Running Quantum Experiments
 
 This guide covers designing and executing quantum experiments, including parameter sweeps, data collection, and using the ReCirq framework.

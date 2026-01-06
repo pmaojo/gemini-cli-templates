@@ -1,3 +1,11 @@
+---
+name: "resource-configuration"
+description: "Latch SDK provides flexible resource configuration for workflow tasks, enabling efficient execution on appropriate compute infrastructure including CPU, GPU, and memory-optimized instances."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Resource Configuration
 
 ## Overview

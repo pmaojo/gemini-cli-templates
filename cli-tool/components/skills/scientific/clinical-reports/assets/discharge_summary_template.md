@@ -1,3 +1,11 @@
+---
+name: "discharge_summary_template"
+description: "**Patient Name:** [Last, First]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Discharge Summary Template
 
 ## Patient Information

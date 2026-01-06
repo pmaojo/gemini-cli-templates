@@ -1,3 +1,11 @@
+---
+name: "svelte:test-setup"
+description: "Set up comprehensive testing infrastructure for Svelte/SvelteKit projects, including unit testing, component testing, and E2E testing frameworks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:test-setup
 
 Set up comprehensive testing infrastructure for Svelte/SvelteKit projects, including unit testing, component testing, and E2E testing frameworks.

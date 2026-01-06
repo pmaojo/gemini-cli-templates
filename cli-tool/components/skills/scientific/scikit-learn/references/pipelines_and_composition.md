@@ -1,3 +1,11 @@
+---
+name: "pipelines_and_composition"
+description: "Pipelines chain multiple processing steps into a single estimator, preventing data leakage and simplifying code. They enable reproducible workflows and seamless integration with cross-validation and hyperparameter tuning."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pipelines and Composite Estimators Reference
 
 ## Overview

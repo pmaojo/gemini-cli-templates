@@ -1,3 +1,11 @@
+---
+name: "prompt_engineering_patterns"
+description: "World-class prompt engineering patterns for senior prompt engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Prompt Engineering Patterns
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "api_examples"
+description: "Practical code examples for interacting with the UniProt REST API in multiple languages."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # UniProt API Examples
 
 Practical code examples for interacting with the UniProt REST API in multiple languages.

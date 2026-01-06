@@ -1,3 +1,11 @@
+---
+name: "DELIVERY_SUMMARY"
+description: "A production-ready Gemini AI skill for marketing teams, built following Google's official best practices and designed for immediate deployment."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "executing-marketing-campaigns"
+---
+
 # Marketing Skill - Complete Delivery Package
 
 ## 📦 What You've Received

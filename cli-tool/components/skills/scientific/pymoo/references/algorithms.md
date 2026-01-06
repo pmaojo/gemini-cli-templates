@@ -1,3 +1,11 @@
+---
+name: "algorithms"
+description: "Comprehensive reference for optimization algorithms available in pymoo."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymoo Algorithms Reference
 
 Comprehensive reference for optimization algorithms available in pymoo.

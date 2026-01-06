@@ -1,3 +1,11 @@
+---
+name: "forest-canopy"
+description: "A natural and grounded theme featuring earth tones inspired by dense forest environments."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Forest Canopy
 
 A natural and grounded theme featuring earth tones inspired by dense forest environments.

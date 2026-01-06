@@ -1,3 +1,11 @@
+---
+name: "logical_fallacies"
+description: "**Description:** Assuming that because B happened after A, A caused B."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Logical Fallacies in Scientific Discourse
 
 ## Fallacies of Causation

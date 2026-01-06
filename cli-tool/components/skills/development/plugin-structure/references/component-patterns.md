@@ -1,3 +1,11 @@
+---
+name: "component-patterns"
+description: "Advanced patterns for organizing plugin components effectively."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Component Organization Patterns
 
 Advanced patterns for organizing plugin components effectively.

@@ -1,3 +1,11 @@
+---
+name: "hipaa_compliance_checklist"
+description: "Verify that ALL of the following identifiers have been removed or altered:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # HIPAA Compliance Checklist for Clinical Reports
 
 ## 18 HIPAA Identifiers - De-identification Checklist

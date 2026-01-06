@@ -1,3 +1,11 @@
+---
+name: "tables"
+description: "The `astropy.table` module provides flexible tools for working with tabular data, with support for units, masked values, and various file formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Table Operations (astropy.table)
 
 The `astropy.table` module provides flexible tools for working with tabular data, with support for units, masked values, and various file formats.

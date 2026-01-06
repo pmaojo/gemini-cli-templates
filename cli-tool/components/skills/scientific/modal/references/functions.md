@@ -1,3 +1,11 @@
+---
+name: "functions"
+description: "Decorate Python functions with `@app.function()`:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Modal Functions
 
 ## Basic Function Definition

@@ -1,3 +1,11 @@
+---
+name: "eeg"
+description: "Analyze electroencephalography (EEG) signals for frequency band power, channel quality assessment, source localization, and microstate identification. NeuroKit2 integrates with MNE-Python for comprehensive EEG processing workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # EEG Analysis and Microstates
 
 ## Overview

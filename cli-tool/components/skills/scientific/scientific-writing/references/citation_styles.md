@@ -1,3 +1,11 @@
+---
+name: "citation_styles"
+description: "Citation styles provide standardized formats for acknowledging sources in scientific writing. Different disciplines prefer different styles, and journals typically specify which style to use. The five most common citation styles in science are AMA, Vancouver, APA, Chicago, and IEEE."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Citation Styles Guide
 
 ## Overview

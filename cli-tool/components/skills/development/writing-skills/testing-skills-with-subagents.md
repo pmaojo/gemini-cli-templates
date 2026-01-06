@@ -1,3 +1,11 @@
+---
+name: "testing-skills-with-subagents"
+description: "**Load this reference when:** creating or editing skills, before deployment, to verify they work under pressure and resist rationalization."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "writing-skills"
+---
+
 # Testing Skills With Subagents
 
 **Load this reference when:** creating or editing skills, before deployment, to verify they work under pressure and resist rationalization.

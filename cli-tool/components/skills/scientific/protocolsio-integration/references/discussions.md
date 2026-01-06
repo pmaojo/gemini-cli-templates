@@ -1,3 +1,11 @@
+---
+name: "discussions"
+description: "The Discussions API enables collaborative commenting on protocols. Comments can be added at both the protocol level and the individual step level, with support for threaded replies, editing, and deletion."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Discussions API
 
 ## Overview

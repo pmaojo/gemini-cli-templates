@@ -1,3 +1,11 @@
+---
+name: "code-reviewer"
+description: "You are reviewing code changes for production readiness."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "requesting-code-review"
+---
+
 # Code Review Agent
 
 You are reviewing code changes for production readiness.

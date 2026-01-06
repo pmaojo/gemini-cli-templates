@@ -1,3 +1,11 @@
+---
+name: "brainstorming_methods"
+description: "This reference document provides detailed descriptions of structured brainstorming frameworks that can be applied to scientific ideation. Consult these when standard techniques need supplementation or when the scientist requests a specific methodology."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Advanced Brainstorming Methodologies
 
 This reference document provides detailed descriptions of structured brainstorming frameworks that can be applied to scientific ideation. Consult these when standard techniques need supplementation or when the scientist requests a specific methodology.

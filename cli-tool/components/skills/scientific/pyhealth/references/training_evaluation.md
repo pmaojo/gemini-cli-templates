@@ -1,3 +1,11 @@
+---
+name: "training_evaluation"
+description: "PyHealth provides comprehensive tools for training models, evaluating predictions, ensuring model reliability, and interpreting results for clinical applications."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyHealth Training, Evaluation, and Interpretability
 
 ## Overview

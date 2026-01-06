@@ -1,3 +1,11 @@
+---
+name: "IMPLEMENTATION_SUMMARY"
+description: "Successfully implemented a comprehensive clinical reports skill for the Gemini Scientific Writer project."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "clinical-reports"
+---
+
 # Clinical Reports Skill - Implementation Summary
 
 ## 📊 Overview

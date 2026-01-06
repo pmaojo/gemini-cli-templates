@@ -1,3 +1,11 @@
+---
+name: "prompt-snippets"
+description: "Only apply these snippets if the user explicitly requests them or reports a specific issue. By default, the migration should only update model strings."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Prompt Snippets for Opus 4.5
 
 Only apply these snippets if the user explicitly requests them or reports a specific issue. By default, the migration should only update model strings.

@@ -1,3 +1,11 @@
+---
+name: "sampling_inference"
+description: "This reference covers the sampling algorithms and inference methods available in PyMC for posterior inference."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyMC Sampling and Inference Methods
 
 This reference covers the sampling algorithms and inference methods available in PyMC for posterior inference.

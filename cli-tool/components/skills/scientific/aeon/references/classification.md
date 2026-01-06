@@ -1,3 +1,11 @@
+---
+name: "classification"
+description: "Aeon provides 13 categories of time series classifiers with scikit-learn compatible APIs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Time Series Classification
 
 Aeon provides 13 categories of time series classifiers with scikit-learn compatible APIs.

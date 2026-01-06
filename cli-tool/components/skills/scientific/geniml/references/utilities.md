@@ -1,3 +1,11 @@
+---
+name: "utilities"
+description: "BBClient provides efficient caching of BED files from remote sources, enabling faster repeated access and integration with R workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Geniml Utilities and Additional Tools
 
 ## BBClient: BED File Caching

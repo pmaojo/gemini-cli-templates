@@ -1,3 +1,11 @@
+---
+name: "ensemble-models"
+description: "Random Survival Forests extend the random forest algorithm to survival analysis with censored data. They build multiple decision trees on bootstrap samples and aggregate predictions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Ensemble Models for Survival Analysis
 
 ## Random Survival Forests

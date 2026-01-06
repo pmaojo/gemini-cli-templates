@@ -1,3 +1,11 @@
+---
+name: "hardware-backends"
+description: "PyLabRobot uses a backend abstraction system that allows the same protocol code to run on different liquid handling robots and platforms. Backends handle device-specific communication while the `LiquidHandler` frontend provides a unified interface."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Hardware Backends in PyLabRobot
 
 ## Overview

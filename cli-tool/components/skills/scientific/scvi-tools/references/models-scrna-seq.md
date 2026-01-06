@@ -1,3 +1,11 @@
+---
+name: "models-scrna-seq"
+description: "This document covers core models for analyzing single-cell RNA sequencing data in scvi-tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Single-Cell RNA-seq Models
 
 This document covers core models for analyzing single-cell RNA sequencing data in scvi-tools.

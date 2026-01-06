@@ -1,3 +1,11 @@
+---
+name: "objects_interface"
+description: "The `seaborn.objects` interface provides a modern, declarative API for building visualizations through composition. This guide covers the complete objects interface introduced in seaborn 0.12+."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Seaborn Objects Interface
 
 The `seaborn.objects` interface provides a modern, declarative API for building visualizations through composition. This guide covers the complete objects interface introduced in seaborn 0.12+.

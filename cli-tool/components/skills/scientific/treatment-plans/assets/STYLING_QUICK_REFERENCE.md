@@ -1,3 +1,11 @@
+---
+name: "STYLING_QUICK_REFERENCE"
+description: "`medical_treatment_plan.sty` - Available in the assets directory"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Professional Treatment Plan Styling - Quick Reference
 
 ## File Location

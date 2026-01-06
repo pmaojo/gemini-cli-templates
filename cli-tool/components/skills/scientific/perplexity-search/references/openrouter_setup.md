@@ -1,3 +1,11 @@
+---
+name: "openrouter_setup"
+description: "Complete guide to setting up and using OpenRouter for Perplexity model access."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # OpenRouter Setup Guide
 
 Complete guide to setting up and using OpenRouter for Perplexity model access.

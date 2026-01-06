@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "The replay system records successful error resolutions for future reference, enabling faster problem-solving when similar errors occur."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "replay"
+---
+
 # Replay System
 
 The replay system records successful error resolutions for future reference, enabling faster problem-solving when similar errors occur.

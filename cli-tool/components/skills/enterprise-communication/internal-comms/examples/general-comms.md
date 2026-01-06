@@ -1,3 +1,11 @@
+---
+name: "general-comms"
+description: "general-comms component for Gemini CLI"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
   ## Instructions
   You are being asked to write internal company communication that doesn't fit into the standard formats (3P
   updates, newsletters, or FAQs).

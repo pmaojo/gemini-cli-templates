@@ -1,3 +1,11 @@
+---
+name: "imrad_structure"
+description: "IMRAD (Introduction, Methods, Results, And Discussion) is the predominant organizational structure for scientific journal articles of original research. Adopted as the majority format since the 1970s, it is now the standard in medical, health, biological, chemical, engineering, and computer sciences."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # IMRAD Structure Guide
 
 ## Overview

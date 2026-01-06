@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides detailed API documentation for accessing NCBI Gene database programmatically."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # NCBI Gene API Reference
 
 This document provides detailed API documentation for accessing NCBI Gene database programmatically.

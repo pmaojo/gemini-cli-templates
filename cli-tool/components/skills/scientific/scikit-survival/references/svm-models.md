@@ -1,3 +1,11 @@
+---
+name: "svm-models"
+description: "Survival Support Vector Machines (SVMs) adapt the traditional SVM framework to survival analysis with censored data. They optimize a ranking objective that encourages correct ordering of survival times."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Survival Support Vector Machines
 
 ## Overview

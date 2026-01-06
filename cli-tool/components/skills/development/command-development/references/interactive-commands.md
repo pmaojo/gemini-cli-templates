@@ -1,3 +1,11 @@
+---
+name: "interactive-commands"
+description: "Comprehensive guide to creating commands that gather user feedback and make decisions through the AskUserQuestion tool."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Interactive Command Patterns
 
 Comprehensive guide to creating commands that gather user feedback and make decisions through the AskUserQuestion tool.

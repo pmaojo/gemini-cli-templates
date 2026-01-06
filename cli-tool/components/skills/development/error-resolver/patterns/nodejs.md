@@ -1,3 +1,11 @@
+---
+name: "nodejs"
+description: "Common Node.js errors with diagnosis and solutions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # Node.js Error Patterns
 
 Common Node.js errors with diagnosis and solutions.

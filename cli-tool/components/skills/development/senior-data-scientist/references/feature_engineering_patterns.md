@@ -1,3 +1,11 @@
+---
+name: "feature_engineering_patterns"
+description: "World-class feature engineering patterns for senior data scientist."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Feature Engineering Patterns
 
 ## Overview

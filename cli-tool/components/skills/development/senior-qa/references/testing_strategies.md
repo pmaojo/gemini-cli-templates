@@ -1,3 +1,11 @@
+---
+name: "testing_strategies"
+description: "This reference guide provides comprehensive information for senior qa."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Testing Strategies
 
 ## Overview

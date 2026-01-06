@@ -1,3 +1,11 @@
+---
+name: "lab_report_template"
+description: "**Patient Name:** [Last, First]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Laboratory Report Template
 
 ## Patient Information

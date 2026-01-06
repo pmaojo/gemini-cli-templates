@@ -1,3 +1,11 @@
+---
+name: "scembed"
+description: "scEmbed trains Region2Vec models on single-cell ATAC-seq datasets to generate cell embeddings for clustering and analysis. It provides an unsupervised machine learning framework for representing and analyzing scATAC-seq data in low-dimensional space."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # scEmbed: Single-Cell Embedding Generation
 
 ## Overview

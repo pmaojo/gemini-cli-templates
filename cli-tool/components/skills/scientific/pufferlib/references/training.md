@@ -1,3 +1,11 @@
+---
+name: "training"
+description: "PuffeRL is PufferLib's high-performance training algorithm based on CleanRL's PPO with LSTMs, enhanced with proprietary research improvements. It achieves training at millions of steps per second through optimized vectorization and efficient implementation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PufferLib Training Guide
 
 ## Overview

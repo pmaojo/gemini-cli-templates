@@ -1,3 +1,11 @@
+---
+name: "core-capabilities"
+description: "This document covers SymPy's fundamental operations: symbolic computation basics, algebra, calculus, simplification, and equation solving."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SymPy Core Capabilities
 
 This document covers SymPy's fundamental operations: symbolic computation basics, algebra, calculus, simplification, and equation solving.

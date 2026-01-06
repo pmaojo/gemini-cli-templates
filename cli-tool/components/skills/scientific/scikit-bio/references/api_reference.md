@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides detailed API information, advanced examples, and troubleshooting guidance for working with scikit-bio."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # scikit-bio API Reference
 
 This document provides detailed API information, advanced examples, and troubleshooting guidance for working with scikit-bio.

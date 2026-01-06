@@ -1,3 +1,11 @@
+---
+name: "history_physical_template"
+description: "**Patient Name:** [Last, First]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # History and Physical Examination (H&P) Template
 
 **Patient Name:** [Last, First]  

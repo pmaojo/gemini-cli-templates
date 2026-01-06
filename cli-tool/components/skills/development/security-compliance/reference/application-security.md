@@ -1,3 +1,11 @@
+---
+name: "application-security"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Application Security & Secure SDLC
 
 ## Secure Software Development Lifecycle (SDLC)

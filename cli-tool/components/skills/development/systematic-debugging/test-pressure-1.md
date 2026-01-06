@@ -1,3 +1,11 @@
+---
+name: "test-pressure-1"
+description: "**IMPORTANT: This is a real scenario. You must choose and act. Don't ask hypothetical questions - make the actual decision.**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "systematic-debugging"
+---
+
 # Pressure Test 1: Emergency Production Fix
 
 **IMPORTANT: This is a real scenario. You must choose and act. Don't ask hypothetical questions - make the actual decision.**

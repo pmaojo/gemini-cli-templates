@@ -1,3 +1,11 @@
+---
+name: "implementer-prompt"
+description: "Use this template when dispatching an implementer subagent."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "subagent-driven-development"
+---
+
 # Implementer Subagent Prompt Template
 
 Use this template when dispatching an implementer subagent.

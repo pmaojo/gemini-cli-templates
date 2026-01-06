@@ -1,3 +1,11 @@
+---
+name: "integration"
+description: "PufferLib provides an emulation layer that enables seamless integration with popular RL frameworks including Gymnasium, OpenAI Gym, PettingZoo, and many specialized environment libraries. The emulation layer flattens observation and action spaces for efficient vectorization while maintaining compatibility."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PufferLib Integration Guide
 
 ## Overview

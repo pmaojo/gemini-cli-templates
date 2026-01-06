@@ -1,3 +1,11 @@
+---
+name: "database_info"
+description: "Overview of databases queried by gget modules, including update frequencies and important considerations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # gget Database Information
 
 Overview of databases queried by gget modules, including update frequencies and important considerations.

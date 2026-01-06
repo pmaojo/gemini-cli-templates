@@ -1,3 +1,11 @@
+---
+name: "callbacks"
+description: "Callbacks enable adding arbitrary self-contained programs to training without cluttering your LightningModule research code. They execute custom logic at specific hooks during the training lifecycle."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Callbacks - Comprehensive Guide
 
 ## Overview

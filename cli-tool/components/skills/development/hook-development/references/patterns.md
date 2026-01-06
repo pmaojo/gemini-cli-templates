@@ -1,3 +1,11 @@
+---
+name: "patterns"
+description: "This reference provides common, proven patterns for implementing Gemini CLI hooks. Use these patterns as starting points for typical hook use cases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Hook Patterns
 
 This reference provides common, proven patterns for implementing Gemini CLI hooks. Use these patterns as starting points for typical hook use cases.

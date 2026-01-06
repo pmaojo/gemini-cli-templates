@@ -1,3 +1,11 @@
+---
+name: "python-api"
+description: "Comprehensive reference for gtars Python bindings."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Python API Reference
 
 Comprehensive reference for gtars Python bindings.

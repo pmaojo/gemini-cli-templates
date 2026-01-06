@@ -1,3 +1,11 @@
+---
+name: "evidence_types"
+description: "Evidence represents any event or set of events that identifies a target as a potential causal gene or protein for a disease. Evidence is standardized and mapped to:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Evidence Types and Data Sources
 
 ## Overview

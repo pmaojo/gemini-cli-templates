@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "**Generate any scientific diagram by describing it in natural language.**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "scientific-schematics"
+---
+
 # Scientific Schematics - Nano Banana Pro
 
 **Generate any scientific diagram by describing it in natural language.**

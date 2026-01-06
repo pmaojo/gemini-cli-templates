@@ -1,3 +1,11 @@
+---
+name: "object_detection_optimization"
+description: "World-class object detection optimization for senior computer vision engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Object Detection Optimization
 
 ## Overview

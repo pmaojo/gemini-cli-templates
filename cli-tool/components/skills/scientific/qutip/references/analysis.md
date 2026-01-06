@@ -1,3 +1,11 @@
+---
+name: "analysis"
+description: "```python"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # QuTiP Analysis and Measurement
 
 ## Expectation Values

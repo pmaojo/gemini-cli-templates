@@ -1,3 +1,11 @@
+---
+name: "experimental_design_patterns"
+description: "This reference provides patterns and frameworks for designing experiments across scientific domains. Use these patterns to develop rigorous tests for generated hypotheses."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Experimental Design Patterns
 
 ## Common Approaches to Testing Scientific Hypotheses

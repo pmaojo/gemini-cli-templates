@@ -1,3 +1,11 @@
+---
+name: "llm_providers"
+description: "Comprehensive guide for configuring different LLM providers with biomni."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LLM Provider Configuration
 
 Comprehensive guide for configuring different LLM providers with biomni.

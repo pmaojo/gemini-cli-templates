@@ -1,3 +1,11 @@
+---
+name: "resources"
+description: "Resources in PyLabRobot represent laboratory equipment, labware, or components used in protocols. The resource system provides a hierarchical structure for managing plates, tip racks, troughs, tubes, carriers, and other labware with precise spatial positioning and state tracking."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Resource Management in PyLabRobot
 
 ## Overview

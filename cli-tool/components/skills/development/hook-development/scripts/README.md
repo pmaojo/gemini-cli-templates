@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "These scripts help validate, test, and lint hook implementations before deployment."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "scripts"
+---
+
 # Hook Development Utility Scripts
 
 These scripts help validate, test, and lint hook implementations before deployment.

@@ -1,3 +1,11 @@
+---
+name: "brand"
+description: "**Core Brand Personality**: [To be customized by your company]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Brand Guidelines
 
 ## Brand Voice & Tone

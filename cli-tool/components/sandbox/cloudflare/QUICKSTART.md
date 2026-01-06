@@ -1,3 +1,11 @@
+---
+name: "QUICKSTART"
+description: "Get your Cloudflare Gemini CLI Sandbox running in under 5 minutes."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "cloudflare"
+---
+
 # Cloudflare Sandbox Quick Start Guide
 
 Get your Cloudflare Gemini CLI Sandbox running in under 5 minutes.

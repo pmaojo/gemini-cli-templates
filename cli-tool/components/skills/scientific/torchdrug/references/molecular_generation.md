@@ -1,3 +1,11 @@
+---
+name: "molecular_generation"
+description: "Molecular generation involves creating novel molecular structures with desired properties. TorchDrug supports both unconditional generation (exploring chemical space) and conditional generation (optimizing for specific properties)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Molecular Generation
 
 ## Overview

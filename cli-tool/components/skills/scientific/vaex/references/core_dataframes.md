@@ -1,3 +1,11 @@
+---
+name: "core_dataframes"
+description: "This reference covers Vaex DataFrame basics, loading data from various sources, and understanding the DataFrame structure."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Core DataFrames and Data Loading
 
 This reference covers Vaex DataFrame basics, loading data from various sources, and understanding the DataFrame structure.

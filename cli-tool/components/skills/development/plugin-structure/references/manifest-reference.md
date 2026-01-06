@@ -1,3 +1,11 @@
+---
+name: "manifest-reference"
+description: "Complete reference for `plugin.json` configuration."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Plugin Manifest Reference
 
 Complete reference for `plugin.json` configuration.

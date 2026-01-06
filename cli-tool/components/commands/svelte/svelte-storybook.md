@@ -1,3 +1,11 @@
+---
+name: "svelte:storybook"
+description: "General-purpose Storybook assistance for SvelteKit projects, including setup guidance, best practices, and common tasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:storybook
 
 General-purpose Storybook assistance for SvelteKit projects, including setup guidance, best practices, and common tasks.

@@ -1,3 +1,11 @@
+---
+name: "posters_guidelines"
+description: "Comprehensive guidelines for creating effective academic research posters including sizing, layout, typography, and design best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Research Poster Guidelines
 
 Comprehensive guidelines for creating effective academic research posters including sizing, layout, typography, and design best practices.

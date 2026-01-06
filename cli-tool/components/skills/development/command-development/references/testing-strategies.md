@@ -1,3 +1,11 @@
+---
+name: "testing-strategies"
+description: "Comprehensive strategies for testing slash commands before deployment and distribution."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Command Testing Strategies
 
 Comprehensive strategies for testing slash commands before deployment and distribution.

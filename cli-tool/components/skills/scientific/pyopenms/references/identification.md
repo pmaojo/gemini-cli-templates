@@ -1,3 +1,11 @@
+---
+name: "identification"
+description: "PyOpenMS supports peptide/protein identification through integration with search engines and provides tools for post-processing identification results including FDR control, protein inference, and annotation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Peptide and Protein Identification
 
 ## Overview

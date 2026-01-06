@@ -1,3 +1,11 @@
+---
+name: "layers_reference"
+description: "This document provides a comprehensive reference of all neural network layers available in `torch_geometric.nn`."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyTorch Geometric Neural Network Layers Reference
 
 This document provides a comprehensive reference of all neural network layers available in `torch_geometric.nn`.

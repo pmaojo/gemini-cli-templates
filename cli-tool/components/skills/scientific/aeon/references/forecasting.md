@@ -1,3 +1,11 @@
+---
+name: "forecasting"
+description: "Aeon provides forecasting algorithms for predicting future time series values."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Time Series Forecasting
 
 Aeon provides forecasting algorithms for predicting future time series values.

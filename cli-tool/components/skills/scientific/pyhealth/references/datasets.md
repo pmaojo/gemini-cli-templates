@@ -1,3 +1,11 @@
+---
+name: "datasets"
+description: "Individual medical occurrences with attributes including:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyHealth Datasets and Data Structures
 
 ## Core Data Structures

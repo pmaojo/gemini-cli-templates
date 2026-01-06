@@ -1,3 +1,11 @@
+---
+name: "drug-queries"
+description: "DrugBank provides comprehensive drug information with 200+ data fields per entry including chemical properties, pharmacology, mechanisms of action, and clinical data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Drug Information Queries
 
 ## Overview

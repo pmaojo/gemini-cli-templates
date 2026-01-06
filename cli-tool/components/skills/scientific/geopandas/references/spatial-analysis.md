@@ -1,3 +1,11 @@
+---
+name: "spatial-analysis"
+description: "Combine datasets based on common variables using standard pandas merge:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Spatial Analysis
 
 ## Attribute Joins

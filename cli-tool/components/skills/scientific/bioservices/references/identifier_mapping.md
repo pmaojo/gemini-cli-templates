@@ -1,3 +1,11 @@
+---
+name: "identifier_mapping"
+description: "This document provides comprehensive information about converting identifiers between different biological databases using BioServices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # BioServices: Identifier Mapping Guide
 
 This document provides comprehensive information about converting identifiers between different biological databases using BioServices.

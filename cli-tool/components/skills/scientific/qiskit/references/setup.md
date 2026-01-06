@@ -1,3 +1,11 @@
+---
+name: "setup"
+description: "Install Qiskit using uv:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Qiskit Setup and Installation
 
 ## Installation

@@ -1,3 +1,11 @@
+---
+name: "structure"
+description: "Bio.PDB provides tools for working with macromolecular 3D structures from PDB and mmCIF files. The module uses the SMCRA (Structure/Model/Chain/Residue/Atom) architecture to represent protein structures hierarchically."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Structural Bioinformatics with Bio.PDB
 
 ## Overview

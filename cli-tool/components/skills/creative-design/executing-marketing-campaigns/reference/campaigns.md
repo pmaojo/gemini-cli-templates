@@ -1,3 +1,11 @@
+---
+name: "campaigns"
+description: "Use this structure when planning any marketing campaign:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Campaign Planning Framework
 
 ## Campaign Development Template

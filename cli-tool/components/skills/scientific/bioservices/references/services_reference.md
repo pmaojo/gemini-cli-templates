@@ -1,3 +1,11 @@
+---
+name: "services_reference"
+description: "This document provides a comprehensive reference for all major services available in BioServices, including key methods, parameters, and use cases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # BioServices: Complete Services Reference
 
 This document provides a comprehensive reference for all major services available in BioServices, including key methods, parameters, and use cases.

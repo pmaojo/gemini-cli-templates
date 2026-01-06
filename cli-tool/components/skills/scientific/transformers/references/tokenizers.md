@@ -1,3 +1,11 @@
+---
+name: "tokenizers"
+description: "Tokenizers convert text into numerical representations (tokens) that models can process. They handle special tokens, padding, truncation, and attention masks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Tokenizers
 
 ## Overview

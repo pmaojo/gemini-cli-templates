@@ -1,3 +1,11 @@
+---
+name: "io_operations"
+description: "AnnData provides comprehensive I/O functionality for reading and writing data in various formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Input/Output Operations
 
 AnnData provides comprehensive I/O functionality for reading and writing data in various formats.

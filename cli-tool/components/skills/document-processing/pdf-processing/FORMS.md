@@ -1,3 +1,11 @@
+---
+name: "FORMS"
+description: "This guide covers filling PDF forms programmatically using PyPDF2 and pdfrw libraries."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "pdf-processing"
+---
+
 # PDF Form Filling Guide
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "custom_functions"
+description: "Complete guide for creating custom functions in CocoIndex."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Custom Functions Reference
 
 Complete guide for creating custom functions in CocoIndex.

@@ -1,3 +1,11 @@
+---
+name: "svelte:scaffold"
+description: "Scaffold new SvelteKit projects, features, or modules with best practices and optimal project structure."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:scaffold
 
 Scaffold new SvelteKit projects, features, or modules with best practices and optimal project structure.

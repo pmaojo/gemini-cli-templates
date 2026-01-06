@@ -1,3 +1,11 @@
+---
+name: "security_standards"
+description: "This reference guide provides comprehensive information for senior secops."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Security Standards
 
 ## Overview

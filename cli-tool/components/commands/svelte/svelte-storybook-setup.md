@@ -1,3 +1,11 @@
+---
+name: "svelte:storybook-setup"
+description: "Initialize and configure Storybook for SvelteKit projects with optimal settings and structure."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:storybook-setup
 
 Initialize and configure Storybook for SvelteKit projects with optimal settings and structure.

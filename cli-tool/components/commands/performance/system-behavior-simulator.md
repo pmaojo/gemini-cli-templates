@@ -1,3 +1,11 @@
+---
+name: "system-behavior-simulator"
+description: "Simulate system performance under various loads with capacity planning, bottleneck identification, and optimization strategies."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "performance"
+---
+
 # System Behavior Simulator
 
 Simulate system performance under various loads with capacity planning, bottleneck identification, and optimization strategies.

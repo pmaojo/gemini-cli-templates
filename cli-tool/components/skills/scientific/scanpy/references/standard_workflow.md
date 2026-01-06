@@ -1,3 +1,11 @@
+---
+name: "standard_workflow"
+description: "This document outlines the standard workflow for analyzing single-cell RNA-seq data using scanpy."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Standard Scanpy Workflow for Single-Cell Analysis
 
 This document outlines the standard workflow for analyzing single-cell RNA-seq data using scanpy.

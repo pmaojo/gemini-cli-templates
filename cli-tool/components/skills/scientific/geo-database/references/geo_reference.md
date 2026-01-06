@@ -1,3 +1,11 @@
+---
+name: "geo_reference"
+description: "The NCBI Entrez Programming Utilities (E-utilities) provide programmatic access to GEO metadata through a set of nine server-side programs. All E-utilities return results in XML format by default."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # GEO Database Reference Documentation
 
 ## Complete E-utilities API Specifications

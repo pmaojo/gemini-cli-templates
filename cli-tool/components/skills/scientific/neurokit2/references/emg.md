@@ -1,3 +1,11 @@
+---
+name: "emg"
+description: "Electromyography (EMG) measures electrical activity produced by skeletal muscles during contraction. EMG analysis in NeuroKit2 focuses on amplitude estimation, muscle activation detection, and temporal dynamics for psychophysiology and motor control research."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Electromyography (EMG) Analysis
 
 ## Overview

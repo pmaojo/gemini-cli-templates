@@ -1,3 +1,11 @@
+---
+name: "general_scientific_formats"
+description: "This reference covers general-purpose scientific data formats used across multiple disciplines."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # General Scientific Data Formats Reference
 
 This reference covers general-purpose scientific data formats used across multiple disciplines.

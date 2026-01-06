@@ -1,3 +1,11 @@
+---
+name: "search_strategies"
+description: "Best practices and strategies for crafting effective search queries with Perplexity models."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Search Strategies for Perplexity
 
 Best practices and strategies for crafting effective search queries with Perplexity models.

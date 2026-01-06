@@ -1,3 +1,11 @@
+---
+name: "images"
+description: "Modal Images define the environment code runs in - containers with dependencies installed. Images are built from method chains starting from a base image."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Modal Images
 
 ## Overview

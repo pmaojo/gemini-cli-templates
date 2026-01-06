@@ -1,3 +1,11 @@
+---
+name: "clustering"
+description: "Aeon provides clustering algorithms adapted for temporal data with specialized distance metrics and averaging methods."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Time Series Clustering
 
 Aeon provides clustering algorithms adapted for temporal data with specialized distance metrics and averaging methods.

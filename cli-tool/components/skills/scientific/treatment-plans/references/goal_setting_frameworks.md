@@ -1,3 +1,11 @@
+---
+name: "goal_setting_frameworks"
+description: "Effective treatment goals are the cornerstone of successful patient care. This reference provides comprehensive guidance on creating SMART goals, patient-centered outcome selection, and shared decision-making processes for treatment planning across all medical specialties."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Goal Setting Frameworks for Treatment Plans
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "foods"
+description: "This reference covers FDA food-related API endpoints accessible through openFDA."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FDA Food Databases
 
 This reference covers FDA food-related API endpoints accessible through openFDA.

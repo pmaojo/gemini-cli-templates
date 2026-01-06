@@ -1,3 +1,11 @@
+---
+name: "interactions"
+description: "DrugBank provides comprehensive drug-drug interaction (DDI) data including mechanism, severity, and clinical significance. This information is critical for pharmacovigilance, clinical decision support, and drug safety research."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Drug-Drug Interactions
 
 ## Overview

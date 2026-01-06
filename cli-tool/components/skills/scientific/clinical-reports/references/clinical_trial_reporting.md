@@ -1,3 +1,11 @@
+---
+name: "clinical_trial_reporting"
+description: "The International Council for Harmonisation (ICH) E3 guideline defines the structure and content of clinical study reports (CSRs) for regulatory submission."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Clinical Trial Reporting Standards
 
 ## ICH-E3: Structure and Content of Clinical Study Reports

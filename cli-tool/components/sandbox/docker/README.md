@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Execute Gemini CLI in isolated Docker containers with AI-powered code generation using the Gemini Agent SDK."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "docker"
+---
+
 # Docker Gemini CLI Sandbox
 
 Execute Gemini CLI in isolated Docker containers with AI-powered code generation using the Gemini Agent SDK.

@@ -1,3 +1,11 @@
+---
+name: "nsf_project_summary_template"
+description: "**IMPORTANT**: NSF requires three labeled sections in the project summary (max 1 page):"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # NSF Project Summary Template
 
 **IMPORTANT**: NSF requires three labeled sections in the project summary (max 1 page):

@@ -1,3 +1,11 @@
+---
+name: "journal_requirements"
+description: "Different journals have specific technical requirements for figures. This reference compiles common requirements from major scientific publishers. **Always check the specific journal's author guidelines for the most current requirements.**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Journal-Specific Figure Requirements
 
 ## Overview

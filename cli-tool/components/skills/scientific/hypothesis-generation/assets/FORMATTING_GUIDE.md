@@ -1,3 +1,11 @@
+---
+name: "FORMATTING_GUIDE"
+description: "This guide provides quick reference for using the hypothesis generation LaTeX template and style package. For complete documentation, see `SKILL.md`."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Hypothesis Generation Report - Formatting Quick Reference
 
 ## Overview

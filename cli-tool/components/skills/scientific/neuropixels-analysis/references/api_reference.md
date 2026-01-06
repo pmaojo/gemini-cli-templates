@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Quick reference for neuropixels_analysis functions organized by module."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # API Reference
 
 Quick reference for neuropixels_analysis functions organized by module.

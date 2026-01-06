@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "ChEMBL is a manually curated database of bioactive molecules with drug-like properties maintained by the European Bioinformatics Institute (EBI). It contains information about compounds, targets, assays, bioactivity data, and approved drugs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ChEMBL Web Services API Reference
 
 ## Overview

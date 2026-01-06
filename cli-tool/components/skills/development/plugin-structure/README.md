@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "Comprehensive guidance on Gemini CLI plugin architecture, directory layout, and best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "plugin-structure"
+---
+
 # Plugin Structure Skill
 
 Comprehensive guidance on Gemini CLI plugin architecture, directory layout, and best practices.

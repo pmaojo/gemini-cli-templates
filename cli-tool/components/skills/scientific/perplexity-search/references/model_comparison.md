@@ -1,3 +1,11 @@
+---
+name: "model_comparison"
+description: "Guide to different Perplexity models available through OpenRouter and when to use each."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Perplexity Model Comparison
 
 Guide to different Perplexity models available through OpenRouter and when to use each.

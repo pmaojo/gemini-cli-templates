@@ -1,3 +1,11 @@
+---
+name: "volumes"
+description: "Modal Volumes provide high-performance distributed file systems for Modal applications. Designed for write-once, read-many workloads like ML model weights and distributed data processing."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Modal Volumes
 
 ## Overview

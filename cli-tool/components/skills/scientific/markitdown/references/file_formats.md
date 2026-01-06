@@ -1,3 +1,11 @@
+---
+name: "file_formats"
+description: "This document provides detailed information about each file format supported by MarkItDown."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # File Format Support
 
 This document provides detailed information about each file format supported by MarkItDown.

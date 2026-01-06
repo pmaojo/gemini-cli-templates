@@ -1,3 +1,11 @@
+---
+name: "web-endpoints"
+description: "Create web endpoint with single decorator:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Web Endpoints
 
 ## Quick Start

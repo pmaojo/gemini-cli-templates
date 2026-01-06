@@ -1,3 +1,11 @@
+---
+name: "production_vision_systems"
+description: "World-class production vision systems for senior computer vision engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Production Vision Systems
 
 ## Overview

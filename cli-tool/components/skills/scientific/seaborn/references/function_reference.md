@@ -1,3 +1,11 @@
+---
+name: "function_reference"
+description: "This document provides a comprehensive reference for all major seaborn functions, organized by category."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Seaborn Function Reference
 
 This document provides a comprehensive reference for all major seaborn functions, organized by category.

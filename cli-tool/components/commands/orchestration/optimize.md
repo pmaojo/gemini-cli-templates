@@ -1,3 +1,11 @@
+---
+name: "optimize"
+description: "Analyze and optimize task orchestrations to improve efficiency, reduce bottlenecks, and maximize team productivity."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestration Optimize Command
 
 Analyze and optimize task orchestrations to improve efficiency, reduce bottlenecks, and maximize team productivity.

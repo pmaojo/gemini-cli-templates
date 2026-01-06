@@ -1,3 +1,11 @@
+---
+name: "phylogenetics"
+description: "Bio.Phylo provides a unified toolkit for reading, writing, analyzing, and visualizing phylogenetic trees. It supports multiple file formats including Newick, NEXUS, phyloXML, NeXML, and CDAO."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Phylogenetics with Bio.Phylo
 
 ## Overview

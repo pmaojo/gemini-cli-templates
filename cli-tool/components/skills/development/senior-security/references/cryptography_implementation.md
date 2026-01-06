@@ -1,3 +1,11 @@
+---
+name: "cryptography_implementation"
+description: "This reference guide provides comprehensive information for senior security."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Cryptography Implementation
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "network"
+description: "Common network and API errors with diagnosis and solutions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # Network & API Error Patterns
 
 Common network and API errors with diagnosis and solutions.

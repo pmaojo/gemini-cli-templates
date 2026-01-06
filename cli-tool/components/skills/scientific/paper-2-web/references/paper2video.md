@@ -1,3 +1,11 @@
+---
+name: "paper2video"
+description: "Paper2Video generates presentation videos from LaTeX sources, transforming academic papers into engaging video presentations. The system processes papers through multiple specialized modules to create professional presentation videos complete with slides, narration, and optional talking-head video."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Paper2Video: Presentation Video Generation
 
 ## Overview

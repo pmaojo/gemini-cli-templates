@@ -1,3 +1,11 @@
+---
+name: "getting_started"
+description: "PennyLane is a cross-platform Python library for quantum computing, quantum machine learning, and quantum chemistry. It enables training quantum computers like neural networks through automatic differentiation and seamless integration with classical machine learning frameworks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Getting Started with PennyLane
 
 ## What is PennyLane?

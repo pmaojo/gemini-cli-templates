@@ -1,3 +1,11 @@
+---
+name: "node_mcp_server"
+description: "This document provides Node/TypeScript-specific best practices and examples for implementing MCP servers using the MCP TypeScript SDK. It covers project structure, server setup, tool registration patterns, input validation with Zod, error handling, and complete working examples."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Node/TypeScript MCP Server Implementation Guide
 
 ## Overview

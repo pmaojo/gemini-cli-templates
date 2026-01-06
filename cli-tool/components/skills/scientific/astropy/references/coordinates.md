@@ -1,3 +1,11 @@
+---
+name: "coordinates"
+description: "The `astropy.coordinates` package provides tools for representing celestial coordinates and transforming between different coordinate systems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Astronomical Coordinates (astropy.coordinates)
 
 The `astropy.coordinates` package provides tools for representing celestial coordinates and transforming between different coordinate systems.

@@ -1,3 +1,11 @@
+---
+name: "analytical-equipment"
+description: "PyLabRobot integrates with analytical equipment including plate readers, scales, and other measurement devices. This allows automated workflows that combine liquid handling with analytical measurements."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Analytical Equipment in PyLabRobot
 
 ## Overview

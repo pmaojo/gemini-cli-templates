@@ -1,3 +1,11 @@
+---
+name: "clinical_trial_sae_template"
+description: "**Report Type:** [ ] Initial Report  [ ] Follow-up Report  [ ] Final Report"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Serious Adverse Event (SAE) Report Template
 
 ## Report Information

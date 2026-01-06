@@ -1,3 +1,11 @@
+---
+name: "region2vec"
+description: "Region2Vec generates unsupervised embeddings of genomic regions and region sets from BED files. It maps genomic regions to a vocabulary, creates sentences through concatenation, and applies word2vec training to learn meaningful representations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Region2Vec: Genomic Region Embeddings
 
 ## Overview

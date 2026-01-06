@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides comprehensive technical documentation for programmatic access to the AlphaFold Protein Structure Database."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # AlphaFold Database API Reference
 
 This document provides comprehensive technical documentation for programmatic access to the AlphaFold Protein Structure Database.

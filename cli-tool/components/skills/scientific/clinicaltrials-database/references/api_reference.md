@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "The ClinicalTrials.gov API v2 is a modern REST API that provides programmatic access to the ClinicalTrials.gov database, which contains information about clinical studies conducted around the world. The API follows the OpenAPI Specification 3.0 and provides both JSON and CSV response formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ClinicalTrials.gov API v2 Reference Documentation
 
 ## Overview

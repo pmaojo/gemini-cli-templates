@@ -1,3 +1,11 @@
+---
+name: "core_api"
+description: "This document covers the main functions available in the datamol namespace."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Datamol Core API Reference
 
 This document covers the main functions available in the datamol namespace.

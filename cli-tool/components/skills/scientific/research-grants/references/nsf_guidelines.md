@@ -1,3 +1,11 @@
+---
+name: "nsf_guidelines"
+description: "**Mission**: To promote the progress of science; to advance the national health, prosperity, and welfare; to secure the national defense"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # NSF (National Science Foundation) Grant Writing Guidelines
 
 ## Agency Overview

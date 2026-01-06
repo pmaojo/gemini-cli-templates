@@ -1,3 +1,11 @@
+---
+name: "tech-innovation"
+description: "A bold and modern theme with high-contrast colors perfect for cutting-edge technology presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Tech Innovation
 
 A bold and modern theme with high-contrast colors perfect for cutting-edge technology presentations.

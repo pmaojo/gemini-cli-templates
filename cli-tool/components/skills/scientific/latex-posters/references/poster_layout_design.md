@@ -1,3 +1,11 @@
+---
+name: "poster_layout_design"
+description: "Effective poster layout organizes content for maximum impact and comprehension. This guide covers grid systems, spatial organization, visual flow, and layout patterns for research posters."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Poster Layout and Design Guide
 
 ## Overview

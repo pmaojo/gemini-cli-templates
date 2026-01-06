@@ -1,3 +1,11 @@
+---
+name: "treatment_recommendations"
+description: "Evidence-based treatment recommendations provide clinicians with systematic guidance for therapeutic decision-making. This guide covers the development, grading, and presentation of clinical recommendations in pharmaceutical and healthcare settings."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Treatment Recommendations Guide
 
 ## Overview

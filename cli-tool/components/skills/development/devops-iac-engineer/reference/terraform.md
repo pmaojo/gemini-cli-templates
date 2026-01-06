@@ -1,3 +1,11 @@
+---
+name: "terraform"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Terraform Best Practices & Patterns
 
 ## Terraform Project Structure

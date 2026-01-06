@@ -1,3 +1,11 @@
+---
+name: "export-interactivity"
+description: "Static image export requires Kaleido:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Export and Interactivity
 
 ## Static Image Export

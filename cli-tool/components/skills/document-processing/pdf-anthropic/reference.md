@@ -1,3 +1,11 @@
+---
+name: "reference"
+description: "This document contains advanced PDF processing features, detailed examples, and additional libraries not covered in the main skill instructions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "pdf-anthropic"
+---
+
 # PDF Processing Advanced Reference
 
 This document contains advanced PDF processing features, detailed examples, and additional libraries not covered in the main skill instructions.

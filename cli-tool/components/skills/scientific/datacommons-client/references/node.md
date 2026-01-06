@@ -1,3 +1,11 @@
+---
+name: "node"
+description: "The Node endpoint retrieves property relationships and values from the Data Commons knowledge graph. It returns information about directed edges (properties) connecting nodes, enabling discovery of connections within the graph structure."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Node Endpoint - Knowledge Graph Exploration
 
 ## Purpose

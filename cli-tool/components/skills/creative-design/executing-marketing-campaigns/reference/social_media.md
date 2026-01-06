@@ -1,3 +1,11 @@
+---
+name: "social_media"
+description: "Use this to determine which platforms best fit your audience and goals."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Social Media Strategy
 
 ## Social Media Platform Guide

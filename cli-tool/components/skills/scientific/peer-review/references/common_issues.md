@@ -1,3 +1,11 @@
+---
+name: "common_issues"
+description: "This document catalogs frequent issues encountered during peer review, organized by category. Use this as a reference to identify potential problems and provide constructive feedback."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common Methodological and Statistical Issues in Scientific Manuscripts
 
 This document catalogs frequent issues encountered during peer review, organized by category. Use this as a reference to identify potential problems and provide constructive feedback.

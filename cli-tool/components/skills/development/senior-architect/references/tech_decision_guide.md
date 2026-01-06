@@ -1,3 +1,11 @@
+---
+name: "tech_decision_guide"
+description: "This reference guide provides comprehensive information for senior architect."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Tech Decision Guide
 
 ## Overview

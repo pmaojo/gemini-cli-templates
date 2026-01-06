@@ -1,3 +1,11 @@
+---
+name: "examples"
+description: "This document provides practical examples for common data visualization scenarios using seaborn."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Seaborn Common Use Cases and Examples
 
 This document provides practical examples for common data visualization scenarios using seaborn.

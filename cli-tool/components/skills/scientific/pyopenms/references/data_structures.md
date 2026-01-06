@@ -1,3 +1,11 @@
+---
+name: "data_structures"
+description: "PyOpenMS uses C++ objects with Python bindings. Understanding these core data structures is essential for effective data manipulation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Core Data Structures
 
 ## Overview

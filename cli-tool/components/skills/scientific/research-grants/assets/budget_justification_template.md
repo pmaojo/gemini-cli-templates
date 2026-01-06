@@ -1,3 +1,11 @@
+---
+name: "budget_justification_template"
+description: "A budget justification provides detailed explanation for each budget line item, demonstrating that costs are necessary, reasonable, and directly related to the proposed research. The justification should be detailed enough for reviewers to understand and assess cost reasonableness."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Budget Justification Template
 
 ## Overview

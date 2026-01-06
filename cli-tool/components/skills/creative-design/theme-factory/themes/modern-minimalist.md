@@ -1,3 +1,11 @@
+---
+name: "modern-minimalist"
+description: "A clean and contemporary theme with a sophisticated grayscale palette for maximum versatility."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Modern Minimalist
 
 A clean and contemporary theme with a sophisticated grayscale palette for maximum versatility.

@@ -1,14 +1,33 @@
-const fs = require('fs-extra');
+const fs = require('fs').promises;
 const path = require('path');
-const glob = require('glob');
 
 const COMPONENTS_DIR = path.join(__dirname, '../cli-tool/components');
+
+async function findMarkdownFiles(dir) {
+  const files = [];
+  try {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        const subFiles = await findMarkdownFiles(fullPath);
+        files.push(...subFiles);
+      } else if (entry.isFile() && entry.name.endsWith('.md')) {
+        files.push(fullPath);
+      }
+    }
+  } catch (error) {
+    if (error.code !== 'ENOENT') {
+      console.error(`Error reading ${dir}: ${error.message}`);
+    }
+  }
+  return files;
+}
 
 async function fixFrontmatter() {
   console.log(`Scanning ${COMPONENTS_DIR}...`);
   
-  // Find all .md files
-  const files = glob.sync(`${COMPONENTS_DIR}/**/*.md`);
+  const files = await findMarkdownFiles(COMPONENTS_DIR);
   let fixedCount = 0;
   
   for (const file of files) {
@@ -25,7 +44,7 @@ async function fixFrontmatter() {
     const filename = path.basename(file, '.md');
     const dir = path.dirname(file);
     const category = path.basename(dir);
-    const type = path.basename(path.dirname(dir)); // agents, commands, etc. (singularize later)
+    // const type = path.basename(path.dirname(dir)); // not used yet
     
     let name = filename;
     let description = '';
@@ -37,18 +56,12 @@ async function fixFrontmatter() {
     for (const line of lines) {
       const trimmed = line.trim();
       if (!titleFound && trimmed.startsWith('# ')) {
-        // Extract name from H1 if it looks like a command name (e.g. "/scope:name" or "Name")
         const h1 = trimmed.substring(2).trim();
         if (h1.startsWith('/')) {
-            name = h1.substring(1); // Remove leading slash
-        } else {
-            // Keep filename as name for consistency, or use H1?
-            // Existing structure suggests filename is usually the ID.
-            // Let's stick to filename as 'name' metadata for safety, or H1 if it looks like technical ID.
+            name = h1.substring(1); 
         }
         titleFound = true;
       } else if (titleFound && trimmed.length > 0 && !trimmed.startsWith('#')) {
-        // First non-empty line after title is description
         description = trimmed;
         break;
       }

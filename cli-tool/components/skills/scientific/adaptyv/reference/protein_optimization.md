@@ -1,3 +1,11 @@
+---
+name: "protein_optimization"
+description: "Before submitting protein sequences for experimental testing, use computational tools to optimize sequences for improved expression, solubility, and stability. This pre-screening reduces experimental costs and increases success rates."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Protein Sequence Optimization
 
 ## Overview

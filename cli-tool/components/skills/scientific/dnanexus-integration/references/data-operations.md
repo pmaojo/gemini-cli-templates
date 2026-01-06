@@ -1,3 +1,11 @@
+---
+name: "data-operations"
+description: "DNAnexus provides comprehensive data management capabilities for files, records, databases, and other data objects. All data operations can be performed via the Python SDK (dxpy) or command-line interface (dx)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DNAnexus Data Operations
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "threat-modeling-risk"
+description: "STRIDE is a threat modeling framework developed by Microsoft that categorizes threats into six types."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Threat Modeling & Risk Assessment
 
 ## Threat Modeling Methodologies

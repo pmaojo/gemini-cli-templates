@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "The bioRxiv API provides programmatic access to preprint metadata from the bioRxiv server. The API returns JSON-formatted data with comprehensive metadata about life sciences preprints."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # bioRxiv API Reference
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "models_architectures"
+description: "TorchDrug provides a comprehensive collection of pre-built model architectures for various graph-based learning tasks. This reference catalogs all available models with their characteristics, use cases, and implementation details."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Models and Architectures
 
 ## Overview

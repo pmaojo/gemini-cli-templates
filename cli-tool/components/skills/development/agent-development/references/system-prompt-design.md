@@ -1,3 +1,11 @@
+---
+name: "system-prompt-design"
+description: "Complete guide to writing effective agent system prompts that enable autonomous, high-quality operation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # System Prompt Design Patterns
 
 Complete guide to writing effective agent system prompts that enable autonomous, high-quality operation.

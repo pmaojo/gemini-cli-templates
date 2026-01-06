@@ -1,3 +1,11 @@
+---
+name: "svelte:storybook-story"
+description: "Create comprehensive Storybook stories for Svelte components using modern patterns and best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:storybook-story
 
 Create comprehensive Storybook stories for Svelte components using modern patterns and best practices.

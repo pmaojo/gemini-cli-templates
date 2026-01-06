@@ -1,3 +1,11 @@
+---
+name: "common_queries"
+description: "This document provides practical examples for common research queries using OpenAlex."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common OpenAlex Query Examples
 
 This document provides practical examples for common research queries using OpenAlex.

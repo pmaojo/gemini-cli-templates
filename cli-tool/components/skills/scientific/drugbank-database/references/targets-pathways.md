@@ -1,3 +1,11 @@
+---
+name: "targets-pathways"
+description: "DrugBank provides comprehensive information about drug-protein interactions including targets, enzymes, transporters, and carriers. This data is essential for understanding drug mechanisms, identifying repurposing opportunities, and predicting off-target effects."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Drug Targets and Pathways
 
 ## Overview

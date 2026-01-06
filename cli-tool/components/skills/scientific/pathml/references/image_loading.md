@@ -1,3 +1,11 @@
+---
+name: "image_loading"
+description: "PathML provides comprehensive support for loading whole-slide images (WSI) from 160+ proprietary medical imaging formats. The framework abstracts vendor-specific complexities through unified slide classes and interfaces, enabling seamless access to image pyramids, metadata, and regions of interest across different file formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Image Loading & Formats
 
 ## Overview

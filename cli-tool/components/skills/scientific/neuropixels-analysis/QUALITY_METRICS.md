@@ -1,3 +1,11 @@
+---
+name: "QUALITY_METRICS"
+description: "Comprehensive guide to unit quality assessment using SpikeInterface metrics and Allen/IBL standards."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "neuropixels-analysis"
+---
+
 # Quality Metrics Reference
 
 Comprehensive guide to unit quality assessment using SpikeInterface metrics and Allen/IBL standards.

@@ -1,3 +1,11 @@
+---
+name: "go"
+description: "Common Go errors with diagnosis and solutions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # Go Error Patterns
 
 Common Go errors with diagnosis and solutions.

@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "ClinVar provides multiple methods for programmatic data access:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ClinVar API and Data Access Reference
 
 ## Overview

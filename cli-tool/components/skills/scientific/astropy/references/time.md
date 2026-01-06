@@ -1,3 +1,11 @@
+---
+name: "time"
+description: "The `astropy.time` module provides robust tools for manipulating times and dates with support for various time scales and formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Time Handling (astropy.time)
 
 The `astropy.time` module provides robust tools for manipulating times and dates with support for various time scales and formats.

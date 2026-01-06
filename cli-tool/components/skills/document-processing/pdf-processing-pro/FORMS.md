@@ -1,3 +1,11 @@
+---
+name: "FORMS"
+description: "Complete guide for processing PDF forms in production environments."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "pdf-processing-pro"
+---
+
 # PDF Form Processing Guide
 
 Complete guide for processing PDF forms in production environments.

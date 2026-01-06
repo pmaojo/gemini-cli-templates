@@ -1,3 +1,11 @@
+---
+name: "metadata_extraction"
+description: "Comprehensive guide to extracting accurate citation metadata from DOIs, PMIDs, arXiv IDs, and URLs using various APIs and services."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Metadata Extraction Guide
 
 Comprehensive guide to extracting accurate citation metadata from DOIs, PMIDs, arXiv IDs, and URLs using various APIs and services.

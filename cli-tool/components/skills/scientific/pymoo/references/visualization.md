@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "Comprehensive reference for visualization capabilities in pymoo."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymoo Visualization Reference
 
 Comprehensive reference for visualization capabilities in pymoo.

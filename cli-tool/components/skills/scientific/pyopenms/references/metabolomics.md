@@ -1,3 +1,11 @@
+---
+name: "metabolomics"
+description: "PyOpenMS provides specialized tools for untargeted metabolomics analysis including feature detection optimized for small molecules, adduct grouping, compound identification, and integration with metabolomics databases."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Metabolomics Workflows
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "ontologies"
+description: "This document covers biological ontology management in LaminDB through the Bionty plugin, including accessing, searching, and annotating data with standardized biological terms."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaminDB Ontology Management
 
 This document covers biological ontology management in LaminDB through the Bionty plugin, including accessing, searching, and annotating data with standardized biological terms.

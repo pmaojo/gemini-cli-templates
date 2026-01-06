@@ -1,3 +1,11 @@
+---
+name: "patient_documentation"
+description: "SOAP (Subjective, Objective, Assessment, Plan) is the standard format for progress notes in clinical practice."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Patient Documentation Standards
 
 ## SOAP Notes

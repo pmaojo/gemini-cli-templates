@@ -1,3 +1,11 @@
+---
+name: "advanced_features"
+description: "FluidSim supports several forcing mechanisms to maintain turbulence or drive specific dynamics."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Advanced Features
 
 ## Custom Forcing

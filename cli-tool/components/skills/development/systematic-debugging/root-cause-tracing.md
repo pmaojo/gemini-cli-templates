@@ -1,3 +1,11 @@
+---
+name: "root-cause-tracing"
+description: "Bugs often manifest deep in the call stack (git init in wrong directory, file created in wrong location, database opened with wrong path). Your instinct is to fix where the error appears, but that's treating a symptom."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "systematic-debugging"
+---
+
 # Root Cause Tracing
 
 ## Overview

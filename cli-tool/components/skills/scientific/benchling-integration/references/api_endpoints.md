@@ -1,3 +1,11 @@
+---
+name: "api_endpoints"
+description: "All API requests use the base URL format:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Benchling REST API Endpoints Reference
 
 ## Base URL

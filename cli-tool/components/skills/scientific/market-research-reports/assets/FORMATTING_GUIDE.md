@@ -1,3 +1,11 @@
+---
+name: "FORMATTING_GUIDE"
+description: "Quick reference for using the `market_research.sty` style package."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Market Research Report Formatting Guide
 
 Quick reference for using the `market_research.sty` style package.

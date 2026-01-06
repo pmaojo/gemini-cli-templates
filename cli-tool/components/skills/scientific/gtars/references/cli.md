@@ -1,3 +1,11 @@
+---
+name: "cli"
+description: "Gtars provides a comprehensive CLI for genomic interval analysis directly from the terminal."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Command-Line Interface
 
 Gtars provides a comprehensive CLI for genomic interval analysis directly from the terminal.

@@ -1,3 +1,11 @@
+---
+name: "competing-risks"
+description: "Competing risks occur when subjects can experience one of several mutually exclusive events (event types). When one event occurs, it prevents (\"competes with\") the occurrence of other events."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Competing Risks Analysis
 
 ## Overview

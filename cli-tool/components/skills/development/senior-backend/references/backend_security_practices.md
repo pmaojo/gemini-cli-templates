@@ -1,3 +1,11 @@
+---
+name: "backend_security_practices"
+description: "This reference guide provides comprehensive information for senior backend."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Backend Security Practices
 
 ## Overview

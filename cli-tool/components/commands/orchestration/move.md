@@ -1,3 +1,11 @@
+---
+name: "move"
+description: "Move tasks between status folders following the task management protocol."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Task Move Command
 
 Move tasks between status folders following the task management protocol.

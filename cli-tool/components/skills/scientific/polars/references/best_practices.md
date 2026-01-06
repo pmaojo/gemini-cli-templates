@@ -1,3 +1,11 @@
+---
+name: "best_practices"
+description: "Comprehensive guide to writing efficient Polars code and avoiding common pitfalls."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Polars Best Practices and Performance Guide
 
 Comprehensive guide to writing efficient Polars code and avoiding common pitfalls.

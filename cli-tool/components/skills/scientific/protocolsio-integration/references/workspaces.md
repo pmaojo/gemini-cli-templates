@@ -1,3 +1,11 @@
+---
+name: "workspaces"
+description: "Workspaces in protocols.io enable team collaboration by organizing protocols, managing members, and controlling access permissions. The Workspaces API allows you to list workspaces, manage memberships, and access workspace-specific protocols."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Workspaces API
 
 ## Overview

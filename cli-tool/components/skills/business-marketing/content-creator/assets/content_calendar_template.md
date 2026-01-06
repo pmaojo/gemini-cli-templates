@@ -1,3 +1,11 @@
+---
+name: "content_calendar_template"
+description: "- **Traffic Goal**:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Content Calendar Template - [Month Year]
 
 ## Monthly Goals

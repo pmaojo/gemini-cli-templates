@@ -1,3 +1,11 @@
+---
+name: "api_basics"
+description: "This reference provides comprehensive information about using the openFDA API, including authentication, rate limits, query syntax, and best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # OpenFDA API Basics
 
 This reference provides comprehensive information about using the openFDA API, including authentication, rate limits, query syntax, and best practices.

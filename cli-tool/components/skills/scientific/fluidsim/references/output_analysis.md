@@ -1,3 +1,11 @@
+---
+name: "output_analysis"
+description: "FluidSim automatically saves several types of output during simulations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Output and Analysis
 
 ## Output Types

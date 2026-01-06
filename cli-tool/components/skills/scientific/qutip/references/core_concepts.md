@@ -1,3 +1,11 @@
+---
+name: "core_concepts"
+description: "All quantum objects in QuTiP are represented by the `Qobj` class:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # QuTiP Core Concepts
 
 ## Quantum Objects (Qobj)

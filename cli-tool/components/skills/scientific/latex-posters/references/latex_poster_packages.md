@@ -1,3 +1,11 @@
+---
+name: "latex_poster_packages"
+description: "Three major LaTeX packages dominate research poster creation: beamerposter, tikzposter, and baposter. Each has distinct strengths, syntax, and use cases. This guide provides detailed comparisons and practical examples."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaTeX Poster Packages: Comprehensive Comparison
 
 ## Overview

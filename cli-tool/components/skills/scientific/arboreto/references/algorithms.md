@@ -1,3 +1,11 @@
+---
+name: "algorithms"
+description: "Arboreto provides two algorithms for gene regulatory network (GRN) inference, both based on the multiple regression approach."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # GRN Inference Algorithms
 
 Arboreto provides two algorithms for gene regulatory network (GRN) inference, both based on the multiple regression approach.

@@ -1,3 +1,11 @@
+---
+name: "remove"
+description: "Safely remove a task from the orchestration system, updating all references and dependencies."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestration Remove Command
 
 Safely remove a task from the orchestration system, updating all references and dependencies.

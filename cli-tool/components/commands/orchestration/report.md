@@ -1,3 +1,11 @@
+---
+name: "report"
+description: "Generate comprehensive reports on task execution, progress, and metrics."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Task Report Command
 
 Generate comprehensive reports on task execution, progress, and metrics.

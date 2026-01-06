@@ -1,3 +1,11 @@
+---
+name: "preprocessing"
+description: "Data preprocessing transforms raw data into a format suitable for machine learning models. This includes scaling, encoding, handling missing values, and feature engineering."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Preprocessing and Feature Engineering Reference
 
 ## Overview

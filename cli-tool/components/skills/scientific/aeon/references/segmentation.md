@@ -1,3 +1,11 @@
+---
+name: "segmentation"
+description: "Aeon provides algorithms to partition time series into regions with distinct characteristics, identifying change points and boundaries."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Time Series Segmentation
 
 Aeon provides algorithms to partition time series into regions with distinct characteristics, identifying change points and boundaries.

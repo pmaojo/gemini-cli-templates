@@ -1,3 +1,11 @@
+---
+name: "parameters"
+description: "The `Parameters` object is hierarchical and organized into logical groups. Access using dot notation:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Parameter Configuration
 
 ## Parameters Object

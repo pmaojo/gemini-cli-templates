@@ -1,3 +1,11 @@
+---
+name: "utilities"
+description: "This document provides comprehensive documentation for TDC's data processing, evaluation, and utility functions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # TDC Utilities and Data Functions
 
 This document provides comprehensive documentation for TDC's data processing, evaluation, and utility functions.

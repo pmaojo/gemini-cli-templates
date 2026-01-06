@@ -1,3 +1,11 @@
+---
+name: "protocols_api"
+description: "The Protocols API is the core functionality of protocols.io, supporting the complete protocol lifecycle from creation to publication. This includes searching, creating, updating, managing steps, handling materials, bookmarking, and generating PDFs."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Protocols API
 
 ## Overview

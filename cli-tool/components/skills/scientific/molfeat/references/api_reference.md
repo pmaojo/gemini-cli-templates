@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Molfeat is organized into several key modules that provide different aspects of molecular featurization:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Molfeat API Reference
 
 ## Core Modules

@@ -1,3 +1,11 @@
+---
+name: "resolve"
+description: "The Resolve API identifies Data Commons IDs (DCIDs) for entities in the knowledge graph. DCIDs are required for most queries in the Data Commons API, so resolution is typically the first step in any workflow."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Resolve Endpoint - Entity Identification
 
 ## Purpose

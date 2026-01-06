@@ -1,3 +1,11 @@
+---
+name: "compliance-frameworks"
+description: "SOC 2 is an auditing standard developed by the American Institute of CPAs (AICPA) for service organizations. It evaluates a company's information systems based on five Trust Service Criteria (TSC)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Compliance Frameworks
 
 ## SOC 2 (Service Organization Control 2)

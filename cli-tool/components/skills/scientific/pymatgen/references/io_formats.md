@@ -1,3 +1,11 @@
+---
+name: "io_formats"
+description: "This reference documents pymatgen's extensive input/output capabilities for reading and writing structural and computational data across 100+ file formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymatgen I/O and File Format Reference
 
 This reference documents pymatgen's extensive input/output capabilities for reading and writing structural and computational data across 100+ file formats.

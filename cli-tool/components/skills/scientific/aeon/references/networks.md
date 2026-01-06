@@ -1,3 +1,11 @@
+---
+name: "networks"
+description: "Aeon provides neural network architectures specifically designed for time series tasks. These networks serve as building blocks for classification, regression, clustering, and forecasting."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Deep Learning Networks
 
 Aeon provides neural network architectures specifically designed for time series tasks. These networks serve as building blocks for classification, regression, clustering, and forecasting.

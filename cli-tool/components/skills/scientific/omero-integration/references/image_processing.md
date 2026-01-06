@@ -1,3 +1,11 @@
+---
+name: "image_processing"
+description: "This reference covers accessing raw pixel data, image rendering, and creating new images in OMERO."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Image Processing & Rendering
 
 This reference covers accessing raw pixel data, image rendering, and creating new images in OMERO.

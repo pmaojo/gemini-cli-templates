@@ -1,3 +1,11 @@
+---
+name: "other"
+description: "This reference covers FDA substance-related and other specialized API endpoints accessible through openFDA."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FDA Other Databases - Substances and NSDE
 
 This reference covers FDA substance-related and other specialized API endpoints accessible through openFDA.

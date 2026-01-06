@@ -1,3 +1,11 @@
+---
+name: "visualization"
+description: "PyLabRobot provides visualization and simulation tools for developing, testing, and validating laboratory protocols without physical hardware. The visualizer offers real-time 3D visualization of deck state, while simulation backends enable protocol testing and validation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Visualization & Simulation in PyLabRobot
 
 ## Overview

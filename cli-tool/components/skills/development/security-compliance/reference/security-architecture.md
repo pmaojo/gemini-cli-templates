@@ -1,3 +1,11 @@
+---
+name: "security-architecture"
+description: "Zero Trust is a security model based on the principle of \"never trust, always verify.\" It assumes that threats exist both inside and outside the network."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Security Architecture & Design
 
 ## Zero Trust Architecture

@@ -1,3 +1,11 @@
+---
+name: "manipulation"
+description: "Operations for transforming, subsetting, and manipulating AnnData objects."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Manipulation
 
 Operations for transforming, subsetting, and manipulating AnnData objects.

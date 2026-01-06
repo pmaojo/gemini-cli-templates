@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "ETE (Environment for Tree Exploration) is a Python toolkit for phylogenetic tree manipulation, analysis, and visualization. This reference covers the main classes and methods."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ETE Toolkit API Reference
 
 ## Overview

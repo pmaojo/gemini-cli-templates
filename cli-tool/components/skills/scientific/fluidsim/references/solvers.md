@@ -1,3 +1,11 @@
+---
+name: "solvers"
+description: "FluidSim provides multiple solvers for different fluid dynamics equations. All solvers work on periodic domains using pseudospectral methods with FFT."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FluidSim Solvers
 
 FluidSim provides multiple solvers for different fluid dynamics equations. All solvers work on periodic domains using pseudospectral methods with FFT.

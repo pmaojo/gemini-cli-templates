@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This is a placeholder for detailed reference documentation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Reference Documentation for Quality Manager Qmr
 
 This is a placeholder for detailed reference documentation.

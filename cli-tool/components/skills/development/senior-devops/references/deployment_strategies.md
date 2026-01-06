@@ -1,3 +1,11 @@
+---
+name: "deployment_strategies"
+description: "This reference guide provides comprehensive information for senior devops."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Deployment Strategies
 
 ## Overview

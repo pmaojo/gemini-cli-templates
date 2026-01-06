@@ -1,3 +1,11 @@
+---
+name: "additional_apis"
+description: "Beyond patent search, PEDS, and trademarks, USPTO provides specialized APIs for citations, office actions, assignments, litigation, and other patent data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Additional USPTO APIs Reference
 
 ## Overview

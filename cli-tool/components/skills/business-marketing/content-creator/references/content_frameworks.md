@@ -1,3 +1,11 @@
+---
+name: "content_frameworks"
+description: "```markdown"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Content Creation Frameworks & Templates
 
 ## Content Types & Templates

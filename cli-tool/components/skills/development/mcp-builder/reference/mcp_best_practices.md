@@ -1,3 +1,11 @@
+---
+name: "mcp_best_practices"
+description: "This document compiles essential best practices and guidelines for building Model Context Protocol (MCP) servers. It covers naming conventions, tool design, response formats, pagination, error handling, security, and compliance requirements."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # MCP Server Development Best Practices and Guidelines
 
 ## Overview

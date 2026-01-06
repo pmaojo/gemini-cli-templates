@@ -1,3 +1,11 @@
+---
+name: "quick_reference"
+description: "```bash"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # deepTools Quick Reference
 
 ## Most Common Commands

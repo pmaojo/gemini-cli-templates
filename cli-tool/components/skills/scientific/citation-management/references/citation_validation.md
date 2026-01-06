@@ -1,3 +1,11 @@
+---
+name: "citation_validation"
+description: "Comprehensive guide to validating citation accuracy, completeness, and formatting in BibTeX files."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Citation Validation Guide
 
 Comprehensive guide to validating citation accuracy, completeness, and formatting in BibTeX files.

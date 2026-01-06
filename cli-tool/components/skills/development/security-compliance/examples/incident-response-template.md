@@ -1,3 +1,11 @@
+---
+name: "incident-response-template"
+description: "**Incident ID**: INC-2025-XXX"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Incident Response Report Template
 
 ## Incident Summary

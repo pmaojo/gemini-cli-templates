@@ -1,3 +1,11 @@
+---
+name: "data_formats"
+description: "ClinVar provides bulk data downloads in multiple formats to support different research workflows. Data is distributed via FTP and updated on regular schedules."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ClinVar Data Formats and FTP Access
 
 ## Overview

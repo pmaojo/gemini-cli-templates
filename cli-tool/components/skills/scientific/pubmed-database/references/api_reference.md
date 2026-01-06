@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "The NCBI E-utilities provide programmatic access to PubMed and other Entrez databases through a REST API. The base URL for all E-utilities is:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PubMed E-utilities API Reference
 
 ## Overview

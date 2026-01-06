@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document provides complete, end-to-end examples of common workflows using ESM3 and ESM C. Each workflow includes setup, execution, and analysis code."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ESM Workflows and Examples
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "frontend_best_practices"
+description: "This reference guide provides comprehensive information for senior frontend."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Frontend Best Practices
 
 ## Overview

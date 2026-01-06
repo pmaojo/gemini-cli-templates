@@ -1,3 +1,11 @@
+---
+name: "concatenation"
+description: "Combine multiple AnnData objects along either observations or variables axis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Concatenating AnnData Objects
 
 Combine multiple AnnData objects along either observations or variables axis.

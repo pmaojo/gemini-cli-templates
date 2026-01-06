@@ -1,3 +1,11 @@
+---
+name: "kegg_reference"
+description: "KEGG (Kyoto Encyclopedia of Genes and Genomes) is a comprehensive bioinformatics resource that maintains manually curated pathway maps and molecular interaction networks. It provides \"wiring diagrams of molecular interactions, reactions and relations\" for understanding biological systems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # KEGG Database Reference
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "common_queries"
+description: "This reference provides practical examples of common PubMed search patterns for various research scenarios."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Common PubMed Query Patterns
 
 This reference provides practical examples of common PubMed search patterns for various research scenarios.

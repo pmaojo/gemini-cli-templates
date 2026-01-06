@@ -1,3 +1,11 @@
+---
+name: "alignment_files"
+description: "Pysam provides the `AlignmentFile` class for reading and writing SAM/BAM/CRAM formatted files containing aligned sequence data. BAM/CRAM files support compression and random access through indexing."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Working with Alignment Files (SAM/BAM/CRAM)
 
 ## Overview

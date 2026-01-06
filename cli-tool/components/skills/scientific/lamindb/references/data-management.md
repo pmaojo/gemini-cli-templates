@@ -1,3 +1,11 @@
+---
+name: "data-management"
+description: "This document covers querying, searching, filtering, and streaming data in LaminDB, as well as best practices for organizing and accessing datasets."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LaminDB Data Management
 
 This document covers querying, searching, filtering, and streaming data in LaminDB, as well as best practices for organizing and accessing datasets.

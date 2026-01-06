@@ -1,3 +1,11 @@
+---
+name: "python-sdk"
+description: "The dxpy library provides Python bindings to interact with the DNAnexus Platform. It's available both within the DNAnexus Execution Environment (for apps running on the platform) and for external scripts accessing the API."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DNAnexus Python SDK (dxpy)
 
 ## Overview

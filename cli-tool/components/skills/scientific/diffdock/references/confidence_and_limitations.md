@@ -1,3 +1,11 @@
+---
+name: "confidence_and_limitations"
+description: "This document provides detailed guidance on interpreting DiffDock confidence scores and understanding the tool's limitations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DiffDock Confidence Scores and Limitations
 
 This document provides detailed guidance on interpreting DiffDock confidence scores and understanding the tool's limitations.

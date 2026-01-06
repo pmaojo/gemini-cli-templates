@@ -1,3 +1,11 @@
+---
+name: "visual_generation_guide"
+description: "Complete prompts and guidance for generating visualizations in market research reports."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Visual Generation Guide for Market Research Reports
 
 Complete prompts and guidance for generating visualizations in market research reports.

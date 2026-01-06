@@ -1,3 +1,11 @@
+---
+name: "linear_models"
+description: "This document provides detailed guidance on linear regression models in statsmodels, including OLS, GLS, WLS, quantile regression, and specialized variants."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Linear Regression Models Reference
 
 This document provides detailed guidance on linear regression models in statsmodels, including OLS, GLS, WLS, quantile regression, and specialized variants.

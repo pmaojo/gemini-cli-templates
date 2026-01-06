@@ -1,3 +1,11 @@
+---
+name: "svelte:storybook-mock"
+description: "Mock SvelteKit modules and functionality in Storybook stories for isolated component development."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:storybook-mock
 
 Mock SvelteKit modules and functionality in Storybook stories for isolated component development.

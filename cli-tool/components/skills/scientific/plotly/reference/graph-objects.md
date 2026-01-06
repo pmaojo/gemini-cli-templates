@@ -1,3 +1,11 @@
+---
+name: "graph-objects"
+description: "The `plotly.graph_objects` module provides fine-grained control over figure construction through Python classes representing Plotly components."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Graph Objects - Low-Level API
 
 The `plotly.graph_objects` module provides fine-grained control over figure construction through Python classes representing Plotly components.

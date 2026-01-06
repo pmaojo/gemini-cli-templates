@@ -1,3 +1,11 @@
+---
+name: "visual_review_workflow"
+description: "Visual review is a critical quality assurance step for presentations, allowing you to identify and fix layout issues, text overflow, element overlap, and design problems before presenting. This guide covers converting presentations to images, systematic visual inspection, common issues, and iterative improvement strategies."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Visual Review Workflow for Presentations
 
 ## Overview

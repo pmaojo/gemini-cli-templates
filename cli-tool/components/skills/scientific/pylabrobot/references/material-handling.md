@@ -1,3 +1,11 @@
+---
+name: "material-handling"
+description: "PyLabRobot integrates with material handling equipment including heater shakers, incubators, centrifuges, and pumps. These devices enable environmental control, sample preparation, and automated workflows beyond basic liquid handling."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Material Handling Equipment in PyLabRobot
 
 ## Overview

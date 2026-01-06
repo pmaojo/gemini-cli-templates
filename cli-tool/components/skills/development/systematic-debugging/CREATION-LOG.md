@@ -1,3 +1,11 @@
+---
+name: "CREATION-LOG"
+description: "Reference example of extracting, structuring, and bulletproofing a critical skill."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "systematic-debugging"
+---
+
 # Creation Log: Systematic Debugging Skill
 
 Reference example of extracting, structuring, and bulletproofing a critical skill.

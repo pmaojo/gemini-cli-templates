@@ -1,3 +1,11 @@
+---
+name: "pathology_report_template"
+description: "**Patient Name:** [Last, First]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Surgical Pathology Report Template
 
 ## Patient and Specimen Information

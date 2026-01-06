@@ -1,3 +1,11 @@
+---
+name: "schedulers"
+description: "Dask provides multiple task schedulers, each suited to different workloads. The scheduler determines how tasks are executed: sequentially, in parallel threads, in parallel processes, or distributed across a cluster."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Dask Schedulers
 
 ## Overview

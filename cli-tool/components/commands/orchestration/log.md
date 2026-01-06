@@ -1,3 +1,11 @@
+---
+name: "log"
+description: "Log work from orchestrated tasks to external project management tools like Linear, Obsidian, Jira, or GitHub Issues."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Orchestration Log Command
 
 Log work from orchestrated tasks to external project management tools like Linear, Obsidian, Jira, or GitHub Issues.

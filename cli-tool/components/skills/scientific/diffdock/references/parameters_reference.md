@@ -1,3 +1,11 @@
+---
+name: "parameters_reference"
+description: "This document provides comprehensive details on all DiffDock configuration parameters and command-line options."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DiffDock Configuration Parameters Reference
 
 This document provides comprehensive details on all DiffDock configuration parameters and command-line options.

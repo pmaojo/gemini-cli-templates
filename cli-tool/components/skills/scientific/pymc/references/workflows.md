@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This reference provides standard workflows and patterns for building, validating, and analyzing Bayesian models in PyMC."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyMC Workflows and Common Patterns
 
 This reference provides standard workflows and patterns for building, validating, and analyzing Bayesian models in PyMC.

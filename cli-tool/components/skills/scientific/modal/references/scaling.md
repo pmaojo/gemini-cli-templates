@@ -1,3 +1,11 @@
+---
+name: "scaling"
+description: "Every Modal Function corresponds to an autoscaling pool of containers. Modal's autoscaler:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scaling Out on Modal
 
 ## Automatic Autoscaling

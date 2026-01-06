@@ -1,3 +1,11 @@
+---
+name: "plotly-express"
+description: "Plotly Express (px) is a high-level interface for creating data visualizations with minimal code (typically 1-5 lines)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Plotly Express - High-Level API
 
 Plotly Express (px) is a high-level interface for creating data visualizations with minimal code (typically 1-5 lines).

@@ -1,3 +1,11 @@
+---
+name: "simulation"
+description: "This guide covers quantum circuit simulation, including exact and noisy simulations, parameter sweeps, and the Quantum Virtual Machine (QVM)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Simulation in Cirq
 
 This guide covers quantum circuit simulation, including exact and noisy simulations, parameter sweeps, and the Quantum Virtual Machine (QVM).

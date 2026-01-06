@@ -1,3 +1,11 @@
+---
+name: "arctic-frost"
+description: "A cool and crisp winter-inspired theme that conveys clarity, precision, and professionalism."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "themes"
+---
+
 # Arctic Frost
 
 A cool and crisp winter-inspired theme that conveys clarity, precision, and professionalism.

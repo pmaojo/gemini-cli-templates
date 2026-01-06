@@ -1,3 +1,11 @@
+---
+name: "bedspace"
+description: "BEDspace applies the StarSpace model to genomic data, enabling simultaneous training of numerical embeddings for both region sets and their metadata labels in a shared low-dimensional space. This allows for rich queries across regions and metadata."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # BEDspace: Joint Region and Metadata Embeddings
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "evidence_synthesis"
+description: "Evidence synthesis involves systematically reviewing, analyzing, and integrating research findings to inform clinical recommendations. This guide covers guideline sources, evidence hierarchies, systematic reviews, meta-analyses, and integration of multiple evidence streams for clinical decision support."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Evidence Synthesis and Guideline Integration Guide
 
 ## Overview

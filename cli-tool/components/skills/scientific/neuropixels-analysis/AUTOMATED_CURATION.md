@@ -1,3 +1,11 @@
+---
+name: "AUTOMATED_CURATION"
+description: "Guide to automated spike sorting curation using Bombcell, UnitRefine, and other tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "neuropixels-analysis"
+---
+
 # Automated Curation Reference
 
 Guide to automated spike sorting curation using Bombcell, UnitRefine, and other tools.

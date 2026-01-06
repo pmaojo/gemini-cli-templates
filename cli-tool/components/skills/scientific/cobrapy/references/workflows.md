@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document provides detailed step-by-step workflows for common COBRApy tasks in metabolic modeling."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # COBRApy Comprehensive Workflows
 
 This document provides detailed step-by-step workflows for common COBRApy tasks in metabolic modeling.

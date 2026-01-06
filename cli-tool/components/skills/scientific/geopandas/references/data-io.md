@@ -1,3 +1,11 @@
+---
+name: "data-io"
+description: "Use `geopandas.read_file()` to import vector spatial data:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Reading and Writing Spatial Data
 
 ## Reading Files

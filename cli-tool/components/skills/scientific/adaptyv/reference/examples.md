@@ -1,3 +1,11 @@
+---
+name: "examples"
+description: "```python"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Code Examples
 
 ## Setup and Authentication

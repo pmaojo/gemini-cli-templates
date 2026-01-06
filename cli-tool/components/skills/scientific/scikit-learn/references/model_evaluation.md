@@ -1,3 +1,11 @@
+---
+name: "model_evaluation"
+description: "Comprehensive guide for evaluating models, tuning hyperparameters, and selecting the best model using scikit-learn's model selection tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Model Selection and Evaluation Reference
 
 ## Overview

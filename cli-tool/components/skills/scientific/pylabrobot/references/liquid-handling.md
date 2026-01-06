@@ -1,3 +1,11 @@
+---
+name: "liquid-handling"
+description: "The liquid handling module (`pylabrobot.liquid_handling`) provides a unified interface for controlling liquid handling robots. The `LiquidHandler` class serves as the main interface for all pipetting operations, working across different hardware platforms through backend abstraction."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Liquid Handling with PyLabRobot
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "getting_started"
+description: "This guide provides end-to-end examples for common Data Commons workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Getting Started with Data Commons
 
 ## Quick Start Guide

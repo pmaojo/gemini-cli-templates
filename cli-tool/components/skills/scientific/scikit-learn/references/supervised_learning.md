@@ -1,3 +1,11 @@
+---
+name: "supervised_learning"
+description: "Supervised learning algorithms learn from labeled training data to make predictions on new data. Scikit-learn provides comprehensive implementations for both classification and regression tasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Supervised Learning Reference
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "standard_workflow"
+description: "Complete step-by-step guide for analyzing Neuropixels recordings from raw data to curated units."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Standard Neuropixels Analysis Workflow
 
 Complete step-by-step guide for analyzing Neuropixels recordings from raw data to curated units.

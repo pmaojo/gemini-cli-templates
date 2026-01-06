@@ -1,3 +1,11 @@
+---
+name: "root-cause"
+description: "Techniques for finding the real cause of errors, not just symptoms."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "analysis"
+---
+
 # Root Cause Analysis
 
 Techniques for finding the real cause of errors, not just symptoms.

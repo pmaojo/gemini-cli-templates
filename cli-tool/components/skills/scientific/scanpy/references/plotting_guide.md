@@ -1,3 +1,11 @@
+---
+name: "plotting_guide"
+description: "Comprehensive guide for creating publication-quality visualizations with scanpy."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Scanpy Plotting Guide
 
 Comprehensive guide for creating publication-quality visualizations with scanpy.

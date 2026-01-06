@@ -1,3 +1,11 @@
+---
+name: "slide_design_principles"
+description: "Effective slide design enhances comprehension, maintains audience attention, and ensures your scientific message is communicated clearly. This guide covers visual hierarchy, typography, color theory, layout principles, and accessibility considerations for creating professional scientific presentations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Slide Design Principles for Scientific Presentations
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "integrations"
+description: "LabArchives integrates with numerous scientific software platforms to streamline research workflows. This document covers programmatic integration approaches, automation strategies, and best practices for each supported platform."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LabArchives Third-Party Integrations
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "reporting_standards"
+description: "This document provides guidelines for reporting statistical analyses according to APA (American Psychological Association) style and general best practices for academic publications."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Statistical Reporting Standards
 
 This document provides guidelines for reporting statistical analyses according to APA (American Psychological Association) style and general best practices for academic publications.

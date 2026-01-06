@@ -1,3 +1,11 @@
+---
+name: "hardware"
+description: "This guide covers running quantum circuits on real quantum hardware through Cirq's device interfaces and service providers."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Hardware Integration
 
 This guide covers running quantum circuits on real quantum hardware through Cirq's device interfaces and service providers.

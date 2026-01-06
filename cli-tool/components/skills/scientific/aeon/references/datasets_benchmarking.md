@@ -1,3 +1,11 @@
+---
+name: "datasets_benchmarking"
+description: "Aeon provides comprehensive tools for loading datasets and benchmarking time series algorithms."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Datasets and Benchmarking
 
 Aeon provides comprehensive tools for loading datasets and benchmarking time series algorithms.

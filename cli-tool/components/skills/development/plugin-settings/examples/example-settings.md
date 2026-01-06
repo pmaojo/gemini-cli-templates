@@ -1,3 +1,11 @@
+---
+name: "example-settings"
+description: "**.gemini/my-plugin.local.md:**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Example Plugin Settings File
 
 ## Template: Basic Configuration

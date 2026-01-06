@@ -1,3 +1,11 @@
+---
+name: "INSTALLATION_GUIDE"
+description: "- Python 3.10 or higher"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "markitdown"
+---
+
 # MarkItDown Installation Guide
 
 ## Prerequisites

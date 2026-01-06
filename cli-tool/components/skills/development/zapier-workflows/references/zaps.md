@@ -1,3 +1,11 @@
+---
+name: "zaps"
+description: "This file documents all webhook-triggered Zapier workflows. Each Zap is pre-built, tested, and optimized."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Zapier Workflows
 
 This file documents all webhook-triggered Zapier workflows. Each Zap is pre-built, tested, and optimized.

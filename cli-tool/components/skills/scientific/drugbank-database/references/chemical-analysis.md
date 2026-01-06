@@ -1,3 +1,11 @@
+---
+name: "chemical-analysis"
+description: "DrugBank provides extensive chemical property data including molecular structures, physicochemical properties, and calculated descriptors. This information enables structure-based analysis, similarity searches, and QSAR modeling."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Chemical Properties and Similarity Analysis
 
 ## Overview

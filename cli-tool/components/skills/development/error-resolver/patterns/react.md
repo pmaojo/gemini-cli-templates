@@ -1,3 +1,11 @@
+---
+name: "react"
+description: "Common React/Next.js errors with diagnosis and solutions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "patterns"
+---
+
 # React Error Patterns
 
 Common React/Next.js errors with diagnosis and solutions.

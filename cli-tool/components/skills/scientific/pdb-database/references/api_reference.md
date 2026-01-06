@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides detailed information about the RCSB Protein Data Bank APIs, including advanced usage patterns, data schemas, and best practices."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # RCSB PDB API Reference
 
 This document provides detailed information about the RCSB Protein Data Bank APIs, including advanced usage patterns, data schemas, and best practices.

@@ -1,3 +1,11 @@
+---
+name: "custom_environments"
+description: "This guide provides comprehensive information for creating custom Gymnasium environments compatible with Stable Baselines3."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Creating Custom Environments for Stable Baselines3
 
 This guide provides comprehensive information for creating custom Gymnasium environments compatible with Stable Baselines3.

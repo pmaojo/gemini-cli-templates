@@ -1,3 +1,11 @@
+---
+name: "literature_search_strategies"
+description: "Comprehensive literature search is essential for grounding hypotheses in existing evidence. This reference provides strategies for both PubMed (biomedical literature) and general scientific search."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Literature Search Strategies
 
 ## Effective Techniques for Finding Scientific Evidence

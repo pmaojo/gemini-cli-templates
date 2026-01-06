@@ -1,3 +1,11 @@
+---
+name: "alignment"
+description: "Bio.Align provides tools for pairwise sequence alignment using various algorithms, while Bio.AlignIO handles reading and writing multiple sequence alignment files in various formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Sequence Alignments with Bio.Align and Bio.AlignIO
 
 ## Overview

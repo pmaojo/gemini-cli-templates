@@ -1,3 +1,11 @@
+---
+name: "ooxml"
+description: "**Important: Read this entire document before starting.** This document covers:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "docx"
+---
+
 # Office Open XML Technical Reference
 
 **Important: Read this entire document before starting.** This document covers:

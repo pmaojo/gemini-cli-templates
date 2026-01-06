@@ -1,3 +1,11 @@
+---
+name: "descriptors_reference"
+description: "Complete reference for molecular descriptors available in RDKit's `Descriptors` module."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # RDKit Molecular Descriptors Reference
 
 Complete reference for molecular descriptors available in RDKit's `Descriptors` module.

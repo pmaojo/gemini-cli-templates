@@ -1,3 +1,11 @@
+---
+name: "svelte:storybook-troubleshoot"
+description: "Diagnose and fix common Storybook issues in SvelteKit projects, including build errors, module problems, and configuration issues."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:storybook-troubleshoot
 
 Diagnose and fix common Storybook issues in SvelteKit projects, including build errors, module problems, and configuration issues.

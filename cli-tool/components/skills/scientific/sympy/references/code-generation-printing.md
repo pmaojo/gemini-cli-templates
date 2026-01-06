@@ -1,3 +1,11 @@
+---
+name: "code-generation-printing"
+description: "This document covers SymPy's capabilities for generating executable code in various languages, converting expressions to different output formats, and customizing printing behavior."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SymPy Code Generation and Printing
 
 This document covers SymPy's capabilities for generating executable code in various languages, converting expressions to different output formats, and customizing printing behavior.

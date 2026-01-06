@@ -1,3 +1,11 @@
+---
+name: "prd_templates"
+description: "**Purpose**: One-page overview for executives and stakeholders"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Product Requirements Document (PRD) Templates
 
 ## Standard PRD Template

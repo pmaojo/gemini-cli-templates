@@ -1,3 +1,11 @@
+---
+name: "ppg"
+description: "Photoplethysmography (PPG) measures blood volume changes in microvascular tissue using optical sensors. PPG is widely used in wearable devices, pulse oximeters, and clinical monitors for heart rate, pulse characteristics, and cardiovascular assessment."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Photoplethysmography (PPG) Analysis
 
 ## Overview

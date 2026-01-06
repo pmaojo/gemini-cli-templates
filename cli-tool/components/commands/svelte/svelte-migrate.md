@@ -1,3 +1,11 @@
+---
+name: "svelte:migrate"
+description: "Migrate Svelte/SvelteKit projects between versions, adopt new features like runes, and handle breaking changes."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:migrate
 
 Migrate Svelte/SvelteKit projects between versions, adopt new features like runes, and handle breaking changes.

@@ -1,3 +1,11 @@
+---
+name: "qa_best_practices"
+description: "This reference guide provides comprehensive information for senior qa."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Qa Best Practices
 
 ## Overview

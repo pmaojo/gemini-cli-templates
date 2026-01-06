@@ -1,3 +1,11 @@
+---
+name: "soap_note_template"
+description: "**Patient Name:** [Last, First] or [Patient ID for teaching/research contexts]"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # SOAP Note Template
 
 ## Patient Information

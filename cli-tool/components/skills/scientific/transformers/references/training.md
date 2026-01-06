@@ -1,3 +1,11 @@
+---
+name: "training"
+description: "Fine-tune pre-trained models on custom datasets using the Trainer API. The Trainer handles training loops, gradient accumulation, mixed precision, logging, and checkpointing."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Training and Fine-Tuning
 
 ## Overview

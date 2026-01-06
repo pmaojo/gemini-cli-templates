@@ -1,3 +1,11 @@
+---
+name: "tables"
+description: "This reference covers creating and managing structured tabular data in OMERO using OMERO.tables."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # OMERO Tables
 
 This reference covers creating and managing structured tabular data in OMERO using OMERO.tables.

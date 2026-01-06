@@ -1,3 +1,11 @@
+---
+name: "rsp"
+description: "Respiratory signal processing in NeuroKit2 enables analysis of breathing patterns, respiratory rate, amplitude, and variability. Respiration is closely linked to cardiac activity (respiratory sinus arrhythmia), emotional state, and cognitive processes."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Respiratory Signal Processing
 
 ## Overview

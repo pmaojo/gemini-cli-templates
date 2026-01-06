@@ -1,3 +1,11 @@
+---
+name: "oracles"
+description: "Oracles are functions that evaluate the quality of generated molecules across specific dimensions. TDC provides 17+ oracle functions for molecular optimization tasks in de novo drug design."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # TDC Molecule Generation Oracles
 
 Oracles are functions that evaluate the quality of generated molecules across specific dimensions. TDC provides 17+ oracle functions for molecular optimization tasks in de novo drug design.

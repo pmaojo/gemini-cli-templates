@@ -1,3 +1,11 @@
+---
+name: "observation"
+description: "The Observation API retrieves statistical observations—data points linking entities, variables, and specific dates. Examples include:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Observation Endpoint - Statistical Data Queries
 
 ## Purpose

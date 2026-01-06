@@ -1,3 +1,11 @@
+---
+name: "dataframes"
+description: "Dask DataFrames enable parallel processing of large tabular data by distributing work across multiple pandas DataFrames. As described in the documentation, \"Dask DataFrames are a collection of many pandas DataFrames\" with identical APIs, making the transition from pandas straightforward."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Dask DataFrames
 
 ## Overview

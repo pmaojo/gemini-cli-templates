@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "FlowIO is a Python library for reading and writing Flow Cytometry Standard (FCS) files. It supports FCS versions 2.0, 3.0, and 3.1 with minimal dependencies."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FlowIO API Reference
 
 ## Overview

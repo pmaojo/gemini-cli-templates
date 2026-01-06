@@ -1,3 +1,11 @@
+---
+name: "test_automation_patterns"
+description: "This reference guide provides comprehensive information for senior qa."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Test Automation Patterns
 
 ## Overview

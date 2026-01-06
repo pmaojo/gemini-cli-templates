@@ -1,3 +1,11 @@
+---
+name: "complete-agent-examples"
+description: "Full, production-ready agent examples for common use cases. Use these as templates for your own agents."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Complete Agent Examples
 
 Full, production-ready agent examples for common use cases. Use these as templates for your own agents.

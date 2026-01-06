@@ -1,3 +1,11 @@
+---
+name: "effective_genome_sizes"
+description: "Effective genome size refers to the length of the \"mappable\" genome - regions that can be uniquely mapped by sequencing reads. This metric is crucial for proper normalization in many deepTools commands."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Effective Genome Sizes
 
 ## Definition

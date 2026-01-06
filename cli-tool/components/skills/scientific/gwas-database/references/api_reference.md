@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "Comprehensive reference for the GWAS Catalog REST APIs, including endpoint specifications, query parameters, response formats, and advanced usage patterns."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # GWAS Catalog API Reference
 
 Comprehensive reference for the GWAS Catalog REST APIs, including endpoint specifications, query parameters, response formats, and advanced usage patterns.

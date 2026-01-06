@@ -1,3 +1,11 @@
+---
+name: "migration"
+description: "This guide shows how to migrate from basic command hooks to advanced prompt-based hooks for better maintainability and flexibility."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Migrating from Basic to Advanced Hooks
 
 This guide shows how to migrate from basic command hooks to advanced prompt-based hooks for better maintainability and flexibility.

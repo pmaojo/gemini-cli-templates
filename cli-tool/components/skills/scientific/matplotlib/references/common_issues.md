@@ -1,3 +1,11 @@
+---
+name: "common_issues"
+description: "Troubleshooting guide for frequently encountered matplotlib problems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matplotlib Common Issues and Solutions
 
 Troubleshooting guide for frequently encountered matplotlib problems.

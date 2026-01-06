@@ -1,3 +1,11 @@
+---
+name: "IMPLEMENTATION_GUIDE"
+description: "Use this checklist to ensure the Marketing Skill is properly deployed and ready for your team."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "executing-marketing-campaigns"
+---
+
 # Marketing Skill Implementation Guide
 
 ## Deployment Checklist

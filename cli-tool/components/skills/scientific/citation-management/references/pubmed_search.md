@@ -1,3 +1,11 @@
+---
+name: "pubmed_search"
+description: "Comprehensive guide to searching PubMed for biomedical and life sciences literature, including MeSH terms, field tags, advanced search strategies, and E-utilities API usage."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PubMed Search Guide
 
 Comprehensive guide to searching PubMed for biomedical and life sciences literature, including MeSH terms, field tags, advanced search strategies, and E-utilities API usage.

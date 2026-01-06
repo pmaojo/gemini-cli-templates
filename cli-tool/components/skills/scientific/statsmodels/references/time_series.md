@@ -1,3 +1,11 @@
+---
+name: "time_series"
+description: "This document provides comprehensive guidance on time series models in statsmodels, including ARIMA, state space models, VAR, exponential smoothing, and forecasting methods."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Time Series Analysis Reference
 
 This document provides comprehensive guidance on time series models in statsmodels, including ARIMA, state space models, VAR, exponential smoothing, and forecasting methods.

@@ -1,3 +1,11 @@
+---
+name: "anthropic-best-practices"
+description: "> Learn how to write effective Skills that Gemini can discover and use successfully."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "writing-skills"
+---
+
 # Skill authoring best practices
 
 > Learn how to write effective Skills that Gemini can discover and use successfully.

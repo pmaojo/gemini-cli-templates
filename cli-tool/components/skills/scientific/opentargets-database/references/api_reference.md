@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Open Targets Platform API Reference
 
 ## API Endpoint

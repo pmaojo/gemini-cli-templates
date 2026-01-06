@@ -1,3 +1,11 @@
+---
+name: "filtering"
+description: "This document provides a comprehensive reference of all filtering functions available in matchms for processing mass spectrometry data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matchms Filtering Functions Reference
 
 This document provides a comprehensive reference of all filtering functions available in matchms for processing mass spectrometry data.

@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document provides complete workflow examples for common deepTools analyses."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # deepTools Common Workflows
 
 This document provides complete workflow examples for common deepTools analyses.

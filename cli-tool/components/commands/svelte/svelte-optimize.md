@@ -1,3 +1,11 @@
+---
+name: "svelte:optimize"
+description: "Optimize Svelte/SvelteKit applications for performance, including bundle size reduction, rendering optimization, and loading performance."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:optimize
 
 Optimize Svelte/SvelteKit applications for performance, including bundle size reduction, rendering optimization, and loading performance.

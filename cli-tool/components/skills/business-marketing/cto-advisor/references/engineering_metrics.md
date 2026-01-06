@@ -1,3 +1,11 @@
+---
+name: "engineering_metrics"
+description: "- **Definition**: How often code is deployed to production"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Engineering Metrics & KPIs Guide
 
 ## Metrics Framework

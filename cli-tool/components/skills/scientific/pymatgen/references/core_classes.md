@@ -1,3 +1,11 @@
+---
+name: "core_classes"
+description: "This reference documents the fundamental classes in `pymatgen.core` that form the foundation for materials analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymatgen Core Classes Reference
 
 This reference documents the fundamental classes in `pymatgen.core` that form the foundation for materials analysis.

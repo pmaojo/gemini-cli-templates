@@ -1,3 +1,11 @@
+---
+name: "data-structures"
+description: "A GeoSeries is a vector where each entry is a set of shapes corresponding to one observation (similar to a pandas Series but with geometric data)."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # GeoPandas Data Structures
 
 ## GeoSeries

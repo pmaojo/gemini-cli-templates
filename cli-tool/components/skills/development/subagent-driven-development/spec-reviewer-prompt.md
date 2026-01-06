@@ -1,3 +1,11 @@
+---
+name: "spec-reviewer-prompt"
+description: "Use this template when dispatching a spec compliance reviewer subagent."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "subagent-driven-development"
+---
+
 # Spec Compliance Reviewer Prompt Template
 
 Use this template when dispatching a spec compliance reviewer subagent.

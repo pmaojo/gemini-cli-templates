@@ -1,3 +1,11 @@
+---
+name: "spectroscopy_analytical_formats"
+description: "This reference covers file formats used in various spectroscopic techniques and analytical chemistry instrumentation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Spectroscopy and Analytical Chemistry File Formats Reference
 
 This reference covers file formats used in various spectroscopic techniques and analytical chemistry instrumentation.

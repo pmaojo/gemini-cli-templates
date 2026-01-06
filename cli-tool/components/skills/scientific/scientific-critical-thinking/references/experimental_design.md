@@ -1,3 +1,11 @@
+---
+name: "experimental_design"
+description: "- [ ] **Specific:** Clearly defined variables and relationships"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Experimental Design Checklist
 
 ## Research Question Formulation

@@ -1,3 +1,11 @@
+---
+name: "templates"
+description: "```"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Marketing Templates & Ready-to-Use Forms
 
 ## Email Templates

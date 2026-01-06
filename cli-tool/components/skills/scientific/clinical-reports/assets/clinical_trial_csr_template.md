@@ -1,3 +1,11 @@
+---
+name: "clinical_trial_csr_template"
+description: "---"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Clinical Study Report (CSR) Template
 ## ICH-E3 Format
 

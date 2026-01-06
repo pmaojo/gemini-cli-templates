@@ -1,3 +1,11 @@
+---
+name: "README"
+description: "This skill provides comprehensive support for converting various file formats to Markdown using Microsoft's MarkItDown tool."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "markitdown"
+---
+
 # MarkItDown Skill
 
 This skill provides comprehensive support for converting various file formats to Markdown using Microsoft's MarkItDown tool.

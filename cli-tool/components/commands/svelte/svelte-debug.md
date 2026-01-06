@@ -1,3 +1,11 @@
+---
+name: "svelte:debug"
+description: "Help debug Svelte and SvelteKit issues by analyzing error messages, stack traces, and common problems."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "svelte"
+---
+
 # /svelte:debug
 
 Help debug Svelte and SvelteKit issues by analyzing error messages, stack traces, and common problems.

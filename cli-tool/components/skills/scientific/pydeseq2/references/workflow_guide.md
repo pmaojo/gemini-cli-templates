@@ -1,3 +1,11 @@
+---
+name: "workflow_guide"
+description: "This document provides detailed step-by-step workflows for common PyDESeq2 analysis patterns."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyDESeq2 Workflow Guide
 
 This document provides detailed step-by-step workflows for common PyDESeq2 analysis patterns.

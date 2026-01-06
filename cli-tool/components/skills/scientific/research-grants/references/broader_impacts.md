@@ -1,3 +1,11 @@
+---
+name: "broader_impacts"
+description: "**Broader Impacts** are one of two review criteria for NSF proposals, carrying equal weight with Intellectual Merit. Despite this, broader impacts are often treated as an afterthought—a critical mistake that costs otherwise strong proposals their funding."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Broader Impacts: Strategies and Best Practices
 
 ## Overview

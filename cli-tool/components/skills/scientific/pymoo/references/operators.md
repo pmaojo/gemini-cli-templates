@@ -1,3 +1,11 @@
+---
+name: "operators"
+description: "Comprehensive reference for genetic operators in pymoo."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Pymoo Genetic Operators Reference
 
 Comprehensive reference for genetic operators in pymoo.

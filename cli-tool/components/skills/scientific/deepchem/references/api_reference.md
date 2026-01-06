@@ -1,3 +1,11 @@
+---
+name: "api_reference"
+description: "This document provides a comprehensive reference for DeepChem's core APIs, organized by functionality."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DeepChem API Reference
 
 This document provides a comprehensive reference for DeepChem's core APIs, organized by functionality.

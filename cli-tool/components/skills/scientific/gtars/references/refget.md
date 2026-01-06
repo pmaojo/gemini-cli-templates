@@ -1,3 +1,11 @@
+---
+name: "refget"
+description: "The refget module handles reference sequence retrieval and digest computation, following the refget protocol for sequence identification."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Reference Sequence Management
 
 The refget module handles reference sequence retrieval and digest computation, following the refget protocol for sequence identification.

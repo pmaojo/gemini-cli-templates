@@ -1,3 +1,11 @@
+---
+name: "crs-management"
+description: "A coordinate reference system defines how coordinates relate to locations on Earth."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Coordinate Reference Systems (CRS)
 
 A coordinate reference system defines how coordinates relate to locations on Earth.

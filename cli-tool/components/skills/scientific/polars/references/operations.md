@@ -1,3 +1,11 @@
+---
+name: "operations"
+description: "This reference covers all common Polars operations with comprehensive examples."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Polars Operations Reference
 
 This reference covers all common Polars operations with comprehensive examples.

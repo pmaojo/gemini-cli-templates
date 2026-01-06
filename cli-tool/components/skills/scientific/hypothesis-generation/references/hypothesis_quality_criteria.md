@@ -1,3 +1,11 @@
+---
+name: "hypothesis_quality_criteria"
+description: "Use these criteria to assess the quality and rigor of generated hypotheses. A robust hypothesis should score well across multiple dimensions."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Hypothesis Quality Criteria
 
 ## Framework for Evaluating Scientific Hypotheses

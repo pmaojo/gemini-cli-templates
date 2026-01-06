@@ -1,3 +1,11 @@
+---
+name: "string_reference"
+description: "STRING (Search Tool for the Retrieval of Interacting Genes/Proteins) is a comprehensive database of known and predicted protein-protein interactions integrating data from over 40 sources."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # STRING Database API Reference
 
 ## Overview

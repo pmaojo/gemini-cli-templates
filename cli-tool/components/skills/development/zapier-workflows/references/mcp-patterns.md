@@ -1,3 +1,11 @@
+---
+name: "mcp-patterns"
+description: "This file documents preferred MCP tools, usage patterns, and orchestration workflows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # MCP Tool Orchestration Patterns
 
 This file documents preferred MCP tools, usage patterns, and orchestration workflows.

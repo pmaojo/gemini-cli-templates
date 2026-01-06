@@ -1,3 +1,11 @@
+---
+name: "matplotlib_examples"
+description: "This reference provides practical code examples for creating publication-ready scientific figures using Matplotlib, Seaborn, and Plotly. All examples follow best practices from `publication_guidelines.md` and use colorblind-friendly palettes from `color_palettes.md`."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Publication-Ready Matplotlib Examples
 
 ## Overview

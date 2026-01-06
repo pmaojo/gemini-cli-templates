@@ -1,3 +1,11 @@
+---
+name: "QUICK_REFERENCE"
+description: "**How it works:** Describe your diagram → Nano Banana Pro generates it automatically"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "scientific-schematics"
+---
+
 # Scientific Schematics - Quick Reference
 
 **How it works:** Describe your diagram → Nano Banana Pro generates it automatically

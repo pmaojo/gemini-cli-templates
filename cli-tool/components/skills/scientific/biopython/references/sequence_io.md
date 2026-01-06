@@ -1,3 +1,11 @@
+---
+name: "sequence_io"
+description: "Bio.Seq provides the `Seq` object for biological sequences with specialized methods, while Bio.SeqIO offers a unified interface for reading, writing, and converting sequence files across multiple formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Sequence Handling with Bio.Seq and Bio.SeqIO
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "react_patterns"
+description: "This reference guide provides comprehensive information for senior frontend."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # React Patterns
 
 ## Overview

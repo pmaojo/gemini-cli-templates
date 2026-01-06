@@ -1,3 +1,11 @@
+---
+name: "ANTHROPIC_ATTRIBUTION"
+description: "This directory contains skills from Google's official skills repository:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "skills"
+---
+
 # Google Skills Attribution
 
 This directory contains skills from Google's official skills repository:

@@ -1,3 +1,11 @@
+---
+name: "best_practices"
+description: "**Good:**"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Best Practices - PyTorch Lightning
 
 ## Code Organization

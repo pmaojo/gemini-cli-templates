@@ -1,3 +1,11 @@
+---
+name: "generation"
+description: "Generate text with language models using the `generate()` method. Control output quality and style through generation strategies and parameters."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Text Generation
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "transforms_reference"
+description: "This document provides a comprehensive reference of all transforms available in `torch_geometric.transforms`."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PyTorch Geometric Transforms Reference
 
 This document provides a comprehensive reference of all transforms available in `torch_geometric.transforms`.

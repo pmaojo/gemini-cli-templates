@@ -1,3 +1,11 @@
+---
+name: "google_scholar_search"
+description: "Comprehensive guide to searching Google Scholar for academic papers, including advanced search operators, filtering strategies, and metadata extraction."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Google Scholar Search Guide
 
 Comprehensive guide to searching Google Scholar for academic papers, including advanced search operators, filtering strategies, and metadata extraction.

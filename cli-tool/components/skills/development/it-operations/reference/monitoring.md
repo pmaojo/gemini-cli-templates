@@ -1,3 +1,11 @@
+---
+name: "monitoring"
+description: "Comprehensive guide to implementing observability, metrics collection, alerting strategies, and dashboard design for IT operations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "reference"
+---
+
 # Monitoring and Observability
 
 Comprehensive guide to implementing observability, metrics collection, alerting strategies, and dashboard design for IT operations.

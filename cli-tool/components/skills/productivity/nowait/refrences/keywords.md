@@ -1,3 +1,11 @@
+---
+name: "keywords"
+description: "Complete reference for reflection keywords used in the NOWAIT technique."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "refrences"
+---
+
 # NOWAIT Keywords Reference
 
 Complete reference for reflection keywords used in the NOWAIT technique.

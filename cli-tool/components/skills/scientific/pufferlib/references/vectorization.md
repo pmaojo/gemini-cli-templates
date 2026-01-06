@@ -1,3 +1,11 @@
+---
+name: "vectorization"
+description: "PufferLib's vectorization system enables high-performance parallel environment simulation, achieving millions of steps per second through optimized implementation inspired by EnvPool. The system supports both synchronous and asynchronous vectorization with minimal overhead."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # PufferLib Vectorization Guide
 
 ## Overview

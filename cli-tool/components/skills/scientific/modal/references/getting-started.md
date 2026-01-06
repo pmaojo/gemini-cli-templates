@@ -1,3 +1,11 @@
+---
+name: "getting-started"
+description: "Sign up for free at https://modal.com and get $30/month of credits."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Getting Started with Modal
 
 ## Sign Up

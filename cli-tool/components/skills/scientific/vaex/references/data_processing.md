@@ -1,3 +1,11 @@
+---
+name: "data_processing"
+description: "This reference covers filtering, selections, virtual columns, expressions, aggregations, groupby operations, and data transformations in Vaex."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Processing and Manipulation
 
 This reference covers filtering, selections, virtual columns, expressions, aggregations, groupby operations, and data transformations in Vaex.

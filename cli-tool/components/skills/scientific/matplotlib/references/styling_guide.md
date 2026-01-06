@@ -1,3 +1,11 @@
+---
+name: "styling_guide"
+description: "Comprehensive guide for styling and customizing matplotlib visualizations."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matplotlib Styling Guide
 
 Comprehensive guide for styling and customizing matplotlib visualizations.

@@ -1,3 +1,11 @@
+---
+name: "flow_patterns"
+description: "This reference provides common patterns and examples for building CocoIndex flows."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # CocoIndex Flow Patterns
 
 This reference provides common patterns and examples for building CocoIndex flows.

@@ -1,3 +1,11 @@
+---
+name: "signal_processing"
+description: "NeuroKit2 provides comprehensive signal processing utilities applicable to any time series data. These functions support filtering, transformation, peak detection, decomposition, and analysis operations that work across all signal types."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # General Signal Processing
 
 ## Overview

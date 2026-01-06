@@ -1,3 +1,11 @@
+---
+name: "AI_CURATION"
+description: "Guide to using AI visual analysis for unit curation, inspired by SpikeAgent's approach."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "neuropixels-analysis"
+---
+
 # AI-Assisted Curation Reference
 
 Guide to using AI visual analysis for unit curation, inspired by SpikeAgent's approach.

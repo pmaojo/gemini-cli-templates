@@ -1,3 +1,11 @@
+---
+name: "io"
+description: "```python"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # NetworkX Input/Output
 
 ## Reading Graphs from Files

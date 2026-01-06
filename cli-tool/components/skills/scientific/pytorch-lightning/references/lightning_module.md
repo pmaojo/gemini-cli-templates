@@ -1,3 +1,11 @@
+---
+name: "lightning_module"
+description: "A `LightningModule` organizes PyTorch code into six logical sections without abstraction. The code remains pure PyTorch, just better organized. The Trainer handles device management, distributed sampling, and infrastructure while preserving full model control."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # LightningModule - Comprehensive Guide
 
 ## Overview

@@ -1,3 +1,11 @@
+---
+name: "explainers"
+description: "This document provides comprehensive information about all SHAP explainer classes, their parameters, methods, and when to use each type."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SHAP Explainers Reference
 
 This document provides comprehensive information about all SHAP explainer classes, their parameters, methods, and when to use each type.

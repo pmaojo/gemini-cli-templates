@@ -1,3 +1,11 @@
+---
+name: "geometric-operations"
+description: "GeoPandas provides extensive geometric manipulation through Shapely integration."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Geometric Operations
 
 GeoPandas provides extensive geometric manipulation through Shapely integration.

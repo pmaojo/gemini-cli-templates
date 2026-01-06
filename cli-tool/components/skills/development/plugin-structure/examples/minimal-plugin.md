@@ -1,3 +1,11 @@
+---
+name: "minimal-plugin"
+description: "A bare-bones plugin with a single command."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "examples"
+---
+
 # Minimal Plugin Example
 
 A bare-bones plugin with a single command.

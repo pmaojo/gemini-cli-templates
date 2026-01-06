@@ -1,3 +1,11 @@
+---
+name: "agent-creation-system-prompt"
+description: "This is the exact system prompt used by Gemini CLI's agent generation feature, refined through extensive production use."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Agent Creation System Prompt
 
 This is the exact system prompt used by Gemini CLI's agent generation feature, refined through extensive production use.

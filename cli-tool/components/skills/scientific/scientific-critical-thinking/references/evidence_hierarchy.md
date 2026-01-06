@@ -1,3 +1,11 @@
+---
+name: "evidence_hierarchy"
+description: "**Description:** Comprehensive synthesis of all available evidence on a question."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Evidence Hierarchy and Quality Assessment
 
 ## Traditional Evidence Hierarchy (Medical/Clinical)

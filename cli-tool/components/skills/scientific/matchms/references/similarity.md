@@ -1,3 +1,11 @@
+---
+name: "similarity"
+description: "This document provides detailed information about all similarity scoring methods available in matchms."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Matchms Similarity Functions Reference
 
 This document provides detailed information about all similarity scoring methods available in matchms.

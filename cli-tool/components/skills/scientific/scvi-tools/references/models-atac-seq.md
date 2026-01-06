@@ -1,3 +1,11 @@
+---
+name: "models-atac-seq"
+description: "This document covers models for analyzing single-cell ATAC-seq and chromatin accessibility data in scvi-tools."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # ATAC-seq and Chromatin Accessibility Models
 
 This document covers models for analyzing single-cell ATAC-seq and chromatin accessibility data in scvi-tools.

@@ -1,3 +1,11 @@
+---
+name: "target_annotations"
+description: "Open Targets defines a target as \"any naturally-occurring molecule that can be targeted by a medicinal product.\" Targets are primarily protein-coding genes identified by Ensembl gene IDs, but also include RNAs and pseudogenes from canonical chromosomes."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Target Annotations and Features
 
 ## Overview

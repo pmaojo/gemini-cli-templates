@@ -1,3 +1,11 @@
+---
+name: "peds_api"
+description: "The Patent Examination Data System (PEDS) provides access to USPTO patent application and filing status records. It contains bibliographic data, published document information, and patent term extension data."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Patent Examination Data System (PEDS) API Reference
 
 ## Overview

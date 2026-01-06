@@ -1,3 +1,11 @@
+---
+name: "fda-submission-guide"
+description: "- **510(k) Exempt** - Most Class I devices"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # FDA Submission Guide
 
 ## FDA Medical Device Classification and Pathways

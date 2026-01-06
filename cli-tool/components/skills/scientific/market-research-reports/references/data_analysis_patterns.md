@@ -1,3 +1,11 @@
+---
+name: "data_analysis_patterns"
+description: "Templates and frameworks for conducting rigorous market analysis."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Analysis Patterns for Market Research
 
 Templates and frameworks for conducting rigorous market analysis.

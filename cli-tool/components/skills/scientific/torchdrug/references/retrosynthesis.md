@@ -1,3 +1,11 @@
+---
+name: "retrosynthesis"
+description: "Retrosynthesis is the process of planning synthetic routes from target molecules back to commercially available starting materials. TorchDrug provides tools for learning-based retrosynthesis prediction, breaking down the complex task into manageable subtasks."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Retrosynthesis
 
 ## Overview

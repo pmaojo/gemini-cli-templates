@@ -1,3 +1,11 @@
+---
+name: "sdk_reference"
+description: "```bash"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Benchling Python SDK Reference
 
 ## Installation & Setup

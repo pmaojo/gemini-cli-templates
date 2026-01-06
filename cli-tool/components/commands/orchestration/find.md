@@ -1,3 +1,11 @@
+---
+name: "find"
+description: "Search and locate tasks across all orchestrations using various criteria."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "orchestration"
+---
+
 # Task Find Command
 
 Search and locate tasks across all orchestrations using various criteria.

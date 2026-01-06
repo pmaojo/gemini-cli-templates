@@ -1,3 +1,11 @@
+---
+name: "events"
+description: "This guide covers the event system in SimPy, which forms the foundation of discrete-event simulation."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SimPy Events System
 
 This guide covers the event system in SimPy, which forms the foundation of discrete-event simulation.

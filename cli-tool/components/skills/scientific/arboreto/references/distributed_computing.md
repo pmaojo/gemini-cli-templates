@@ -1,3 +1,11 @@
+---
+name: "distributed_computing"
+description: "Arboreto leverages Dask for parallelized computation, enabling efficient GRN inference from single-machine multi-core processing to multi-node cluster environments."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Distributed Computing with Arboreto
 
 Arboreto leverages Dask for parallelized computation, enabling efficient GRN inference from single-machine multi-core processing to multi-node cluster environments.

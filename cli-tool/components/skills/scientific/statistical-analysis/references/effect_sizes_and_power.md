@@ -1,3 +1,11 @@
+---
+name: "effect_sizes_and_power"
+description: "This document provides guidance on calculating, interpreting, and reporting effect sizes, as well as conducting power analyses for study planning."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Effect Sizes and Power Analysis
 
 This document provides guidance on calculating, interpreting, and reporting effect sizes, as well as conducting power analyses for study planning.

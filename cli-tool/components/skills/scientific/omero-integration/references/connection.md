@@ -1,3 +1,11 @@
+---
+name: "connection"
+description: "This reference covers establishing and managing connections to OMERO servers using BlitzGateway."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Connection & Session Management
 
 This reference covers establishing and managing connections to OMERO servers using BlitzGateway.

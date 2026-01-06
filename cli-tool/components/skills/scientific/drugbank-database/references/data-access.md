@@ -1,3 +1,11 @@
+---
+name: "data-access"
+description: "DrugBank requires user authentication to access data:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DrugBank Data Access
 
 ## Authentication and Setup

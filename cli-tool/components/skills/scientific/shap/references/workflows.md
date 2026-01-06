@@ -1,3 +1,11 @@
+---
+name: "workflows"
+description: "This document provides comprehensive workflows, best practices, and common use cases for using SHAP in various model interpretation scenarios."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # SHAP Workflows and Best Practices
 
 This document provides comprehensive workflows, best practices, and common use cases for using SHAP in various model interpretation scenarios.

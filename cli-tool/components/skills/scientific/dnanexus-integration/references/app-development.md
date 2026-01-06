@@ -1,3 +1,11 @@
+---
+name: "app-development"
+description: "Apps and applets are executable programs that run on the DNAnexus platform. They can be written in Python or Bash and are deployed with all necessary dependencies and configuration."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # DNAnexus App Development
 
 ## Overview

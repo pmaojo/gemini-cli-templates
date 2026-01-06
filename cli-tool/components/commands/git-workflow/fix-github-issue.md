@@ -1,3 +1,11 @@
+---
+name: "fix-github-issue"
+description: "fix-github-issue component for Gemini CLI"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "git-workflow"
+---
+
 Please analyze and fix the GitHub issue: $ARGUMENTS.
 
 Follow these steps:

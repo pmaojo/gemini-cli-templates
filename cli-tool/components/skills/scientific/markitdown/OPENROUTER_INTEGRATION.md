@@ -1,3 +1,11 @@
+---
+name: "OPENROUTER_INTEGRATION"
+description: "This MarkItDown skill has been configured to use **OpenRouter** instead of direct OpenAI API access. OpenRouter provides a unified API gateway to access 100+ AI models from different providers through a single, OpenAI-compatible interface."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "markitdown"
+---
+
 # OpenRouter Integration for MarkItDown
 
 ## Overview

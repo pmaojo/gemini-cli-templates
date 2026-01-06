@@ -1,3 +1,11 @@
+---
+name: "SANDBOX_DEBUGGING"
+description: "**Archivo**: `e2b-launcher.py`"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "e2b"
+---
+
 # E2B Sandbox Debugging Guide
 
 ## 🔍 Herramientas de Monitoreo Disponibles

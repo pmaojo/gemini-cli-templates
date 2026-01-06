@@ -1,3 +1,11 @@
+---
+name: "glm"
+description: "This document provides comprehensive guidance on generalized linear models in statsmodels, including families, link functions, and applications."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Generalized Linear Models (GLM) Reference
 
 This document provides comprehensive guidance on generalized linear models in statsmodels, including families, link functions, and applications.

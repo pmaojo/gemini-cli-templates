@@ -1,3 +1,11 @@
+---
+name: "filters_preprocessing"
+description: "Histolab provides a comprehensive set of filters for preprocessing whole slide images and tiles. Filters can be applied to images for visualization, quality control, tissue detection, and artifact removal. They are composable and can be chained together to create sophisticated preprocessing pipelines."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Filters and Preprocessing
 
 ## Overview

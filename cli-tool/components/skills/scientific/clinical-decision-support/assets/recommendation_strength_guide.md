@@ -1,3 +1,11 @@
+---
+name: "recommendation_strength_guide"
+description: "Every clinical recommendation should address:"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "assets"
+---
+
 # Recommendation Strength Guide
 
 ## GRADE Framework for Clinical Recommendations

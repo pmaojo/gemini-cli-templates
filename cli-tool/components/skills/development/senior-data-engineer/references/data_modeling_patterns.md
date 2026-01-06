@@ -1,3 +1,11 @@
+---
+name: "data_modeling_patterns"
+description: "World-class data modeling patterns for senior data engineer."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Data Modeling Patterns
 
 ## Overview

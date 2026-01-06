@@ -1,3 +1,11 @@
+---
+name: "io_guide"
+description: "Comprehensive guide to reading and writing data in various formats with Polars."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Polars Data I/O Guide
 
 Comprehensive guide to reading and writing data in various formats with Polars.

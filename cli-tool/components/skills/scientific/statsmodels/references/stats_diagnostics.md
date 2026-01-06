@@ -1,3 +1,11 @@
+---
+name: "stats_diagnostics"
+description: "This document provides comprehensive guidance on statistical tests, diagnostics, and tools available in statsmodels."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Statistical Tests and Diagnostics Reference
 
 This document provides comprehensive guidance on statistical tests, diagnostics, and tools available in statsmodels.

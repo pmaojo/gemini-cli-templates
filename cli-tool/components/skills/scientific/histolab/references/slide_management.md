@@ -1,3 +1,11 @@
+---
+name: "slide_management"
+description: "The `Slide` class is the primary interface for working with whole slide images (WSI) in histolab. It provides methods to load, inspect, and process large histopathology images stored in various formats."
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Slide Management
 
 ## Overview

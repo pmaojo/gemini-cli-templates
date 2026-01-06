@@ -1,3 +1,11 @@
+---
+name: "eu-mdr-submission-guide"
+description: "- **Self-certification** under Annex II"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # EU MDR 2017/745 Submission Guide
 
 ## MDR Classification and Conformity Assessment Routes

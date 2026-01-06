@@ -1,3 +1,11 @@
+---
+name: "quantum_chemistry"
+description: "1. [Molecular Hamiltonians](#molecular-hamiltonians)"
+author: "Gemini CLI Templates"
+version: "1.0.0"
+category: "references"
+---
+
 # Quantum Chemistry with PennyLane
 
 ## Table of Contents
