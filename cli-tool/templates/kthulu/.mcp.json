@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "kthulu": {
+      "command": "go",
+      "args": ["run", "github.com/pmaojo/kthulu-go/cmd/mcp@latest"],
+      "description": "Kthulu Stack Manager"
+    }
+  }
+}

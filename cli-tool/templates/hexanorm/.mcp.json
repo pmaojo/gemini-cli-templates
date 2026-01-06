@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "hexanorm": {
+      "command": "npx",
+      "args": ["hexanorm-mcp"],
+      "description": "Hexagonal Architecture Manager"
+    }
+  }
+}

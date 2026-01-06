@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "apicentric": {
+      "command": "apicentric",
+      "args": ["mcp"],
+      "env": {
+        "APICENTRIC_HOME": "${PWD}"
+      },
+      "description": "API Simulator and Registry Control"
+    }
+  }
+}

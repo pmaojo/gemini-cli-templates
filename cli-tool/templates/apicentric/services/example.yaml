@@ -1,0 +1,19 @@
+name: example-service
+base_url: /api/v1
+endpoints:
+  - path: /users
+    method: GET
+    response:
+      status: 200
+      body:
+        - id: 1
+          name: "Alice"
+        - id: 2
+          name: "Bob"
+  - path: /users
+    method: POST
+    response:
+      status: 201
+      body:
+        id: 3
+        name: "Charlie (Mocked)"
