@@ -1104,5 +1104,201 @@
     "version": "unversioned",
     "timestamp": "2026-01-06T18:15:55.740Z",
     "path": "cli-tool/components/agents/security/compliance-specialist.md"
+  },
+  "cli-tool/components/agents/security/incident-responder.md": {
+    "hash": "dcf9ce0709e6f5e59e0972349c9a718bde09271310e62ab9d32bd25f0928cd4e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:56.810Z",
+    "path": "cli-tool/components/agents/security/incident-responder.md"
+  },
+  "cli-tool/components/agents/security/penetration-tester.md": {
+    "hash": "9b1181029033a0d9905ca5bffadc869d5be00617f78e40620107134879360329",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:57.488Z",
+    "path": "cli-tool/components/agents/security/penetration-tester.md"
+  },
+  "cli-tool/components/agents/security/security-auditor.md": {
+    "hash": "858de4c9ec78f9102c43aa81ddf51b76648ff67cf9862b11a142c2df04f57dfe",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:58.107Z",
+    "path": "cli-tool/components/agents/security/security-auditor.md"
+  },
+  "cli-tool/components/agents/web-tools/nextjs-architecture-expert.md": {
+    "hash": "ebec4c5a3937b41b820894b331ae981a0ee442a6c45713ab44ceef324facf495",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:58.619Z",
+    "path": "cli-tool/components/agents/web-tools/nextjs-architecture-expert.md"
+  },
+  "cli-tool/components/agents/web-tools/react-performance-optimizer.md": {
+    "hash": "94f26660b95918d8d4011e0a0f19944f176736602fe9b85df24dacf06d3388c6",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:59.185Z",
+    "path": "cli-tool/components/agents/web-tools/react-performance-optimizer.md"
+  },
+  "cli-tool/components/agents/web-tools/seo-analyzer.md": {
+    "hash": "9fe36d074942a08d1cbe53719cce5794965a96a1d05454f2242d900c3dbbf421",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:59.516Z",
+    "path": "cli-tool/components/agents/web-tools/seo-analyzer.md"
+  },
+  "cli-tool/components/agents/web-tools/url-context-validator.md": {
+    "hash": "8a7bcd1dec2bffb7ac846210e9ae68b971b92012ca2579e2474c7261ab9d0e02",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:00.039Z",
+    "path": "cli-tool/components/agents/web-tools/url-context-validator.md"
+  },
+  "cli-tool/components/agents/web-tools/url-link-extractor.md": {
+    "hash": "160e78f6379352217b27b1effd56f88f35b6a7aeee29f82e60299ec70e7d7483",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:00.494Z",
+    "path": "cli-tool/components/agents/web-tools/url-link-extractor.md"
+  },
+  "cli-tool/components/agents/web-tools/web-accessibility-checker.md": {
+    "hash": "715953d1070315a08ddeaa3cefe34ec586f8d98a6cf10bfab4d68b95cbff134c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:01.210Z",
+    "path": "cli-tool/components/agents/web-tools/web-accessibility-checker.md"
+  },
+  "cli-tool/components/commands/automation/act.md": {
+    "hash": "15e66bc165a2d5b7bd0b65efa022f412aa893998970f319127e97645eee2695c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:01.590Z",
+    "path": "cli-tool/components/commands/automation/act.md"
+  },
+  "cli-tool/components/commands/automation/ci-pipeline.md": {
+    "hash": "26f6b418a1e27ee2500182be4b8804246c210956de354622999e47ce606f131b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:02.105Z",
+    "path": "cli-tool/components/commands/automation/ci-pipeline.md"
+  },
+  "cli-tool/components/commands/automation/husky.md": {
+    "hash": "12fa6bc3696aa7108e3d67715b45678e7058b204e5047acc5f6e6f0f66b2805f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:02.716Z",
+    "path": "cli-tool/components/commands/automation/husky.md"
+  },
+  "cli-tool/components/commands/automation/workflow-orchestrator.md": {
+    "hash": "568d81add5c814f39300c05e5e57c3734a5947480832c65a21fbee56d9d26496",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:03.256Z",
+    "path": "cli-tool/components/commands/automation/workflow-orchestrator.md"
+  },
+  "cli-tool/components/commands/database/supabase-backup-manager.md": {
+    "hash": "ec273263b9e6c7080a48874046720b87abc8f792480b061602d288fe2ab528d9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:03.816Z",
+    "path": "cli-tool/components/commands/database/supabase-backup-manager.md"
+  },
+  "cli-tool/components/commands/database/supabase-data-explorer.md": {
+    "hash": "ec0e3eeeed161482a382b2ba936b4d131790fed1ffe91efcdc5039d28ec4318c",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:04.469Z",
+    "path": "cli-tool/components/commands/database/supabase-data-explorer.md"
+  },
+  "cli-tool/components/commands/database/supabase-migration-assistant.md": {
+    "hash": "a096e605d99897ea58ea120025ace6e8a14e804faed0c00ce649b90b35d382c9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:04.890Z",
+    "path": "cli-tool/components/commands/database/supabase-migration-assistant.md"
+  },
+  "cli-tool/components/commands/database/supabase-performance-optimizer.md": {
+    "hash": "d76ba4e5daac14c9b18858e34d510c435f4287af642568a3bcdd64dee4f03ba9",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:05.334Z",
+    "path": "cli-tool/components/commands/database/supabase-performance-optimizer.md"
+  },
+  "cli-tool/components/commands/database/supabase-realtime-monitor.md": {
+    "hash": "a97f1b845dbe42abebd3d6aefc8bac2efda2cc7c6b6fecb47bb7ce2fab3d5036",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:05.743Z",
+    "path": "cli-tool/components/commands/database/supabase-realtime-monitor.md"
+  },
+  "cli-tool/components/commands/database/supabase-schema-sync.md": {
+    "hash": "86db634b5dfc2a6e7f875c5513445142d4cd7f701d0669bfe463330ed96142ee",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:06.117Z",
+    "path": "cli-tool/components/commands/database/supabase-schema-sync.md"
+  },
+  "cli-tool/components/commands/database/supabase-security-audit.md": {
+    "hash": "3caced0d17dab185055c2ba2315b2f3a5d9cc83bc46b49a37f68d40108a666d8",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:06.573Z",
+    "path": "cli-tool/components/commands/database/supabase-security-audit.md"
+  },
+  "cli-tool/components/commands/database/supabase-type-generator.md": {
+    "hash": "74ffb15e085faef82c117fcd61a4b1ce1001b608e3b4a2624b6ce00a993b92bb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:06.918Z",
+    "path": "cli-tool/components/commands/database/supabase-type-generator.md"
+  },
+  "cli-tool/components/commands/deployment/add-changelog.md": {
+    "hash": "79c2993a185056b1e2db9d5754afb163dc9e2ca8b2ec7da10de7bef8d6d98ac4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:07.357Z",
+    "path": "cli-tool/components/commands/deployment/add-changelog.md"
+  },
+  "cli-tool/components/commands/deployment/blue-green-deployment.md": {
+    "hash": "9c601d2fbef9d83a34bac60ebba79aa6c22ddeb5b8f4e29e57fb4ddc3e7ccadf",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:07.824Z",
+    "path": "cli-tool/components/commands/deployment/blue-green-deployment.md"
+  },
+  "cli-tool/components/commands/deployment/changelog-demo-command.md": {
+    "hash": "484d0ffd57b7d19844812af5dfd5bf135094965f1bb73d6cc9d1b236a31c9e51",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:08.274Z",
+    "path": "cli-tool/components/commands/deployment/changelog-demo-command.md"
+  },
+  "cli-tool/components/commands/deployment/ci-setup.md": {
+    "hash": "02f69d4d7ec51ba5cfd7584947fc20a2d30fe115539c29dffaa8784913a8fce1",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:08.893Z",
+    "path": "cli-tool/components/commands/deployment/ci-setup.md"
+  },
+  "cli-tool/components/commands/deployment/containerize-application.md": {
+    "hash": "be9ef877260fba0dc1d4520709e20b15c0722fb1cbbade677dc07806a3d34e0f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:09.621Z",
+    "path": "cli-tool/components/commands/deployment/containerize-application.md"
+  },
+  "cli-tool/components/commands/deployment/deployment-monitoring.md": {
+    "hash": "f86be221fc9135cdc30ebdd6c056e4eda431620fabbdce129fe38c960d39d37d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:10.197Z",
+    "path": "cli-tool/components/commands/deployment/deployment-monitoring.md"
+  },
+  "cli-tool/components/commands/deployment/hotfix-deploy.md": {
+    "hash": "7ce8539f986516bcda71ecf7dde0561161d733a376e9e0dae77e851775785d6d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:10.821Z",
+    "path": "cli-tool/components/commands/deployment/hotfix-deploy.md"
   }
 }
