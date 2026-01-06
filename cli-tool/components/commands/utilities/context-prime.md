@@ -1,1 +1,20 @@
-Read README.md, THEN run `git ls-files | grep -v -f (sed 's|^|^|; s|$|/|' .cursorignore | psub)` to understand the context of the project
+---
+name: context-prime
+description: Prime the AI context with project-specific knowledge and conventions.
+allowed-tools: Read
+argument-hint: [context-file] | --summary
+---
+
+# Context Prime
+
+Prime the AI context with project-specific knowledge, architectural patterns, and coding conventions.
+
+## Purpose
+
+Ensures the AI assistant is aligned with the project's specific context before starting complex tasks.
+
+## Usage
+
+```bash
+gemini context-prime docs/architecture/overview.md
+```

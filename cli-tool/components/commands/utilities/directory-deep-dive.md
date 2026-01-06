@@ -1,37 +1,23 @@
+---
+name: directory-deep-dive
+description: Recursively analyze directory structure and content summaries.
+allowed-tools: Read, Bash
+argument-hint: [path] | --depth=[n] | --ignore=[patterns]
+---
+
 # Directory Deep Dive
 
-Analyze directory structure and purpose
+Recursively analyze directory structures to provide content summaries and structural insights.
 
-## Instructions
+## Features
 
-1. **Target Directory**
+- **Recursive Listing**: List files and directories up to a specified depth
+- **Content Summary**: Generate brief summaries of file contents
+- **Structure Visualization**: Tree-like visualization of the directory
+- **Pattern Matching**: Filter by file type or ignore patterns
 
-   - Focus on the specified directory `$ARGUMENTS` or the current working directory
+## Usage
 
-2. **Investigate Architecture**
-
-   - Analyze the implementation principles and architecture of the code in this directory and its subdirectories
-   - Look for:
-     - Design patterns being used
-     - Dependencies and their purposes
-     - Key abstractions and interfaces
-     - Naming conventions and code organization
-
-3. **Create or Update Documentation**
-
-   - Create a GEMINI.md file capturing this knowledge
-   - If one already exists, update it with newly discovered information
-   - Include:
-     - Purpose and responsibility of this module
-     - Key architectural decisions
-     - Important implementation details
-     - Common patterns used throughout the code
-     - Any gotchas or non-obvious behaviors
-
-4. **Ensure Proper Placement**
-   - Place the GEMINI.md file in the directory being analyzed
-   - This ensures the context is loaded when working in that specific area
-
-## Credit
-
-This command is based on the work of Thomas Landgraf: https://thomaslandgraf.substack.com/p/gemini-clis-memory-working-with
+```bash
+gemini directory-deep-dive src/ --depth=2
+```

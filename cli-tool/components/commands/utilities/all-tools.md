@@ -1,3 +1,10 @@
+---
+name: all-tools
+description: Display all available development tools and their signatures from the internal configuration.
+allowed-tools: Bash
+argument-hint: none
+---
+
 # Display All Available Development Tools
 
 Display all available development tools
@@ -6,7 +13,7 @@ Display all available development tools
 
 ## Instructions
 
-Display all available tools from your system prompt in the following format:
+Display all available tools from your internal configuration in the following format:
 
 1. **List each tool** with its TypeScript function signature
 2. **Include the purpose** of each tool as a suffix
