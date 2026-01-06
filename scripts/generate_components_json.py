@@ -26,7 +26,7 @@ def run_security_validation():
             cwd=cli_tool_dir,
             capture_output=True,
             text=True,
-            timeout=300  # 5 minute timeout
+            timeout=600  # 10 minute timeout
         )
 
         if result.returncode != 0:

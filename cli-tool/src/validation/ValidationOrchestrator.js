@@ -70,6 +70,7 @@ class ValidationOrchestrator {
           validatorOptions.updateRegistry = updateRegistry;
         }
 
+        if (options.debug || process.env.DEBUG) console.log(`  - Running ${validatorName} validator...`);
         const result = await validator.validate(component, validatorOptions);
 
         results.validators[validatorName] = {
@@ -142,6 +143,7 @@ class ValidationOrchestrator {
     };
 
     for (const component of components) {
+      if (options.debug || process.env.DEBUG) console.log(`Validating: ${component.path}`);
       const result = await this.validateComponent(component, options);
 
       results.components.push(result);
