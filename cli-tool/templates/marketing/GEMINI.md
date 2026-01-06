@@ -4,16 +4,15 @@ Welcome to the Tribal Marketing template. This environment is configured to help
 
 ## 3-Layer Stack
 
-### 1. The Research Layer (MCP)
+### 1. The Research Layer (Gemini 3)
 
-This project is configured with **Brave Search** and **Puppeteer** to gather real-world data.
+This project is configured with **Gemini 3's Web Browse & Search Capabilities** to gather real-world data.
 
-- **Brave Search**: Used to find customer conversations (forums, Reddit).
-- **Puppeteer**: Used to analyze competitor websites.
+- **Google Search**: Used to find customer conversations (forums, Reddit) and validate assumptions.
+- **Web Browse**: Used to visit and analyze competitor websites directly.
 
 **Recommended Extensions:**
 
-- `exa-mcp-server`: For deeper search over high-quality data.
 - `social-media-monitor`: To track real-time tribal conversations.
 
 ### 2. The Strategy Layer (Agents)
@@ -39,6 +38,5 @@ Run these commands to execute the workflow:
 
 ## Getting Started
 
-1. **Configure API Keys**: Open `.gemini/settings.json` and add your `BRAVE_API_KEY`.
-2. **Run a Scout**: `gemini tribe:scout "your niche"`
-3. **Draft Strategy**: Use `jules` to run deeper research in the background: `/jules tribe:scout "your niche" --deep`
+1. **Run a Scout**: `gemini tribe:scout "your niche"`
+2. **Draft Strategy**: Use `jules` to run deeper research in the background: `/jules tribe:scout "your niche" --deep`
