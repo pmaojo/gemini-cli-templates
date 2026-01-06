@@ -34,7 +34,7 @@ npx github:pmaojo/gemini-cli-templates --health-check
 
 | Component     | Description                                      | Example                                                      |
 | ------------- | ------------------------------------------------ | ------------------------------------------------------------ |
-| **GEMINI.md** | Project-specific Gemini CLI configuration       | Framework best practices, coding standards                   |
+| **GEMINI.md** | Project-specific Gemini CLI configuration        | Framework best practices, coding standards                   |
 | **Commands**  | Custom slash commands for development tasks      | `/generate-tests`, `/check-file`, `/optimize-bundle`         |
 | **Agents**    | AI specialists for specific domains              | API security audit, React performance, database optimization |
 | **MCPs**      | External service integrations                    | GitHub, databases, development tools                         |
@@ -169,7 +169,7 @@ Quick links:
 
 ## 🤝 Contributing
 
-We welcome contributions! Browse available templates and components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**, then check our [contributing guidelines](https://github.com/pmaojo/gemini-cli-templates/blob/main/CONTRIBUTING.md).
+We welcome contributions! Browse available templates and components at **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**, then check our [contributing guidelines](https://github.com/pmaojo/gemini-cli-templates/blob/main/CONTRIBUTING.md).
 
 ## 📄 License
 
@@ -177,8 +177,8 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🔗 Links
 
-- **🌐 Browse Components**: [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)
-- **📚 Documentation**: [docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app)
+- **🌐 Browse Components**: [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)
+- **📚 Documentation**: [docs.gemini-cli-templates.vercel.app](https://docs.gemini-cli-templates.vercel.app)
 - **🐛 Issues**: [GitHub Issues](https://github.com/pmaojo/gemini-cli-templates/issues)
 - **💬 Discussions**: [GitHub Discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
 

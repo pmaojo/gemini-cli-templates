@@ -9,7 +9,7 @@ from typing import Dict, Any, Union
 from litellm import completion
 
 class TranslationService:
-    def __init__(self, model: str = "gemini/gemini-3-flash"):
+    def __init__(self, model: str = "gemini-3-flash"):
         # Allow override via env var, but default to the efficient Flash model
         self.model = os.getenv("TRANSLATION_MODEL", model)
         print(f"🌍 Translation Service initialized with model: {self.model}")

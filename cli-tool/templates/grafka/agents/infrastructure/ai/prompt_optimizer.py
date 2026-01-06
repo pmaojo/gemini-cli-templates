@@ -18,7 +18,7 @@ class PromptOptimizer:
     def __init__(self, prompts_dir: str = "prompts", model: str = None):
         self.prompts_dir = Path(prompts_dir)
         self.prompts_dir.mkdir(parents=True, exist_ok=True)
-        self.model = model or os.getenv("GEMINI_MODEL", "gemini/gemini-3-flash")
+        self.model = model or os.getenv("GEMINI_MODEL", "gemini-3-flash")
 
         # Cargar prompts actuales o crear defaults
         self.current_prompts = self._load_prompts()
