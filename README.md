@@ -28,9 +28,56 @@ npx github:pmaojo/gemini-cli-templates --mcp database/postgresql-integration --y
 | **🤖 Agents**   | AI specialists for specific domains               | Security auditor, React performance optimizer, database architect |
 | **⚡ Commands** | Custom slash commands                             | `/generate-tests`, `/optimize-bundle`, `/check-security`          |
 | **🔌 MCPs**     | External service integrations                     | GitHub, PostgreSQL, Stripe, AWS, OpenAI                           |
+| **🧩 Extensions** | Community-built plugins & capabilities          | `jules`, `conductor`, `mcp-server-browserbase`                    |
+| **📦 Templates** | Complete project scaffolding with Agents & Tools | Tribal Marketing, Grafka (Neuro-Symbolic AI)                      |
 | **⚙️ Settings** | Gemini CLI configurations                         | Timeouts, memory settings, output styles                          |
 | **🪝 Hooks**    | Automation triggers                               | Pre-commit validation, post-completion actions                    |
 | **🎨 Skills**   | Reusable capabilities with progressive disclosure | PDF processing, Excel automation, custom workflows                |
+
+## 🧩 Extensions
+
+Extend your Gemini CLI with over 100+ community-built extensions. Extensions package agents, commands, and tools into a single installable unit.
+
+```bash
+# Install the popular Jules extension
+npx github:pmaojo/gemini-cli-templates --extension=jules
+
+# Install Conductor for workflow management
+npx github:pmaojo/gemini-cli-templates --extension=conductor
+
+# Install MCP Server Browserbase for web browsing
+npx github:pmaojo/gemini-cli-templates --extension=mcp-server-browserbase
+```
+
+**Popular Categories:**
+*   **Community:** `jules`, `conductor`, `nanobanana`, `skills`
+*   **Cloud:** `terraform-mcp-server`, `mcp-server-kubernetes`, `gcloud`
+*   **Database:** `postgres`, `mcp-redis`, `mcp-neo4j`
+*   **DevTools:** `github-mcp-server`, `chrome-devtools-mcp`, `code-review`
+*   **AI/ML:** `genai-toolbox`, `platform-ai`
+
+## 📦 Featured Templates
+
+Gemini CLI Templates also provides full project templates that set up sophisticated AI architectures.
+
+### 🏹 Tribal Marketing Template
+A **Minimum Viable Audience (MVT)** builder based on Seth Godin's frameworks. This template gives you a specialized marketing team to research, strategize, and execute.
+
+*   **Research Layer:** Integrates Brave Search & Puppeteer for real-world data gathering.
+*   **Strategy Agents:**
+    *   `marketing:mvt`: Defines your psychographic persona.
+    *   `marketing:xy`: Finds your unique positioning ("The Lonely Quadrant").
+    *   `marketing:culture`: Drafts your "Us vs. Them" manifesto.
+*   **Execution Commands:** `/tribe-scout`, `/tribe-map`, `/tribe-launch`.
+
+### 🧠 Grafka (Neuro-Symbolic AI)
+Gives your Gemini agents a **Long-term Memory** and a **Logical Left Brain**. It combines the creative power of LLMs with the structured reasoning of Knowledge Graphs.
+
+*   **Rust Backend:** High-performance graph database.
+*   **OWL Reasoner:** Deducts new facts using logical rules (e.g., transitive relationships).
+*   **Hybrid Architecture:**
+    *   **Gemini Flash** for fast extraction and routing.
+    *   **Gemini Pro** for complex reasoning and synthesis.
 
 ## 🛠️ Additional Tools
 
@@ -74,11 +121,11 @@ npx github:pmaojo/gemini-cli-templates --plugins
 
 ## 📖 Documentation
 
-**[📚 docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app/)** - Complete guides, examples, and API reference for all components and tools.
+**[📚 docs.gemini-cli-templates.vercel.app](https://docs.gemini-cli-templates.vercel.app/)** - Complete guides, examples, and API reference for all components and tools.
 
 ## Contributing
 
-We welcome contributions! **[Browse existing templates](https://gemini-cli-templates.vercel.app-templates.vercel.app)** to see what's available, then check our [contributing guidelines](CONTRIBUTING.md) to add your own agents, commands, MCPs, settings, or hooks.
+We welcome contributions! **[Browse existing templates](https://gemini-cli-templates.vercel.app)** to see what's available, then check our [contributing guidelines](CONTRIBUTING.md) to add your own agents, commands, MCPs, settings, or hooks.
 
 **Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.**
 
@@ -118,8 +165,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **🌐 Browse Templates**: [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)
-- **📚 Documentation**: [docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app)
+- **🌐 Browse Templates**: [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)
+- **📚 Documentation**: [docs.gemini-cli-templates.vercel.app](https://docs.gemini-cli-templates.vercel.app)
 - **💬 Community**: [GitHub Discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
 - **🐛 Issues**: [GitHub Issues](https://github.com/pmaojo/gemini-cli-templates/issues)
 
