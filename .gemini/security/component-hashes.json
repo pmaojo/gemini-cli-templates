@@ -1300,5 +1300,117 @@
     "version": "unversioned",
     "timestamp": "2026-01-06T18:16:10.821Z",
     "path": "cli-tool/components/commands/deployment/hotfix-deploy.md"
+  },
+  "cli-tool/components/commands/deployment/prepare-release.md": {
+    "hash": "ea43a5c4aafacc06a31efb13f7a6b772cae12af596cca31e003219ade6204b17",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:11.352Z",
+    "path": "cli-tool/components/commands/deployment/prepare-release.md"
+  },
+  "cli-tool/components/commands/deployment/rollback-deploy.md": {
+    "hash": "0d88ac2ecff45516e68ff592f4930d6cbf14378fa39e0f0b14c23a06e817245b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:11.816Z",
+    "path": "cli-tool/components/commands/deployment/rollback-deploy.md"
+  },
+  "cli-tool/components/commands/deployment/setup-automated-releases.md": {
+    "hash": "d303cf42da3dfa55af004af7c81afa89c6dfa0e023c91a413f3dfbac621afa2d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:12.443Z",
+    "path": "cli-tool/components/commands/deployment/setup-automated-releases.md"
+  },
+  "cli-tool/components/commands/deployment/setup-kubernetes-deployment.md": {
+    "hash": "4e131129a5278d392c47e2eddf0641a3677ac0c8095209f4b00e8655705aaf12",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:12.928Z",
+    "path": "cli-tool/components/commands/deployment/setup-kubernetes-deployment.md"
+  },
+  "cli-tool/components/commands/documentation/create-architecture-documentation.md": {
+    "hash": "3fa4a31d7210cb023d4a0b8c5a00616154399685a7713d267473377969a10b8d",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:13.357Z",
+    "path": "cli-tool/components/commands/documentation/create-architecture-documentation.md"
+  },
+  "cli-tool/components/commands/documentation/create-onboarding-guide.md": {
+    "hash": "2aa3609646823df6c9232f6667cba7fc61b304e86b0eda802c2d59bc68430046",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:13.693Z",
+    "path": "cli-tool/components/commands/documentation/create-onboarding-guide.md"
+  },
+  "cli-tool/components/commands/documentation/doc-api.md": {
+    "hash": "7e76ec7d1502243008c263a23d0c517f54489055929455b2c5f16bed4bbb2cff",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:14.241Z",
+    "path": "cli-tool/components/commands/documentation/doc-api.md"
+  },
+  "cli-tool/components/commands/documentation/docs-maintenance.md": {
+    "hash": "1eec80d60735f3a2e17d6b1ea38d1182151c2cbdfb7ecd5fc9734d90c4611460",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:14.578Z",
+    "path": "cli-tool/components/commands/documentation/docs-maintenance.md"
+  },
+  "cli-tool/components/commands/documentation/generate-api-documentation.md": {
+    "hash": "f97375b8279e976cdb8d3b0062089bf83cecff0501193ae3097b2f0d9f2a4d5e",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:14.974Z",
+    "path": "cli-tool/components/commands/documentation/generate-api-documentation.md"
+  },
+  "cli-tool/components/commands/documentation/interactive-documentation.md": {
+    "hash": "1dee0e8d01935f2b086336bf63ecabd7fed3b60b1bda54a7e906357f671ce3dc",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:15.382Z",
+    "path": "cli-tool/components/commands/documentation/interactive-documentation.md"
+  },
+  "cli-tool/components/commands/documentation/load-llms-txt.md": {
+    "hash": "1086cf4f8d6b2d36c440145758c170759657e3c4bc8c258fceccff2d7d22e549",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:15.867Z",
+    "path": "cli-tool/components/commands/documentation/load-llms-txt.md"
+  },
+  "cli-tool/components/commands/documentation/migration-guide.md": {
+    "hash": "01d755120e427409f2304c5625aacaee4e40c70818b09f18c55f9a5648b0d149",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:16.361Z",
+    "path": "cli-tool/components/commands/documentation/migration-guide.md"
+  },
+  "cli-tool/components/commands/documentation/troubleshooting-guide.md": {
+    "hash": "3d997fa1f142e3a0704e33dcc0c3a6a1c2f82cfdc7bcc92d500b24b3f5b1a738",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:16.855Z",
+    "path": "cli-tool/components/commands/documentation/troubleshooting-guide.md"
+  },
+  "cli-tool/components/commands/documentation/update-docs.md": {
+    "hash": "f362d418dde2303d24f7a0332191ab01d0aa85d964b24530b182557a1c8ee335",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:17.670Z",
+    "path": "cli-tool/components/commands/documentation/update-docs.md"
+  },
+  "cli-tool/components/commands/game-development/game-analytics-integration.md": {
+    "hash": "7ce3a16d317488d196f5667f159a2bcf90c3c496122f54168bb0af75907c52c8",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:18.344Z",
+    "path": "cli-tool/components/commands/game-development/game-analytics-integration.md"
+  },
+  "cli-tool/components/commands/game-development/game-asset-pipeline.md": {
+    "hash": "a79332ba4c7d811374886281d888b2b0a46f7dd20f7024ac101c6d48f05b1c60",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:19.338Z",
+    "path": "cli-tool/components/commands/game-development/game-asset-pipeline.md"
   }
 }
