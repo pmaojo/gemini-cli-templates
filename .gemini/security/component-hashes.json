@@ -775,5 +775,54 @@
     "version": "unversioned",
     "timestamp": "2026-01-06T18:15:32.887Z",
     "path": "cli-tool/components/agents/mcp-dev-team/mcp-testing-engineer.md"
+  },
+  "cli-tool/components/agents/modernization/architecture-modernizer.md": {
+    "hash": "fe160d14308a08912f31f7fb0abb6e3070294e96b2b5856794068d46930dad4e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:33.295Z",
+    "path": "cli-tool/components/agents/modernization/architecture-modernizer.md"
+  },
+  "cli-tool/components/agents/modernization/cloud-migration-specialist.md": {
+    "hash": "d18fc8b655f5d8f02e642a8f7b5b4366fe71b854648d17ec3092ffa10680fc07",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:33.980Z",
+    "path": "cli-tool/components/agents/modernization/cloud-migration-specialist.md"
+  },
+  "cli-tool/components/agents/modernization/legacy-modernizer.md": {
+    "hash": "290d105f80dfa7144a497725542aff5d56a4c79ebb018168d3811270b4b928f2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:34.532Z",
+    "path": "cli-tool/components/agents/modernization/legacy-modernizer.md"
+  },
+  "cli-tool/components/agents/obsidian-ops-team/connection-agent.md": {
+    "hash": "1b8ea776f7ef60deaa3587d4cc41565a4706f3cdf5e09dfae8868db1256449d1",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:35.043Z",
+    "path": "cli-tool/components/agents/obsidian-ops-team/connection-agent.md"
+  },
+  "cli-tool/components/agents/obsidian-ops-team/content-curator.md": {
+    "hash": "beb213bda875ed8cf7c53ec5e9602c1101fab971581cc758177829dabca4a7e0",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:35.571Z",
+    "path": "cli-tool/components/agents/obsidian-ops-team/content-curator.md"
+  },
+  "cli-tool/components/agents/obsidian-ops-team/metadata-agent.md": {
+    "hash": "69f446da50ae56748d09c146e2d794e01e41294f0f3fd752d769b46a11d38cba",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:36.308Z",
+    "path": "cli-tool/components/agents/obsidian-ops-team/metadata-agent.md"
+  },
+  "cli-tool/components/agents/obsidian-ops-team/moc-agent.md": {
+    "hash": "d288517bb6c2953ab9829a7c2f7e4161962f27f8f10a4577dab4ca85528e331b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:36.829Z",
+    "path": "cli-tool/components/agents/obsidian-ops-team/moc-agent.md"
   }
 }
