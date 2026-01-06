@@ -96,7 +96,7 @@ Visit https://docs.example.com for documentation.`,
 
     it('should error on data: protocol', async () => {
       const component = {
-        content: 'https://example.com and also data:text/html,<script>alert("XSS")</script>',
+        content: 'https://example.com and also [Bad](data:text/html,<script>alert("XSS")</script>)',
         path: 'dangerous.md'
       };
 

@@ -1,0 +1,375 @@
+FAIL tests/unit/WebSocketServer.test.js
+  WebSocketServer
+    constructor
+      ✕ should initialize with default options (1 ms)
+      ✕ should accept custom options
+    initialize
+      ✕ should create WebSocket server with correct options (1 ms)
+      ✕ should setup event handlers
+      ✕ should handle initialization errors (1 ms)
+    handleConnection
+      ✕ should register new client and setup handlers
+      ✕ should send welcome message to new client
+    handleClientMessage
+      ✕ should handle subscribe message (1 ms)
+      ✕ should handle unsubscribe message
+      ✕ should handle ping message
+      ✕ should handle malformed JSON gracefully
+    broadcast
+      ✕ should broadcast to all clients when no channel specified
+      ✕ should broadcast only to subscribed clients when channel specified (1 ms)
+      ✕ should handle send errors gracefully
+    notification methods
+      ✕ should notify conversation state change (2 ms)
+      ✕ should notify data refresh
+      ✕ should notify system status (1 ms)
+    heartbeat mechanism
+      ✕ should start heartbeat on initialization
+      ✕ should ping clients and remove unresponsive ones
+    getStats
+      ✕ should return server statistics
+    close
+      ✕ should close all connections and stop server
+
+  ● WebSocketServer › constructor › should initialize with default options
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › constructor › should accept custom options
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › initialize › should create WebSocket server with correct options
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › initialize › should setup event handlers
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › initialize › should handle initialization errors
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › handleConnection › should register new client and setup handlers
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › handleConnection › should send welcome message to new client
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › handleClientMessage › should handle subscribe message
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › handleClientMessage › should handle unsubscribe message
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › handleClientMessage › should handle ping message
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › handleClientMessage › should handle malformed JSON gracefully
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › broadcast › should broadcast to all clients when no channel specified
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › broadcast › should broadcast only to subscribed clients when channel specified
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › broadcast › should handle send errors gracefully
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › notification methods › should notify conversation state change
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › notification methods › should notify data refresh
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › notification methods › should notify system status
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › heartbeat mechanism › should start heartbeat on initialization
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › heartbeat mechanism › should ping clients and remove unresponsive ones
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › getStats › should return server statistics
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+  ● WebSocketServer › close › should close all connections and stop server
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      50 |
+      51 |     // Mock WebSocket.Server constructor
+    > 52 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      53 |
+      54 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      55 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:52:22)
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |    0.06 |        0 |       0 |    0.07 |                   
+ analytics-web/components |       0 |        0 |       0 |       0 |                   
+  ActivityHeatmap.js      |       0 |        0 |       0 |       0 | 7-782             
+  AgentAnalytics.js       |       0 |        0 |       0 |       0 | 7-709             
+  App.js                  |       0 |        0 |       0 |       0 | 7-440             
+  Charts.js               |       0 |        0 |       0 |       0 | 7-113             
+  ConversationTable.js    |       0 |        0 |       0 |       0 | 7-436             
+  DashboardPage.js        |       0 |        0 |       0 |       0 | 7-2289            
+  HeaderComponent.js      |       0 |        0 |       0 |       0 | 7-306             
+  SessionTimer.js         |       0 |        0 |       0 |       0 | 7-598             
+  Sidebar.js              |       0 |        0 |       0 |       0 | 7-187             
+  ToolDisplay.js          |       0 |        0 |       0 |       0 | 7-553             
+ analytics-web/services   |       0 |        0 |       0 |       0 |                   
+  DataService.js          |       0 |        0 |       0 |       0 | 7-449             
+  StateService.js         |       0 |        0 |       0 |       0 | 7-284             
+  WebSocketService.js     |       0 |        0 |       0 |       0 | 7-534             
+ analytics/core           |       0 |        0 |       0 |       0 |                   
+  AgentAnalyzer.js        |       0 |        0 |       0 |       0 | 5-355             
+  ConversationAnalyzer.js |       0 |        0 |       0 |       0 | 1-966             
+  FileWatcher.js          |       0 |        0 |       0 |       0 | 1-429             
+  ProcessDetector.js      |       0 |        0 |       0 |       0 | 1-280             
+  SessionAnalyzer.js      |       0 |        0 |       0 |       0 | 5-686             
+  StateCalculator.js      |       0 |        0 |       0 |       0 | 1-246             
+  YearInReview2025.js     |       0 |        0 |       0 |       0 | 1-982             
+ analytics/data           |       0 |        0 |       0 |       0 |                   
+  DataCache.js            |       0 |        0 |       0 |       0 | 1-685             
+ analytics/notifications  |    1.03 |        0 |       0 |    1.06 |                   
+  NotificationManager.js  |       0 |        0 |       0 |       0 | 5-485             
+  WebSocketServer.js      |    1.85 |        0 |       0 |    1.91 | 10-520            
+ analytics/utils          |       0 |        0 |       0 |       0 |                   
+  PerformanceMonitor.js   |       0 |        0 |       0 |       0 | 5-466             
+--------------------------|---------|----------|---------|---------|-------------------
+Jest: "global" coverage threshold for statements (70%) not met: 0.09%
+Jest: "global" coverage threshold for branches (70%) not met: 0%
+Jest: "global" coverage threshold for lines (70%) not met: 0.1%
+Jest: "global" coverage threshold for functions (70%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for statements (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for branches (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for lines (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for functions (80%) not met: 0%
+Test Suites: 1 failed, 1 total
+Tests:       21 failed, 21 total
+Snapshots:   0 total
+Time:        1.615 s
+Ran all test suites matching tests/unit/WebSocketServer.test.js.

@@ -22,7 +22,8 @@ class PerformanceMonitor {
       requests: [],
       cache: [],
       errors: [],
-      websocket: []
+      websocket: [],
+      performance: []
     };
     
     this.timers = {};

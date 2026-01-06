@@ -116,7 +116,7 @@ describe('DataCache', () => {
 
   describe('getParsedConversation', () => {
     const mockFilePath = '/test/conversation.jsonl';
-    const mockContent = '{"message": {"role": "user", "content": "hello"}}\n{"message": {"role": "assistant", "content": "hi"}}';
+    const mockContent = '{"type": "user", "message": {"role": "user", "content": "hello"}}\n{"type": "assistant", "message": {"role": "assistant", "content": "hi"}}';
 
     beforeEach(() => {
       fs.readFile.mockResolvedValue(mockContent);

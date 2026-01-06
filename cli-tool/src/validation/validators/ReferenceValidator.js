@@ -97,8 +97,8 @@ class ReferenceValidator extends BaseValidator {
   extractUrls(content) {
     const urls = [];
 
-    // Match markdown links: [text](url)
-    const markdownLinkPattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+    // Match markdown links: [text](url) - ignore images starting with !
+    const markdownLinkPattern = /(?<!\!)\[([^\]]+)\]\(([^)]+)\)/g;
     let match;
 
     while ((match = markdownLinkPattern.exec(content)) !== null) {

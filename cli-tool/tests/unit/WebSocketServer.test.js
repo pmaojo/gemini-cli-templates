@@ -3,30 +3,60 @@
  * Tests real-time communication server
  */
 
-const WebSocketServer = require('../../src/analytics/notifications/WebSocketServer');
-const WebSocket = require('ws');
-
 // Mock the WebSocket library
-jest.mock('ws');
+jest.mock('ws', () => {
+  const mockWssInstance = {
+    on: jest.fn(),
+    close: jest.fn(),
+    clients: new Set(),
+    handleUpgrade: jest.fn()
+  };
+  
+  const ServerMock = jest.fn(() => mockWssInstance);
+  ServerMock.mockInstance = mockWssInstance;
+  
+  return {
+    Server: ServerMock,
+    OPEN: 1,
+    CONNECTING: 0,
+    CLOSING: 2,
+    CLOSED: 3
+  };
+});
+
+const WebSocket = require('ws');
+const WebSocketServer = require('../../src/analytics/notifications/WebSocketServer');
 
 describe('WebSocketServer', () => {
   let webSocketServer;
   let mockHttpServer;
   let mockWss;
-  let mockWs;
-
+  let mockWs; 
+  
   beforeEach(() => {
+    jest.useFakeTimers();
+    // Get headers
+    mockWss = WebSocket.Server.mockInstance;
+  
+    // Reset mocks
+    jest.clearAllMocks();
+    
+    // IMPORTANT: Reset the constructor implementation to return the mock instance
+    // because some tests (like 'should handle initialization errors') override it.
+    WebSocket.Server.mockImplementation(() => mockWss);
+
+    mockWss.on.mockReset();
+    // IMPORTANT: close must invoke callback or the server closing promise never resolves
+    mockWss.close.mockReset().mockImplementation((cb) => cb && cb());
+    mockWss.clients.clear();
+    mockWss.handleUpgrade.mockReset();
+    
     // Mock HTTP server
     mockHttpServer = {
       listen: jest.fn(),
-      close: jest.fn()
-    };
-
-    // Mock WebSocket server
-    mockWss = {
-      on: jest.fn(),
       close: jest.fn(),
-      clients: new Set()
+      on: jest.fn(),
+      listeners: jest.fn().mockReturnValue([])
     };
 
     // Mock WebSocket connection
@@ -36,21 +66,22 @@ describe('WebSocketServer', () => {
       close: jest.fn(),
       terminate: jest.fn(),
       ping: jest.fn(),
-      readyState: WebSocket.OPEN
+      readyState: 1 // WebSocket.OPEN
     };
-
-    // Mock WebSocket.Server constructor
-    WebSocket.Server.mockImplementation(() => mockWss);
 
     webSocketServer = new WebSocketServer(mockHttpServer);
   });
 
   afterEach(async () => {
     if (webSocketServer && webSocketServer.isRunning) {
-      await webSocketServer.close();
+        await webSocketServer.close();
     }
+    webSocketServer = null;
+    jest.useRealTimers();
     jest.clearAllMocks();
   });
+
+
 
   describe('constructor', () => {
     it('should initialize with default options', () => {
@@ -226,9 +257,14 @@ describe('WebSocketServer', () => {
     it('should broadcast to all clients when no channel specified', () => {
       const message = { type: 'test_message', data: 'test' };
 
+      // Ensure client2 uses the SAME mock function for send if we want to count total calls on mockWs.send
+      // OR better: check individual calls.
+      const client2 = webSocketServer.clients.get('client2');
+      
       webSocketServer.broadcast(message);
 
-      expect(mockWs.send).toHaveBeenCalledTimes(2);
+      expect(mockWs.send).toHaveBeenCalledTimes(1); // client1
+      expect(client2.ws.send).toHaveBeenCalledTimes(1); // client2
     });
 
     it('should broadcast only to subscribed clients when channel specified', () => {
@@ -238,6 +274,8 @@ describe('WebSocketServer', () => {
 
       // Only client1 should receive the message (subscribed to conversation_updates)
       expect(mockWs.send).toHaveBeenCalledTimes(1);
+      const client2 = webSocketServer.clients.get('client2');
+      expect(client2.ws.send).not.toHaveBeenCalled();
     });
 
     it('should handle send errors gracefully', () => {
@@ -333,7 +371,7 @@ describe('WebSocketServer', () => {
 
     it('should ping clients and remove unresponsive ones', () => {
       // Add responsive client
-      const responsiveWs = { ...mockWs, ping: jest.fn() };
+      const responsiveWs = { ...mockWs, ping: jest.fn(), terminate: jest.fn() };
       webSocketServer.clients.set('responsive', {
         id: 'responsive',
         ws: responsiveWs,
@@ -369,7 +407,8 @@ describe('WebSocketServer', () => {
         ip: '127.0.0.1',
         connectedAt: new Date(),
         subscriptions: new Set(['test']),
-        isAlive: true
+        isAlive: true,
+        ws: mockWs // Added ws to prevent crash during cleanup
       });
 
       const stats = webSocketServer.getStats();

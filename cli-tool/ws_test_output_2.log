@@ -1,0 +1,401 @@
+FAIL tests/unit/WebSocketServer.test.js
+  WebSocketServer
+    constructor
+      ✓ should initialize with default options (1 ms)
+      ✓ should accept custom options
+    initialize
+      ✕ should create WebSocket server with correct options (1 ms)
+      ✕ should setup event handlers
+      ✕ should handle initialization errors
+    handleConnection
+      ✕ should register new client and setup handlers (1 ms)
+      ✕ should send welcome message to new client (2 ms)
+    handleClientMessage
+      ✕ should handle subscribe message
+      ✕ should handle unsubscribe message
+      ✕ should handle ping message
+      ✕ should handle malformed JSON gracefully
+    broadcast
+      ✕ should broadcast to all clients when no channel specified (1 ms)
+      ✕ should broadcast only to subscribed clients when channel specified
+      ✕ should handle send errors gracefully
+    notification methods
+      ✕ should notify conversation state change
+      ✕ should notify data refresh
+      ✕ should notify system status
+    heartbeat mechanism
+      ✕ should start heartbeat on initialization
+      ✕ should ping clients and remove unresponsive ones
+    getStats
+      ✕ should return server statistics
+    close
+      ✕ should close all connections and stop server (1 ms)
+
+  ● WebSocketServer › initialize › should create WebSocket server with correct options
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:93:29)
+
+  ● WebSocketServer › initialize › should setup event handlers
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:104:29)
+
+  ● WebSocketServer › initialize › should handle initialization errors
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      110 |
+      111 |     it('should handle initialization errors', async () => {
+    > 112 |       WebSocket.Server.mockImplementation(() => {
+          |                        ^
+      113 |         throw new Error('Failed to create WebSocket server');
+      114 |       });
+      115 |
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:112:24)
+
+  ● WebSocketServer › handleConnection › should register new client and setup handlers
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:122:29)
+
+  ● WebSocketServer › handleConnection › should send welcome message to new client
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:122:29)
+
+  ● WebSocketServer › handleClientMessage › should handle subscribe message
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:161:29)
+
+  ● WebSocketServer › handleClientMessage › should handle unsubscribe message
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:161:29)
+
+  ● WebSocketServer › handleClientMessage › should handle ping message
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:161:29)
+
+  ● WebSocketServer › handleClientMessage › should handle malformed JSON gracefully
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:161:29)
+
+  ● WebSocketServer › broadcast › should broadcast to all clients when no channel specified
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:224:29)
+
+  ● WebSocketServer › broadcast › should broadcast only to subscribed clients when channel specified
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:224:29)
+
+  ● WebSocketServer › broadcast › should handle send errors gracefully
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:224:29)
+
+  ● WebSocketServer › notification methods › should notify conversation state change
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:285:29)
+
+  ● WebSocketServer › notification methods › should notify data refresh
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:285:29)
+
+  ● WebSocketServer › notification methods › should notify system status
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:285:29)
+
+  ● WebSocketServer › heartbeat mechanism › should start heartbeat on initialization
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:337:29)
+
+  ● WebSocketServer › heartbeat mechanism › should ping clients and remove unresponsive ones
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:337:29)
+
+  ● WebSocketServer › getStats › should return server statistics
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:376:29)
+
+  ● WebSocketServer › close › should close all connections and stop server
+
+    TypeError: server.on is not a function
+
+      33 |       
+      34 |       // Create WebSocket server
+    > 35 |       this.wss = new WebSocket.Server({
+         |                  ^
+      36 |         server: this.httpServer,
+      37 |         path: this.options.path,
+      38 |         clientTracking: true
+
+      at addListeners (node_modules/ws/lib/websocket-server.js:455:48)
+      at new WebSocketServer (node_modules/ws/lib/websocket-server.js:115:31)
+      at WebSocketServer.initialize (src/analytics/notifications/WebSocketServer.js:35:18)
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:409:29)
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |    0.37 |     0.29 |    0.21 |    0.39 |                   
+ analytics-web/components |       0 |        0 |       0 |       0 |                   
+  ActivityHeatmap.js      |       0 |        0 |       0 |       0 | 7-782             
+  AgentAnalytics.js       |       0 |        0 |       0 |       0 | 7-709             
+  App.js                  |       0 |        0 |       0 |       0 | 7-440             
+  Charts.js               |       0 |        0 |       0 |       0 | 7-113             
+  ConversationTable.js    |       0 |        0 |       0 |       0 | 7-436             
+  DashboardPage.js        |       0 |        0 |       0 |       0 | 7-2289            
+  HeaderComponent.js      |       0 |        0 |       0 |       0 | 7-306             
+  SessionTimer.js         |       0 |        0 |       0 |       0 | 7-598             
+  Sidebar.js              |       0 |        0 |       0 |       0 | 7-187             
+  ToolDisplay.js          |       0 |        0 |       0 |       0 | 7-553             
+ analytics-web/services   |       0 |        0 |       0 |       0 |                   
+  DataService.js          |       0 |        0 |       0 |       0 | 7-449             
+  StateService.js         |       0 |        0 |       0 |       0 | 7-284             
+  WebSocketService.js     |       0 |        0 |       0 |       0 | 7-534             
+ analytics/core           |       0 |        0 |       0 |       0 |                   
+  AgentAnalyzer.js        |       0 |        0 |       0 |       0 | 5-355             
+  ConversationAnalyzer.js |       0 |        0 |       0 |       0 | 1-966             
+  FileWatcher.js          |       0 |        0 |       0 |       0 | 1-429             
+  ProcessDetector.js      |       0 |        0 |       0 |       0 | 1-280             
+  SessionAnalyzer.js      |       0 |        0 |       0 |       0 | 5-686             
+  StateCalculator.js      |       0 |        0 |       0 |       0 | 1-246             
+  YearInReview2025.js     |       0 |        0 |       0 |       0 | 1-982             
+ analytics/data           |       0 |        0 |       0 |       0 |                   
+  DataCache.js            |       0 |        0 |       0 |       0 | 1-685             
+ analytics/notifications  |    5.86 |     5.12 |    2.85 |    6.02 |                   
+  NotificationManager.js  |       0 |        0 |       0 |       0 | 5-485             
+  WebSocketServer.js      |   10.49 |    10.12 |       5 |   10.82 | 41-45,56-520      
+ analytics/utils          |       0 |        0 |       0 |       0 |                   
+  PerformanceMonitor.js   |       0 |        0 |       0 |       0 | 5-467             
+--------------------------|---------|----------|---------|---------|-------------------
+Jest: "global" coverage threshold for statements (70%) not met: 0.54%
+Jest: "global" coverage threshold for branches (70%) not met: 0.43%
+Jest: "global" coverage threshold for lines (70%) not met: 0.57%
+Jest: "global" coverage threshold for functions (70%) not met: 0.31%
+Jest: "./src/analytics/core/" coverage threshold for statements (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for branches (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for lines (80%) not met: 0%
+Jest: "./src/analytics/core/" coverage threshold for functions (80%) not met: 0%
+Test Suites: 1 failed, 1 total
+Tests:       19 failed, 2 passed, 21 total
+Snapshots:   0 total
+Time:        1.502 s
+Ran all test suites matching tests/unit/WebSocketServer.test.js.

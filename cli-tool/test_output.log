@@ -1,0 +1,823 @@
+
+> gemini-cli-templates@1.28.12 test
+> jest
+
+FAIL tests/validation/ReferenceValidator.test.js
+  ReferenceValidator
+    Safe Content
+      ✓ should pass validation for content with HTTPS URLs (3 ms)
+      ✓ should pass for content without URLs
+    URL Extraction
+      ✓ should extract markdown links (1 ms)
+      ✓ should extract plain URLs
+      ✓ should not duplicate URLs from markdown and plain text
+    Protocol Validation
+      ✓ should error on file:// protocol (2 ms)
+      ✓ should error on javascript: protocol (1 ms)
+      ✕ should error on data: protocol (1 ms)
+      ✓ should warn on HTTP (non-strict mode)
+      ✓ should error on HTTP (strict mode)
+    Private IP Detection
+      ✓ should detect loopback addresses
+      ✓ should detect Class A private IPs (1 ms)
+      ✓ should detect Class B private IPs (4 ms)
+      ✓ should detect Class C private IPs
+      ✓ should warn about localhost references
+    Suspicious TLD Detection
+      ✓ should warn about .tk domains
+      ✓ should warn about .zip domains (1 ms)
+    Image Validation
+      ✓ should validate image URLs
+      ✓ should warn about large data URIs (1 ms)
+      ✕ should allow small data URIs
+    Helper Methods
+      ✓ should correctly identify private IPs
+      ✓ should correctly identify localhost (1 ms)
+      ✓ should correctly identify suspicious TLDs
+    Reference Report Generation
+      ✓ should generate comprehensive reference report
+      ✓ should calculate HTTPS percentage correctly (1 ms)
+    Invalid URLs
+      ✓ should warn about malformed URLs
+    Markdown Link Attacks
+      ✓ should detect javascript in markdown links
+      ✓ should detect vbscript in markdown links (1 ms)
+
+  ● ReferenceValidator › Protocol Validation › should error on data: protocol
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      103 |       const result = await validator.validate(component);
+      104 |
+    > 105 |       expect(result.valid).toBe(false);
+          |                            ^
+      106 |       expect(result.errors).toContainEqual(
+      107 |         expect.objectContaining({
+      108 |           code: 'REF_E002'
+
+      at Object.<anonymous> (tests/validation/ReferenceValidator.test.js:105:28)
+
+  ● ReferenceValidator › Image Validation › should allow small data URIs
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      283 |       const result = await validator.validate(component);
+      284 |
+    > 285 |       expect(result.valid).toBe(true);
+          |                            ^
+      286 |     });
+      287 |   });
+      288 |
+
+      at Object.<anonymous> (tests/validation/ReferenceValidator.test.js:285:28)
+
+FAIL tests/unit/DataCache.test.js
+  DataCache
+    constructor
+      ✓ should initialize with empty caches and metrics (4 ms)
+      ✓ should configure correctly (1 ms)
+    getFileContent
+      ✓ should read file when not cached (1 ms)
+      ✓ should return cached content when file unchanged
+      ✓ should re-read file when modified (1 ms)
+      ✓ should handle file read errors (6 ms)
+    getParsedConversation
+      ✕ should parse conversation content correctly (1 ms)
+      ✓ should cache parsed results
+    getCachedTokenUsage
+      ✓ should compute and cache token usage
+      ✓ should return cached result on subsequent calls (1 ms)
+    invalidateFile
+      ✓ should remove all cache entries for a file
+    evictOldEntries
+      ✓ should remove expired cache entries (1 ms)
+    getStats
+      ✓ should return cache statistics (1 ms)
+    cleanup
+      ✓ should clear all caches (1 ms)
+
+  ● DataCache › getParsedConversation › should parse conversation content correctly
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 2
+    Received length: 0
+    Received array:  []
+
+      127 |       const parsed = await dataCache.getParsedConversation(mockFilePath);
+      128 |       
+    > 129 |       expect(parsed).toHaveLength(2);
+          |                      ^
+      130 |       expect(parsed[0].content).toBe('hello');
+      131 |     });
+      132 |
+
+      at Object.<anonymous> (tests/unit/DataCache.test.js:129:22)
+
+PASS tests/validation/StructuralValidator.test.js
+  StructuralValidator
+    Valid Component
+      ✓ should pass validation for a well-formed agent (12 ms)
+      ✓ should validate the real frontend-developer agent (3 ms)
+    Frontmatter Validation
+      ✓ should error when frontmatter is missing (1 ms)
+      ✓ should error when frontmatter YAML is invalid
+      ✓ should error when required fields are missing (1 ms)
+    File Size Validation
+      ✓ should error when file size exceeds limit (1 ms)
+      ✓ should warn when file size approaches limit (1 ms)
+    Description Validation
+      ✓ should warn when description is too short
+      ✓ should warn when description is too long
+    Tools Validation
+      ✓ should validate valid tools
+      ✓ should warn about unknown tools (1 ms)
+    Model Validation
+      ✓ should warn when model is missing
+      ✓ should warn about unknown model
+    Content Structure Validation
+      ✓ should warn when content is too short
+      ✓ should warn when no headers are present
+      ✓ should warn when too many sections
+    Encoding Validation
+      ✓ should error when null bytes are present
+    Score Calculation
+      ✓ should calculate score correctly
+
+PASS tests/validation/IntegrityValidator.test.js
+  IntegrityValidator
+    Hash Generation
+      ✓ should generate consistent SHA256 hash (19 ms)
+      ✓ should generate different hashes for different content (3 ms)
+      ✓ should generate expected hash for known content (3 ms)
+    Basic Validation
+      ✓ should validate and generate hash for valid component (16 ms)
+      ✓ should error when content is missing (1 ms)
+    Hash Verification
+      ✓ should pass when hash matches expected hash (1 ms)
+      ✓ should error when hash does not match expected hash (2 ms)
+    Version Validation
+      ✓ should accept valid semantic version
+      ✓ should accept simple version format (3 ms)
+      ✓ should warn about invalid version format (1 ms)
+      ✓ should warn when no version is specified (1 ms)
+    Hash Registry
+      ✓ should update registry when requested (6 ms)
+      ✓ should detect hash changes from registry (4 ms)
+      ✓ should detect version changes (4 ms)
+      ✓ should handle new components not in registry (1 ms)
+    Batch Validation
+      ✓ should validate multiple components (4 ms)
+      ✓ should count failures correctly in batch validation (1 ms)
+    Integrity Report
+      ✓ should generate comprehensive integrity report (1 ms)
+    Real Component Validation
+      ✓ should validate real frontend-developer agent (1 ms)
+    Path Normalization
+      ✓ should normalize absolute paths to relative (1 ms)
+      ✓ should keep relative paths unchanged
+
+PASS tests/validation/ValidationOrchestrator.test.js
+  ValidationOrchestrator
+    Single Component Validation
+      ✓ should validate a safe component with all validators (36 ms)
+      ✓ should detect errors across multiple validators (3 ms)
+      ✓ should calculate overall score (5 ms)
+    Batch Validation
+      ✓ should validate multiple components (1 ms)
+      ✓ should count passed and failed components correctly (6 ms)
+    Report Generation
+      ✓ should generate human-readable report (3 ms)
+      ✓ should generate JSON report (1 ms)
+      ✓ should include verbose details when requested (1 ms)
+    Selective Validator Execution
+      ✓ should run only specified validators (1 ms)
+    Error Code Extraction
+      ✓ should extract all error codes from results (3 ms)
+
+PASS tests/unit/StateService.test.js
+  StateService
+    constructor
+      ✓ should initialize with default state (2 ms)
+    subscribe/unsubscribe
+      ✓ should add subscribers and return unsubscribe function
+      ✓ should notify subscribers when state changes (1 ms)
+      ✓ should handle multiple subscribers
+      ✓ should handle subscriber errors gracefully
+    getState and getStateProperty
+      ✓ should return current state (1 ms)
+      ✓ should return specific state properties (1 ms)
+    setState and setStateProperty
+      ✓ should update state and preserve existing properties
+      ✓ should update specific properties
+      ✓ should save state to history (1 ms)
+      ✓ should limit history size
+    specific update methods
+      ✓ should update conversations
+      ✓ should update conversation states
+      ✓ should update summary (1 ms)
+      ✓ should update chart data
+      ✓ should set selected conversation
+      ✓ should set loading state
+      ✓ should set and clear error state
+      ✓ should handle string errors
+      ✓ should update system health
+    notifyConversationStateChange
+      ✓ should update conversation state and conversation status
+      ✓ should handle non-existent conversation gracefully
+    conversation queries
+      ✓ should get conversation by ID
+      ✓ should return null for non-existent conversation
+      ✓ should get conversations by status
+      ✓ should return empty array for non-matching status (1 ms)
+    state history management
+      ✓ should return state history
+      ✓ should clear state history
+    resetState
+      ✓ should reset to initial state (1 ms)
+    getStateStats
+      ✓ should return state statistics
+      ✓ should handle empty state
+    error handling and edge cases
+      ✓ should handle null/undefined state updates
+      ✓ should handle state updates with circular references
+      ✓ should maintain state integrity during concurrent updates (1 ms)
+
+FAIL tests/unit/WebSocketServer.test.js
+  WebSocketServer
+    constructor
+      ✕ should initialize with default options (2 ms)
+      ✕ should accept custom options (1 ms)
+    initialize
+      ✕ should create WebSocket server with correct options (4 ms)
+      ✕ should setup event handlers
+      ✕ should handle initialization errors (1 ms)
+    handleConnection
+      ✕ should register new client and setup handlers (2 ms)
+      ✕ should send welcome message to new client
+    handleClientMessage
+      ✕ should handle subscribe message
+      ✕ should handle unsubscribe message
+      ✕ should handle ping message (1 ms)
+      ✕ should handle malformed JSON gracefully
+    broadcast
+      ✕ should broadcast to all clients when no channel specified
+      ✕ should broadcast only to subscribed clients when channel specified
+      ✕ should handle send errors gracefully
+    notification methods
+      ✕ should notify conversation state change
+      ✕ should notify data refresh
+      ✕ should notify system status
+    heartbeat mechanism
+      ✕ should start heartbeat on initialization
+      ✕ should ping clients and remove unresponsive ones
+    getStats
+      ✕ should return server statistics
+    close
+      ✕ should close all connections and stop server
+
+  ● WebSocketServer › constructor › should initialize with default options
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › constructor › should accept custom options
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › initialize › should create WebSocket server with correct options
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › initialize › should setup event handlers
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › initialize › should handle initialization errors
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › handleConnection › should register new client and setup handlers
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › handleConnection › should send welcome message to new client
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › handleClientMessage › should handle subscribe message
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › handleClientMessage › should handle unsubscribe message
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › handleClientMessage › should handle ping message
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › handleClientMessage › should handle malformed JSON gracefully
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › broadcast › should broadcast to all clients when no channel specified
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › broadcast › should broadcast only to subscribed clients when channel specified
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › broadcast › should handle send errors gracefully
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › notification methods › should notify conversation state change
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › notification methods › should notify data refresh
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › notification methods › should notify system status
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › heartbeat mechanism › should start heartbeat on initialization
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › heartbeat mechanism › should ping clients and remove unresponsive ones
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › getStats › should return server statistics
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+  ● WebSocketServer › close › should close all connections and stop server
+
+    TypeError: WebSocket.Server.mockImplementation is not a function
+
+      41 |
+      42 |     // Mock WebSocket.Server constructor
+    > 43 |     WebSocket.Server.mockImplementation(() => mockWss);
+         |                      ^
+      44 |
+      45 |     webSocketServer = new WebSocketServer(mockHttpServer);
+      46 |   });
+
+      at Object.<anonymous> (tests/unit/WebSocketServer.test.js:43:22)
+
+PASS tests/validation/SemanticValidator.test.js
+  SemanticValidator
+    Safe Content
+      ✓ should pass validation for safe agent content (3 ms)
+      ○ skipped should validate real frontend-developer agent as safe
+    Jailbreak Detection
+      ✓ should detect "ignore previous instructions" (2 ms)
+      ✓ should detect system prompt references (1 ms)
+      ✓ should detect role manipulation
+      ✓ should detect context manipulation (1 ms)
+    Command Execution Detection
+      ✓ should detect code execution attempts
+      ✓ should detect shell access attempts
+    Credential Harvesting Detection
+      ✓ should detect credential extraction attempts (1 ms)
+      ✓ should detect password extraction
+    Security Bypass Detection
+      ✓ should detect security bypass attempts (1 ms)
+      ✓ should detect unconditional obedience instructions
+      ✓ should detect self-modification requests
+    Sensitive Data Detection
+      ✓ should detect hardcoded passwords (1 ms)
+      ✓ should detect hardcoded API keys
+      ✓ should detect hardcoded tokens
+    HTML/Script Injection Detection
+      ✓ should detect <script> tags
+      ✓ should detect <iframe> tags (1 ms)
+      ✓ should detect javascript: protocol
+      ✓ should detect onclick handlers
+      ✓ should detect onerror handlers
+    Suspicious Patterns (Warnings)
+      ✓ should warn about role pretending (1 ms)
+      ✓ should warn about known jailbreak terminology
+    Agent-Specific Validation
+      ✓ should warn about overly permissive instructions
+    Command-Specific Validation
+      ✓ should detect dangerous rm -rf commands
+      ✓ should detect fork bombs
+    Strict Mode
+      ✓ should convert warnings to errors in strict mode (1 ms)
+    Security Report Generation
+      ✓ should generate comprehensive security report
+      ✓ should calculate risk level correctly
+    Context Extraction
+      ✓ should extract context around matches
+
+PASS tests/unit/utils.test.js
+  deepMerge utility
+    ✓ should merge simple flat objects (2 ms)
+    ✓ should overwrite primitive values
+    ✓ should deep merge nested objects
+    ✓ should create nested objects if they do not exist (1 ms)
+    ✓ should handle source being null or undefined
+    ✓ should handle target being null or undefined
+    ✓ should not merge arrays (should overwrite them)
+
+PASS tests/unit/StateCalculator.test.js
+  StateCalculator
+    determineConversationStatus
+      ✓ should return "active" for recent messages with user input (1 ms)
+      ✓ should return "waiting" for conversation with recent user message
+      ✓ should return "idle" for old conversations
+      ✓ should return "completed" for conversation ending with assistant (1 ms)
+      ✓ should handle empty messages array
+      ✓ should handle null/undefined inputs gracefully
+    determineConversationState
+      ✓ should return detailed state with running process (1 ms)
+      ✓ should detect conversation patterns correctly (1 ms)
+    quickStateCalculation
+      ✓ should update status when running process matches conversation
+      ✓ should keep original status when no matching process (1 ms)
+      ✓ should handle empty processes array
+    isRecentActivity
+      ✓ should return true for recent timestamps
+      ✓ should return false for old timestamps
+      ✓ should handle string timestamps
+      ✓ should handle invalid timestamps
+    getTimeSinceLastActivity
+      ✓ should calculate time difference correctly
+      ✓ should return 0 for invalid timestamps
+    edge cases and error handling
+      ✓ should handle malformed message objects
+      ✓ should handle timezone differences (1 ms)
+
+FAIL tests/unit/PerformanceMonitor.test.js
+  PerformanceMonitor
+    constructor
+      ✓ should initialize with default options (8 ms)
+      ✓ should merge custom options
+    timer operations
+      ✓ should start and end timers correctly (7 ms)
+      ✓ should handle ending non-existent timer
+      ✓ should record timer metadata
+    counter operations
+      ✓ should increment counters
+      ✓ should handle initial counter value (1 ms)
+    metric recording
+      ✓ should record metrics in categories
+      ✓ should add timestamp if not provided
+      ✓ should limit metric array size (1 ms)
+      ✓ should skip recording when disabled
+    error recording
+      ✓ should record errors (1 ms)
+    request recording
+      ✓ should record successful requests (1 ms)
+      ✓ should record error requests
+    cache recording
+      ✓ should record cache operations
+    WebSocket recording
+      ✓ should record WebSocket events
+    system metrics collection
+      ✓ should collect memory and CPU metrics (17 ms)
+    statistics calculation
+      ✓ should calculate request statistics (1 ms)
+      ✓ should calculate cache hit rate (1 ms)
+      ✓ should include error count
+      ✓ should include memory statistics
+      ✓ should filter by timeframe (1 ms)
+    Express middleware
+      ✓ should create Express middleware function (16 ms)
+      ✕ should track request performance (16 ms)
+    cleanup and memory management
+      ✓ should clean up old metrics
+
+  ● PerformanceMonitor › Express middleware › should track request performance
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      64 |         expect(duration).toBeGreaterThanOrEqual(0);
+      65 |         expect(performanceMonitor.timers[timerName]).toBeUndefined();
+    > 66 |         expect(performanceMonitor.metrics.performance).toBeDefined();
+         |                                                        ^
+      67 |       }, 20);
+      68 |     });
+      69 |
+
+      at Timeout._onTimeout (tests/unit/PerformanceMonitor.test.js:66:56)
+
+PASS tests/unit/DataService.test.js
+  DataService
+    constructor
+      ✓ should initialize with default values (3 ms)
+      ✓ should setup WebSocket integration when provided (1 ms)
+    cachedFetch
+      ✓ should fetch data and cache it (1 ms)
+      ✓ should return cached data when available and fresh
+      ✓ should refetch when cache is expired (153 ms)
+      ✓ should handle fetch errors gracefully (4 ms)
+      ✓ should return stale cache on fetch error
+      ✓ should handle HTTP errors (43 ms)
+    API methods
+      ✓ should call correct endpoint for getConversations (1 ms)
+      ✓ should call correct endpoint for getConversationStates (10 ms)
+      ✓ should adjust cache duration based on real-time status (1 ms)
+      ✓ should call correct endpoints for other methods (3 ms)
+    WebSocket integration
+      ✓ should enable real-time when WebSocket connects (16 ms)
+      ✓ should disable real-time when WebSocket disconnects (2 ms)
+      ✓ should handle real-time data refresh
+      ✓ should handle real-time state changes (1 ms)
+    requestRefresh
+      ✓ should use WebSocket refresh when available (1 ms)
+      ✓ should fallback to cache clearing when WebSocket unavailable
+      ✓ should handle WebSocket request errors
+    event listeners
+      ✓ should add and notify event listeners (1 ms)
+      ✓ should remove event listeners
+      ✓ should handle listener errors gracefully
+    cache management
+      ✓ should clear entire cache (1 ms)
+      ✓ should clear specific cache entries
+    getCacheStats
+      ✓ should return cache statistics
+    startPeriodicRefresh
+      ✓ should skip polling when real-time is enabled (2 ms)
+      ✓ should start polling when real-time is disabled
+
+PASS tests/integration/analytics-system.test.js
+  Analytics System Integration
+    Backend Integration
+      ✓ should load and analyze conversation data correctly (384 ms)
+      ✓ should detect conversation states correctly (60 ms)
+      ✓ should cache data efficiently
+    WebSocket Integration
+      ✓ should handle WebSocket connections and messaging (22 ms)
+      ✓ should broadcast notifications to subscribed clients (15 ms)
+    End-to-End Analytics Flow
+      ✓ should process conversation changes end-to-end (86 ms)
+    Performance Tests
+      ✓ should handle large datasets efficiently (105 ms)
+      ✓ should handle large datasets efficiently (raw analyzer) (61 ms)
+      ✓ should handle large datasets efficiently (caching test) (64 ms)
+      ✓ should handle concurrent operations safely (1 ms)
+
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                                                                                                                      
+--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------
+All files                 |   19.93 |    13.27 |   24.73 |   20.11 |                                                                                                                                                        
+ analytics-web/components |       0 |        0 |       0 |       0 |                                                                                                                                                        
+  ActivityHeatmap.js      |       0 |        0 |       0 |       0 | 7-782                                                                                                                                                  
+  AgentAnalytics.js       |       0 |        0 |       0 |       0 | 7-709                                                                                                                                                  
+  App.js                  |       0 |        0 |       0 |       0 | 7-440                                                                                                                                                  
+  Charts.js               |       0 |        0 |       0 |       0 | 7-113                                                                                                                                                  
+  ConversationTable.js    |       0 |        0 |       0 |       0 | 7-436                                                                                                                                                  
+  DashboardPage.js        |       0 |        0 |       0 |       0 | 7-2289                                                                                                                                                 
+  HeaderComponent.js      |       0 |        0 |       0 |       0 | 7-306                                                                                                                                                  
+  SessionTimer.js         |       0 |        0 |       0 |       0 | 7-598                                                                                                                                                  
+  Sidebar.js              |       0 |        0 |       0 |       0 | 7-187                                                                                                                                                  
+  ToolDisplay.js          |       0 |        0 |       0 |       0 | 7-553                                                                                                                                                  
+ analytics-web/services   |      40 |    35.25 |    51.3 |   39.59 |                                                                                                                                                        
+  DataService.js          |   75.39 |    67.24 |   78.94 |    75.8 | 98,110-111,129-130,205-206,222,239-240,256,292-295,313,330,349,387-428                                                                                 
+  StateService.js         |   97.82 |    83.33 |   96.66 |   97.72 | 123                                                                                                                                                    
+  WebSocketService.js     |       0 |        0 |       0 |       0 | 7-534                                                                                                                                                  
+ analytics/core           |   26.87 |    19.44 |   28.95 |   26.44 |                                                                                                                                                        
+  AgentAnalyzer.js        |     4.2 |        0 |    3.22 |    4.58 | 41-342                                                                                                                                                 
+  ConversationAnalyzer.js |   59.82 |    31.25 |   66.21 |   59.74 | 60-61,82,98-99,105,158,164-165,184-195,201-202,261-270,283-326,405-410,437-443,468-495,519-520,525-533,550-578,592,609-668,807-808,860-880,890,913-962 
+  FileWatcher.js          |    6.25 |        0 |     2.5 |    6.38 | 26-424                                                                                                                                                 
+  ProcessDetector.js      |    58.9 |    61.36 |   47.61 |    58.9 | 39-40,158-183,203-276                                                                                                                                  
+  SessionAnalyzer.js      |   19.91 |    12.82 |   20.93 |   20.65 | 58-59,90-165,185-188,208-472,494,498,502,530-536,577-588,604,611,628-673                                                                               
+  StateCalculator.js      |   60.18 |    52.99 |   68.18 |   57.47 | 60-64,148,167-242                                                                                                                                      
+  YearInReview2025.js     |    1.77 |        0 |    1.51 |    1.86 | 24-977                                                                                                                                                 
+ analytics/data           |   66.96 |    36.42 |   59.37 |   68.03 |                                                                                                                                                        
+  DataCache.js            |   66.96 |    36.42 |   59.37 |   68.03 | 61-62,151-161,174-201,212-252,311-312,474-480,492-507,552-554,560-562,576-611,656-673                                                                  
+ analytics/notifications  |   43.79 |       25 |   42.85 |   44.32 |                                                                                                                                                        
+  NotificationManager.js  |   24.21 |    10.38 |   23.33 |      24 | 26,54-55,80-287,302-306,322,338-371,387-481                                                                                                            
+  WebSocketServer.js      |   59.25 |    39.24 |    57.5 |    60.5 | 47-48,61,92,122,126,146,158-170,198-217,233-249,269,277-278,289,301,313-331,342-345,375-386,397-407,436-444,485-490,517-520                            
+ analytics/utils          |   79.85 |    65.27 |   85.36 |   80.64 |                                                                                                                                                        
+  PerformanceMonitor.js   |   79.85 |    65.27 |   85.36 |   80.64 | 46-48,83-94,264,399-436                                                                                                                                
+--------------------------|---------|----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------
+Jest: "global" coverage threshold for statements (70%) not met: 16.8%
+Jest: "global" coverage threshold for branches (70%) not met: 10.28%
+Jest: "global" coverage threshold for lines (70%) not met: 17.29%
+Jest: "global" coverage threshold for functions (70%) not met: 22.73%
+Jest: "./src/analytics/core/" coverage threshold for statements (80%) not met: 26.87%
+Jest: "./src/analytics/core/" coverage threshold for branches (80%) not met: 19.44%
+Jest: "./src/analytics/core/" coverage threshold for lines (80%) not met: 26.44%
+Jest: "./src/analytics/core/" coverage threshold for functions (80%) not met: 28.95%
+Test Suites: 4 failed, 9 passed, 13 total
+Tests:       25 failed, 1 skipped, 238 passed, 264 total
+Snapshots:   0 total
+Time:        2.919 s
+Ran all test suites.
