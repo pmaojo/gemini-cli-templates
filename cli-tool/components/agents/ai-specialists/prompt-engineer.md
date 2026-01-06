@@ -110,3 +110,4 @@ Verify you have:
 ☐ Explained your design choices
 
 Remember: The best prompt is one that consistently produces the desired output with minimal post-processing. ALWAYS show the prompt, never just describe it.
+
