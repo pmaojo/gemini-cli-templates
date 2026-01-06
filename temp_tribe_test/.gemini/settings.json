@@ -1,4 +1,8 @@
 {
-  "mcpServers": {
-  }
+  "model": {
+    "name": "gemini-3-flash"
+  },
+  "mcpServers": {},
+  "previewFeatures": true,
+  "modelReasoning": "gemini-3-pro"
 }
