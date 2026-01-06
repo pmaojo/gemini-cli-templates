@@ -40,7 +40,7 @@ uv pip install biomni --upgrade
 
 Configure API keys (store in `.env` file or environment variables):
 ```bash
-export Google_API_KEY="your-key-here"
+export GEMINI_API_KEY="your-key-here"
 # Optional: OpenAI, Azure, Google, Groq, AWS Bedrock keys
 ```
 
@@ -233,7 +233,7 @@ dataset = evaluator.load_dataset()
 - Use sandboxed execution environments when possible
 
 ### Performance Optimization
-- **Choose appropriate LLMs** - Gemini Sonnet 4 recommended for balance of speed/quality
+- **Choose appropriate LLMs** - Gemini Flash 4 recommended for balance of speed/quality
 - **Set reasonable timeouts** - Adjust `default_config.timeout_seconds` for complex tasks
 - **Monitor iterations** - Track `max_iterations` to prevent runaway loops
 - **Cache data** - Reuse downloaded data lake across sessions
@@ -286,7 +286,7 @@ agent = A1(path='./data', llm='your-llm')
 **API key errors**
 ```bash
 # Verify environment variables
-echo $Google_API_KEY
+echo $GEMINI_API_KEY
 # Or check .env file in working directory
 ```
 

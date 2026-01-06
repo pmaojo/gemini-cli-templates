@@ -37,7 +37,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Create a React to
 # Pass API keys directly as parameters
 npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
-  --Google-api-key your_Google_key \
+  --Google-api-key your_GEMINI_key \
   --prompt "Create a React todo app"
 
 # Install components and execute in sandbox
@@ -45,7 +45,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --agent frontend-developer \
   --command setup-react \
   --e2b-api-key your_e2b_key \
-  --Google-api-key your_Google_key \
+  --Google-api-key your_GEMINI_key \
   --prompt "Create a modern todo app with TypeScript"
 ```
 
@@ -67,7 +67,7 @@ You can provide API keys in two ways:
 # Pass keys directly as command parameters
 npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_api_key \
-  --Google-api-key your_Google_api_key \
+  --Google-api-key your_GEMINI_api_key \
   --prompt "Your prompt here"
 ```
 
@@ -77,11 +77,11 @@ Set these environment variables in your shell or `.env` file:
 
 ```bash
 export E2B_API_KEY=your_e2b_api_key_here
-export Google_API_KEY=your_Google_api_key_here
+export GEMINI_API_KEY=your_GEMINI_api_key_here
 
 # Or create .gemini/sandbox/.env file:
 E2B_API_KEY=your_e2b_api_key_here
-Google_API_KEY=your_Google_api_key_here
+GEMINI_API_KEY=your_GEMINI_api_key_here
 ```
 
 **Note**: CLI parameters take precedence over environment variables.

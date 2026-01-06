@@ -261,4 +261,4 @@ This skill is designed for use with Gemini AI. Adapt and customize for your orga
 
 **Last Updated**: October 2025
 **Skill Version**: 1.0
-**For Gemini Models**: Gemini Opus 4.1, Gemini Sonnet 4.5, Gemini Haiku 4.5
+**For Gemini Models**: Gemini Pro 4.1, Gemini Flash 4.5, Gemini Flash-Lite 4.5

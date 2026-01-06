@@ -245,7 +245,7 @@ npx wrangler tail --format=pretty
 - Paid plan ($5/month): 10M requests/month + unlimited Durable Objects
 
 **Google API:**
-- Gemini Sonnet 4.5: ~$3 per million input tokens
+- Gemini Flash 4.5: ~$3 per million input tokens
 - Average request: ~200 tokens = $0.0006 per request
 
 **Example costs for 10,000 requests/month:**

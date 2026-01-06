@@ -4,7 +4,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
 const { execSync } = require('child_process');
-const { detectProject } = require('./utils');
+const { detectProject, deepMerge } = require('./utils');
 const { getTemplateConfig, TEMPLATES_CONFIG } = require('./templates');
 const { createPrompts, interactivePrompts } = require('./prompts');
 const { copyTemplateFiles, runPostInstallationValidation } = require('./file-operations');
@@ -998,44 +998,49 @@ async function installIndividualSetting(settingName, targetDir, options) {
       }
       
       // Deep merge configurations
-      const mergedConfig = {
-        ...existingConfig,
-        ...settingConfig
-      };
+      // 1. Initial merge of top-level keys
+      let newConfig = { ...existingConfig };
       
-      // Deep merge specific sections (only if no conflicts or user approved overwrite)
-      if (existingConfig.permissions && settingConfig.permissions) {
-        mergedConfig.permissions = {
-          ...existingConfig.permissions,
-          ...settingConfig.permissions
-        };
+      // 2. Perform deep merge for most categories
+      // We skip 'env', 'permissions', and 'hooks' here because they have custom merge logic below
+      const standardCategories = Object.keys(settingConfig).filter(key => 
+        !['env', 'permissions', 'hooks'].includes(key)
+      );
+      
+      for (const key of standardCategories) {
+        if (settingConfig[key] && typeof settingConfig[key] === 'object' && !Array.isArray(settingConfig[key])) {
+          newConfig[key] = deepMerge(existingConfig[key] || {}, settingConfig[key]);
+        } else {
+          newConfig[key] = settingConfig[key];
+        }
+      }
+
+      // 3. Custom merge logic for arrays and special objects
+      
+      // Permissions (concatenate arrays)
+      if (settingConfig.permissions && settingConfig.permissions.allow) {
+        if (!newConfig.permissions) newConfig.permissions = { allow: [] };
+        if (!newConfig.permissions.allow) newConfig.permissions.allow = [];
         
-        // Merge arrays for allow, deny, ask (no conflicts here, just merge)
-        ['allow', 'deny', 'ask'].forEach(key => {
-          if (existingConfig.permissions[key] && settingConfig.permissions[key]) {
-            mergedConfig.permissions[key] = [
-              ...new Set([...existingConfig.permissions[key], ...settingConfig.permissions[key]])
-            ];
+        const existingAllows = new Set(newConfig.permissions.allow);
+        settingConfig.permissions.allow.forEach(perm => {
+          if (!existingAllows.has(perm)) {
+            newConfig.permissions.allow.push(perm);
           }
         });
       }
-      
-      if (existingConfig.env && settingConfig.env) {
-        mergedConfig.env = {
-          ...existingConfig.env,
-          ...settingConfig.env
-        };
+
+      // Environment variables (flat merge)
+      if (settingConfig.env) {
+        newConfig.env = { ...newConfig.env, ...settingConfig.env };
       }
-      
-      if (existingConfig.hooks && settingConfig.hooks) {
-        mergedConfig.hooks = {
-          ...existingConfig.hooks,
-          ...settingConfig.hooks
-        };
+
+      // Hooks (flat merge for hook objects)
+      if (settingConfig.hooks) {
+        newConfig.hooks = { ...newConfig.hooks, ...settingConfig.hooks };
       }
-      
-      // Write the merged configuration
-      await fs.writeJson(actualTargetFile, mergedConfig, { spaces: 2 });
+
+      await fs.writeJson(actualTargetFile, newConfig, { spaces: 2 });
       
       // Install additional files if any exist
       if (Object.keys(additionalFiles).length > 0) {

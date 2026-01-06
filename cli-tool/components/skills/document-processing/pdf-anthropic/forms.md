@@ -3,7 +3,7 @@ name: "forms"
 description: "If the PDF has fillable form fields:"
 author: "Gemini CLI Templates"
 version: "1.0.0"
-category: "pdf-anthropic"
+category: "pdf-gemini"
 ---
 
 **CRITICAL: You MUST complete these steps in order. Do not skip ahead to writing code.**

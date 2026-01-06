@@ -341,7 +341,7 @@ Available in all command hooks:
 - `$GEMINI_PROJECT_DIR` - Project root path
 - `$GEMINI_PLUGIN_ROOT` - Plugin directory (use for portable paths)
 - `$GEMINI_ENV_FILE` - SessionStart only: persist env vars here
-- `$GEMINI_CODE_REMOTE` - Set if running in remote context
+- `$GEMINI_REMOTE` - Set if running in remote context
 
 **Always use ${GEMINI_PLUGIN_ROOT} in hook commands for portability:**
 

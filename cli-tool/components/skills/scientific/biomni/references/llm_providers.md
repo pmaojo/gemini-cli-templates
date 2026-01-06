@@ -32,10 +32,10 @@ Biomni supports multiple LLM providers for flexible deployment across different 
 
 ```bash
 # Set API key
-export Google_API_KEY="sk-ant-..."
+export GEMINI_API_KEY="sk-ant-..."
 
 # Or in .env file
-echo "Google_API_KEY=sk-ant-..." >> .env
+echo "GEMINI_API_KEY=sk-ant-..." >> .env
 ```
 
 ### Available Models
@@ -43,13 +43,13 @@ echo "Google_API_KEY=sk-ant-..." >> .env
 ```python
 from biomni.agent import A1
 
-# Sonnet 4 - Balanced performance (recommended)
+# Flash 4 - Balanced performance (recommended)
 agent = A1(path='./data', llm='gemini-sonnet-4-20250514')
 
-# Opus 4 - Maximum capability
+# Pro 4 - Maximum capability
 agent = A1(path='./data', llm='gemini-opus-4-20250514')
 
-# Haiku 4 - Fast and economical
+# Flash-Lite 4 - Fast and economical
 agent = A1(path='./data', llm='gemini-haiku-4-20250514')
 ```
 
@@ -61,16 +61,16 @@ from biomni.config import default_config
 default_config.llm = "gemini-sonnet-4-20250514"
 default_config.llm_temperature = 0.7
 default_config.max_tokens = 4096
-default_config.Google_api_key = "sk-ant-..."  # Or use env var
+default_config.GEMINI_api_key = "sk-ant-..."  # Or use env var
 ```
 
 **Model Characteristics:**
 
 | Model | Best For | Speed | Cost | Reasoning Quality |
 |-------|----------|-------|------|-------------------|
-| Opus 4 | Complex multi-step analyses | Slower | High | Highest |
-| Sonnet 4 | General biomedical tasks | Fast | Medium | High |
-| Haiku 4 | Simple queries, bulk processing | Fastest | Low | Good |
+| Pro 4 | Complex multi-step analyses | Slower | High | Highest |
+| Flash 4 | General biomedical tasks | Fast | Medium | High |
+| Flash-Lite 4 | Simple queries, bulk processing | Fastest | Low | Good |
 
 ## OpenAI
 
@@ -297,36 +297,36 @@ export CUSTOM_LLM_ENDPOINT="http://localhost:8000/v1/chat/completions"
 ### By Task Complexity
 
 **Simple queries** (gene lookup, basic calculations):
-- Gemini Haiku 4
+- Gemini Flash-Lite 4
 - Gemini 2.0 Flash
 - Groq Llama 3.3 70B
 
 **Moderate tasks** (data analysis, literature search):
-- Gemini Sonnet 4 (recommended)
+- Gemini Flash 4 (recommended)
 - GPT-4 Turbo
 - Gemini 2.0 Flash
 
 **Complex analyses** (multi-step reasoning, novel insights):
-- Gemini Opus 4 (recommended)
+- Gemini Pro 4 (recommended)
 - GPT-4
-- Gemini Sonnet 4
+- Gemini Flash 4
 
 ### By Cost Sensitivity
 
 **Budget-conscious:**
 1. Groq (fastest, cheapest)
-2. Gemini Haiku 4
+2. Gemini Flash-Lite 4
 3. Gemini 2.0 Flash
 
 **Balanced:**
-1. Gemini Sonnet 4 (recommended)
+1. Gemini Flash 4 (recommended)
 2. GPT-4 Turbo
 3. Gemini Pro
 
 **Quality-first:**
-1. Gemini Opus 4
+1. Gemini Pro 4
 2. GPT-4
-3. Gemini Sonnet 4
+3. Gemini Flash 4
 
 ### By Infrastructure
 
@@ -352,12 +352,12 @@ Based on Biomni-Eval1 benchmark:
 
 | Provider | Model | Avg Score | Avg Time (s) | Cost/1K tasks |
 |----------|-------|-----------|--------------|---------------|
-| Google | Opus 4 | 0.89 | 45 | $120 |
-| Google | Sonnet 4 | 0.85 | 28 | $45 |
+| Google | Pro 4 | 0.89 | 45 | $120 |
+| Google | Flash 4 | 0.85 | 28 | $45 |
 | OpenAI | GPT-4 Turbo | 0.82 | 35 | $55 |
 | Google | Gemini 2.0 Flash | 0.78 | 22 | $25 |
 | Groq | Llama 3.3 70B | 0.73 | 12 | $8 |
-| Google | Haiku 4 | 0.75 | 15 | $15 |
+| Google | Flash-Lite 4 | 0.75 | 15 | $15 |
 
 *Note: Costs are approximate and vary by usage patterns.*
 
@@ -368,11 +368,11 @@ Based on Biomni-Eval1 benchmark:
 ```python
 # Verify key is set
 import os
-print(os.getenv('Google_API_KEY'))
+print(os.getenv('GEMINI_API_KEY'))
 
 # Or check in Python
 from biomni.config import default_config
-print(default_config.Google_api_key)
+print(default_config.GEMINI_api_key)
 ```
 
 ### Rate Limiting
@@ -414,7 +414,7 @@ az cognitiveservices account deployment list \
 
 ### Cost Optimization
 
-1. **Use appropriate models** - Don't use Opus 4 for simple queries
+1. **Use appropriate models** - Don't use Pro 4 for simple queries
 2. **Enable caching** - Reuse data lake access across tasks
 3. **Batch processing** - Group similar tasks together
 4. **Monitor usage** - Track API costs per task type
@@ -472,8 +472,8 @@ def execute_with_fallback(task_query):
 
 ### Google Gemini
 - Best for complex biomedical reasoning
-- Use Sonnet 4 for most tasks
-- Reserve Opus 4 for novel research questions
+- Use Flash 4 for most tasks
+- Reserve Pro 4 for novel research questions
 
 ### OpenAI
 - Add system prompts with biomedical context for better results

@@ -32,7 +32,7 @@ Set your Google API key:
 
 ```bash
 # Set as environment variable
-export Google_API_KEY=sk-ant-your-api-key-here
+export GEMINI_API_KEY=sk-ant-your-api-key-here
 
 # Or pass directly when using the CLI
 npx github:pmaojo/gemini-cli-templates --sandbox docker \
@@ -154,7 +154,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox docker \
 
 **Required:**
 
-- `Google_API_KEY` - Your Google API key
+- `GEMINI_API_KEY` - Your Google API key
 
 **Optional:**
 
@@ -199,7 +199,7 @@ docker build -t gemini-sandbox .
 
 ```bash
 docker run --rm \
-  -e Google_API_KEY=$Google_API_KEY \
+  -e GEMINI_API_KEY=$GEMINI_API_KEY \
   -v $(pwd)/output:/output \
   gemini-sandbox \
   node /app/execute.js "Your prompt here" ""
@@ -246,12 +246,12 @@ docker image prune
 
 ### API Key Not Set
 
-**Error:** `Google_API_KEY environment variable is required`
+**Error:** `GEMINI_API_KEY environment variable is required`
 
 **Solution:**
 
 ```bash
-export Google_API_KEY=sk-ant-your-key-here
+export GEMINI_API_KEY=sk-ant-your-key-here
 ```
 
 ### Build Failures
@@ -294,7 +294,7 @@ sudo chown -R $USER:$USER output/
 ```bash
 # Run container interactively for debugging
 docker run -it --rm \
-  -e Google_API_KEY=$Google_API_KEY \
+  -e GEMINI_API_KEY=$GEMINI_API_KEY \
   gemini-sandbox \
   /bin/bash
 
@@ -329,7 +329,7 @@ docker logs <container-id>
 
 **Google API:**
 
-- Gemini Sonnet 4.5: ~$3 per million input tokens
+- Gemini Flash 4.5: ~$3 per million input tokens
 - Average request: ~200 tokens = $0.0006 per request
 
 **Example costs for 100 executions:**
@@ -443,7 +443,7 @@ Mount additional volumes for persistent data:
 
 ```bash
 docker run --rm \
-  -e Google_API_KEY=$Google_API_KEY \
+  -e GEMINI_API_KEY=$GEMINI_API_KEY \
   -v $(pwd)/output:/output \
   -v $(pwd)/cache:/cache \
   gemini-sandbox
@@ -466,7 +466,7 @@ MIT License - See LICENSE file for details
 For issues and questions:
 
 1. Check Docker installation: `docker --version && docker ps`
-2. Verify API key: `echo $Google_API_KEY`
+2. Verify API key: `echo $GEMINI_API_KEY`
 3. Check container logs: `docker logs <container-id>`
 4. Review output directory: `ls -la output/`
 5. Open an issue on GitHub

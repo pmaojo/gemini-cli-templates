@@ -1,5 +1,5 @@
 ---
-name: "anthropic-best-practices"
+name: "gemini-best-practices"
 description: "> Learn how to write effective Skills that Gemini can discover and use successfully."
 author: "Gemini CLI Templates"
 version: "1.0.0"
@@ -143,11 +143,11 @@ Skills act as additions to models, so effectiveness depends on the underlying mo
 
 **Testing considerations by model**:
 
-- **Gemini Haiku** (fast, economical): Does the Skill provide enough guidance?
-- **Gemini Sonnet** (balanced): Is the Skill clear and efficient?
-- **Gemini Opus** (powerful reasoning): Does the Skill avoid over-explaining?
+- **Gemini Flash-Lite** (fast, economical): Does the Skill provide enough guidance?
+- **Gemini Flash** (balanced): Is the Skill clear and efficient?
+- **Gemini Pro** (powerful reasoning): Does the Skill avoid over-explaining?
 
-What works perfectly for Opus might need more detail for Haiku. If you plan to use your Skill across multiple models, aim for instructions that work well with all of them.
+What works perfectly for Pro might need more detail for Flash-Lite. If you plan to use your Skill across multiple models, aim for instructions that work well with all of them.
 
 ## Skill structure
 
@@ -1161,7 +1161,7 @@ Before sharing a Skill, verify:
 ### Testing
 
 - [ ] At least three evaluations created
-- [ ] Tested with Haiku, Sonnet, and Opus
+- [ ] Tested with Flash-Lite, Flash, and Pro
 - [ ] Tested with real usage scenarios
 - [ ] Team feedback incorporated (if applicable)
 

@@ -20,10 +20,10 @@ npm install
 ### 2. Configure API Key
 ```bash
 # For local development, create .dev.vars:
-echo "Google_API_KEY=your-api-key-here" > .dev.vars
+echo "GEMINI_API_KEY=your-api-key-here" > .dev.vars
 
 # For production, use wrangler secrets:
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 ```
 
 ### 3. Local Development
@@ -171,12 +171,12 @@ curl -X POST http://localhost:8787/execute \
 
 **Local Development (.dev.vars):**
 ```bash
-Google_API_KEY=sk-ant-your-key-here
+GEMINI_API_KEY=sk-ant-your-key-here
 ```
 
 **Production (Wrangler Secrets):**
 ```bash
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 ```
 
 ### Wrangler Configuration
@@ -213,12 +213,12 @@ docker ps
 ### API Key Not Set
 For local development:
 ```bash
-echo "Google_API_KEY=your-key" > .dev.vars
+echo "GEMINI_API_KEY=your-key" > .dev.vars
 ```
 
 For production:
 ```bash
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 ```
 
 ### View Logs
@@ -253,7 +253,7 @@ npx wrangler tail --format=pretty
 - Paid plan ($5/month): 10M requests/month + unlimited Durable Objects
 
 **Google API:**
-- Gemini Sonnet 4.5: ~$3 per million input tokens
+- Gemini Flash 4.5: ~$3 per million input tokens
 - Average request: ~200 tokens = $0.0006 per request
 
 **Example costs for 10,000 requests/month:**

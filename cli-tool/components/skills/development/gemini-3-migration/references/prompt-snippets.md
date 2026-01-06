@@ -6,13 +6,13 @@ version: "1.0.0"
 category: "references"
 ---
 
-# Prompt Snippets for Opus 4.5
+# Prompt Snippets for Pro 4.5
 
 Only apply these snippets if the user explicitly requests them or reports a specific issue. By default, the migration should only update model strings.
 
 ## 1. Tool Overtriggering
 
-**Problem**: Prompts designed to reduce undertriggering on previous models may cause Opus 4.5 to overtrigger.
+**Problem**: Prompts designed to reduce undertriggering on previous models may cause Pro 4.5 to overtrigger.
 
 **When to add**: User reports tools being called too frequently or unnecessarily.
 
@@ -27,7 +27,7 @@ Only apply these snippets if the user explicitly requests them or reports a spec
 
 ## 2. Over-Engineering Prevention
 
-**Problem**: Opus 4.5 may create extra files, add unnecessary abstractions, or build unrequested flexibility.
+**Problem**: Pro 4.5 may create extra files, add unnecessary abstractions, or build unrequested flexibility.
 
 **When to add**: User reports unwanted files, excessive abstraction, or unrequested features.
 
@@ -42,7 +42,7 @@ Only apply these snippets if the user explicitly requests them or reports a spec
 
 ## 3. Code Exploration
 
-**Problem**: Opus 4.5 may propose solutions without reading code or make assumptions about unread files.
+**Problem**: Pro 4.5 may propose solutions without reading code or make assumptions about unread files.
 
 **When to add**: User reports the model proposing fixes without inspecting relevant code.
 
@@ -82,7 +82,7 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 
 ## 5. Thinking Sensitivity
 
-**Problem**: When extended thinking is not enabled (the default), Opus 4.5 is particularly sensitive to the word "think" and its variants.
+**Problem**: When extended thinking is not enabled (the default), Pro 4.5 is particularly sensitive to the word "think" and its variants.
 
 Extended thinking is not enabled by default. It is only enabled if the API request contains a `thinking` parameter:
 ```json

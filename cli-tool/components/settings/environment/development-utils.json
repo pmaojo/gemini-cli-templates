@@ -1,8 +1,8 @@
 {
   "description": "Enhanced development environment configuration with useful utilities and debugging features. Includes built-in ripgrep usage, terminal title updates, and directory maintenance for improved developer experience.",
   "env": {
-    "USE_BUILTIN_RIPGREP": "1",
-    "GEMINI_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
-    "GEMINI_CODE_DISABLE_TERMINAL_TITLE": "0"
+    "GEMINI_USE_BUILTIN_RIPGREP": "1",
+    "GEMINI_MAINTAIN_PROJECT_WORKING_DIR": "1",
+    "GEMINI_DISABLE_TERMINAL_TITLE": "0"
   }
 }

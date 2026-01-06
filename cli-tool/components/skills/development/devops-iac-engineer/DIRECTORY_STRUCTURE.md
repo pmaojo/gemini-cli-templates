@@ -239,4 +239,4 @@ The complete skill folder can be:
 
 **Last Updated**: October 2025
 **Version**: 1.0
-**Compatible Models**: Gemini 4 family (Opus 4.1, Sonnet 4.5, Haiku 4.5)
+**Compatible Models**: Gemini 4 family (Pro 4.1, Flash 4.5, Flash-Lite 4.5)

@@ -54,7 +54,7 @@ Para testing sin API keys válidos, crea un archivo demo que simule el flujo com
 
 2. **Usar el monitor para ver qué consume tiempo**:
    ```bash
-   python e2b-monitor.py "Your prompt here" "" your_e2b_key your_Google_key
+   python e2b-monitor.py "Your prompt here" "" your_e2b_key your_GEMINI_key
    ```
 
 ### Problema: "Gemini not found"
@@ -128,7 +128,7 @@ Para testing sin API keys válidos, crea un archivo demo que simule el flujo com
 ### Comando Básico:
 
 ```bash
-python e2b-monitor.py "Create a React app" "" your_e2b_key your_Google_key
+python e2b-monitor.py "Create a React app" "" your_e2b_key your_GEMINI_key
 ```
 
 ### Output del Monitor:
@@ -184,7 +184,7 @@ El launcher automáticamente descarga archivos generados:
 
 ```bash
 export E2B_DEBUG=1                    # Debug mode
-export Google_API_KEY=your_key     # Gemini API key
+export GEMINI_API_KEY=your_key     # Gemini API key
 export E2B_API_KEY=your_key          # E2B API key
 ```
 

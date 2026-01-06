@@ -224,9 +224,9 @@ This architecture ensures:
 **Current Version**: 1.0 (October 2025)
 
 This skill is designed to work with:
-- Gemini Opus 4.1
-- Gemini Sonnet 4.5  
-- Gemini Haiku 4.5
+- Gemini Pro 4.1
+- Gemini Flash 4.5  
+- Gemini Flash-Lite 4.5
 
 **Future Versions**: Structure designed to accommodate additions without breaking existing references.
 
@@ -286,4 +286,4 @@ The complete skill folder can be:
 
 **Last Updated**: October 2025
 **Version**: 1.0
-**Compatible Models**: Gemini 4 family (Opus 4.1, Sonnet 4.5, Haiku 4.5)
+**Compatible Models**: Gemini 4 family (Pro 4.1, Flash 4.5, Flash-Lite 4.5)

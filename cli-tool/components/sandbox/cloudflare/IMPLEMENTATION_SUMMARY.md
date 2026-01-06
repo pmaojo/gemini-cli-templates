@@ -142,7 +142,7 @@ Complete implementation of Cloudflare Workers sandbox for executing Gemini CLI w
 ## Key Features
 
 ### 1. AI-Powered Code Execution
-- Natural language to executable code via Gemini Sonnet 4.5
+- Natural language to executable code via Gemini Flash 4.5
 - Automatic code cleanup and formatting
 - Support for Python and JavaScript/Node.js
 - Error handling and timeout management
@@ -212,7 +212,7 @@ cloudflare/
 ```bash
 cd .gemini/sandbox/cloudflare
 npm install
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 npx wrangler deploy
 ```
 
@@ -269,7 +269,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
 - **Paid Plan**: $5/month (10M requests + unlimited Durable Objects)
 
 ### Google API
-- **Gemini Sonnet 4.5**: ~$3 per million input tokens
+- **Gemini Flash 4.5**: ~$3 per million input tokens
 - **Typical Request**: 200 tokens ≈ $0.0006 per execution
 
 ### Example Monthly Cost (10,000 executions)

@@ -95,26 +95,26 @@ Error: Container not ready. Please wait 2-3 minutes after deployment.
 ### Problem: "Google API key not set"
 **Symptoms**:
 ```
-Error: Google_API_KEY is required
+Error: GEMINI_API_KEY is required
 ```
 
 **Solutions**:
 1. **Set as Wrangler secret (Production)**:
    ```bash
-   npx wrangler secret put Google_API_KEY
+   npx wrangler secret put GEMINI_API_KEY
    # Paste your key when prompted
    ```
 
 2. **Set in .dev.vars (Local Development)**:
    ```bash
    # Create .dev.vars file:
-   echo "Google_API_KEY=sk-ant-your-key-here" > .dev.vars
+   echo "GEMINI_API_KEY=sk-ant-your-key-here" > .dev.vars
    ```
 
 3. **Verify secret is set**:
    ```bash
    npx wrangler secret list
-   # Should show Google_API_KEY
+   # Should show GEMINI_API_KEY
    ```
 
 ### Problem: "Sandbox execution timeout"
@@ -280,7 +280,7 @@ vars = { DEBUG = "true" }
 
 # Or in .dev.vars for local development
 DEBUG=true
-Google_API_KEY=your_key
+GEMINI_API_KEY=your_key
 ```
 
 ### Custom Timeouts:

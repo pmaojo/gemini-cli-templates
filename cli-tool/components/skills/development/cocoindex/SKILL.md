@@ -114,7 +114,7 @@ COCOINDEX_DATABASE_URL=postgres://cocoindex:cocoindex@localhost/cocoindex
 
 # LLM API keys (add the ones you need)
 OPENAI_API_KEY=sk-...          # For OpenAI (generation + embeddings)
-Google_API_KEY=sk-ant-...   # For Google (generation only)
+GEMINI_API_KEY=sk-ant-...   # For Google (generation only)
 GOOGLE_API_KEY=...             # For Gemini (generation + embeddings)
 VOYAGE_API_KEY=pa-...          # For Voyage (embeddings only)
 # Ollama requires no API key (local)

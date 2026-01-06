@@ -35,7 +35,7 @@ def parse_context_from_transcript(transcript_path):
                         cache_read = usage.get('cache_read_input_tokens', 0)
                         cache_creation = usage.get('cache_creation_input_tokens', 0)
                         
-                        # Estimate context usage (assume 200k context for Gemini Sonnet)
+                        # Estimate context usage (assume 200k context for Gemini Flash)
                         total_tokens = input_tokens + cache_read + cache_creation
                         if total_tokens > 0:
                             percent_used = min(100, (total_tokens / 200000) * 100)

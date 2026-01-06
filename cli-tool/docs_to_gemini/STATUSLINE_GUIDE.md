@@ -91,7 +91,7 @@ Your status line script receives comprehensive session data via stdin:
   "cwd": "/Users/you/projects/my-project",
   "model": {
     "id": "gemini-3-5-sonnet-20241022",
-    "display_name": "Sonnet"
+    "display_name": "Flash"
   },
   "workspace": {
     "current_dir": "/Users/you/projects/my-project/src",
@@ -115,7 +115,7 @@ Your status line script receives comprehensive session data via stdin:
 
 #### Model Information
 - `model.id`: Full model identifier
-- `model.display_name`: Human-readable model name (Sonnet, Haiku, Opus)
+- `model.display_name`: Human-readable model name (Flash, Flash-Lite, Pro)
 
 #### Workspace Information
 - `workspace.current_dir`: Current working directory
@@ -932,7 +932,7 @@ echo "[$MODEL] $DIR_NAME$GIT_INFO"
 ```bash
 # Create test JSON input
 echo '{
-  "model": {"display_name": "Sonnet"},
+  "model": {"display_name": "Flash"},
   "workspace": {"current_dir": "/test/project"},
   "cost": {"total_cost_usd": 0.01, "total_duration_ms": 30000}
 }' | ./your-statusline.sh
@@ -1060,7 +1060,7 @@ fi
 {
   "hook_event_name": "Status",
   "session_id": "test-123",
-  "model": {"display_name": "Sonnet"},
+  "model": {"display_name": "Flash"},
   "workspace": {
     "current_dir": "/Users/you/project",
     "project_dir": "/Users/you/project"
@@ -1090,22 +1090,22 @@ time echo 'test-json' | ~/.gemini/statusline.sh
 
 ```bash
 # Minimal
-[Sonnet] 📁 my-project
+[Flash] 📁 my-project
 
 # Git-aware  
-[Sonnet] 📁 src • 🌿 feature-branch
+[Flash] 📁 src • 🌿 feature-branch
 
 # Development-focused
-[Sonnet] ⚛️ React App • 🌿 main✓ • 🧪 • $0.02
+[Flash] ⚛️ React App • 🌿 main✓ • 🧪 • $0.02
 
 # Performance-oriented
-[Sonnet] 📁 api • ⚡ 250ms avg • 💰 $0.01
+[Flash] 📁 api • ⚡ 250ms avg • 💰 $0.01
 
 # Time-tracking
-[Sonnet] 📦 Node.js • ⏰ 14:30 • ⏱ 25m • 📝 +42 lines
+[Flash] 📦 Node.js • ⏰ 14:30 • ⏱ 25m • 📝 +42 lines
 
 # Project-aware
-[Sonnet] 🐍 data-pipeline@1.2.0 • 🌿 develop • 🐳 • 🔄
+[Flash] 🐍 data-pipeline@1.2.0 • 🌿 develop • 🐳 • 🔄
 ```
 
 ## Conclusion

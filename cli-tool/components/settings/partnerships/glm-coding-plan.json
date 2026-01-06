@@ -1,11 +1,11 @@
 {
-  "description": "GLM Coding Plan - Top-tier open-source coding performance powered by GLM-4.6, the top-ranked model on Code Arena leaderboard. Starting at $3/month with state-of-the-art reasoning, debugging, and code generation. Seamlessly integrates with Gemini CLI and 10+ AI coding tools. Includes native MCP support for image recognition and web search. Get 10% OFF with code: https://z.ai/subscribe?ic=8JVLJQFSKB",
+  "description": "GLM Coding Plan - Top-tier open-source coding performance powered by GLM-4.6. Starting at $3/month with state-of-the-art reasoning, debugging, and code generation. Seamlessly integrates with Gemini CLI and 10+ AI coding tools. Includes native MCP support for image recognition and web search. Get 10% OFF with code: https://z.ai/subscribe?ic=8JVLJQFSKB",
   "env": {
-    "Google_BASE_URL": "https://api.z.ai/api/Google",
-    "Google_AUTH_TOKEN": "YOUR-API-KEY",
-    "Google_DEFAULT_HAIKU_MODEL": "glm-4.5-air",
-    "Google_DEFAULT_SONNET_MODEL": "glm-4.6",
-    "Google_DEFAULT_OPUS_MODEL": "glm-4.6"
+    "GEMINI_BASE_URL": "https://api.z.ai/api/Google",
+    "GEMINI_AUTH_TOKEN": "YOUR-API-KEY",
+    "GEMINI_DEFAULT_SMALL_MODEL": "glm-4.5-air",
+    "GEMINI_DEFAULT_MEDIUM_MODEL": "glm-4.6",
+    "GEMINI_DEFAULT_LARGE_MODEL": "glm-4.6"
   },
   "alwaysThinkingEnabled": true
 }

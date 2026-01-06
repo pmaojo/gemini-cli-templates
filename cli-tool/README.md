@@ -7,7 +7,7 @@
 
 # Gemini Code Templates
 
-**CLI tool for configuring and monitoring Gemini Code** - Quick setup for any project with framework-specific commands and real-time monitoring dashboard.
+**CLI tool for configuring and monitoring Gemini Code** - Quick setup for any project with framework-specific commands and real-time monitoring dashboard. Powered by Gemini 3 and Gemini 2.0.
 
 ## 🚀 Quick Start
 
@@ -43,13 +43,13 @@ npx github:pmaojo/gemini-cli-templates --health-check
 
 ## 🛠️ Supported Technologies
 
-| Language                  | Frameworks                   | Status         |
-| ------------------------- | ---------------------------- | -------------- |
-| **JavaScript/TypeScript** | React, Vue, Angular, Node.js | ✅ Ready       |
-| **Python**                | Django, Flask, FastAPI       | ✅ Ready       |
-| **Common**                | Universal configurations     | ✅ Ready       |
-| **Go**                    | Gin, Echo, Fiber             | 🚧 Coming Soon |
-| **Rust**                  | Axum, Warp, Actix            | 🚧 Coming Soon |
+| Language                  | Frameworks                   | Status         | Supported Models     |
+| ------------------------- | ---------------------------- | -------------- | -------------------- |
+| **JavaScript/TypeScript** | React, Vue, Angular, Node.js | ✅ Ready       | Gemini 3, Gemini 2.0 |
+| **Python**                | Django, Flask, FastAPI       | ✅ Ready       | Gemini 3, Gemini 2.0 |
+| **Common**                | Universal configurations     | ✅ Ready       | Gemini 3, Gemini 2.0 |
+| **Go**                    | Gin, Echo, Fiber             | 🚧 Coming Soon | Gemini 3, Gemini 2.0 |
+| **Rust**                  | Axum, Warp, Actix            | 🚧 Coming Soon | Gemini 3, Gemini 2.0 |
 
 ## 🌍 Global Agents (Gemini Code SDK Integration)
 
@@ -154,8 +154,6 @@ Skills from [googles/skills](https://github.com/googles/skills):
 
 - **Open Source** (Apache 2.0): algorithmic-art, mcp-builder, skill-creator, artifacts-builder, and more
 - **Source-Available** (Reference): docx, pdf-google, pptx, xlsx
-
-See [ANTHROPIC_ATTRIBUTION.md](cli-tool/components/skills/ANTHROPIC_ATTRIBUTION.md) for complete license information.
 
 ## 📖 Documentation
 

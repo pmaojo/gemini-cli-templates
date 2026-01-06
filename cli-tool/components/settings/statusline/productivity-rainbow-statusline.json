@@ -1,7 +1,9 @@
 {
-  "description": "A colorful celebration of your coding journey. Dynamic rainbow colors that cycle with time, energy levels based on time of day, and productivity streaks. Displays: Rainbow symbol (🌈), Cycling colors (🔴🟠🟡🟢🔵🟣 changes every second based on current seconds), Time-based energy (☀️ Morning <12h, 🌤️ Afternoon 12-18h, 🌙 Evening >18h), Productivity streak (day of year modulo 100 for variety).",
-  "statusLine": {
-    "type": "command",
-    "command": "bash -c 'input=$(cat); MODEL=$(echo \"$input\" | jq -r \".model.display_name\"); DIR=$(echo \"$input\" | jq -r \".workspace.current_dir\"); COLORS=(\"🔴\" \"🟠\" \"🟡\" \"🟢\" \"🔵\" \"🟣\"); COLOR_INDEX=$(($(date +%S) % 6)); COLOR=${COLORS[$COLOR_INDEX]}; RAINBOW=\"🌈\"; HOUR=$(date +%H); ENERGY=$([ $HOUR -lt 12 ] && echo \"☀️ Morning\" || [ $HOUR -lt 18 ] && echo \"🌤️ Afternoon\" || echo \"🌙 Evening\"); STREAK=$(($(date +%j) % 100)); echo \"[$MODEL] $RAINBOW $COLOR $ENERGY | ⚡Streak: $STREAK | 📁 ${DIR##*/}\"'"
+  "description": "A colorful celebration of your coding journey. Dynamic rainbow colors that cycle with time, energy levels based on time of day, and productivity streaks. Displays: Rainbow symbol (\ud83c\udf08), Cycling colors (\ud83d\udd34\ud83d\udfe0\ud83d\udfe1\ud83d\udfe2\ud83d\udd35\ud83d\udfe3 changes every second based on current seconds), Time-based energy (\u2600\ufe0f Morning <12h, \ud83c\udf24\ufe0f Afternoon 12-18h, \ud83c\udf19 Evening >18h), Productivity streak (day of year modulo 100 for variety).",
+  "ui": {
+    "statusLine": {
+      "type": "command",
+      "command": "bash -c 'input=$(cat); MODEL=$(echo \"$input\" | jq -r \".model.display_name\"); DIR=$(echo \"$input\" | jq -r \".workspace.current_dir\"); COLORS=(\"\ud83d\udd34\" \"\ud83d\udfe0\" \"\ud83d\udfe1\" \"\ud83d\udfe2\" \"\ud83d\udd35\" \"\ud83d\udfe3\"); COLOR_INDEX=$(($(date +%S) % 6)); COLOR=${COLORS[$COLOR_INDEX]}; RAINBOW=\"\ud83c\udf08\"; HOUR=$(date +%H); ENERGY=$([ $HOUR -lt 12 ] && echo \"\u2600\ufe0f Morning\" || [ $HOUR -lt 18 ] && echo \"\ud83c\udf24\ufe0f Afternoon\" || echo \"\ud83c\udf19 Evening\"); STREAK=$(($(date +%j) % 100)); echo \"[$MODEL] $RAINBOW $COLOR $ENERGY | \u26a1Streak: $STREAK | \ud83d\udcc1 ${DIR##*/}\"'"
+    }
   }
 }

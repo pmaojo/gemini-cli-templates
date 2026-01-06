@@ -1,7 +1,9 @@
 {
-  "description": "A theatrical display of coding emotions and activities. Random mood faces and dynamic activity detection based on file types present in your project. Displays: Random mood faces (😴 sleepy, 😅 laughing, 🤔 thinking, 😎 cool, 🤯 exploding, 🥳 partying, 😤 huffing, 🤖 robotic), Programming activity (🐍 Python, 🌐 JavaScript, 🦀 Rust, 💻 generic), Random energy percentage (1-100%), Current time (HH:MM format).",
-  "statusLine": {
-    "type": "command",
-    "command": "bash -c 'input=$(cat); MODEL=$(echo \"$input\" | jq -r \".model.display_name\"); DIR=$(echo \"$input\" | jq -r \".workspace.current_dir\"); MOOD_FACES=(\"😴\" \"😅\" \"🤔\" \"😎\" \"🤯\" \"🥳\" \"😤\" \"🤖\"); MOOD=${MOOD_FACES[$((RANDOM % ${#MOOD_FACES[@]}))]}; ACTIVITY=$([ -f \"*.py\" ] && echo \"🐍 Pythoning\" || [ -f \"*.js\" ] && echo \"🌐 JSing\" || [ -f \"*.rs\" ] && echo \"🦀 Rusting\" || echo \"💻 Coding\"); TIME=$(date \"+%H:%M\"); ENERGY=$((RANDOM % 100 + 1)); echo \"[$MODEL] $MOOD $ACTIVITY | ⚡$ENERGY% | 🕐 $TIME | 📁 ${DIR##*/}\"'"
+  "description": "A theatrical display of coding emotions and activities. Random mood faces and dynamic activity detection based on file types present in your project. Displays: Random mood faces (\ud83d\ude34 sleepy, \ud83d\ude05 laughing, \ud83e\udd14 thinking, \ud83d\ude0e cool, \ud83e\udd2f exploding, \ud83e\udd73 partying, \ud83d\ude24 huffing, \ud83e\udd16 robotic), Programming activity (\ud83d\udc0d Python, \ud83c\udf10 JavaScript, \ud83e\udd80 Rust, \ud83d\udcbb generic), Random energy percentage (1-100%), Current time (HH:MM format).",
+  "ui": {
+    "statusLine": {
+      "type": "command",
+      "command": "bash -c 'input=$(cat); MODEL=$(echo \"$input\" | jq -r \".model.display_name\"); DIR=$(echo \"$input\" | jq -r \".workspace.current_dir\"); MOOD_FACES=(\"\ud83d\ude34\" \"\ud83d\ude05\" \"\ud83e\udd14\" \"\ud83d\ude0e\" \"\ud83e\udd2f\" \"\ud83e\udd73\" \"\ud83d\ude24\" \"\ud83e\udd16\"); MOOD=${MOOD_FACES[$((RANDOM % ${#MOOD_FACES[@]}))]}; ACTIVITY=$([ -f \"*.py\" ] && echo \"\ud83d\udc0d Pythoning\" || [ -f \"*.js\" ] && echo \"\ud83c\udf10 JSing\" || [ -f \"*.rs\" ] && echo \"\ud83e\udd80 Rusting\" || echo \"\ud83d\udcbb Coding\"); TIME=$(date \"+%H:%M\"); ENERGY=$((RANDOM % 100 + 1)); echo \"[$MODEL] $MOOD $ACTIVITY | \u26a1$ENERGY% | \ud83d\udd50 $TIME | \ud83d\udcc1 ${DIR##*/}\"'"
+    }
   }
 }

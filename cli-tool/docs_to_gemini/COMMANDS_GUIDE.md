@@ -693,7 +693,7 @@ DROP TABLE IF EXISTS example;
 - `/bug` - Report issues to Google development team
 - `/cost` - Display token usage and billing information
 - `/doctor` - Health check for Gemini Code installation
-- `/model` - Select or change AI model (Sonnet/Haiku/Opus)
+- `/model` - Select or change AI model (Flash/Flash-Lite/Pro)
 - `/status` - View account and system status information
 
 ### Authentication & Permissions

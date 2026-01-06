@@ -29,7 +29,7 @@ npm install
 
 ### Step 2: Set API Key
 ```bash
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 # Paste your Google API key when prompted
 ```
 
@@ -119,7 +119,7 @@ curl -X POST http://localhost:8787/execute \
 ### Step 6: Deploy When Ready
 ```bash
 # Stop the dev server (Ctrl+C)
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 npx wrangler deploy
 ```
 
@@ -135,7 +135,7 @@ Perfect if you prefer command-line interaction.
 ```bash
 cd .gemini/sandbox/cloudflare
 npm install
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 npx wrangler deploy
 ```
 
@@ -144,7 +144,7 @@ npx wrangler deploy
 # Execute a prompt
 node launcher.ts "What is 2 to the power of 10?" \
   "" \
-  your_Google_key \
+  your_GEMINI_key \
   https://your-worker.workers.dev
 ```
 
@@ -152,7 +152,7 @@ node launcher.ts "What is 2 to the power of 10?" \
 ```bash
 # Get detailed execution metrics
 node monitor.ts "Calculate factorial of 5" \
-  your_Google_key \
+  your_GEMINI_key \
   https://your-worker.workers.dev
 ```
 
@@ -174,14 +174,14 @@ npx wrangler containers list
 docker ps  # Should list containers
 ```
 
-### "Google_API_KEY not configured"
+### "GEMINI_API_KEY not configured"
 **Solution**: Set the secret
 ```bash
 # Production:
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 
 # Local (.dev.vars):
-echo "Google_API_KEY=sk-ant-your-key" > .dev.vars
+echo "GEMINI_API_KEY=sk-ant-your-key" > .dev.vars
 ```
 
 ### "Worker not found"

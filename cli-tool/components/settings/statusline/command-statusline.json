@@ -1,8 +1,10 @@
 {
   "description": "Configure a custom status line using a shell command that receives session context via JSON stdin. The script can display model name, current directory, git branch, or any dynamic information. Create your script at ~/.gemini/statusline.sh and make it executable.",
-  "statusLine": {
-    "type": "command",
-    "command": "~/.gemini/statusline.sh",
-    "padding": 0
+  "ui": {
+    "statusLine": {
+      "type": "command",
+      "command": "~/.gemini/statusline.sh",
+      "padding": 0
+    }
   }
 }

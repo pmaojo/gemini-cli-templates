@@ -580,10 +580,9 @@ class ChatsMobile {
           : 0;
 
         // Estimate cost (approximate Gemini API pricing)
-        // Sonnet 4.5: $3/1M input, $15/1M output
-        // Cache write: $3.75/1M, Cache read: $0.30/1M
-        const inputCost = (conversation.tokenUsage?.inputTokens || 0) / 1000000 * 3;
-        const outputCost = (conversation.tokenUsage?.outputTokens || 0) / 1000000 * 15;
+        // Gemini 2.0 Flash: $0.10/1M input, $0.40/1M output
+        const inputCost = (conversation.tokenUsage?.inputTokens || 0) / 1000000 * 0.10;
+        const outputCost = (conversation.tokenUsage?.outputTokens || 0) / 1000000 * 0.40;
         const cacheWriteCost = (conversation.tokenUsage?.cacheCreationTokens || 0) / 1000000 * 3.75;
         const cacheReadCost = (conversation.tokenUsage?.cacheReadTokens || 0) / 1000000 * 0.30;
         const totalCost = inputCost + outputCost + cacheWriteCost + cacheReadCost;

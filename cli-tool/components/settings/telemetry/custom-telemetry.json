@@ -1,7 +1,10 @@
 {
   "description": "Custom telemetry configuration with different endpoint.",
+  "telemetry": {
+    "enabled": false
+  },
   "env": {
-    "GEMINI_CODE_ENABLE_TELEMETRY": "0",
-    "OTEL_METRICS_EXPORTER": "custom"
+    "GEMINI_TELEMETRY_ENABLED": "0",
+    "GEMINI_OTEL_METRICS_EXPORTER": "custom"
   }
 }

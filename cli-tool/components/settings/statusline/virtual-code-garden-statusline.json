@@ -1,7 +1,9 @@
 {
-  "description": "Watch your code garden grow with each session. Plants evolve from seeds to trees based on your activity, with dynamic weather effects. Displays: Plant stages (🌱 seed 0-9, 🌿 sprout 10-19, 🍃 sapling 20-29, 🌳 tree 30-39, 🌺 flower 40+), Weather (🌧️ rainy every 7 growth points, ☀️ sunny every 5 points, ⛅ cloudy default), Garden Level (stage number), Growth counter (total session interactions).",
-  "statusLine": {
-    "type": "command",
-    "command": "bash -c 'input=$(cat); MODEL=$(echo \"$input\" | jq -r \".model.display_name\"); DIR=$(echo \"$input\" | jq -r \".workspace.current_dir\"); SESSION=$(echo \"$input\" | jq -r \".session_id\" | cut -c1-8); CACHE=\"/tmp/garden_$SESSION\"; if [ ! -f \"$CACHE\" ]; then echo \"0\" > \"$CACHE\"; fi; GROWTH=$(cat \"$CACHE\"); GROWTH=$((GROWTH + 1)); echo \"$GROWTH\" > \"$CACHE\"; STAGE=$((GROWTH / 10)); case $STAGE in 0) PLANT=\"🌱\";; 1) PLANT=\"🌿\";; 2) PLANT=\"🍃\";; 3) PLANT=\"🌳\";; *) PLANT=\"🌺\";; esac; WEATHER=$([ $((GROWTH % 7)) -eq 0 ] && echo \"🌧️\" || [ $((GROWTH % 5)) -eq 0 ] && echo \"☀️\" || echo \"⛅\"); echo \"[$MODEL] $PLANT $WEATHER Garden Lv.$STAGE | 📁 ${DIR##*/} | Growth: $GROWTH\"'"
+  "description": "Watch your code garden grow with each session. Plants evolve from seeds to trees based on your activity, with dynamic weather effects. Displays: Plant stages (\ud83c\udf31 seed 0-9, \ud83c\udf3f sprout 10-19, \ud83c\udf43 sapling 20-29, \ud83c\udf33 tree 30-39, \ud83c\udf3a flower 40+), Weather (\ud83c\udf27\ufe0f rainy every 7 growth points, \u2600\ufe0f sunny every 5 points, \u26c5 cloudy default), Garden Level (stage number), Growth counter (total session interactions).",
+  "ui": {
+    "statusLine": {
+      "type": "command",
+      "command": "bash -c 'input=$(cat); MODEL=$(echo \"$input\" | jq -r \".model.display_name\"); DIR=$(echo \"$input\" | jq -r \".workspace.current_dir\"); SESSION=$(echo \"$input\" | jq -r \".session_id\" | cut -c1-8); CACHE=\"/tmp/garden_$SESSION\"; if [ ! -f \"$CACHE\" ]; then echo \"0\" > \"$CACHE\"; fi; GROWTH=$(cat \"$CACHE\"); GROWTH=$((GROWTH + 1)); echo \"$GROWTH\" > \"$CACHE\"; STAGE=$((GROWTH / 10)); case $STAGE in 0) PLANT=\"\ud83c\udf31\";; 1) PLANT=\"\ud83c\udf3f\";; 2) PLANT=\"\ud83c\udf43\";; 3) PLANT=\"\ud83c\udf33\";; *) PLANT=\"\ud83c\udf3a\";; esac; WEATHER=$([ $((GROWTH % 7)) -eq 0 ] && echo \"\ud83c\udf27\ufe0f\" || [ $((GROWTH % 5)) -eq 0 ] && echo \"\u2600\ufe0f\" || echo \"\u26c5\"); echo \"[$MODEL] $PLANT $WEATHER Garden Lv.$STAGE | \ud83d\udcc1 ${DIR##*/} | Growth: $GROWTH\"'"
+    }
   }
 }

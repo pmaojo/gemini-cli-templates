@@ -1,6 +1,9 @@
 {
   "description": "Enable Gemini CLI telemetry for usage analytics and improvements.",
+  "telemetry": {
+    "enabled": true
+  },
   "env": {
-    "GEMINI_CODE_ENABLE_TELEMETRY": "1"
+    "GEMINI_TELEMETRY_ENABLED": "1"
   }
 }

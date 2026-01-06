@@ -403,7 +403,7 @@ After creating your evaluation file, you can use the provided evaluation harness
 2. **Set API Key**
 
    ```bash
-   export Google_API_KEY=your_api_key_here
+   export GEMINI_API_KEY=your_api_key_here
    ```
 
 ## Evaluation File Format
@@ -562,7 +562,7 @@ Here's a complete example of creating and running an evaluation:
 
 ```bash
 pip install -r scripts/requirements.txt
-export Google_API_KEY=your_api_key
+export GEMINI_API_KEY=your_api_key
 ```
 
 3. **Run evaluation**:

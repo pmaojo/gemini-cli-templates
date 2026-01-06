@@ -285,7 +285,7 @@ python scripts/marketing_utils.py batch \
 - **Paths**: Forward slashes only (Windows compatible)
 - **Total Content**: 2,600+ lines
 - **Token Efficient**: Each file loads independently
-- **Compatible**: All Gemini 4 models (Opus, Sonnet, Haiku)
+- **Compatible**: All Gemini 4 models (Pro, Flash, Flash-Lite)
 
 ---
 

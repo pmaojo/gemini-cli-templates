@@ -287,7 +287,7 @@ El parser clasifica automáticamente los cambios:
 - Performance
 - UI/UX
 - API
-- Models (Sonnet, Opus, Haiku)
+- Models (Flash, Pro, Flash-Lite)
 - MCP (Model Context Protocol)
 - Agents/Subagents
 - Settings

@@ -177,12 +177,11 @@ class YearInReview2025 {
 
     // Map common model names
     const nameMap = {
-      'gemini-3-5-gemini-2.0-flash': 'Gemini 3.5 Sonnet',
-      'gemini-3-gemini-2.0-flash': 'Gemini 3 Sonnet',
-      'gemini-3-opus': 'Gemini 3 Opus',
-      'gemini-3-gemini-2.0-flash': 'Gemini 3 Haiku',
-      'gemini-gemini-2.0-flash-4-5-20250929': 'Gemini 4.5 Sonnet',
-      'gemini-opus-4-5-20251101': 'Gemini Opus 4.5'
+      'gemini-2.0-flash': 'Gemini 2.0 Flash',
+      'gemini-2.0-flash-lite': 'Gemini 2.0 Flash-Lite',
+      'gemini-2.0-pro': 'Gemini 2.0 Pro',
+      'gemini-1.5-pro': 'Gemini 1.5 Pro',
+      'gemini-1.5-flash': 'Gemini 1.5 Flash'
     };
 
     return nameMap[modelName] || modelName;

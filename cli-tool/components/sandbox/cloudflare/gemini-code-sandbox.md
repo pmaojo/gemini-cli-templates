@@ -78,20 +78,20 @@ npx github:pmaojo/gemini-cli-templates --sandbox cloudflare --prompt "Calculate 
 
 # Pass API keys directly
 npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
-  --Google-api-key your_Google_key \
+  --Google-api-key your_GEMINI_key \
   --prompt "Create a web scraper"
 
 # Install components and execute
 npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --agent frontend-developer \
   --command setup-react \
-  --Google-api-key your_Google_key \
+  --Google-api-key your_GEMINI_key \
   --prompt "Create a modern todo app"
 
 # Deploy your own Cloudflare Worker sandbox
 cd .gemini/sandbox/cloudflare
 npm install
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 npx wrangler deploy
 ```
 
@@ -109,23 +109,23 @@ The component creates:
 ### Option 1: CLI Parameters (Recommended)
 ```bash
 npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
-  --Google-api-key your_Google_api_key \
+  --Google-api-key your_GEMINI_api_key \
   --prompt "Your prompt here"
 ```
 
 ### Option 2: Wrangler Secrets
 ```bash
 cd .gemini/sandbox/cloudflare
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 # Paste your API key when prompted
 ```
 
 ### Option 3: Environment Variables
 ```bash
-export Google_API_KEY=your_Google_api_key_here
+export GEMINI_API_KEY=your_GEMINI_api_key_here
 
 # Or create .dev.vars file:
-Google_API_KEY=your_Google_api_key_here
+GEMINI_API_KEY=your_GEMINI_api_key_here
 ```
 
 **Note**: Wrangler secrets are required for production deployment. CLI parameters work for local execution only.
@@ -157,7 +157,7 @@ curl -X POST http://localhost:8787/execute \
 ### Production Deployment
 ```bash
 # Set API key secret
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 
 # Deploy to Cloudflare Workers
 npx wrangler deploy
@@ -266,7 +266,7 @@ npx wrangler tail
 npx wrangler secret list
 
 # Update secret
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 ```
 
 ### Local Development Issues
@@ -312,7 +312,7 @@ npm install
 After installation:
 1. Set up Cloudflare account and get API credentials
 2. Install Wrangler CLI: `npm install -g wrangler`
-3. Configure secrets: `npx wrangler secret put Google_API_KEY`
+3. Configure secrets: `npx wrangler secret put GEMINI_API_KEY`
 4. Deploy your worker: `npx wrangler deploy`
 5. Test with example requests
 6. Customize sandbox configuration for your use case

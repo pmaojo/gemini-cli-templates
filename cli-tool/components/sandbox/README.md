@@ -47,18 +47,18 @@ Execute AI-powered code in Cloudflare Workers with global edge deployment and su
 # Simple execution with API keys as parameters (recommended)
 npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
-  --Google-api-key your_Google_key \
+  --Google-api-key your_GEMINI_key \
   --prompt "Create a React todo app"
 
 # With components installation
 npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
-  --Google-api-key your_Google_key \
+  --Google-api-key your_GEMINI_key \
   --agent frontend-developer \
   --command setup-react \
   --prompt "Create a modern todo app with TypeScript"
 
-# Or use environment variables (set E2B_API_KEY and Google_API_KEY)
+# Or use environment variables (set E2B_API_KEY and GEMINI_API_KEY)
 npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Create a React todo app"
 ```
 
@@ -67,13 +67,13 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Create a React to
 ```bash
 # Execute via deployed Cloudflare Worker
 npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
-  --Google-api-key your_Google_key \
+  --Google-api-key your_GEMINI_key \
   --prompt "Calculate the 10th Fibonacci number"
 
 # Local development and deployment
 cd .gemini/sandbox/cloudflare
 npm install
-npx wrangler secret put Google_API_KEY
+npx wrangler secret put GEMINI_API_KEY
 npx wrangler deploy
 
 # Test your deployment
@@ -94,7 +94,7 @@ curl -X POST https://your-worker.workers.dev/execute \
    ```bash
    # In your project/.gemini/sandbox/.env
    E2B_API_KEY=your_e2b_api_key_here
-   Google_API_KEY=your_Google_api_key_here
+   GEMINI_API_KEY=your_GEMINI_api_key_here
    ```
 
 3. **Install Python Requirements** (handled automatically):
@@ -212,7 +212,7 @@ brew install python3  # macOS
 ```bash
 # Create .env file in .gemini/sandbox/
 echo "E2B_API_KEY=your_key_here" >> .gemini/sandbox/.env
-echo "Google_API_KEY=your_key_here" >> .gemini/sandbox/.env
+echo "GEMINI_API_KEY=your_key_here" >> .gemini/sandbox/.env
 ```
 
 ### Dependencies Installation Failed

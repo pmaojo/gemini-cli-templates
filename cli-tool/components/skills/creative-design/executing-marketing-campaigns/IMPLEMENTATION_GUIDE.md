@@ -111,9 +111,9 @@ Use this checklist to ensure the Marketing Skill is properly deployed and ready 
 - [ ] Files load efficiently without excessive context
 
 **Load Tests**
-- [ ] Test with Haiku model (fast, economical)
-- [ ] Test with Sonnet model (balanced)
-- [ ] Test with Opus model (powerful reasoning)
+- [ ] Test with Flash-Lite model (fast, economical)
+- [ ] Test with Flash model (balanced)
+- [ ] Test with Pro model (powerful reasoning)
 - [ ] Verify consistent behavior across models
 
 ### Phase 4: Deployment

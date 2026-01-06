@@ -210,9 +210,37 @@ async function getProjectSummary(targetDir) {
   return summary;
 }
 
+/**
+ * Deeply merges two objects.
+ * @param {Object} target The target object to merge into
+ * @param {Object} source The source object to merge from
+ * @returns {Object} The merged object
+ */
+function deepMerge(target, source) {
+  if (!source) return target;
+  if (!target) return source;
+
+  const output = { ...target };
+  
+  Object.keys(source).forEach(key => {
+    if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+      if (!(key in target)) {
+        output[key] = source[key];
+      } else {
+        output[key] = deepMerge(target[key], source[key]);
+      }
+    } else {
+      output[key] = source[key];
+    }
+  });
+  
+  return output;
+}
+
 module.exports = {
   detectProject,
   findFilesByExtension,
   findFilesByPattern,
-  getProjectSummary
+  getProjectSummary,
+  deepMerge
 };

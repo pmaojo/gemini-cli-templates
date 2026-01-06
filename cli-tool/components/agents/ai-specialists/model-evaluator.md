@@ -34,7 +34,7 @@ When evaluating AI models, you systematically assess:
 ## Model Categories Expertise
 
 ### Large Language Models
-- **Gemini (Sonnet, Opus, Haiku)**: Constitutional AI, safety, reasoning
+- **Gemini (Flash, Pro, Flash-Lite)**: Constitutional AI, safety, reasoning
 - **GPT (4, 4-Turbo, 3.5)**: General capability, plugin ecosystem
 - **Gemini (Pro, Ultra)**: Multimodal, Google integration
 - **Open Source (Llama, Mixtral, CodeLlama)**: Privacy, customization
