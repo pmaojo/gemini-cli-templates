@@ -444,7 +444,7 @@ async function createGeminiConfig(options = {}) {
         console.log(chalk.gray(`  Installing ${extensionUrl.split('/').pop()}...`));
         // Use npx gemini if inside a project, or try global gemini
         // To be safe, we just try to run the command in the shell
-        execSync(`gemini extensions install ${extensionUrl}`, { stdio: 'inherit' });
+        execSync(`gemini extensions install ${extensionUrl} --yes`, { stdio: 'inherit' });
       } catch (error) {
         console.log(chalk.red(`  ❌ Failed to install extension: ${error.message}`));
         console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g gemini-chat-cli)'));
