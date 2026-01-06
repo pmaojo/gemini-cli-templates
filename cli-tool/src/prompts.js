@@ -479,8 +479,47 @@ function createProjectTypePrompt(detectedTypes) {
   };
 }
 
+function getMainMenuPrompt() {
+  return [
+    {
+      type: 'list',
+      name: 'action',
+      message: 'What would you like to do?',
+      choices: [
+        {
+          name: '📊 Analytics Dashboard - Monitor your Gemini CLI usage and sessions',
+          value: 'analytics',
+          short: 'Analytics Dashboard'
+        },
+        {
+          name: '💬 Chats Mobile - AI-first mobile interface for conversations',
+          value: 'chats',
+          short: 'Chats Mobile'
+        },
+        {
+          name: '🤖 Agents Dashboard - View and analyze Gemini conversations with agent tools',
+          value: 'agents',
+          short: 'Agents Dashboard'
+        },
+        {
+          name: '⚙️ Project Setup - Configure Gemini CLI for your project',
+          value: 'setup',
+          short: 'Project Setup'
+        },
+        {
+          name: '🔍 Health Check - Verify your Gemini CLI setup and configuration',
+          value: 'health',
+          short: 'Health Check'
+        }
+      ],
+      default: 'analytics'
+    }
+  ];
+}
+
 module.exports = {
   createPrompts,
   createProjectTypePrompt,
-  interactivePrompts
+  interactivePrompts,
+  getMainMenuPrompt
 };

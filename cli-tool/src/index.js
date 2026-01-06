@@ -6,7 +6,7 @@ const ora = require('ora');
 const { execSync } = require('child_process');
 const { detectProject, deepMerge } = require('./utils');
 const { getTemplateConfig, TEMPLATES_CONFIG } = require('./templates');
-const { createPrompts, interactivePrompts } = require('./prompts');
+const { createPrompts, interactivePrompts, getMainMenuPrompt } = require('./prompts');
 const { copyTemplateFiles, runPostInstallationValidation } = require('./file-operations');
 const { getHooksForLanguage, getMCPsForLanguage } = require('./hook-scanner');
 const { installAgents } = require('./agents');
@@ -23,6 +23,7 @@ const { createGlobalAgent, listGlobalAgents, removeGlobalAgent, updateGlobalAgen
 const SessionSharing = require('./session-sharing');
 const ConversationAnalyzer = require('./analytics/core/ConversationAnalyzer');
 const { getExtensionById, getAllExtensions, getExtensionStats } = require('./extension-scanner');
+const { installExtensions } = require('./extensions');
 
 /**
  * Get platform-appropriate Python command candidates
@@ -63,39 +64,7 @@ function replacePythonCommands(config) {
 async function showMainMenu() {
   console.log('');
   
-  const initialChoice = await inquirer.prompt([{
-    type: 'list',
-    name: 'action',
-    message: 'What would you like to do?',
-    choices: [
-      {
-        name: '📊 Analytics Dashboard - Monitor your Gemini CLI usage and sessions',
-        value: 'analytics',
-        short: 'Analytics Dashboard'
-      },
-      {
-        name: '💬 Chats Mobile - AI-first mobile interface for conversations',
-        value: 'chats',
-        short: 'Chats Mobile'
-      },
-      {
-        name: '🤖 Agents Dashboard - View and analyze Gemini conversations with agent tools',
-        value: 'agents',
-        short: 'Agents Dashboard'
-      },
-      {
-        name: '⚙️ Project Setup - Configure Gemini CLI for your project',
-        value: 'setup',
-        short: 'Project Setup'
-      },
-      {
-        name: '🔍 Health Check - Verify your Gemini CLI setup and configuration',
-        value: 'health',
-        short: 'Health Check'
-      }
-    ],
-    default: 'analytics'
-  }]);
+  const initialChoice = await inquirer.prompt(getMainMenuPrompt());
   
   if (initialChoice.action === 'analytics') {
     console.log(chalk.blue('📊 Launching Gemini CLI Analytics Dashboard...'));
@@ -438,30 +407,7 @@ async function createGeminiConfig(options = {}) {
 
   // Install selected extensions
   if (config.extensions && config.extensions.length > 0) {
-    console.log(chalk.yellow('🧩 Installing recommended extensions...'));
-    // Check if gemini command exists
-    let geminiAvailable = false;
-    try {
-      execSync('which gemini', { stdio: 'ignore' });
-      geminiAvailable = true;
-    } catch (e) {
-      console.log(chalk.yellow('  ⚠️  Gemini CLI not found in PATH. Skipping auto-installation of extensions.'));
-      console.log(chalk.gray('  To install them manually, run: gemini extensions install <url>'));
-    }
-
-    if (geminiAvailable) {
-      for (const extensionUrl of config.extensions) {
-        try {
-          console.log(chalk.gray(`  Installing ${extensionUrl.split('/').pop()}...`));
-          // Remove --yes as it might not be supported by all gemini versions or might cause issues
-          // If the command requires interaction, stdio: inherit allows the user to interact
-          execSync(`gemini extensions install ${extensionUrl}`, { stdio: 'inherit' });
-        } catch (error) {
-          console.log(chalk.yellow(`  ⚠️  Could not auto-install extension: ${error.message.split('\n')[0]}`));
-          console.log(chalk.gray(`  Please install manually: gemini extensions install ${extensionUrl}`));
-        }
-      }
-    }
+    installExtensions(config.extensions);
   }
 
   
