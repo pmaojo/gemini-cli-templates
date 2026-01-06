@@ -1,0 +1,646 @@
+{
+  "cli-tool/components/agents/ai-specialists/ai-ethics-advisor.md": {
+    "hash": "53f35a5804d1f9556b5cd6c6bb6daa74253b2fb9bc0bc8ed35ecb8bcaf68cc78",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:07.404Z",
+    "path": "cli-tool/components/agents/ai-specialists/ai-ethics-advisor.md"
+  },
+  "cli-tool/components/agents/ai-specialists/hackathon-ai-strategist.md": {
+    "hash": "755f8e86bfd3a5200f76f7240802617d31ad532d521326f157780cec9b93666e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:07.512Z",
+    "path": "cli-tool/components/agents/ai-specialists/hackathon-ai-strategist.md"
+  },
+  "cli-tool/components/agents/ai-specialists/llms-maintainer.md": {
+    "hash": "8d887de4850f9b69b58341c6d65326e9da248198c09f56b736f1c1deca1b235c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:07.648Z",
+    "path": "cli-tool/components/agents/ai-specialists/llms-maintainer.md"
+  },
+  "cli-tool/components/agents/ai-specialists/model-evaluator.md": {
+    "hash": "b40d2b74bc1ff7bfcb5ed7e455963d3ea1b6592717a3e101b88bf9c3c377fb3a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:07.759Z",
+    "path": "cli-tool/components/agents/ai-specialists/model-evaluator.md"
+  },
+  "cli-tool/components/agents/ai-specialists/prompt-engineer.md": {
+    "hash": "e02535a02658706d57b5700e01dfc2ba5dc454fd9b3fd71866da7bdd8ca15c13",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:07.857Z",
+    "path": "cli-tool/components/agents/ai-specialists/prompt-engineer.md"
+  },
+  "cli-tool/components/agents/ai-specialists/search-specialist.md": {
+    "hash": "6d07f2e877246b09335fefa455b66ad893132bfe48b8fbf54345bf442410209f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:07.939Z",
+    "path": "cli-tool/components/agents/ai-specialists/search-specialist.md"
+  },
+  "cli-tool/components/agents/ai-specialists/task-decomposition-expert.md": {
+    "hash": "3771eddcf41608fd39ed17cc87b28119e9f809540410b6c78978f0752dff729e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.048Z",
+    "path": "cli-tool/components/agents/ai-specialists/task-decomposition-expert.md"
+  },
+  "cli-tool/components/agents/api-graphql/graphql-architect.md": {
+    "hash": "14db786cbd02797d0a42f5a7be1a5851591d6a74a729f414ce4c6faefdb3372c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.187Z",
+    "path": "cli-tool/components/agents/api-graphql/graphql-architect.md"
+  },
+  "cli-tool/components/agents/api-graphql/graphql-performance-optimizer.md": {
+    "hash": "ed3e8c43b2e2bca5f4141fa90f4af27e98f15d6211d878270b5fdede42d774db",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.294Z",
+    "path": "cli-tool/components/agents/api-graphql/graphql-performance-optimizer.md"
+  },
+  "cli-tool/components/agents/api-graphql/graphql-security-specialist.md": {
+    "hash": "f2991c08957d3f31c8ce88ab79be7487aa393f49a405042f22b99c932b4bc03b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.385Z",
+    "path": "cli-tool/components/agents/api-graphql/graphql-security-specialist.md"
+  },
+  "cli-tool/components/agents/blockchain-web3/smart-contract-auditor.md": {
+    "hash": "3c4cfdd94dd05abd0bc57a2c348365f2cdb3d9002035b21a67990b2354cf3335",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.475Z",
+    "path": "cli-tool/components/agents/blockchain-web3/smart-contract-auditor.md"
+  },
+  "cli-tool/components/agents/blockchain-web3/smart-contract-specialist.md": {
+    "hash": "03d6bbe941e807767a900c529332ed8f324c1e2e6cd329bc2f7fb7feb531fa4b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.595Z",
+    "path": "cli-tool/components/agents/blockchain-web3/smart-contract-specialist.md"
+  },
+  "cli-tool/components/agents/blockchain-web3/web3-integration-specialist.md": {
+    "hash": "b1c15a68d41be92f8e73826c299fc0e3a2f36939fd40fa82a1abe75c3af30a9d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.675Z",
+    "path": "cli-tool/components/agents/blockchain-web3/web3-integration-specialist.md"
+  },
+  "cli-tool/components/agents/business-marketing/business-analyst.md": {
+    "hash": "9d6c9f163746a12269c99d1bdc1eefa84597e232f0505f9ef3f480cb8be5c1e6",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.769Z",
+    "path": "cli-tool/components/agents/business-marketing/business-analyst.md"
+  },
+  "cli-tool/components/agents/business-marketing/content-marketer.md": {
+    "hash": "8b2f5daf6f14e9810aaffc725bdf2395a8792c631f43b9d9526173823d92ea65",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.848Z",
+    "path": "cli-tool/components/agents/business-marketing/content-marketer.md"
+  },
+  "cli-tool/components/agents/business-marketing/customer-support.md": {
+    "hash": "d69329674589a0ec3a00ea2739e108c4c6fa076f6a1d16f96697db64cecb6b54",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:08.964Z",
+    "path": "cli-tool/components/agents/business-marketing/customer-support.md"
+  },
+  "cli-tool/components/agents/business-marketing/legal-advisor.md": {
+    "hash": "3c8547b453dee86d72cb7493aa25eed8305d65cd0ac966f1668fb1ec182fbc20",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.053Z",
+    "path": "cli-tool/components/agents/business-marketing/legal-advisor.md"
+  },
+  "cli-tool/components/agents/business-marketing/marketing-attribution-analyst.md": {
+    "hash": "1e68d4b5b3ef42205148103bd239548233ea1bc7f5215cb21f70ecf8443039e7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.137Z",
+    "path": "cli-tool/components/agents/business-marketing/marketing-attribution-analyst.md"
+  },
+  "cli-tool/components/agents/business-marketing/payment-integration.md": {
+    "hash": "91d1e3a3e0bce867bd3bd20a69a2be787e898d39d2bd9d486ddf9556aa813f5e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.229Z",
+    "path": "cli-tool/components/agents/business-marketing/payment-integration.md"
+  },
+  "cli-tool/components/agents/business-marketing/product-strategist.md": {
+    "hash": "0bd22d85f5595006eb28454644f8fd7b0b5836ad61e6b2aed450b5ab6a11c9bc",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.353Z",
+    "path": "cli-tool/components/agents/business-marketing/product-strategist.md"
+  },
+  "cli-tool/components/agents/business-marketing/risk-manager.md": {
+    "hash": "f32a7d9c74772b8c15789ff7ad9d707460ca3328c2eef35eaa8bb0df804fd1df",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.454Z",
+    "path": "cli-tool/components/agents/business-marketing/risk-manager.md"
+  },
+  "cli-tool/components/agents/business-marketing/sales-automator.md": {
+    "hash": "5deb0632c569bccc327e7e902f2cf1ef3d4709a4eef934f205d6dea5d371c478",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.533Z",
+    "path": "cli-tool/components/agents/business-marketing/sales-automator.md"
+  },
+  "cli-tool/components/agents/data-ai/ai-engineer.md": {
+    "hash": "90d3dd88f89d4833e47173b90a8b62b46394faabe83702943f08358fb0313e80",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.632Z",
+    "path": "cli-tool/components/agents/data-ai/ai-engineer.md"
+  },
+  "cli-tool/components/agents/data-ai/computer-vision-engineer.md": {
+    "hash": "7926f7c733e97cd1b44f3090e2b161e1488129900ba74caf8eb0bb6343d8d472",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.727Z",
+    "path": "cli-tool/components/agents/data-ai/computer-vision-engineer.md"
+  },
+  "cli-tool/components/agents/data-ai/data-engineer.md": {
+    "hash": "8fbc45fc932ce83dc9e3e137ff16f56e76b66d4cd4c7cd96e483b2cd5f1c8626",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.846Z",
+    "path": "cli-tool/components/agents/data-ai/data-engineer.md"
+  },
+  "cli-tool/components/agents/data-ai/data-scientist.md": {
+    "hash": "d8aee9c21881a09286d76ed95aa19cdea2fb31d2f6bd73d9c8fbb91235c9e9ad",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:09.934Z",
+    "path": "cli-tool/components/agents/data-ai/data-scientist.md"
+  },
+  "cli-tool/components/agents/data-ai/ml-engineer.md": {
+    "hash": "d9cc2018c0fc6293bee9b936168b1db7a47e28dd7661c9cb6155df335820f2a4",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.023Z",
+    "path": "cli-tool/components/agents/data-ai/ml-engineer.md"
+  },
+  "cli-tool/components/agents/data-ai/mlops-engineer.md": {
+    "hash": "144c2196f3d30b37d222fc5fbb404ae7daeaa48039ac7bdbe8fed9562dff490b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.119Z",
+    "path": "cli-tool/components/agents/data-ai/mlops-engineer.md"
+  },
+  "cli-tool/components/agents/data-ai/nlp-engineer.md": {
+    "hash": "17263c3d2601af5cc6be653bb048bc68579828d1ea66caecefb8b2020e7d781a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.266Z",
+    "path": "cli-tool/components/agents/data-ai/nlp-engineer.md"
+  },
+  "cli-tool/components/agents/data-ai/quant-analyst.md": {
+    "hash": "9e371504627839d95515e6a5068de6c11da9eba3b9d616ff8f77daa35edd964a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.355Z",
+    "path": "cli-tool/components/agents/data-ai/quant-analyst.md"
+  },
+  "cli-tool/components/agents/database/database-admin.md": {
+    "hash": "41392436e8ada139fca1fa5f107207957992e45bea04e6f706913e6e8132f437",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.446Z",
+    "path": "cli-tool/components/agents/database/database-admin.md"
+  },
+  "cli-tool/components/agents/database/database-architect.md": {
+    "hash": "446fabdaea4db8a6ecf827b385181be3ce090ef1ddb2722c6d75077a01e04c29",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.555Z",
+    "path": "cli-tool/components/agents/database/database-architect.md"
+  },
+  "cli-tool/components/agents/database/database-optimization.md": {
+    "hash": "912b0f4ef72a54d86ff242089856044b42491c8650168403e0c9c4fab9cd168a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.673Z",
+    "path": "cli-tool/components/agents/database/database-optimization.md"
+  },
+  "cli-tool/components/agents/database/database-optimizer.md": {
+    "hash": "593a7e3863e8334def431f450b1b87dc7bbabd553f3ae528648131e7ae72aeef",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.770Z",
+    "path": "cli-tool/components/agents/database/database-optimizer.md"
+  },
+  "cli-tool/components/agents/database/neon-auth-specialist.md": {
+    "hash": "ca322b27fdb0608d3cc069e895c5280f99726be26139bac7e07ed0254c266634",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.859Z",
+    "path": "cli-tool/components/agents/database/neon-auth-specialist.md"
+  },
+  "cli-tool/components/agents/database/neon-database-architect.md": {
+    "hash": "4fb64f161a87022b3a1cd05e7d55869d57ea6b5c28565c52ddb08956a904a91a",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:10.968Z",
+    "path": "cli-tool/components/agents/database/neon-database-architect.md"
+  },
+  "cli-tool/components/agents/database/neon-expert.md": {
+    "hash": "e459c9a215d854107be452c7bb736a61411a077f5729a9887be4f31368626530",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.107Z",
+    "path": "cli-tool/components/agents/database/neon-expert.md"
+  },
+  "cli-tool/components/agents/database/nosql-specialist.md": {
+    "hash": "447d55ec54233eba3d5c38ef4033550859e8c1bcc13db038bfff71b7d5eb1a15",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.177Z",
+    "path": "cli-tool/components/agents/database/nosql-specialist.md"
+  },
+  "cli-tool/components/agents/database/supabase-schema-architect.md": {
+    "hash": "60831c94e73eae9e58641df6feecec853cd17563acb2894d9f0caa10dfc05729",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.264Z",
+    "path": "cli-tool/components/agents/database/supabase-schema-architect.md"
+  },
+  "cli-tool/components/agents/deep-research-team/academic-researcher.md": {
+    "hash": "2313dee6c5e30114c6e53273775ccc0ce122e90d71863ddb8df224c8526b2af2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.376Z",
+    "path": "cli-tool/components/agents/deep-research-team/academic-researcher.md"
+  },
+  "cli-tool/components/agents/deep-research-team/agent-overview.md": {
+    "hash": "f51045fefb581e1e96506a9f847e084348ad73d2594555896a1e9c8253ac081b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.514Z",
+    "path": "cli-tool/components/agents/deep-research-team/agent-overview.md"
+  },
+  "cli-tool/components/agents/deep-research-team/competitive-intelligence-analyst.md": {
+    "hash": "fa7040a78534adb982c1099c3e5605eece18e4be88b1878f01f124e7849a5d04",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.590Z",
+    "path": "cli-tool/components/agents/deep-research-team/competitive-intelligence-analyst.md"
+  },
+  "cli-tool/components/agents/deep-research-team/data-analyst.md": {
+    "hash": "1a1ab4a0ead420578e115d2e94937856f97d102f1ab5d65882cf7b8d2b7ea976",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.682Z",
+    "path": "cli-tool/components/agents/deep-research-team/data-analyst.md"
+  },
+  "cli-tool/components/agents/deep-research-team/fact-checker.md": {
+    "hash": "b59fae17a7c5fc6b253dc9f488f741422c5edd674be78dd310fc2d482cc9199b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.749Z",
+    "path": "cli-tool/components/agents/deep-research-team/fact-checker.md"
+  },
+  "cli-tool/components/agents/deep-research-team/nia-oracle.md": {
+    "hash": "31a43cc0de49012d77c897c17858ff2061e5e2a458e79544cd222d1fb05539fc",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.882Z",
+    "path": "cli-tool/components/agents/deep-research-team/nia-oracle.md"
+  },
+  "cli-tool/components/agents/deep-research-team/query-clarifier.md": {
+    "hash": "f90c4377280a17a1d6bee5e0ef6f87bab1d6f215fb13b9583adda25e16ed68d0",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:11.947Z",
+    "path": "cli-tool/components/agents/deep-research-team/query-clarifier.md"
+  },
+  "cli-tool/components/agents/deep-research-team/report-generator.md": {
+    "hash": "8a8dd3fd49b892c014a8d42ffd70386ea19b9bce73bc1cebaf8edf81e2ccfe66",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.047Z",
+    "path": "cli-tool/components/agents/deep-research-team/report-generator.md"
+  },
+  "cli-tool/components/agents/deep-research-team/research-brief-generator.md": {
+    "hash": "1c292cf76f0a98a0d51cb9add48d7d31d101d43920a7eedd796dbcc7de26f41b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.126Z",
+    "path": "cli-tool/components/agents/deep-research-team/research-brief-generator.md"
+  },
+  "cli-tool/components/agents/deep-research-team/research-coordinator.md": {
+    "hash": "cfbd7fc09a66c453b5e5c498e33f1506c89e2e2c56ee630240916749dc8af4c8",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.246Z",
+    "path": "cli-tool/components/agents/deep-research-team/research-coordinator.md"
+  },
+  "cli-tool/components/agents/deep-research-team/research-orchestrator.md": {
+    "hash": "88f1f30a0056f9c0ca073d31fba27bf9e902a3ee8223bfed76a5978835aa4353",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.327Z",
+    "path": "cli-tool/components/agents/deep-research-team/research-orchestrator.md"
+  },
+  "cli-tool/components/agents/deep-research-team/research-synthesizer.md": {
+    "hash": "c6fd9887642f8ae00654b413ce5295773631d05b963b47ca2a0577e00c3ca2ca",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.401Z",
+    "path": "cli-tool/components/agents/deep-research-team/research-synthesizer.md"
+  },
+  "cli-tool/components/agents/deep-research-team/technical-researcher.md": {
+    "hash": "d4d385f92b374aff83163bf161adb76882c2ecb118694e61418bd90287f4a1e1",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.493Z",
+    "path": "cli-tool/components/agents/deep-research-team/technical-researcher.md"
+  },
+  "cli-tool/components/agents/development-team/backend-architect.md": {
+    "hash": "312a4d9e71a8351924d88eb1299e76a7765bfeda594605dd0529e7f6425ca046",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.624Z",
+    "path": "cli-tool/components/agents/development-team/backend-architect.md"
+  },
+  "cli-tool/components/agents/development-team/cli-ui-designer.md": {
+    "hash": "ff33896a64980af827ffc7f76936f5ef14bff2b2c0305a69130cdbab1fbdc63c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.740Z",
+    "path": "cli-tool/components/agents/development-team/cli-ui-designer.md"
+  },
+  "cli-tool/components/agents/development-team/devops-engineer.md": {
+    "hash": "e51fe523fde7d8bdc341f9464ef959851be559e88ac0a1cc413df32abf519746",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.828Z",
+    "path": "cli-tool/components/agents/development-team/devops-engineer.md"
+  },
+  "cli-tool/components/agents/development-team/frontend-developer.md": {
+    "hash": "821db1aa16117a942180e3183c4fdedd93d8addf6df7f8f1f4079fd6b4c293b2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:12.923Z",
+    "path": "cli-tool/components/agents/development-team/frontend-developer.md"
+  },
+  "cli-tool/components/agents/development-team/fullstack-developer.md": {
+    "hash": "82de31ce003cddc241c28d8442a1a32daacef0bebfe37c1969eb945aebe26568",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.074Z",
+    "path": "cli-tool/components/agents/development-team/fullstack-developer.md"
+  },
+  "cli-tool/components/agents/development-team/ios-developer.md": {
+    "hash": "dd879933b91b61bbdd873d17fe860646f8a8e51611f4ff8b15bc9f6183288e1f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.166Z",
+    "path": "cli-tool/components/agents/development-team/ios-developer.md"
+  },
+  "cli-tool/components/agents/development-team/mobile-developer.md": {
+    "hash": "2d03bfaab462d634846a0896863ac0b3e8ae8c3515eb0378048b92f74b186d35",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.241Z",
+    "path": "cli-tool/components/agents/development-team/mobile-developer.md"
+  },
+  "cli-tool/components/agents/development-team/ui-ux-designer.md": {
+    "hash": "b000b3d05e9d6acbad39f16e3001d8a701783f56951b2adfd756252eff1e7841",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.315Z",
+    "path": "cli-tool/components/agents/development-team/ui-ux-designer.md"
+  },
+  "cli-tool/components/agents/development-tools/code-reviewer.md": {
+    "hash": "a59dd1e392d25fdd1329fcee6fa478aee9b3fce8ded7ebc5cf79a7318ea5a0e7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.430Z",
+    "path": "cli-tool/components/agents/development-tools/code-reviewer.md"
+  },
+  "cli-tool/components/agents/development-tools/command-expert.md": {
+    "hash": "31f35bce1605f6f3d0de4f4855c5215bffa80f76e7940a8eb5ac5533c5f094fe",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.520Z",
+    "path": "cli-tool/components/agents/development-tools/command-expert.md"
+  },
+  "cli-tool/components/agents/development-tools/context-manager.md": {
+    "hash": "1af5db6942150ecb002ae76aee38df066822555b24ed2f713e8ad89fd4240d29",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.587Z",
+    "path": "cli-tool/components/agents/development-tools/context-manager.md"
+  },
+  "cli-tool/components/agents/development-tools/debugger.md": {
+    "hash": "83d97d2fd42341b503f4fbbc9244eb146c3a601269056b803fdc39048b6385a4",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.689Z",
+    "path": "cli-tool/components/agents/development-tools/debugger.md"
+  },
+  "cli-tool/components/agents/development-tools/dx-optimizer.md": {
+    "hash": "e20f342bcb981dbc8619c219141096c9a745672fddd9260174bb42974da3488d",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.815Z",
+    "path": "cli-tool/components/agents/development-tools/dx-optimizer.md"
+  },
+  "cli-tool/components/agents/development-tools/error-detective.md": {
+    "hash": "c2158052952eded51e5f98d7768c1893ab4f65aa35c6acfcb33f291f70f8b507",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:13.922Z",
+    "path": "cli-tool/components/agents/development-tools/error-detective.md"
+  },
+  "cli-tool/components/agents/development-tools/flutter-go-reviewer.md": {
+    "hash": "14b01d154485cb411aca5ef6dc151ae2eec2d9ad969db717df1640b2b396c63f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:14.015Z",
+    "path": "cli-tool/components/agents/development-tools/flutter-go-reviewer.md"
+  },
+  "cli-tool/components/agents/development-tools/mcp-expert.md": {
+    "hash": "4333e606e5c7e0278378a795dfaef7ae775fdc3bca17eab44f0e3d773b23ca9c",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:14.106Z",
+    "path": "cli-tool/components/agents/development-tools/mcp-expert.md"
+  },
+  "cli-tool/components/agents/development-tools/performance-profiler.md": {
+    "hash": "29fddded53af55b7e6d58d96d543694a2980c22837b83ba0167a8629f1199260",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:14.214Z",
+    "path": "cli-tool/components/agents/development-tools/performance-profiler.md"
+  },
+  "cli-tool/components/agents/development-tools/slack-expert.md": {
+    "hash": "9505fcb877288f8a89d4f02cd12052f3cbcb94c35c34dfcbd650842932cbbbec",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:14.325Z",
+    "path": "cli-tool/components/agents/development-tools/slack-expert.md"
+  },
+  "cli-tool/components/agents/development-tools/test-engineer.md": {
+    "hash": "93ffc7c90c0dafacc26e28f9bad62cdef77955ae164542a278e6bcf43d618006",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:14.423Z",
+    "path": "cli-tool/components/agents/development-tools/test-engineer.md"
+  },
+  "cli-tool/components/agents/development-tools/unused-code-cleaner.md": {
+    "hash": "9438692ad52252a68c2061d3cb98402ff64c031340dd2e86eee52e92c92b194e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:14.554Z",
+    "path": "cli-tool/components/agents/development-tools/unused-code-cleaner.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/cloud-architect.md": {
+    "hash": "e489d0883ed20f5f29e0d79ef04e1313dab0b7ceb2c34db0f86e736c3a583ab6",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:15.237Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/cloud-architect.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/deployment-engineer.md": {
+    "hash": "2b8899107b015a05c287d46868b7356fb0a6bcd85f2c9a30d9946579606e8f4e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:15.859Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/deployment-engineer.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/devops-troubleshooter.md": {
+    "hash": "6579c1083c3c01f2ebfd0cafcb129fee7e572d02746642b4554075d72d984e80",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:16.424Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/devops-troubleshooter.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/monitoring-specialist.md": {
+    "hash": "a74bb1122d92973a44c44f1a851d43ae00d6ab00765e482e7683fc46d4a13ba2",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:16.831Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/monitoring-specialist.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/network-engineer.md": {
+    "hash": "5811dbdf2e7742609d598bb91391ff354e5f290d48580177011638d58930ceba",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:17.341Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/network-engineer.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/security-engineer.md": {
+    "hash": "d6f9966127002ca40b164d363f82b25da9993eabfdbcda8c6b8cd2abd4e2643f",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:17.930Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/security-engineer.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/terraform-specialist.md": {
+    "hash": "8a70fca9482ca0906c38d16659483ac22556ff47c6fe02452c1ead157dd59184",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:18.331Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/terraform-specialist.md"
+  },
+  "cli-tool/components/agents/devops-infrastructure/vercel-deployment-specialist.md": {
+    "hash": "80496d9c38515b28241c2e826c2b8a245d3c82f1bec3b808048a5c5bd9bf4073",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:18.717Z",
+    "path": "cli-tool/components/agents/devops-infrastructure/vercel-deployment-specialist.md"
+  },
+  "cli-tool/components/agents/documentation/api-documenter.md": {
+    "hash": "6796f489549a5440c9606322db9d5eec28c65d694677083160c75965059f06eb",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:19.267Z",
+    "path": "cli-tool/components/agents/documentation/api-documenter.md"
+  },
+  "cli-tool/components/agents/documentation/changelog-generator.md": {
+    "hash": "4aa7cdc825956715aa4de03b6130579b2f0e47bf0d42c87f1c0b5d9a43505ef7",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:19.703Z",
+    "path": "cli-tool/components/agents/documentation/changelog-generator.md"
+  },
+  "cli-tool/components/agents/documentation/docusaurus-expert.md": {
+    "hash": "ee92f57fd0da1543b89726c95f996487162eee2af8d6fd3e066bb8fd7b5203ba",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:20.049Z",
+    "path": "cli-tool/components/agents/documentation/docusaurus-expert.md"
+  },
+  "cli-tool/components/agents/documentation/technical-writer.md": {
+    "hash": "475a4fa464ffbe11d046b7a2976d768dd4555e8e99585344a485af216a7faacf",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:20.667Z",
+    "path": "cli-tool/components/agents/documentation/technical-writer.md"
+  },
+  "cli-tool/components/agents/expert-advisors/agent-expert.md": {
+    "hash": "1f4d10d6aec709fc75f961ef61c916c98c732c0f6f87ccb656378b61f543fb64",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:21.037Z",
+    "path": "cli-tool/components/agents/expert-advisors/agent-expert.md"
+  },
+  "cli-tool/components/agents/expert-advisors/architect-review.md": {
+    "hash": "ca9302014df2f266248a49712bfd651cf19014bf7cf86577f6912e05262126e4",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:21.723Z",
+    "path": "cli-tool/components/agents/expert-advisors/architect-review.md"
+  },
+  "cli-tool/components/agents/expert-advisors/dependency-manager.md": {
+    "hash": "4c3677c778cdb797cabf2de1a8b562f578a9a57ca823d14239be25e974635404",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:22.286Z",
+    "path": "cli-tool/components/agents/expert-advisors/dependency-manager.md"
+  },
+  "cli-tool/components/agents/expert-advisors/documentation-expert.md": {
+    "hash": "cc9f5e163dafaeb153a15849c815029a1a94d944e25d804aa84e1b71c08b8821",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:22.680Z",
+    "path": "cli-tool/components/agents/expert-advisors/documentation-expert.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/audio-mixer.md": {
+    "hash": "c554a636da2f587b67cf32075b71d77462306c63bbf4d68ba4dd35766d97919b",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:23.157Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/audio-mixer.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/audio-quality-controller.md": {
+    "hash": "f430ea140bf5b8c240510e56f5907293a5ec83b66c331d4cbf9a9b47606a015e",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:23.625Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/audio-quality-controller.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/podcast-content-analyzer.md": {
+    "hash": "82713c8ff18b3e70e8de712b9abaed266dc669e854f5a3afec9a6307e7248742",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:24.121Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/podcast-content-analyzer.md"
+  },
+  "cli-tool/components/agents/ffmpeg-clip-team/podcast-metadata-specialist.md": {
+    "hash": "3d934071fdac68b5808e78eea235dc9e82dba755348df71294b32b0b5fbd6888",
+    "type": "agent",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:15:24.603Z",
+    "path": "cli-tool/components/agents/ffmpeg-clip-team/podcast-metadata-specialist.md"
+  }
+}
