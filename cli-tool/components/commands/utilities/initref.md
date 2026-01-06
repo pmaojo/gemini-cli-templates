@@ -1,3 +1,22 @@
-Build a reference for the implementation details of this project. Use provided summarize tool to get summary of the files. Avoid reading the content of many files yourself, as we might hit usage limits. Do read the content of important files though. Use the returned summaries to create reference files in /ref directory. Use markdown format for writing the documentation files.
+---
+name: initref
+description: Initialize project reference documentation and structure.
+allowed-tools: Write, Bash
+argument-hint: --force | --template=[name]
+---
 
-Update GEMINI.md file with the pointers to important documentation files.
+# Init Reference
+
+Initialize project reference documentation, directory structure, and standard files.
+
+## Features
+
+- **Structure Creation**: Create standard directory layout (src, docs, tests)
+- **Documentation**: Generate README.md, CONTRIBUTING.md, etc.
+- **Config Files**: Create standard config files (.gitignore, .editorconfig)
+
+## Usage
+
+```bash
+gemini initref
+```

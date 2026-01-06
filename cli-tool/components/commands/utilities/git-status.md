@@ -1,39 +1,23 @@
-# Git Status Command
+---
+name: git-status
+description: Enhanced git status with contextual information and suggestions.
+allowed-tools: Git, Bash
+argument-hint: --verbose | --short
+---
 
-Show detailed git repository status
+# Git Status
 
-*Command originally created by IndyDevDan (YouTube: https://www.youtube.com/@indydevdan) / DislerH (GitHub: https://github.com/disler)*
+Enhanced git status providing contextual information and action suggestions.
 
-## Instructions
+## Features
 
-Analyze the current state of the git repository by performing the following steps:
+- **Status Overview**: Clear view of staged, unstaged, and untracked files
+- **Branch Info**: Current branch, ahead/behind status, upstream details
+- **Suggestions**: Suggest next steps (commit, push, pull, stash)
+- **Diff Summary**: Brief summary of changes in modified files
 
-1. **Run Git Status Commands**
-   - Execute `git status` to see current working tree state
-   - Run `git diff HEAD origin/main` to check differences with remote
-   - Execute `git branch --show-current` to display current branch
-   - Check for uncommitted changes and untracked files
+## Usage
 
-2. **Analyze Repository State**
-   - Identify staged vs unstaged changes
-   - List any untracked files
-   - Check if branch is ahead/behind remote
-   - Review any merge conflicts if present
-
-3. **Read Key Files**
-   - Review README.md for project context
-   - Check for any recent changes in important files
-   - Understand project structure if needed
-
-4. **Provide Summary**
-   - Current branch and its relationship to main/master
-   - Number of commits ahead/behind
-   - List of modified files with change types
-   - Any action items (commits needed, pulls required, etc.)
-
-This command helps developers quickly understand:
-- What changes are pending
-- The repository's sync status
-- Whether any actions are needed before continuing work
-
-Arguments: $ARGUMENTS
+```bash
+gemini git-status
+```

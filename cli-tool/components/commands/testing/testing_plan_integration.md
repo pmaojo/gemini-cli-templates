@@ -1,6 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [target-code] | [test-type] | --rust | --inline | --refactoring-suggestions
+argument-hint: |
+  [target-code] | [test-type] | --rust | --inline | --file | --mock
 description: Create comprehensive integration testing plan with inline tests and refactoring recommendations
 ---
 
