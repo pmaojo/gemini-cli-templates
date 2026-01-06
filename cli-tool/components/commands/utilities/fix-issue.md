@@ -2,7 +2,7 @@
 name: fix-issue
 description: Analyze an issue description and apply a code fix.
 allowed-tools: Read, Write, Bash
-argument-hint: "[issue-description] | --file=[path] | --apply"
+argument-hint: [issue-description] | --file=[path] | --apply
 ---
 
 # Fix Issue

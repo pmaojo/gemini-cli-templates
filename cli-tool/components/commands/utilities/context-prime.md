@@ -2,7 +2,7 @@
 name: context-prime
 description: Prime the AI context with project-specific knowledge and conventions.
 allowed-tools: Read
-argument-hint: "[context-file] | --summary"
+argument-hint: [context-file] | --summary
 ---
 
 # Context Prime

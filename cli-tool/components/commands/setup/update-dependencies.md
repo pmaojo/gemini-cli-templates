@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[update-strategy] | --patch | --minor | --major | --security-only"
-description: "Update and modernize project dependencies with comprehensive testing and compatibility checks"
+argument-hint: [update-strategy] | --patch | --minor | --major | --security-only
+description: Update and modernize project dependencies with comprehensive testing and compatibility checks
 ---
 
 # Update Dependencies

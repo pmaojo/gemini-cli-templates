@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[sync-scope] | --state | --label | --assignee | --milestone"
-description: "Sync GitHub issues to Linear workspace with comprehensive field mapping and rate limit management"
+argument-hint: [sync-scope] | --state | --label | --assignee | --milestone
+description: Sync GitHub issues to Linear workspace with comprehensive field mapping and rate limit management
 ---
 
 # Sync Issues to Linear

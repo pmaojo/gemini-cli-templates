@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: "[monitoring-type] | --apm | --rum | --custom"
-description: "Setup comprehensive application performance monitoring with metrics, alerting, and observability"
+argument-hint: [monitoring-type] | --apm | --rum | --custom
+description: Setup comprehensive application performance monitoring with metrics, alerting, and observability
 ---
 
 # Add Performance Monitoring

@@ -1,6 +1,6 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[file-path] | [component-name]"
+argument-hint: [file-path] | [component-name]
 description: Generate comprehensive test suite with unit, integration, and edge case coverage
 ---
 

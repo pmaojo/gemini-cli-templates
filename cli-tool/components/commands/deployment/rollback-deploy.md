@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Edit, Bash
-argument-hint: "[target-version] | --previous | --emergency | --validate-first | --with-db"
-description: "Rollback deployment to previous version with safety checks, database considerations, and monitoring"
+argument-hint: [target-version] | --previous | --emergency | --validate-first | --with-db
+description: Rollback deployment to previous version with safety checks, database considerations, and monitoring
 ---
 
 # Deployment Rollback

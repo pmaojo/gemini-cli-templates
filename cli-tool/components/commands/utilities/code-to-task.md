@@ -2,7 +2,7 @@
 name: code-to-task
 description: Convert code comments and TODOs into actionable task items or issue tickets.
 allowed-tools: Read, Write, Bash
-argument-hint: "[path] | --format=json|markdown|issue"
+argument-hint: [path] | --format=json|markdown|issue
 ---
 
 # Code to Task

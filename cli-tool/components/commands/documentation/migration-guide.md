@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[migration-type] | framework | database | cloud | architecture | --version-upgrade"
-description: "Create comprehensive migration guides with step-by-step procedures, validation, and rollback strategies"
+argument-hint: [migration-type] | framework | database | cloud | architecture | --version-upgrade
+description: Create comprehensive migration guides with step-by-step procedures, validation, and rollback strategies
 ---
 
 # Migration Guide Generator

@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Bash, Glob
-argument-hint: "[sprint-identifier] | --metrics | --insights | --action-items | --trends"
-description: "Analyze team retrospectives with quantitative metrics and actionable insights generation"
+argument-hint: [sprint-identifier] | --metrics | --insights | --action-items | --trends
+description: Analyze team retrospectives with quantitative metrics and actionable insights generation
 ---
 
 # Retrospective Analyzer

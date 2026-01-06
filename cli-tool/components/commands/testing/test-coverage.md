@@ -1,5 +1,4 @@
 ---
-name: test-coverage
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: |
   [coverage-type] | --line | --branch | --function | --statement | --report

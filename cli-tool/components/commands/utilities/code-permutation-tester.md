@@ -2,7 +2,7 @@
 name: code-permutation-tester
 description: Test code snippets against various inputs and edge cases to ensure robustness.
 allowed-tools: Read, Write, Bash
-argument-hint: "[snippet-file] | --fuzz | --edge-cases"
+argument-hint: [snippet-file] | --fuzz | --edge-cases
 ---
 
 # Code Permutation Tester

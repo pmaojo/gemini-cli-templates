@@ -1,5 +1,4 @@
 ---
-name: publisher-medium
 allowed-tools: Read, Write, Bash, Glob, WebFetch
 argument-hint: <input> [lang]
 description: Convert blog posts to Medium-ready HTML format with image upload markers

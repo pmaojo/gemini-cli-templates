@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, WebSearch, Grep, Glob
-argument-hint: "[feature-description] | --research | --template | --validate"
-description: "Create comprehensive Product Requirement Prompt (PRP) with research and validation"
+argument-hint: [feature-description] | --research | --template | --validate
+description: Create comprehensive Product Requirement Prompt (PRP) with research and validation
 ---
 
 # Create Product Requirement Prompt

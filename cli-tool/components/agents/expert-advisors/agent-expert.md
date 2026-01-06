@@ -1,5 +1,4 @@
 ---
-tools: [Read]
 name: agent-expert
 description: |-
   Use this agent when creating specialized Gemini CLI agents for the gemini-cli-templates components system. Specializes in agent design, prompt engineering, domain expertise modeling, and agent best practices.

@@ -1,5 +1,4 @@
 ---
-name: write-tests
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: |
   [target-file] | [test-type] | --unit | --integration | --e2e | --performance

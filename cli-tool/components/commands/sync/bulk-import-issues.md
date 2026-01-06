@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[import-scope] | --state | --label | --milestone | --batch-size"
-description: "Bulk import GitHub issues to Linear with comprehensive progress tracking and error handling"
+argument-hint: [import-scope] | --state | --label | --milestone | --batch-size
+description: Bulk import GitHub issues to Linear with comprehensive progress tracking and error handling
 ---
 
 # Bulk Import Issues

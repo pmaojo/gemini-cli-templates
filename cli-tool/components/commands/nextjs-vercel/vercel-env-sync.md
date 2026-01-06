@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[--pull] [--push] [--validate] [--backup]"
-description: "Synchronize environment variables between local development and Vercel deployments"
+argument-hint: [--pull] [--push] [--validate] [--backup]
+description: Synchronize environment variables between local development and Vercel deployments
 ---
 
 ## Vercel Environment Sync

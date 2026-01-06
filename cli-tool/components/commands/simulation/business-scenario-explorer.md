@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, WebSearch
-argument-hint: "[business-context] | --market-expansion | --product-launch | --funding-scenarios"
-description: "Explore multiple business timeline scenarios with comprehensive risk analysis and strategic optimization"
+argument-hint: [business-context] | --market-expansion | --product-launch | --funding-scenarios
+description: Explore multiple business timeline scenarios with comprehensive risk analysis and strategic optimization
 ---
 
 # Business Scenario Explorer

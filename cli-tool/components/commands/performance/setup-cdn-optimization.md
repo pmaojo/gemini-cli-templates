@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: "[cdn-provider] | --cloudflare | --aws | --fastly"
-description: "Configure CDN for optimal content delivery, caching, and global performance optimization"
+argument-hint: [cdn-provider] | --cloudflare | --aws | --fastly
+description: Configure CDN for optimal content delivery, caching, and global performance optimization
 ---
 
 # Setup CDN Optimization

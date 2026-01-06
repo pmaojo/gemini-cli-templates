@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, WebSearch
-argument-hint: "[timeline-type] | --product-development | --market-adoption | --business-transformation | --competitive-response"
-description: "Compress real-world timelines into rapid simulation cycles with accelerated learning and decision optimization"
+argument-hint: [timeline-type] | --product-development | --market-adoption | --business-transformation | --competitive-response
+description: Compress real-world timelines into rapid simulation cycles with accelerated learning and decision optimization
 ---
 
 # Timeline Compressor

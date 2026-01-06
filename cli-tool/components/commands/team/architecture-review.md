@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Glob, Grep, Bash
-argument-hint: "[scope] | --modules | --patterns | --dependencies | --security"
-description: "Comprehensive architecture review with design patterns analysis and improvement recommendations"
+argument-hint: [scope] | --modules | --patterns | --dependencies | --security
+description: Comprehensive architecture review with design patterns analysis and improvement recommendations
 ---
 
 # Architecture Review

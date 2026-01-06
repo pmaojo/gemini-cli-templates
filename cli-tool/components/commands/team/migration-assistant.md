@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[action] | --plan | --analyze | --migrate | --verify | --rollback"
-description: "Comprehensive system migration assistance with planning, analysis, execution, and rollback capabilities"
+argument-hint: [action] | --plan | --analyze | --migrate | --verify | --rollback
+description: Comprehensive system migration assistance with planning, analysis, execution, and rollback capabilities
 ---
 
 # Migration Assistant

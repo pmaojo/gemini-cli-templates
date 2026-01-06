@@ -1,7 +1,7 @@
 ---
-allowed-tools: "Bash(git branch:*), Bash(git checkout:*), Bash(git push:*), Bash(git merge:*), Bash(gh:*), Read, Grep"
-argument-hint: "[--dry-run] | [--force] | [--remote-only] | [--local-only]"
-description: "Use PROACTIVELY to clean up merged branches, stale remotes, and organize branch structure"
+allowed-tools: Bash(git branch:*), Bash(git checkout:*), Bash(git push:*), Bash(git merge:*), Bash(gh:*), Read, Grep
+argument-hint: [--dry-run] | [--force] | [--remote-only] | [--local-only]
+description: Use PROACTIVELY to clean up merged branches, stale remotes, and organize branch structure
 ---
 
 # Git Branch Cleanup & Organization

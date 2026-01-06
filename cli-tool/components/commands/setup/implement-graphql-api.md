@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: "[schema-approach] | --schema-first | --code-first | --federation"
-description: "Implement GraphQL API with comprehensive schema, resolvers, and real-time subscriptions"
+argument-hint: [schema-approach] | --schema-first | --code-first | --federation
+description: Implement GraphQL API with comprehensive schema, resolvers, and real-time subscriptions
 ---
 
 # Implement GraphQL API
