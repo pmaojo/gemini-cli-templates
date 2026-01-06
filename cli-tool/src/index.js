@@ -22,6 +22,7 @@ const { trackingService } = require('./tracking-service');
 const { createGlobalAgent, listGlobalAgents, removeGlobalAgent, updateGlobalAgent } = require('./sdk/global-agent-manager');
 const SessionSharing = require('./session-sharing');
 const ConversationAnalyzer = require('./analytics/core/ConversationAnalyzer');
+const { getExtensionById, getAllExtensions, getExtensionStats } = require('./extension-scanner');
 
 /**
  * Get platform-appropriate Python command candidates

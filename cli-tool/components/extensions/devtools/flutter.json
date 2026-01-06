@@ -1,0 +1,10 @@
+{
+  "name": "flutter",
+  "displayName": "Flutter",
+  "description": "Flutter mobile development assistance",
+  "repository": "https://github.com/gemini-cli-extensions/flutter",
+  "author": "Community",
+  "category": "devtools",
+  "tags": ["flutter", "mobile", "dart"],
+  "recommended": false
+}

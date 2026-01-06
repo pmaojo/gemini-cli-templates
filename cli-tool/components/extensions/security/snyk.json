@@ -1,0 +1,10 @@
+{
+  "name": "snyk",
+  "displayName": "Snyk",
+  "description": "Snyk security vulnerability scanning",
+  "repository": "https://github.com/gemini-cli-extensions/Snyk",
+  "author": "Snyk",
+  "category": "security",
+  "tags": ["snyk", "security", "vulnerabilities"],
+  "recommended": true
+}

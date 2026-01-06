@@ -1,0 +1,10 @@
+{
+  "name": "angular",
+  "displayName": "Angular",
+  "description": "Angular framework development assistance",
+  "repository": "https://github.com/gemini-cli-extensions/angular",
+  "author": "Community",
+  "category": "devtools",
+  "tags": ["angular", "frontend", "framework"],
+  "recommended": false
+}

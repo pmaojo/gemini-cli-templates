@@ -1,0 +1,10 @@
+{
+  "name": "genkit",
+  "displayName": "Genkit",
+  "description": "Google Genkit AI framework integration",
+  "repository": "https://github.com/gemini-cli-extensions/genkit",
+  "author": "Google",
+  "category": "devtools",
+  "tags": ["genkit", "ai", "framework"],
+  "recommended": false
+}

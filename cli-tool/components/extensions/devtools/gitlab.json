@@ -1,0 +1,10 @@
+{
+  "name": "gitlab",
+  "displayName": "GitLab",
+  "description": "GitLab repository management and CI/CD integration",
+  "repository": "https://github.com/gemini-cli-extensions/gitlab",
+  "author": "Community",
+  "category": "devtools",
+  "tags": ["gitlab", "git", "ci-cd"],
+  "recommended": false
+}

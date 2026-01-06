@@ -1,0 +1,10 @@
+{
+  "name": "context7",
+  "displayName": "Context7",
+  "description": "Up-to-date, version-specific documentation and code examples from source",
+  "repository": "https://github.com/upstash/context7",
+  "author": "Upstash",
+  "category": "productivity",
+  "tags": ["documentation", "context", "code-examples"],
+  "recommended": true
+}

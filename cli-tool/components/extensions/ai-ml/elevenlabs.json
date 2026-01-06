@@ -1,0 +1,10 @@
+{
+  "name": "elevenlabs",
+  "displayName": "ElevenLabs",
+  "description": "ElevenLabs AI voice generation integration",
+  "repository": "https://github.com/gemini-cli-extensions/elevenlabs",
+  "author": "ElevenLabs",
+  "category": "ai-ml",
+  "tags": ["elevenlabs", "voice", "tts", "ai"],
+  "recommended": false
+}

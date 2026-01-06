@@ -1,0 +1,10 @@
+{
+  "name": "gcloud",
+  "displayName": "Google Cloud",
+  "description": "Google Cloud Platform CLI integration and assistance",
+  "repository": "https://github.com/gemini-cli-extensions/gcloud",
+  "author": "Google",
+  "category": "cloud",
+  "tags": ["gcp", "google-cloud", "cli"],
+  "recommended": true
+}

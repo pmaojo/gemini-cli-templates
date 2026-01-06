@@ -1,0 +1,10 @@
+{
+  "name": "elasticsearch",
+  "displayName": "Elasticsearch",
+  "description": "Elasticsearch search and analytics integration",
+  "repository": "https://github.com/gemini-cli-extensions/elasticsearch",
+  "author": "Community",
+  "category": "database",
+  "tags": ["elasticsearch", "search", "analytics"],
+  "recommended": false
+}

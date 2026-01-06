@@ -1,0 +1,10 @@
+{
+  "name": "grafana",
+  "displayName": "Grafana",
+  "description": "Grafana observability platform integration",
+  "repository": "https://github.com/gemini-cli-extensions/grafana",
+  "author": "Community",
+  "category": "observability",
+  "tags": ["grafana", "monitoring", "dashboards"],
+  "recommended": true
+}

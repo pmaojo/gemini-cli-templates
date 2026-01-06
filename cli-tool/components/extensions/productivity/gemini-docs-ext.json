@@ -1,0 +1,10 @@
+{
+  "name": "gemini-docs-ext",
+  "displayName": "Gemini Docs",
+  "description": "Access Gemini documentation directly in CLI",
+  "repository": "https://github.com/gemini-cli-extensions/gemini-docs-ext",
+  "author": "Community",
+  "category": "productivity",
+  "tags": ["documentation", "gemini", "reference"],
+  "recommended": false
+}
