@@ -1,3 +1,8 @@
+---
+name: pr-review
+description: "**PR Link/Number**: $ARGUMENTS"
+---
+
 # PR Review
 
 **PR Link/Number**: $ARGUMENTS

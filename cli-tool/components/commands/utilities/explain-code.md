@@ -2,7 +2,7 @@
 name: explain-code
 description: Explain complex code segments in plain language with examples.
 allowed-tools: Read
-argument-hint: [file-path] | --line=[n-m] | --detail=high|low
+argument-hint: "[file-path] | --line=[n-m] | --detail=high|low"
 ---
 
 # Explain Code

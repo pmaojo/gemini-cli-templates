@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [release-type] | --semantic | --conventional-commits | --github-actions | --full-automation
-description: Setup automated release workflows with semantic versioning, conventional commits, and comprehensive automation
+argument-hint: "[release-type] | --semantic | --conventional-commits | --github-actions | --full-automation"
+description: "Setup automated release workflows with semantic versioning, conventional commits, and comprehensive automation"
 ---
 
 # Automated Release System

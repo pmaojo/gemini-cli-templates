@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: [analysis-type] | --current-workload | --skill-matching | --capacity-planning | --assignment-optimization
-description: Analyze and optimize team workload distribution with skill matching and capacity planning
+argument-hint: "[analysis-type] | --current-workload | --skill-matching | --capacity-planning | --assignment-optimization"
+description: "Analyze and optimize team workload distribution with skill matching and capacity planning"
 ---
 
 # Team Workload Balancer

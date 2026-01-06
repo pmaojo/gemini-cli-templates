@@ -1,3 +1,8 @@
+---
+name: fix-github-issue
+description: "No description provided."
+---
+
 Please analyze and fix the GitHub issue: $ARGUMENTS.
 
 Follow these steps:

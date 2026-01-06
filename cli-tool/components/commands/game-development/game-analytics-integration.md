@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [analytics-type] | --player-behavior | --performance | --monetization | --retention | --comprehensive
-description: Use PROACTIVELY to implement game analytics systems with player behavior tracking, performance monitoring, and business intelligence integration
+argument-hint: "[analytics-type] | --player-behavior | --performance | --monetization | --retention | --comprehensive"
+description: "Use PROACTIVELY to implement game analytics systems with player behavior tracking, performance monitoring, and business intelligence integration"
 ---
 
 # Game Analytics & Player Intelligence System

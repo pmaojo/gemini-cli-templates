@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [action] | detect | resolve | analyze | configure | report
-description: Resolve synchronization conflicts with intelligent strategies and automated resolution
+argument-hint: "[action] | detect | resolve | analyze | configure | report"
+description: "Resolve synchronization conflicts with intelligent strategies and automated resolution"
 ---
 
 # Sync Conflict Resolver

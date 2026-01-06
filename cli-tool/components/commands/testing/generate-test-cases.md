@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [target] | [scope] | --unit | --integration | --edge-cases | --automatic
-description: Generate comprehensive test cases with automatic analysis and coverage optimization
+argument-hint: "[target] | [scope] | --unit | --integration | --edge-cases | --automatic"
+description: "Generate comprehensive test cases with automatic analysis and coverage optimization"
 ---
 
 # Generate Test Cases

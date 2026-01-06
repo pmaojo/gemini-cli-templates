@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [monitoring-type] | --connections | --subscriptions | --performance | --debug | --analytics
-description: Monitor and optimize Supabase realtime connections with performance analysis and debugging
+argument-hint: "[monitoring-type] | --connections | --subscriptions | --performance | --debug | --analytics"
+description: "Monitor and optimize Supabase realtime connections with performance analysis and debugging"
 ---
 
 # Supabase Realtime Monitor

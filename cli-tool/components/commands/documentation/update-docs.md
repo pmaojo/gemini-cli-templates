@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [doc-type] | --implementation | --api | --architecture | --sync | --validate
-description: Systematically update project documentation with implementation status, API changes, and synchronized content
+argument-hint: "[doc-type] | --implementation | --api | --architecture | --sync | --validate"
+description: "Systematically update project documentation with implementation status, API changes, and synchronized content"
 ---
 
 # Documentation Update & Synchronization

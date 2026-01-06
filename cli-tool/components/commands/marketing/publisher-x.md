@@ -1,4 +1,5 @@
 ---
+name: publisher-x
 allowed-tools: Read, Write, Bash, Glob, WebFetch
 argument-hint: <input> [lang]
 description: Generate copy-pastable X/Twitter threads from blog posts, articles, PDFs, or URLs with 3 format options

@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [framework] | --cypress | --playwright | --webdriver | --puppeteer | --mobile
-description: Configure comprehensive end-to-end testing suite with framework selection and CI integration
+argument-hint: "[framework] | --cypress | --playwright | --webdriver | --puppeteer | --mobile"
+description: "Configure comprehensive end-to-end testing suite with framework selection and CI integration"
 ---
 
 # E2E Setup

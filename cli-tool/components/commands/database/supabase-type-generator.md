@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [generation-scope] | --all-tables | --specific-table | --functions | --enums | --views
-description: Generate TypeScript types from Supabase schema with automatic synchronization and validation
+argument-hint: "[generation-scope] | --all-tables | --specific-table | --functions | --enums | --views"
+description: "Generate TypeScript types from Supabase schema with automatic synchronization and validation"
 ---
 
 # Supabase Type Generator

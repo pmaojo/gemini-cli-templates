@@ -1,3 +1,8 @@
+---
+name: remove
+description: "Safely remove a task from the orchestration system, updating all references and dependencies."
+---
+
 # Orchestration Remove Command
 
 Safely remove a task from the orchestration system, updating all references and dependencies.

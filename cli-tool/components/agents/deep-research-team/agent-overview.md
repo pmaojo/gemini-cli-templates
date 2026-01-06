@@ -1,3 +1,9 @@
+---
+name: agent-overview
+description: "No description provided."
+tools: [Read]
+---
+
 [Open Deep Research Team Diagram](../../../images/research_team_diagram.html)
 
 ## Open Deep Research Team Agent Overview

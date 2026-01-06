@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [pipeline-name] | setup | status | fix
-description: Manage and automate CI/CD pipeline configuration with GitHub Actions, multi-environment support, and deployment strategies
+argument-hint: "[pipeline-name] | setup | status | fix"
+description: "Manage and automate CI/CD pipeline configuration with GitHub Actions, multi-environment support, and deployment strategies"
 ---
 
 # CI/CD Pipeline Manager

@@ -1,3 +1,8 @@
+---
+name: create-pr
+description: "Create a new branch, commit changes, and submit a pull request."
+---
+
 # Create Pull Request Command
 
 Create a new branch, commit changes, and submit a pull request.

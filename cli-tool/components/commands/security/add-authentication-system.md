@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [auth-method] | --oauth | --jwt | --mfa | --passwordless
-description: Implement secure user authentication system with chosen method and security best practices
+argument-hint: "[auth-method] | --oauth | --jwt | --mfa | --passwordless"
+description: "Implement secure user authentication system with chosen method and security best practices"
 ---
 
 # Add Authentication System

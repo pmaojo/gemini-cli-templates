@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [pr-number] | --task | --auto-detect | --enable-auto | --update-state
-description: Link GitHub pull requests to Linear tasks with automated state synchronization and workflow integration
+argument-hint: "[pr-number] | --task | --auto-detect | --enable-auto | --update-state"
+description: "Link GitHub pull requests to Linear tasks with automated state synchronization and workflow integration"
 ---
 
 # Sync PR to Task

@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [sync-mode] | --full | --incremental | --dry-run | --conflict-strategy
-description: Enable comprehensive bidirectional GitHub-Linear synchronization with conflict resolution
+argument-hint: "[sync-mode] | --full | --incremental | --dry-run | --conflict-strategy"
+description: "Enable comprehensive bidirectional GitHub-Linear synchronization with conflict resolution"
 ---
 
 # Bidirectional Sync

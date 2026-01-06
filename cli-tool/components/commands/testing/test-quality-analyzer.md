@@ -1,4 +1,5 @@
 ---
+name: test-quality-analyzer
 allowed-tools: Read, Write, Edit, Bash
 argument-hint: |
   [analysis-type] | --coverage-quality | --test-effectiveness | --mutation-testing | --flaky-analysis

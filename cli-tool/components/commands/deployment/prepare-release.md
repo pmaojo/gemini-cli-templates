@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [version-type] | patch | minor | major | --pre-release | --hotfix
-description: Prepare and validate release packages with comprehensive testing, documentation, and automation
+argument-hint: "[version-type] | patch | minor | major | --pre-release | --hotfix"
+description: "Prepare and validate release packages with comprehensive testing, documentation, and automation"
 ---
 
 # Release Preparation

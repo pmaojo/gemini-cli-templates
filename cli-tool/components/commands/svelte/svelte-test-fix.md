@@ -1,3 +1,8 @@
+---
+name: svelte-test-fix
+description: "Troubleshoot and fix failing tests in Svelte/SvelteKit projects, including debugging test issues and resolving common testing problems."
+---
+
 # /svelte:test-fix
 
 Troubleshoot and fix failing tests in Svelte/SvelteKit projects, including debugging test issues and resolving common testing problems.

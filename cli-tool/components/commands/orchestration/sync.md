@@ -1,3 +1,8 @@
+---
+name: sync
+description: "Synchronize task status with git commits, ensuring consistency between version control and task tracking."
+---
+
 # Orchestration Sync Command
 
 Synchronize task status with git commits, ensuring consistency between version control and task tracking.

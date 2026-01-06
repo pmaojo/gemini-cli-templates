@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Glob, Grep, Bash
-argument-hint: [scope] | --tasks | --code | --circular | --critical-path
-description: Map project and task dependencies with critical path analysis and circular dependency detection
+argument-hint: "[scope] | --tasks | --code | --circular | --critical-path"
+description: "Map project and task dependencies with critical path analysis and circular dependency detection"
 ---
 
 # Dependency Mapper

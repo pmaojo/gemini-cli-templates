@@ -1,3 +1,8 @@
+---
+name: svelte-storybook
+description: "General-purpose Storybook assistance for SvelteKit projects, including setup guidance, best practices, and common tasks."
+---
+
 # /svelte:storybook
 
 General-purpose Storybook assistance for SvelteKit projects, including setup guidance, best practices, and common tasks.

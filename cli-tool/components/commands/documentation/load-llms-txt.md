@@ -1,7 +1,7 @@
 ---
 allowed-tools: Bash, WebFetch
-argument-hint: [data-source] | --xatu | --custom-url | --validate
-description: Load and process external documentation context from llms.txt files or custom sources
+argument-hint: "[data-source] | --xatu | --custom-url | --validate"
+description: "Load and process external documentation context from llms.txt files or custom sources"
 ---
 
 # External Documentation Context Loader

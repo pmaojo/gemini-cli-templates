@@ -1,3 +1,8 @@
+---
+name: resume
+description: "Resume work on existing task orchestrations after session loss or context switch."
+---
+
 # Orchestration Resume Command
 
 Resume work on existing task orchestrations after session loss or context switch.

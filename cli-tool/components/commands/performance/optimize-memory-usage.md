@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Bash, Grep, Glob
-argument-hint: [target-area] | --frontend | --backend | --database
-description: Comprehensive memory usage optimization with leak detection, garbage collection tuning, and memory profiling
+argument-hint: "[target-area] | --frontend | --backend | --database"
+description: "Comprehensive memory usage optimization with leak detection, garbage collection tuning, and memory profiling"
 ---
 
 # Optimize Memory Usage

@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [orchestration-type] | --parallel | --sequential | --conditional | --pipeline-optimization
-description: Orchestrate comprehensive test automation with intelligent execution and optimization
+argument-hint: "[orchestration-type] | --parallel | --sequential | --conditional | --pipeline-optimization"
+description: "Orchestrate comprehensive test automation with intelligent execution and optimization"
 ---
 
 # Test Automation Orchestrator

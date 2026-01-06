@@ -1,7 +1,7 @@
 ---
 allowed-tools: Read, Write, Edit, Bash
-argument-hint: [scope] | --unit | --integration | --e2e | --visual | --performance | --full-stack
-description: Setup complete testing infrastructure with framework configuration and CI integration
+argument-hint: "[scope] | --unit | --integration | --e2e | --visual | --performance | --full-stack"
+description: "Setup complete testing infrastructure with framework configuration and CI integration"
 ---
 
 # Setup Comprehensive Testing

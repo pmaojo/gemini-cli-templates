@@ -2,7 +2,7 @@
 name: refactor-code
 description: Apply refactoring patterns to improve code quality and maintainability.
 allowed-tools: Read, Write, Bash
-argument-hint: [file-path] | --pattern=[pattern] | --dry-run
+argument-hint: "[file-path] | --pattern=[pattern] | --dry-run"
 ---
 
 # Refactor Code

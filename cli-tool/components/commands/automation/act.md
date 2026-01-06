@@ -1,4 +1,5 @@
 ---
+name: act
 allowed-tools: Read, Edit, Bash
 argument-hint: [workflow-name]
 description: Execute GitHub Actions locally using act
