@@ -1412,5 +1412,194 @@
     "version": "unversioned",
     "timestamp": "2026-01-06T18:16:19.338Z",
     "path": "cli-tool/components/commands/game-development/game-asset-pipeline.md"
+  },
+  "cli-tool/components/commands/game-development/game-performance-profiler.md": {
+    "hash": "334fa12683052d717c7a26b0a55f5985ea3622046337937ea47510bb664c4c7a",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:20.511Z",
+    "path": "cli-tool/components/commands/game-development/game-performance-profiler.md"
+  },
+  "cli-tool/components/commands/game-development/game-testing-framework.md": {
+    "hash": "ed4f9545fee6d5dc56679917940313244cbb1c96d7c1004670c7b07d90c403f3",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:21.268Z",
+    "path": "cli-tool/components/commands/game-development/game-testing-framework.md"
+  },
+  "cli-tool/components/commands/game-development/unity-project-setup.md": {
+    "hash": "f741c5fa4db29db80d5837a95fa7dd0b485b199a31489ba4c668b933fb0f70ea",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:21.927Z",
+    "path": "cli-tool/components/commands/game-development/unity-project-setup.md"
+  },
+  "cli-tool/components/commands/git/feature.md": {
+    "hash": "0faf89d8da203d8f85b3b145598211a873484733afea65d9625cac523a9556ca",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:22.604Z",
+    "path": "cli-tool/components/commands/git/feature.md"
+  },
+  "cli-tool/components/commands/git/finish.md": {
+    "hash": "74b7a12291bc2816a48316bfbfae7fa39d7f516f4642006a044a495baffa2c5f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:23.335Z",
+    "path": "cli-tool/components/commands/git/finish.md"
+  },
+  "cli-tool/components/commands/git/flow-status.md": {
+    "hash": "3c18df6223ab193999039e7ecf6af930274d68aef903845e3119ffa14b981926",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:23.926Z",
+    "path": "cli-tool/components/commands/git/flow-status.md"
+  },
+  "cli-tool/components/commands/git/hotfix.md": {
+    "hash": "4719953a43d043cf179297fa1f1880fd3596febfed40c42c967ab47471191ae2",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:24.582Z",
+    "path": "cli-tool/components/commands/git/hotfix.md"
+  },
+  "cli-tool/components/commands/git/release.md": {
+    "hash": "29bf58d6346c301e7aef22b6a62a929b50810df221dc7c20533f40e709a8848f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:25.106Z",
+    "path": "cli-tool/components/commands/git/release.md"
+  },
+  "cli-tool/components/commands/git-workflow/branch-cleanup.md": {
+    "hash": "e9ab710fa5979c48b052c3c1cf23382fa708f18123778c0d1ee3af37157617fb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:25.630Z",
+    "path": "cli-tool/components/commands/git-workflow/branch-cleanup.md"
+  },
+  "cli-tool/components/commands/git-workflow/commit.md": {
+    "hash": "f500a4ad199577af78b990d81691a8fc1fe1031f02b7ce84a309e081663189fb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:26.355Z",
+    "path": "cli-tool/components/commands/git-workflow/commit.md"
+  },
+  "cli-tool/components/commands/git-workflow/create-pr.md": {
+    "hash": "695750001a3ab02ad8a1448e86b132ee951fe9465806aa918d4c2ab98fadbbcb",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:27.043Z",
+    "path": "cli-tool/components/commands/git-workflow/create-pr.md"
+  },
+  "cli-tool/components/commands/git-workflow/create-pull-request.md": {
+    "hash": "8d45c39d05dc56dcabf500cb2ac7721a41cb75946f54a2ffc8fd583cd34aca2b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:27.712Z",
+    "path": "cli-tool/components/commands/git-workflow/create-pull-request.md"
+  },
+  "cli-tool/components/commands/git-workflow/create-worktrees.md": {
+    "hash": "e0d1617a28907cd8e697476486a6648657bed81f5391d73d5687d2daf80d9b13",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:28.136Z",
+    "path": "cli-tool/components/commands/git-workflow/create-worktrees.md"
+  },
+  "cli-tool/components/commands/git-workflow/fix-github-issue.md": {
+    "hash": "d75f2b919b4afb03dc05d3ea6fe5f4abd3cb51289a36e46c37d2c9d888d022b5",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:28.558Z",
+    "path": "cli-tool/components/commands/git-workflow/fix-github-issue.md"
+  },
+  "cli-tool/components/commands/git-workflow/gemini-review.md": {
+    "hash": "0368e39acf4bd4a36e2c6f18340d651de06550fac32f7adbe4c3f353754a2aae",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:29.346Z",
+    "path": "cli-tool/components/commands/git-workflow/gemini-review.md"
+  },
+  "cli-tool/components/commands/git-workflow/git-bisect-helper.md": {
+    "hash": "57067303426d8d645f4b8b94de473ebcf628d8aee24f96141ad548ce69df2d8f",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:29.865Z",
+    "path": "cli-tool/components/commands/git-workflow/git-bisect-helper.md"
+  },
+  "cli-tool/components/commands/git-workflow/pr-review.md": {
+    "hash": "24c857336041fa2fc3dd4450d4e184791369e1e631274b51b10a47778e014570",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:30.293Z",
+    "path": "cli-tool/components/commands/git-workflow/pr-review.md"
+  },
+  "cli-tool/components/commands/git-workflow/update-branch-name.md": {
+    "hash": "dade40f7da94ad4c8876a2f490958ac34ba330fbe5fdb53c8636dea8ae885112",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:30.734Z",
+    "path": "cli-tool/components/commands/git-workflow/update-branch-name.md"
+  },
+  "cli-tool/components/commands/marketing/publisher-all.md": {
+    "hash": "bcd86126ed1964234756d5fbbba9b15840a006057a22a72369594ee494880924",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:31.197Z",
+    "path": "cli-tool/components/commands/marketing/publisher-all.md"
+  },
+  "cli-tool/components/commands/marketing/publisher-devto.md": {
+    "hash": "954bee63945cce469e68d001dc5945fe2b2375ca251124cff9ac0ffd15a1ee79",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:31.605Z",
+    "path": "cli-tool/components/commands/marketing/publisher-devto.md"
+  },
+  "cli-tool/components/commands/marketing/publisher-linkedin.md": {
+    "hash": "6ffc939897929441340ac7216f80fb2d4f16ae3e4c3ccab8cb638ae642963776",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:32.145Z",
+    "path": "cli-tool/components/commands/marketing/publisher-linkedin.md"
+  },
+  "cli-tool/components/commands/marketing/publisher-medium.md": {
+    "hash": "f350e8218599d152d3ce9ee099f583cd4683500b0d559dcd8ecbcdfc75a1004b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:32.565Z",
+    "path": "cli-tool/components/commands/marketing/publisher-medium.md"
+  },
+  "cli-tool/components/commands/marketing/publisher-x.md": {
+    "hash": "e392ce27fa03870f440c8306b3208397d4817b4fdde6fa54ebbe102fb3ecf2d0",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:33.105Z",
+    "path": "cli-tool/components/commands/marketing/publisher-x.md"
+  },
+  "cli-tool/components/commands/marketing/tribe-launch.md": {
+    "hash": "4fd70e87653ae0953aa88ca91192db5c205021781d7be634f8d1875ec1e81566",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:33.601Z",
+    "path": "cli-tool/components/commands/marketing/tribe-launch.md"
+  },
+  "cli-tool/components/commands/marketing/tribe-map.md": {
+    "hash": "20e13d30890316347b0f916e14233b4fecadf314b6a64412ece15c07a88ab47b",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:33.969Z",
+    "path": "cli-tool/components/commands/marketing/tribe-map.md"
+  },
+  "cli-tool/components/commands/marketing/tribe-scout.md": {
+    "hash": "5542e2bfea589c9577278bde98ab36b0d989c33214a05273c477b5e3750077d4",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:34.416Z",
+    "path": "cli-tool/components/commands/marketing/tribe-scout.md"
+  },
+  "cli-tool/components/commands/nextjs-vercel/nextjs-api-tester.md": {
+    "hash": "55989f0916e75e7d91c1f2d2685ce63d4540d8407520d60f985f161892137285",
+    "type": "command",
+    "version": "unversioned",
+    "timestamp": "2026-01-06T18:16:34.666Z",
+    "path": "cli-tool/components/commands/nextjs-vercel/nextjs-api-tester.md"
   }
 }
