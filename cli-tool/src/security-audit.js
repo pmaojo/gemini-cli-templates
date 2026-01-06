@@ -73,7 +73,9 @@ async function main() {
   const args = process.argv.slice(2);
   const ciMode = args.includes('--ci');
   const verbose = args.includes('--verbose') || args.includes('-v');
+  const verbose = args.includes('--verbose') || args.includes('-v');
   const jsonOutput = args.includes('--json');
+  const updateRegistry = args.includes('--update-registry');
   const outputFile = args.find(arg => arg.startsWith('--output='))?.split('=')[1];
 
   console.log(chalk.blue('\n🔒 Gemini CLI Templates - Security Audit\n'));
@@ -103,7 +105,7 @@ async function main() {
   console.log(chalk.blue('🔍 Running security validation...\n'));
   const results = await orchestrator.validateComponents(components, {
     strict: ciMode,
-    updateRegistry: false
+    updateRegistry: updateRegistry
   });
 
   // Generate report
