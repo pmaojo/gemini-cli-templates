@@ -232,7 +232,7 @@ function generateCartCommand(cart) {
   if (cart.commands.length)
     flags.push(...cart.commands.map((c) => `--command ${c}`));
   // ... other types
-  return `npx github:pmaojo/gemini-cli-templates ${flags.join(" ")} --yes`;
+  return `npx gemini-cli-templates ${flags.join(" ")} --yes`;
 }
 ```
 

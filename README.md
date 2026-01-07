@@ -8,17 +8,17 @@
 
 ```bash
 # Install a complete development stack
-npx github:pmaojo/gemini-cli-templates --agent development-team/frontend-developer --command testing/generate-tests --mcp database/postgresql-integration --setting environment/performance-optimization --yes
+npx gemini-cli-templates --agent development-team/frontend-developer --command testing/generate-tests --mcp database/postgresql-integration --setting environment/performance-optimization --yes
 
 # Browse and install interactively
-npx github:pmaojo/gemini-cli-templates
+npx gemini-cli-templates
 
 # Install specific components
-npx github:pmaojo/gemini-cli-templates --agent development-tools/code-reviewer --yes
-npx github:pmaojo/gemini-cli-templates --command performance/optimize-bundle --yes
-npx github:pmaojo/gemini-cli-templates --setting performance/mcp-timeouts --yes
-npx github:pmaojo/gemini-cli-templates --hook git/pre-commit-validation --yes
-npx github:pmaojo/gemini-cli-templates --mcp database/postgresql-integration --yes
+npx gemini-cli-templates --agent development-tools/code-reviewer --yes
+npx gemini-cli-templates --command performance/optimize-bundle --yes
+npx gemini-cli-templates --setting performance/mcp-timeouts --yes
+npx gemini-cli-templates --hook git/pre-commit-validation --yes
+npx gemini-cli-templates --mcp database/postgresql-integration --yes
 ```
 
 ## What You Get
@@ -40,13 +40,13 @@ Extend your Gemini CLI with over 100+ community-built extensions. Extensions pac
 
 ```bash
 # Install the popular Jules extension
-npx github:pmaojo/gemini-cli-templates --extension=jules
+npx gemini-cli-templates --extension=jules
 
 # Install Conductor for workflow management
-npx github:pmaojo/gemini-cli-templates --extension=conductor
+npx gemini-cli-templates --extension=conductor
 
 # Install MCP Server Browserbase for web browsing
-npx github:pmaojo/gemini-cli-templates --extension=mcp-server-browserbase
+npx gemini-cli-templates --extension=mcp-server-browserbase
 ```
 
 **Popular Categories:**
@@ -91,7 +91,7 @@ Beyond the template catalog, Gemini CLI Templates includes powerful development 
 Monitor your AI-powered development sessions in real-time with live state detection and performance metrics.
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --analytics
+npx gemini-cli-templates --analytics
 ```
 
 ### 💬 Conversation Monitor
@@ -100,10 +100,10 @@ Mobile-optimized interface to view Gemini responses in real-time with secure rem
 
 ```bash
 # Local access
-npx github:pmaojo/gemini-cli-templates --chats
+npx gemini-cli-templates --chats
 
 # Secure remote access via Cloudflare Tunnel
-npx github:pmaojo/gemini-cli-templates --chats --tunnel
+npx gemini-cli-templates --chats --tunnel
 ```
 
 ### 🔍 Health Check
@@ -111,7 +111,7 @@ npx github:pmaojo/gemini-cli-templates --chats --tunnel
 Comprehensive diagnostics to ensure your Gemini CLI installation is optimized.
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --health-check
+npx gemini-cli-templates --health-check
 ```
 
 ### 🔌 Plugin Dashboard
@@ -119,7 +119,7 @@ npx github:pmaojo/gemini-cli-templates --health-check
 View marketplaces, installed plugins, and manage permissions from a unified interface.
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --plugins
+npx gemini-cli-templates --plugins
 ```
 
 ## 📖 Documentation

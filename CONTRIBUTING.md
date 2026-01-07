@@ -443,16 +443,16 @@ npm run health-check
 
 ```bash
 # Test component installation
-npx github:pmaojo/gemini-cli-templates --agent your-agent --dry-run
-npx github:pmaojo/gemini-cli-templates --command your-command --dry-run
-npx github:pmaojo/gemini-cli-templates --mcp your-mcp --dry-run
+npx gemini-cli-templates --agent your-agent --dry-run
+npx gemini-cli-templates --command your-command --dry-run
+npx gemini-cli-templates --mcp your-mcp --dry-run
 ```
 
 ### Template Testing
 
 ```bash
 # Test template installation
-npx github:pmaojo/gemini-cli-templates --template your-template --dry-run
+npx gemini-cli-templates --template your-template --dry-run
 
 # Test with specific scenarios
 npm start -- --language python --framework django --dry-run

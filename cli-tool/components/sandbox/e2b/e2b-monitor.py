@@ -155,7 +155,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         # Install components if specified
         if components_to_install:
             log_with_timestamp(f"📦 Installing components: {components_to_install}")
-            install_command = f"npx github:pmaojo/gemini-cli-templates {components_to_install}"
+            install_command = f"npx gemini-cli-templates {components_to_install}"
             monitor_sandbox_execution(sbx, install_command, timeout=120)
             monitor_file_system(sbx, "After components installation")
         

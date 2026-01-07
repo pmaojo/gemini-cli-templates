@@ -286,16 +286,16 @@
 
                 <h3>Quick Start - Simple Execution</h3>
                 <pre><code class="language-bash"># Execute a prompt in secure E2B sandbox with API keys
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --prompt "Create a React todo app with TypeScript"
 
 # Or use environment variables (set E2B_API_KEY and ANTHROPIC_API_KEY)
-npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Create a React todo app with TypeScript"
+npx gemini-cli-templates --sandbox e2b --prompt "Create a React todo app with TypeScript"
 
 # Interactive mode - let the CLI guide you
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key</code></pre>
 
@@ -309,7 +309,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
 
                 <h3>Advanced Usage - With Specific Agent</h3>
                 <pre><code class="language-bash"># Execute with a specific agent in sandbox
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --agent development-team/frontend-developer \
@@ -317,7 +317,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
 
                 <h3>Full Stack Development</h3>
                 <pre><code class="language-bash"># Complete full-stack app development
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --agent development-team/fullstack-developer \
@@ -325,7 +325,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
 
                 <h3>Data Science and Analysis</h3>
                 <pre><code class="language-bash"># Data analysis with specialized agent
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --agent ai-ml-specialists/data-scientist \
@@ -337,7 +337,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
 
                 <h3>🔑 Option 1: CLI Parameters (Recommended)</h3>
                 <pre><code class="language-bash"># Pass API keys directly as command parameters
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_api_key_here \
   --google-api-key your_google_api_key_here \
   --prompt "Your prompt here"</code></pre>
@@ -356,7 +356,7 @@ export E2B_API_KEY=your_e2b_api_key_here
 export ANTHROPIC_API_KEY=your_google_api_key_here
 
 # Then run without API key parameters
-npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Your prompt here"</code></pre>
+npx gemini-cli-templates --sandbox e2b --prompt "Your prompt here"</code></pre>
 
                 <p><strong>Note:</strong> CLI parameters take precedence over environment variables, so you can override environment settings when needed.</p>
 
@@ -379,7 +379,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Your prompt here"
 
                 <h3>🔥 System-Level Operations</h3>
                 <pre><code class="language-bash"># Modify system configurations without risk
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --agent devops-cloud/system-administrator \
@@ -387,7 +387,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
 
                 <h3>🧪 Experimental Package Installation</h3>
                 <pre><code class="language-bash"># Test unknown dependencies and packages safely
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --agent development-team/fullstack-developer \
@@ -395,7 +395,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
 
                 <h3>🛡️ Security Vulnerability Testing</h3>
                 <pre><code class="language-bash"># Run penetration testing tools without affecting your system
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --agent security-testing/penetration-tester \
@@ -403,7 +403,7 @@ npx github:pmaojo/gemini-cli-templates --sandbox e2b \
 
                 <h3>💣 Database Operations</h3>
                 <pre><code class="language-bash"># Perform destructive database migrations and schema changes
-npx github:pmaojo/gemini-cli-templates --sandbox e2b \
+npx gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --google-api-key your_google_key \
   --agent data-analytics/database-administrator \

@@ -308,13 +308,13 @@ docs/blog/
 <h3>Install Individual Components</h3>
 <pre><code class="language-bash">
 # Install specific agent
-npx github:pmaojo/gemini-cli-templates --agent [agent-name]
+npx gemini-cli-templates --agent [agent-name]
 
 # Install specific command
-npx github:pmaojo/gemini-cli-templates --command [command-name]
+npx gemini-cli-templates --command [command-name]
 
 # Install MCP server
-npx github:pmaojo/gemini-cli-templates --mcp [technology]</code></pre>
+npx gemini-cli-templates --mcp [technology]</code></pre>
 
 <p><strong>Components will be installed to:</strong></p>
 <ul>
@@ -329,16 +329,16 @@ npx github:pmaojo/gemini-cli-templates --mcp [technology]</code></pre>
 ```html
 <h3>Create Global Agents (Available Anywhere)</h3>
 <pre><code class="language-bash"># Create global agents accessible from any project
-npx github:pmaojo/gemini-cli-templates --create-agent [agent-name]
+npx gemini-cli-templates --create-agent [agent-name]
 
 # List all global agents
-npx github:pmaojo/gemini-cli-templates --list-agents
+npx gemini-cli-templates --list-agents
 
 # Update global agents
-npx github:pmaojo/gemini-cli-templates --update-agent [agent-name]
+npx gemini-cli-templates --update-agent [agent-name]
 
 # Remove global agents  
-npx github:pmaojo/gemini-cli-templates --remove-agent [agent-name]</code></pre>
+npx gemini-cli-templates --remove-agent [agent-name]</code></pre>
 ```
 
 #### Multiple Components
@@ -347,12 +347,12 @@ npx github:pmaojo/gemini-cli-templates --remove-agent [agent-name]</code></pre>
 <h3>Install Multiple Components at Once</h3>
 <pre><code class="language-bash">
 # Install specific commands (comma-separated for multiple)
-npx github:pmaojo/gemini-cli-templates --command [command1],[command2],[command3]
+npx gemini-cli-templates --command [command1],[command2],[command3]
 </code></pre>
 
 <pre><code class="language-bash">
 # Install all [Technology] components in one command
-npx github:pmaojo/gemini-cli-templates \
+npx gemini-cli-templates \
   --command [all-commands-comma-separated] \
   --agent [all-agents-comma-separated] \
   --mcp [technology]</code></pre>
@@ -371,7 +371,7 @@ npx github:pmaojo/gemini-cli-templates \
 ```html
 <h3>Execute Prompt After Installation</h3>
 <pre><code class="language-bash"># Install components and run a prompt immediately
-npx github:pmaojo/gemini-cli-templates \
+npx gemini-cli-templates \
   --command [primary-command] \
   --prompt "[Sample prompt for the technology]"</code></pre>
 ```

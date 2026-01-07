@@ -507,7 +507,7 @@ class ComponentPageManager {
 
     renderInstallationSection() {
         const componentPath = this.getCleanPath();
-        const basicInstallCommand = `npx github:pmaojo/gemini-cli-templates --${this.component.type}=${componentPath} --yes`;
+        const basicInstallCommand = `npx gemini-cli-templates --${this.component.type}=${componentPath} --yes`;
 
         // Update basic installation command
         const basicInstallElement = document.getElementById('basicInstallCommand');
@@ -531,7 +531,7 @@ class ComponentPageManager {
 
     renderGlobalAgentSection(componentPath) {
         const globalAgentSection = document.getElementById('globalAgentSection');
-        const globalAgentCommand = `npx github:pmaojo/gemini-cli-templates --create-agent ${componentPath}`;
+        const globalAgentCommand = `npx gemini-cli-templates --create-agent ${componentPath}`;
         const globalUsageCommand = `${componentPath.split('/').pop()} "your prompt here"`;
 
         const globalAgentCommandElement = document.getElementById('globalAgentCommand');
@@ -553,9 +553,9 @@ class ComponentPageManager {
         const cloudSandboxSection = document.getElementById('cloudSandboxSection');
 
         // Update all sandbox command examples with the component path
-        const e2bSandboxCommand = `npx github:pmaojo/gemini-cli-templates --sandbox e2b --agent=${componentPath} --prompt "your development task"`;
-        const cloudflareSandboxCommand = `npx github:pmaojo/gemini-cli-templates --sandbox cloudflare --agent=${componentPath} --prompt "your development task"`;
-        const dockerSandboxCommand = `npx github:pmaojo/gemini-cli-templates --sandbox docker --agent=${componentPath} --prompt "your development task"`;
+        const e2bSandboxCommand = `npx gemini-cli-templates --sandbox e2b --agent=${componentPath} --prompt "your development task"`;
+        const cloudflareSandboxCommand = `npx gemini-cli-templates --sandbox cloudflare --agent=${componentPath} --prompt "your development task"`;
+        const dockerSandboxCommand = `npx gemini-cli-templates --sandbox docker --agent=${componentPath} --prompt "your development task"`;
 
         const e2bSandboxCommandElement = document.getElementById('e2bSandboxCommand');
         const cloudflareSandboxCommandElement = document.getElementById('cloudflareSandboxCommand');

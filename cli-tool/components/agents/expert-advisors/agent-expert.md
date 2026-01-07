@@ -485,7 +485,7 @@ Always provide specific, actionable security recommendations with code examples.
 ### 5. Installation Command Result
 After creating the agent, users can install it with:
 ```bash
-npx github:pmaojo/gemini-cli-templates --agent="frontend-security" --yes
+npx gemini-cli-templates --agent="frontend-security" --yes
 ````
 
 This will:

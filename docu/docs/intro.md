@@ -21,14 +21,14 @@ Simplifies Gemini CLI usage through:
 ### Interactive Installation
 
 ```bash
-npx github:pmaojo/gemini-cli-templates
+npx gemini-cli-templates
 ```
 
 ### Specific Component
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --agent performance-testing/react-performance-optimization
-npx github:pmaojo/gemini-cli-templates --command testing/generate-tests
+npx gemini-cli-templates --agent performance-testing/react-performance-optimization
+npx gemini-cli-templates --command testing/generate-tests
 ```
 
 ## Next Steps

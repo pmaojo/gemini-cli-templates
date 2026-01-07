@@ -45,10 +45,10 @@ function createComponentModalHTML(component) {
     if (componentPath.endsWith('.json')) {
         componentPath = componentPath.replace(/\.json$/, '');
     }
-    const installCommand = `npx github:pmaojo/gemini-cli-templates --${component.type}=${componentPath} --yes`;
+    const installCommand = `npx gemini-cli-templates --${component.type}=${componentPath} --yes`;
     
     // Generate global agent command for agents only
-    const globalAgentCommand = component.type === 'agent' ? `npx github:pmaojo/gemini-cli-templates --create-agent ${componentPath}` : null;
+    const globalAgentCommand = component.type === 'agent' ? `npx gemini-cli-templates --create-agent ${componentPath}` : null;
     
     const description = getComponentDescription(component); // Full description
 
@@ -130,8 +130,8 @@ function createComponentModalHTML(component) {
                                     </div>
                                     
                                     <div class="command-line">
-                                        <code>npx github:pmaojo/gemini-cli-templates --sandbox e2b --agent=${componentPath} --prompt "your development task"</code>
-                                        <button class="copy-btn" data-command="npx github:pmaojo/gemini-cli-templates --sandbox e2b --agent=${componentPath} --prompt &quot;your development task&quot;" onclick="copyToClipboard(this.dataset.command)">Copy</button>
+                                        <code>npx gemini-cli-templates --sandbox e2b --agent=${componentPath} --prompt "your development task"</code>
+                                        <button class="copy-btn" data-command="npx gemini-cli-templates --sandbox e2b --agent=${componentPath} --prompt &quot;your development task&quot;" onclick="copyToClipboard(this.dataset.command)">Copy</button>
                                     </div>
                                 </div>
                                 
