@@ -1,6 +1,8 @@
 ---
 name: tribe-scout
 description: Command to find the 'enemy' (status quo) and research customer conversations for a specific niche.
+agent: marketing-scout
+model: gemini-3-flash
 ---
 
 # Tribe Scout Command

@@ -40,3 +40,8 @@ Run these commands to execute the workflow:
 
 1. **Run a Scout**: `gemini tribe:scout "your niche"`
 2. **Draft Strategy**: Use `jules` to run deeper research in the background: `/jules tribe:scout "your niche" --deep`
+
+## Troubleshooting
+
+- **Tool Not Found**: If you see "Tool not found" errors, ensure you are using Gemini 3 which has built-in search.
+- **Unauthorized Tool Call**: This template uses a specialized `marketing-scout` agent that is restricted to web research. Avoid asking it to perform shell operations.
