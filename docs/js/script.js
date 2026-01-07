@@ -129,7 +129,7 @@ function generateTemplateCards() {
         const baseCard = createTemplateCard(languageKey, languageData, 'none', {
             name: languageData.name,
             icon: getFrameworkIcon(languageKey),
-            command: `npx github:pmaojo/gemini-cli-templates --template=${languageKey} --yes`
+            command: `npx gemini-cli-templates --template=${languageKey} --yes`
         });
         grid.appendChild(baseCard);
         
@@ -139,7 +139,7 @@ function generateTemplateCards() {
                 const frameworkCard = createTemplateCard(languageKey, languageData, frameworkKey, {
                     name: frameworkData.name,
                     icon: getFrameworkIcon(frameworkKey),
-                    command: `npx github:pmaojo/gemini-cli-templates --template=${languageKey} --yes`
+                    command: `npx gemini-cli-templates --template=${languageKey} --yes`
                 });
                 grid.appendChild(frameworkCard);
             });
@@ -1504,15 +1504,15 @@ function createComponentCard(component) {
 // Generate install command for component
 function generateInstallCommand(component) {
     if (component.type === 'agent') {
-        return `npx github:pmaojo/gemini-cli-templates --agent=${component.name} --yes`;
+        return `npx gemini-cli-templates --agent=${component.name} --yes`;
     } else if (component.type === 'command') {
-        return `npx github:pmaojo/gemini-cli-templates --command=${component.name} --yes`;
+        return `npx gemini-cli-templates --command=${component.name} --yes`;
     } else if (component.type === 'mcp') {
         // Remove .json extension from MCP names for the command
         const mcpName = component.name.replace(/\.json$/, '');
-        return `npx github:pmaojo/gemini-cli-templates --mcp=${mcpName} --yes`;
+        return `npx gemini-cli-templates --mcp=${mcpName} --yes`;
     }
-    return `npx github:pmaojo/gemini-cli-templates`;
+    return `npx gemini-cli-templates`;
 }
 
 

@@ -132,7 +132,7 @@ def main():
                 "author": owner,
                 "category": category,
                 "tags": [category, name],
-                "installCommand": f"npx github:pmaojo/gemini-cli-templates --extension={name}" # Adapting to our CLI
+                "installCommand": f"npx gemini-cli-templates --extension={name}" # Adapting to our CLI
             }
 
             all_extensions.append(extension_data)

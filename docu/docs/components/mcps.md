@@ -17,13 +17,13 @@ MCPs connect Gemini CLI to external services, databases, and APIs. They provide 
 Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --mcp database/supabase --yes
+npx gemini-cli-templates --mcp database/supabase --yes
 ```
 
 ### Multiple MCPs
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --mcp database/supabase,development/github-integration --yes
+npx gemini-cli-templates --mcp database/supabase,development/github-integration --yes
 ```
 
 ## ⚙️ Configuration

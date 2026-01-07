@@ -128,7 +128,7 @@ async function listGlobalAgents(options = {}) {
     
     if (allAgents.length === 0) {
       console.log(chalk.yellow('⚠️  No global agents installed yet.'));
-      console.log(chalk.gray('💡 Create one with: npx github:pmaojo/gemini-cli-templates --create-agent <agent-name>'));
+      console.log(chalk.gray('💡 Create one with: npx gemini-cli-templates --create-agent <agent-name>'));
       return;
     }
     
@@ -159,8 +159,8 @@ async function listGlobalAgents(options = {}) {
     
     console.log(chalk.blue('🌟 Global Usage:'));
     console.log(chalk.gray('  • Run from any directory: <agent-name> "prompt"'));
-    console.log(chalk.gray('  • List agents: npx github:pmaojo/gemini-cli-templates --list-agents'));
-    console.log(chalk.gray('  • Remove agent: npx github:pmaojo/gemini-cli-templates --remove-agent <name>'));
+    console.log(chalk.gray('  • List agents: npx gemini-cli-templates --list-agents'));
+    console.log(chalk.gray('  • Remove agent: npx gemini-cli-templates --remove-agent <name>'));
     
   } catch (error) {
     console.log(chalk.red(`❌ Error listing agents: ${error.message}`));
@@ -629,8 +629,8 @@ async function showAvailableAgents() {
     });
     
     console.log(chalk.blue('Examples:'));
-    console.log(chalk.gray('  npx github:pmaojo/gemini-cli-templates --create-agent api-security-audit'));
-    console.log(chalk.gray('  npx github:pmaojo/gemini-cli-templates --create-agent deep-research-team/academic-researcher'));
+    console.log(chalk.gray('  npx gemini-cli-templates --create-agent api-security-audit'));
+    console.log(chalk.gray('  npx gemini-cli-templates --create-agent deep-research-team/academic-researcher'));
     
   } catch (error) {
     console.log(chalk.red('❌ Error fetching agents:', error.message));

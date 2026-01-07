@@ -413,7 +413,7 @@ function generateWorkflowYAML() {
 }
 
 function showGenerateModal(hash, yaml) {
-    document.getElementById('workflowCommand').textContent = `npx github:pmaojo/gemini-cli-templates --workflow:#${hash}`;
+    document.getElementById('workflowCommand').textContent = `npx gemini-cli-templates --workflow:#${hash}`;
     document.getElementById('yamlContent').textContent = yaml;
     document.getElementById('generateModal').style.display = 'block';
 }
@@ -505,7 +505,7 @@ function formatComponentName(name) {
 }
 
 function generateInstallCommand(component) {
-    return `npx github:pmaojo/gemini-cli-templates --${component.type} "${component.path}"`;
+    return `npx gemini-cli-templates --${component.type} "${component.path}"`;
 }
 
 function getComponentDescription(component) {

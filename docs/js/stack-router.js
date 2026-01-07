@@ -280,7 +280,7 @@ class StackRouter {
     generateStackInstallCommand(components) {
         const allComponents = [...components.agents, ...components.commands, ...components.mcps];
         const componentArgs = allComponents.map(c => `--${c.type} ${c.name}`).join(' ');
-        return `npx github:pmaojo/gemini-cli-templates ${componentArgs}`;
+        return `npx gemini-cli-templates ${componentArgs}`;
     }
 
     // Update header for stack page

@@ -45,7 +45,7 @@
 
 - [ ] **Integration Test:**
   - Install the CLI locally.
-  - Run `npx github:pmaojo/gemini-cli-templates --agent development-team/frontend-developer`.
+  - Run `npx gemini-cli-templates --agent development-team/frontend-developer`.
   - Verify `GEMINI.md` is created/updated.
   - Verify content refers to Gemini.
 - [ ] **API Check:** Ensure telemetry sends correct data.

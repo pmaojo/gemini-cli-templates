@@ -669,7 +669,7 @@ function showInstallModal(componentName) {
     const componentPath = componentCategory ? `${componentCategory}/${cleanName}` : cleanName;
 
     // Update the command with the correct flag and full component path
-    const command = `npx github:pmaojo/gemini-cli-templates --${flagType} ${componentPath} --yes`;
+    const command = `npx gemini-cli-templates --${flagType} ${componentPath} --yes`;
     commandText.textContent = command;
 
     // Show the modal

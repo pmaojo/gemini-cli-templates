@@ -568,7 +568,7 @@ def generate_components_json():
                     'category': 'languages',
                     'description': f'{language_dir.title()} project template',
                     'files': language_files,
-                    'installCommand': f'npx github:pmaojo/gemini-cli-templates --template={language_dir} --yes',
+                    'installCommand': f'npx gemini-cli-templates --template={language_dir} --yes',
                     'downloads': template_downloads
                 }
                 components_data['templates'].append(language_template)
@@ -610,7 +610,7 @@ def generate_components_json():
                                 'language': language_dir,
                                 'description': f'{framework_dir.title()} with {language_dir.title()}',
                                 'files': framework_files,
-                                'installCommand': f'npx github:pmaojo/gemini-cli-templates --template={language_dir} --framework={framework_dir} --yes',
+                                'installCommand': f'npx gemini-cli-templates --template={language_dir} --framework={framework_dir} --yes',
                                 'downloads': framework_downloads
                             }
                             components_data['templates'].append(framework_template)
@@ -659,7 +659,7 @@ def generate_components_json():
                         'commands': 0,
                         'agents': 0,
                         'mcpServers': 0,
-                        'installCommand': ext.get('installCommand', f"npx github:pmaojo/gemini-cli-templates --extension={name}"),
+                        'installCommand': ext.get('installCommand', f"npx gemini-cli-templates --extension={name}"),
                         'downloads': extension_downloads,
                         'displayName': ext.get('displayName', name),
                         'repository': ext.get('repository', '')
@@ -705,7 +705,7 @@ def generate_components_json():
                                 'commands': 0, # Placeholder
                                 'agents': 0, # Placeholder
                                 'mcpServers': 0, # Placeholder
-                                'installCommand': f"npx github:pmaojo/gemini-cli-templates --extension={name}",
+                                'installCommand': f"npx gemini-cli-templates --extension={name}",
                                 'downloads': extension_downloads,
                                 'displayName': extension_data.get('displayName', name),
                                 'repository': extension_data.get('repository', '')

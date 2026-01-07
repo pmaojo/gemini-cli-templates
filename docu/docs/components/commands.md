@@ -17,13 +17,13 @@ Commands are custom slash commands for Gemini CLI that automate common developme
 Install this component locally in your project. Works with your existing Gemini CLI setup.
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --command testing/generate-tests --yes
+npx gemini-cli-templates --command testing/generate-tests --yes
 ```
 
 ### Multiple Commands
 
 ```bash
-npx github:pmaojo/gemini-cli-templates --command setup/setup-testing,performance/optimize-bundle --yes
+npx gemini-cli-templates --command setup/setup-testing,performance/optimize-bundle --yes
 ```
 
 ## 💡 Usage After Installation

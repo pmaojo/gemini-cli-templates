@@ -192,7 +192,7 @@ class SessionSharing {
         exportTool: 'gemini-cli-templates',
         exportVersion: require('../package.json').version || '1.0.0',
         messageLimit: messageLimit,
-        description: 'Gemini CLI session export - can be cloned with: npx github:pmaojo/gemini-cli-templates --clone-session <url>'
+        description: 'Gemini CLI session export - can be cloned with: npx gemini-cli-templates --clone-session <url>'
       }
     };
 

@@ -299,7 +299,7 @@ class CartManager {
 
     // Update generated command
     updateCommand() {
-        let command = 'npx github:pmaojo/gemini-cli-templates';
+        let command = 'npx gemini-cli-templates';
         
         if (this.cart.agents.length > 0) {
             const agentPaths = this.cart.agents.map(item => this.getCleanPath(item.path)).join(',');
