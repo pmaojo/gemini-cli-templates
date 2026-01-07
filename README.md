@@ -8,7 +8,7 @@
 
 ```bash
 # Install a complete development stack
-npx github:pmaojo/gemini-cli-templates --agent development-team/frontend-developer --command testing/generate-tests --mcp development/github-integration --yes
+npx github:pmaojo/gemini-cli-templates --agent development-team/frontend-developer --command testing/generate-tests --mcp database/postgresql-integration --setting environment/performance-optimization --yes
 
 # Browse and install interactively
 npx github:pmaojo/gemini-cli-templates
@@ -26,8 +26,8 @@ npx github:pmaojo/gemini-cli-templates --mcp database/postgresql-integration --y
 | Component         | Description                                       | Examples                                                          |
 | ----------------- | ------------------------------------------------- | ----------------------------------------------------------------- |
 | **🤖 Agents**     | AI specialists for specific domains               | Security auditor, React performance optimizer, database architect |
-| **⚡ Commands**   | Custom slash commands                             | `/generate-tests`, `/optimize-bundle`, `/check-security`          |
-| **🔌 MCPs**       | External service integrations                     | GitHub, PostgreSQL, Stripe, AWS, OpenAI                           |
+| **⚡ Commands**   | Custom slash commands                             | `tribe:scout`, `testing:generate-tests`, `/lint`                  |
+| **🔌 MCPs**       | External service integrations                     | GitHub, PostgreSQL, Brave Search, Memory, Browserbase             |
 | **🧩 Extensions** | Community-built plugins & capabilities            | `jules`, `conductor`, `mcp-server-browserbase`                    |
 | **📦 Templates**  | Complete project scaffolding with Agents & Tools  | Tribal Marketing, Grafka (Neuro-Symbolic AI)                      |
 | **⚙️ Settings**   | Gemini CLI configurations                         | Timeouts, memory settings, output styles                          |
