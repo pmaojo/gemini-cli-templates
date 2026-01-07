@@ -62,7 +62,7 @@ function replacePythonCommands(config) {
 }
 
 async function showMainMenu() {
-  console.log('');
+  console.log('\n' + boxen(chalk.hex('#F97316').bold('🚀 Gemini CLI Studio - Interactive Menu'), { padding: 1, borderStyle: 'round', borderColor: 'orange' }) + '\n');
   
   const initialChoice = await inquirer.prompt(getMainMenuPrompt());
   
@@ -329,7 +329,7 @@ async function createGeminiConfig(options = {}) {
   if (!shouldRunSetup && !options.setupFromMenu && !options.yes && !options.language && !options.framework && !options.dryRun) {
     return await showMainMenu();
   } else {
-    console.log(chalk.blue('🚀 Setting up Gemini CLI configuration...'));
+    console.log('\n' + chalk.hex('#F97316').bold('⚙️  Gemini CLI Studio: Project Configuration') + '\n');
   }
   
   console.log(chalk.gray(`Target directory: ${targetDir}`));

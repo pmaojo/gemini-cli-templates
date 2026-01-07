@@ -140,8 +140,9 @@ async function downloadDirectoryFromGitHub(dirPath, retryCount = 0) {
     let skipCount = 0;
     
     for (const item of items) {
+      const relativePath = path.relative(GITHUB_CONFIG.templatesPath, item.path);
+      
       if (item.type === 'file') {
-        const relativePath = path.relative(GITHUB_CONFIG.templatesPath, item.path);
         try {
           const content = await downloadFileFromGitHub(relativePath);
           files[item.name] = content;
@@ -153,7 +154,18 @@ async function downloadDirectoryFromGitHub(dirPath, retryCount = 0) {
           } else {
             console.log(chalk.yellow(`⚠️  Skipped ${item.name}: ${fileError.message}`));
           }
-          // Continue with other files instead of failing completely
+        }
+      } else if (item.type === 'dir') {
+        try {
+          // Recursive call for subdirectories
+          const subDirFiles = await downloadDirectoryFromGitHub(relativePath);
+          // Merge subDirFiles into files with proper relative paths
+          for (const [subFileName, content] of Object.entries(subDirFiles)) {
+            files[`${item.name}/${subFileName}`] = content;
+          }
+          successCount += Object.keys(subDirFiles).length;
+        } catch (dirError) {
+          console.log(chalk.yellow(`⚠️  Failed to download subdirectory ${item.path}: ${dirError.message}`));
         }
       }
     }
