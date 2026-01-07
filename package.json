@@ -1,6 +1,6 @@
 {
   "name": "@pmaojo/gemini-cli-templates",
-  "version": "1.28.12",
+  "version": "1.3.0",
   "description": "Component templates and tracking system for Gemini CLI",
   "main": "cli-tool/src/index.js",
   "bin": {

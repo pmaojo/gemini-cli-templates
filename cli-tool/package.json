@@ -1,6 +1,6 @@
 {
   "name": "gemini-cli-templates",
-  "version": "1.28.12",
+  "version": "1.3.0",
   "description": "CLI tool to setup Gemini CLI configurations with framework-specific commands, automation hooks and MCP Servers for your projects",
   "main": "src/index.js",
   "bin": {
