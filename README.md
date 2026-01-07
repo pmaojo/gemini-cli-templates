@@ -23,16 +23,16 @@ npx github:pmaojo/gemini-cli-templates --mcp database/postgresql-integration --y
 
 ## What You Get
 
-| Component       | Description                                       | Examples                                                          |
-| --------------- | ------------------------------------------------- | ----------------------------------------------------------------- |
-| **🤖 Agents**   | AI specialists for specific domains               | Security auditor, React performance optimizer, database architect |
-| **⚡ Commands** | Custom slash commands                             | `/generate-tests`, `/optimize-bundle`, `/check-security`          |
-| **🔌 MCPs**     | External service integrations                     | GitHub, PostgreSQL, Stripe, AWS, OpenAI                           |
-| **🧩 Extensions** | Community-built plugins & capabilities          | `jules`, `conductor`, `mcp-server-browserbase`                    |
-| **📦 Templates** | Complete project scaffolding with Agents & Tools | Tribal Marketing, Grafka (Neuro-Symbolic AI)                      |
-| **⚙️ Settings** | Gemini CLI configurations                         | Timeouts, memory settings, output styles                          |
-| **🪝 Hooks**    | Automation triggers                               | Pre-commit validation, post-completion actions                    |
-| **🎨 Skills**   | Reusable capabilities with progressive disclosure | PDF processing, Excel automation, custom workflows                |
+| Component         | Description                                       | Examples                                                          |
+| ----------------- | ------------------------------------------------- | ----------------------------------------------------------------- |
+| **🤖 Agents**     | AI specialists for specific domains               | Security auditor, React performance optimizer, database architect |
+| **⚡ Commands**   | Custom slash commands                             | `/generate-tests`, `/optimize-bundle`, `/check-security`          |
+| **🔌 MCPs**       | External service integrations                     | GitHub, PostgreSQL, Stripe, AWS, OpenAI                           |
+| **🧩 Extensions** | Community-built plugins & capabilities            | `jules`, `conductor`, `mcp-server-browserbase`                    |
+| **📦 Templates**  | Complete project scaffolding with Agents & Tools  | Tribal Marketing, Grafka (Neuro-Symbolic AI)                      |
+| **⚙️ Settings**   | Gemini CLI configurations                         | Timeouts, memory settings, output styles                          |
+| **🪝 Hooks**      | Automation triggers                               | Pre-commit validation, post-completion actions                    |
+| **🎨 Skills**     | Reusable capabilities with progressive disclosure | PDF processing, Excel automation, custom workflows                |
 
 ## 🧩 Extensions
 
@@ -50,34 +50,37 @@ npx github:pmaojo/gemini-cli-templates --extension=mcp-server-browserbase
 ```
 
 **Popular Categories:**
-*   **Community:** `jules`, `conductor`, `nanobanana`, `skills`
-*   **Cloud:** `terraform-mcp-server`, `mcp-server-kubernetes`, `gcloud`
-*   **Database:** `postgres`, `mcp-redis`, `mcp-neo4j`
-*   **DevTools:** `github-mcp-server`, `chrome-devtools-mcp`, `code-review`
-*   **AI/ML:** `genai-toolbox`, `platform-ai`
+
+- **Community:** `jules`, `conductor`, `nanobanana`, `skills`
+- **Cloud:** `terraform-mcp-server`, `mcp-server-kubernetes`, `gcloud`
+- **Database:** `postgres`, `mcp-redis`, `mcp-neo4j`
+- **DevTools:** `github-mcp-server`, `chrome-devtools-mcp`, `code-review`
+- **AI/ML:** `genai-toolbox`, `platform-ai`
 
 ## 📦 Featured Templates
 
 Gemini CLI Templates also provides full project templates that set up sophisticated AI architectures.
 
 ### 🏹 Tribal Marketing Template
-A **Minimum Viable Audience (MVT)** builder based on Seth Godin's frameworks. This template gives you a specialized marketing team to research, strategize, and execute.
 
-*   **Research Layer:** Integrates Brave Search & Puppeteer for real-world data gathering.
-*   **Strategy Agents:**
-    *   `marketing:mvt`: Defines your psychographic persona.
-    *   `marketing:xy`: Finds your unique positioning ("The Lonely Quadrant").
-    *   `marketing:culture`: Drafts your "Us vs. Them" manifesto.
-*   **Execution Commands:** `/tribe-scout`, `/tribe-map`, `/tribe-launch`.
+A **Minimum Viable Audience (MVT)** builder based on Seth Godin's frameworks. This template gives you a specialized marketing team to research, strategize, and execute using Gemini 3's native capabilities.
+
+- **Research Layer:** Uses Gemini 3 **Web Search** & **Web Browse** for real-world data gathering (no API keys required).
+- **Strategy Agents:**
+  - `marketing:mvt`: Defines your psychographic persona.
+  - `marketing:xy`: Finds your unique positioning ("The Lonely Quadrant").
+  - `marketing:culture`: Drafts your "Us vs. Them" manifesto.
+- **Execution Commands:** `tribe:scout`, `tribe:map`, `tribe:launch`.
 
 ### 🧠 Grafka (Neuro-Symbolic AI)
+
 Gives your Gemini agents a **Long-term Memory** and a **Logical Left Brain**. It combines the creative power of LLMs with the structured reasoning of Knowledge Graphs.
 
-*   **Rust Backend:** High-performance graph database.
-*   **OWL Reasoner:** Deducts new facts using logical rules (e.g., transitive relationships).
-*   **Hybrid Architecture:**
-    *   **Gemini Flash** for fast extraction and routing.
-    *   **Gemini Pro** for complex reasoning and synthesis.
+- **Rust Backend:** High-performance graph database.
+- **OWL Reasoner:** Deducts new facts using logical rules (e.g., transitive relationships).
+- **Hybrid Architecture:**
+  - **Gemini Flash** for fast extraction and routing.
+  - **Gemini Pro** for complex reasoning and synthesis.
 
 ## 🛠️ Additional Tools
 
