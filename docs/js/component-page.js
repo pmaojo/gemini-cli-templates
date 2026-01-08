@@ -788,6 +788,8 @@ class ComponentPageManager {
         
         if (this.component.type === 'template') {
             githubUrl += `tree/main/cli-tool/templates/${this.component.folderPath || ''}`;
+        } else if (this.component.type === 'extension') {
+            githubUrl += `blob/main/cli-tool/components/extensions/extensions.json`;
         } else {
             const componentPath = this.component.path || this.component.name;
             githubUrl += `blob/main/cli-tool/components/${this.component.type}s/${componentPath}`;
