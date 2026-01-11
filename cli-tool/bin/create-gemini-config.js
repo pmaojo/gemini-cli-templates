@@ -70,6 +70,7 @@ program
   .option('--setting <setting>', 'install specific setting component (supports comma-separated values)')
   .option('--hook <hook>', 'install specific hook component (supports comma-separated values)')
   .option('--skill <skill>', 'install specific skill component (supports comma-separated values)')
+  .option('--extension <extension>', 'install specific extension component (supports comma-separated values)')
   .option('--workflow <workflow>', 'install workflow from hash (#hash) OR workflow YAML (base64 encoded) when used with --agent/--command/--mcp')
   .option('--prompt <prompt>', 'execute the provided prompt in Gemini CLI after installation or in sandbox')
   .option('--create-agent <agent>', 'create a global agent accessible from anywhere (e.g., customer-support)')
