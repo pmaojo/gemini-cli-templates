@@ -6,7 +6,7 @@ sidebar_position: 1
 
 **Gemini CLI Templates** is an open-source CLI tool that configures Gemini CLI projects and provides specialized components to enhance your AI-powered development workflow.
 
-Browse over 500 components at **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** or contribute to the project on **[GitHub](https://github.com/pmaojo/gemini-cli-templates)**.
+Browse over 500 components at **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)** or contribute to the project on **[GitHub](https://github.com/pmaojo/gemini-cli-templates)**.
 
 ## What does this CLI do?
 
@@ -33,7 +33,7 @@ npx gemini-cli-templates --command testing/generate-tests
 
 ## Next Steps
 
-👉 **[Discover Components](https://gemini-cli-templates.vercel.app-templates.vercel.app)** - Explore and gemini-cli-templates.vercel.appponents on gemini-cli-templates.vercel.app
+👉 **[Discover Components](https://gemini-cli-templates.vercel.app)** - Explore and components on gemini-cli-templates.vercel.app
 
 👉 **[CLI Options](./cli-options)** - Methods to download components
 

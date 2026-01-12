@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Agents
 
-AI specialists that provide expert assistance for specific development tasks. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+AI specialists that provide expert assistance for specific development tasks. Browse and install from **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**.
 
 ## 🤖 What are Agents?
 
@@ -121,8 +121,8 @@ Select agents based on your current needs and project context:
 - **Start with one agent** for your main technology stack
 - **Add security agents** before production
 - **Use performance agents** when optimizing
-- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for the complete list
+- **Browse [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)** for the complete list
 
 ---
 
-**Find more agents:** [Browse all agents on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "Agents"
+**Find more agents:** [Browse all agents on gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app) → Filter by "Agents"

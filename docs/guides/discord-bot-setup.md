@@ -49,7 +49,7 @@ DISCORD_PUBLIC_KEY=abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567
 DISCORD_GUILD_ID=987654321098765432  # Opcional, para testing en un server específico
 
 # API Configuration
-COMPONENTS_API_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app/components.json
+COMPONENTS_API_URL=https://gemini-cli-templates.vercel.app/components.json
 ```
 
 #### En Vercel (para producción)
@@ -60,7 +60,7 @@ COMPONENTS_API_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app/
    - `DISCORD_APP_ID`
    - `DISCORD_BOT_TOKEN`
    - `DISCORD_PUBLIC_KEY`
-   - `COMPONENTS_API_URL` (opcional, por defecto usa gemini-cli-templates.vercel.app-templates.vercel.app)
+   - `COMPONENTS_API_URL` (opcional, por defecto usa gemini-cli-templates.vercel.app)
 
 ### 3. Instalar Dependencias
 
@@ -198,7 +198,7 @@ api/
 
 El sistema mantiene `components.json` en memoria por 5 minutos:
 
-- Primera request: Descarga desde gemini-cli-templates.vercel.app-templates.vercel.app
+- Primera request: Descarga desde gemini-cli-templates.vercel.app
 - Siguientes requests (< 5 min): Usa cache
 - Después de 5 min: Actualiza automáticamente
 
@@ -253,7 +253,7 @@ Esto reduce latencia y requests a la API.
 
 **Solución**:
 
-1. Verifica que `https://gemini-cli-templates.vercel.app-templates.vercel.app/components.json` sea accesible
+1. Verifica que `https://gemini-cli-templates.vercel.app/components.json` sea accesible
 2. Revisa la variable `COMPONENTS_API_URL` si usas una URL custom
 3. Chequea los logs de Vercel para ver el error específico
 

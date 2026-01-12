@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # MCPs (Model Context Protocol)
 
-External service integrations that extend Gemini CLI with real-time data access. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+External service integrations that extend Gemini CLI with real-time data access. Browse and install from **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**.
 
 ## 🔌 What are MCPs?
 
@@ -116,8 +116,8 @@ Select MCPs based on your project's external service requirements:
 - **Start with essential MCPs** for your stack
 - **Configure environment variables** properly
 - **Test connections** after installation
-- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for specialized integrations
+- **Browse [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)** for specialized integrations
 
 ---
 
-**Find more MCPs:** [Browse all MCPs on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "MCPs"
+**Find more MCPs:** [Browse all MCPs on gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app) → Filter by "MCPs"

@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Templates
 
-Complete project setups with pre-configured components and best practices. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+Complete project setups with pre-configured components and best practices. Browse and install from **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**.
 
 ## 📦 What are Templates?
 
@@ -128,8 +128,8 @@ Select templates based on your project requirements and team expertise:
 - **Start with templates** for new projects
 - **Customize templates** with additional components
 - **Study template configurations** to learn best practices
-- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for specialized templates
+- **Browse [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)** for specialized templates
 
 ---
 
-**Find more templates:** [Browse all templates on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "Templates"
+**Find more templates:** [Browse all templates on gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app) → Filter by "Templates"

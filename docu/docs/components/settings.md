@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Settings
 
-Gemini CLI configurations that customize behavior and performance. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+Gemini CLI configurations that customize behavior and performance. Browse and install from **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**.
 
 ## ⚙️ What are Settings?
 
@@ -116,8 +116,8 @@ Select settings based on your project requirements and preferences:
 - **Start with performance settings** for better experience
 - **Add security settings** for production projects
 - **Use statuslines** for real-time project monitoring
-- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for specialized configurations
+- **Browse [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)** for specialized configurations
 
 ---
 
-**Find more settings:** [Browse all settings on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "Settings"
+**Find more settings:** [Browse all settings on gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app) → Filter by "Settings"

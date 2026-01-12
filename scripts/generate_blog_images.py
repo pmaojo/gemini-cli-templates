@@ -206,11 +206,11 @@ def main():
     print(f"\n📚 Found {len(articles)} articles")
     print(f"📁 Assets directory: {assets_dir}\n")
 
-    # Filter articles that need images generated (hosted on gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/)
+    # Filter articles that need images generated (hosted on gemini-cli-templates.vercel.app/blog/assets/)
     articles_needing_images = []
     for article in articles:
         image_url = article.get("image", "")
-        if "gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/" in image_url and "-cover.png" in image_url:
+        if "gemini-cli-templates.vercel.app/blog/assets/" in image_url and "-cover.png" in image_url:
             # Extract filename from URL
             filename = image_url.split("/")[-1]
             output_path = assets_dir / filename

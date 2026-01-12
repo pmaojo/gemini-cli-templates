@@ -157,15 +157,15 @@ Skills from [googles/skills](https://github.com/googles/skills):
 
 ## 📖 Documentation
 
-**[📚 Complete Documentation](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/)** - Comprehensive guides, examples, and API reference
+**[📚 Complete Documentation](https://docs.gemini-cli-templates.vercel.app/)** - Comprehensive guides, examples, and API reference
 
 Quick links:
 
-- [Getting Started](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/intro) - Installation and first steps
-- [Project Setup](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/project-setup/interactive-setup) - Configure your projects
-- [Analytics Dashboard](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/analytics/overview) - Real-time monitoring
-- [Individual Components](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/components/overview) - Agents, Commands, MCPs
-- [CLI Options](https://docs.gemini-cli-templates.vercel.app-templates.vercel.app/docs/cli-options) - All available commands
+- [Getting Started](https://docs.gemini-cli-templates.vercel.app/docs/intro) - Installation and first steps
+- [Project Setup](https://docs.gemini-cli-templates.vercel.app/docs/project-setup/interactive-setup) - Configure your projects
+- [Analytics Dashboard](https://docs.gemini-cli-templates.vercel.app/docs/analytics/overview) - Real-time monitoring
+- [Individual Components](https://docs.gemini-cli-templates.vercel.app/docs/components/overview) - Agents, Commands, MCPs
+- [CLI Options](https://docs.gemini-cli-templates.vercel.app/docs/cli-options) - All available commands
 
 ## 🤝 Contributing
 

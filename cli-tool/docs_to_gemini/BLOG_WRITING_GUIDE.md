@@ -296,7 +296,7 @@ docs/blog/
 ```html
 <h2>Browse all components on gemini-cli-templates.vercel.app</h2>
 <p>Before installing, you can explore all available [Technology] components on the official Gemini CLI Templates website:</p>
-<p>Visit <strong><a href="https://gemini-cli-templates.vercel.app-templates.vercel.app" target="_bgemini-cli-templates.vercel.app"noopener">gemini-cli-templates.vercel.app</a></strong> and search for "[technology]" to see:</p>
+<p>Visit <strong><a href="https://gemini-cli-templates.vercel.app" target="_bgemini-cli-templates.vercel.app"noopener">gemini-cli-templates.vercel.app</a></strong> and search for "[technology]" to see:</p>
 <img src="../assets/aitmpl-[technology]-search.png" alt="Searching for [Technology] components on gemini-cli-templates.vercel.app" loading="lazy">
 ```
 

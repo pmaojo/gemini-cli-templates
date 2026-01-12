@@ -39,7 +39,7 @@ cat .vercel/project.json
 
 ## Deployment Flow
 
-- ✅ **Push to main** → Automatic production deploy to gemini-cli-templates.vercel.app-templates.vercel.app
+- ✅ **Push to main** → Automatic production deploy to gemini-cli-templates.vercel.app
 - ✅ **Other branches** → Manual deploy only (no auto-deploy)
 - ✅ **Pull Requests** → No deployment
 
@@ -57,6 +57,6 @@ vercel --prod
 
 ## Domain Configuration
 
-The main branch deploys to the custom domain: **gemini-cli-templates.vercel.app-templates.vercel.app**
+The main branch deploys to the custom domain: **gemini-cli-templates.vercel.app**
 
 Configured in Vercel dashboard under Project Settings → Domains.

@@ -135,7 +135,7 @@ CCT_DEBUG=true node cli-tool/bin/create-gemini-config.js --agent deep-research-t
 CCT_NO_TRACKING=true node cli-tool/bin/create-gemini-config.js --agent test-agent
 
 # Test directo al API
-curl -X POST https://gemini-cli-templates.vercel.app-templates.vercel.app/api/track-download-supabase \
+curl -X POST https://gemini-cli-templates.vercel.app/api/track-download-supabase \
   -H "Content-Type: application/json" \
   -d '{"type":"agent","name":"test","path":"test","category":"test","cliVersion":"1.19.0"}'
 ```
