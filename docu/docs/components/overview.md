@@ -18,39 +18,39 @@ Browse and search over 500 Gemini CLI components on **[gemini-cli-templates.verc
 ### 🤖 **Agents** (AI Specialists)
 
 ```bash
-npx gemini-cli-templates --agent development/frontend-developer
-npx gemini-cli-templates --agent security/security-auditor
-npx gemini-cli-templates --agent data-ai/ml-engineer
+npx github:pmaojo/gemini-cli-templates --agent development/frontend-developer
+npx github:pmaojo/gemini-cli-templates --agent security/security-auditor
+npx github:pmaojo/gemini-cli-templates --agent data-ai/ml-engineer
 ```
 
 ### ⚡ **Commands** (Slash Commands)
 
 ```bash
-npx gemini-cli-templates --command testing/generate-tests
-npx gemini-cli-templates --command performance/optimize-bundle
-npx gemini-cli-templates --command setup/setup-ci-cd-pipeline
+npx github:pmaojo/gemini-cli-templates --command testing/generate-tests
+npx github:pmaojo/gemini-cli-templates --command performance/optimize-bundle
+npx github:pmaojo/gemini-cli-templates --command setup/setup-ci-cd-pipeline
 ```
 
 ### 🔌 **MCPs** (External Integrations)
 
 ```bash
-npx gemini-cli-templates --mcp database/supabase
-npx gemini-cli-templates --mcp development/github-integration
-npx gemini-cli-templates --mcp browser/playwright-mcp
+npx github:pmaojo/gemini-cli-templates --mcp database/supabase
+npx github:pmaojo/gemini-cli-templates --mcp development/github-integration
+npx github:pmaojo/gemini-cli-templates --mcp browser/playwright-mcp
 ```
 
 ### ⚙️ **Settings** (Gemini CLI Configs)
 
 ```bash
-npx gemini-cli-templates --setting performance/performance-optimization
-npx gemini-cli-templates --setting security/read-only-mode
+npx github:pmaojo/gemini-cli-templates --setting performance/performance-optimization
+npx github:pmaojo/gemini-cli-templates --setting security/read-only-mode
 ```
 
 ### 🪝 **Hooks** (Automation)
 
 ```bash
-npx gemini-cli-templates --hook git/auto-git-add
-npx gemini-cli-templates --hook notifications/discord-notifications
+npx github:pmaojo/gemini-cli-templates --hook git/auto-git-add
+npx github:pmaojo/gemini-cli-templates --hook notifications/discord-notifications
 ```
 
 ## 🎯 Quick Search Tips

@@ -57,7 +57,7 @@ function createEmbed(component, type = 'info') {
 
   if (type === 'install') {
     const flagName = component.type === 'templates' ? 'template' : component.type;
-    const installCommand = `npx gemini-cli-templates --${flagName} ${component.name}`;
+    const installCommand = `npx github:pmaojo/gemini-cli-templates --${flagName} ${component.name}`;
     return {
       title: `${icon} Install ${component.name}`,
       description: 'Copy and paste this command in your terminal:',

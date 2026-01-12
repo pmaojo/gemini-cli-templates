@@ -335,13 +335,13 @@
                 <h3>Install Individual Components</h3>
                 <pre><code class="language-bash">
 # Install specific agent
-npx gemini-cli-templates --agent supabase-schema-architect
+npx github:pmaojo/gemini-cli-templates --agent supabase-schema-architect
 
 # Install specific Supabase command
-npx gemini-cli-templates --command supabase-schema-sync
+npx github:pmaojo/gemini-cli-templates --command supabase-schema-sync
 
 # Install MCP server
-npx gemini-cli-templates --mcp supabase</code></pre>
+npx github:pmaojo/gemini-cli-templates --mcp supabase</code></pre>
                 
                 <p><strong>Components will be installed to:</strong></p>
                 <ul>
@@ -352,27 +352,27 @@ npx gemini-cli-templates --mcp supabase</code></pre>
 
                 <h3>Create Global Agents (Available Anywhere)</h3>
                 <pre><code class="language-bash"># Create global agents accessible from any project
-npx gemini-cli-templates --create-agent supabase-schema-architect
-npx gemini-cli-templates --create-agent supabase-realtime-optimizer
+npx github:pmaojo/gemini-cli-templates --create-agent supabase-schema-architect
+npx github:pmaojo/gemini-cli-templates --create-agent supabase-realtime-optimizer
 
 # List all global agents
-npx gemini-cli-templates --list-agents
+npx github:pmaojo/gemini-cli-templates --list-agents
 
 # Update global agents
-npx gemini-cli-templates --update-agent supabase-schema-architect
+npx github:pmaojo/gemini-cli-templates --update-agent supabase-schema-architect
 
 # Remove global agents  
-npx gemini-cli-templates --remove-agent supabase-realtime-optimizer</code></pre>
+npx github:pmaojo/gemini-cli-templates --remove-agent supabase-realtime-optimizer</code></pre>
 
                 <h3>Install Multiple Components at Once</h3>
                 <pre><code class="language-bash">
 # Install specific Supabase commands (comma-separated for multiple)
-npx gemini-cli-templates --command supabase-schema-sync,supabase-type-generator,supabase-data-explorer
+npx github:pmaojo/gemini-cli-templates --command supabase-schema-sync,supabase-type-generator,supabase-data-explorer
               </code></pre>      
 
               <pre><code class="language-bash">
 # Install all Supabase components in one command
-npx gemini-cli-templates \
+npx github:pmaojo/gemini-cli-templates \
   --command supabase-schema-sync,supabase-migration-assistant,supabase-performance-optimizer,supabase-security-audit,supabase-backup-manager,supabase-type-generator,supabase-data-explorer,supabase-realtime-monitor \
   --agent supabase-schema-architect,supabase-realtime-optimizer \
   --mcp supabase</code></pre>

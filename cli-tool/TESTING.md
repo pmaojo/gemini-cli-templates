@@ -198,8 +198,8 @@ npm run build      # If applicable
 
 ```bash
 # Test published version
-npx gemini-cli-templates --version
-npx gemini-cli-templates --help
+npx github:pmaojo/gemini-cli-templates --version
+npx github:pmaojo/gemini-cli-templates --help
 ```
 
 ## Debugging Tests

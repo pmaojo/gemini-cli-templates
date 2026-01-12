@@ -133,7 +133,7 @@ Error: Sandbox execution exceeded 30 second timeout
 3. **Break into smaller tasks**:
    ```bash
    # Instead of complex operations, break into steps
-   npx gemini-cli-templates --sandbox cloudflare \
+   npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
      --prompt "Step 1: Create data structure"
    ```
 

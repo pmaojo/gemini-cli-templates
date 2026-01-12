@@ -434,7 +434,7 @@ I'll adapt to your project's needs and follow performance best practices.
 After creating the command, users can install it with:
 
 ```bash
-npx gemini-cli-templates --command="optimize-images" --yes
+npx github:pmaojo/gemini-cli-templates --command="optimize-images" --yes
 ```
 
 This will:

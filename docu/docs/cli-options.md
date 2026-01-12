@@ -52,33 +52,33 @@ This section provides a comprehensive reference of all available command-line op
 
 ```bash
 # Install React template with all components
-npx gemini-cli-templates --template=react --yes
+npx github:pmaojo/gemini-cli-templates --template=react --yes
 
 # Install Python template with all components
-npx gemini-cli-templates --template=python --yes
+npx github:pmaojo/gemini-cli-templates --template=python --yes
 
 # Install Node.js template with all components
-npx gemini-cli-templates --template=nodejs --yes
+npx github:pmaojo/gemini-cli-templates --template=nodejs --yes
 ```
 
 ### Individual Component Installation
 
 ```bash
 # Install specific agent
-npx gemini-cli-templates --agent=react-performance --yes
+npx github:pmaojo/gemini-cli-templates --agent=react-performance --yes
 
 # Install specific command
-npx gemini-cli-templates --command=check-file --yes
+npx github:pmaojo/gemini-cli-templates --command=check-file --yes
 
 # Install specific MCP
-npx gemini-cli-templates --mcp=github-integration --yes
+npx github:pmaojo/gemini-cli-templates --mcp=github-integration --yes
 ```
 
 ### Legacy Syntax (Still Supported)
 
 ```bash
 # Old syntax - still works but deprecated
-npx gemini-cli-templates --language=javascript-typescript --framework=react --yes
+npx github:pmaojo/gemini-cli-templates --language=javascript-typescript --framework=react --yes
 ```
 
 ## GitHub Download System

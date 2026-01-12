@@ -45,13 +45,13 @@ Execute AI-powered code in Cloudflare Workers with global edge deployment and su
 
 ```bash
 # Simple execution with API keys as parameters (recommended)
-npx gemini-cli-templates --sandbox e2b \
+npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --Google-api-key your_GEMINI_key \
   --prompt "Create a React todo app"
 
 # With components installation
-npx gemini-cli-templates --sandbox e2b \
+npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --e2b-api-key your_e2b_key \
   --Google-api-key your_GEMINI_key \
   --agent frontend-developer \
@@ -59,14 +59,14 @@ npx gemini-cli-templates --sandbox e2b \
   --prompt "Create a modern todo app with TypeScript"
 
 # Or use environment variables (set E2B_API_KEY and GEMINI_API_KEY)
-npx gemini-cli-templates --sandbox e2b --prompt "Create a React todo app"
+npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Create a React todo app"
 ```
 
 ### Cloudflare Sandbox
 
 ```bash
 # Execute via deployed Cloudflare Worker
-npx gemini-cli-templates --sandbox cloudflare \
+npx github:pmaojo/gemini-cli-templates --sandbox cloudflare \
   --Google-api-key your_GEMINI_key \
   --prompt "Calculate the 10th Fibonacci number"
 
@@ -118,13 +118,13 @@ curl -X POST https://your-worker.workers.dev/execute \
 ### Basic Web Development
 
 ```bash
-npx gemini-cli-templates --sandbox e2b --prompt "Create an HTML page with modern CSS animations"
+npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "Create an HTML page with modern CSS animations"
 ```
 
 ### Full Stack with Components
 
 ```bash
-npx gemini-cli-templates --sandbox e2b \
+npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --agent fullstack-developer \
   --command setup-node \
   --prompt "Create a Node.js API with JWT authentication"
@@ -133,7 +133,7 @@ npx gemini-cli-templates --sandbox e2b \
 ### Data Analysis
 
 ```bash
-npx gemini-cli-templates --sandbox e2b \
+npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --agent data-scientist \
   --prompt "Analyze this CSV data and create visualizations"
 ```
@@ -141,7 +141,7 @@ npx gemini-cli-templates --sandbox e2b \
 ### Security Audit
 
 ```bash
-npx gemini-cli-templates --sandbox e2b \
+npx github:pmaojo/gemini-cli-templates --sandbox e2b \
   --agent security-auditor \
   --command security-audit \
   --prompt "Review this codebase for security vulnerabilities"

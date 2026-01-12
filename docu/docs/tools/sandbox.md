@@ -22,13 +22,13 @@ Get keys at [console.google.com](https://console.google.com/) and [e2b.dev](http
 ### Basic execution
 
 ```bash
-npx gemini-cli-templates --sandbox e2b --prompt "your task"
+npx github:pmaojo/gemini-cli-templates --sandbox e2b --prompt "your task"
 ```
 
 ### With components
 
 ```bash
-npx gemini-cli-templates --sandbox e2b --agent frontend-developer --prompt "optimize React components"
+npx github:pmaojo/gemini-cli-templates --sandbox e2b --agent frontend-developer --prompt "optimize React components"
 ```
 
 ## Features
@@ -42,7 +42,7 @@ npx gemini-cli-templates --sandbox e2b --agent frontend-developer --prompt "opti
 # With specific environment and timeout
 
 ```
-npx gemini-cli-templates --sandbox e2b --agent security/security-auditor --prompt "audit this codebase" --timeout 300
+npx github:pmaojo/gemini-cli-templates --sandbox e2b --agent security/security-auditor --prompt "audit this codebase" --timeout 300
 ```
 
 ## 🔒 Isolation Features

@@ -81,7 +81,7 @@ Between each layer, animated flow arrows show:
 npm start -- --skills-manager
 
 # Or globally
-npx gemini-cli-templates --skills-manager
+npx github:pmaojo/gemini-cli-templates --skills-manager
 
 # Opens browser at http://localhost:3337
 ```

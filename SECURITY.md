@@ -37,7 +37,7 @@ When using Gemini CLI Templates:
 
 ### For Users
 
-- **Keep Updated**: Always use the latest version via `npx gemini-cli-templates`
+- **Keep Updated**: Always use the latest version via `npx github:pmaojo/gemini-cli-templates`
 - **Review Templates**: Check generated files before committing to your repository
 - **Audit Hooks**: Review automation hooks before enabling them
 - **Secure Environment**: Use the tool in a secure development environment

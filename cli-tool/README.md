@@ -13,13 +13,13 @@
 
 ```bash
 # Interactive setup (recommended)
-npx gemini-cli-templates
+npx github:pmaojo/gemini-cli-templates
 
 # Real-time analytics dashboard
-npx gemini-cli-templates --analytics
+npx github:pmaojo/gemini-cli-templates --analytics
 
 # System health check
-npx gemini-cli-templates --health-check
+npx github:pmaojo/gemini-cli-templates --health-check
 ```
 
 ## ✨ Core Features
@@ -57,7 +57,7 @@ Create AI agents that can be executed from anywhere using the Gemini CLI SDK:
 
 ```bash
 # Create a global agent (one-time setup)
-npx gemini-cli-templates --create-agent customer-support
+npx github:pmaojo/gemini-cli-templates --create-agent customer-support
 
 # Use the agent from anywhere
 customer-support "Help me with ticket #12345"
@@ -78,13 +78,13 @@ code-reviewer "Review this PR for security issues"
 
 ```bash
 # List installed global agents
-npx gemini-cli-templates --list-agents
+npx github:pmaojo/gemini-cli-templates --list-agents
 
 # Update an agent to latest version
-npx gemini-cli-templates --update-agent customer-support
+npx github:pmaojo/gemini-cli-templates --update-agent customer-support
 
 # Remove an agent
-npx gemini-cli-templates --remove-agent customer-support
+npx github:pmaojo/gemini-cli-templates --remove-agent customer-support
 ```
 
 ### How It Works
@@ -102,12 +102,12 @@ Install modular capabilities that Gemini loads dynamically using Google's progre
 
 ```bash
 # Install individual skills
-npx gemini-cli-templates --skill pdf-processing-pro
-npx gemini-cli-templates --skill algorithmic-art
-npx gemini-cli-templates --skill mcp-builder
+npx github:pmaojo/gemini-cli-templates --skill pdf-processing-pro
+npx github:pmaojo/gemini-cli-templates --skill algorithmic-art
+npx github:pmaojo/gemini-cli-templates --skill mcp-builder
 
 # Install multiple skills
-npx gemini-cli-templates --skill pdf-google,docx,xlsx,pptx
+npx github:pmaojo/gemini-cli-templates --skill pdf-google,docx,xlsx,pptx
 ```
 
 ### Featured Skills

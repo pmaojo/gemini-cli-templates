@@ -11,7 +11,7 @@ Secure remote access to your Gemini CLI tools from anywhere.
 ### With Chats
 
 ```bash
-npx gemini-cli-templates --chats --tunnel
+npx github:pmaojo/gemini-cli-templates --chats --tunnel
 ```
 
 ## How It Works
@@ -32,7 +32,7 @@ npx gemini-cli-templates --chats --tunnel
 ping cloudflare.com
 
 # Verify tool is running locally first
-npx gemini-cli-templates --chats
+npx github:pmaojo/gemini-cli-templates --chats
 ```
 
 ---
