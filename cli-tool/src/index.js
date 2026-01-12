@@ -442,7 +442,7 @@ async function createGeminiConfig(options = {}) {
   console.log(chalk.white('  3. Start using Gemini CLI with: gemini'));
   console.log('');
   console.log(chalk.blue('🌐 View all available templates at: https://gemini-cli-templates.vercel.app/'));
-  console.log(chalk.blue('📖 Read the complete documentation at: https://docs.gemini-cli-templates.vercel.app/'));
+  console.log(chalk.blue('📖 Read the complete documentation at: https://gemini-cli-templates.vercel.app/'));
   
   if (config.language !== 'common') {
     console.log(chalk.yellow(`💡 Language-specific features for ${config.language} have been configured`));

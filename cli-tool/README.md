@@ -157,15 +157,15 @@ Skills from [googles/skills](https://github.com/googles/skills):
 
 ## 📖 Documentation
 
-**[📚 Complete Documentation](https://docs.gemini-cli-templates.vercel.app/)** - Comprehensive guides, examples, and API reference
+**[📚 Complete Documentation](https://gemini-cli-templates.vercel.app/)** - Comprehensive guides, examples, and API reference
 
 Quick links:
 
-- [Getting Started](https://docs.gemini-cli-templates.vercel.app/docs/intro) - Installation and first steps
-- [Project Setup](https://docs.gemini-cli-templates.vercel.app/docs/project-setup/interactive-setup) - Configure your projects
-- [Analytics Dashboard](https://docs.gemini-cli-templates.vercel.app/docs/analytics/overview) - Real-time monitoring
-- [Individual Components](https://docs.gemini-cli-templates.vercel.app/docs/components/overview) - Agents, Commands, MCPs
-- [CLI Options](https://docs.gemini-cli-templates.vercel.app/docs/cli-options) - All available commands
+- [Getting Started](https://gemini-cli-templates.vercel.app) - Installation and first steps
+- [Project Setup](https://gemini-cli-templates.vercel.app) - Configure your projects
+- [Analytics Dashboard](https://gemini-cli-templates.vercel.app) - Real-time monitoring
+- [Individual Components](https://gemini-cli-templates.vercel.app) - Agents, Commands, MCPs
+- [CLI Options](https://gemini-cli-templates.vercel.app) - All available commands
 
 ## 🤝 Contributing
 
@@ -178,7 +178,7 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 ## 🔗 Links
 
 - **🌐 Browse Components**: [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)
-- **📚 Documentation**: [docs.gemini-cli-templates.vercel.app](https://docs.gemini-cli-templates.vercel.app)
+- **📚 Documentation**: [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)
 - **🐛 Issues**: [GitHub Issues](https://github.com/pmaojo/gemini-cli-templates/issues)
 - **💬 Discussions**: [GitHub Discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
 
