@@ -554,7 +554,7 @@ The `scripts/generate_components_json.py` script creates the component catalog:
 
 - Scans all component directories recursively
 - Excludes `.py` files from public listings (they remain as background dependencies)
-- Generates `docs/components.json` for the web interface at gemini-cli-templates.vercel.app-templates.vercel.app
+- Generates `docs/components.json` for the web interface at gemini-cli-templates.vercel.app
 - Handles file content embedding and metadata extraction
 
 ## Important Implementation Notes
@@ -810,10 +810,10 @@ The test suite validates:
 
 ```bash
 # Test production endpoints
-API_BASE_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app npm run test:api
+API_BASE_URL=https://gemini-cli-templates.vercel.app npm run test:api
 
 # Test staging
-API_BASE_URL=https://staging.gemini-cli-templates.vercel.app-templates.vercel.app npm run test:api
+API_BASE_URL=https://staging.gemini-cli-templates.vercel.app npm run test:api
 ```
 
 ### Common Issues & Solutions
@@ -824,7 +824,7 @@ API_BASE_URL=https://staging.gemini-cli-templates.vercel.app-templates.vercel.ap
 
 **Solution**:
 
-- Use production domain (`gemini-cli-templates.vercel.app-templates.vercel.app`) instead of preview URLs
+- Use production domain (`gemini-cli-templates.vercel.app`) instead of preview URLs
 - Or disable deployment protection for API routes
 
 #### Issue: API Tests Fail Locally
@@ -835,7 +835,7 @@ API_BASE_URL=https://staging.gemini-cli-templates.vercel.app-templates.vercel.ap
 
 ```bash
 # Always test against production
-API_BASE_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app npm run test:api
+API_BASE_URL=https://gemini-cli-templates.vercel.app npm run test:api
 ```
 
 #### Issue: Download Tracking Not Working
@@ -844,11 +844,11 @@ API_BASE_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app npm ru
 
 **Debug Steps**:
 
-1. Check Vercel function logs: `vercel logs gemini-cli-templates.vercel.app-templates.vercel.app --follow`
+1. Check Vercel function logs: `vercel logs gemini-cli-templates.vercel.app --follow`
 2. Verify environment variables are set
 3. Test endpoint manually:
    ```bash
-   curl -X POST https://gemini-cli-templates.vercel.app-templates.vercel.app/api/track-download-supabase \
+   curl -X POST https://gemini-cli-templates.vercel.app/api/track-download-supabase \
      -H "Content-Type: application/json" \
      -d '{"type":"agent","name":"test","path":"test/path"}'
    ```
@@ -877,13 +877,13 @@ API_BASE_URL=https://gemini-cli-templates.vercel.app-templates.vercel.app npm ru
 
 ```bash
 # Real-time logs
-vercel logs gemini-cli-templates.vercel.app-templates.vercel.app --follow
+vercel logs gemini-cli-templates.vercel.app --follow
 
 # Filter by function
-vercel logs gemini-cli-templates.vercel.app-templates.vercel.app --follow | grep track-download
+vercel logs gemini-cli-templates.vercel.app --follow | grep track-download
 
 # Recent errors
-vercel logs gemini-cli-templates.vercel.app-templates.vercel.app --since 1h
+vercel logs gemini-cli-templates.vercel.app --since 1h
 ```
 
 #### Database Queries

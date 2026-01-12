@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Overview
 
-Browse and search over 500 Gemini CLI components on **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+Browse and search over 500 Gemini CLI components on **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**.
 
-## 🌐 How to Use gemini-cli-templates.vercel.app-templates.vercel.app
+## 🌐 How to Use gemini-cli-templates.vercel.app
 
-1. **Visit [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**
+1. **Visit [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**
 2. **Search or browse** by category
 3. **Copy the installation command** from any component
 4. **Run it in your project**
@@ -70,7 +70,7 @@ npx gemini-cli-templates --hook notifications/discord-notifications
 
 ## 📋 From Discovery to Installation
 
-1. **Find a component** on gemini-cli-templates.vercel.app-templates.vercel.app
+1. **Find a component** on gemini-cli-templates.vercel.app
 2. **Copy the command** shown on the component page
 3. **Run it in your terminal** in your project directory
 4. **Start using** the component immediately

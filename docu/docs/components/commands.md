@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Commands
 
-Custom slash commands that automate development workflows. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+Custom slash commands that automate development workflows. Browse and install from **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**.
 
 ## ⚡ What are Commands?
 
@@ -95,8 +95,8 @@ Select commands based on your current workflow needs:
 - **Install setup commands first** for new projects
 - **Use testing commands early** in development
 - **Add security commands** before deployment
-- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for specific workflows
+- **Browse [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)** for specific workflows
 
 ---
 
-**Find more commands:** [Browse all commands on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "Commands"
+**Find more commands:** [Browse all commands on gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app) → Filter by "Commands"

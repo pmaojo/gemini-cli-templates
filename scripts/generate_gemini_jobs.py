@@ -801,8 +801,8 @@ def get_company_icon(company_name):
         'robinhood': 'https://robinhood.com/favicon.ico',
         
         # Generic/Fallback companies
-        'unknown company': 'https://gemini-cli-templates.vercel.app-templates.vercel.app/static/img/logo.png',
-        'company': 'https://gemini-cli-templates.vercel.app-templates.vercel.app/static/img/logo.png',
+        'unknown company': 'https://gemini-cli-templates.vercel.app/static/img/logo.png',
+        'company': 'https://gemini-cli-templates.vercel.app/static/img/logo.png',
     }
     
     company_lower = company_name.lower().strip()
@@ -817,7 +817,7 @@ def get_company_icon(company_name):
             return icon
     
     # Default fallback to our custom icon
-    return 'https://gemini-cli-templates.vercel.app-templates.vercel.app/static/img/logo.png'
+    return 'https://gemini-cli-templates.vercel.app/static/img/logo.png'
 
 def truncate_description(description, max_length=100):
     """

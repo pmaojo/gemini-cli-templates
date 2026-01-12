@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Hooks
 
-Automation triggers that execute actions based on events. Browse and install from **[gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)**.
+Automation triggers that execute actions based on events. Browse and install from **[gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)**.
 
 ## 🪝 What are Hooks?
 
@@ -121,8 +121,8 @@ Select hooks based on your team structure and automation needs:
 - **Add notifications** for team coordination
 - **Use testing hooks** for quality assurance
 - **Monitor performance** with tracking hooks
-- **Browse [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app)** for specialized automation
+- **Browse [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app)** for specialized automation
 
 ---
 
-**Find more hooks:** [Browse all hooks on gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) → Filter by "Hooks"
+**Find more hooks:** [Browse all hooks on gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app) → Filter by "Hooks"

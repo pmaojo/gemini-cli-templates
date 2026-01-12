@@ -27,7 +27,7 @@ Para agregar un nuevo artículo al blog, simplemente edita el archivo `blog-arti
   "title": "Título del Artículo",
   "description": "Descripción breve del artículo (1-2 líneas)",
   "url": "https://medium.com/@tu-usuario/url-del-articulo",
-  "image": "https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/imagen-cover.png",
+  "image": "https://gemini-cli-templates.vercel.app/blog/assets/imagen-cover.png",
   "category": "Categoría",
   "publishDate": "2025-02-10",
   "readTime": "5 min read",
@@ -58,7 +58,7 @@ Para agregar un nuevo artículo al blog, simplemente edita el archivo `blog-arti
 | `title`       | string | Título completo del artículo         | `"Gemini CLI + Supabase Integration"`                                            |
 | `description` | string | Descripción breve (1-2 líneas)       | `"Learn how to integrate..."`                                                    |
 | `url`         | string | URL completa del artículo            | `"https://medium.com/@..."`                                                      |
-| `image`       | string | URL de la imagen de portada          | `"https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/..."` |
+| `image`       | string | URL de la imagen de portada          | `"https://gemini-cli-templates.vercel.app/blog/assets/..."` |
 | `category`    | string | Categoría del artículo               | `"Database"`, `"Development"`, etc.                                              |
 | `publishDate` | string | Fecha de publicación (YYYY-MM-DD)    | `"2025-02-10"`                                                                   |
 | `readTime`    | string | Tiempo estimado de lectura           | `"5 min read"`                                                                   |
@@ -179,7 +179,7 @@ Luego abre: `http://localhost:8000`
       "title": "Amazing New Feature in Gemini CLI",
       "description": "Discover how to use the latest feature that will revolutionize your workflow.",
       "url": "https://medium.com/@dan.avila7/amazing-new-feature-12345",
-      "image": "https://gemini-cli-templates.vercel.app-templates.vercel.app/blog/assets/new-feature-cover.png",
+      "image": "https://gemini-cli-templates.vercel.app/blog/assets/new-feature-cover.png",
       "category": "Development",
       "publishDate": "2025-02-10",
       "readTime": "6 min read",

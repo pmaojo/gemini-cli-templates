@@ -536,11 +536,11 @@ npm start -- --dry-run
 
 - **GitHub Issues** - [Report bugs or request features](https://github.com/pmaojo/gemini-cli-templates/issues)
 - **GitHub Discussions** - [Join community discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
-- **Documentation** - [Complete guides at docs.gemini-cli-templates.vercel.app-templates.vercgemini-cli-templates.vercel.apptps://docs.gemini-cli-templates.vercel.app/)
+- **Documentation** - [Complete guides at docs.gemini-cli-templates.vercel.app](https://docs.gemini-cli-templates.vercel.app/)
 
 ### Quick Start Guides
 
-- **Browse Components** - [gemini-cli-templates.vercel.app-templatesgemini-cli-templates.vercel.appp](https://gemini-cli-templates.vercel.app) to see existing components
+- **Browse Components** - [gemini-cli-templates.vercel.app](https://gemini-cli-templates.vercel.app) to see existing components
 - **Component Examples** - Check existing components for structure reference
 - **Template Examples** - Review successful templates for best practices
 

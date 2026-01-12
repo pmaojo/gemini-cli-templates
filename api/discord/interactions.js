@@ -20,7 +20,7 @@ async function getComponents() {
   if (cachedComponents && cacheTimestamp && (now - cacheTimestamp) < CACHE_DURATION) {
     return cachedComponents;
   }
-  const response = await axios.get('https://gemini-cli-templates.vercel.app-templates.vercel.app/components.json', { timeout: 10000 });
+  const response = await axios.get('https://gemini-cli-templates.vercel.app/components.json', { timeout: 10000 });
   cachedComponents = response.data;
   cacheTimestamp = now;
   return cachedComponents;
@@ -53,7 +53,7 @@ function createEmbed(component, type = 'info') {
 
   const typeLabel = component.type === 'agents' ? 'agent' : component.type === 'commands' ? 'command' : component.type === 'mcps' ? 'mcp' : component.type === 'settings' ? 'setting' : component.type === 'hooks' ? 'hook' : component.type;
   const category = component.category || 'general';
-  const url = `https://gemini-cli-templates.vercel.app-templates.vercel.app/component/${typeLabel}/${category}/${component.name}`;
+  const url = `https://gemini-cli-templates.vercel.app/component/${typeLabel}/${category}/${component.name}`;
 
   if (type === 'install') {
     const flagName = component.type === 'templates' ? 'template' : component.type;
@@ -65,7 +65,7 @@ function createEmbed(component, type = 'info') {
       url: url,
       fields: [
         { name: 'Installation Command', value: `\`\`\`bash\n${installCommand}\n\`\`\``, inline: false },
-        { name: 'Component Page', value: `[View on gemini-cli-templates.vercel.app-templates.vercel.app](${url})`, inline: false }
+        { name: 'Component Page', value: `[View on gemini-cli-templates.vercel.app](${url})`, inline: false }
       ],
       timestamp: new Date().toISOString(),
     };
@@ -80,7 +80,7 @@ function createEmbed(component, type = 'info') {
       { name: 'Type', value: `\`${component.type}\``, inline: true },
       { name: 'Category', value: component.category || 'N/A', inline: true },
       { name: 'Downloads', value: `${component.downloads || 0}`, inline: true },
-      { name: 'Component Page', value: `[View on gemini-cli-templates.vercel.app-templates.vercel.app](${url})`, inline: false }
+      { name: 'Component Page', value: `[View on gemini-cli-templates.vercel.app](${url})`, inline: false }
     ],
     timestamp: new Date().toISOString(),
   };
@@ -132,10 +132,10 @@ export default async function handler(req, res) {
               fields: results.map((c, i) => {
                 const typeLabel = c.type === 'agents' ? 'agent' : c.type === 'commands' ? 'command' : c.type === 'mcps' ? 'mcp' : c.type === 'settings' ? 'setting' : c.type === 'hooks' ? 'hook' : c.type;
                 const category = c.category || 'general';
-                const url = `https://gemini-cli-templates.vercel.app-templates.vercel.app/component/${typeLabel}/${category}/${c.name}`;
+                const url = `https://gemini-cli-templates.vercel.app/component/${typeLabel}/${category}/${c.name}`;
                 return {
                   name: `${i + 1}. ${componentTypes[c.type].icon} ${c.name}`,
-                  value: `**Type:** ${c.type} | **Downloads:** ${c.downloads || 0}\n[View on gemini-cli-templates.vercel.app-templates.vercel.app](${url})`,
+                  value: `**Type:** ${c.type} | **Downloads:** ${c.downloads || 0}\n[View on gemini-cli-templates.vercel.app](${url})`,
                   inline: false
                 };
               }),

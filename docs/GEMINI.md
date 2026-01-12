@@ -4,7 +4,7 @@ This file provides guidance to Gemini CLI when working with code in this reposit
 
 ## Project Overview
 
-This directory contains the static website (gemini-cli-templates.vercel.app-templates.vercel.app) that serves as the public web interface for browsing and installing Gemini CLI components. The site is a vanilla JavaScript application that loads component data dynamically and provides an interactive browsing experience for 500+ components including agents, commands, settings, hooks, MCPs, and templates.
+This directory contains the static website (gemini-cli-templates.vercel.app) that serves as the public web interface for browsing and installing Gemini CLI components. The site is a vanilla JavaScript application that loads component data dynamically and provides an interactive browsing experience for 500+ components including agents, commands, settings, hooks, MCPs, and templates.
 
 ## Development Commands
 
@@ -32,7 +32,7 @@ python scripts/generate_components_json.py
 ### Deployment
 
 - Site is automatically deployed to GitHub Pages when changes are pushed to `docs/` directory
-- Deployed at: https://gemini-cli-templates.vercel.app-templates.vercel.app (pmaojo.github.io/gemini-cli-templates)
+- Deployed at: https://gemini-cli-templates.vercel.app (pmaojo.github.io/gemini-cli-templates)
 - Vercel configuration in `vercel.json` for routing
 
 ## Architecture
