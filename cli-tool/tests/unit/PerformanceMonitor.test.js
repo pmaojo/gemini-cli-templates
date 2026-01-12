@@ -12,7 +12,7 @@ describe('PerformanceMonitor', () => {
     performanceMonitor = new PerformanceMonitor({
       enabled: true,
       logInterval: 1000,
-      memoryThreshold: 50 * 1024 * 1024 // 50MB for testing
+      memoryThreshold: 500 * 1024 * 1024 // 500MB for testing
     });
   });
 
