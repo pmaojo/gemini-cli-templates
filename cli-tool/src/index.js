@@ -1841,7 +1841,7 @@ async function installMultipleComponents(options, targetDir) {
           successfullyInstalled++;
         } catch (error) {
           console.log(chalk.red(`❌ Failed to install extension "${extension}": ${error.message}`));
-          console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g gemini-chat-cli)'));
+          console.log(chalk.gray('  Make sure you have Gemini CLI installed globally (npm install -g @google/gemini-cli)'));
         }
       } else {
         console.log(chalk.red(`❌ Extension "${extension}" not found or missing repository URL`));
