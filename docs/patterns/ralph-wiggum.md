@@ -7,67 +7,169 @@ description: "Agentic Engineering: Iteration beats perfection. Fix code autonomo
 
 > "I'm doing agentic engineering!" - Ralph
 
-![Ralph Wiggum](https://i.imgur.com/example-ralph.png)
+![Ralph Wiggum Pattern Flowchart](../images/ralph-flowchart.png)
 
-The **Ralph Wiggum** pattern flips the standard "prompt-and-pray" dynamic of AI coding. Instead of hoping for a perfect zero-shot solution, Ralph assumes the agent will make mistakes and wraps it in a feedback loop that iterates until success.
+Ralph is an autonomous AI agent loop that runs **Gemini CLI** repeatedly until all PRD items are complete. Each iteration is a fresh Gemini instance with clean context. Memory persists via git history, `progress.txt`, and `prd.json`.
 
-## Core Philosophy
+Based on [Geoffrey Huntley's Ralph pattern](https://ghuntley.com/ralph/).
 
-1.  **Iteration > Perfection**: The agent doesn't need to be perfect; it needs to be persistent.
-2.  **Deterministic Failure is Data**: Test failures and linter errors are fed back to the agent as precise instructions.
-3.  **Green State Ratcheting**: Every time the verification passes, we commit. We never slide back.
+## Prerequisites
 
-## How to Use
+*   Gemini CLI installed and authenticated
+*   `jq` installed (`brew install jq` on macOS)
+*   A git repository for your project
 
-### 1. The Spec Interview (Architect)
+## Setup
 
-Don't write a long prompt. Let the AI interview you.
+### Option 1: Install as a Skill
 
-```bash
-./cli-tool/components/skills/development/ralph-wiggum/scripts/architect.sh
-```
-
-This starts an interactive session where the **Spec Architect** asks you about your goals, tech stack, and constraints. It outputs a `SPECS.md` file.
-
-### 2. The Ralph Loop (AFK Mode)
-
-Once you have a spec and a verification command (like `npm test`), launch Ralph.
+Install the skill directly into your project or globally using the Gemini Templates CLI.
 
 ```bash
-./cli-tool/components/skills/development/ralph-wiggum/scripts/ralph.sh \
-  --spec SPECS.md \
-  --verify "npm test" \
-  --max-iter 20 \
-  --afk
+# Install locally
+npx gemini-cli-templates --skill development/ralph-wiggum
 ```
 
-**What Ralph does:**
-1.  Reads your `SPECS.md`.
-2.  Writes code.
-3.  Runs `npm test`.
-4.  **If fail**: Reads the error log, fixes the code, and retries.
-5.  **If pass**: Commits the code (`git commit`) and stops.
+### Option 2: Manual Setup
 
-### 3. Notion Integration (Optional)
-
-Collaborate on specs with your team in Notion.
+Copy the ralph files into your project:
 
 ```bash
-# Push local spec to Notion
-./cli-tool/components/skills/development/ralph-wiggum/scripts/notion-sync.sh push
-
-# Pull updated spec from Notion
-./cli-tool/components/skills/development/ralph-wiggum/scripts/notion-sync.sh pull
+# From your project root
+mkdir -p scripts/ralph
+cp -r cli-tool/components/skills/development/ralph-wiggum/scripts/* scripts/ralph/
+chmod +x scripts/ralph/ralph.sh
 ```
 
-*(Requires `NOTION_TOKEN` and `NOTION_PAGE_ID` in `.gemini/notion-config.json`)*
+### Configure Auto-Handoff (Recommended)
 
-## Components
+Add to `~/.gemini/settings.json`:
 
-This pattern is implemented via the `ralph-wiggum` skill in the Gemini CLI Templates.
+```json
+{
+  "gemini.experimental.autoHandoff": { "context": 90 }
+}
+```
 
-*   **`architect.sh`**: Requirements gathering agent.
-*   **`ralph.sh`**: The autonomous loop engine.
-*   **`notion-sync.sh`**: Bridge for docs-as-code.
-*   **`commands/ralph.md`**: Specialized persona for the runner.
-*   **`commands/spec-architect.md`**: Specialized persona for the interviewer.
+This enables automatic handoff when context fills up, allowing Ralph to handle large stories that exceed a single context window.
+
+## Workflow
+
+### 1. Create a PRD
+
+Use a PRD skill or manually create a detailed requirements document. Save it to `tasks/prd-[feature-name].md`.
+
+### 2. Convert PRD to Ralph Format
+
+You need a `prd.json` file with user stories structured for autonomous execution.
+
+```json
+{
+  "feature": "My Feature",
+  "branchName": "feat/my-feature",
+  "userStories": [
+    {
+      "id": "1",
+      "title": "Setup project structure",
+      "passes": false
+    }
+  ]
+}
+```
+
+### 3. Run Ralph
+
+```bash
+./scripts/ralph/ralph.sh [max_iterations]
+```
+
+Default is 10 iterations.
+
+**Ralph will:**
+1.  Create a feature branch (from PRD `branchName`)
+2.  Pick the highest priority story where `passes: false`
+3.  Implement that single story
+4.  Run quality checks (typecheck, tests)
+5.  Commit if checks pass
+6.  Update `prd.json` to mark story as `passes: true`
+7.  Append learnings to `progress.txt`
+8.  Repeat until all stories pass or max iterations reached
+
+## Key Files
+
+| File | Purpose |
+| :--- | :--- |
+| `ralph.sh` | The bash loop that spawns fresh Gemini instances |
+| `prompt.md` | Instructions given to each Gemini instance |
+| `prd.json` | User stories with passes status (the task list) |
+| `prd.json.example` | Example PRD format for reference |
+| `progress.txt` | Append-only learnings for future iterations |
+| `flowchart/` | Interactive visualization of how Ralph works |
+
+## Critical Concepts
+
+### Each Iteration = Fresh Context
+Each iteration spawns a new Gemini instance with clean context. The only memory between iterations is:
+*   Git history (commits from previous iterations)
+*   `progress.txt` (learnings and context)
+*   `prd.json` (which stories are done)
+
+### Small Tasks
+Each PRD item should be small enough to complete in one context window. If a task is too big, the LLM runs out of context before finishing and produces poor code.
+
+**Right-sized stories:**
+*   Add a database column and migration
+*   Add a UI component to an existing page
+*   Update a server action with new logic
+*   Add a filter dropdown to a list
+
+**Too big (split these):**
+*   "Build the entire dashboard"
+*   "Add authentication"
+*   "Refactor the API"
+
+### AGENTS.md Updates Are Critical
+After each iteration, Ralph updates the relevant `AGENTS.md` files with learnings. This is key because Gemini automatically reads these files, so future iterations (and future human developers) benefit from discovered patterns, gotchas, and conventions.
+
+**Examples of what to add to `AGENTS.md`:**
+*   Patterns discovered ("this codebase uses X for Y")
+*   Gotchas ("do not forget to update Z when changing W")
+*   Useful context ("the settings panel is in component X")
+
+### Feedback Loops
+Ralph only works if there are feedback loops:
+*   Typecheck catches type errors
+*   Tests verify behavior
+*   CI must stay green (broken code compounds across iterations)
+
+### Browser Verification for UI Stories
+Frontend stories must include "Verify in browser" instructions in acceptance criteria. Ralph will use the `frontend_verification_instructions` tool to navigate to the page, interact with the UI, and confirm changes work.
+
+## Stop Condition
+When all stories have `passes: true`, Ralph outputs `<promise>COMPLETE</promise>` and the loop exits.
+
+## Debugging
+
+Check current state:
+```bash
+# See which stories are done
+cat prd.json | jq '.userStories[] | {id, title, passes}'
+
+# See learnings from previous iterations
+cat progress.txt
+
+# Check git history
+git log --oneline -10
+```
+
+## Customizing prompt.md
+Edit `prompt.md` to customize Ralph's behavior for your project:
+*   Add project-specific quality check commands
+*   Include codebase conventions
+*   Add common gotchas for your stack
+
+## Archiving
+Ralph automatically archives previous runs when you start a new feature (different `branchName`). Archives are saved to `archive/YYYY-MM-DD-feature-name/`.
+
+## References
+*   [Geoffrey Huntley's Ralph article](https://ghuntley.com/ralph/)

@@ -1,205 +1,92 @@
 #!/bin/bash
-set -uo pipefail
+# Ralph Wiggum - Long-running AI agent loop
+# Usage: ./ralph.sh [max_iterations]
 
-# Ralph Wiggum - Agentic Loop Engine
-# "I'm doing agentic engineering!"
+set -e
 
-# Colors and formatting
-BOLD='\033[1m'
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-BLUE='\033[0;34m'
-YELLOW='\033[1;33m'
-CYAN='\033[0;36m'
-NC='\033[0m' # No Color
+MAX_ITERATIONS=${1:-10}
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PRD_FILE="$SCRIPT_DIR/prd.json"
+PROGRESS_FILE="$SCRIPT_DIR/progress.txt"
+ARCHIVE_DIR="$SCRIPT_DIR/archive"
+LAST_BRANCH_FILE="$SCRIPT_DIR/.last-branch"
 
-# Defaults
-MAX_ITERATIONS=10
-VERIFY_CMD="npm test" # Default, but should be overridden
-MODE="HITL" # HITL or AFK
-STATE_FILE=".gemini/ralph-progress.md"
-LOG_FILE=".gemini/ralph-last-run.log"
-INITIAL_PROMPT=""
-SPEC_FILE=""
-GEMINI_BIN="gemini" # Assumes 'gemini' is in PATH
+# Ensure jq is installed
+if ! command -v jq &> /dev/null; then
+    echo "Error: jq is required but not installed."
+    echo "Please install it (e.g., brew install jq, sudo apt-get install jq)"
+    exit 1
+fi
 
-usage() {
-  echo -e "${BOLD}Ralph Wiggum - Agentic Loop${NC}"
-  echo "Usage: $0 [options] \"<prompt>\""
-  echo ""
-  echo "Options:"
-  echo "  --verify <cmd>   Command to verify success (default: 'npm test')"
-  echo "  --max-iter <n>   Maximum iterations (default: 10)"
-  echo "  --spec <file>    Path to SPECS.md (Specification file)"
-  echo "  --afk            Run in AFK mode (no human confirmation)"
-  echo "  --help           Show this help"
-  echo ""
-  exit 1
-}
+# Archive previous run if branch changed
+if [ -f "$PRD_FILE" ] && [ -f "$LAST_BRANCH_FILE" ]; then
+  CURRENT_BRANCH=$(jq -r '.branchName // empty' "$PRD_FILE" 2>/dev/null || echo "")
+  LAST_BRANCH=$(cat "$LAST_BRANCH_FILE" 2>/dev/null || echo "")
 
-# Parse arguments
-while [[ $# -gt 0 ]]; do
-  key="$1"
-  case $key in
-    --verify)
-      VERIFY_CMD="$2"
-      shift 2
-      ;;
-    --max-iter)
-      MAX_ITERATIONS="$2"
-      shift 2
-      ;;
-    --spec)
-      SPEC_FILE="$2"
-      shift 2
-      ;;
-    --afk)
-      MODE="AFK"
-      shift
-      ;;
-    --help)
-      usage
-      ;;
-    *)
-      if [[ -z "$INITIAL_PROMPT" ]]; then
-        INITIAL_PROMPT="$1"
-        shift
-      else
-        echo "Error: Unknown argument '$1'"
-        usage
-      fi
-      ;;
-  esac
-done
+  if [ -n "$CURRENT_BRANCH" ] && [ -n "$LAST_BRANCH" ] && [ "$CURRENT_BRANCH" != "$LAST_BRANCH" ]; then
+    # Archive the previous run
+    DATE=$(date +%Y-%m-%d)
+    # Strip "ralph/" prefix from branch name for folder
+    FOLDER_NAME=$(echo "$LAST_BRANCH" | sed 's|^ralph/||')
+    ARCHIVE_FOLDER="$ARCHIVE_DIR/$DATE-$FOLDER_NAME"
 
-if [[ -z "$INITIAL_PROMPT" ]]; then
-  # Allow empty prompt if spec is provided, defaulting to "Implement the spec"
-  if [[ -n "$SPEC_FILE" ]]; then
-    INITIAL_PROMPT="Implement the requirements defined in $SPEC_FILE"
-  else
-    echo -e "${RED}Error: No prompt provided.${NC}"
-    usage
+    echo "Archiving previous run: $LAST_BRANCH"
+    mkdir -p "$ARCHIVE_FOLDER"
+    [ -f "$PRD_FILE" ] && cp "$PRD_FILE" "$ARCHIVE_FOLDER/"
+    [ -f "$PROGRESS_FILE" ] && cp "$PROGRESS_FILE" "$ARCHIVE_FOLDER/"
+    echo "   Archived to: $ARCHIVE_FOLDER"
+
+    # Reset progress file for new run
+    echo "# Ralph Progress Log" > "$PROGRESS_FILE"
+    echo "Started: $(date)" >> "$PROGRESS_FILE"
+    echo "---" >> "$PROGRESS_FILE"
   fi
 fi
 
-# Ensure .gemini directory exists
-mkdir -p .gemini
-
-# Initialize
-CURRENT_ITERATION=1
-CURRENT_PROMPT="$INITIAL_PROMPT"
-
-echo -e "${BLUE}=======================================${NC}"
-echo -e "${BOLD}🤖 Ralph Wiggum Initialized${NC}"
-echo -e "   Mode: ${YELLOW}$MODE${NC}"
-echo -e "   Task: $INITIAL_PROMPT"
-echo -e "   Verify: $VERIFY_CMD"
-echo -e "   Max Iter: $MAX_ITERATIONS"
-echo -e "${BLUE}=======================================${NC}"
-
-# Log start
-echo "# Ralph Wiggum Session - $(date)" > "$STATE_FILE"
-echo "Task: $INITIAL_PROMPT" >> "$STATE_FILE"
-echo "" >> "$STATE_FILE"
-
-while [[ $CURRENT_ITERATION -le $MAX_ITERATIONS ]]; do
-  echo -e "\n${CYAN}🔄 Iteration $CURRENT_ITERATION / $MAX_ITERATIONS${NC}"
-
-  # 1. Run the Agent
-  echo -e "${BOLD}Thinking...${NC}"
-
-  # Prepare input for Gemini
-  # We construct a wrapper prompt to enforce the persona
-
-  SPEC_CONTENT=""
-  if [[ -n "$SPEC_FILE" ]] && [[ -f "$SPEC_FILE" ]]; then
-    SPEC_CONTENT="
-    --- SPECIFICATIONS ($SPEC_FILE) ---
-    $(cat "$SPEC_FILE")
-    -----------------------------------
-    "
+# Track current branch
+if [ -f "$PRD_FILE" ]; then
+  CURRENT_BRANCH=$(jq -r '.branchName // empty' "$PRD_FILE" 2>/dev/null || echo "")
+  if [ -n "$CURRENT_BRANCH" ]; then
+    echo "$CURRENT_BRANCH" > "$LAST_BRANCH_FILE"
   fi
+fi
 
-  FULL_PROMPT="You are Ralph, an agentic engineer. Your goal is to pass the verification command: '$VERIFY_CMD'.
+# Initialize progress file if it doesn't exist
+if [ ! -f "$PROGRESS_FILE" ]; then
+  echo "# Ralph Progress Log" > "$PROGRESS_FILE"
+  echo "Started: $(date)" >> "$PROGRESS_FILE"
+  echo "---" >> "$PROGRESS_FILE"
+fi
 
-  $SPEC_CONTENT
+echo "Starting Ralph - Max iterations: $MAX_ITERATIONS"
 
-  Current Task context:
-  $CURRENT_PROMPT
+for i in $(seq 1 $MAX_ITERATIONS); do
+  echo ""
+  echo "═══════════════════════════════════════════════════════"
+  echo "  Ralph Iteration $i of $MAX_ITERATIONS"
+  echo "═══════════════════════════════════════════════════════"
 
-  Please implement the necessary changes to the codebase. Do not ask for permission, just write the code."
+  # Run gemini with the ralph prompt
+  # Note: Assuming 'gemini' is the CLI command. If it requires specific flags like --dangerously-allow-all,
+  # they should be added here or configured in the environment.
+  # The original script used: amp --dangerously-allow-all
+  # We use: gemini run (or equivalent)
 
-  if [[ "$MODE" == "HITL" ]]; then
-     echo -e "${YELLOW}HITL Mode: Press Enter to run this iteration (or Ctrl+C to stop)...${NC}"
-     read -r
-  fi
+  OUTPUT=$(cat "$SCRIPT_DIR/prompt.md" | gemini run - 2>&1 | tee /dev/stderr) || true
 
-  # Call Gemini CLI
-  # We pipe the prompt to gemini and capture output to ensure it ran
-  # Assuming standard input usage or arguments.
-  # Note: Adjust command based on actual Gemini CLI syntax available in environment
-  $GEMINI_BIN "$FULL_PROMPT"
-
-  GEMINI_EXIT_CODE=$?
-  if [[ $GEMINI_EXIT_CODE -ne 0 ]]; then
-      echo -e "${RED}❌ Gemini crashed or failed to run.${NC}"
-      exit 1
-  fi
-
-  # 2. Verify
-  echo -e "${BOLD}Verifying work ($VERIFY_CMD)...${NC}"
-  set +e # Allow verify command to fail
-  eval "$VERIFY_CMD" > "$LOG_FILE" 2>&1
-  VERIFY_EXIT_CODE=$?
-  set -e
-
-  if [[ $VERIFY_EXIT_CODE -eq 0 ]]; then
-    # SUCCESS
-    echo -e "${GREEN}✅ Verification Passed!${NC}"
-
-    # Commit
-    git add .
-    git commit -m "Ralph: Task completed (Iter $CURRENT_ITERATION)"
-
-    echo -e "## Iteration $CURRENT_ITERATION: ${GREEN}SUCCESS${NC}" >> "$STATE_FILE"
-    echo "Work committed."
+  # Check for completion signal
+  if echo "$OUTPUT" | grep -q "<promise>COMPLETE</promise>"; then
+    echo ""
+    echo "Ralph completed all tasks!"
+    echo "Completed at iteration $i of $MAX_ITERATIONS"
     exit 0
-  else
-    # FAILURE
-    echo -e "${RED}❌ Verification Failed${NC}"
-
-    # Extract error log (tail last 20 lines for brevity in prompt, but maybe full log is better)
-    ERROR_LOG=$(cat "$LOG_FILE")
-
-    echo -e "## Iteration $CURRENT_ITERATION: ${RED}FAILED${NC}" >> "$STATE_FILE"
-    echo "\`\`\`" >> "$STATE_FILE"
-    tail -n 10 "$LOG_FILE" >> "$STATE_FILE"
-    echo "\`\`\`" >> "$STATE_FILE"
-
-    # Construct next prompt
-    CURRENT_PROMPT="The previous iteration failed the verification check ($VERIFY_CMD).
-
-    Here is the output log:
-
-    \`\`\`
-    $ERROR_LOG
-    \`\`\`
-
-    Please analyze the error, fix the code, and try again."
-
-    # 3. Git checkpointing (optional strategy: revert or commit broken state?)
-    # Ralph article suggests: "Commit after each feature".
-    # But if it's broken, maybe we don't commit yet?
-    # Or we commit with "WIP: Failed attempt" so the agent sees history?
-    # Let's commit as WIP to preserve history for the agent.
-    git add .
-    git commit -m "Ralph: WIP - Verification failed (Iter $CURRENT_ITERATION)" || true # Ignore empty commit errors
-
   fi
 
-  CURRENT_ITERATION=$((CURRENT_ITERATION + 1))
+  echo "Iteration $i complete. Continuing..."
+  sleep 2
 done
 
-echo -e "${RED}🛑 Max iterations reached without success.${NC}"
-echo "Check $STATE_FILE for details."
+echo ""
+echo "Ralph reached max iterations ($MAX_ITERATIONS) without completing all tasks."
+echo "Check $PROGRESS_FILE for status."
 exit 1
