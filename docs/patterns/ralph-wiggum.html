@@ -65,85 +65,94 @@
             <div class="terminal-command-header">
                 <div class="header-content">
                     <h1 class="search-title"><span class="terminal-dot"></span><strong>Ralph Wiggum Pattern</strong></h1>
-                    <p class="search-subtitle">⎿ Agentic Engineering: Iteration beats perfection</p>
+                    <p class="search-subtitle">⎿ Implementation of the iterative, self-referential AI development loop</p>
                 </div>
             </div>
 
-            <section class="intro-section" style="max-width: 800px; margin: 0 auto;">
+            <section class="intro-section" style="max-width: 900px; margin: 0 auto;">
                 <div class="command-block">
+                    <div class="command-label"># What is Ralph?</div>
                     <blockquote style="border-left: 4px solid var(--text-accent); padding-left: 1rem; margin: 1.5rem 0; font-style: italic; color: var(--text-secondary);">
                         "I'm doing agentic engineering!" - Ralph
                     </blockquote>
 
-                    <div style="text-align: center; margin: 2rem 0;">
-                        <img src="https://i.imgur.com/example-ralph.png" alt="Ralph Wiggum" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border-primary);">
+                    <div class="image-container" style="margin: 2rem 0; text-align: center;">
+                        <img src="../images/ralph-flowchart.png" alt="Ralph Wiggum Pattern Flowchart" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--border-color);">
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">Figure 1: The Autonomous Feedback Loop</p>
                     </div>
 
-                    <p>The <strong>Ralph Wiggum</strong> pattern flips the standard "prompt-and-pray" dynamic of AI coding. Instead of hoping for a perfect zero-shot solution, Ralph assumes the agent will make mistakes and wraps it in a feedback loop that iterates until success.</p>
+                    <p>Ralph is an autonomous AI agent loop that runs <strong>Gemini CLI</strong> repeatedly until all PRD items are complete. Each iteration is a fresh Gemini instance with clean context. Memory persists via git history, <code>progress.txt</code>, and <code>prd.json</code>.</p>
+
+                    <p>Based on <a href="https://ghuntley.com/ralph/" target="_blank" style="color: var(--text-info);">Geoffrey Huntley's Ralph pattern</a>.</p>
                 </div>
 
                 <div class="command-block">
-                    <div class="command-label"># Core Philosophy</div>
+                    <div class="command-label"># Prerequisites</div>
                     <ul style="list-style-type: none; padding-left: 0; color: var(--text-secondary);">
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong style="color: var(--text-primary);">1. Iteration > Perfection:</strong> The agent doesn't need to be perfect; it needs to be persistent.
-                        </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong style="color: var(--text-primary);">2. Deterministic Failure is Data:</strong> Test failures and linter errors are fed back to the agent as precise instructions.
-                        </li>
-                        <li>
-                            <strong style="color: var(--text-primary);">3. Green State Ratcheting:</strong> Every time the verification passes, we commit. We never slide back.
-                        </li>
+                        <li style="margin-bottom: 0.5rem;">• Gemini CLI installed and authenticated</li>
+                        <li style="margin-bottom: 0.5rem;">• <code>jq</code> installed (<code>brew install jq</code> on macOS)</li>
+                        <li>• A git repository for your project</li>
                     </ul>
                 </div>
 
                 <div class="command-block">
-                    <div class="command-label">$ Installation</div>
-                    <div class="command-description">Install the Ralph Wiggum skill using the Gemini CLI Templates tool.</div>
+                    <div class="command-label"># Setup</div>
 
+                    <h3 style="color: var(--text-primary); margin-bottom: 0.5rem;">Option 1: Install as a Skill</h3>
+                    <p style="margin-bottom: 1rem;">Install the skill directly into your project or globally using the Gemini Templates CLI.</p>
                     <div class="command-line">
                         <span class="prompt">$</span>
                         <code class="command">npx gemini-cli-templates --skill development/ralph-wiggum</code>
                         <button class="copy-btn" onclick="copyToClipboard('npx gemini-cli-templates --skill development/ralph-wiggum')">Copy</button>
                     </div>
+
+                    <h3 style="color: var(--text-primary); margin: 2rem 0 0.5rem;">Option 2: Manual Setup</h3>
+                    <p style="margin-bottom: 1rem;">Copy the ralph files into your project:</p>
+                    <div style="background: var(--bg-primary); padding: 1rem; border-radius: 6px; margin: 1rem 0; font-family: monospace; font-size: 0.85rem; color: var(--text-info);">
+                        # From your project root<br>
+                        mkdir -p scripts/ralph<br>
+                        cp -r cli-tool/components/skills/development/ralph-wiggum/scripts/* scripts/ralph/<br>
+                        chmod +x scripts/ralph/ralph.sh
+                    </div>
+
+                    <h3 style="color: var(--text-primary); margin: 2rem 0 0.5rem;">Configure Auto-Handoff (Recommended)</h3>
+                    <p style="margin-bottom: 1rem;">Add to <code>~/.gemini/settings.json</code>:</p>
+                    <div style="background: var(--bg-primary); padding: 1rem; border-radius: 6px; margin: 1rem 0; font-family: monospace; font-size: 0.85rem; color: var(--text-info);">
+                        {<br>
+                        &nbsp;&nbsp;"gemini.experimental.autoHandoff": { "context": 90 }<br>
+                        }
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">This enables automatic handoff when context fills up, allowing Ralph to handle large stories that exceed a single context window.</p>
                 </div>
 
                 <div class="command-block">
-                    <div class="command-label">$ How to Use</div>
+                    <div class="command-label"># Workflow</div>
 
                     <div class="step-card" style="margin-bottom: 1.5rem;">
                         <div class="step-number">1</div>
                         <div class="step-content">
-                            <h3>The Spec Interview (Architect)</h3>
-                            <p>Don't write a long prompt. Let the AI interview you.</p>
-                            <div class="command-line">
-                                <span class="prompt">$</span>
-                                <code class="command">./.gemini/skills/ralph-wiggum/scripts/architect.sh</code>
-                                <button class="copy-btn" onclick="copyToClipboard('./.gemini/skills/ralph-wiggum/scripts/architect.sh')">Copy</button>
-                            </div>
-                            <p style="margin-top: 0.5rem; font-size: 0.8rem;">This starts an interactive session where the <strong>Spec Architect</strong> asks you about your goals, tech stack, and constraints. It outputs a <code>SPECS.md</code> file.</p>
+                            <h3>Create a PRD</h3>
+                            <p>Use a PRD skill or manually create a detailed requirements document. Save it to <code>tasks/prd-[feature-name].md</code>.</p>
                         </div>
                     </div>
 
                     <div class="step-card" style="margin-bottom: 1.5rem;">
                         <div class="step-number">2</div>
                         <div class="step-content">
-                            <h3>The Ralph Loop (AFK Mode)</h3>
-                            <p>Once you have a spec and a verification command (like <code>npm test</code>), launch Ralph.</p>
-                            <div class="command-line">
-                                <span class="prompt">$</span>
-                                <code class="command">./.gemini/skills/ralph-wiggum/scripts/ralph.sh --spec SPECS.md --verify "npm test" --max-iter 20 --afk</code>
-                                <button class="copy-btn" onclick="copyToClipboard('./.gemini/skills/ralph-wiggum/scripts/ralph.sh --spec SPECS.md --verify &quot;npm test&quot; --max-iter 20 --afk')">Copy</button>
-                            </div>
-                            <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
-                                <strong>What Ralph does:</strong>
-                                <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                                    <li>Reads your <code>SPECS.md</code>.</li>
-                                    <li>Writes code.</li>
-                                    <li>Runs <code>npm test</code>.</li>
-                                    <li><strong>If fail</strong>: Reads the error log, fixes the code, and retries.</li>
-                                    <li><strong>If pass</strong>: Commits the code (<code>git commit</code>) and stops.</li>
-                                </ol>
+                            <h3>Convert PRD to Ralph Format</h3>
+                            <p>You need a <code>prd.json</code> file with user stories structured for autonomous execution.</p>
+                            <div style="background: var(--bg-primary); padding: 1rem; border-radius: 6px; margin: 1rem 0; font-family: monospace; font-size: 0.85rem; color: var(--text-info);">
+                                {<br>
+                                &nbsp;&nbsp;"feature": "My Feature",<br>
+                                &nbsp;&nbsp;"branchName": "feat/my-feature",<br>
+                                &nbsp;&nbsp;"userStories": [<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"id": "1",<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"title": "Setup project structure",<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"passes": false<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;]<br>
+                                }
                             </div>
                         </div>
                     </div>
@@ -151,27 +160,130 @@
                     <div class="step-card">
                         <div class="step-number">3</div>
                         <div class="step-content">
-                            <h3>Notion Integration (Optional)</h3>
-                            <p>Collaborate on specs with your team in Notion.</p>
+                            <h3>Run Ralph</h3>
                             <div class="command-line">
                                 <span class="prompt">$</span>
-                                <code class="command">./.gemini/skills/ralph-wiggum/scripts/notion-sync.sh push</code>
-                                <button class="copy-btn" onclick="copyToClipboard('./.gemini/skills/ralph-wiggum/scripts/notion-sync.sh push')">Copy</button>
+                                <code class="command">./scripts/ralph/ralph.sh 10</code>
+                                <button class="copy-btn" onclick="copyToClipboard('./scripts/ralph/ralph.sh 10')">Copy</button>
                             </div>
-                            <p style="margin-top: 0.5rem; font-size: 0.8rem;"><em>(Requires <code>NOTION_TOKEN</code> and <code>NOTION_PAGE_ID</code> in <code>.gemini/notion-config.json</code>)</em></p>
+                            <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                                <strong>Ralph will:</strong>
+                                <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                                    <li>Create a feature branch (from PRD <code>branchName</code>)</li>
+                                    <li>Pick the highest priority story where <code>passes: false</code></li>
+                                    <li>Implement that single story</li>
+                                    <li>Run quality checks (typecheck, tests)</li>
+                                    <li>Commit if checks pass</li>
+                                    <li>Update <code>prd.json</code> to mark story as <code>passes: true</code></li>
+                                    <li>Append learnings to <code>progress.txt</code></li>
+                                    <li>Repeat until all stories pass or max iterations reached</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="command-block">
-                    <div class="command-label"># Components</div>
-                    <ul style="list-style-type: none; padding-left: 0; color: var(--text-secondary);">
-                        <li style="margin-bottom: 0.5rem;"><code>architect.sh</code>: Requirements gathering agent.</li>
-                        <li style="margin-bottom: 0.5rem;"><code>ralph.sh</code>: The autonomous loop engine.</li>
-                        <li style="margin-bottom: 0.5rem;"><code>notion-sync.sh</code>: Bridge for docs-as-code.</li>
-                        <li style="margin-bottom: 0.5rem;"><code>commands/ralph.md</code>: Specialized persona for the runner.</li>
-                        <li><code>commands/spec-architect.md</code>: Specialized persona for the interviewer.</li>
-                    </ul>
+                    <div class="command-label"># Key Files</div>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <th style="text-align: left; padding: 0.5rem; color: var(--text-accent);">File</th>
+                            <th style="text-align: left; padding: 0.5rem; color: var(--text-accent);">Purpose</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 0.5rem; font-family: monospace;">ralph.sh</td>
+                            <td style="padding: 0.5rem;">The bash loop that spawns fresh Gemini instances</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 0.5rem; font-family: monospace;">prompt.md</td>
+                            <td style="padding: 0.5rem;">Instructions given to each Gemini instance</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 0.5rem; font-family: monospace;">prd.json</td>
+                            <td style="padding: 0.5rem;">User stories with passes status (the task list)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 0.5rem; font-family: monospace;">prd.json.example</td>
+                            <td style="padding: 0.5rem;">Example PRD format for reference</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; font-family: monospace;">progress.txt</td>
+                            <td style="padding: 0.5rem;">Append-only learnings for future iterations</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="command-block">
+                    <div class="command-label"># Critical Concepts</div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">Each Iteration = Fresh Context</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Each iteration spawns a new Gemini instance with clean context. The only memory between iterations is:</p>
+                        <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                            <li>Git history (commits from previous iterations)</li>
+                            <li><code>progress.txt</code> (learnings and context)</li>
+                            <li><code>prd.json</code> (which stories are done)</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">Small Tasks</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Each PRD item should be small enough to complete in one context window. If a task is too big, the LLM runs out of context before finishing and produces poor code.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
+                            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; border-left: 3px solid var(--text-success);">
+                                <strong style="color: var(--text-success);">✅ Right-sized stories:</strong>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.85rem;">
+                                    <li>Add a database column and migration</li>
+                                    <li>Add a UI component to an existing page</li>
+                                    <li>Update a server action with new logic</li>
+                                    <li>Add a filter dropdown to a list</li>
+                                </ul>
+                            </div>
+                            <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; border-left: 3px solid var(--text-error);">
+                                <strong style="color: var(--text-error);">❌ Too big (split these):</strong>
+                                <ul style="padding-left: 1.2rem; margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.85rem;">
+                                    <li>"Build the entire dashboard"</li>
+                                    <li>"Add authentication"</li>
+                                    <li>"Refactor the API"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">AGENTS.md Updates Are Critical</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">After each iteration, Ralph updates the relevant <code>AGENTS.md</code> files with learnings. This is key because Gemini automatically reads these files, so future iterations (and future human developers) benefit from discovered patterns, gotchas, and conventions.</p>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-primary); font-size: 1rem; margin-bottom: 0.5rem;">Feedback Loops</h3>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary);">Ralph only works if there are feedback loops:</p>
+                        <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                            <li>Typecheck catches type errors</li>
+                            <li>Tests verify behavior</li>
+                            <li>CI must stay green (broken code compounds across iterations)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="command-block">
+                    <div class="command-label"># Debugging</div>
+                    <div style="background: var(--bg-primary); padding: 1rem; border-radius: 6px; margin: 1rem 0; font-family: monospace; font-size: 0.85rem; color: var(--text-info);">
+                        # See which stories are done<br>
+                        cat prd.json | jq '.userStories[] | {id, title, passes}'<br><br>
+                        # See learnings from previous iterations<br>
+                        cat progress.txt<br><br>
+                        # Check git history<br>
+                        git log --oneline -10
+                    </div>
+                </div>
+
+                <div class="command-block">
+                    <div class="command-label"># Learn More</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">
+                        Original technique: <a href="https://ghuntley.com/ralph/" target="_blank" style="color: var(--text-info);">https://ghuntley.com/ralph/</a><br>
+                        Upstream Repository: <a href="https://github.com/snarktank/ralph" target="_blank" style="color: var(--text-info);">https://github.com/snarktank/ralph</a>
+                    </p>
                 </div>
             </section>
         </div>
@@ -216,7 +328,6 @@
     <script>
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
-                // You could add a toast notification here
                 alert('Command copied to clipboard!');
             }).catch(err => {
                 console.error('Failed to copy: ', err);
