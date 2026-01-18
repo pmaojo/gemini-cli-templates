@@ -155,7 +155,7 @@ async function loadComponentsForSearch() {
                                 component.description,
                                 component.category,
                                 ...(component.tags || []),
-                                component.keywords || '',
+                                Array.isArray(component.keywords) ? component.keywords.join(' ') : (component.keywords || ''),
                                 component.path || ''
                             ].filter(Boolean).join(' ').toLowerCase(),
                             
@@ -193,7 +193,7 @@ async function loadComponentsForSearch() {
                             component.description,
                             component.category,
                             ...(component.tags || []),
-                            component.keywords || '',
+                            Array.isArray(component.keywords) ? component.keywords.join(' ') : (component.keywords || ''),
                             component.path || ''
                         ].filter(Boolean).join(' ').toLowerCase(),
                         
@@ -363,7 +363,13 @@ function calculateMatchScore(component, query, category) {
     
     // Keywords match (for settings/hooks)
     if (component.keywords) {
-        const keywordMatch = component.keywords.toLowerCase().includes(query);
+        let keywordMatch = false;
+        if (Array.isArray(component.keywords)) {
+            keywordMatch = component.keywords.some(k => k && k.toLowerCase().includes(query));
+        } else if (typeof component.keywords === 'string') {
+            keywordMatch = component.keywords.toLowerCase().includes(query);
+        }
+        
         if (keywordMatch) {
             score += 25;
         }
@@ -391,7 +397,15 @@ function getMatchType(component, query, category) {
     if (name.includes(query)) return 'name';
     if (description.includes(query)) return 'description';
     if (component.tags && component.tags.some(tag => tag.toLowerCase().includes(query))) return 'tag';
-    if (component.keywords && component.keywords.toLowerCase().includes(query)) return 'keyword';
+    
+    if (component.keywords) {
+        if (Array.isArray(component.keywords)) {
+            if (component.keywords.some(k => k && k.toLowerCase().includes(query))) return 'keyword';
+        } else if (typeof component.keywords === 'string') {
+            if (component.keywords.toLowerCase().includes(query)) return 'keyword';
+        }
+    }
+    
     if (component.path && component.path.toLowerCase().includes(query)) return 'path';
     
     return 'other';

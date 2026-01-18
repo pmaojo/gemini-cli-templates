@@ -469,6 +469,80 @@ def generate_components_json():
             if os.path.isdir(category_path):
                 for file_name in os.listdir(category_path):
                     file_path = os.path.join(category_path, file_name)
+                    
+                    # Handle directory-based components (e.g. agents/category/agent-name/GEMINI.md)
+                    if os.path.isdir(file_path):
+                        # check for GEMINI.md
+                        manifest_path = os.path.join(file_path, 'GEMINI.md')
+                        if os.path.isfile(manifest_path):
+                            name = file_name # Use directory name as component name
+                            
+                            # Read manifest content
+                            content = ''
+                            description = ''
+                            tags = []
+                            keywords = []
+                            
+                            try:
+                                with open(manifest_path, 'r', encoding='utf-8') as f:
+                                    content = f.read()
+                                
+                                # Extract description from frontmatter
+                                if content.startswith('---'):
+                                    frontmatter_end = content.find('---', 3)
+                                    if frontmatter_end != -1:
+                                        frontmatter = content[3:frontmatter_end]
+                                        for line in frontmatter.split('\n'):
+                                            line = line.strip()
+                                            if line.startswith('description:'):
+                                                description = line.split('description:', 1)[1].strip().strip('"').strip("'")
+                                            elif line.startswith('tags:'):
+                                                try:
+                                                    tags_str = line.split('tags:', 1)[1].strip().strip('[]')
+                                                    tags = [t.strip().strip('"').strip("'") for t in tags_str.split(',') if t.strip()]
+                                                except:
+                                                    pass
+                                            elif line.startswith('keywords:'):
+                                                try:
+                                                    kw_str = line.split('keywords:', 1)[1].strip().strip('[]')
+                                                    keywords = [k.strip().strip('"').strip("'") for k in kw_str.split(',') if k.strip()]
+                                                except:
+                                                    pass
+                            except Exception as e:
+                                print(f"Warning: Could not read manifest {manifest_path}: {e}")
+                                
+                            # Look up download count
+                            download_key = f"{component_type}/{category}/{name}"
+                            downloads = download_stats.get(download_key, 0)
+                            
+                            # Security metadata
+                            security_key = f"{component_type}/{category}/{name}"
+                            security = security_metadata.get(security_key, {
+                                'validated': False,
+                                'valid': None,
+                                'score': None,
+                                'errorCount': 0,
+                                'warningCount': 0,
+                                'lastValidated': None
+                            })
+                            
+                            component = {
+                                'name': name,
+                                'path': os.path.join(category, name).replace("\\", "/"), # Path to directory
+                                'category': category,
+                                'type': component_type[:-1],
+                                'content': content,
+                                'description': description,
+                                'tags': tags,
+                                'keywords': keywords,
+                                'downloads': downloads,
+                                'security': security,
+                                'isDirectory': True # Flag to indicate this is a directory component
+                            }
+                            components_data[component_type].append(component)
+                            print(f"  Processed directory-based component: {category}/{name}")
+                            continue
+
                     if os.path.isfile(file_path) and (file_name.endswith('.md') or file_name.endswith('.json')) and not file_name.endswith('.py'):
                         name = os.path.splitext(file_name)[0]
                         

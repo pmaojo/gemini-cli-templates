@@ -1,0 +1,27 @@
+{
+  "name": "@ralph/manager",
+  "version": "0.1.0",
+  "description": "The Meta-Manager for Agentic Loops",
+  "main": "cli.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsx cli.ts",
+    "new": "tsx cli.ts new",
+    "loop": "tsx cli.ts start",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.14",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "execa": "^8.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.19",
+    "@types/inquirer": "^9.0.7"
+  }
+}
