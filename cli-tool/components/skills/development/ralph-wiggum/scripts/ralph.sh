@@ -20,6 +20,7 @@ MODE="HITL" # HITL or AFK
 STATE_FILE=".gemini/ralph-progress.md"
 LOG_FILE=".gemini/ralph-last-run.log"
 INITIAL_PROMPT=""
+SPEC_FILE=""
 GEMINI_BIN="gemini" # Assumes 'gemini' is in PATH
 
 usage() {
@@ -29,6 +30,7 @@ usage() {
   echo "Options:"
   echo "  --verify <cmd>   Command to verify success (default: 'npm test')"
   echo "  --max-iter <n>   Maximum iterations (default: 10)"
+  echo "  --spec <file>    Path to SPECS.md (Specification file)"
   echo "  --afk            Run in AFK mode (no human confirmation)"
   echo "  --help           Show this help"
   echo ""
@@ -45,6 +47,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --max-iter)
       MAX_ITERATIONS="$2"
+      shift 2
+      ;;
+    --spec)
+      SPEC_FILE="$2"
       shift 2
       ;;
     --afk)
@@ -67,8 +73,13 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ -z "$INITIAL_PROMPT" ]]; then
-  echo -e "${RED}Error: No prompt provided.${NC}"
-  usage
+  # Allow empty prompt if spec is provided, defaulting to "Implement the spec"
+  if [[ -n "$SPEC_FILE" ]]; then
+    INITIAL_PROMPT="Implement the requirements defined in $SPEC_FILE"
+  else
+    echo -e "${RED}Error: No prompt provided.${NC}"
+    usage
+  fi
 fi
 
 # Ensure .gemini directory exists
@@ -99,7 +110,19 @@ while [[ $CURRENT_ITERATION -le $MAX_ITERATIONS ]]; do
 
   # Prepare input for Gemini
   # We construct a wrapper prompt to enforce the persona
+
+  SPEC_CONTENT=""
+  if [[ -n "$SPEC_FILE" ]] && [[ -f "$SPEC_FILE" ]]; then
+    SPEC_CONTENT="
+    --- SPECIFICATIONS ($SPEC_FILE) ---
+    $(cat "$SPEC_FILE")
+    -----------------------------------
+    "
+  fi
+
   FULL_PROMPT="You are Ralph, an agentic engineer. Your goal is to pass the verification command: '$VERIFY_CMD'.
+
+  $SPEC_CONTENT
 
   Current Task context:
   $CURRENT_PROMPT
