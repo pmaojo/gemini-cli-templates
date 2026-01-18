@@ -7,7 +7,8 @@ description: "Agentic Engineering: Iteration beats perfection. Fix code autonomo
 
 > "I'm doing agentic engineering!" - Ralph
 
-![Ralph Wiggum Pattern Flowchart](../images/ralph-flowchart.png)
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/e8f1ecb4-a2e4-4df4-a454-a4101fb20371" />
+
 
 Ralph is an autonomous AI agent loop that runs **Gemini CLI** repeatedly until all PRD items are complete. Each iteration is a fresh Gemini instance with clean context. Memory persists via git history, `progress.txt`, and `prd.json`.
 
