@@ -11,6 +11,8 @@ tags: ["agentic", "automation", "testing", "refactoring", "afk-mode"]
 
 > "I'm doing agentic engineering!" - Ralph
 
+![Ralph Wiggum Agent Loop](../../../../../docs/images/ralph-agent-loop.jpg)
+
 This skill implements the **Ralph Wiggum** pattern, which flips the standard "prompt-and-pray" dynamic. Instead of hoping for a perfect zero-shot solution, Ralph assumes the agent will make mistakes and wraps it in a feedback loop that iterates until success.
 
 ## Core Philosophy
