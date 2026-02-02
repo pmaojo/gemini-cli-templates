@@ -1230,7 +1230,7 @@ class HealthChecker {
       summary.push(`${envVars.length} env vars`);
       
       // Check for sensitive environment variables
-      const sensitiveVars = ['ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN'];
+      const sensitiveVars = ['GOOGLE_API_KEY', 'GOOGLE_AUTH_TOKEN'];
       for (const envVar of envVars) {
         if (sensitiveVars.includes(envVar)) {
           issues.push(`Sensitive env var in ${type} settings: ${envVar}`);

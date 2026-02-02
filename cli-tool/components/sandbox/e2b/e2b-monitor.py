@@ -114,7 +114,7 @@ def monitor_system_resources(sbx):
     except Exception as e:
         log_with_timestamp(f"System monitoring error: {e}", "ERROR")
 
-def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=None, anthropic_api_key=None):
+def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=None, google_api_key=None):
     """
     Enhanced sandbox execution with full monitoring
     This would be called instead of the basic launcher when you have valid API keys
@@ -130,7 +130,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         log_with_timestamp(f"❌ E2B import failed: {e}", "ERROR")
         return False
     
-    if not e2b_api_key or not anthropic_api_key:
+    if not e2b_api_key or not google_api_key:
         log_with_timestamp("❌ Missing API keys", "ERROR")
         return False
     
@@ -140,7 +140,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
         sbx = Sandbox.create(
             template="anthropic-gemini-cli",
             api_key=e2b_api_key,
-            envs={'ANTHROPIC_API_KEY': anthropic_api_key},
+            envs={'GOOGLE_API_KEY': google_api_key},
             timeout=600
         )
         
@@ -203,7 +203,7 @@ def enhanced_sandbox_execution(prompt, components_to_install="", e2b_api_key=Non
 def main():
     if len(sys.argv) < 2:
         print("E2B Sandbox Monitor")
-        print("Usage: python e2b-monitor.py <prompt> [components] [e2b_key] [anthropic_key]")
+        print("Usage: python e2b-monitor.py <prompt> [components] [e2b_key] [google_key]")
         print()
         print("This tool provides enhanced monitoring and debugging for E2B sandbox operations.")
         print("Use this when you have valid API keys and want detailed insight into sandbox execution.")
@@ -212,12 +212,12 @@ def main():
     prompt = sys.argv[1]
     components = sys.argv[2] if len(sys.argv) > 2 else ""
     e2b_key = sys.argv[3] if len(sys.argv) > 3 else os.getenv('E2B_API_KEY')
-    anthropic_key = sys.argv[4] if len(sys.argv) > 4 else os.getenv('ANTHROPIC_API_KEY')
+    google_key = sys.argv[4] if len(sys.argv) > 4 else os.getenv('GOOGLE_API_KEY')
     
     log_with_timestamp("🎬 E2B Sandbox Monitor Starting")
     log_with_timestamp("=" * 60)
     
-    success = enhanced_sandbox_execution(prompt, components, e2b_key, anthropic_key)
+    success = enhanced_sandbox_execution(prompt, components, e2b_key, google_key)
     
     if success:
         log_with_timestamp("🎉 Monitoring session completed successfully")

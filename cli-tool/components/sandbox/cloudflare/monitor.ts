@@ -5,7 +5,7 @@
  */
 
 import fetch from 'node-fetch';
-import Anthropic from '@anthropic-ai/sdk';
+import { query } from '@Google-ai/gemini-agent-sdk';
 
 interface MonitoringMetrics {
   executionTime: number;
@@ -83,7 +83,7 @@ async function monitorWorkerHealth(workerUrl: string): Promise<boolean> {
 }
 
 async function monitorCodeGeneration(
-  anthropic: Anthropic,
+  apiKey: string,
   prompt: string
 ): Promise<{ code: string; duration: number }> {
   logWithTimestamp('🤖 Starting code generation with Gemini...');
@@ -91,13 +91,8 @@ async function monitorCodeGeneration(
   const startTime = Date.now();
 
   try {
-    const response = await anthropic.messages.create({
-      model: 'gemini-sonnet-4-5',
-      max_tokens: 4096,
-      messages: [
-        {
-          role: 'user',
-          content: `Generate Python code to answer: "${prompt}"
+    const generator = query({
+      prompt: `Generate Python code to answer: "${prompt}"
 
 Requirements:
 - Use only Python standard library
@@ -106,21 +101,29 @@ Requirements:
 - Include proper error handling
 
 Return ONLY the code, no explanations.`,
-        },
-      ],
+      options: {
+        apiKey: apiKey,
+        model: 'gemini-2.0-flash',
+      }
     });
 
-    const duration = Date.now() - startTime;
+    let code = '';
+    for await (const message of generator) {
+      if (message.type === 'result') {
+        code = message.result;
+      } else if (message.type === 'text') {
+        code += message.text;
+      }
+    }
 
-    const code = response.content[0]?.type === 'text' ? response.content[0].text : '';
+    const duration = Date.now() - startTime;
 
     if (!code) {
       throw new Error('No code generated');
     }
 
     logWithTimestamp(`✅ Code generated in ${duration}ms`, 'SUCCESS');
-    logWithTimestamp(`   Model: ${response.model}`);
-    logWithTimestamp(`   Tokens used: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`);
+    logWithTimestamp(`   Model: gemini-2.0-flash`);
     logWithTimestamp(`   Code length: ${code.length} characters`);
 
     if (code.length < 500) {
@@ -231,7 +234,7 @@ function displaySystemInfo() {
 
 async function enhancedSandboxMonitoring(
   prompt: string,
-  anthropicApiKey: string,
+  googleApiKey: string,
   workerUrl: string = 'http://localhost:8787'
 ): Promise<boolean> {
   logWithTimestamp('🚀 Starting enhanced Cloudflare sandbox monitoring');
@@ -258,8 +261,7 @@ async function enhancedSandboxMonitoring(
     console.log('');
 
     // Step 2: Generate code with monitoring
-    const anthropic = new Anthropic({ apiKey: anthropicApiKey });
-    const { code, duration: codeGenDuration } = await monitorCodeGeneration(anthropic, prompt);
+    const { code, duration: codeGenDuration } = await monitorCodeGeneration(googleApiKey, prompt);
     metrics.codeGenerationTime = codeGenDuration;
 
     console.log('');
@@ -334,7 +336,7 @@ async function main() {
     console.log('  node monitor.ts "Sum array" YOUR_KEY https://your-worker.workers.dev');
     console.log('');
     console.log('Environment Variables:');
-    console.log('  ANTHROPIC_API_KEY - Anthropic API key');
+    console.log('  GOOGLE_API_KEY - Google API key');
     console.log('  CLOUDFLARE_WORKER_URL - Worker endpoint (default: http://localhost:8787)');
     console.log('');
     console.log('This tool provides enhanced monitoring and debugging for Cloudflare sandbox operations.');
@@ -342,12 +344,12 @@ async function main() {
   }
 
   const prompt = args[0];
-  const anthropicApiKey = args[1] || process.env.ANTHROPIC_API_KEY || '';
+  const googleApiKey = args[1] || process.env.GOOGLE_API_KEY || '';
   const workerUrl = args[2] || process.env.CLOUDFLARE_WORKER_URL || 'http://localhost:8787';
 
-  if (!anthropicApiKey) {
-    logWithTimestamp('❌ Anthropic API key is required', 'ERROR');
-    console.log('Provide via command line argument or ANTHROPIC_API_KEY environment variable');
+  if (!googleApiKey) {
+    logWithTimestamp('❌ Google API key is required', 'ERROR');
+    console.log('Provide via command line argument or GOOGLE_API_KEY environment variable');
     process.exit(1);
   }
 
@@ -357,7 +359,7 @@ async function main() {
   printSeparator('=', 70);
   console.log('');
 
-  const success = await enhancedSandboxMonitoring(prompt, anthropicApiKey, workerUrl);
+  const success = await enhancedSandboxMonitoring(prompt, googleApiKey, workerUrl);
 
   console.log('');
 
@@ -369,7 +371,7 @@ async function main() {
     console.log('');
     console.log('Troubleshooting:');
     console.log('1. Ensure worker is deployed: npx wrangler deploy');
-    console.log('2. Check API key is set: npx wrangler secret put ANTHROPIC_API_KEY');
+    console.log('2. Check API key is set: npx wrangler secret put GOOGLE_API_KEY');
     console.log('3. Verify worker URL is correct');
     console.log('4. Check worker logs: npx wrangler tail');
     console.log('5. Test locally: npm run dev');
