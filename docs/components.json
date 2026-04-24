@@ -13884,9 +13884,9 @@
       "description": "Apicentric project template",
       "files": [
         ".gemini/commands/start-simulator.md",
-        "GEMINI.md",
+        ".mcp.json",
         "setup.sh",
-        ".mcp.json"
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=apicentric --yes",
       "downloads": 0
@@ -13899,11 +13899,11 @@
       "category": "languages",
       "description": "Common project template",
       "files": [
+        "README.md",
         ".gemini/commands/project-setup.md",
         ".gemini/commands/git-workflow.md",
-        "GEMINI.md",
-        "README.md",
-        ".mcp.json"
+        ".mcp.json",
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=common --yes",
       "downloads": 0
@@ -13917,8 +13917,8 @@
       "language": "python",
       "description": "Django-App with Python",
       "files": [
-        ".gemini/commands/django-model.md",
         ".gemini/commands/views.md",
+        ".gemini/commands/django-model.md",
         ".gemini/commands/admin.md",
         "GEMINI.md"
       ],
@@ -13934,11 +13934,11 @@
       "language": "python",
       "description": "Fastapi-App with Python",
       "files": [
-        ".gemini/commands/deployment.md",
-        ".gemini/commands/database.md",
         ".gemini/commands/testing.md",
         ".gemini/commands/auth.md",
+        ".gemini/commands/deployment.md",
         ".gemini/commands/api-endpoints.md",
+        ".gemini/commands/database.md",
         "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=python --framework=fastapi-app --yes",
@@ -13953,12 +13953,12 @@
       "language": "python",
       "description": "Flask-App with Python",
       "files": [
-        ".gemini/commands/deployment.md",
-        ".gemini/commands/database.md",
-        ".gemini/commands/blueprint.md",
-        ".gemini/commands/flask-route.md",
-        ".gemini/commands/app-factory.md",
         ".gemini/commands/testing.md",
+        ".gemini/commands/app-factory.md",
+        ".gemini/commands/deployment.md",
+        ".gemini/commands/blueprint.md",
+        ".gemini/commands/database.md",
+        ".gemini/commands/flask-route.md",
         "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=python --framework=flask-app --yes",
@@ -13986,12 +13986,12 @@
       "category": "languages",
       "description": "Grafka project template",
       "files": [
-        ".gemini/commands/start-engine.md",
+        "requirements.txt",
         ".gemini/commands/setup.md",
-        "GEMINI.md",
-        "setup.sh",
+        ".gemini/commands/start-engine.md",
         ".mcp.json",
-        "requirements.txt"
+        "setup.sh",
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=grafka --yes",
       "downloads": 0
@@ -14004,9 +14004,9 @@
       "category": "languages",
       "description": "Hexanorm project template",
       "files": [
-        "GEMINI.md",
+        ".mcp.json",
         "setup.sh",
-        ".mcp.json"
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=hexanorm --yes",
       "downloads": 0
@@ -14019,17 +14019,17 @@
       "category": "languages",
       "description": "Javascript-Typescript project template",
       "files": [
-        ".gemini/settings.json",
-        ".gemini/commands/npm-scripts.md",
-        ".gemini/commands/test.md",
-        ".gemini/commands/lint.md",
-        ".gemini/commands/api-endpoint.md",
-        ".gemini/commands/typescript-migrate.md",
-        ".gemini/commands/debug.md",
-        ".gemini/commands/refactor.md",
-        "GEMINI.md",
         "README.md",
-        ".mcp.json"
+        ".gemini/settings.json",
+        ".gemini/commands/refactor.md",
+        ".gemini/commands/npm-scripts.md",
+        ".gemini/commands/lint.md",
+        ".gemini/commands/debug.md",
+        ".gemini/commands/typescript-migrate.md",
+        ".gemini/commands/test.md",
+        ".gemini/commands/api-endpoint.md",
+        ".mcp.json",
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=javascript-typescript --yes",
       "downloads": 0
@@ -14042,13 +14042,13 @@
       "category": "languages",
       "description": "Kthulu project template",
       "files": [
+        ".gemini/commands/add.md",
         ".gemini/commands/migrate.md",
         ".gemini/commands/analyze.md",
         ".gemini/commands/dev.md",
-        ".gemini/commands/add.md",
-        "GEMINI.md",
+        ".mcp.json",
         "setup.sh",
-        ".mcp.json"
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=kthulu --yes",
       "downloads": 0
@@ -14062,8 +14062,8 @@
       "description": "Marketing project template",
       "files": [
         ".gemini/settings.json",
-        "GEMINI.md",
-        ".mcp.json"
+        ".mcp.json",
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=marketing --yes",
       "downloads": 0
@@ -14077,10 +14077,10 @@
       "language": "javascript-typescript",
       "description": "Node-Api with Javascript-Typescript",
       "files": [
+        ".gemini/commands/route.md",
         ".gemini/commands/middleware.md",
         ".gemini/commands/database.md",
         ".gemini/commands/api-endpoint.md",
-        ".gemini/commands/route.md",
         "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=javascript-typescript --framework=node-api --yes",
@@ -14095,10 +14095,10 @@
       "description": "Python project template",
       "files": [
         ".gemini/settings.json",
-        ".gemini/commands/test.md",
         ".gemini/commands/lint.md",
-        "GEMINI.md",
-        ".mcp.json"
+        ".gemini/commands/test.md",
+        ".mcp.json",
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=python --yes",
       "downloads": 0
@@ -14146,8 +14146,8 @@
         ".gemini/settings.json",
         ".gemini/commands/test.md",
         ".gemini/commands/model.md",
-        "GEMINI.md",
-        ".mcp.json"
+        ".mcp.json",
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=ruby --yes",
       "downloads": 0
@@ -14160,9 +14160,9 @@
       "category": "languages",
       "description": "Rust project template",
       "files": [
-        "GEMINI.md",
         "README.md",
-        ".mcp.json"
+        ".mcp.json",
+        "GEMINI.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=rust --yes",
       "downloads": 0
@@ -14176,12 +14176,12 @@
       "language": "marketing",
       "description": "Tribe-App with Marketing",
       "files": [
-        ".gemini/commands/tribe/scout.md",
-        ".gemini/commands/tribe/launch.md",
-        ".gemini/commands/tribe/map.md",
         ".gemini/agents/mvt-discovery.md",
         ".gemini/agents/xy-positioning.md",
-        ".gemini/agents/culture-code.md"
+        ".gemini/agents/culture-code.md",
+        ".gemini/commands/tribe/scout.md",
+        ".gemini/commands/tribe/launch.md",
+        ".gemini/commands/tribe/map.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=marketing --framework=tribe-app --yes",
       "downloads": 0
@@ -14195,8 +14195,8 @@
       "language": "javascript-typescript",
       "description": "Vue-App with Javascript-Typescript",
       "files": [
-        ".gemini/commands/components.md",
-        ".gemini/commands/composables.md"
+        ".gemini/commands/composables.md",
+        ".gemini/commands/components.md"
       ],
       "installCommand": "npx github:pmaojo/gemini-cli-templates --template=javascript-typescript --framework=vue-app --yes",
       "downloads": 0
