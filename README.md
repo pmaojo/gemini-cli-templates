@@ -173,6 +173,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **💬 Community**: [GitHub Discussions](https://github.com/pmaojo/gemini-cli-templates/discussions)
 - **🐛 Issues**: [GitHub Issues](https://github.com/pmaojo/gemini-cli-templates/issues)
 
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/pmaojo/gemini-cli-templates.svg?variant=adaptive)](https://starchart.cc/pmaojo/gemini-cli-templates)

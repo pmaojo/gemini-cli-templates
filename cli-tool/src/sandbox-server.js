@@ -31,11 +31,11 @@ function loadEnvFile() {
         Object.assign(process.env, envVars);
         
         const hasE2B = !!process.env.E2B_API_KEY;
-        const hasGoogle = !!process.env.ANTHROPIC_API_KEY;
+        const hasGoogle = !!process.env.GOOGLE_API_KEY;
         
         console.log(chalk.green('✅ Environment variables loaded:'));
         console.log(chalk.gray(`   • E2B_API_KEY: ${hasE2B ? 'Found' : 'Missing'}`));
-        console.log(chalk.gray(`   • ANTHROPIC_API_KEY: ${hasGoogle ? 'Found' : 'Missing'}`));
+        console.log(chalk.gray(`   • GOOGLE_API_KEY: ${hasGoogle ? 'Found' : 'Missing'}`));
         
         return hasE2B && hasGoogle;
     } else {
@@ -346,8 +346,8 @@ async function executeE2BTask(task) {
         if (process.env.E2B_API_KEY) {
             args.push(process.env.E2B_API_KEY);
         }
-        if (process.env.ANTHROPIC_API_KEY) {
-            args.push(process.env.ANTHROPIC_API_KEY);
+        if (process.env.GOOGLE_API_KEY) {
+            args.push(process.env.GOOGLE_API_KEY);
         }
         
         task.output.push('🔧 Starting Python E2B launcher...');
@@ -411,7 +411,7 @@ async function executeE2BTask(task) {
                 // Check if it's an API key error
                 const outputText = task.output.join(' ');
                 if (outputText.includes('E2B API key is required') || outputText.includes('Google API key is required')) {
-                    task.output.push('❌ Missing API keys! Please add E2B_API_KEY and ANTHROPIC_API_KEY to your .env file');
+                    task.output.push('❌ Missing API keys! Please add E2B_API_KEY and GOOGLE_API_KEY to your .env file');
                     task.output.push('🔑 Get E2B key: https://e2b.dev/dashboard');
                     task.output.push('🔑 Get Google key: https://console.google.com');
                 } else {
@@ -570,7 +570,7 @@ app.listen(PORT, () => {
     } else {
         console.log(chalk.yellow('\\n⚠️  API Keys Status:'));
         console.log(chalk.gray(`   • E2B_API_KEY: ${process.env.E2B_API_KEY ? 'Found' : 'Missing'}`));
-        console.log(chalk.gray(`   • ANTHROPIC_API_KEY: ${process.env.ANTHROPIC_API_KEY ? 'Found' : 'Missing'}`));
+        console.log(chalk.gray(`   • GOOGLE_API_KEY: ${process.env.GOOGLE_API_KEY ? 'Found' : 'Missing'}`));
         console.log(chalk.yellow('   • Please add these keys to your .env file'));
     }
     console.log('');
