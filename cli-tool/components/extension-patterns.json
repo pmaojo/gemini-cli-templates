@@ -1,0 +1,406 @@
+{
+  "terraform": {
+    "name": "terraform",
+    "id": "https://github.com/hashicorp/terraform-mcp-server",
+    "category": "mcp",
+    "patterns": [
+      "**/*.tf",
+      "**/*.tfvars"
+    ]
+  },
+  "github": {
+    "name": "github",
+    "id": "https://github.com/SirKanaad26/stateful-auth-for-the-github-mcp-server",
+    "category": "mcp",
+    "patterns": [
+      ".github/**/*"
+    ]
+  },
+  "grafana": {
+    "name": "grafana",
+    "id": "https://github.com/grafana/mcp-grafana",
+    "category": "mcp",
+    "patterns": [
+      "**/*.json"
+    ]
+  },
+  "mcp-server-kubernetes": {
+    "name": "mcp-server-kubernetes",
+    "id": "https://github.com/Flux159/mcp-server-kubernetes",
+    "category": "mcp",
+    "patterns": [
+      "**/*.k8s.yaml",
+      "**/*.k8s.yml",
+      "helm/**/*.yaml",
+      "**/*.yaml"
+    ]
+  },
+  "stripe": {
+    "name": "stripe",
+    "id": "https://github.com/stripe/ai",
+    "category": "mcp",
+    "patterns": [
+      "**/*stripe*"
+    ]
+  },
+  "redis": {
+    "name": "redis",
+    "id": "https://github.com/redis/mcp-redis",
+    "category": "mcp",
+    "patterns": [
+      "**/*.rdb"
+    ]
+  },
+  "flutter": {
+    "name": "flutter",
+    "id": "https://github.com/sethladd/gemini-cli-extension",
+    "category": "mcp",
+    "patterns": [
+      "**/*.dart",
+      "pubspec.yaml"
+    ]
+  },
+  "sonarqube-mcp-server": {
+    "name": "sonarqube-mcp-server",
+    "id": "https://github.com/SonarSource/sonarqube-mcp-server",
+    "category": "mcp",
+    "patterns": [
+      "sonar-project.properties"
+    ]
+  },
+  "google-workspace": {
+    "name": "google-workspace",
+    "id": "https://github.com/gemini-cli-extensions/workspace",
+    "category": "mcp",
+    "patterns": [
+      "**/*.google",
+      "**/*.tf"
+    ]
+  },
+  "postman": {
+    "name": "postman",
+    "id": "https://github.com/postmanlabs/postman-gemini-cli-extension",
+    "category": "mcp",
+    "patterns": [
+      "**/*.postman_collection.json"
+    ]
+  },
+  "firebase": {
+    "name": "firebase",
+    "id": "https://github.com/gemini-cli-extensions/firebase",
+    "category": "mcp",
+    "patterns": [
+      "firebase.json"
+    ]
+  },
+  "Figma": {
+    "name": "Figma",
+    "id": "https://github.com/figma/figma-gemini-cli-extension",
+    "category": "mcp",
+    "patterns": [
+      ".figma"
+    ]
+  },
+  "google-maps-platform": {
+    "name": "google-maps-platform",
+    "id": "https://github.com/googlemaps/platform-ai",
+    "category": "mcp",
+    "patterns": [
+      "**/*.google",
+      "**/*.tf"
+    ]
+  },
+  "postgres": {
+    "name": "postgres",
+    "id": "https://github.com/gemini-cli-extensions/postgres",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "google-workspace-developer-tools": {
+    "name": "google-workspace-developer-tools",
+    "id": "https://github.com/googleworkspace/developer-tools",
+    "category": "mcp",
+    "patterns": [
+      "**/*.google",
+      "**/*.tf"
+    ]
+  },
+  "firebase-rules": {
+    "name": "firebase-rules",
+    "id": "https://github.com/firebase/snippets-rules",
+    "category": "mcp",
+    "patterns": [
+      "firebase.json"
+    ]
+  },
+  "google-adk-agent-extension": {
+    "name": "google-adk-agent-extension",
+    "id": "https://github.com/simonliu-ai-product/adk-agent-extension",
+    "category": "mcp",
+    "patterns": [
+      "**/*.google",
+      "**/*.tf"
+    ]
+  },
+  "gcloud": {
+    "name": "gcloud",
+    "id": "https://github.com/gemini-cli-extensions/gcloud",
+    "category": "mcp",
+    "patterns": [
+      "app.yaml"
+    ]
+  },
+  "cloud-sql-postgresql": {
+    "name": "cloud-sql-postgresql",
+    "id": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "google-ads-api-developer-assistant": {
+    "name": "google-ads-api-developer-assistant",
+    "id": "https://github.com/googleads/google-ads-api-developer-assistant",
+    "category": "mcp",
+    "patterns": [
+      "**/*.google",
+      "**/*.tf"
+    ]
+  },
+  "mysql": {
+    "name": "mysql",
+    "id": "https://github.com/gemini-cli-extensions/mysql",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "shopify-dev-mcp": {
+    "name": "shopify-dev-mcp",
+    "id": "https://github.com/matheuscpatricio/omafit",
+    "category": "mcp",
+    "patterns": [
+      "**/*shopify*"
+    ]
+  },
+  "sql-server": {
+    "name": "sql-server",
+    "id": "https://github.com/gemini-cli-extensions/sql-server",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "wandb-mcp-server": {
+    "name": "wandb-mcp-server",
+    "id": "https://github.com/wandb/wandb-mcp-server",
+    "category": "mcp",
+    "patterns": [
+      "wandb/**/*"
+    ]
+  },
+  "gitlab": {
+    "name": "gitlab",
+    "id": "https://github.com/benvenker/gitlab-gemini-extension",
+    "category": "mcp",
+    "patterns": [
+      ".gitlab-ci.yml"
+    ]
+  },
+  "gemini-for-kubernetes-development": {
+    "name": "gemini-for-kubernetes-development",
+    "id": "https://github.com/gke-labs/gemini-for-kubernetes-development",
+    "category": "mcp",
+    "patterns": [
+      "**/*.k8s.yaml",
+      "**/*.k8s.yml",
+      "helm/**/*.yaml",
+      "**/*.yaml"
+    ]
+  },
+  "Snyk": {
+    "name": "Snyk",
+    "id": "https://github.com/snyk/agentic-integration-wrappers",
+    "category": "mcp",
+    "patterns": [
+      ".snyk"
+    ]
+  },
+  "cloud-sql-mysql": {
+    "name": "cloud-sql-mysql",
+    "id": "https://github.com/gemini-cli-extensions/cloud-sql-mysql",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "vertex": {
+    "name": "vertex",
+    "id": "https://github.com/gemini-cli-extensions/vertex",
+    "category": "mcp",
+    "patterns": [
+      "**/*vertex*"
+    ]
+  },
+  "angular": {
+    "name": "angular",
+    "id": "https://github.com/gemini-cli-extensions/angular",
+    "category": "mcp",
+    "patterns": [
+      "angular.json"
+    ]
+  },
+  "telegram": {
+    "name": "telegram",
+    "id": "https://github.com/VSKurkin/gemini-cli-telegram-extension",
+    "category": "mcp",
+    "patterns": [
+      "**/*telegram*"
+    ]
+  },
+  "notion": {
+    "name": "notion",
+    "id": "https://github.com/gitremko/Gemini_cli_notion_extention",
+    "category": "mcp",
+    "patterns": [
+      "**/*notion*"
+    ]
+  },
+  "github-issue": {
+    "name": "github-issue",
+    "id": "https://github.com/enola-dev/github-issue-agent",
+    "category": "mcp",
+    "patterns": [
+      ".github/**/*"
+    ]
+  },
+  "cloud-sql-sqlserver": {
+    "name": "cloud-sql-sqlserver",
+    "id": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "cloud-sql-postgresql-observability": {
+    "name": "cloud-sql-postgresql-observability",
+    "id": "https://github.com/gemini-cli-extensions/cloud-sql-postgresql-observability",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "mongodb": {
+    "name": "mongodb",
+    "id": "https://github.com/mongodb-partners/mongodb-gemini-extension",
+    "category": "mcp",
+    "patterns": [
+      "**/*.bson"
+    ]
+  },
+  "cloud-sql-mysql-observability": {
+    "name": "cloud-sql-mysql-observability",
+    "id": "https://github.com/gemini-cli-extensions/cloud-sql-mysql-observability",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "cloud-sql-sqlserver-observability": {
+    "name": "cloud-sql-sqlserver-observability",
+    "id": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver-observability",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sql"
+    ]
+  },
+  "WordPress": {
+    "name": "WordPress",
+    "id": "https://github.com/webmasterarbez/gemini_cli_extention_wordpress",
+    "category": "mcp",
+    "patterns": [
+      "wp-config.php",
+      "style.css"
+    ]
+  },
+  "prprompts-flutter-generator": {
+    "name": "prprompts-flutter-generator",
+    "id": "https://github.com/Kandil7/prprompts-flutter-generator",
+    "category": "mcp",
+    "patterns": [
+      "**/*.dart",
+      "pubspec.yaml"
+    ]
+  },
+  "gcp-release-notes": {
+    "name": "gcp-release-notes",
+    "id": "https://github.com/danistrebel/gcp-release-notes",
+    "category": "mcp",
+    "patterns": [
+      "**/*.tf"
+    ]
+  },
+  "mcp-redis": {
+    "name": "mcp-redis",
+    "id": "https://github.com/AzureManagedRedis/mcp-amr",
+    "category": "mcp",
+    "patterns": [
+      "**/*.rdb"
+    ]
+  },
+  "shell-aliases": {
+    "name": "shell-aliases",
+    "id": "https://github.com/hestonhamilton/mcp-shell-aliases",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sh"
+    ]
+  },
+  "google-workspace-inbox": {
+    "name": "google-workspace-inbox",
+    "id": "https://github.com/jduncan-rva/google-workspace-inbox",
+    "category": "mcp",
+    "patterns": [
+      "**/*.google",
+      "**/*.tf"
+    ]
+  },
+  "gemini-cli-babashka": {
+    "name": "gemini-cli-babashka",
+    "id": "https://github.com/davidpham87/gemini-cli-babashka",
+    "category": "mcp",
+    "patterns": [
+      "**/*.sh"
+    ]
+  },
+  "java-dev-ai": {
+    "name": "java-dev-ai",
+    "id": "https://github.com/ddobrin/java-dev-ai",
+    "category": "general",
+    "patterns": [
+      "**/*.java",
+      "pom.xml",
+      "build.gradle"
+    ]
+  },
+  "notion-extension": {
+    "name": "notion-extension",
+    "id": "https://github.com/PatelPratikkumar/gemini-notion-extension",
+    "category": "mcp",
+    "patterns": [
+      "**/*notion*"
+    ]
+  },
+  "java-dev-assist-extension": {
+    "name": "java-dev-assist-extension",
+    "id": "https://github.com/grzegorz-golowicz/java-dev-assist-extension",
+    "category": "mcp",
+    "patterns": [
+      "**/*.java",
+      "pom.xml",
+      "build.gradle"
+    ]
+  }
+}
