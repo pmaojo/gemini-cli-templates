@@ -85,7 +85,7 @@ describe('ConsoleBridge command injection (GHSA-4jm9-m3fr-9jpx)', () => {
 
   it('ignores a choice response whose value is not a number', () => {
     const spy = jest.spyOn(bridge, 'writeToTerminal').mockImplementation(() => {});
-    bridge.sendResponseToClaudeCode({ type: 'choice', value: "1'; id #" });
+    bridge.sendResponseToGeminiCLI({ type: 'choice', value: "1'; id #" });
     expect(spy).not.toHaveBeenCalled();
     spy.mockRestore();
   });
@@ -107,7 +107,7 @@ describe('ConsoleBridge command injection (GHSA-4jm9-m3fr-9jpx)', () => {
 
   it('ignores a text response whose value is not a string', () => {
     const spy = jest.spyOn(bridge, 'writeToTerminal').mockImplementation(() => {});
-    bridge.sendResponseToClaudeCode({ type: 'text', value: { toString: () => "x'; id #" } });
+    bridge.sendResponseToGeminiCLI({ type: 'text', value: { toString: () => "x'; id #" } });
     expect(spy).not.toHaveBeenCalled();
     spy.mockRestore();
   });

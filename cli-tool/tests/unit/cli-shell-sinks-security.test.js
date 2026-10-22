@@ -1,5 +1,5 @@
 /**
- * Regression tests: untrusted text from a project's .claude/ files, .mcp.json,
+ * Regression tests: untrusted text from a project's .gemini/ files, .mcp.json,
  * downloaded components or CLI arguments must never reach a shell, and local
  * servers must not be reachable from web pages.
  */
@@ -27,19 +27,19 @@ describe('health-check commandExists', () => {
   });
 });
 
-describe('stats commands spawn claude without a shell', () => {
+describe('stats commands spawn gemini without a shell', () => {
   it.each(['command-stats.js', 'hook-stats.js', 'mcp-stats.js'])('%s', (file) => {
     const src = fs.readFileSync(path.join(__dirname, '../../src', file), 'utf8');
     expect(src).not.toMatch(/spawn\(\s*['"]sh['"]/);
-    expect(src).toMatch(/spawn\('claude', \[/);
+    expect(src).toMatch(/spawn\('gemini', \[/);
   });
 });
 
 describe('global agent wrapper', () => {
-  it('passes prompts to claude as argv, not a shell string', () => {
+  it('passes prompts to gemini as argv, not a shell string', () => {
     const src = fs.readFileSync(path.join(__dirname, '../../src/sdk/global-agent-manager.js'), 'utf8');
-    expect(src).toMatch(/execFileSync\('claude', claudeArgs/);
-    expect(src).not.toMatch(/execSync\(claudeCmd/);
+    expect(src).toMatch(/execFileSync\('gemini', geminiArgs/);
+    expect(src).not.toMatch(/execSync\(geminiCmd/);
   });
 });
 
@@ -67,12 +67,12 @@ describe('session sharing', () => {
   });
 });
 
-describe('Claude API proxy', () => {
-  const ClaudeAPIProxy = require('../../src/claude-api-proxy');
+describe('Gemini API proxy', () => {
+  const GeminiAPIProxy = require('../../src/gemini-api-proxy');
   let proxy;
 
   beforeAll(async () => {
-    proxy = new ClaudeAPIProxy();
+    proxy = new GeminiAPIProxy();
     proxy.port = 0;
     await proxy.start();
   });

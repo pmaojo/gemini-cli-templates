@@ -292,10 +292,9 @@ Please review my MCP server configuration and suggest optimizations for:
 
 Consider my project structure and development needs to suggest the most beneficial MCP server setup.`;
 
-    const geminiCommand = `gemini "${mcpSummary}"`;
-    
     try {
-      const child = spawn('sh', ['-c', geminiCommand], {
+      // Pass the prompt as a single argv entry so it never reaches a shell
+      const child = spawn('gemini', [mcpSummary], {
         stdio: 'inherit',
         cwd: targetDir
       });

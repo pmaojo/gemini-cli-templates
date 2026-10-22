@@ -244,7 +244,7 @@ async function updateGlobalAgent(agentName, options = {}) {
 async function generateExecutableScript(agentName, agentFile) {
   const scriptContent = `#!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { execSync, execFileSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
@@ -386,15 +386,12 @@ if (!checkGeminiCLI()) {
   process.exit(1);
 }
 
-// Escape quotes in system prompt for shell execution
-const escapedSystemPrompt = systemPrompt.replace(/"/g, '\\\\"').replace(/\`/g, '\\\\\`');
-
 // Build final prompt with context
 const finalPrompt = userInput + contextPrompt;
-const escapedFinalPrompt = finalPrompt.replace(/"/g, '\\\\"').replace(/\`/g, '\\\\\`');
 
-// Build Gemini command with SDK - use --system-prompt instead of --append-system-prompt for better control
-const geminiCmd = \`gemini -p "\${escapedFinalPrompt}" --system-prompt "\${escapedSystemPrompt}"\${verbose ? ' --verbose' : ''}\`;
+// Gemini CLI has no per-invocation system prompt flag, so the agent persona is
+// prepended to the prompt. Arguments go through argv, never through a shell.
+const geminiArgs = ['-p', \`\${systemPrompt}\\n\\n---\\n\\n\${finalPrompt}\`].concat(verbose ? ['--debug'] : []);
 
 // Debug output if verbose
 if (verbose) {
@@ -404,7 +401,7 @@ if (verbose) {
   console.log('📁 Project Context:', contextPrompt ? 'Auto-detected' : 'None');
   console.log('🎯 Final Prompt Length:', finalPrompt.length, 'characters');
   console.log('🤖 System Prompt Preview:', systemPrompt.substring(0, 150) + '...');
-  console.log('⚡ Gemini Command:', geminiCmd);
+  console.log('⚡ Gemini Command: gemini -p <prompt>' + (verbose ? ' --debug' : ''));
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n');
 }
 
@@ -421,7 +418,7 @@ const loader = setInterval(() => {
 
 try {
   // Execute Gemini with the agent's system prompt
-  execSync(geminiCmd, { 
+  execFileSync('gemini', geminiArgs, { 
     stdio: ['inherit', 'inherit', 'pipe'],
     cwd: process.cwd() 
   });

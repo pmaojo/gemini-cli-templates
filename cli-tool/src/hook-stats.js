@@ -229,10 +229,9 @@ Please review my automation hook configuration and suggest optimizations for:
 
 Consider my project structure and suggest hooks that would be most beneficial for my development workflow.`;
 
-    const geminiCommand = `gemini "${hookSummary}"`;
-    
     try {
-      const child = spawn('sh', ['-c', geminiCommand], {
+      // Pass the prompt as a single argv entry so it never reaches a shell
+      const child = spawn('gemini', [hookSummary], {
         stdio: 'inherit',
         cwd: targetDir
       });

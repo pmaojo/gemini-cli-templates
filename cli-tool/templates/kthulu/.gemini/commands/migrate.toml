@@ -1,0 +1,5 @@
+description = "Run database migrations"
+prompt = """
+
+go run cmd/kthulu/main.go migrate "$@"
+"""

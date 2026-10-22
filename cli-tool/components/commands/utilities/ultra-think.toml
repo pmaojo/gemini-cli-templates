@@ -1,0 +1,20 @@
+description = "Deep reasoning and problem-solving for complex tasks."
+prompt = """
+
+# Ultra Think
+
+Engage deep reasoning capabilities for complex problem solving, architectural design, and critical analysis.
+
+## Methodology
+
+1. **Decomposition**: Break down the problem into fundamental components
+2. **Analysis**: Analyze each component and its relationships
+3. **Synthesis**: Synthesize findings into a coherent solution
+4. **Validation**: Verify the solution against constraints and requirements
+
+## Usage
+
+```bash
+gemini ultra-think "Design a highly available distributed locking mechanism"
+```
+"""
