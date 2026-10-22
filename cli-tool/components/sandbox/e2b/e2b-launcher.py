@@ -70,7 +70,7 @@ def main():
     
     # Parse command line arguments
     if len(sys.argv) < 2:
-        print("Usage: python e2b-launcher.py <prompt> [components_to_install] [e2b_api_key] [anthropic_api_key]")
+        print("Usage: python e2b-launcher.py <prompt> [components_to_install] [e2b_api_key] [google_api_key]")
         sys.exit(1)
     
     prompt = sys.argv[1]
@@ -78,16 +78,16 @@ def main():
     
     # Get API keys from command line arguments or environment variables
     e2b_api_key = sys.argv[3] if len(sys.argv) > 3 else os.getenv('E2B_API_KEY')
-    anthropic_api_key = sys.argv[4] if len(sys.argv) > 4 else os.getenv('ANTHROPIC_API_KEY')
+    google_api_key = sys.argv[4] if len(sys.argv) > 4 else os.getenv('GOOGLE_API_KEY')
     
     if not e2b_api_key:
         print("Error: E2B API key is required")
         print("Provide via command line argument or E2B_API_KEY environment variable")
         sys.exit(1)
     
-    if not anthropic_api_key:
-        print("Error: Anthropic API key is required")
-        print("Provide via command line argument or ANTHROPIC_API_KEY environment variable")
+    if not google_api_key:
+        print("Error: Google API key is required")
+        print("Provide via command line argument or GOOGLE_API_KEY environment variable")
         sys.exit(1)
     
     try:
@@ -108,7 +108,7 @@ def main():
                     template="anthropic-gemini-cli",
                     api_key=e2b_api_key,
                     envs={
-                        'ANTHROPIC_API_KEY': anthropic_api_key,
+                        'GOOGLE_API_KEY': google_api_key,
                     },
                     timeout=600,  # 10 minutes timeout for longer operations
                 )

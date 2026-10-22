@@ -14,11 +14,11 @@ import { spawn } from 'child_process';
 const args = process.argv.slice(2);
 const prompt = args[0] || 'Hello, Gemini!';
 const componentsToInstall = args[1] || '';
-const googleApiKey = process.env.ANTHROPIC_API_KEY;
+const googleApiKey = process.env.GOOGLE_API_KEY;
 
 // Validate API key
 if (!googleApiKey) {
-  console.error('❌ Error: ANTHROPIC_API_KEY environment variable is required');
+  console.error('❌ Error: GOOGLE_API_KEY environment variable is required');
   process.exit(1);
 }
 
@@ -80,7 +80,7 @@ async function executeQuery() {
       prompt: enhancedPrompt,
       options: {
         apiKey: googleApiKey,
-        model: 'gemini-sonnet-4-5',
+        model: 'gemini-2.0-flash',
         permissionMode: 'bypassPermissions',  // Auto-allow all tool uses
       }
     });

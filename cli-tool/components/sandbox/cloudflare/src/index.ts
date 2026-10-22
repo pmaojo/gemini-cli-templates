@@ -1,11 +1,11 @@
 import { getSandbox, type Sandbox } from '@cloudflare/sandbox';
-import Anthropic from '@anthropic-ai/sdk';
+import { query } from '@Google-ai/gemini-agent-sdk';
 
 export { Sandbox } from '@cloudflare/sandbox';
 
 interface Env {
   Sandbox: DurableObjectNamespace<Sandbox>;
-  ANTHROPIC_API_KEY: string;
+  GOOGLE_API_KEY: string;
 }
 
 interface ExecuteRequest {
@@ -107,20 +107,15 @@ export default {
         }
 
         // Validate API key
-        if (!env.ANTHROPIC_API_KEY) {
+        if (!env.GOOGLE_API_KEY) {
           return Response.json(
             {
-              error: 'ANTHROPIC_API_KEY not configured',
-              message: 'Set the API key using: npx wrangler secret put ANTHROPIC_API_KEY',
+              error: 'GOOGLE_API_KEY not configured',
+              message: 'Set the API key using: npx wrangler secret put GOOGLE_API_KEY',
             },
             { status: 500, headers: corsHeaders }
           );
         }
-
-        // Initialize Anthropic client
-        const anthropic = new Anthropic({
-          apiKey: env.ANTHROPIC_API_KEY,
-        });
 
         // Generate code using Gemini
         console.log('Generating code with Gemini for:', body.question.substring(0, 100));
@@ -149,19 +144,22 @@ Requirements:
 
 Return ONLY the code, no explanations or markdown formatting.`;
 
-        const codeGeneration = await anthropic.messages.create({
-          model: 'gemini-sonnet-4-5',
-          max_tokens: body.maxTokens || 2048,
-          messages: [
-            {
-              role: 'user',
-              content: codePrompt,
-            },
-          ],
+        const generator = query({
+          prompt: codePrompt,
+          options: {
+            apiKey: env.GOOGLE_API_KEY,
+            model: 'gemini-2.0-flash',
+          }
         });
 
-        const generatedCode =
-          codeGeneration.content[0]?.type === 'text' ? codeGeneration.content[0].text : '';
+        let generatedCode = '';
+        for await (const message of generator) {
+          if (message.type === 'result') {
+            generatedCode = message.result;
+          } else if (message.type === 'text') {
+            generatedCode += message.text;
+          }
+        }
 
         if (!generatedCode) {
           return Response.json(

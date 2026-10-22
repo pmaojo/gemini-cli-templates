@@ -4,7 +4,7 @@
  * Executes Gemini CLI prompts using Cloudflare Workers and Sandbox SDK
  */
 
-import { query, GeminiAgentOptions } from '@anthropic-ai/gemini-agent-sdk';
+import { query, GeminiAgentOptions } from '@Google-ai/gemini-agent-sdk';
 import fetch from 'node-fetch';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -22,7 +22,7 @@ interface ExecutionResult {
 interface LauncherConfig {
   prompt: string;
   componentsToInstall: string;
-  anthropicApiKey: string;
+  googleApiKey: string;
   workerUrl?: string;
   useLocalWorker?: boolean;
   targetDir?: string;
@@ -228,8 +228,8 @@ Requirements:
     // Using settingSources: ['project'] to automatically load agents from .gemini/ directory
     // This is supported in SDK version ^0.1.23 and later
     const options: GeminiAgentOptions = {
-      model: 'gemini-sonnet-4-5',
-      apiKey: config.anthropicApiKey,
+      model: 'gemini-2.0-flash',
+      apiKey: config.googleApiKey,
       systemPrompt: { type: 'preset', preset: 'gemini_code' },
       // Automatically load agents, settings, and configurations from .gemini/ directory
       settingSources: ['project'],
@@ -406,7 +406,7 @@ async function main() {
     console.log('Cloudflare Sandbox Launcher');
     console.log('');
     console.log('Usage:');
-    console.log('  node launcher.ts <prompt> [components] [anthropic_api_key] [worker_url]');
+    console.log('  node launcher.ts <prompt> [components] [google_api_key] [worker_url]');
     console.log('');
     console.log('Examples:');
     console.log('  node launcher.ts "Calculate factorial of 5"');
@@ -414,7 +414,7 @@ async function main() {
     console.log('  node launcher.ts "Fibonacci" "" YOUR_KEY https://your-worker.workers.dev');
     console.log('');
     console.log('Environment Variables:');
-    console.log('  ANTHROPIC_API_KEY - Anthropic API key');
+    console.log('  GOOGLE_API_KEY - Google API key');
     console.log('  CLOUDFLARE_WORKER_URL - Cloudflare Worker endpoint');
     process.exit(1);
   }
@@ -422,15 +422,15 @@ async function main() {
   const config: LauncherConfig = {
     prompt: args[0],
     componentsToInstall: args[1] || '',
-    anthropicApiKey: args[2] || process.env.ANTHROPIC_API_KEY || '',
+    googleApiKey: args[2] || process.env.GOOGLE_API_KEY || '',
     workerUrl: args[3] || process.env.CLOUDFLARE_WORKER_URL || 'http://localhost:8787',
     targetDir: args[4] || process.cwd(),
     useLocalWorker: true,
   };
 
-  if (!config.anthropicApiKey) {
-    log('Error: Anthropic API key is required', 'error');
-    console.log('Provide via command line argument or ANTHROPIC_API_KEY environment variable');
+  if (!config.googleApiKey) {
+    log('Error: Google API key is required', 'error');
+    console.log('Provide via command line argument or GOOGLE_API_KEY environment variable');
     process.exit(1);
   }
 
@@ -484,7 +484,7 @@ async function main() {
 
     log('Troubleshooting:', 'info');
     console.log('1. Ensure Cloudflare Worker is deployed: npx wrangler deploy');
-    console.log('2. Check API key is set: npx wrangler secret put ANTHROPIC_API_KEY');
+    console.log('2. Check API key is set: npx wrangler secret put GOOGLE_API_KEY');
     console.log('3. Wait 2-3 minutes after first deployment for container provisioning');
     console.log('4. Check container status: npx wrangler containers list');
     console.log('5. For local testing: npm run dev');

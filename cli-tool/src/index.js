@@ -2688,7 +2688,7 @@ async function executeSandbox(options, targetDir) {
   }
   
   // Check for API keys based on sandbox provider
-  const googleKey = googleApiKey || process.env.ANTHROPIC_API_KEY;
+  const googleKey = googleApiKey || process.env.GOOGLE_API_KEY;
 
   if (sandbox === 'e2b') {
     const e2bKey = e2bApiKey || process.env.E2B_API_KEY;
@@ -2705,7 +2705,7 @@ async function executeSandbox(options, targetDir) {
     if (!googleKey) {
       console.log(chalk.red('❌ Error: Google API key is required'));
       console.log(chalk.yellow('💡 Options:'));
-      console.log(chalk.gray('   1. Set environment variable: ANTHROPIC_API_KEY=your_key'));
+      console.log(chalk.gray('   1. Set environment variable: GOOGLE_API_KEY=your_key'));
       console.log(chalk.gray('   2. Use CLI parameter: --google-api-key your_key'));
       console.log(chalk.blue('   Get your key at: https://console.google.com'));
       return;
@@ -2718,7 +2718,7 @@ async function executeSandbox(options, targetDir) {
     if (!googleKey) {
       console.log(chalk.red('❌ Error: Google API key is required for Cloudflare sandbox'));
       console.log(chalk.yellow('💡 Options:'));
-      console.log(chalk.gray('   1. Set environment variable: ANTHROPIC_API_KEY=your_key'));
+      console.log(chalk.gray('   1. Set environment variable: GOOGLE_API_KEY=your_key'));
       console.log(chalk.gray('   2. Use CLI parameter: --google-api-key your_key'));
       console.log(chalk.blue('   Get your key at: https://console.google.com'));
       return;
@@ -2731,7 +2731,7 @@ async function executeSandbox(options, targetDir) {
     if (!googleKey) {
       console.log(chalk.red('❌ Error: Google API key is required for Docker sandbox'));
       console.log(chalk.yellow('💡 Options:'));
-      console.log(chalk.gray('   1. Set environment variable: ANTHROPIC_API_KEY=your_key'));
+      console.log(chalk.gray('   1. Set environment variable: GOOGLE_API_KEY=your_key'));
       console.log(chalk.gray('   2. Use CLI parameter: --google-api-key your_key'));
       console.log(chalk.blue('   Get your key at: https://console.google.com'));
       return;
@@ -2906,7 +2906,7 @@ async function executeCloudflareSandbox(options, targetDir) {
               timeout: 300000, // 5 minutes
               env: {
                 ...process.env,
-                ANTHROPIC_API_KEY: googleKey
+                GOOGLE_API_KEY: googleKey
               }
             });
 
@@ -2926,7 +2926,7 @@ async function executeCloudflareSandbox(options, targetDir) {
 
             sandboxExecution.on('error', (error) => {
               console.log(chalk.red(`❌ Error executing sandbox: ${error.message}`));
-              console.log(chalk.yellow('💡 Make sure you have set ANTHROPIC_API_KEY'));
+              console.log(chalk.yellow('💡 Make sure you have set GOOGLE_API_KEY'));
               reject(error);
             });
           } else {
@@ -3111,7 +3111,7 @@ async function executeDockerSandbox(options, targetDir) {
         stdio: 'inherit',
         env: {
           ...process.env,
-          ANTHROPIC_API_KEY: googleKey
+          GOOGLE_API_KEY: googleKey
         }
       });
 
@@ -3367,7 +3367,7 @@ async function executeE2BSandbox(options, targetDir) {
               env: { 
                 ...process.env,
                 E2B_API_KEY: e2bKey,
-                ANTHROPIC_API_KEY: googleKey
+                GOOGLE_API_KEY: googleKey
               }
             });
             
@@ -3425,7 +3425,7 @@ async function executeE2BSandbox(options, targetDir) {
                 console.log(chalk.blue('💡 Try breaking down your prompt into smaller, more specific requests'));
               } else {
                 console.log(chalk.red(`❌ Error executing sandbox: ${error.message}`));
-                console.log(chalk.yellow('💡 Make sure you have set E2B_API_KEY and ANTHROPIC_API_KEY environment variables'));
+                console.log(chalk.yellow('💡 Make sure you have set E2B_API_KEY and GOOGLE_API_KEY environment variables'));
                 console.log(chalk.gray('   Create a .env file in the .gemini/sandbox directory with your API keys'));
               }
               reject(error);
