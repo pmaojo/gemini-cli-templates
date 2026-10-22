@@ -1,0 +1,436 @@
+/* Featured Page Styles - Extends component-page.css */
+
+/* ===== DARK MODE (Default) ===== */
+:root,
+html.dark {
+  --featured-bg-primary: #0f0f0f;
+  --featured-bg-secondary: #1a1a1a;
+  --featured-bg-tertiary: #232323;
+  --featured-border: rgba(255, 255, 255, 0.08);
+  --featured-border-hover: rgba(255, 255, 255, 0.15);
+  --featured-text-primary: #f5f5f5;
+  --featured-text-secondary: #a3a3a3;
+  --featured-text-tertiary: #737373;
+  --featured-code-bg: #1a1a1a;
+  --featured-card-hover: #232323;
+}
+
+/* ===== LIGHT MODE ===== */
+html.light {
+  --featured-bg-primary: #ffffff;
+  --featured-bg-secondary: #fafafa;
+  --featured-bg-tertiary: #f5f5f5;
+  --featured-border: #e5e5e5;
+  --featured-border-hover: #d4d4d4;
+  --featured-text-primary: #0f0f0f;
+  --featured-text-secondary: #525252;
+  --featured-text-tertiary: #8a8a8a;
+  --featured-code-bg: #f5f5f5;
+  --featured-card-hover: #fafafa;
+}
+
+/* Featured Logo in Header */
+.featured-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.featured-logo img {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+}
+
+/* Partner Badge - Color variants for featured type */
+.partner-badge {
+    background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+    color: #ffffff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    box-shadow:
+        0 2px 8px rgba(99, 102, 241, 0.3),
+        0 4px 16px rgba(99, 102, 241, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.partner-badge:hover {
+    transform: translateY(-1px) scale(1.02);
+    filter: brightness(1.1);
+}
+
+.partner-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+/* Partner badge color variants */
+.partner-badge--partner {
+    background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+    box-shadow:
+        0 2px 8px rgba(99, 102, 241, 0.3),
+        0 4px 16px rgba(99, 102, 241, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.partner-badge--database {
+    background: linear-gradient(135deg, #059669 0%, #34d399 100%);
+    box-shadow:
+        0 2px 8px rgba(5, 150, 105, 0.3),
+        0 4px 16px rgba(5, 150, 105, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.partner-badge--toolkit {
+    background: linear-gradient(135deg, #d97706 0%, #fbbf24 100%);
+    box-shadow:
+        0 2px 8px rgba(217, 119, 6, 0.3),
+        0 4px 16px rgba(217, 119, 6, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* External CTA Button in Sidebar */
+.sidebar-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-cta-btn:hover {
+    background: var(--text-accent);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-cta-btn svg {
+    flex-shrink: 0;
+}
+
+/* Featured Article Content in Overview Tab */
+.featured-content {
+  color: var(--featured-text-secondary);
+  line-height: 1.7;
+}
+
+.featured-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--featured-text-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+}
+
+.featured-content h2:first-child {
+    margin-top: 0;
+}
+
+.featured-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--featured-text-primary);
+    margin-top: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.featured-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--featured-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.featured-content ul,
+.featured-content ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    color: var(--featured-text-secondary);
+}
+
+.featured-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.featured-content strong {
+    color: var(--featured-text-primary);
+    font-weight: 600;
+}
+
+.featured-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.featured-content a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.featured-content code {
+    background: var(--featured-code-bg);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-family: 'Monaco', 'Menlo', 'Geist Mono', monospace;
+    border: 1px solid var(--featured-border);
+}
+
+.featured-content pre {
+    background: var(--featured-bg-secondary);
+    border: 1px solid var(--featured-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.featured-content pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--featured-text-primary);
+    line-height: 1.6;
+    border: none;
+}
+
+.featured-content blockquote {
+    background: var(--featured-bg-tertiary);
+    border-left: 3px solid var(--accent-color);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+    color: var(--featured-text-secondary);
+}
+
+.featured-content blockquote p {
+    margin-bottom: 0.5rem;
+}
+
+.featured-content blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Feature List Cards */
+.featured-content .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.featured-content .feature-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--featured-bg-secondary);
+    border: 1px solid var(--featured-border);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.featured-content .feature-item:hover {
+    transform: translateX(4px);
+    border-color: var(--featured-border-hover);
+    background: var(--featured-card-hover);
+}
+
+.featured-content .feature-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--featured-bg-tertiary);
+    border-radius: 8px;
+    color: var(--accent-color);
+    font-weight: 700;
+    border: 1px solid var(--featured-border);
+}
+
+.featured-content .feature-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--featured-text-primary);
+    font-size: 1.05rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.featured-content .feature-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--featured-text-secondary);
+}
+
+/* Comparison Box */
+.featured-content .comparison-box {
+    background: var(--featured-bg-secondary);
+    border: 1px solid var(--featured-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.featured-content .comparison-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--featured-border);
+}
+
+.featured-content .comparison-item:last-child {
+    border-bottom: none;
+}
+
+.featured-content .comparison-item strong {
+    color: var(--accent-color);
+}
+
+/* Info Note */
+.featured-content .info-note {
+    background: var(--featured-bg-secondary);
+    border-left: 3px solid var(--accent-color);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+    color: var(--featured-text-secondary);
+}
+
+/* CTA Box */
+.featured-content .cta-box {
+    background: var(--featured-bg-secondary);
+    border: 1px solid var(--featured-border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+/* Website Tab iframe */
+.featured-website-frame {
+    width: 100%;
+    min-height: 600px;
+    border: 1px solid var(--featured-border);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.website-tab-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--featured-bg-secondary);
+    border: 1px solid var(--featured-border);
+    border-radius: 8px;
+}
+
+.website-tab-url {
+    color: var(--featured-text-secondary);
+    font-size: 0.85rem;
+    font-family: 'Monaco', 'Menlo', 'Geist Mono', monospace;
+}
+
+.website-tab-open {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.website-tab-open:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Partner Info Card in Sidebar */
+.partner-info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.partner-info-card img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+}
+
+.partner-info-description {
+    font-size: 0.85rem;
+    color: var(--featured-text-secondary);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .featured-content .feature-item {
+        flex-direction: column;
+    }
+
+    .featured-content .feature-icon {
+        font-size: 1.2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .featured-logo img {
+        max-width: 200px;
+    }
+
+    .featured-website-frame {
+        min-height: 400px;
+    }
+}
+
+/* Smooth transitions for theme switching */
+.featured-content,
+.featured-content *,
+.feature-item,
+.comparison-box,
+.info-note,
+.cta-box,
+.website-tab-header {
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}

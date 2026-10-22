@@ -1,5 +1,4 @@
 // Index Events - Handles events specific to index.html
-console.log('index-events.js loaded successfully');
 
 // Global function to focus search input when clicking wrapper
 function focusSearchInput() {
@@ -11,7 +10,7 @@ function focusSearchInput() {
 
 class IndexPageManager {
     constructor() {
-        this.currentFilter = 'agents';
+        this.currentFilter = 'skills';
         this.currentCategoryFilter = 'all';
         this.currentSort = 'downloads'; // Default sort by downloads
         this.templatesData = null;
@@ -122,8 +121,8 @@ class IndexPageManager {
             return firstSegment;
         }
 
-        // Default to agents
-        return 'agents';
+        // Default to skills
+        return 'skills';
     }
 
     async loadTemplatesData() {
@@ -159,7 +158,6 @@ class IndexPageManager {
     // Kept for backward compatibility but does nothing
     async loadMoreComponentsInBackground() {
         // No-op: All components are now loaded in the initial request
-        console.log('All components loaded in initial request - background loading not needed');
     }
     
     // Check if data object is empty
@@ -207,7 +205,6 @@ class IndexPageManager {
             const card = e.target.closest('.template-card');
             // Prevent flipping for "add new" cards or if a button is clicked
             if (card && !card.classList.contains('add-template-card') && !e.target.closest('button')) {
-                console.log('Global template card clicked, toggling flip');
                 card.classList.toggle('flipped');
             }
         });
@@ -580,8 +577,8 @@ class IndexPageManager {
                         <div class="framework-logo" style="color: #a855f7">
                             <span class="component-icon">🧩</span>
                         </div>
-                        <h3 class="template-title">${this.formatComponentName(plugin.name)}</h3>
-                        <p class="template-description">${plugin.description}</p>
+                        <h3 class="template-title">${escapeHTML(this.formatComponentName(plugin.name))}</h3>
+                        <p class="template-description">${escapeHTML(plugin.description)}</p>
                         <div class="plugin-stats">
                             ${plugin.commands > 0 ? `<span class="plugin-stat"><span class="stat-icon">⚡</span>${plugin.commands}</span>` : ''}
                             ${plugin.agents > 0 ? `<span class="plugin-stat"><span class="stat-icon">🤖</span>${plugin.agents}</span>` : ''}
@@ -706,7 +703,7 @@ class IndexPageManager {
         
         // Create category label (use "General" if no category)
         const categoryName = component.category || 'general';
-        const categoryLabel = `<div class="category-label">${this.formatComponentName(categoryName)}</div>`;
+        const categoryLabel = `<div class="category-label">${escapeHTML(this.formatComponentName(categoryName))}</div>`;
         
         // Create download badge if downloads data exists
         const downloadBadge = component.downloads && component.downloads > 0 ?
@@ -730,17 +727,17 @@ class IndexPageManager {
                             <span class="component-icon">${config.icon}</span>
                             ${validationBadge}
                         </div>
-                        <h3 class="template-title">${this.formatComponentName(component.name)}</h3>
-                        ${component.type === 'mcp' ? 
-                            `<p class="template-description">${this.truncateDescription(component.description || 'MCP integration for enhanced development workflow', 80)}</p>` : 
-                            `<p class="template-description">${this.getComponentDescription(component)}</p>`
+                        <h3 class="template-title">${escapeHTML(this.formatComponentName(component.name))}</h3>
+                        ${component.type === 'mcp' ?
+                            `<p class="template-description">${escapeHTML(this.truncateDescription(component.description || 'MCP integration for enhanced development workflow', 80))}</p>` :
+                            `<p class="template-description">${escapeHTML(this.getComponentDescription(component))}</p>`
                         }
                     </div>
                     <div class="card-back">
                         <div class="command-display">
                             <h3>Installation Command</h3>
                             <div class="command-code-container">
-                                <div class="command-code">${installCommand}</div>
+                                <div class="command-code">${escapeHTML(installCommand)}</div>
                                 <button class="copy-overlay-btn" onclick="copyToClipboard('${escapedCommand}'); event.stopPropagation();" title="Copy command">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
@@ -1049,13 +1046,13 @@ class IndexPageManager {
                     <div class="framework-logo">
                         <i class="${icon} colored"></i>
                     </div>
-                    <h3 class="template-title">${displayName}</h3>
-                    <p class="template-description">${template.description}</p>
+                    <h3 class="template-title">${escapeHTML(displayName)}</h3>
+                    <p class="template-description">${escapeHTML(template.description)}</p>
                 </div>
                 <div class="card-back">
                     <div class="command-display">
                         <h3>Installation Command</h3>
-                        <div class="command-code">${template.installCommand}</div>
+                        <div class="command-code">${escapeHTML(template.installCommand)}</div>
                         <div class="action-buttons">
                             <button class="view-files-btn" onclick="showTemplateDetails('${template.id}', '${template.name}', '${template.subtype}')">
                                 📁 View Files
@@ -1090,8 +1087,8 @@ class IndexPageManager {
                     <div class="framework-logo">
                         <i class="${frameworkData.icon} colored"></i>
                     </div>
-                    <h3 class="template-title">${displayName}</h3>
-                    <p class="template-description">${(languageData.description || '').substring(0, 120)}${(languageData.description || '').length > 120 ? '...' : ''}</p>
+                    <h3 class="template-title">${escapeHTML(displayName)}</h3>
+                    <p class="template-description">${escapeHTML((languageData.description || '').substring(0, 120))}${(languageData.description || '').length > 120 ? '...' : ''}</p>
                 </div>
                 <div class="card-back">
                     <div class="command-display">
@@ -1297,8 +1294,6 @@ function setUnifiedFilter(filter) {
         activeBtn.classList.add('active');
     }
     
-    console.log('Component type filter selected:', filter);
-    
     // Update URL with filter parameter
     if (typeof updateURLWithFilter === 'function') {
         updateURLWithFilter(filter);
@@ -1321,18 +1316,13 @@ function showCategoryFilters(componentType) {
     if (window.dataLoader) {
         const dataLoader = window.dataLoader;
         
-        console.log('DataLoader available, getting categories for:', componentType);
-        console.log('DataLoader componentsData:', dataLoader.componentsData);
-        
         switch(componentType) {
             case 'agents':
                 const agents = dataLoader.getComponentsByType('agent');
-                console.log('Agents data:', agents);
                 categories = getUniqueCategories(agents);
                 break;
             case 'commands':
                 const commands = dataLoader.getComponentsByType('command');
-                console.log('Commands data:', commands);
                 categories = getUniqueCategories(commands);
                 break;
             case 'settings':
@@ -1353,12 +1343,10 @@ function showCategoryFilters(componentType) {
                 break;
             case 'mcps':
                 const mcps = dataLoader.getComponentsByType('mcp');
-                console.log('MCPs data:', mcps);
                 categories = getUniqueCategories(mcps);
                 break;
             case 'skills':
                 const skills = dataLoader.getComponentsByType('skill');
-                console.log('Skills data:', skills);
                 categories = getUniqueCategories(skills);
                 break;
             case 'extensions':
@@ -1368,7 +1356,6 @@ function showCategoryFilters(componentType) {
                 break;
             case 'templates':
                 const templates = dataLoader.getComponentsByType('template');
-                console.log('Templates data:', templates);
                 categories = getUniqueCategories(templates);
                 break;
             case 'plugins':
@@ -1379,9 +1366,6 @@ function showCategoryFilters(componentType) {
                 categories = [];
         }
         
-        console.log('Found categories for', componentType, ':', categories);
-    } else {
-        console.log('DataLoader not available yet');
     }
     
     // Add "All" option at the beginning
@@ -1391,11 +1375,12 @@ function showCategoryFilters(componentType) {
     
     if (categories.length > 0) {
         categoryChips.innerHTML = categories.map((category, index) => {
-            const displayName = formatCategoryName(category);
+            const displayName = escapeHTML(formatCategoryName(category));
+            const safeCategory = escapeHTML(category.toLowerCase());
             // Only the first item (All) should be active by default
             const isActive = index === 0 ? 'active' : '';
             return `
-                <button class="filter-chip ${isActive}" data-category="${category.toLowerCase()}" onclick="setCategoryFilter('${category.toLowerCase()}')">
+                <button class="filter-chip ${isActive}" data-category="${safeCategory}" onclick="setCategoryFilter('${safeCategory}')">
                     ${displayName}
                 </button>
             `;
@@ -1435,67 +1420,33 @@ function formatCategoryName(category) {
 // Function to handle category filter selection
 // Enhanced setCategoryFilter function that handles both old and new category systems
 window.setCategoryFilter = function setCategoryFilter(category) {
-    console.log('setCategoryFilter called with:', category);
-    
     // Handle the new category chips in #categoryChips
     const categoryButtons = document.querySelectorAll('#categoryChips button.filter-chip');
     if (categoryButtons.length > 0) {
-        console.log('Found new category buttons:', categoryButtons.length);
-        
-        categoryButtons.forEach((btn, index) => {
-            console.log(`Button ${index}:`, btn.getAttribute('data-category'), 'has active:', btn.classList.contains('active'));
+        categoryButtons.forEach((btn) => {
             btn.classList.remove('active');
         });
-        
+
         // Add active class only to the clicked button
         const activeBtn = document.querySelector(`#categoryChips button[data-category="${category}"]`);
-        console.log('Target button found:', activeBtn);
-        
         if (activeBtn) {
             activeBtn.classList.add('active');
-            console.log('Added active class to:', category);
         }
     }
-    
+
     // Also call the existing IndexManager setCategoryFilter method for actual filtering
     if (window.indexManager && window.indexManager.setCategoryFilter) {
-        console.log('Calling IndexManager setCategoryFilter with:', category);
         window.indexManager.setCategoryFilter(category);
     }
-    
+
     // Force re-render of the current filter to apply category filtering
     if (window.indexManager && window.indexManager.displayCurrentFilter) {
-        console.log('Re-displaying current filter to apply category filter');
         window.indexManager.displayCurrentFilter();
     }
 }
 
-// Test function to debug category filters
-window.testCategoryFilter = function() {
-    console.log('=== Category Filter Debug ===');
-    const categoryChips = document.getElementById('categoryChips');
-    console.log('Category chips container:', categoryChips);
-    
-    if (categoryChips) {
-        const buttons = categoryChips.querySelectorAll('button.filter-chip');
-        console.log('Found buttons:', buttons.length);
-        
-        buttons.forEach((btn, index) => {
-            console.log(`Button ${index}:`, {
-                category: btn.getAttribute('data-category'),
-                hasActive: btn.classList.contains('active'),
-                onclick: btn.getAttribute('onclick')
-            });
-        });
-    }
-    
-    console.log('setCategoryFilter function exists:', typeof window.setCategoryFilter);
-}
-
 // Global helper functions for template cards
 function showInstallationFiles(languageKey, frameworkKey, displayName) {
-    console.log('Show installation files for:', displayName);
-    // For now, just show a simple alert - could be enhanced later with full modal
     alert(`Installation files for ${displayName} would be shown here.`);
 }
 
@@ -1993,8 +1944,6 @@ function handleAddToCart(name, path, type, category, buttonElement) {
             buttonElement.style.transform = 'scale(1)';
         }, 150);
         
-        // Show notification (the cart manager already handles this, but we can add extra visual feedback)
-        console.log(`✅ ${name} added to stack successfully!`);
     }
 }
 
