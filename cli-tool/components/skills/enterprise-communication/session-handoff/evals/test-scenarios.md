@@ -38,7 +38,7 @@ I can continue later.
 **Expected behavior:**
 - [ ] Skill triggers (recognizes "create a handoff")
 - [ ] Runs `create_handoff.py` script
-- [ ] Creates file in `.claude/handoffs/`
+- [ ] Creates file in `.gemini/handoffs/`
 - [ ] Pre-fills metadata (timestamp, project path, git branch)
 - [ ] Prompts user to complete TODO sections
 - [ ] Mentions validation step

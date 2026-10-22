@@ -61,7 +61,7 @@ class EnvLoader:
 
         Works with any AI tool directory structure:
         - .agent/skills/ (universal)
-        - .claude/skills/ (Claude Code)
+        - .gemini/skills/ (Claude Code)
         - .gemini/skills/ (Gemini CLI)
         - .cursor/skills/ (Cursor)
 
@@ -85,7 +85,7 @@ class EnvLoader:
         if skills_env.exists():
             paths.append(skills_env)
 
-        # agent_dir/.env (e.g., .agent, .claude, .gemini, .cursor)
+        # agent_dir/.env (e.g., .agent, .gemini, .gemini, .cursor)
         agent_env = skill_dir.parent.parent / '.env'
         if agent_env.exists():
             paths.append(agent_env)

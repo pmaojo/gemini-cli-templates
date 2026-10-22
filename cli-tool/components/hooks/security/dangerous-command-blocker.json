@@ -1,20 +1,20 @@
 {
-  "description": "Advanced protection against dangerous shell commands with multi-level security. Blocks catastrophic operations (rm -rf /, dd, mkfs), protects critical paths (.claude/, .git/, node_modules/), and warns about suspicious patterns. Features: catastrophic command blocking, critical path protection, smart pattern detection, and detailed safety messages.",
+  "description": "Advanced protection against dangerous shell commands with multi-level security. Blocks catastrophic operations (rm -rf /, dd, mkfs), protects critical paths (.gemini/, .git/, node_modules/), and warns about suspicious patterns. Features: catastrophic command blocking, critical path protection, smart pattern detection, and detailed safety messages.",
   "supportingFiles": [
     {
       "source": "dangerous-command-blocker.py",
-      "destination": ".claude/hooks/dangerous-command-blocker.py",
+      "destination": ".gemini/hooks/dangerous-command-blocker.py",
       "executable": true
     }
   ],
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/dangerous-command-blocker.py"
+            "command": "python3 .gemini/hooks/dangerous-command-blocker.py"
           }
         ]
       }

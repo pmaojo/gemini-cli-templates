@@ -70,10 +70,10 @@ Your Task → Claude asks NotebookLM → Gemini synthesizes answer → Claude wr
 
 ```bash
 # 1. Create skills directory (if it doesn't exist)
-mkdir -p ~/.claude/skills
+mkdir -p ~/.gemini/skills
 
 # 2. Clone this repository
-cd ~/.claude/skills
+cd ~/.gemini/skills
 git clone https://github.com/PleasePrompto/notebooklm-skill notebooklm
 
 # 3. That's it! Open Claude Code and say:
@@ -151,7 +151,7 @@ This is a **Claude Code Skill** - a local folder containing instructions and scr
 | Feature | This Skill | MCP Server |
 |---------|------------|------------|
 | **Protocol** | Claude Skills | Model Context Protocol |
-| **Installation** | Clone to `~/.claude/skills` | `claude mcp add ...` |
+| **Installation** | Clone to `~/.gemini/skills` | `claude mcp add ...` |
 | **Sessions** | Fresh browser each question | Persistent chat sessions |
 | **Compatibility** | Claude Code only (local) | Claude Code, Codex, Cursor, etc. |
 | **Language** | Python | TypeScript |
@@ -160,7 +160,7 @@ This is a **Claude Code Skill** - a local folder containing instructions and scr
 ### Architecture
 
 ```
-~/.claude/skills/notebooklm/
+~/.gemini/skills/notebooklm/
 ├── SKILL.md              # Instructions for Claude
 ├── scripts/              # Python automation scripts
 │   ├── ask_question.py   # Query NotebookLM
@@ -263,7 +263,7 @@ Note: The MCP server uses the same Patchright library but via TypeScript/npm eco
 All data is stored locally within the skill directory:
 
 ```
-~/.claude/skills/notebooklm/data/
+~/.gemini/skills/notebooklm/data/
 ├── library.json       - Your notebook library with metadata
 ├── auth_info.json     - Authentication status info
 └── browser_state/     - Browser cookies and session data
@@ -330,7 +330,7 @@ Chrome runs locally on your machine. Your credentials never leave your computer.
 ### Skill not found
 ```bash
 # Make sure it's in the right location
-ls ~/.claude/skills/notebooklm/
+ls ~/.gemini/skills/notebooklm/
 # Should show: SKILL.md, scripts/, etc.
 ```
 
@@ -343,7 +343,7 @@ Say: `"Clear NotebookLM browser data"`
 ### Dependencies issues
 ```bash
 # Manual reinstall if needed
-cd ~/.claude/skills/notebooklm
+cd ~/.gemini/skills/notebooklm
 rm -rf .venv
 python -m venv .venv
 source .venv/bin/activate  # or .venv\Scripts\activate on Windows
@@ -396,7 +396,7 @@ Stop the copy-paste dance. Start getting accurate, grounded answers directly in 
 
 ```bash
 # Get started in 30 seconds
-cd ~/.claude/skills
+cd ~/.gemini/skills
 git clone https://github.com/PleasePrompto/notebooklm-skill notebooklm
 # Open Claude Code: "What are my skills?"
 ```

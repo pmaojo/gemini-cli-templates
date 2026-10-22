@@ -1,5 +1,5 @@
 #!/bin/bash
-# Detects Write to ~/.claude/plans/ and starts dino game (for /plan command)
+# Detects Write to ~/.gemini/plans/ and starts dino game (for /plan command)
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 FLAG="$SCRIPT_DIR/.plan-active"
 
@@ -15,7 +15,7 @@ fi
 INPUT=$(cat)
 FILE_PATH=$(echo "$INPUT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('tool_input',{}).get('file_path',''))" 2>/dev/null)
 
-if echo "$FILE_PATH" | grep -q "/.claude/plans/"; then
+if echo "$FILE_PATH" | grep -q "/.gemini/plans/"; then
   # Plan mode detected! Start the game
   bash "$SCRIPT_DIR/start.sh"
   # Send this Write as first activity

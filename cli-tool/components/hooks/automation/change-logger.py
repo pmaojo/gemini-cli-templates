@@ -2,7 +2,7 @@
 """
 Change Logger Hook
 Logs every file mutation (Edit, Write, Bash) to a CSV file for demo prep and session review.
-Output: .claude/critical_log_changes.csv
+Output: .gemini/critical_log_changes.csv
 """
 
 import csv
@@ -23,7 +23,7 @@ READONLY_COMMANDS = {
     "type", "file", "wc", "du", "df",
 }
 
-CSV_PATH = ".claude/critical_log_changes.csv"
+CSV_PATH = ".gemini/critical_log_changes.csv"
 CSV_HEADERS = ["timestamp", "tool", "file_path", "action", "details"]
 
 

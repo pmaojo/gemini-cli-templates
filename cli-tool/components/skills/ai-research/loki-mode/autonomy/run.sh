@@ -240,8 +240,8 @@ check_skill_installed() {
     log_header "Checking Loki Mode Skill"
 
     local skill_locations=(
-        "$HOME/.claude/skills/loki-mode/SKILL.md"
-        ".claude/skills/loki-mode/SKILL.md"
+        "$HOME/.gemini/skills/loki-mode/SKILL.md"
+        ".gemini/skills/loki-mode/SKILL.md"
         "$PROJECT_DIR/SKILL.md"
     )
 

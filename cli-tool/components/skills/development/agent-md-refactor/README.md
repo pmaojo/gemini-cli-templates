@@ -6,7 +6,7 @@ Based on https://x.com/mattpocockuk/status/2012906065856270504 (Matt Pocock's Pr
 
 ## Purpose
 
-Over time, agent instruction files like `CLAUDE.md`, `AGENTS.md`, or `COPILOT.md` tend to grow into unwieldy documents containing hundreds of lines of mixed instructions. This creates several problems:
+Over time, agent instruction files like `GEMINI.md`, `AGENTS.md`, or `COPILOT.md` tend to grow into unwieldy documents containing hundreds of lines of mixed instructions. This creates several problems:
 
 - **Context waste**: Every task loads the entire file, even when most instructions are irrelevant
 - **Maintenance burden**: Finding and updating specific instructions becomes difficult
@@ -19,9 +19,9 @@ This skill solves these problems by applying **progressive disclosure** - keepin
 
 Use this skill when you need to clean up agent instruction files. Common trigger phrases include:
 
-- "refactor my AGENTS.md" / "refactor my CLAUDE.md"
+- "refactor my AGENTS.md" / "refactor my GEMINI.md"
 - "split my agent instructions"
-- "organize my CLAUDE.md file"
+- "organize my GEMINI.md file"
 - "my AGENTS.md is too long"
 - "progressive disclosure for my instructions"
 - "clean up my agent config"
@@ -69,8 +69,8 @@ Generates the new file hierarchy with properly linked documentation:
 
 ```
 project-root/
-├── CLAUDE.md              # Minimal root with links
-└── .claude/               # Categorized instructions
+├── GEMINI.md              # Minimal root with links
+└── .gemini/               # Categorized instructions
     ├── typescript.md
     ├── testing.md
     ├── code-style.md
@@ -101,9 +101,9 @@ Identifies instructions that should be removed entirely:
 ### Basic Refactoring
 
 ```
-User: refactor my CLAUDE.md
+User: refactor my GEMINI.md
 
-Claude: I'll analyze your CLAUDE.md file and refactor it using progressive
+Claude: I'll analyze your GEMINI.md file and refactor it using progressive
 disclosure principles...
 ```
 
@@ -142,9 +142,9 @@ One-sentence description of the project.
 
 ## Detailed Instructions
 
-- [TypeScript Conventions](.claude/typescript.md)
-- [Testing Guidelines](.claude/testing.md)
-- [Code Style](.claude/code-style.md)
+- [TypeScript Conventions](.gemini/typescript.md)
+- [Testing Guidelines](.gemini/testing.md)
+- [Code Style](.gemini/code-style.md)
 ```
 
 **Organized linked files with consistent structure:**

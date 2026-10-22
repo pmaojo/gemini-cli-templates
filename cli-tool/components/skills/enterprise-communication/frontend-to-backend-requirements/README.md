@@ -31,7 +31,7 @@ The skill guides you through documenting your requirements in a structured forma
 5. **Surfaces uncertainties** - Questions and assumptions that need clarification
 6. **Invites collaboration** - Opens discussion for backend input and pushback
 
-All output goes to `.claude/docs/ai/<feature-name>/backend-requirements.md` - no chat output.
+All output goes to `.gemini/docs/ai/<feature-name>/backend-requirements.md` - no chat output.
 
 ## Key Features
 

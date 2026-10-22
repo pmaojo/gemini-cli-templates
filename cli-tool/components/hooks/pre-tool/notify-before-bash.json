@@ -1,9 +1,9 @@
 {
   "description": "Show notification before any Bash command execution for security awareness. This hook displays a simple echo message '🔔 About to run bash command...' before Gemini executes any bash command, giving you visibility into when system commands are about to run. Useful for monitoring and auditing command execution.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",

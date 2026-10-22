@@ -73,7 +73,7 @@ ANOTHER_VALID=test
 
     def test_get_env_paths(self, tmp_path):
         """Test getting .env file paths from universal directory structure."""
-        # Create directory structure (works with .agent, .claude, .gemini, .cursor)
+        # Create directory structure (works with .agent, .gemini, .gemini, .cursor)
         agent_dir = tmp_path / ".agent"
         skills_dir = agent_dir / "skills"
         skill_dir = skills_dir / "shopify"
@@ -96,7 +96,7 @@ ANOTHER_VALID=test
         """Test configuration loading priority across different AI tool directories."""
         skill_dir = tmp_path / "skill"
         skills_dir = tmp_path
-        agent_dir = tmp_path.parent  # Could be .agent, .claude, .gemini, .cursor
+        agent_dir = tmp_path.parent  # Could be .agent, .gemini, .gemini, .cursor
 
         skill_dir.mkdir(parents=True)
 

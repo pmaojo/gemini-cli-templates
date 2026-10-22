@@ -2,7 +2,7 @@
 # PostToolUse hook (matcher: Bash) — dd-cli audit logger.
 #
 # Appends one versioned JSON line per dd-cli / dd-guard invocation to
-# ~/.claude/dd-guard/audit.jsonl. Passive observation only: never blocks,
+# ~/.gemini/dd-guard/audit.jsonl. Passive observation only: never blocks,
 # never modifies anything, exits 0 on every path. Event types are derived
 # from the command text itself, so this hook is self-contained.
 #
@@ -67,7 +67,7 @@ line = {
     "exit_ok": exit_ok,
 }
 
-audit = os.path.expanduser(os.environ.get("DD_AUDIT_FILE", "~/.claude/dd-guard/audit.jsonl"))
+audit = os.path.expanduser(os.environ.get("DD_AUDIT_FILE", "~/.gemini/dd-guard/audit.jsonl"))
 os.makedirs(os.path.dirname(audit), exist_ok=True)
 with open(audit, "a") as f:
     f.write(json.dumps(line) + "\n")

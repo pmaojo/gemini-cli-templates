@@ -556,10 +556,10 @@ async function installIndividualCommand(commandName, targetDir, options) {
     let githubUrl;
     if (commandName.includes('/')) {
       // Category/command format: security/vulnerability-scan
-      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/commands/${commandName}.toml`;
     } else {
       // Direct command format: check-file
-      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/commands/${commandName}.md`;
+      githubUrl = `https://raw.githubusercontent.com/pmaojo/Gemini-cli-templates/main/cli-tool/components/commands/${commandName}.toml`;
     }
     
     console.log(chalk.gray(`📥 Downloading from GitHub (main branch)...`));
@@ -589,7 +589,7 @@ async function installIndividualCommand(commandName, targetDir, options) {
       fileName = commandName;
     }
     
-    const targetFile = path.join(commandsDir, `${fileName}.md`);
+    const targetFile = path.join(commandsDir, `${fileName}.toml`);
     
     await fs.writeFile(targetFile, commandContent, 'utf8');
     
@@ -2245,7 +2245,7 @@ async function installComponentFromWorkflow(componentData, type, targetDir, opti
       // Create .gemini/commands directory if it doesn't exist
       const commandsDir = path.join(targetDir, '.gemini', 'commands');
       await fs.ensureDir(commandsDir);
-      targetPath = path.join(commandsDir, `${fileName}.md`);
+      targetPath = path.join(commandsDir, `${fileName}.toml`);
       
     } else if (type === 'mcp') {
       // For MCPs, merge with existing .mcp.json

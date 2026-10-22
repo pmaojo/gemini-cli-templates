@@ -48,7 +48,7 @@ The compiler scans the topic articles for patterns spanning 3+ topics and genera
 
 ### The three-layer architecture is now canonical
 
-Multiple secondary sources have converged on the same three-layer mental model: **raw / wiki / schema**. The schema layer is *explicit* - a file like `CLAUDE.md`, `AGENTS.md`, or `schema.md` that defines folder structure, citation rules, ingest workflow, Q&A behavior, and linting conventions. This is what turns an LLM from a generic chatbot into a disciplined wiki maintainer.
+Multiple secondary sources have converged on the same three-layer mental model: **raw / wiki / schema**. The schema layer is *explicit* - a file like `GEMINI.md`, `AGENTS.md`, or `schema.md` that defines folder structure, citation rules, ingest workflow, Q&A behavior, and linting conventions. This is what turns an LLM from a generic chatbot into a disciplined wiki maintainer.
 
 ### Contamination control via separate vault
 
@@ -88,7 +88,7 @@ For research-heavy blueprints, the citation rules in `references/research-and-ci
 
 ---
 
-## 2. CLAUDE.md / AGENTS.md - what the research actually shows
+## 2. GEMINI.md / AGENTS.md - what the research actually shows
 
 This was the most surprising research finding and required reversing my previous advice in `claude-code-integration.md`.
 
@@ -119,18 +119,18 @@ Sources:
 
 ### What changed in the skill
 
-Previous version of `claude-code-integration.md` recommended a `CLAUDE.md` that told Claude about the blueprint workspace upfront. Updated version recommends:
+Previous version of `claude-code-integration.md` recommended a `GEMINI.md` that told Claude about the blueprint workspace upfront. Updated version recommends:
 
-- **Start with no `CLAUDE.md`**. Let the agent work without one. For most tasks, the README and existing docs are enough.
+- **Start with no `GEMINI.md`**. Let the agent work without one. For most tasks, the README and existing docs are enough.
 - **Add rules iteratively, only when you observe a recurring failure**. Not a one-off mistake - a *pattern*.
 - **Write for the gap, not the overview**. Tool choices that diverge from defaults (`use uv, not pip`), non-obvious test configurations, custom build commands. Skip everything inferable from `package.json`, `pyproject.toml`, `README.md`, existing `tsconfig`, etc.
 - **Target under 150 lines** for the file as a whole. Frontier thinking models follow ~150-200 instructions reliably; Claude Code's own system prompt has ~50, so you have ~100-150 to spend wisely.
-- **Hooks > CLAUDE.md instructions for things that must happen every time**. Hooks are deterministic; CLAUDE.md instructions are advisory. Anthropic's own docs make this distinction: "Use hooks for actions that must happen every time with zero exceptions."
+- **Hooks > GEMINI.md instructions for things that must happen every time**. Hooks are deterministic; GEMINI.md instructions are advisory. Anthropic's own docs make this distinction: "Use hooks for actions that must happen every time with zero exceptions."
 - **Delete most of what `/init` generates**. The starter file includes many "obvious" things (yes, this is a TypeScript project) that compete for attention with the actual work.
 
 ### Anthropic's `<system-reminder>` injection - the smoking gun
 
-HumanLayer discovered that Claude Code injects this with every CLAUDE.md load:
+HumanLayer discovered that Claude Code injects this with every GEMINI.md load:
 
 ```
 <system-reminder>
@@ -139,7 +139,7 @@ not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 ```
 
-This is Anthropic *telling Claude to ignore CLAUDE.md if it's not relevant*. The more bloated the file, the more likely it gets ignored. This is the strongest single argument for keeping it lean.
+This is Anthropic *telling Claude to ignore GEMINI.md if it's not relevant*. The more bloated the file, the more likely it gets ignored. This is the strongest single argument for keeping it lean.
 
 Source: https://www.humanlayer.dev/blog/writing-a-good-claude-md
 
@@ -147,13 +147,13 @@ Source: https://www.humanlayer.dev/blog/writing-a-good-claude-md
 
 A frequently-cited developer comment captures the real value of these files:
 
-> "I've maintained a CLAUDE.md file for about 3 months across two projects and the improvement is noticeable but not for the reasons you'd expect. The actual token-level context it provides matters less than the fact that writing it forces you to articulate things about your codebase that were previously just in your head. Stuff like 'we use this weird pattern for X because of a legacy constraint in Y.' Once that's written down, the agent picks it up, but so does every new human on the team."
+> "I've maintained a GEMINI.md file for about 3 months across two projects and the improvement is noticeable but not for the reasons you'd expect. The actual token-level context it provides matters less than the fact that writing it forces you to articulate things about your codebase that were previously just in your head. Stuff like 'we use this weird pattern for X because of a legacy constraint in Y.' Once that's written down, the agent picks it up, but so does every new human on the team."
 
-For the bleu workspace, this maps to: the value of writing the schema rules in `.claude/rules/blueprint-schema.md` is that it forces you to make implicit conventions explicit. The agent benefits, but so do future humans (and future you).
+For the bleu workspace, this maps to: the value of writing the schema rules in `.gemini/rules/blueprint-schema.md` is that it forces you to make implicit conventions explicit. The agent benefits, but so do future humans (and future you).
 
 ### Donation to Linux Foundation
 
-In December 2025, AGENTS.md was donated to the **Agentic AI Foundation (AAIF)** under the Linux Foundation, alongside Anthropic's MCP and Block's Goose. It's becoming the cross-tool standard. For multi-tool teams: `CLAUDE.md` as a symlink to `AGENTS.md` works.
+In December 2025, AGENTS.md was donated to the **Agentic AI Foundation (AAIF)** under the Linux Foundation, alongside Anthropic's MCP and Block's Goose. It's becoming the cross-tool standard. For multi-tool teams: `GEMINI.md` as a symlink to `AGENTS.md` works.
 
 ---
 
@@ -517,7 +517,7 @@ Per Weaviate: Agents / Query Augmentation / Retrieval / Prompting / Memory / Too
 
 ### "Lost in the middle" phenomenon
 
-Documented Claude Code issue: agents ignoring CLAUDE.md instructions buried in the middle of long files. **Mitigation**: keep files short, place critical rules early, start new sessions for new tasks. As context grows, agents preserve architectural decisions while discarding redundant tool outputs.
+Documented Claude Code issue: agents ignoring GEMINI.md instructions buried in the middle of long files. **Mitigation**: keep files short, place critical rules early, start new sessions for new tasks. As context grows, agents preserve architectural decisions while discarding redundant tool outputs.
 
 ### Agentic search vs pre-computed embeddings
 
@@ -582,7 +582,7 @@ From the Claude Code docs. If your workflow requires nested delegation, use Skil
 
 ### Plugin subagents have restrictions
 
-Plugin subagents do **not** support `hooks`, `mcpServers`, or `permissionMode` frontmatter fields. If you need those, the agent file must live in `.claude/agents/` or `~/.claude/agents/`, not inside a plugin.
+Plugin subagents do **not** support `hooks`, `mcpServers`, or `permissionMode` frontmatter fields. If you need those, the agent file must live in `.gemini/agents/` or `~/.gemini/agents/`, not inside a plugin.
 
 ### `claude-code-guide` built-in subagent
 
@@ -590,7 +590,7 @@ Claude Code's own system prompt includes a `claude-code-guide` subagent (Haiku, 
 
 ### `/init` generates a starter, but delete most of it
 
-Per the ETH Zurich research and HumanLayer's blog: the `/init` command generates a CLAUDE.md draft, but most of what it produces is filler that competes for attention. The delete-first approach is faster than writing from scratch.
+Per the ETH Zurich research and HumanLayer's blog: the `/init` command generates a GEMINI.md draft, but most of what it produces is filler that competes for attention. The delete-first approach is faster than writing from scratch.
 
 ### Hierarchical context files
 
@@ -598,7 +598,7 @@ Place context files at any directory level. The agent reads the file closest to 
 
 ### Symlink pattern
 
-For multi-tool teams: `CLAUDE.md is a symlink to AGENTS.md. They are the same file.` Prevents drift between files.
+For multi-tool teams: `GEMINI.md is a symlink to AGENTS.md. They are the same file.` Prevents drift between files.
 
 ---
 
@@ -606,7 +606,7 @@ For multi-tool teams: `CLAUDE.md is a symlink to AGENTS.md. They are the same fi
 
 The most significant updates:
 
-1. **Reversed the CLAUDE.md advice** in `claude-code-integration.md`. Previous version recommended a project CLAUDE.md telling Claude about the blueprint workspace. New version recommends starting with no CLAUDE.md, adding rules iteratively from observed friction, writing for the gap not the overview, targeting <150 lines.
+1. **Reversed the GEMINI.md advice** in `claude-code-integration.md`. Previous version recommended a project GEMINI.md telling Claude about the blueprint workspace. New version recommends starting with no GEMINI.md, adding rules iteratively from observed friction, writing for the gap not the overview, targeting <150 lines.
 
 2. **Added coverage tags and concept articles** to `knowledge-base-pattern.md`. From the `ussumant/llm-wiki-compiler` adopter wins.
 
@@ -657,7 +657,7 @@ Default to Pattern 1. Escalate only when the simpler pattern demonstrably fails.
 ### Two principles from Anthropic that bite
 
 1. **"Anthropic spent more time on tool interfaces than prompts for SWE-bench."** Good tools beat complex orchestration. Invest in tool design (clear schemas, sensible defaults, useful error messages) before reaching for more agents.
-2. **"Ground truth > LLM opinion."** Use test results, compiler output, linters, type checkers - not LLM self-evaluation - to validate work. The auditor in this skill should consult `.claude/rules/blueprint-schema.md` and the actual filesystem state, not just "vibe-check" the proposals.
+2. **"Ground truth > LLM opinion."** Use test results, compiler output, linters, type checkers - not LLM self-evaluation - to validate work. The auditor in this skill should consult `.gemini/rules/blueprint-schema.md` and the actual filesystem state, not just "vibe-check" the proposals.
 
 Source: https://www.anthropic.com/research/building-effective-agents
 
@@ -665,7 +665,7 @@ Source: https://www.anthropic.com/research/building-effective-agents
 
 Anthropic's description: "one LLM call generates a response while another provides evaluation and feedback in a loop." Use it when (a) you have clear evaluation criteria, (b) iterative refinement provides measurable value, (c) the LLM can demonstrably improve when a human articulates feedback, (d) the evaluator LLM can provide such feedback.
 
-The Curator + Auditor loop in `advanced-architecture.md` is exactly this pattern. The schema rules in `.claude/rules/blueprint-schema.md` are the "clear evaluation criteria" - without them, the auditor degrades into LLM-vibes.
+The Curator + Auditor loop in `advanced-architecture.md` is exactly this pattern. The schema rules in `.gemini/rules/blueprint-schema.md` are the "clear evaluation criteria" - without them, the auditor degrades into LLM-vibes.
 
 ---
 
@@ -788,15 +788,15 @@ From a production multi-agent setup running 95+ hooks (https://dev.to/edwardkubi
 - **`isolation: worktree` for parallel dispatches.** When the orchestrator dispatches code-writer and test-writer in parallel, they can clobber each other's edits without worktree isolation.
 - **301 BATS tests for the hooks themselves.** Shell scripts are easy to break silently. Hook test infrastructure is non-negotiable for any production deployment.
 
-### Hooks vs CLAUDE.md - the durability ladder
+### Hooks vs GEMINI.md - the durability ladder
 
 From multiple sources:
 
-- `CLAUDE.md` instructions are **advisory**. Standards are suggestions.
+- `GEMINI.md` instructions are **advisory**. Standards are suggestions.
 - Hooks are **enforced gates**. They cannot be bypassed.
 
 The thread-based engineering guide maps the standards-to-enforcement ladder cleanly:
-- "Use uv, not pip" → CLAUDE.md (advisory, the agent usually follows)
+- "Use uv, not pip" → GEMINI.md (advisory, the agent usually follows)
 - "Run tests before commit" → hook (must happen, no exceptions)
 - "Block writes to .git" → permission rule (hard architectural constraint)
 
@@ -886,7 +886,7 @@ Knowledge workers lose **1.8 hours every day** searching for information (APQC, 
 ---
 
 - **Skills are now portable across coding agents.** A SKILL.md written for Claude Code can be loaded by Cursor, Amp, Goose, etc. - same frontmatter format, same activation logic.
-- **Skill versioning is still unsolved.** No built-in version field in the spec. The recommended pattern is directory structure: `.claude/skills/v1/`, `.claude/skills/v2/`. Production deployments should pin to a specific version.
+- **Skill versioning is still unsolved.** No built-in version field in the spec. The recommended pattern is directory structure: `.gemini/skills/v1/`, `.gemini/skills/v2/`. Production deployments should pin to a specific version.
 - **Anthropic released a Skill-Creator testing framework in March 2026.** Quote: "Agent skills are notorious for fooling you into believing they work." The framework lets you systematically test/measure skills against expected behaviors. This is important for any skill that ships to production users - including this one.
 
 Source: https://thenewstack.io/agent-skills-anthropics-next-bid-to-define-ai-standards/
@@ -894,7 +894,7 @@ Source: https://thenewstack.io/agent-skills-anthropics-next-bid-to-define-ai-sta
 ### Application to the bleu skill
 
 - Document the skill version somewhere obvious in SKILL.md so future updates can flag breaking changes.
-- Recommend that users who depend on a specific behavior pin to a known version of the skill in their `.claude/skills/bleu/` directory.
+- Recommend that users who depend on a specific behavior pin to a known version of the skill in their `.gemini/skills/bleu/` directory.
 - The skill's reference files (knowledge-base-pattern, action-point-template, etc.) are the natural unit of versioning - small, focused, testable changes.
 
 ---

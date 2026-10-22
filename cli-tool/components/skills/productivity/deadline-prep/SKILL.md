@@ -1,6 +1,6 @@
 ---
 name: deadline-prep
-description: Generate a structured demo outline from your session's change log and git history. Reads .claude/critical_log_changes.csv and git log to produce presentation-ready talking points for end-of-day demos, standups, or delivery deadlines.
+description: Generate a structured demo outline from your session's change log and git history. Reads .gemini/critical_log_changes.csv and git log to produce presentation-ready talking points for end-of-day demos, standups, or delivery deadlines.
 ---
 
 # Deadline Prep
@@ -12,7 +12,7 @@ Generate a structured demo outline from your work session. Combines the change l
 ### Step 1: Gather data sources
 
 **Change log** (primary source if available):
-- Read `.claude/critical_log_changes.csv` if it exists
+- Read `.gemini/critical_log_changes.csv` if it exists
 - Parse columns: timestamp, tool, file_path, action, details
 - Group by: files created, files modified, commands executed
 
@@ -68,7 +68,7 @@ Create a structured markdown document:
 
 ### Step 4: Save and present
 
-Save the outline to `.claude/demo-outline.md`.
+Save the outline to `.gemini/demo-outline.md`.
 
 Print the full outline to the terminal so the user can review it immediately.
 

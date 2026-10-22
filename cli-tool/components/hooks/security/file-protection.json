@@ -1,9 +1,9 @@
 {
   "description": "Protect critical files from accidental modification. Prevents editing of important system files, configuration files, and production code.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Edit|MultiEdit|Write",
+        "matcher": "replace|write_file",
         "hooks": [
           {
             "type": "command",

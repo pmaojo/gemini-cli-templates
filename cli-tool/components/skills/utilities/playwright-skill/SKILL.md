@@ -8,9 +8,9 @@ This skill can be installed in different locations (plugin system, manual instal
 
 Common installation paths:
 
-- Plugin system: `~/.claude/plugins/marketplaces/playwright-skill/skills/playwright-skill`
-- Manual global: `~/.claude/skills/playwright-skill`
-- Project-specific: `<project>/.claude/skills/playwright-skill`
+- Plugin system: `~/.gemini/plugins/marketplaces/playwright-skill/skills/playwright-skill`
+- Manual global: `~/.gemini/skills/playwright-skill`
+- Project-specific: `<project>/.gemini/skills/playwright-skill`
 
 # Playwright Browser Automation
 

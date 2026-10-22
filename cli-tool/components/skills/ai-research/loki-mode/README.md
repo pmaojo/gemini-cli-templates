@@ -229,7 +229,7 @@ There is **NEVER** a "finished" state. After completing the PRD, Loki Mode:
 
 ```bash
 # Clone to your Claude Code skills directory
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git ~/.gemini/skills/loki-mode
 ```
 
 See [INSTALLATION.md](INSTALLATION.md) for other installation methods (Web, API Console, minimal curl install).
@@ -539,7 +539,7 @@ Built for the [Claude Code](https://claude.ai) ecosystem, powered by Anthropic's
 **Ready to build a startup while you sleep?**
 
 ```bash
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git ~/.gemini/skills/loki-mode
 ./autonomy/run.sh your-prd.md
 ```
 

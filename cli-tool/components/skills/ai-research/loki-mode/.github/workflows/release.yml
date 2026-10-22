@@ -70,7 +70,7 @@ jobs:
           # ============================================
           # Artifact 3: loki-mode-claude-code.zip
           # For Claude Code: full package with loki-mode/ folder
-          # Extract to ~/.claude/skills/
+          # Extract to ~/.gemini/skills/
           # ============================================
           mkdir -p release/loki-mode
           cp SKILL.md release/loki-mode/

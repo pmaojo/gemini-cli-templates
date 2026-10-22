@@ -1,13 +1,13 @@
 {
-  "description": "Log all file edits to a project-local audit file with timestamps. Records every Edit tool usage to .claude/edit-log.txt for tracking changes across sessions. Requires jq.",
+  "description": "Log all file edits to a project-local audit file with timestamps. Records every Edit tool usage to .gemini/edit-log.txt for tracking changes across sessions. Requires jq.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",
-            "command": "jq -r '.tool_input.file_path' | xargs -I FILE sh -c 'echo \"$(date +%Y-%m-%dT%H:%M:%S): Edit FILE\" >> \"$CLAUDE_PROJECT_DIR/.claude/edit-log.txt\"'"
+            "command": "jq -r '.tool_input.file_path' | xargs -I FILE sh -c 'echo \"$(date +%Y-%m-%dT%H:%M:%S): Edit FILE\" >> \"$GEMINI_PROJECT_DIR/.gemini/edit-log.txt\"'"
           }
         ]
       }

@@ -169,7 +169,7 @@ query({ prompt: "...", options: { ... } })
 | `outputFormat`                      | object | Structured output schema                                                   |
 | `thinking`                          | object | Thinking/reasoning control                                                 |
 | `betas`                             | array  | Beta features to enable (e.g., `["context-1m-2025-08-07"]`)               |
-| `settingSources`                    | array  | Settings to load (e.g., `["project"]`). Default: none (no CLAUDE.md files) |
+| `settingSources`                    | array  | Settings to load (e.g., `["project"]`). Default: none (no GEMINI.md files) |
 | `env`                               | object | Environment variables to set for the session                               |
 | `agentProgressSummaries`            | bool   | Enable periodic AI-generated progress summaries on `task_progress` events  |
 

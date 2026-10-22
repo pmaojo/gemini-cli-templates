@@ -6,7 +6,7 @@ Agent skills are directories containing instructions and supporting files that t
 
 ## Why Skills as Resources
 
-Skills live in platform-specific directories (`~/.claude/skills/`, `~/.cursor/skills/`, etc.) and typically contain a main instruction file plus supporting reference materials. When you want to share skills between tools or access them from a custom client, you need a way to discover and retrieve these files programmatically.
+Skills live in platform-specific directories (`~/.gemini/skills/`, `~/.cursor/skills/`, etc.) and typically contain a main instruction file plus supporting reference materials. When you want to share skills between tools or access them from a custom client, you need a way to discover and retrieve these files programmatically.
 
 The Skills Provider solves this by exposing each skill as a set of MCP resources. A client can list available skills, read the main instruction file, check the manifest to see what supporting files exist, and fetch any file it needs. This transforms local skill directories into a standardized API that works with any MCP client.
 
@@ -21,7 +21,7 @@ from fastmcp import FastMCP
 from fastmcp.server.providers.skills import SkillsDirectoryProvider
 
 mcp = FastMCP("Skills Server")
-mcp.add_provider(SkillsDirectoryProvider(roots=Path.home() / ".claude" / "skills"))
+mcp.add_provider(SkillsDirectoryProvider(roots=Path.home() / ".gemini" / "skills"))
 ```
 
 Each subdirectory containing a `SKILL.md` file becomes a discoverable skill. Clients can then list resources to see available skills and read them as needed.
@@ -45,7 +45,7 @@ async with Client(mcp) as client:
 A skill is a directory containing a main instruction file (default: `SKILL.md`) and optionally supporting files. The directory name becomes the skill's identifier.
 
 ```
-~/.claude/skills/
+~/.gemini/skills/
 ├── pdf-processing/
 │   ├── SKILL.md           # Main instructions
 │   ├── reference.md       # Supporting documentation
@@ -118,7 +118,7 @@ from fastmcp import FastMCP
 from fastmcp.server.providers.skills import SkillProvider
 
 mcp = FastMCP("Single Skill")
-mcp.add_provider(SkillProvider(Path.home() / ".claude" / "skills" / "pdf-processing"))
+mcp.add_provider(SkillProvider(Path.home() / ".gemini" / "skills" / "pdf-processing"))
 ```
 
 Use `SkillProvider` when you want to expose exactly one skill, or when you need fine-grained control over individual skill configuration.
@@ -134,7 +134,7 @@ from fastmcp import FastMCP
 from fastmcp.server.providers.skills import SkillsDirectoryProvider
 
 mcp = FastMCP("Skills")
-mcp.add_provider(SkillsDirectoryProvider(roots=Path.home() / ".claude" / "skills"))
+mcp.add_provider(SkillsDirectoryProvider(roots=Path.home() / ".gemini" / "skills"))
 ```
 
 When scanning multiple root directories, provide them as a list. The first directory takes precedence if the same skill name appears in multiple roots.
@@ -147,8 +147,8 @@ from fastmcp.server.providers.skills import SkillsDirectoryProvider
 
 mcp = FastMCP("Skills")
 mcp.add_provider(SkillsDirectoryProvider(roots=[
-    Path.cwd() / ".claude" / "skills",      # Project-level skills first
-    Path.home() / ".claude" / "skills",     # User-level fallback
+    Path.cwd() / ".gemini" / "skills",      # Project-level skills first
+    Path.home() / ".gemini" / "skills",     # User-level fallback
 ]))
 ```
 
@@ -158,7 +158,7 @@ FastMCP includes pre-configured providers for popular AI coding tools. Each vend
 
 | Provider                 | Default Directory                           |
 | ------------------------ | ------------------------------------------- |
-| `ClaudeSkillsProvider`   | `~/.claude/skills/`                         |
+| `ClaudeSkillsProvider`   | `~/.gemini/skills/`                         |
 | `CursorSkillsProvider`   | `~/.cursor/skills/`                         |
 | `VSCodeSkillsProvider`   | `~/.copilot/skills/`                        |
 | `CodexSkillsProvider`    | `/etc/codex/skills/` and `~/.codex/skills/` |
@@ -174,7 +174,7 @@ from fastmcp import FastMCP
 from fastmcp.server.providers.skills import ClaudeSkillsProvider
 
 mcp = FastMCP("Claude Skills")
-mcp.add_provider(ClaudeSkillsProvider())  # Uses ~/.claude/skills/
+mcp.add_provider(ClaudeSkillsProvider())  # Uses ~/.gemini/skills/
 ```
 
 `CodexSkillsProvider` scans both system-level (`/etc/codex/skills/`) and user-level (`~/.codex/skills/`) directories, with system skills taking precedence.
@@ -194,7 +194,7 @@ from fastmcp.server.providers.skills import SkillsDirectoryProvider
 
 # Default behavior - supporting files hidden from list_resources()
 provider = SkillsDirectoryProvider(
-    roots=Path.home() / ".claude" / "skills",
+    roots=Path.home() / ".gemini" / "skills",
     supporting_files="template",  # This is the default
 )
 ```
@@ -212,7 +212,7 @@ from fastmcp.server.providers.skills import SkillsDirectoryProvider
 
 # All files visible as individual resources
 provider = SkillsDirectoryProvider(
-    roots=Path.home() / ".claude" / "skills",
+    roots=Path.home() / ".gemini" / "skills",
     supporting_files="resources",
 )
 ```
@@ -229,7 +229,7 @@ from pathlib import Path
 from fastmcp.server.providers.skills import SkillsDirectoryProvider
 
 provider = SkillsDirectoryProvider(
-    roots=Path.home() / ".claude" / "skills",
+    roots=Path.home() / ".gemini" / "skills",
     reload=True,
 )
 ```
@@ -269,10 +269,10 @@ from fastmcp.utilities.skills import download_skill, sync_skills
 
 async with Client("http://skills-server/mcp") as client:
     # Download one skill
-    path = await download_skill(client, "pdf-processing", Path.home() / ".claude" / "skills")
+    path = await download_skill(client, "pdf-processing", Path.home() / ".gemini" / "skills")
 
     # Or download all skills
-    paths = await sync_skills(client, Path.home() / ".claude" / "skills")
+    paths = await sync_skills(client, Path.home() / ".gemini" / "skills")
 ```
 
 Both functions accept an `overwrite` parameter. When `False` (default), existing skills are skipped. When `True`, existing files are replaced.

@@ -1,7 +1,7 @@
 {
   "description": "Log all Gemini CLI commands to a file for audit and debugging purposes. Simple logging that records tool usage with timestamps.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
         "matcher": "*",
         "hooks": [

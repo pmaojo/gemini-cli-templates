@@ -1,7 +1,7 @@
 {
   "description": "Monitor system performance during Gemini CLI operations. Tracks CPU, memory usage, and execution time for performance optimization.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
         "matcher": "*",
         "hooks": [
@@ -12,7 +12,7 @@
         ]
       }
     ],
-    "PostToolUse": [
+    "AfterTool": [
       {
         "matcher": "*",
         "hooks": [

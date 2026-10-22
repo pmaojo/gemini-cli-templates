@@ -21,7 +21,7 @@ Loki Mode is built for Claude and incorporates Anthropic's cutting-edge research
 | [Computer Use Safety](https://www.anthropic.com/news/3-5-models-and-computer-use) | Safe autonomous operation patterns |
 | [Sabotage Evaluations](https://www.anthropic.com/research/sabotage-evaluations-for-frontier-models) | Safety evaluation methodology |
 | [Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) | One-feature-at-a-time pattern, Playwright MCP for E2E |
-| [Claude Agent SDK Overview](https://platform.claude.com/docs/en/agent-sdk/overview) | Task tool, subagents, resume parameter, hooks |
+| [Claude Agent SDK Overview](https://platform.gemini.com/docs/en/agent-sdk/overview) | Task tool, subagents, resume parameter, hooks |
 
 ### Google DeepMind
 

@@ -107,7 +107,7 @@ droid exec --auto high "deploy application to staging after running integration 
 
 ## Using This Agent in Claude Code
 
-This is a Claude Code subagent (not a GitHub Copilot custom agent). Once installed it lives at `.claude/agents/droid.md` and Claude Code can delegate to it automatically, or you can invoke it explicitly with `@droid`.
+This is a Claude Code subagent (not a GitHub Copilot custom agent). Once installed it lives at `.gemini/agents/droid.md` and Claude Code can delegate to it automatically, or you can invoke it explicitly with `@droid`.
 
 Install it with:
 ```bash

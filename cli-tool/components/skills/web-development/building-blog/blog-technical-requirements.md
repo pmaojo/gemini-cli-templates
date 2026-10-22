@@ -80,7 +80,7 @@ F4. **Sitemap structure** — single `sitemap.ts` route until ~50k URLs (recomme
 
 G1. **Core Web Vitals targets** — accept defaults (LCP <2.0s, INP <150ms, CLS <0.05, TTFB <600ms) or relax to the Google "good" baseline?
 G2. **Hero image source** — AI-generated via Gemini 3 Pro Image / Nano Banana Pro (use `blog-image-style-guide.md`) / stock photography / designer-supplied / mixed.
-G3. **Image format opt-in** — confirm an approved override to set `images.formats = ['image/avif', 'image/webp']` in `next.config.ts`. AVIF saves 20–30% on hero LCP. If CLAUDE.md forbids `next.config.ts` edits, this needs explicit approval.
+G3. **Image format opt-in** — confirm an approved override to set `images.formats = ['image/avif', 'image/webp']` in `next.config.ts`. AVIF saves 20–30% on hero LCP. If GEMINI.md forbids `next.config.ts` edits, this needs explicit approval.
 G4. **Body font and display font** — reuse the site's existing `next/font` configuration (recommended) or add new fonts? Confirm subsets — `latin` is required, `latin-ext` is required for FR/DE/ES.
 
 #### H. Analytics & consent (2)
@@ -203,7 +203,7 @@ Project-specific values, populated from §0 answers. Anywhere below that says "p
 | Excluded non-features | `[FILL from K1 — defaults excluded unless overridden]` |
 | Entry points | `[FILL from L1]` |
 | Launch order | `[FILL from L2]` |
-| Approved CLAUDE.md overrides | `[FILL — list explicitly]` |
+| Approved GEMINI.md overrides | `[FILL — list explicitly]` |
 | Deferred to implementation | `[FILL — anything answered "later"]` |
 
 ---

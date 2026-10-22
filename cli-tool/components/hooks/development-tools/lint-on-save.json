@@ -1,9 +1,9 @@
 {
   "description": "Automatically run linting tools after file modifications. Supports ESLint for JavaScript/TypeScript, Pylint for Python, and RuboCop for Ruby.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit|MultiEdit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",

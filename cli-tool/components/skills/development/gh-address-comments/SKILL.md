@@ -8,7 +8,7 @@ hooks:
     - matcher: "Bash"
       hooks:
         - type: command
-          command: "echo \"[$(date)] GH Address Comments: Executed gh command to address PR comments\" >> ~/.claude/gh-address-comments.log"
+          command: "echo \"[$(date)] GH Address Comments: Executed gh command to address PR comments\" >> ~/.gemini/gh-address-comments.log"
 ---
 
 # PR Comment Handler

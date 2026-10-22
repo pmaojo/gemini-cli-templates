@@ -1,47 +1,47 @@
 {
-  "description": "Log every file mutation to CSV for demo prep. Records timestamp, tool, file path, action, and details for Edit, MultiEdit, Write, and Bash operations. Output: .claude/critical_log_changes.csv",
+  "description": "Log every file mutation to CSV for demo prep. Records timestamp, tool, file path, action, and details for Edit, MultiEdit, Write, and Bash operations. Output: .gemini/critical_log_changes.csv",
   "supportingFiles": [
     {
       "source": "change-logger.py",
-      "destination": ".claude/hooks/change-logger.py",
+      "destination": ".gemini/hooks/change-logger.py",
       "executable": true
     }
   ],
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/change-logger.py"
+            "command": "python3 .gemini/hooks/change-logger.py"
           }
         ]
       },
       {
-        "matcher": "Write",
+        "matcher": "write_file",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/change-logger.py"
+            "command": "python3 .gemini/hooks/change-logger.py"
           }
         ]
       },
       {
-        "matcher": "MultiEdit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/change-logger.py"
+            "command": "python3 .gemini/hooks/change-logger.py"
           }
         ]
       },
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/change-logger.py"
+            "command": "python3 .gemini/hooks/change-logger.py"
           }
         ]
       }

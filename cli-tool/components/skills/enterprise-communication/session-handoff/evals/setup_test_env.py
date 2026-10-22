@@ -156,7 +156,7 @@ def init_git_repo(path: Path):
 
 def create_sample_handoffs(path: Path):
     """Create sample handoff documents for testing."""
-    handoffs_dir = path / ".claude" / "handoffs"
+    handoffs_dir = path / ".gemini" / "handoffs"
     handoffs_dir.mkdir(parents=True)
 
     # Fresh handoff (today)

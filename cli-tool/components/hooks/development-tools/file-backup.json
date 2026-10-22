@@ -1,9 +1,9 @@
 {
   "description": "Automatically backup files before editing. Creates timestamped backups in a .backups directory when files are modified.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Edit|MultiEdit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",

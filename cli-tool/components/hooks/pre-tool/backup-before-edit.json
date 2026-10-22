@@ -1,9 +1,9 @@
 {
   "description": "Create automatic backup of files before any Edit operation for safety. This hook creates a timestamped backup copy (filename.backup.timestamp) of any existing file before Gemini modifies it. Provides a safety net to recover previous versions if needed. Only backs up existing files, includes error suppression to handle edge cases gracefully.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",

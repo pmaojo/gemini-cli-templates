@@ -40,7 +40,7 @@ AI-powered SEO optimization skill that audits websites and automatically impleme
 After installing the skill, install the audit dependencies:
 
 ```bash
-cd ~/.claude/skills/roier-seo/scripts
+cd ~/.gemini/skills/roier-seo/scripts
 npm install
 ```
 
@@ -48,24 +48,24 @@ npm install
 
 For a **live website**:
 ```bash
-node ~/.claude/skills/roier-seo/scripts/audit.js https://example.com
+node ~/.gemini/skills/roier-seo/scripts/audit.js https://example.com
 ```
 
 For a **local dev server** (must be running):
 ```bash
-node ~/.claude/skills/roier-seo/scripts/audit.js http://localhost:3000
+node ~/.gemini/skills/roier-seo/scripts/audit.js http://localhost:3000
 ```
 
 Output formats:
 ```bash
 # JSON output (default, for programmatic use)
-node ~/.claude/skills/roier-seo/scripts/audit.js https://example.com
+node ~/.gemini/skills/roier-seo/scripts/audit.js https://example.com
 
 # Human-readable summary
-node ~/.claude/skills/roier-seo/scripts/audit.js https://example.com --output=summary
+node ~/.gemini/skills/roier-seo/scripts/audit.js https://example.com --output=summary
 
 # Save to file
-node ~/.claude/skills/roier-seo/scripts/audit.js https://example.com --save=results.json
+node ~/.gemini/skills/roier-seo/scripts/audit.js https://example.com --save=results.json
 ```
 
 ## Audit categories
@@ -417,7 +417,7 @@ useSeoMeta({
 ### Step 1: Audit
 Run the audit script on the target URL:
 ```bash
-node ~/.claude/skills/roier-seo/scripts/audit.js <URL>
+node ~/.gemini/skills/roier-seo/scripts/audit.js <URL>
 ```
 
 ### Step 2: Identify framework

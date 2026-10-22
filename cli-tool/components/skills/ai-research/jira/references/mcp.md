@@ -288,13 +288,13 @@ The Atlassian MCP does not currently support creating issue links. Use the bundl
 
 ```bash
 # Link PROJ-123 depends on PROJ-456
-~/.claude/skills/jira/jira-link-issues PROJ-123 PROJ-456 "Depends On"
+~/.gemini/skills/jira/jira-link-issues PROJ-123 PROJ-456 "Depends On"
 
 # PROJ-100 blocks PROJ-200
-~/.claude/skills/jira/jira-link-issues PROJ-100 PROJ-200 "Blocks"
+~/.gemini/skills/jira/jira-link-issues PROJ-100 PROJ-200 "Blocks"
 
 # General relationship
-~/.claude/skills/jira/jira-link-issues PROJ-50 PROJ-75 "Relates To"
+~/.gemini/skills/jira/jira-link-issues PROJ-50 PROJ-75 "Relates To"
 ```
 
 ### Finding Link Types

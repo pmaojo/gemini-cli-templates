@@ -92,7 +92,7 @@ Forces you through 10 idea categories to ensure comprehensive coverage:
 
 ### Documentation-First
 
-All session outputs are saved to `.claude/docs/ai/<product-or-area>/10x/session-N.md`. This ensures:
+All session outputs are saved to `.gemini/docs/ai/<product-or-area>/10x/session-N.md`. This ensures:
 - Full traceability of strategic thinking
 - Easy sharing with team members
 - Historical record of decisions
@@ -116,7 +116,7 @@ User: I want to think about 10x opportunities for our analytics dashboard
    - Medium: Collaborative annotations and shared insights
    - Small: One-click report scheduling from any view
 3. Prioritizing quick wins vs strategic bets
-4. Output saved to `.claude/docs/ai/analytics-dashboard/10x/session-1.md`
+4. Output saved to `.gemini/docs/ai/analytics-dashboard/10x/session-1.md`
 ```
 
 ### Example 2: Mobile App
@@ -196,7 +196,7 @@ Provide context on:
 
 All sessions are saved to:
 ```
-.claude/docs/ai/<product-or-area>/10x/session-N.md
+.gemini/docs/ai/<product-or-area>/10x/session-N.md
 ```
 
 This keeps your strategic thinking organized, searchable, and shareable with your team.

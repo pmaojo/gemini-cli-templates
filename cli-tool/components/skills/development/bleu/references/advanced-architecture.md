@@ -74,7 +74,7 @@ Nominations go to `blueprint/.reflection/proposals/<timestamp>-<slug>.md` - one 
 
 ## What I propose
 <The change. Be specific. If it's a rule, write the rule text exactly as it
-should appear in .claude/rules/blueprint-schema.md.>
+should appear in .gemini/rules/blueprint-schema.md.>
 
 ## Why
 <The reasoning. Cite the wiki files that support this.>
@@ -92,7 +92,7 @@ The Auditor's only job is to validate proposals. It's a separate concern from th
 
 The cleanest implementation is an **`agent` hook** on `SubagentStop` of the kb-linter, not a manually invoked subagent. When the linter finishes writing proposals, the agent hook fires automatically, spawns a verifier with Read, Grep, Glob plus Write scoped to `.reflection/` (it records verdicts and escalations there but never touches the wiki or the proposals), passes it the proposals, and returns approve/reject/escalate. No file-passing dance, no separate invocation.
 
-In `.claude/settings.json`:
+In `.gemini/settings.json`:
 
 ```json
 {
@@ -103,7 +103,7 @@ In `.claude/settings.json`:
         "hooks": [
           {
             "type": "agent",
-            "prompt": "Read every file in blueprint/.reflection/proposals/ that doesn't yet have a matching verdict in blueprint/.reflection/verdicts/. For each proposal: APPROVE if evidence is solid and the change doesn't touch architecture/data-model/AP-dependency-graph. ESCALATE if it touches any of those (write to blueprint/.reflection/escalations/<id>.md with a yes/no question for the human). REJECT if the proposal lacks file-path evidence or contradicts an existing rule in .claude/rules/blueprint-schema.md without retiring that rule. Write one verdict file per proposal at blueprint/.reflection/verdicts/<id>.md. Your tools are read-only against the wiki and the proposals; Write is allowed only inside .reflection/. Never write outside .reflection/.",
+            "prompt": "Read every file in blueprint/.reflection/proposals/ that doesn't yet have a matching verdict in blueprint/.reflection/verdicts/. For each proposal: APPROVE if evidence is solid and the change doesn't touch architecture/data-model/AP-dependency-graph. ESCALATE if it touches any of those (write to blueprint/.reflection/escalations/<id>.md with a yes/no question for the human). REJECT if the proposal lacks file-path evidence or contradicts an existing rule in .gemini/rules/blueprint-schema.md without retiring that rule. Write one verdict file per proposal at blueprint/.reflection/verdicts/<id>.md. Your tools are read-only against the wiki and the proposals; Write is allowed only inside .reflection/. Never write outside .reflection/.",
             "timeout": 180
           }
         ]
@@ -113,7 +113,7 @@ In `.claude/settings.json`:
 }
 ```
 
-The agent hook spawns a subagent automatically with a default tool set scoped to verification. You don't need a separate `.claude/agents/kb-auditor.md` file - the hook handles spawning. If you do want a named agent for explicit invocation as well, you can create one in addition.
+The agent hook spawns a subagent automatically with a default tool set scoped to verification. You don't need a separate `.gemini/agents/kb-auditor.md` file - the hook handles spawning. If you do want a named agent for explicit invocation as well, you can create one in addition.
 
 ### Why agent hooks for this
 
@@ -141,7 +141,7 @@ The reflection cycle running mechanism options:
 
 - Automatically via a `Stop` hook on the curator that fires every N curator runs (use a counter file in `blueprint/.reflection/`).
 - On demand via `@kb-linter run a reflection pass` from the user.
-- On a schedule via [scheduled tasks](https://code.claude.com/docs/en/scheduled-tasks).
+- On a schedule via [scheduled tasks](https://code.gemini.com/docs/en/scheduled-tasks).
 
 When the linter finishes, the agent-hook auditor takes over automatically. Escalations surface in the next session via the `SessionStart` hook from `claude-code-integration.md`.
 
@@ -287,12 +287,12 @@ The base skill has one subagent (KB Curator). The agent team expands this into f
 
 | Agent | Job | Tools | Reads | Writes | Implemented as |
 |---|---|---|---|---|---|
-| **Researcher** | Web research; ingests external content into `raw/research/` with citations | `WebFetch, WebSearch, Read, Write` | external web | `blueprint/raw/research/` | `.claude/agents/researcher.md` |
-| **Curator** | Compiles `raw/` into `plan/`; rebuilds `index.md` and `.graph/graph.json` | `Read, Write, Edit, Glob, Grep` | `blueprint/` | `blueprint/plan/`, `blueprint/index.md`, `blueprint/.graph/` | `.claude/agents/kb-curator.md` |
-| **Linter** | Reflection pass; finds gaps, contradictions, rule violations; writes to `.reflection/proposals/` | `Read, Write, Glob, Grep` | `blueprint/`, `.claude/rules/` | `blueprint/.reflection/proposals/` | `.claude/agents/kb-linter.md` |
+| **Researcher** | Web research; ingests external content into `raw/research/` with citations | `WebFetch, WebSearch, Read, Write` | external web | `blueprint/raw/research/` | `.gemini/agents/researcher.md` |
+| **Curator** | Compiles `raw/` into `plan/`; rebuilds `index.md` and `.graph/graph.json` | `Read, Write, Edit, Glob, Grep` | `blueprint/` | `blueprint/plan/`, `blueprint/index.md`, `blueprint/.graph/` | `.gemini/agents/kb-curator.md` |
+| **Linter** | Reflection pass; finds gaps, contradictions, rule violations; writes to `.reflection/proposals/` | `Read, Write, Glob, Grep` | `blueprint/`, `.gemini/rules/` | `blueprint/.reflection/proposals/` | `.gemini/agents/kb-linter.md` |
 | **Auditor** | Validates Linter proposals; approves/rejects/escalates | (Read/Grep/Glob + Write scoped to `.reflection/`, set by hook) | `blueprint/.reflection/proposals/` | `blueprint/.reflection/verdicts/`, `blueprint/.reflection/escalations/` | **Agent hook** on `SubagentStop` matched to `kb-linter` (no separate agent file) |
 
-The KB Curator from `claude-code-integration.md` is the same Curator role here - just renamed conceptually. The other three are new files in `.claude/agents/`.
+The KB Curator from `claude-code-integration.md` is the same Curator role here - just renamed conceptually. The other three are new files in `.gemini/agents/`.
 
 **Research paths:** the Researcher stages raw captures in `raw/research/` (episodic memory); the Curator promotes synthesized, cited findings to `research/` (semantic memory). In the base workflow without an agent team, research is written directly to `research/`.
 
@@ -333,11 +333,11 @@ This is the modern pattern. The previous version of this file used a `.reflectio
 
 For each agent file, lean on Claude Code's built-in subagent features instead of hand-rolling:
 
-- **`memory: project`** - built-in persistent directory at `.claude/agent-memory/<name>/`. The `MEMORY.md` file there is auto-injected into the agent's prompt at startup. Use this for institutional knowledge instead of `raw/curator-notes.md`.
+- **`memory: project`** - built-in persistent directory at `.gemini/agent-memory/<name>/`. The `MEMORY.md` file there is auto-injected into the agent's prompt at startup. Use this for institutional knowledge instead of `raw/curator-notes.md`.
 - **`skills: [bleu]`** - preloads the entire skill content into the agent's context at startup. All four agents should have this.
 - **`isolation: worktree`** - for the Linter especially, runs the agent in an isolated git worktree. If it makes no changes, the worktree auto-cleans. Useful for "dry-run" lint passes that explore without polluting the working tree.
 - **`background: true`** - for the Linter, makes Claude always spawn it as a background task so the user keeps working. Only enable after testing interactively first; background subagents auto-deny any permission they didn't get up front.
-- **`hooks` in frontmatter** - scoped to the agent's lifecycle, cleaned up when it finishes. Cleaner than putting everything in `.claude/settings.json`.
+- **`hooks` in frontmatter** - scoped to the agent's lifecycle, cleaned up when it finishes. Cleaner than putting everything in `.gemini/settings.json`.
 - **`mcpServers` inline** - give the Researcher web/docs MCPs without polluting the parent conversation's context.
 
 See `claude-code-integration.md` for the full schema and verified examples.
@@ -352,15 +352,15 @@ If the blueprint is small (under ~10 APs, no external integrations, no team coll
 
 The base skill has implicit rules ("every AP needs a Verification section") scattered across reference files. Schema-as-code makes them **explicit** and **enforceable**.
 
-The right home for these rules in Claude Code is **`.claude/rules/blueprint-schema.md`** - a path-conditional rule file that Claude Code loads automatically via the `InstructionsLoaded` event when Claude accesses any file matching the `paths:` glob in the file's frontmatter. This means:
+The right home for these rules in Claude Code is **`.gemini/rules/blueprint-schema.md`** - a path-conditional rule file that Claude Code loads automatically via the `InstructionsLoaded` event when Claude accesses any file matching the `paths:` glob in the file's frontmatter. This means:
 
 - The Linter doesn't need to "go fetch the rules" - they're already in its context the moment it touches `blueprint/`.
 - The main agent and any other subagent that touches `blueprint/` also gets the rules automatically.
-- The rules participate in the same loading lifecycle as `CLAUDE.md`, so they can be audited via the `InstructionsLoaded` event for telemetry.
+- The rules participate in the same loading lifecycle as `GEMINI.md`, so they can be audited via the `InstructionsLoaded` event for telemetry.
 
-The previous version of this file put rules in `blueprint/schema/rules.md` and required the Linter to read them explicitly. `.claude/rules/` is the documented Claude Code mechanism and removes the manual fetch step.
+The previous version of this file put rules in `blueprint/schema/rules.md` and required the Linter to read them explicitly. `.gemini/rules/` is the documented Claude Code mechanism and removes the manual fetch step.
 
-**File:** `.claude/rules/blueprint-schema.md`
+**File:** `.gemini/rules/blueprint-schema.md`
 
 ```markdown
 ---
@@ -415,7 +415,7 @@ reflection loop (Linter proposes, Auditor approves, human steers).
 
 ### How rules are enforced
 
-The Linter checks each rule in `.claude/rules/blueprint-schema.md` against the wiki on every cycle. Rules are written in **prose**, not regex - the Linter is an LLM, it can interpret "the file contains a heading 'Verification' with at least one checkbox underneath" without you writing a parser. This is the symbolic/rule-based layer riding on top of the LLM's reasoning, rather than a traditional rule engine.
+The Linter checks each rule in `.gemini/rules/blueprint-schema.md` against the wiki on every cycle. Rules are written in **prose**, not regex - the Linter is an LLM, it can interpret "the file contains a heading 'Verification' with at least one checkbox underneath" without you writing a parser. This is the symbolic/rule-based layer riding on top of the LLM's reasoning, rather than a traditional rule engine.
 
 Two enforcement paths:
 
@@ -426,13 +426,13 @@ Rule violations land in `.reflection/proposals/` with the AP/file that violated 
 
 ### How rules evolve
 
-Rules are added through the reflection loop, not by hand. When the Reflector notices a recurring pattern in the wiki, it proposes a new rule. The Auditor reviews. If it escalates, the human approves the rule text. The rule lands in `.claude/rules/blueprint-schema.md` and starts being enforced on the next cycle.
+Rules are added through the reflection loop, not by hand. When the Reflector notices a recurring pattern in the wiki, it proposes a new rule. The Auditor reviews. If it escalates, the human approves the rule text. The rule lands in `.gemini/rules/blueprint-schema.md` and starts being enforced on the next cycle.
 
 This means the schema **co-evolves** with the wiki - which is the whole point. The human's editorial role shifts from writing wiki content to refining the rules that govern the wiki content.
 
 ### Symbolic ontology (optional)
 
-For substantial blueprints, also maintain `.claude/rules/blueprint-ontology.md` listing the core concept types and their allowed relationships:
+For substantial blueprints, also maintain `.gemini/rules/blueprint-ontology.md` listing the core concept types and their allowed relationships:
 
 ```markdown
 # Ontology
@@ -594,7 +594,7 @@ When the user asks for advanced capabilities (or you notice the blueprint is get
 > 1. **Reflection loop** - Linter proposes improvements, Auditor validates, schema co-evolves.
 > 2. **Knowledge graph + episodic/semantic split** - derived graph layer, separate episodic memory from synthesized articles.
 > 3. **Agent team** - Researcher / Curator / Linter / Auditor with locked tool whitelists.
-> 4. **Schema-as-code** - explicit rules in `.claude/rules/blueprint-schema.md` enforced on every cycle.
+> 4. **Schema-as-code** - explicit rules in `.gemini/rules/blueprint-schema.md` enforced on every cycle.
 > 5. **Multimodal ingest** - PDFs, images, screenshots get described and compiled.
 > 6. **Observability** - wiki health score and telemetry log.
 > 7. **External integrations** - MCPs for GitHub, Linear, meeting notes, web search.

@@ -1,9 +1,9 @@
 {
   "description": "Automatically trigger Vercel deployments when code changes are committed, with environment-specific deployment strategies and rollback on failure. Setup: Export environment variables 'export VERCEL_TOKEN=your_token' and 'export VERCEL_PROJECT_ID=your_project_id' (get your token from vercel.com/account/tokens and project ID from your Vercel dashboard). Hook triggers on PostToolUse for Write, Edit, and MultiEdit operations affecting source code files.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Write|Edit|MultiEdit",
+        "matcher": "write_file|replace",
         "hooks": [
           {
             "type": "command",

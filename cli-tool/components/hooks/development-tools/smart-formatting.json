@@ -1,9 +1,9 @@
 {
   "description": "Smart code formatting based on file type. Automatically formats code using Prettier, Black, gofmt, rustfmt, and other language-specific formatters.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit|MultiEdit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",

@@ -98,7 +98,7 @@ with open("state.json", 'r') as f:
 ## File Structure
 
 ```
-~/.claude/skills/notebooklm/data/
+~/.gemini/skills/notebooklm/data/
 ├── auth_info.json              # Metadata about authentication
 ├── browser_state/
 │   ├── state.json             # Cookies + localStorage (for manual injection)

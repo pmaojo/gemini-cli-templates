@@ -8,7 +8,7 @@ description: >-
   claim stops being true. Works greenfield (a repo born legible) and brownfield (a repo restructured
   in steps). Use when an agent reimplements code that already exists, invents structure, follows
   stale or deleted docs, propagates a deprecated pattern, or resolves ambiguity at random, or when
-  asked to make a repository "agent-ready", "AI-legible", or to add or fix AGENTS.md / CLAUDE.md
+  asked to make a repository "agent-ready", "AI-legible", or to add or fix AGENTS.md / GEMINI.md
   files. Related terms: harness engineering, context files, instruction bloat, cognitive debt, agent
   readiness.
 license: CC-BY-4.0
@@ -268,8 +268,8 @@ is a new claim that can go stale.
 
 **Detect and fix context rot.** Find documentation that lies:
 
-- Extract every file path, command, symbol, and URL referenced in `README`, `AGENTS.md`/`CLAUDE.md`,
-  the path-scoped rule files (`.claude/rules`, `.cursor/rules`, `.github/instructions`), `SKILL.md`,
+- Extract every file path, command, symbol, and URL referenced in `README`, `AGENTS.md`/`GEMINI.md`,
+  the path-scoped rule files (`.gemini/rules`, `.cursor/rules`, `.github/instructions`), `SKILL.md`,
   and design docs; verify each still exists / still runs. Dead references are the highest-priority fix.
 - Diff each `AGENTS.md` against the code it sits beside: does it describe modules, exports, or flows
   that no longer match? Correct the doc, then add the test that would have caught it.

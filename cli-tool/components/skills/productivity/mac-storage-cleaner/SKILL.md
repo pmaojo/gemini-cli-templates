@@ -30,13 +30,13 @@ hit something a script didn't classify or you need the precise command.
 
 **Locating the scripts.** The commands below resolve `$D` to this skill's own
 directory so they work whether the skill was installed as a plugin
-(`$CLAUDE_PLUGIN_ROOT` is set) or as a standalone skill (`~/.claude/skills/…`).
+(`$CLAUDE_PLUGIN_ROOT` is set) or as a standalone skill (`~/.gemini/skills/…`).
 Shell state doesn't persist between commands, so each block re-resolves `$D`.
 
 ### 1. Survey — caches (always first, read-only)
 
 ```bash
-D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.claude/skills/mac-storage-cleaner}"
+D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.gemini/skills/mac-storage-cleaner}"
 bash "$D/scripts/survey.sh"
 ```
 
@@ -50,7 +50,7 @@ Tell the user briefly what the safe tier removes and roughly how much it frees,
 then:
 
 ```bash
-D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.claude/skills/mac-storage-cleaner}"
+D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.gemini/skills/mac-storage-cleaner}"
 bash "$D/scripts/clean-safe.sh"
 ```
 
@@ -81,7 +81,7 @@ deletions. Key ones (full detail in the catalog):
 ### 4. Go beyond caches — the space the cleaners miss (read-only scan)
 
 ```bash
-D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.claude/skills/mac-storage-cleaner}"
+D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.gemini/skills/mac-storage-cleaner}"
 bash "$D/scripts/find-extras.sh"
 ```
 
@@ -91,7 +91,7 @@ Downloads**. Everything here is ask-tier — present candidates, let the user pi
 then remove reversibly:
 
 ```bash
-D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.claude/skills/mac-storage-cleaner}"
+D="${CLAUDE_PLUGIN_ROOT:+$CLAUDE_PLUGIN_ROOT/skills/mac-storage-cleaner}"; D="${D:-$HOME/.gemini/skills/mac-storage-cleaner}"
 bash "$D/scripts/trash-items.sh" "/path/one" "/path/two"
 ```
 

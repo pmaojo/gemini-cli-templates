@@ -194,7 +194,7 @@ async for message in query(prompt="...", options=ClaudeAgentOptions(...)):
 | `output_format`                     | dict   | Structured output schema                                                   |
 | `thinking`                          | dict   | Thinking/reasoning control                                                 |
 | `betas`                             | list   | Beta features to enable (e.g., `["context-1m-2025-08-07"]`)               |
-| `setting_sources`                   | list   | Settings to load (e.g., `["project"]`). Default: none (no CLAUDE.md files) |
+| `setting_sources`                   | list   | Settings to load (e.g., `["project"]`). Default: none (no GEMINI.md files) |
 | `env`                               | dict   | Environment variables to set for the session                               |
 
 ---

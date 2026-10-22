@@ -30,7 +30,7 @@ description: Multi-agent autonomous startup system for Claude Code. Triggers on 
 | `.loki/memory/episodic/` | Specific interaction traces | After each action |
 | `.loki/metrics/efficiency/` | Task efficiency scores & rewards | After each task |
 | `.loki/specs/openapi.yaml` | API spec - source of truth | Architecture changes |
-| `CLAUDE.md` | Project context - arch & patterns | Significant changes |
+| `GEMINI.md` | Project context - arch & patterns | Significant changes |
 | `.loki/queue/*.json` | Task states | Every task change |
 
 ### Decision Tree: What To Do Next?
@@ -117,7 +117,7 @@ These files are part of the running Loki Mode process. Editing them will crash t
 
 | File | Reason |
 |------|--------|
-| `~/.claude/skills/loki-mode/autonomy/run.sh` | Currently executing bash script |
+| `~/.gemini/skills/loki-mode/autonomy/run.sh` | Currently executing bash script |
 | `.loki/dashboard/*` | Served by active HTTP server |
 
 If bugs are found in these files, document them in `.loki/CONTINUITY.md` under "Pending Fixes" for manual repair after the session ends.
@@ -503,7 +503,7 @@ See `references/openai-patterns.md` for full fallback implementation.
 ```
 Context Priority:
 1. AGENTS.md (closest to current file)
-2. CLAUDE.md (Claude-specific)
+2. GEMINI.md (Claude-specific)
 3. .loki/CONTINUITY.md (session state)
 4. Package docs
 5. README.md

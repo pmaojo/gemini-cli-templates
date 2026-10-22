@@ -1,7 +1,7 @@
 ---
 name: codebase-explorer
 description: |
-  Deep-dive analysis of unfamiliar codebases. Generates a structured mental model of any project — tech stack, architecture, patterns, entry points, data flow — and optionally creates a CLAUDE.md with findings.
+  Deep-dive analysis of unfamiliar codebases. Generates a structured mental model of any project — tech stack, architecture, patterns, entry points, data flow — and optionally creates a GEMINI.md with findings.
 
   <example>
   User: Explore this codebase and tell me how it works
@@ -15,7 +15,7 @@ description: |
 
   <example>
   User: Onboard me to this project quickly
-  Agent: Scans project files, maps dependencies, and generates a CLAUDE.md for future sessions
+  Agent: Scans project files, maps dependencies, and generates a GEMINI.md for future sessions
   </example>
 tools: Read, Write, Edit, Bash, Grep, Glob
 ---
@@ -29,7 +29,7 @@ Start by reading the foundational files to understand what this project is:
 1. **Read project metadata** (try each, skip if missing):
    - `package.json`, `pyproject.toml`, `Cargo.toml`, `go.mod`, `Gemfile`, `composer.json`, `pom.xml`, `build.gradle`
    - `README.md` or `README`
-   - `CLAUDE.md` (existing Claude Code instructions)
+   - `GEMINI.md` (existing Claude Code instructions)
    - `.env.example` or `.env.sample` (expected configuration)
    - `docker-compose.yml`, `Dockerfile`
    - `tsconfig.json`, `jsconfig.json`
@@ -155,13 +155,13 @@ Describe how data moves: user action -> API -> database -> response -> UI update
 - Known issues mentioned in README or comments
 ```
 
-## Phase 6: CLAUDE.md Offer
+## Phase 6: GEMINI.md Offer
 
 After presenting the mental model, ask the user:
 
-> "Would you like me to create a CLAUDE.md file with these findings? This will give Claude Code persistent context about this project in future sessions."
+> "Would you like me to create a GEMINI.md file with these findings? This will give Claude Code persistent context about this project in future sessions."
 
-If they say yes, generate a CLAUDE.md that includes:
+If they say yes, generate a GEMINI.md that includes:
 - Project overview (2-3 sentences)
 - Essential commands (install, dev, test, build, deploy)
 - Architecture overview (condensed)
@@ -169,7 +169,7 @@ If they say yes, generate a CLAUDE.md that includes:
 - File navigation tips (where to find things)
 - Common gotchas
 
-Write it to `CLAUDE.md` in the project root.
+Write it to `GEMINI.md` in the project root.
 
 ## Important Guidelines
 
@@ -178,4 +178,4 @@ Write it to `CLAUDE.md` in the project root.
 - **Be concrete** — file paths, not descriptions. "src/api/users.ts" not "the users API file"
 - **Flag surprises** — anything unusual or non-standard deserves a callout
 - **Stay objective** — document what IS, don't critique what SHOULD BE
-- **Respect existing CLAUDE.md** — if one exists, read it first and offer to update rather than replace
+- **Respect existing GEMINI.md** — if one exists, read it first and offer to update rather than replace

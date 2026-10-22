@@ -5,6 +5,7 @@ const os = require('os');
 const { execSync } = require('child_process');
 const ora = require('ora');
 const boxen = require('boxen');
+const { parseCommandToml } = require('./toml-command');
 
 /**
  * Health Check module for Gemini CLI CLI
@@ -732,7 +733,7 @@ class HealthChecker {
     const commandsDir = path.join(currentDir, '.gemini', 'commands');
     
     if (fs.existsSync(commandsDir)) {
-      const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.md'));
+      const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.toml'));
       return {
         status: 'pass',
         message: `${commands.length} commands found in .gemini/commands/`
@@ -750,7 +751,7 @@ class HealthChecker {
     const commandsDir = path.join(homeDir, '.gemini', 'commands');
     
     if (fs.existsSync(commandsDir)) {
-      const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.md'));
+      const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.toml'));
       return {
         status: 'pass',
         message: `${commands.length} commands found in ~/.gemini/commands/`
@@ -774,15 +775,15 @@ class HealthChecker {
       };
     }
     
-    const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.md'));
+    const commands = fs.readdirSync(commandsDir).filter(file => file.endsWith('.toml'));
     let issuesFound = 0;
     
     for (const command of commands) {
       const commandPath = path.join(commandsDir, command);
       const content = fs.readFileSync(commandPath, 'utf8');
       
-      // Check for $ARGUMENTS placeholder
-      if (!content.includes('$ARGUMENTS')) {
+      // A Gemini CLI command must define a TOML `prompt` field
+      if (parseCommandToml(content).prompt === null) {
         issuesFound++;
       }
     }
@@ -790,12 +791,12 @@ class HealthChecker {
     if (issuesFound === 0) {
       return {
         status: 'pass',
-        message: 'All commands have proper syntax'
+        message: 'All commands have a valid TOML prompt'
       };
     } else {
       return {
         status: 'warn',
-        message: `${issuesFound} commands missing $ARGUMENTS placeholder`
+        message: `${issuesFound} commands missing a TOML prompt field`
       };
     }
   }

@@ -210,7 +210,7 @@ auto_review:
 **Update Frequency:** Version bumps only
 **Content:** Behavioral contracts, quality gates, invariants
 
-### 3. CLAUDE.md (Semi-Stable - Significant Changes)
+### 3. GEMINI.md (Semi-Stable - Significant Changes)
 **Purpose:** What is this project?
 **Update Frequency:** Architecture changes
 **Content:** Tech stack, patterns, project context

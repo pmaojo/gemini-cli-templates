@@ -57,6 +57,6 @@ explicitly, then retry diagnosis. Do not replace unavailable measurements with
 estimates or zeros.
 
 The catalog installer copies all files recursively. Before this contribution is
-merged, copy its folder to a temporary project's `.claude/skills/` to test it.
+merged, copy its folder to a temporary project's `.gemini/skills/` to test it.
 The public installer fetches from upstream main and cannot install an unpublished
 local branch merely because the installer itself runs from a local checkout.

@@ -7,7 +7,7 @@
 
 LLM chat sessions die. Context windows fill. The user runs `/clear`. Terminals crash. The model gets restarted between turns. None of this is exotic - it's the default. Anthropic's own Agent SDK docs are explicit on this point:
 
-> "Don't rely on session resume. Capture the results you need (analysis output, decisions, file diffs) as application state and pass them into a fresh session's prompt. This is often more robust than shipping transcript files around." - `platform.claude.com/docs/en/agent-sdk/sessions`
+> "Don't rely on session resume. Capture the results you need (analysis output, decisions, file diffs) as application state and pass them into a fresh session's prompt. This is often more robust than shipping transcript files around." - `platform.gemini.com/docs/en/agent-sdk/sessions`
 
 The bleu skill already writes most of its work to disk, but disk-as-source-of-truth needs three more pieces to survive a `/clear`:
 

@@ -418,7 +418,7 @@ Before finalizing a command, verify:
 
 - [ ] Location (project vs global) is appropriate
 - [ ] Directory exists or will be created
-- [ ] File path is correct (`.claude/commands/` or `~/.claude/commands/`)
+- [ ] File path is correct (`.gemini/commands/` or `~/.gemini/commands/`)
 
 **Testing:**
 

@@ -242,7 +242,7 @@ conversation_management:
     - When errors accumulate (3+ in row)
 
   preserve_across_sessions:
-    - CLAUDE.md / CONTINUITY.md
+    - GEMINI.md / CONTINUITY.md
     - Architectural decisions
     - Key constraints
 

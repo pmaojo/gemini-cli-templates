@@ -8,13 +8,13 @@ tags: [DoorDash, Audit Log, Spend Tracking, Analytics, Accountability, CLI]
 # DoorDash Order Ledger
 
 Every dd-cli command the agent runs is recorded by the `doordash-audit-log` hook
-in `~/.claude/dd-guard/audit.jsonl` — one versioned JSON line per event.
+in `~/.gemini/dd-guard/audit.jsonl` — one versioned JSON line per event.
 This skill teaches you to answer questions from that log instead of
 guessing.
 
 > Install the bundle: hook `doordash/doordash-audit-log` (the recorder), command
 > `/doordash-report` (reconciled summaries), this skill (querying). Composes with
-> doordash-spend-guard (shares the `~/.claude/dd-guard/` state directory) but runs
+> doordash-spend-guard (shares the `~/.gemini/dd-guard/` state directory) but runs
 > standalone.
 
 ## Line schema (v1)
@@ -43,19 +43,19 @@ Answer from data, not memory:
 
 ```bash
 # What did the agent do today?
-jq -r 'select(.ts >= "2026-07-19") | "\(.ts) \(.event_type) \(.command)"' ~/.claude/dd-guard/audit.jsonl
+jq -r 'select(.ts >= "2026-07-19") | "\(.ts) \(.event_type) \(.command)"' ~/.gemini/dd-guard/audit.jsonl
 
 # Checkout URLs issued this week (intents, not confirmed orders)
-jq -r 'select(.event_type == "checkout_url" and .ts >= "2026-07-13")' ~/.claude/dd-guard/audit.jsonl
+jq -r 'select(.event_type == "checkout_url" and .ts >= "2026-07-13")' ~/.gemini/dd-guard/audit.jsonl
 
 # Activity by type
-jq -s 'group_by(.event_type) | map({type: .[0].event_type, n: length})' ~/.claude/dd-guard/audit.jsonl
+jq -s 'group_by(.event_type) | map({type: .[0].event_type, n: length})' ~/.gemini/dd-guard/audit.jsonl
 
 # Which sessions touched carts?
-jq -r 'select(.event_type == "cart_mutation") | .session_id' ~/.claude/dd-guard/audit.jsonl | sort | uniq -c
+jq -r 'select(.event_type == "cart_mutation") | .session_id' ~/.gemini/dd-guard/audit.jsonl | sort | uniq -c
 
 # Failed dd-cli calls (agent flailing?)
-jq -r 'select(.exit_ok == false) | "\(.ts) \(.command)"' ~/.claude/dd-guard/audit.jsonl
+jq -r 'select(.exit_ok == false) | "\(.ts) \(.command)"' ~/.gemini/dd-guard/audit.jsonl
 ```
 
 When the user asks a money question ("how much this week?"), prefer
@@ -79,5 +79,5 @@ human may have abandoned the payment page.
 - **Never edit lines** — append-only is the audit property. Corrections go
   in reports, not in the log.
 - **Privacy**: this is a plaintext record of eating habits and schedules.
-  Keep `~/.claude/dd-guard/` out of repos and backups you share. Mention
+  Keep `~/.gemini/dd-guard/` out of repos and backups you share. Mention
   this to the user the first time you query the log in a session.

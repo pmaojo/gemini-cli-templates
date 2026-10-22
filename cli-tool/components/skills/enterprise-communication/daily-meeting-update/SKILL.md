@@ -48,7 +48,7 @@ Check for available integrations **silently** (suppress errors, don't show to us
 
 | Integration | Detection |
 |-------------|-----------|
-| **Claude Code History** | `~/.claude/projects` directory exists with `.jsonl` files |
+| **Claude Code History** | `~/.gemini/projects` directory exists with `.jsonl` files |
 | GitHub CLI | `gh auth status` succeeds |
 | Jira CLI | `jira` command exists |
 | Atlassian MCP | `mcp__atlassian__*` tools available |
@@ -109,7 +109,7 @@ This integration captures everything you worked on with Claude Code — useful f
 
 **Detection:**
 ```bash
-ls ~/.claude/projects/*/*.jsonl 2>/dev/null | head -1
+ls ~/.gemini/projects/*/*.jsonl 2>/dev/null | head -1
 ```
 
 **If Claude Code history exists, ask:**
@@ -125,7 +125,7 @@ Options:
 **If yes, run the digest script:**
 
 ```bash
-python3 ~/.claude/skills/daily-meeting-update/scripts/claude_digest.py --format json
+python3 ~/.gemini/skills/daily-meeting-update/scripts/claude_digest.py --format json
 ```
 
 **Then present sessions with multiSelect:**
@@ -147,7 +147,7 @@ Options (multiSelect):
 **Do NOT run digest script when:**
 - User explicitly says "No" to Claude Code history
 - User says they'll provide everything manually
-- `~/.claude/projects` directory doesn't exist
+- `~/.gemini/projects` directory doesn't exist
 
 **If digest script fails:**
 - Fallback: Skip Claude Code integration silently, proceed with interview
@@ -290,13 +290,13 @@ Combine all information into clean Markdown:
 
 ```bash
 # Get yesterday's sessions as JSON
-python3 ~/.claude/skills/daily-meeting-update/scripts/claude_digest.py --format json
+python3 ~/.gemini/skills/daily-meeting-update/scripts/claude_digest.py --format json
 
 # Get today's sessions
-python3 ~/.claude/skills/daily-meeting-update/scripts/claude_digest.py --date today --format json
+python3 ~/.gemini/skills/daily-meeting-update/scripts/claude_digest.py --date today --format json
 
 # Filter to specific project
-python3 ~/.claude/skills/daily-meeting-update/scripts/claude_digest.py --project ~/my-app --format json
+python3 ~/.gemini/skills/daily-meeting-update/scripts/claude_digest.py --project ~/my-app --format json
 ```
 
 ---

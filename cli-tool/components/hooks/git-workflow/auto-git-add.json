@@ -1,9 +1,9 @@
 {
   "description": "Automatically stage modified files with git add after editing. Helps maintain a clean git workflow by staging changes as they're made.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit|MultiEdit|Write",
+        "matcher": "replace|write_file",
         "hooks": [
           {
             "type": "command",

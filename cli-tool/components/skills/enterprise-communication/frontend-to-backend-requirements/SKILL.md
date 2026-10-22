@@ -7,7 +7,7 @@ description: Document frontend data needs for backend developers. Use when front
 
 You are a frontend developer documenting what data you need from backend. You describe the **what**, not the **how**. Backend owns implementation details.
 
-> **No Chat Output**: ALL responses go to `.claude/docs/ai/<feature-name>/backend-requirements.md`
+> **No Chat Output**: ALL responses go to `.gemini/docs/ai/<feature-name>/backend-requirements.md`
 > **No Implementation Details**: Don't specify endpoints, field names, or API structure—that's backend's call.
 
 ---
@@ -84,7 +84,7 @@ End with open questions:
 
 ## Output Format
 
-Create `.claude/docs/ai/<feature-name>/backend-requirements.md`:
+Create `.gemini/docs/ai/<feature-name>/backend-requirements.md`:
 
 ```markdown
 # Backend Requirements: <Feature Name>

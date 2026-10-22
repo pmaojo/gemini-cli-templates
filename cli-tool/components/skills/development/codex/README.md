@@ -15,12 +15,12 @@ Enable Claude Code to invoke the Codex CLI (`codex exec` and session resumes) fo
 
 ## Installation
 
-Download this repo and store the skill in ~/.claude/skills/codex
+Download this repo and store the skill in ~/.gemini/skills/codex
 
 ```
 git clone --depth 1 git@github.com:skills-directory/skill-codex.git /tmp/skills-temp && \
-mkdir -p ~/.claude/skills && \
-cp -r /tmp/skills-temp/ ~/.claude/skills/codex && \
+mkdir -p ~/.gemini/skills && \
+cp -r /tmp/skills-temp/ ~/.gemini/skills/codex && \
 rm -rf /tmp/skills-temp
 ```
 

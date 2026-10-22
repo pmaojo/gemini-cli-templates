@@ -21,7 +21,7 @@ Complete installation instructions for all platforms and use cases.
 
 ```bash
 # Clone to your skills directory
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git ~/.gemini/skills/loki-mode
 ```
 
 **Done!** Skip to [Verify Installation](#verify-installation).
@@ -36,7 +36,7 @@ Loki Mode can be installed for Claude Code in three ways:
 
 **Personal installation (available in all projects):**
 ```bash
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git ~/.gemini/skills/loki-mode
 ```
 
 **Project-specific installation:**
@@ -45,14 +45,14 @@ git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
 cd /path/to/your/project
 
 # Clone to local skills directory
-git clone https://github.com/asklokesh/loki-mode.git .claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git .gemini/skills/loki-mode
 ```
 
 ### Option B: Download from Releases
 
 ```bash
 # Navigate to skills directory
-cd ~/.claude/skills
+cd ~/.gemini/skills
 
 # Get latest version number
 VERSION=$(curl -s https://api.github.com/repos/asklokesh/loki-mode/releases/latest | grep tag_name | cut -d'"' -f4 | tr -d 'v')
@@ -62,7 +62,7 @@ curl -L -o loki-mode.zip "https://github.com/asklokesh/loki-mode/releases/downlo
 unzip loki-mode.zip && rm loki-mode.zip
 ```
 
-**Result:** Creates `~/.claude/skills/loki-mode/SKILL.md`
+**Result:** Creates `~/.gemini/skills/loki-mode/SKILL.md`
 
 ### Option C: Minimal Install (curl)
 
@@ -70,22 +70,22 @@ If you only want the essential files without the full repository:
 
 ```bash
 # Create directory structure
-mkdir -p ~/.claude/skills/loki-mode/references
+mkdir -p ~/.gemini/skills/loki-mode/references
 
 # Download core skill file
-curl -o ~/.claude/skills/loki-mode/SKILL.md \
+curl -o ~/.gemini/skills/loki-mode/SKILL.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/SKILL.md
 
 # Download agent definitions
-curl -o ~/.claude/skills/loki-mode/references/agents.md \
+curl -o ~/.gemini/skills/loki-mode/references/agents.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/agents.md
 
 # Download deployment guides
-curl -o ~/.claude/skills/loki-mode/references/deployment.md \
+curl -o ~/.gemini/skills/loki-mode/references/deployment.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/deployment.md
 
 # Download business operations reference
-curl -o ~/.claude/skills/loki-mode/references/business-ops.md \
+curl -o ~/.gemini/skills/loki-mode/references/business-ops.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/business-ops.md
 ```
 
@@ -147,7 +147,7 @@ For using Loki Mode through the Anthropic API Console (console.anthropic.com):
 Check that the skill file is in place:
 
 ```bash
-cat ~/.claude/skills/loki-mode/SKILL.md | head -10
+cat ~/.gemini/skills/loki-mode/SKILL.md | head -10
 ```
 
 **Expected output:** Should show YAML frontmatter starting with:
@@ -218,12 +218,12 @@ loki-mode/
 **Solutions:**
 1. **Check installation path:**
    ```bash
-   ls -la ~/.claude/skills/loki-mode/SKILL.md
+   ls -la ~/.gemini/skills/loki-mode/SKILL.md
    ```
 
 2. **Verify YAML frontmatter:**
    ```bash
-   cat ~/.claude/skills/loki-mode/SKILL.md | head -5
+   cat ~/.gemini/skills/loki-mode/SKILL.md | head -5
    ```
    Should show `name: loki-mode`
 
@@ -239,10 +239,10 @@ loki-mode/
 **Solution:**
 ```bash
 # Ensure skills directory exists
-mkdir -p ~/.claude/skills
+mkdir -p ~/.gemini/skills
 
 # Check permissions
-ls -la ~/.claude/
+ls -la ~/.gemini/
 ```
 
 ### Download Fails
@@ -255,13 +255,13 @@ ls -la ~/.claude/
 2. **Try alternate download method:**
    ```bash
    # Use wget instead of curl
-   wget -O ~/.claude/skills/loki-mode/SKILL.md \
+   wget -O ~/.gemini/skills/loki-mode/SKILL.md \
      https://raw.githubusercontent.com/asklokesh/loki-mode/main/SKILL.md
    ```
 
 3. **Manual download:**
    - Visit the URL in a browser
-   - Save file manually to `~/.claude/skills/loki-mode/`
+   - Save file manually to `~/.gemini/skills/loki-mode/`
 
 ### Autonomous Runner Won't Start
 
@@ -276,7 +276,7 @@ ls -la ~/.claude/
 2. **Run from repository root:**
    ```bash
    # Make sure you're in the loki-mode directory
-   cd ~/.claude/skills/loki-mode
+   cd ~/.gemini/skills/loki-mode
    ./autonomy/run.sh
    ```
 
@@ -296,7 +296,7 @@ ls -la ~/.claude/
 **Solution:**
 ```bash
 # Ensure all reference files are present
-ls -la ~/.claude/skills/loki-mode/references/
+ls -la ~/.gemini/skills/loki-mode/references/
 
 # Should show:
 # agents.md
@@ -304,7 +304,7 @@ ls -la ~/.claude/skills/loki-mode/references/
 # business-ops.md
 
 # If missing, download them:
-curl -o ~/.claude/skills/loki-mode/references/agents.md \
+curl -o ~/.gemini/skills/loki-mode/references/agents.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/agents.md
 ```
 
@@ -315,7 +315,7 @@ curl -o ~/.claude/skills/loki-mode/references/agents.md \
 ### For Git Installations
 
 ```bash
-cd ~/.claude/skills/loki-mode
+cd ~/.gemini/skills/loki-mode
 git pull origin main
 ```
 
@@ -328,7 +328,7 @@ git pull origin main
 ### Check Current Version
 
 ```bash
-cat ~/.claude/skills/loki-mode/VERSION
+cat ~/.gemini/skills/loki-mode/VERSION
 ```
 
 ---
@@ -339,7 +339,7 @@ cat ~/.claude/skills/loki-mode/VERSION
 
 ```bash
 # Remove the skill directory
-rm -rf ~/.claude/skills/loki-mode
+rm -rf ~/.gemini/skills/loki-mode
 ```
 
 ### Claude.ai (Web)

@@ -68,7 +68,7 @@ Result: Clear implementation roadmap, reviewed by multiple LLMs, ready for execu
 ```bash
 npx add-skill softaworks/gepetto
 # or
-cp -r skills/gepetto ~/.claude/skills/
+cp -r skills/gepetto ~/.gemini/skills/
 ```
 
 ### For claude.ai
@@ -455,7 +455,7 @@ See the [Ralphy repository](https://github.com/michaelshimeles/ralphy) for insta
 ## File Structure
 
 ```
-~/.claude/skills/gepetto/
+~/.gemini/skills/gepetto/
 ├── SKILL.md                    # Main skill definition
 ├── README.md                   # This file
 └── references/

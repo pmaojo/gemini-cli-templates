@@ -54,7 +54,7 @@ Loki Mode already implements more comprehensive versions of:
 
 **Sources:**
 - [Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) - Anthropic Engineering
-- [Claude Agent SDK Overview](https://platform.claude.com/docs/en/agent-sdk/overview) - Anthropic Platform
+- [Claude Agent SDK Overview](https://platform.gemini.com/docs/en/agent-sdk/overview) - Anthropic Platform
 
 **New Patterns:**
 
@@ -1004,7 +1004,7 @@ The previous "37 agents" messaging was misleading because:
 
 ### Inspired By
 **Boris Cherny (Creator of Claude Code) - "Max Setup" Pattern:**
-- Self-updating CLAUDE.md based on mistakes (we adapted to CONTINUITY.md)
+- Self-updating GEMINI.md based on mistakes (we adapted to CONTINUITY.md)
 - Let AI test its own work (2-3x quality improvement observed)
 - Extended thinking mode for complex problems
 - "Less prompting, more systems. Parallelize + standardize + verify."
@@ -1050,7 +1050,7 @@ To fully utilize:
   - 5 core inviolable principles with enforcement logic
   - Agent behavioral contracts (orchestrator, engineering, QA, DevOps)
   - Quality gates as YAML configs (pre-commit blocking, post-implementation auto-fix)
-  - Memory hierarchy (CONTINUITY.md → CONSTITUTION.md → CLAUDE.md → Ledgers → Agent context)
+  - Memory hierarchy (CONTINUITY.md → CONSTITUTION.md → GEMINI.md → Ledgers → Agent context)
   - Context lineage schema with JSON structure
   - Git checkpoint protocol integration
   - Runtime invariants (TypeScript assertions)
@@ -1158,14 +1158,14 @@ For existing `.loki/` projects:
 ### Added
 - **Claude Code Best Practices** - Integrated patterns from "Claude Code in Action" course:
 
-  **CLAUDE.md Generation:**
+  **GEMINI.md Generation:**
   - Comprehensive codebase summary generated on bootstrap
   - Included in EVERY Claude request for persistent context
   - Contains: project summary, architecture, key files, critical patterns
   - Auto-updated by agents on significant changes
 
   **Three Memory Levels:**
-  1. **Project Memory**: `.loki/CONTINUITY.md` + `CLAUDE.md` (shared, committed)
+  1. **Project Memory**: `.loki/CONTINUITY.md` + `GEMINI.md` (shared, committed)
   2. **Agent Memory**: `.loki/memory/ledgers/` (per-agent, not committed)
   3. **Global Memory**: `.loki/rules/` (permanent patterns, committed)
 
@@ -1191,7 +1191,7 @@ For existing `.loki/` projects:
   **Post-Tool-Use Hooks** - Auto-fix after execution:
   - Type checking (TypeScript/mypy) with auto-fix feedback
   - Auto-formatting (Prettier, Black, gofmt)
-  - Update CLAUDE.md on architecture changes
+  - Update GEMINI.md on architecture changes
   - Example: `.loki/hooks/post-write.sh`
 
   **Deduplication Hook** - Prevent AI slop:
@@ -1226,13 +1226,13 @@ For existing `.loki/` projects:
 - **Bootstrap Script** - Creates hooks/ and plans/ directories
 
 - **RAR Cycle** - Enhanced with Claude Code patterns:
-  - REASON: Read CONTINUITY.md + CLAUDE.md
+  - REASON: Read CONTINUITY.md + GEMINI.md
   - ACT: Use hooks for quality gates
-  - REFLECT: Update CONTINUITY.md + CLAUDE.md
+  - REFLECT: Update CONTINUITY.md + GEMINI.md
 
 ### Best Practices
 1. **Build incrementally** - Plan mode for architecture, small steps for implementation
-2. **Maintain context** - Update CLAUDE.md and CONTINUITY.md continuously
+2. **Maintain context** - Update GEMINI.md and CONTINUITY.md continuously
 3. **Verify outputs** - Use hooks for automated quality checks
 4. **Prevent duplicates** - Deduplication hooks before shipping
 5. **Test first** - TDD workflow prevents regressions

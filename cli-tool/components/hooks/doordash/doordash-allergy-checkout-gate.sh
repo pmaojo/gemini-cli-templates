@@ -20,7 +20,7 @@ PAYLOAD=$(cat || true)
 python3 - "$PAYLOAD" <<'PYEOF'
 import json, os, re, sys, time
 
-PROFILE_DIR = os.path.expanduser(os.environ.get("DD_PROFILE_DIR", "~/.claude/doordash-profile"))
+PROFILE_DIR = os.path.expanduser(os.environ.get("DD_PROFILE_DIR", "~/.gemini/doordash-profile"))
 DIETARY = os.path.join(PROFILE_DIR, "dietary.json")
 VETTED = os.path.join(PROFILE_DIR, "vetted")
 MUTATIONS = os.path.join(PROFILE_DIR, "mutations")

@@ -182,7 +182,7 @@ is_auth = auth.is_authenticated()
 
 ## Data Storage
 
-Location: `~/.claude/skills/notebooklm/data/`
+Location: `~/.gemini/skills/notebooklm/data/`
 
 ```
 data/

@@ -50,7 +50,7 @@ mise exec -- pre-commit run --all-files
 mise exec -- pre-commit run convert-drawio-to-png --files assets/my-diagram.drawio
 
 # Direct script execution
-bash ~/.claude/skills/draw-io/scripts/convert-drawio-to-png.sh assets/diagram.drawio
+bash ~/.gemini/skills/draw-io/scripts/convert-drawio-to-png.sh assets/diagram.drawio
 ```
 
 Conversion produces:
@@ -72,8 +72,8 @@ Programmatic element positioning:
 Search and integrate official AWS service icons:
 
 ```bash
-python ~/.claude/skills/draw-io/scripts/find_aws_icon.py ec2
-python ~/.claude/skills/draw-io/scripts/find_aws_icon.py lambda
+python ~/.gemini/skills/draw-io/scripts/find_aws_icon.py ec2
+python ~/.gemini/skills/draw-io/scripts/find_aws_icon.py lambda
 ```
 
 Uses latest `mxgraph.aws4.*` icon set.
@@ -150,7 +150,7 @@ mise exec -- pre-commit run convert-drawio-to-png --files architecture.drawio
 
 ```bash
 # Search for EC2 icon
-python ~/.claude/skills/draw-io/scripts/find_aws_icon.py ec2
+python ~/.gemini/skills/draw-io/scripts/find_aws_icon.py ec2
 
 # Output: mxgraph.aws4.compute.ec2_instance
 ```
@@ -212,7 +212,7 @@ Remove background color for theme adaptability:
 ## File Structure
 
 ```
-~/.claude/skills/draw-io/
+~/.gemini/skills/draw-io/
 ├── SKILL.md                          # This documentation
 ├── README.md                         # User-facing guide
 ├── scripts/

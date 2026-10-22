@@ -116,7 +116,7 @@ Each plugin entry in the `plugins` array:
 
 ## Team Distribution
 
-Configure automatic marketplace availability via `.claude/settings.json`:
+Configure automatic marketplace availability via `.gemini/settings.json`:
 
 ```json
 {

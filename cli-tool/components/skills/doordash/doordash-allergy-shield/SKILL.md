@@ -41,7 +41,7 @@ the highest-severity allergens before any checkout URL is emitted.
 
 ## State
 
-- `~/.claude/doordash-profile/dietary.json` — the profile. Structure:
+- `~/.gemini/doordash-profile/dietary.json` — the profile. Structure:
 
 ```json
 {
@@ -63,7 +63,7 @@ Severity tiers: `anaphylaxis` (hook-enforced, never overridable in-session),
 `avoid` (requires explicit human acknowledgment to keep the item),
 `preference` (mention it, don't gate on it).
 
-- `~/.claude/doordash-profile/vetted/<cart-uuid>.json` — one dump per vetted cart:
+- `~/.gemini/doordash-profile/vetted/<cart-uuid>.json` — one dump per vetted cart:
   the **full raw `cart show` output** plus your verdict and a timestamp. The
   checkout hook greps this artifact — it trusts the dump, not your claim.
 
@@ -90,7 +90,7 @@ make sure each eater exists in the profile or ask for their restrictions.
    **UNVERIFIED** and require the user's explicit sign-off for eaters with
    `anaphylaxis` entries.
 5. Write the vetted dump: full `cart show` output + verdict + ISO timestamp
-   to `~/.claude/doordash-profile/vetted/<cart-uuid>.json`. Without this file the
+   to `~/.gemini/doordash-profile/vetted/<cart-uuid>.json`. Without this file the
    checkout hook blocks — vetting is not optional.
 
 ### At checkout

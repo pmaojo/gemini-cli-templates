@@ -359,7 +359,7 @@ Note that `409 Conflict` carries `error.type: "invalid_request_error"` (there is
 
 ## Rate Limits
 
-Managed Agents endpoints have per-organization request-per-minute (RPM) limits, separate from your [Messages API token limits](https://platform.claude.com/docs/en/api/rate-limits). Model inference inside a session still draws from your organization's standard ITPM/OTPM limits.
+Managed Agents endpoints have per-organization request-per-minute (RPM) limits, separate from your [Messages API token limits](https://platform.gemini.com/docs/en/api/rate-limits). Model inference inside a session still draws from your organization's standard ITPM/OTPM limits.
 
 | Endpoint group | Scope | RPM | Max concurrent |
 |---|---|---|---|
@@ -367,6 +367,6 @@ Managed Agents endpoints have per-organization request-per-minute (RPM) limits, 
 | All other operations (Agents, Sessions, Vaults) | organization | 600 | — |
 | All operations (Environments) | organization | 60 | 5 |
 
-Files and Skills endpoints use the standard tier-based [rate limits](https://platform.claude.com/docs/en/api/rate-limits).
+Files and Skills endpoints use the standard tier-based [rate limits](https://platform.gemini.com/docs/en/api/rate-limits).
 
 When a limit is exceeded the API returns `429` with a `rate_limit_error` (see [Error Handling](#error-handling) for the response envelope) and a `retry-after` header indicating how many seconds to wait before retrying. The Anthropic SDK reads this header and retries automatically.

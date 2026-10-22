@@ -34,7 +34,7 @@ EXTENDED_CONTEXT_LIMIT   = 1_000_000
 WATCHDOG_SECONDS         = 3600
 CACHE_TTL                = 0.25
 
-_STATE_DIR = pathlib.Path.home() / ".claude" / "state" / "context-timeline"
+_STATE_DIR = pathlib.Path.home() / ".gemini" / "state" / "context-timeline"
 
 # ── Path helpers ───────────────────────────────────────────────────────────────
 
@@ -47,11 +47,11 @@ def _encode_cwd(cwd: str) -> str:
     return re.sub(r"[^a-zA-Z0-9]", "-", os.path.normpath(os.path.abspath(cwd)))
 
 def _transcript_path(session_id: str, cwd: str) -> pathlib.Path:
-    base = pathlib.Path.home() / ".claude" / "projects" / _encode_cwd(cwd)
+    base = pathlib.Path.home() / ".gemini" / "projects" / _encode_cwd(cwd)
     return base / f"{session_id}.jsonl"
 
 def _subagents_dir(session_id: str, cwd: str) -> pathlib.Path:
-    base = pathlib.Path.home() / ".claude" / "projects" / _encode_cwd(cwd)
+    base = pathlib.Path.home() / ".gemini" / "projects" / _encode_cwd(cwd)
     return base / session_id / "subagents"
 
 def _events_dir() -> pathlib.Path:
@@ -72,7 +72,7 @@ def _detect_context_limit(cwd: str) -> int:
     Resolution order:
       1. CONTEXT_TIMELINE_LIMIT env var (explicit override).
       2. "[1m]" / "[200k]" / "[1M]" suffix in the active model setting,
-         read from <cwd>/.claude/settings.json or ~/.claude/settings.json.
+         read from <cwd>/.gemini/settings.json or ~/.gemini/settings.json.
       3. DEFAULT_CONTEXT_LIMIT (200_000).
     """
     env = os.environ.get("CONTEXT_TIMELINE_LIMIT")
@@ -83,8 +83,8 @@ def _detect_context_limit(cwd: str) -> int:
             pass
 
     for path in (
-        pathlib.Path(cwd) / ".claude" / "settings.json",
-        pathlib.Path.home() / ".claude" / "settings.json",
+        pathlib.Path(cwd) / ".gemini" / "settings.json",
+        pathlib.Path.home() / ".gemini" / "settings.json",
     ):
         try:
             cfg   = json.loads(path.read_text())

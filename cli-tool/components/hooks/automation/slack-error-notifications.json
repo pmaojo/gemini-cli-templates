@@ -1,9 +1,9 @@
 {
   "description": "Send Slack notifications when Gemini CLI encounters long-running operations or when tools take significant time. Helps monitor productivity and catch potential issues. Requires SLACK_WEBHOOK_URL environment variable.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",
@@ -12,9 +12,9 @@
         ]
       }
     ],
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",

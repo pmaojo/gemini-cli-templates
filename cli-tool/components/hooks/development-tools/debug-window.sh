@@ -10,9 +10,9 @@
 #
 # Requirements:
 #   - Only runs when --debug or -d flag was used to start the session
-#   - Debug log file must exist at ~/.claude/debug/{session_id}.txt
+#   - Debug log file must exist at ~/.gemini/debug/{session_id}.txt
 #
-# Configuration (in ~/.claude/settings.json):
+# Configuration (in ~/.gemini/settings.json):
 #   To keep debug window open after session ends:
 #   { "env": { "DEBUG_WINDOW_AUTO_CLOSE_DISABLE": "1" } }
 

@@ -1,7 +1,7 @@
 {
   "description": "Send Slack notifications when Gemini CLI finishes working. Requires SLACK_WEBHOOK_URL environment variable. Get webhook URL from Slack App settings -> Incoming Webhooks.",
   "hooks": {
-    "Stop": [
+    "AfterAgent": [
       {
         "hooks": [
           {

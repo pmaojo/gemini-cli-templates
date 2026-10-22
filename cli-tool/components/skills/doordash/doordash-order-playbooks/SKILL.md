@@ -27,7 +27,7 @@ before emitting any checkout URL. Silent drift becomes a caught event.
 
 ## State
 
-Single JSON file: `~/.claude/dd-cli/playbooks.json`
+Single JSON file: `~/.gemini/dd-cli/playbooks.json`
 
 ```json
 {
@@ -50,7 +50,7 @@ Single JSON file: `~/.claude/dd-cli/playbooks.json`
 }
 ```
 
-Create the directory and file on first use (`mkdir -p ~/.claude/dd-cli`).
+Create the directory and file on first use (`mkdir -p ~/.gemini/dd-cli`).
 Prices are pre-fee subtotals — say so when presenting totals.
 
 ## Preflight (first use only — REQUIRED)

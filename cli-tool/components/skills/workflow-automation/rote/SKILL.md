@@ -27,7 +27,7 @@ Say so and stop if that is what you are looking at.
 
 The source is a directory containing a `SKILL.md`, optionally with a
 `references/` folder. The user names it, or you infer it from context: a
-skill just discussed, a path in the conversation, `.claude/skills/*` or
+skill just discussed, a path in the conversation, `.gemini/skills/*` or
 `skills/*` in the project.
 
 Confirm the resolved absolute path with the user before running.

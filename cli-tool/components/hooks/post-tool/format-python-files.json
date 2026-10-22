@@ -1,9 +1,9 @@
 {
   "description": "Automatically format Python files after any Edit operation using black formatter. This hook runs 'black' on any .py file that Gemini modifies, ensuring consistent Python code formatting. Requires black to be installed ('pip install black'). The command includes error suppression (2>/dev/null || true) so it won't fail if black is not installed.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",

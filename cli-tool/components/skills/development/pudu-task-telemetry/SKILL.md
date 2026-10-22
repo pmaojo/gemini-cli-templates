@@ -15,11 +15,11 @@ change the model of the host assistant.
 ## 1. Diagnose
 
 Locate this skill's `scripts/pudu-task.mjs` relative to this file. Examples assume
-project installation under `.claude/skills/pudu-task-telemetry/`. Run from the
+project installation under `.gemini/skills/pudu-task-telemetry/`. Run from the
 project root, or supply `--repo` explicitly.
 
 ```bash
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs doctor --repo . --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs doctor --repo . --json
 ```
 
 Requires Node.js >=20, Pudu AI on PATH, and a running Ollama server. Diagnose
@@ -31,7 +31,7 @@ prove that the server cannot forward a request to cloud inference.
 ## 2. Select a model
 
 ```bash
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs recommend --repo . --task-kind code-summary --context-budget 4096 --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs recommend --repo . --task-kind code-summary --context-budget 4096 --json
 ```
 
 Prefer installed models that fit the task's context and hardware. A Pudu hardware
@@ -49,8 +49,8 @@ formats and commands. Never pass sensitive prompt text as CLI arguments.
 Start a task, then use the returned UUID and an installed model:
 
 ```bash
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs start --repo . --task-file task.txt --json
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs run-local --repo . --config local-config.json --task-id TASK_UUID --request-file request.json --model INSTALLED_MODEL --output result.txt --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs start --repo . --task-file task.txt --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs run-local --repo . --config local-config.json --task-id TASK_UUID --request-file request.json --model INSTALLED_MODEL --output result.txt --json
 ```
 
 `TASK_UUID` and `INSTALLED_MODEL` are placeholders. The output must be a new file
@@ -68,8 +68,8 @@ A generated response is not automatically a solved task. Use the request's
 checks using `--verification-file`. External checks remain `host_reported`.
 
 ```bash
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs finish --repo . --task-id TASK_UUID --status completed --json
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs report --repo . --task-id TASK_UUID --format markdown
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs finish --repo . --task-id TASK_UUID --status completed --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs report --repo . --task-id TASK_UUID --format markdown
 ```
 
 If interrupted, wait for the original process to exit before `recover --task-id

@@ -6,14 +6,14 @@
 # - Stop runs once at session end (lightweight)
 # - UserPromptSubmit runs every message (heavy, adds latency)
 #
-# Hook config (in ~/.claude/settings.json):
+# Hook config (in ~/.gemini/settings.json):
 # {
 #   "hooks": {
 #     "Stop": [{
 #       "matcher": "*",
 #       "hooks": [{
 #         "type": "command",
-#         "command": "~/.claude/skills/continuous-learning/evaluate-session.sh"
+#         "command": "~/.gemini/skills/continuous-learning/evaluate-session.sh"
 #       }]
 #     }]
 #   }
@@ -21,19 +21,19 @@
 #
 # Patterns to detect: error_resolution, debugging_techniques, workarounds, project_specific
 # Patterns to ignore: simple_typos, one_time_fixes, external_api_issues
-# Extracted skills saved to: ~/.claude/skills/learned/
+# Extracted skills saved to: ~/.gemini/skills/learned/
 
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_FILE="$SCRIPT_DIR/config.json"
-LEARNED_SKILLS_PATH="${HOME}/.claude/skills/learned"
+LEARNED_SKILLS_PATH="${HOME}/.gemini/skills/learned"
 MIN_SESSION_LENGTH=10
 
 # Load config if exists
 if [ -f "$CONFIG_FILE" ]; then
   MIN_SESSION_LENGTH=$(jq -r '.min_session_length // 10' "$CONFIG_FILE")
-  LEARNED_SKILLS_PATH=$(jq -r '.learned_skills_path // "~/.claude/skills/learned/"' "$CONFIG_FILE" | sed "s|~|$HOME|")
+  LEARNED_SKILLS_PATH=$(jq -r '.learned_skills_path // "~/.gemini/skills/learned/"' "$CONFIG_FILE" | sed "s|~|$HOME|")
 fi
 
 # Ensure learned skills directory exists

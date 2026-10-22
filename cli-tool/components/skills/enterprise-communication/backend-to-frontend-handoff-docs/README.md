@@ -23,7 +23,7 @@ Use this skill when:
 1. **Analyzes** your completed backend code (endpoints, controllers, services, DTOs, validation)
 2. **Extracts** business context, constraints, edge cases, and gotchas
 3. **Generates** a structured markdown document with all integration details
-4. **Saves** to `.claude/docs/ai/<feature-name>/api-handoff.md`
+4. **Saves** to `.gemini/docs/ai/<feature-name>/api-handoff.md`
 5. **Versions** subsequent updates (v2, v3, etc.) for iteration tracking
 
 ### Workflow
@@ -65,7 +65,7 @@ Automatically increments iteration suffixes (`-v2`, `-v3`) when regenerating doc
 ```
 User: "I just completed the expense approval API. Create handoff docs for frontend."
 
-Skill Output: Creates `.claude/docs/ai/expense-approval/api-handoff.md` with:
+Skill Output: Creates `.gemini/docs/ai/expense-approval/api-handoff.md` with:
 - Business context about approval workflows
 - POST /api/expenses/:id/approve endpoint details
 - ExpenseDto and ApprovalDto models
@@ -91,7 +91,7 @@ Skill Output: Creates minimal handoff with:
 ```
 User: "Frontend asked about pagination. Update the handoff."
 
-Skill Output: Creates `.claude/docs/ai/user-list/api-handoff-v2.md` with:
+Skill Output: Creates `.gemini/docs/ai/user-list/api-handoff-v2.md` with:
 - Updated pagination parameters
 - Response shape with page metadata
 - Sorting options
@@ -161,13 +161,13 @@ The generated handoff follows this structure:
 
 Documents are saved to:
 ```
-.claude/docs/ai/<feature-name>/api-handoff.md
+.gemini/docs/ai/<feature-name>/api-handoff.md
 ```
 
 Subsequent versions:
 ```
-.claude/docs/ai/<feature-name>/api-handoff-v2.md
-.claude/docs/ai/<feature-name>/api-handoff-v3.md
+.gemini/docs/ai/<feature-name>/api-handoff-v2.md
+.gemini/docs/ai/<feature-name>/api-handoff-v3.md
 ```
 
 ## What's NOT Included

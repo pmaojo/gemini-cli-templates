@@ -18,7 +18,7 @@ its eater, splits costs with fees prorated, and remembers payer history.
 
 ## State
 
-- `team-food.json` (project dir or `~/.claude/dd-cli/` — committable if the
+- `team-food.json` (project dir or `~/.gemini/dd-cli/` — committable if the
   team shares a repo): the roster.
 
 ```json

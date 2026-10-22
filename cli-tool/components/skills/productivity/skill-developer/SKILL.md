@@ -30,14 +30,14 @@ Automatically activates when you mention:
 ### Two-Hook Architecture
 
 **1. UserPromptSubmit Hook** (Proactive Suggestions)
-- **File**: `.claude/hooks/skill-activation-prompt.ts`
+- **File**: `.gemini/hooks/skill-activation-prompt.ts`
 - **Trigger**: BEFORE Claude sees user's prompt
 - **Purpose**: Suggest relevant skills based on keywords + intent patterns
 - **Method**: Injects formatted reminder as context (stdout → Claude's input)
 - **Use Cases**: Topic-based skills, implicit work detection
 
 **2. Stop Hook - Error Handling Reminder** (Gentle Reminders)
-- **File**: `.claude/hooks/error-handling-reminder.ts`
+- **File**: `.gemini/hooks/error-handling-reminder.ts`
 - **Trigger**: AFTER Claude finishes responding
 - **Purpose**: Gentle reminder to self-assess error handling in code written
 - **Method**: Analyzes edited files for risky patterns, displays reminder if needed
@@ -47,7 +47,7 @@ Automatically activates when you mention:
 
 ### Configuration File
 
-**Location**: `.claude/skills/skill-rules.json`
+**Location**: `.gemini/skills/skill-rules.json`
 
 Defines:
 - All skills and their trigger conditions
@@ -110,7 +110,7 @@ Defines:
 
 ### Step 1: Create Skill File
 
-**Location:** `.claude/skills/{skill-name}/SKILL.md`
+**Location:** `.gemini/skills/{skill-name}/SKILL.md`
 
 **Template:**
 ```markdown
@@ -162,12 +162,12 @@ See [SKILL_RULES_REFERENCE.md](SKILL_RULES_REFERENCE.md) for complete schema.
 **Test UserPromptSubmit:**
 ```bash
 echo '{"session_id":"test","prompt":"your test prompt"}' | \
-  npx tsx .claude/hooks/skill-activation-prompt.ts
+  npx tsx .gemini/hooks/skill-activation-prompt.ts
 ```
 
 **Test PreToolUse:**
 ```bash
-cat <<'EOF' | npx tsx .claude/hooks/skill-verification-guard.ts
+cat <<'EOF' | npx tsx .gemini/hooks/skill-verification-guard.ts
 {"session_id":"test","tool_name":"Edit","tool_input":{"file_path":"test.ts"}}
 EOF
 ```
@@ -232,7 +232,7 @@ Based on testing:
 - Second edit (same session) → Hook allows
 - Different session → Blocks again
 
-**State File:** `.claude/hooks/state/skills-used-{session_id}.json`
+**State File:** `.gemini/hooks/state/skills-used-{session_id}.json`
 
 ### 2. File Markers
 
@@ -270,7 +270,7 @@ export SKIP_ERROR_REMINDER=true
 
 When creating a new skill, verify:
 
-- [ ] Skill file created in `.claude/skills/{name}/SKILL.md`
+- [ ] Skill file created in `.gemini/skills/{name}/SKILL.md`
 - [ ] Proper frontmatter with name and description
 - [ ] Entry added to `skill-rules.json`
 - [ ] Keywords tested with real prompts
@@ -349,8 +349,8 @@ Future enhancements and ideas:
 
 ### Create New Skill (5 Steps)
 
-1. Create `.claude/skills/{name}/SKILL.md` with frontmatter
-2. Add entry to `.claude/skills/skill-rules.json`
+1. Create `.gemini/skills/{name}/SKILL.md` with frontmatter
+2. Add entry to `.gemini/skills/skill-rules.json`
 3. Test with `npx tsx` commands
 4. Refine patterns based on testing
 5. Keep SKILL.md under 500 lines
@@ -391,10 +391,10 @@ See [TRIGGER_TYPES.md](TRIGGER_TYPES.md) for complete details.
 Test hooks manually:
 ```bash
 # UserPromptSubmit
-echo '{"prompt":"test"}' | npx tsx .claude/hooks/skill-activation-prompt.ts
+echo '{"prompt":"test"}' | npx tsx .gemini/hooks/skill-activation-prompt.ts
 
 # PreToolUse
-cat <<'EOF' | npx tsx .claude/hooks/skill-verification-guard.ts
+cat <<'EOF' | npx tsx .gemini/hooks/skill-verification-guard.ts
 {"tool_name":"Edit","tool_input":{"file_path":"test.ts"}}
 EOF
 ```
@@ -406,16 +406,16 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for complete debugging guide.
 ## Related Files
 
 **Configuration:**
-- `.claude/skills/skill-rules.json` - Master configuration
-- `.claude/hooks/state/` - Session tracking
-- `.claude/settings.json` - Hook registration
+- `.gemini/skills/skill-rules.json` - Master configuration
+- `.gemini/hooks/state/` - Session tracking
+- `.gemini/settings.json` - Hook registration
 
 **Hooks:**
-- `.claude/hooks/skill-activation-prompt.ts` - UserPromptSubmit
-- `.claude/hooks/error-handling-reminder.ts` - Stop event (gentle reminders)
+- `.gemini/hooks/skill-activation-prompt.ts` - UserPromptSubmit
+- `.gemini/hooks/error-handling-reminder.ts` - Stop event (gentle reminders)
 
 **All Skills:**
-- `.claude/skills/*/SKILL.md` - Skill content files
+- `.gemini/skills/*/SKILL.md` - Skill content files
 
 ---
 

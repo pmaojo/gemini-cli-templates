@@ -87,7 +87,7 @@ name: project-catalog-developer
 
 **Check:**
 ```bash
-cat .claude/skills/skill-rules.json | jq .
+cat .gemini/skills/skill-rules.json | jq .
 ```
 
 If invalid JSON, jq will show the error.
@@ -106,7 +106,7 @@ Test the hook manually:
 
 ```bash
 echo '{"session_id":"debug","prompt":"your test prompt here"}' | \
-  npx tsx .claude/hooks/skill-activation-prompt.ts
+  npx tsx .gemini/hooks/skill-activation-prompt.ts
 ```
 
 Expected: Your skill should appear in the output.
@@ -184,8 +184,8 @@ grep -i "prisma" path/to/file.ts
 
 **Check session state:**
 ```bash
-ls .claude/hooks/state/
-cat .claude/hooks/state/skills-used-{session-id}.json
+ls .gemini/hooks/state/
+cat .gemini/hooks/state/skills-used-{session-id}.json
 ```
 
 **Example:**
@@ -200,7 +200,7 @@ If the skill is in `skills_used`, it won't block again in this session.
 
 **Fix:** Delete the state file to reset:
 ```bash
-rm .claude/hooks/state/skills-used-{session-id}.json
+rm .gemini/hooks/state/skills-used-{session-id}.json
 ```
 
 #### 5. File Marker Present
@@ -234,7 +234,7 @@ unset SKIP_DB_VERIFICATION
 Test the hook manually:
 
 ```bash
-cat <<'EOF' | npx tsx .claude/hooks/skill-verification-guard.ts 2>&1
+cat <<'EOF' | npx tsx .gemini/hooks/skill-verification-guard.ts 2>&1
 {
   "session_id": "debug",
   "tool_name": "Edit",
@@ -355,10 +355,10 @@ This makes it advisory instead of blocking.
 
 ### 1. Hook Not Registered
 
-**Check `.claude/settings.json`:**
+**Check `.gemini/settings.json`:**
 ```bash
-cat .claude/settings.json | jq '.hooks.UserPromptSubmit'
-cat .claude/settings.json | jq '.hooks.PreToolUse'
+cat .gemini/settings.json | jq '.hooks.UserPromptSubmit'
+cat .gemini/settings.json | jq '.hooks.PreToolUse'
 ```
 
 Expected: Hook entries present
@@ -372,7 +372,7 @@ Expected: Hook entries present
         "hooks": [
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/skill-activation-prompt.sh"
+            "command": "$CLAUDE_PROJECT_DIR/.gemini/hooks/skill-activation-prompt.sh"
           }
         ]
       }
@@ -385,21 +385,21 @@ Expected: Hook entries present
 
 **Check:**
 ```bash
-ls -l .claude/hooks/*.sh
+ls -l .gemini/hooks/*.sh
 ```
 
 Expected: `-rwxr-xr-x` (executable)
 
 **Fix:**
 ```bash
-chmod +x .claude/hooks/*.sh
+chmod +x .gemini/hooks/*.sh
 ```
 
 ### 3. Incorrect Shebang
 
 **Check:**
 ```bash
-head -1 .claude/hooks/skill-activation-prompt.sh
+head -1 .gemini/hooks/skill-activation-prompt.sh
 ```
 
 Expected: `#!/bin/bash`
@@ -417,7 +417,7 @@ Expected: Version number
 
 **Fix:** Install dependencies:
 ```bash
-cd .claude/hooks
+cd .gemini/hooks
 npm install
 ```
 
@@ -425,7 +425,7 @@ npm install
 
 **Check:**
 ```bash
-cd .claude/hooks
+cd .gemini/hooks
 npx tsc --noEmit skill-activation-prompt.ts
 ```
 
@@ -494,10 +494,10 @@ Content pattern matching reads entire file - slow for large files.
 
 ```bash
 # UserPromptSubmit
-time echo '{"prompt":"test"}' | npx tsx .claude/hooks/skill-activation-prompt.ts
+time echo '{"prompt":"test"}' | npx tsx .gemini/hooks/skill-activation-prompt.ts
 
 # PreToolUse
-time cat <<'EOF' | npx tsx .claude/hooks/skill-verification-guard.ts
+time cat <<'EOF' | npx tsx .gemini/hooks/skill-verification-guard.ts
 {"tool_name":"Edit","tool_input":{"file_path":"test.ts"}}
 EOF
 ```

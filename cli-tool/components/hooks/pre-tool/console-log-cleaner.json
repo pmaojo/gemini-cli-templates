@@ -1,9 +1,9 @@
 {
   "description": "Warns about console.log statements when editing files on production branches (main/master). Helps prevent debug code from reaching production.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",

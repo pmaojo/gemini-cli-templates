@@ -1,5 +1,6 @@
 const fs = require('fs-extra');
 const path = require('path');
+const { COMMAND_EXTENSION, parseCommandToml } = require('./toml-command');
 
 /**
  * Scans and returns available commands for a given language
@@ -77,8 +78,8 @@ function scanCommandsInDirectory(commandsDir, category) {
     const files = fs.readdirSync(commandsDir);
     
     files.forEach(file => {
-      if (path.extname(file) === '.md') {
-        const commandName = path.basename(file, '.md');
+      if (path.extname(file) === COMMAND_EXTENSION) {
+        const commandName = path.basename(file, COMMAND_EXTENSION);
         const filePath = path.join(commandsDir, file);
         
         // Read the command file to extract metadata
@@ -114,6 +115,12 @@ function parseCommandMetadata(content, commandName) {
     description: null,
     defaultChecked: false
   };
+
+  // Gemini CLI commands are TOML: read the markdown out of the `prompt` field
+  const toml = parseCommandToml(content);
+  if (toml.prompt !== null) {
+    content = toml.prompt;
+  }
   
   const lines = content.split('\n');
   
@@ -136,6 +143,9 @@ function parseCommandMetadata(content, commandName) {
     if (paragraphMatch) {
       metadata.description = paragraphMatch[1].trim().replace(/\n/g, ' ');
     }
+  }
+  if (!metadata.description && toml.description) {
+    metadata.description = toml.description;
   }
   
   // Determine default checked state (core commands usually checked by default)

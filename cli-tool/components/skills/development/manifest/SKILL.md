@@ -76,7 +76,7 @@ claude gateway install
 Wait 3 seconds for the gateway to fully start, then check the logs:
 
 ```bash
-grep "manifest" ~/.claude/logs/gateway.log | tail -5
+grep "manifest" ~/.gemini/logs/gateway.log | tail -5
 ```
 
 Look for:

@@ -40,7 +40,7 @@ The skill silently checks for available integrations:
 
 | Integration | Detection Method |
 |-------------|------------------|
-| Claude Code History | `~/.claude/projects` directory exists with `.jsonl` files |
+| Claude Code History | `~/.gemini/projects` directory exists with `.jsonl` files |
 | GitHub CLI | `gh auth status` succeeds |
 | Git | Current directory is a git repository |
 | Jira CLI | `jira` command exists |

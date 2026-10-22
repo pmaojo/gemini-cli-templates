@@ -38,8 +38,8 @@ guarded = re.compile(r'dd-cli\s+(order\s+checkout-url|cart\s+add-items)\b')
 if guarded.search(cmd) and "dd-guard.sh" not in cmd:
     block(
         "Blocked by doordash-spend-guard: route this through the wrapper instead —\n"
-        "  bash .claude/skills/doordash-spend-guard/scripts/dd-guard.sh checkout <cart-uuid>\n"
-        "  bash .claude/skills/doordash-spend-guard/scripts/dd-guard.sh add-items <args...>\n"
+        "  bash .gemini/skills/doordash-spend-guard/scripts/dd-guard.sh checkout <cart-uuid>\n"
+        "  bash .gemini/skills/doordash-spend-guard/scripts/dd-guard.sh add-items <args...>\n"
         "The wrapper prices the cart and enforces the spending policy deterministically."
     )
 

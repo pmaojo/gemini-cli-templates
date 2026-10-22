@@ -3,36 +3,36 @@
   "supportingFiles": [
     {
       "source": "plan-gate.sh",
-      "destination": ".claude/hooks/plan-gate.sh",
+      "destination": ".gemini/hooks/plan-gate.sh",
       "executable": true
     }
   ],
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/plan-gate.sh"
+            "command": "bash \"$GEMINI_PROJECT_DIR\"/.gemini/hooks/plan-gate.sh"
           }
         ]
       },
       {
-        "matcher": "MultiEdit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/plan-gate.sh"
+            "command": "bash \"$GEMINI_PROJECT_DIR\"/.gemini/hooks/plan-gate.sh"
           }
         ]
       },
       {
-        "matcher": "Write",
+        "matcher": "write_file",
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/plan-gate.sh"
+            "command": "bash \"$GEMINI_PROJECT_DIR\"/.gemini/hooks/plan-gate.sh"
           }
         ]
       }

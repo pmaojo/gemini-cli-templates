@@ -17,7 +17,7 @@ Generate test cases for new or modified code by understanding the implementation
 - Identify the testing framework(s) used in the project
 - Find existing test files and understand naming conventions
 - Analyze test organization patterns (unit, integration, e2e)
-- Review CLAUDE.md for testing guidelines
+- Review GEMINI.md for testing guidelines
 - Identify mocking patterns and test utilities
 
 **2. Analyze Code Under Test**

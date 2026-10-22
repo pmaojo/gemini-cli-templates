@@ -289,7 +289,7 @@ def print_findings(findings):
     print('', file=sys.stderr)
     print('  3. For false positives:', file=sys.stderr)
     print('     • Add comments with "example" or "placeholder" to skip detection', file=sys.stderr)
-    print('     • Disable hook temporarily: remove from .claude/hooks.json', file=sys.stderr)
+    print('     • Disable hook temporarily: remove from .gemini/hooks.json', file=sys.stderr)
     print('', file=sys.stderr)
 
 def main():

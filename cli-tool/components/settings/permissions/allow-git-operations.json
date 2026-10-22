@@ -1,14 +1,14 @@
 {
   "description": "Allow common git operations for version control workflow. Permits git status, diff, add, commit, and push operations while maintaining security by requiring explicit permission for potentially destructive operations.",
-  "permissions": {
-    "allow": [
-      "Bash(git status)",
-      "Bash(git diff:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(git pull:*)",
-      "Bash(git log:*)"
+  "tools": {
+    "allowed": [
+      "run_shell_command(git status)",
+      "run_shell_command(git diff)",
+      "run_shell_command(git add)",
+      "run_shell_command(git commit)",
+      "run_shell_command(git push)",
+      "run_shell_command(git pull)",
+      "run_shell_command(git log)"
     ]
   }
 }

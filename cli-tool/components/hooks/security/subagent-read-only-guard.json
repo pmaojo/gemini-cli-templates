@@ -3,18 +3,18 @@
   "supportingFiles": [
     {
       "source": "subagent-read-only-guard.py",
-      "destination": ".claude/hooks/subagent-read-only-guard.py",
+      "destination": ".gemini/hooks/subagent-read-only-guard.py",
       "executable": true
     }
   ],
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Edit|Write|MultiEdit|NotebookEdit|PowerShell|Bash|Monitor",
+        "matcher": "replace|write_file|NotebookEdit|PowerShell|run_shell_command|Monitor",
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/subagent-read-only-guard.py"
+            "command": "python3 .gemini/hooks/subagent-read-only-guard.py"
           }
         ]
       }

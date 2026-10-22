@@ -54,7 +54,7 @@ https://mcp.brightdata.com/mcp?token=YOUR_TOKEN&tools=web_data_amazon_product,se
 
 ### Setup in Claude Code
 
-Add to your Claude Code MCP settings (typically `~/.claude/settings.json` or project-level `.claude/settings.json`):
+Add to your Claude Code MCP settings (typically `~/.gemini/settings.json` or project-level `.gemini/settings.json`):
 
 ```json
 {

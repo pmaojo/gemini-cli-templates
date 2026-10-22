@@ -78,7 +78,7 @@ if response.stop_reason == "pause_turn":
     )
 ```
 
-Set a `max_continuations` limit (e.g., 5) to prevent infinite loops. For the full guide, see: `https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons`
+Set a `max_continuations` limit (e.g., 5) to prevent infinite loops. For the full guide, see: `https://platform.gemini.com/docs/en/build-with-claude/handling-stop-reasons`
 
 > **Security:** The tool runner executes your tool functions automatically whenever Claude requests them. For tools with side effects (sending emails, modifying databases, financial transactions), validate inputs within your tool functions and consider requiring confirmation for destructive operations. Use the manual agentic loop if you need human-in-the-loop approval before each tool execution.
 
@@ -198,7 +198,7 @@ Programmatic tool calling lets Claude compose those calls into a script. The scr
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling`
+- URL: `https://platform.gemini.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling`
 
 ---
 
@@ -208,7 +208,7 @@ The tool search tool lets Claude dynamically discover tools from large libraries
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool`
+- URL: `https://platform.gemini.com/docs/en/agents-and-tools/tool-use/tool-search-tool`
 
 ---
 
@@ -218,7 +218,7 @@ Skills package task-specific instructions that Claude loads only when relevant. 
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/skills`
+- URL: `https://platform.gemini.com/docs/en/agents-and-tools/skills`
 
 ---
 
@@ -228,7 +228,7 @@ You can provide sample tool calls directly in your tool definitions to demonstra
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/implement-tool-use`
+- URL: `https://platform.gemini.com/docs/en/agents-and-tools/tool-use/implement-tool-use`
 
 ---
 
@@ -238,7 +238,7 @@ Computer use lets Claude interact with a desktop environment (screenshots, mouse
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/computer-use/overview`
+- URL: `https://platform.gemini.com/docs/en/agents-and-tools/computer-use/overview`
 
 ---
 
@@ -248,7 +248,7 @@ Context editing clears stale tool results and thinking blocks from the transcrip
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/build-with-claude/context-editing`
+- URL: `https://platform.gemini.com/docs/en/build-with-claude/context-editing`
 
 ---
 
@@ -267,7 +267,7 @@ The memory tool enables Claude to store and retrieve information across conversa
 
 For full implementation examples, use WebFetch:
 
-- Docs: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool.md`
+- Docs: `https://platform.gemini.com/docs/en/agents-and-tools/tool-use/memory-tool.md`
 
 ---
 
@@ -324,4 +324,4 @@ The Python and TypeScript SDKs automatically handle unsupported constraints by r
 
 For detailed tool use documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview`
+- URL: `https://platform.gemini.com/docs/en/agents-and-tools/tool-use/overview`

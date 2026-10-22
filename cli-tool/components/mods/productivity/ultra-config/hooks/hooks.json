@@ -1,6 +1,0 @@
-{
-  "description": "ultra-config: /ultra-config opens a Pane with five settings profiles (detail, activate, undo); config.set keeps the profiles' progress in step with /config",
-  "modules": [
-    "./register.tsx"
-  ]
-}

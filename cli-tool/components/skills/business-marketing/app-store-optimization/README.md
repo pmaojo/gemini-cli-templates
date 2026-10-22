@@ -178,7 +178,7 @@ This skill includes 8 powerful Python modules:
 #### Project-Level Installation
 ```bash
 # Copy skill folder to project
-cp -r app-store-optimization /path/to/your/project/.claude/skills/
+cp -r app-store-optimization /path/to/your/project/.gemini/skills/
 
 # Claude will auto-load the skill when working in this project
 ```
@@ -186,7 +186,7 @@ cp -r app-store-optimization /path/to/your/project/.claude/skills/
 #### User-Level Installation (Available in All Projects)
 ```bash
 # Copy skill folder to user-level skills
-cp -r app-store-optimization ~/.claude/skills/
+cp -r app-store-optimization ~/.gemini/skills/
 
 # Claude will load this skill in all your projects
 ```
@@ -201,7 +201,7 @@ cp -r app-store-optimization ~/.claude/skills/
 To verify installation:
 ```bash
 # Check if skill folder exists
-ls ~/.claude/skills/app-store-optimization/
+ls ~/.gemini/skills/app-store-optimization/
 
 # You should see:
 # SKILL.md

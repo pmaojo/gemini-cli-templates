@@ -3,18 +3,18 @@
   "supportingFiles": [
     {
       "source": "scope-guard.sh",
-      "destination": ".claude/hooks/scope-guard.sh",
+      "destination": ".gemini/hooks/scope-guard.sh",
       "executable": true
     }
   ],
   "hooks": {
-    "Stop": [
+    "AfterAgent": [
       {
         "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/scope-guard.sh"
+            "command": "bash \"$GEMINI_PROJECT_DIR\"/.gemini/hooks/scope-guard.sh"
           }
         ]
       }

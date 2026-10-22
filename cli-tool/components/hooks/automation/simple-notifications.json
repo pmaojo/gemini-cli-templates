@@ -1,7 +1,7 @@
 {
   "description": "Send simple desktop notifications when Gemini CLI operations complete. Works on macOS and Linux systems.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
         "matcher": "*",
         "hooks": [

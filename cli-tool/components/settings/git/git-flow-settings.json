@@ -4,39 +4,6 @@
     "type": "command",
     "command": "bash -c 'if ! git rev-parse --git-dir >/dev/null 2>&1; then echo \"Not a git repository\"; exit 0; fi; BRANCH=$(git branch --show-current 2>/dev/null); if [ -z \"$BRANCH\" ]; then echo \"Detached HEAD\"; exit 0; fi; ICON=\"📁\"; TARGET=\"\"; if [[ $BRANCH == feature/* ]]; then ICON=\"🌿\"; TARGET=\"→ develop\"; elif [[ $BRANCH == release/* ]]; then ICON=\"🚀\"; TARGET=\"→ main\"; elif [[ $BRANCH == hotfix/* ]]; then ICON=\"🔥\"; TARGET=\"→ main+develop\"; elif [[ $BRANCH == \"develop\" ]]; then ICON=\"🔀\"; elif [[ $BRANCH == \"main\" ]]; then ICON=\"🏠\"; fi; AHEAD=$(git rev-list --count @{u}..HEAD 2>/dev/null || echo \"0\"); BEHIND=$(git rev-list --count HEAD..@{u} 2>/dev/null || echo \"0\"); SYNC=\"\"; if [ \"$AHEAD\" -gt 0 ]; then SYNC=\" ↑$AHEAD\"; fi; if [ \"$BEHIND\" -gt 0 ]; then SYNC=\"$SYNC ↓$BEHIND\"; fi; MODIFIED=$(git status --porcelain 2>/dev/null | grep \"^ M\" | wc -l | tr -d \" \"); ADDED=$(git status --porcelain 2>/dev/null | grep \"^??\" | wc -l | tr -d \" \"); DELETED=$(git status --porcelain 2>/dev/null | grep \"^ D\" | wc -l | tr -d \" \"); CHANGES=\"\"; if [ \"$MODIFIED\" -gt 0 ]; then CHANGES=\" ●$MODIFIED\"; fi; if [ \"$ADDED\" -gt 0 ]; then CHANGES=\"$CHANGES ✚$ADDED\"; fi; if [ \"$DELETED\" -gt 0 ]; then CHANGES=\"$CHANGES ✖$DELETED\"; fi; if [ -n \"$TARGET\" ]; then echo \"$ICON $BRANCH$SYNC$CHANGES | 🎯 $TARGET\"; else echo \"$ICON $BRANCH$SYNC$CHANGES\"; fi'"
   },
-  "permissions": {
-    "deny": [
-      "Bash(git push origin main:*)",
-      "Bash(git push origin develop:*)",
-      "Bash(git push --force:*)",
-      "Bash(git push -f:*)",
-      "Bash(git reset --hard:*)",
-      "Bash(git rebase -i:*)"
-    ],
-    "allow": [
-      "Bash(git status:*)",
-      "Bash(git diff:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git log:*)",
-      "Bash(git branch:*)",
-      "Bash(git checkout:*)",
-      "Bash(git pull:*)",
-      "Bash(git fetch:*)",
-      "Bash(git merge:*)",
-      "Bash(git tag:*)",
-      "Bash(git push origin feature/*:*)",
-      "Bash(git push origin release/*:*)",
-      "Bash(git push origin hotfix/*:*)",
-      "Bash(git push --tags:*)",
-      "Bash(git push -u:*)",
-      "Bash(git flow:*)",
-      "Bash(gh pr:*)",
-      "Bash(gh issue:*)",
-      "Bash(npm test:*)",
-      "Bash(npm run:*)"
-    ]
-  },
   "env": {
     "GIT_FLOW_MAIN_BRANCH": "main",
     "GIT_FLOW_DEVELOP_BRANCH": "develop",
@@ -46,9 +13,9 @@
     "GIT_FLOW_VERSION_TAG_PREFIX": "v"
   },
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",
@@ -74,6 +41,39 @@
           }
         ]
       }
+    ]
+  },
+  "tools": {
+    "allowed": [
+      "run_shell_command(git status)",
+      "run_shell_command(git diff)",
+      "run_shell_command(git add)",
+      "run_shell_command(git commit)",
+      "run_shell_command(git log)",
+      "run_shell_command(git branch)",
+      "run_shell_command(git checkout)",
+      "run_shell_command(git pull)",
+      "run_shell_command(git fetch)",
+      "run_shell_command(git merge)",
+      "run_shell_command(git tag)",
+      "run_shell_command(git push origin feature/*)",
+      "run_shell_command(git push origin release/*)",
+      "run_shell_command(git push origin hotfix/*)",
+      "run_shell_command(git push --tags)",
+      "run_shell_command(git push -u)",
+      "run_shell_command(git flow)",
+      "run_shell_command(gh pr)",
+      "run_shell_command(gh issue)",
+      "run_shell_command(npm test)",
+      "run_shell_command(npm run)"
+    ],
+    "exclude": [
+      "run_shell_command(git push origin main)",
+      "run_shell_command(git push origin develop)",
+      "run_shell_command(git push --force)",
+      "run_shell_command(git push -f)",
+      "run_shell_command(git reset --hard)",
+      "run_shell_command(git rebase -i)"
     ]
   }
 }

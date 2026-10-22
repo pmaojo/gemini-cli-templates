@@ -37,11 +37,11 @@ Use the script path relative to the installed skill. Replace placeholders with
 values returned by the commands:
 
 ```bash
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs start --task-file task.txt --json
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs run-local --config local-config.json --task-id TASK_UUID --request-file request.json --model INSTALLED_MODEL --output result.txt --json
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs finish --task-id TASK_UUID --status completed --json
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs report --task-id TASK_UUID --format markdown
-node .claude/skills/pudu-task-telemetry/scripts/pudu-task.mjs compare --task-ids TASK_UUID_A,TASK_UUID_B --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs start --task-file task.txt --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs run-local --config local-config.json --task-id TASK_UUID --request-file request.json --model INSTALLED_MODEL --output result.txt --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs finish --task-id TASK_UUID --status completed --json
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs report --task-id TASK_UUID --format markdown
+node .gemini/skills/pudu-task-telemetry/scripts/pudu-task.mjs compare --task-ids TASK_UUID_A,TASK_UUID_B --json
 ```
 
 Relative inputs and output resolve against `--repo` (default current directory).

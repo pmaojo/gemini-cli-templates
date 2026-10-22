@@ -9,7 +9,7 @@ This skill guides the creation of Claude Code slash commands - reusable workflow
 
 ## About Slash Commands
 
-Slash commands are markdown files stored in `.claude/commands/` (project-level) or `~/.claude/commands/` (global/user-level) that get expanded into prompts when invoked. They're ideal for:
+Slash commands are markdown files stored in `.gemini/commands/` (project-level) or `~/.gemini/commands/` (global/user-level) that get expanded into prompts when invoked. They're ideal for:
 
 - Repetitive workflows (code review, PR submission, CI fixing)
 - Multi-step processes that need consistency
@@ -59,11 +59,11 @@ argument-hint: <placeholder> (optional, if command takes arguments)
 
 1. Check git repository status: `git rev-parse --is-inside-work-tree 2>/dev/null`
 2. Default location:
-   - If in git repo → Project-level: `.claude/commands/`
-   - If not in git repo → Global: `~/.claude/commands/`
+   - If in git repo → Project-level: `.gemini/commands/`
+   - If not in git repo → Global: `~/.gemini/commands/`
 3. Allow user override:
-   - If user explicitly mentions "global" or "user-level" → Use `~/.claude/commands/`
-   - If user explicitly mentions "project" or "project-level" → Use `.claude/commands/`
+   - If user explicitly mentions "global" or "user-level" → Use `~/.gemini/commands/`
+   - If user explicitly mentions "project" or "project-level" → Use `.gemini/commands/`
 
 Report the chosen location to the user before proceeding.
 
@@ -155,8 +155,8 @@ Key principles:
 ### Step 5: Create the Command File
 
 1. Determine full file path:
-   - Project: `.claude/commands/[command-name].md`
-   - Global: `~/.claude/commands/[command-name].md`
+   - Project: `.gemini/commands/[command-name].md`
+   - Global: `~/.gemini/commands/[command-name].md`
 
 2. Ensure directory exists:
 

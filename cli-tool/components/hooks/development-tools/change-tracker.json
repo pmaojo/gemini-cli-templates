@@ -1,9 +1,9 @@
 {
   "description": "Track file changes in a simple log. Records which files were modified and when for easy tracking of Gemini CLI activity.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit|MultiEdit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",
@@ -12,7 +12,7 @@
         ]
       },
       {
-        "matcher": "Write",
+        "matcher": "write_file",
         "hooks": [
           {
             "type": "command",

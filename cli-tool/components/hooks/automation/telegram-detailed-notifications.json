@@ -12,7 +12,7 @@
         ]
       }
     ],
-    "Stop": [
+    "AfterAgent": [
       {
         "hooks": [
           {

@@ -52,7 +52,7 @@ For each group (starting with highest impact):
 2. **Implement fix**
 
    - Use Edit tool for code changes
-   - Follow project conventions (see CLAUDE.md)
+   - Follow project conventions (see GEMINI.md)
    - Make minimal, focused changes
 
 3. **Verify fix**

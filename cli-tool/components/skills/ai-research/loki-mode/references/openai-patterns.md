@@ -503,7 +503,7 @@ def parse_agents_md(content):
 
 ```
 1. AGENTS.md (closest to current file, monorepo-aware)
-2. CLAUDE.md (Claude-specific instructions)
+2. GEMINI.md (Claude-specific instructions)
 3. .loki/CONTINUITY.md (session state)
 4. Package-level documentation
 5. README.md (general project info)

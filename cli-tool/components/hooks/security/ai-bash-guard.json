@@ -1,9 +1,9 @@
 {
   "description": "AI-powered bash command security guard. Before any Bash command runs, a lightweight Claude subagent evaluates it for destructive or irreversible patterns — recursive deletes, force pushes to protected branches, database drops, and credential exposure — and blocks execution with a clear explanation if flagged. Uses PreToolUse with type:agent, which is the only hook pattern that can block tool execution via AI reasoning.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "agent",

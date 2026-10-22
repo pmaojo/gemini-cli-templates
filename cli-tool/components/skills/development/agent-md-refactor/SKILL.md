@@ -1,21 +1,21 @@
 ---
 name: agent-md-refactor
-description: Refactor bloated AGENTS.md, CLAUDE.md, or similar agent instruction files to follow progressive disclosure principles. Splits monolithic files into organized, linked documentation.
+description: Refactor bloated AGENTS.md, GEMINI.md, or similar agent instruction files to follow progressive disclosure principles. Splits monolithic files into organized, linked documentation.
 license: MIT
 ---
 
 # Agent MD Refactor
 
-Refactor bloated agent instruction files (AGENTS.md, CLAUDE.md, COPILOT.md, etc.) to follow **progressive disclosure principles** - keeping essentials at root and organizing the rest into linked, categorized files.
+Refactor bloated agent instruction files (AGENTS.md, GEMINI.md, COPILOT.md, etc.) to follow **progressive disclosure principles** - keeping essentials at root and organizing the rest into linked, categorized files.
 
 ---
 
 ## Triggers
 
 Use this skill when:
-- "refactor my AGENTS.md" / "refactor my CLAUDE.md"
+- "refactor my AGENTS.md" / "refactor my GEMINI.md"
 - "split my agent instructions"
-- "organize my CLAUDE.md file"
+- "organize my GEMINI.md file"
 - "my AGENTS.md is too long"
 - "progressive disclosure for my instructions"
 - "clean up my agent config"
@@ -112,8 +112,8 @@ Organize remaining instructions into logical categories.
 **Output structure:**
 ```
 project-root/
-├── CLAUDE.md (or AGENTS.md)     # Minimal root with links
-└── .claude/                      # Or docs/agent-instructions/
+├── GEMINI.md (or AGENTS.md)     # Minimal root with links
+└── .gemini/                      # Or docs/agent-instructions/
     ├── typescript.md
     ├── testing.md
     ├── code-style.md
@@ -137,11 +137,11 @@ One-sentence description of the project.
 ## Detailed Instructions
 
 For specific guidelines, see:
-- [TypeScript Conventions](.claude/typescript.md)
-- [Testing Guidelines](.claude/testing.md)
-- [Code Style](.claude/code-style.md)
-- [Git Workflow](.claude/git-workflow.md)
-- [Architecture Patterns](.claude/architecture.md)
+- [TypeScript Conventions](.gemini/typescript.md)
+- [Testing Guidelines](.gemini/testing.md)
+- [Code Style](.gemini/code-style.md)
+- [Git Workflow](.gemini/git-workflow.md)
+- [Architecture Patterns](.gemini/architecture.md)
 ```
 
 **Each linked file template:**
@@ -233,7 +233,7 @@ Identify instructions that should be removed entirely.
 
 ### Before (Bloated Root)
 ```markdown
-# CLAUDE.md
+# GEMINI.md
 
 This is a React project.
 
@@ -256,7 +256,7 @@ This is a React project.
 
 ### After (Progressive Disclosure)
 ```markdown
-# CLAUDE.md
+# GEMINI.md
 
 React dashboard for real-time analytics visualization.
 
@@ -266,9 +266,9 @@ React dashboard for real-time analytics visualization.
 - `pnpm build` - Production build
 
 ## Guidelines
-- [Code Style](.claude/code-style.md)
-- [Testing](.claude/testing.md)
-- [TypeScript](.claude/typescript.md)
+- [Code Style](.gemini/code-style.md)
+- [Testing](.gemini/testing.md)
+- [TypeScript](.gemini/typescript.md)
 ```
 
 ---

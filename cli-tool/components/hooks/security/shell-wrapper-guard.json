@@ -3,18 +3,18 @@
   "supportingFiles": [
     {
       "source": "shell-wrapper-guard.sh",
-      "destination": ".claude/hooks/shell-wrapper-guard.sh",
+      "destination": ".gemini/hooks/shell-wrapper-guard.sh",
       "executable": true
     }
   ],
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/shell-wrapper-guard.sh"
+            "command": "bash .gemini/hooks/shell-wrapper-guard.sh"
           }
         ]
       }

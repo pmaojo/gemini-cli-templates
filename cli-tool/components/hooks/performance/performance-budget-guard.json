@@ -1,9 +1,9 @@
 {
   "description": "Monitor bundle size and Core Web Vitals metrics during development, blocking deployments that exceed performance budgets with detailed reports. Automatically analyzes Next.js build output, checks bundle sizes against predefined budgets, and provides optimization recommendations. Hook triggers on PostToolUse for build-related operations and file changes that could affect performance.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Bash",
+        "matcher": "run_shell_command",
         "hooks": [
           {
             "type": "command",
@@ -13,7 +13,7 @@
         ]
       },
       {
-        "matcher": "Write|Edit|MultiEdit",
+        "matcher": "write_file|replace",
         "hooks": [
           {
             "type": "command",

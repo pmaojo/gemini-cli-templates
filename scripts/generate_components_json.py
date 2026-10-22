@@ -543,7 +543,7 @@ def generate_components_json():
                             print(f"  Processed directory-based component: {category}/{name}")
                             continue
 
-                    if os.path.isfile(file_path) and (file_name.endswith('.md') or file_name.endswith('.json')) and not file_name.endswith('.py'):
+                    if os.path.isfile(file_path) and (file_name.endswith('.md') or file_name.endswith('.json') or (component_type == 'commands' and file_name.endswith('.toml'))) and not file_name.endswith('.py'):
                         name = os.path.splitext(file_name)[0]
                         
                         # Read file content
@@ -826,13 +826,13 @@ def generate_components_json():
                         # Result should be "git/feature"
                         parts = path.split('/')
                         if len(parts) >= 2:
-                            filename = parts[-1].replace('.md', '').replace('.json', '')
+                            filename = parts[-1].replace('.md', '').replace('.toml', '').replace('.json', '')
                             category = parts[-2]
                             return f"{category}/{filename}"
                         else:
                             # Fallback to just filename if path structure is unexpected
                             filename = path.split('/')[-1]
-                            return filename.replace('.md', '').replace('.json', '')
+                            return filename.replace('.md', '').replace('.toml', '').replace('.json', '')
 
                     commands_names = [extract_component_with_category(cmd) for cmd in commands_list]
                     agents_names = [extract_component_with_category(agent) for agent in agents_list]

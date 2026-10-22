@@ -1,9 +1,9 @@
 {
   "description": "Scan code for security vulnerabilities and secrets after modifications. Uses multiple security tools to detect potential issues.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit|Write",
+        "matcher": "replace|write_file",
         "hooks": [
           {
             "type": "command",

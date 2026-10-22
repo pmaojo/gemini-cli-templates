@@ -52,7 +52,7 @@ class Session:
 
 def get_claude_projects_dir() -> Path:
     """Get the Claude projects directory."""
-    return Path.home() / '.claude' / 'projects'
+    return Path.home() / '.gemini' / 'projects'
 
 
 def decode_project_path(encoded: str) -> str:

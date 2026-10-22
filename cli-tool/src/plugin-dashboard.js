@@ -330,7 +330,7 @@ class PluginDashboard {
       const commandsDir = path.join(pluginPath, 'commands');
       if (await fs.pathExists(commandsDir)) {
         const commandFiles = await fs.readdir(commandsDir);
-        components.commands = commandFiles.filter(f => f.endsWith('.md')).length;
+        components.commands = commandFiles.filter(f => f.endsWith('.toml')).length;
       }
 
       // Count hooks
@@ -403,7 +403,7 @@ class PluginDashboard {
         const agentFiles = await fs.readdir(userAgentsDir);
         for (const file of agentFiles.filter(f => f.endsWith('.md'))) {
           permissions.agents.push({
-            name: file.replace('.md', ''),
+            name: file.replace('.toml', ''),
             source: 'User',
             plugin: null,
             path: path.join(userAgentsDir, file)
@@ -415,9 +415,9 @@ class PluginDashboard {
       const userCommandsDir = path.join(this.geminiDir, 'commands');
       if (await fs.pathExists(userCommandsDir)) {
         const commandFiles = await fs.readdir(userCommandsDir);
-        for (const file of commandFiles.filter(f => f.endsWith('.md'))) {
+        for (const file of commandFiles.filter(f => f.endsWith('.toml'))) {
           permissions.commands.push({
-            name: file.replace('.md', ''),
+            name: file.replace('.toml', ''),
             source: 'User',
             plugin: null,
             path: path.join(userCommandsDir, file)
@@ -489,9 +489,9 @@ class PluginDashboard {
       const commandsDir = path.join(plugin.path, 'commands');
       if (await fs.pathExists(commandsDir)) {
         const commandFiles = await fs.readdir(commandsDir);
-        for (const file of commandFiles.filter(f => f.endsWith('.md'))) {
+        for (const file of commandFiles.filter(f => f.endsWith('.toml'))) {
           permissions.commands.push({
-            name: file.replace('.md', ''),
+            name: file.replace('.toml', ''),
             source: 'Plugin',
             plugin: plugin.name,
             path: path.join(commandsDir, file)

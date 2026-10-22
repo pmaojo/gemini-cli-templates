@@ -1,7 +1,7 @@
 ---
 name: doordash-spend-guard
 description: Hard spending policy for agent-driven DoorDash ordering through the DoorDash CLI (dd-cli). Per-order ceiling, daily/weekly/monthly caps, cooldown between orders, and blocked hours — enforced deterministically by routing every cart-mutation and checkout through the dd-guard wrapper script, which prices the cart, checks the policy against a persistent spend ledger, and refuses out-of-policy checkouts with exit code 2. Use when the user wants budget limits on agent food ordering, asks "how much have I spent on DoorDash", wants to set spending caps, or whenever building carts / checking out with dd-cli while this skill is installed. Pairs with a PreToolUse hook that denies raw dd-cli checkout calls that bypass the wrapper.
-allowed-tools: Bash(dd-cli:*), Bash(bash .claude/skills/doordash-spend-guard/scripts/dd-guard.sh:*), Bash(command -v:*), Bash(mkdir:*), Bash(cat:*), Bash(jq:*), Read
+allowed-tools: Bash(dd-cli:*), Bash(bash .gemini/skills/doordash-spend-guard/scripts/dd-guard.sh:*), Bash(command -v:*), Bash(mkdir:*), Bash(cat:*), Bash(jq:*), Read
 tags: [DoorDash, Budget, Spending Limits, Guardrails, CLI, Safety]
 ---
 
@@ -34,13 +34,13 @@ out-of-policy actions with a machine exit code. The companion PreToolUse hook
 | Piece | Role |
 |---|---|
 | this skill | protocol: always route through dd-guard, report headroom |
-| `scripts/dd-guard.sh` → installs to `.claude/skills/doordash-spend-guard/scripts/dd-guard.sh` | the deterministic gate |
+| `scripts/dd-guard.sh` → installs to `.gemini/skills/doordash-spend-guard/scripts/dd-guard.sh` | the deterministic gate |
 | hook `doordash/doordash-spend-guard` | denies bypasses of the wrapper |
 | command `/doordash-budget` | view/edit policy, reconcile ledger |
 
 ## State (created on first run)
 
-- `~/.claude/dd-guard/limits.json` — policy. **Human-edited only.** Never
+- `~/.gemini/dd-guard/limits.json` — policy. **Human-edited only.** Never
   edit this file yourself; when the user asks for a change, direct them to
   `/doordash-budget` which confirms interactively.
 
@@ -55,21 +55,21 @@ out-of-policy actions with a machine exit code. The companion PreToolUse hook
 }
 ```
 
-- `~/.claude/dd-guard/ledger.jsonl` — one line per priced action:
+- `~/.gemini/dd-guard/ledger.jsonl` — one line per priced action:
   `{"ts": "...", "cart_uuid": "...", "subtotal": 24.5, "status": "intent"}`
   (`status` becomes `paid` / `abandoned` after reconciliation).
 
 ## Protocol (follow ALWAYS while this skill is installed)
 
 1. **Session start / before building a cart**: report headroom —
-   `bash .claude/skills/doordash-spend-guard/scripts/dd-guard.sh status` prints spend-to-date vs each
+   `bash .gemini/skills/doordash-spend-guard/scripts/dd-guard.sh status` prints spend-to-date vs each
    cap. Tell the user their remaining budget before adding items.
 2. **Adding items**: route through the wrapper —
-   `bash .claude/skills/doordash-spend-guard/scripts/dd-guard.sh add-items <the exact dd-cli cart add-items args>`
+   `bash .gemini/skills/doordash-spend-guard/scripts/dd-guard.sh add-items <the exact dd-cli cart add-items args>`
    The wrapper execs the real `dd-cli cart add-items ...` and re-prices the
    cart afterwards.
 3. **Checkout**: NEVER call `dd-cli order checkout-url` directly. Use
-   `bash .claude/skills/doordash-spend-guard/scripts/dd-guard.sh checkout <cart-uuid>`
+   `bash .gemini/skills/doordash-spend-guard/scripts/dd-guard.sh checkout <cart-uuid>`
    - exit 0 → it printed the checkout URL and appended a ledger intent line.
    - exit 2 → blocked; it printed a human-readable reason (which cap, by how
      much). Relay the reason verbatim, then help within policy — e.g. suggest
@@ -88,9 +88,9 @@ out-of-policy actions with a machine exit code. The companion PreToolUse hook
 Answer "how much have I spent this week?" from the ledger, not memory:
 
 ```bash
-bash .claude/skills/doordash-spend-guard/scripts/dd-guard.sh status
+bash .gemini/skills/doordash-spend-guard/scripts/dd-guard.sh status
 # or raw:
-cat ~/.claude/dd-guard/ledger.jsonl | jq -s '[.[] | select(.status != "abandoned")] | map(.subtotal) | add'
+cat ~/.gemini/dd-guard/ledger.jsonl | jq -s '[.[] | select(.status != "abandoned")] | map(.subtotal) | add'
 ```
 
 Remind the user that subtotals exclude fees/tips and intents may not have

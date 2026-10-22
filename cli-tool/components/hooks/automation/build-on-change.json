@@ -1,9 +1,9 @@
 {
   "description": "Automatically trigger build processes when source files change. Detects common build tools and runs appropriate build commands.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",

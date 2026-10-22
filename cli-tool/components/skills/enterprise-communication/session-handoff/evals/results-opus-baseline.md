@@ -70,7 +70,7 @@ Sample handoffs: 3 (fresh, stale, incomplete)
 
 1. Set up test environment:
    ```bash
-   python /Users/galihcitta/.claude/skills/session-handoff/evals/setup_test_env.py
+   python /Users/galihcitta/.gemini/skills/session-handoff/evals/setup_test_env.py
    ```
 
 2. Start Claude Code with desired model:

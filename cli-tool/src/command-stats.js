@@ -2,6 +2,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const chalk = require('chalk');
 const { spawn } = require('child_process');
+const { parseCommandToml } = require('./toml-command');
 
 /**
  * Estimates token count for text content
@@ -46,13 +47,13 @@ async function analyzeCommands(targetDir = process.cwd()) {
 
   try {
     const commandFiles = await fs.readdir(commandsDir);
-    const markdownFiles = commandFiles.filter(file => file.endsWith('.md'));
+    const markdownFiles = commandFiles.filter(file => file.endsWith('.toml'));
     
     if (markdownFiles.length === 0) {
       return {
         exists: true,
         commands: [],
-        message: 'No command files (.md) found in .gemini/commands directory'
+        message: 'No command files (.toml) found in .gemini/commands directory'
       };
     }
 
@@ -62,16 +63,18 @@ async function analyzeCommands(targetDir = process.cwd()) {
       const filePath = path.join(commandsDir, file);
       const stats = await fs.stat(filePath);
       const content = await fs.readFile(filePath, 'utf8');
+      const parsed = parseCommandToml(content);
+      const promptText = parsed.prompt !== null ? parsed.prompt : content;
       
       // Extract first line as title/description
-      const lines = content.split('\n').filter(line => line.trim());
+      const lines = promptText.split('\n').filter(line => line.trim());
       const title = lines.find(line => line.startsWith('#')) || file;
       
       // Calculate token estimate
       const tokenCount = estimateTokens(content);
       
       commands.push({
-        name: file.replace('.md', ''),
+        name: file.replace('.toml', ''),
         filename: file,
         size: stats.size,
         lastModified: stats.mtime,
@@ -263,9 +266,8 @@ async function promptCommandOptimization(analysis, targetDir) {
     const optimizationPrompt = createOptimizationPrompt(analysis, targetDir);
     
     // Execute Gemini CLI with optimization prompt
-    const geminiCommand = `gemini "${optimizationPrompt.replace(/"/g, '\\"')}"`;
-    
-    const geminiProcess = spawn('sh', ['-c', geminiCommand], {
+    // Pass the prompt as a single argv entry so it never reaches a shell
+    const geminiProcess = spawn('gemini', [optimizationPrompt], {
       cwd: targetDir,
       stdio: 'inherit'
     });
@@ -300,7 +302,7 @@ async function promptCommandOptimization(analysis, targetDir) {
  * @returns {string} Formatted prompt for Gemini
  */
 function createOptimizationPrompt(analysis, targetDir) {
-  const commandList = analysis.commands.map(cmd => `- ${cmd.name}.md (${cmd.lines} lines)`).join('\n');
+  const commandList = analysis.commands.map(cmd => `- ${cmd.name}.toml (${cmd.lines} lines)`).join('\n');
   
   return `Analyze and optimize the Gemini CLI commands in this project:
 

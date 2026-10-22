@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/worktree-ghostty.sh",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/worktree-ghostty.sh",
             "timeout": 30
           }
         ]
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.claude/hooks/worktree-ghostty.sh",
+            "command": "bash \"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/worktree-ghostty.sh",
             "timeout": 15
           }
         ]

@@ -30,7 +30,7 @@ Read what's already there. Pre-filling answers from detected values is much bett
 - `src/messages/**`, `src/i18n/**`, `messages/**` — current locale set
 - `src/app/[locale]/**` or `app/[locale]/**` — routing pattern
 - `tailwind.config.*`, `globals.css`, design-system files — tokens, fonts
-- `CLAUDE.md`, `AGENTS.md`, `GEMINI.md` — project conventions and approved overrides
+- `GEMINI.md`, `AGENTS.md`, `GEMINI.md` — project conventions and approved overrides
 - Existing `sanity-studio/` or `studio/` folder
 - `app/layout.{tsx,jsx}` — fonts, analytics, motion config
 - `public/brand/**`, `public/logo*` — publisher logo

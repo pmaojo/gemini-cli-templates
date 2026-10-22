@@ -44,7 +44,7 @@ for pattern, desc in catastrophic_patterns:
 
 # === LEVEL 2: CRITICAL PATH PROTECTION ===
 critical_paths = [
-    (r'\b(rm|mv)\s+(-[rfRF]+\s+)?\.claude(/|$|\s)', 'Claude Code configuration'),
+    (r'\b(rm|mv)\s+(-[rfRF]+\s+)?\.gemini(/|$|\s)', 'Claude Code configuration'),
     (r'\b(rm|mv)\s+(-[rfRF]+\s+)?\.git(/|$|\s)', 'Git repository'),
     (r'\b(rm|mv)\s+(-[rfRF]+\s+)?node_modules(/|$|\s)', 'Node.js dependencies'),
     (r'\b(rm|mv)\s+(-[rfRF]+\s+)?[^\s]*\.env\b', 'Environment variables'),
@@ -68,7 +68,7 @@ for pattern, desc in critical_paths:
         print(f'This path contains critical project files that should not be deleted accidentally.', file=sys.stderr)
         print(f'', file=sys.stderr)
         print(f'If you really need to modify this:', file=sys.stderr)
-        print(f'  1. Disable the hook temporarily in .claude/hooks.json', file=sys.stderr)
+        print(f'  1. Disable the hook temporarily in .gemini/hooks.json', file=sys.stderr)
         print(f'  2. Execute the command manually in your terminal', file=sys.stderr)
         print(f'  3. Or modify specific files instead of using rm/mv on entire directories', file=sys.stderr)
         sys.exit(2)

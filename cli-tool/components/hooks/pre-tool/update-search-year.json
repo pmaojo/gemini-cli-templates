@@ -1,9 +1,9 @@
 {
   "description": "Automatically adds current year to WebSearch queries when no year is specified. This hook intercepts WebSearch tool usage and appends the current year to queries that don't already contain a year, ensuring search results are current and relevant.",
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
-        "matcher": "WebSearch",
+        "matcher": "google_web_search",
         "hooks": [
           {
             "type": "command",

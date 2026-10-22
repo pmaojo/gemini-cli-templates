@@ -38,7 +38,7 @@ mise exec -- pre-commit run --all-files
 mise exec -- pre-commit run convert-drawio-to-png --files assets/my-diagram.drawio
 
 # Run script directly (using skill's script)
-bash ~/.claude/skills/draw-io/scripts/convert-drawio-to-png.sh assets/diagram1.drawio
+bash ~/.gemini/skills/draw-io/scripts/convert-drawio-to-png.sh assets/diagram1.drawio
 ```
 
 Internal command used:
@@ -243,8 +243,8 @@ Good example (sufficient margin):
 AWS icon search examples:
 
 ```sh
-python ~/.claude/skills/draw-io/scripts/find_aws_icon.py ec2
-python ~/.claude/skills/draw-io/scripts/find_aws_icon.py lambda
+python ~/.gemini/skills/draw-io/scripts/find_aws_icon.py ec2
+python ~/.gemini/skills/draw-io/scripts/find_aws_icon.py lambda
 ```
 
 ## 8. Checklist

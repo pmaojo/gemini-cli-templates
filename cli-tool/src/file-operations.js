@@ -514,7 +514,7 @@ async function copyTemplateFiles(templateConfig, targetDir, options = {}) {
           const baseCommandsDir = `${file.source}/commands`;
           try {
             const baseCommands = await downloadDirectoryFromGitHub(baseCommandsDir);
-            const excludeCommands = ['react-component.md', 'route.md', 'api-endpoint.md']; // Commands moved to framework dirs
+            const excludeCommands = ['react-component.toml', 'route.toml', 'api-endpoint.toml']; // Commands moved to framework dirs
             
             for (const [baseCommandName, commandContent] of Object.entries(baseCommands)) {
               if (!excludeCommands.includes(baseCommandName)) {

@@ -59,7 +59,7 @@ def main():
         (plug / t).mkdir()
     n = 0
     for t in ("agents", "commands"):
-        for p in sorted((BASE / t).rglob("*.md")):
+        for p in sorted(list((BASE / t).rglob("*.md")) + (list((BASE / t).rglob("*.toml")) if t == "commands" else [])):
             rel = p.relative_to(BASE).as_posix()
             if wanted(rel, changed):
                 flat = f"{t}/" + p.relative_to(BASE / t).as_posix().replace("/", "__")

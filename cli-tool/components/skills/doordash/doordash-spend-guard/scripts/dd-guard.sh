@@ -10,8 +10,8 @@
 # Exit codes: 0 = allowed/done, 2 = BLOCKED by policy (reason on stdout/stderr),
 #             3 = configuration or environment error.
 #
-# State: ~/.claude/dd-guard/limits.json (human-edited via /doordash-budget only)
-#        ~/.claude/dd-guard/ledger.jsonl (append-only spend ledger)
+# State: ~/.gemini/dd-guard/limits.json (human-edited via /doordash-budget only)
+#        ~/.gemini/dd-guard/ledger.jsonl (append-only spend ledger)
 #
 # Design notes:
 # - Caps apply to the pre-fee subtotal reported by `dd-cli cart show`.
@@ -20,7 +20,7 @@
 
 set -euo pipefail
 
-GUARD_DIR="${DD_GUARD_DIR:-$HOME/.claude/dd-guard}"
+GUARD_DIR="${DD_GUARD_DIR:-$HOME/.gemini/dd-guard}"
 LIMITS="$GUARD_DIR/limits.json"
 LEDGER="$GUARD_DIR/ledger.jsonl"
 

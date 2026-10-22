@@ -96,4 +96,4 @@ The same pattern applies to `user.custom_tool_result`.
 - **Don't assume shared context.** Threads share the filesystem but not conversation history or tools. If the coordinator needs a subagent to act on something, it must say so in the delegated message (or write it to disk).
 - **Depth > 1 is ignored.** A subagent's own `multiagent` roster (if any) doesn't cascade — only the session's coordinator delegates.
 
-For per-language bindings beyond Python, WebFetch `https://platform.claude.com/docs/en/managed-agents/multi-agent.md` (see `shared/live-sources.md`).
+For per-language bindings beyond Python, WebFetch `https://platform.gemini.com/docs/en/managed-agents/multi-agent.md` (see `shared/live-sources.md`).

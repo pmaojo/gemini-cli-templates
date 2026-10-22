@@ -1,69 +1,77 @@
 {
   "description": "Play games while Claude plans. Launches a browser game (Dino Runner, Snake, or Flappy Bird) automatically when Claude enters Plan Mode via EnterPlanMode or /plan. A live activity panel shows Claude's tool calls in real time. The game pauses when Claude needs input (AskUserQuestion) and shows a completion screen with confetti when the plan is done. Scores are saved locally and can be shared via a signed verification URL. Requires Node.js and curl. macOS only (uses 'open' to launch browser). Install globally so it works across all projects.",
-  "tags": ["plan-mode", "gaming", "automation", "fun", "productivity", "global", "macos"],
+  "tags": [
+    "plan-mode",
+    "gaming",
+    "automation",
+    "fun",
+    "productivity",
+    "global",
+    "macos"
+  ],
   "supportingFiles": [
     {
       "source": "plan-mode-game/start.sh",
-      "destination": "~/.claude/scripts/plan-mode-game/start.sh",
+      "destination": "~/.gemini/scripts/plan-mode-game/start.sh",
       "executable": true
     },
     {
       "source": "plan-mode-game/activity.sh",
-      "destination": "~/.claude/scripts/plan-mode-game/activity.sh",
+      "destination": "~/.gemini/scripts/plan-mode-game/activity.sh",
       "executable": true
     },
     {
       "source": "plan-mode-game/plan-detect.sh",
-      "destination": "~/.claude/scripts/plan-mode-game/plan-detect.sh",
+      "destination": "~/.gemini/scripts/plan-mode-game/plan-detect.sh",
       "executable": true
     },
     {
       "source": "plan-mode-game/announce.sh",
-      "destination": "~/.claude/scripts/plan-mode-game/announce.sh",
+      "destination": "~/.gemini/scripts/plan-mode-game/announce.sh",
       "executable": true
     },
     {
       "source": "plan-mode-game/needs-input.sh",
-      "destination": "~/.claude/scripts/plan-mode-game/needs-input.sh",
+      "destination": "~/.gemini/scripts/plan-mode-game/needs-input.sh",
       "executable": true
     },
     {
       "source": "plan-mode-game/server.js",
-      "destination": "~/.claude/scripts/plan-mode-game/server.js",
+      "destination": "~/.gemini/scripts/plan-mode-game/server.js",
       "executable": false
     },
     {
       "source": "plan-mode-game/index.html",
-      "destination": "~/.claude/scripts/plan-mode-game/index.html",
+      "destination": "~/.gemini/scripts/plan-mode-game/index.html",
       "executable": false
     }
   ],
   "hooks": {
-    "PreToolUse": [
+    "BeforeTool": [
       {
         "matcher": "EnterPlanMode",
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/scripts/plan-mode-game/start.sh"
+            "command": "bash $HOME/.gemini/scripts/plan-mode-game/start.sh"
           }
         ]
       },
       {
-        "matcher": "Read|Glob|Grep|WebFetch|WebSearch|Task|Bash|Edit",
+        "matcher": "read_file|glob|grep_search|web_fetch|google_web_search|Task|run_shell_command|replace",
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/scripts/plan-mode-game/activity.sh"
+            "command": "bash $HOME/.gemini/scripts/plan-mode-game/activity.sh"
           }
         ]
       },
       {
-        "matcher": "Write",
+        "matcher": "write_file",
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/scripts/plan-mode-game/plan-detect.sh"
+            "command": "bash $HOME/.gemini/scripts/plan-mode-game/plan-detect.sh"
           }
         ]
       },
@@ -72,18 +80,18 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/scripts/plan-mode-game/needs-input.sh"
+            "command": "bash $HOME/.gemini/scripts/plan-mode-game/needs-input.sh"
           }
         ]
       }
     ],
-    "PostToolUse": [
+    "AfterTool": [
       {
         "matcher": "ExitPlanMode",
         "hooks": [
           {
             "type": "command",
-            "command": "bash $HOME/.claude/scripts/plan-mode-game/announce.sh"
+            "command": "bash $HOME/.gemini/scripts/plan-mode-game/announce.sh"
           }
         ]
       }

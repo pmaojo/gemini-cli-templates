@@ -70,7 +70,7 @@ if not round_data:
 
 roster = None
 for candidate in (os.path.join(cwd, "team-food.json"),
-                  os.path.expanduser("~/.claude/dd-cli/team-food.json")):
+                  os.path.expanduser("~/.gemini/dd-cli/team-food.json")):
     if os.path.exists(candidate):
         try:
             roster = json.load(open(candidate))

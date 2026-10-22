@@ -1,9 +1,9 @@
 {
   "description": "Intelligent git commit creation with automatic message generation and validation. Creates meaningful commits based on file changes.",
   "hooks": {
-    "PostToolUse": [
+    "AfterTool": [
       {
-        "matcher": "Edit",
+        "matcher": "replace",
         "hooks": [
           {
             "type": "command",
@@ -12,7 +12,7 @@
         ]
       },
       {
-        "matcher": "Write",
+        "matcher": "write_file",
         "hooks": [
           {
             "type": "command",

@@ -4,18 +4,18 @@ This file is read when the user is running the skill inside **Claude Code** and 
 
 **Verified against the live Claude Code docs.** The canonical sources are below - re-fetch them before generating any settings/agent files, because the schema evolves:
 
-- Hooks reference: https://code.claude.com/docs/en/hooks
-- Subagents: https://code.claude.com/docs/en/sub-agents
-- Settings: https://code.claude.com/docs/en/settings
-- Permissions: https://code.claude.com/docs/en/permissions
-- MCP: https://code.claude.com/docs/en/mcp
-- Skills: https://code.claude.com/docs/en/skills
+- Hooks reference: https://code.gemini.com/docs/en/hooks
+- Subagents: https://code.gemini.com/docs/en/sub-agents
+- Settings: https://code.gemini.com/docs/en/settings
+- Permissions: https://code.gemini.com/docs/en/permissions
+- MCP: https://code.gemini.com/docs/en/mcp
+- Skills: https://code.gemini.com/docs/en/skills
 
 If the user asks Claude Code itself "how do I configure X", the canonical built-in answer comes from the **`claude-code-guide`** subagent (Haiku, read-only), which Claude Code spawns automatically for documentation questions. Trust that subagent over memory.
 
 ## Detecting Claude Code
 
-Indicators: a `.claude/` directory exists, a `CLAUDE.md` is present, the user's prompt mentions Claude Code, or environment variables prefixed `CLAUDE_*` are set. Run `/agents` and `/hooks` to verify what's already configured. In any other surface, skip this entire file - the base skill works fine on plain markdown.
+Indicators: a `.gemini/` directory exists, a `GEMINI.md` is present, the user's prompt mentions Claude Code, or environment variables prefixed `CLAUDE_*` are set. Run `/agents` and `/hooks` to verify what's already configured. In any other surface, skip this entire file - the base skill works fine on plain markdown.
 
 ## What's available
 
@@ -24,17 +24,17 @@ Claude Code gives you four mechanisms to make the blueprint workspace automated:
 1. **Hooks** - shell commands, HTTP endpoints, **prompt-LLM** evaluations, or **agent** verifications that fire on lifecycle events.
 2. **Subagents** - isolated context windows with locked tool whitelists, optional inline MCP servers, optional persistent memory, optional worktree isolation, and their own hooks scoped to their lifecycle.
 3. **MCP servers** - capability surfaces, scoped per-subagent or globally.
-4. **Settings hierarchy** - `~/.claude/settings.json` (user), `.claude/settings.json` (project, checked in), `.claude/settings.local.json` (project, gitignored), plus managed policy.
+4. **Settings hierarchy** - `~/.gemini/settings.json` (user), `.gemini/settings.json` (project, checked in), `.gemini/settings.local.json` (project, gitignored), plus managed policy.
 
 Plus three things that show up in the blueprint workspace specifically:
 
-5. **`CLAUDE.md`** - persistent project rules. The blueprint's reading-order pointer goes here so every session starts oriented.
-6. **`.claude/rules/*.md`** - conditional rule files that load via the `InstructionsLoaded` event. This is where schema-as-code rules live (see `advanced-architecture.md`).
+5. **`GEMINI.md`** - persistent project rules. The blueprint's reading-order pointer goes here so every session starts oriented.
+6. **`.gemini/rules/*.md`** - conditional rule files that load via the `InstructionsLoaded` event. This is where schema-as-code rules live (see `advanced-architecture.md`).
 7. **`/agents` and `/hooks`** - read-only browsers for what's currently configured. Tell the user about these once.
 
 ## Always offer the menu before installing
 
-Surface the integrations as an explicit menu and show every file you'd create **before** writing any of them. `.claude/` files are executable configuration that gets committed and shipped to teammates - they belong in code review.
+Surface the integrations as an explicit menu and show every file you'd create **before** writing any of them. `.gemini/` files are executable configuration that gets committed and shipped to teammates - they belong in code review.
 
 Example menu:
 
@@ -51,7 +51,7 @@ Example menu:
 
 ## 1. The KB Curator subagent
 
-`.claude/agents/kb-curator.md`. Hooks live **in this file's frontmatter** - that's the modern pattern. Settings file changes are unnecessary.
+`.gemini/agents/kb-curator.md`. Hooks live **in this file's frontmatter** - that's the modern pattern. Settings file changes are unnecessary.
 
 ```markdown
 ---
@@ -76,7 +76,7 @@ hooks:
   Stop:
     - hooks:
         - type: command
-          command: "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/curator-finalize.sh"
+          command: "\"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/curator-finalize.sh"
 ---
 
 You are the KB Curator for a bleu workspace. Your job is to keep
@@ -110,7 +110,7 @@ Rebuild blueprint/index.md from the current state. One line per file:
 relative path, dash, one-sentence summary. Group by section.
 
 ## Memory
-Your memory directory is at .claude/agent-memory/kb-curator/. The MEMORY.md
+Your memory directory is at .gemini/agent-memory/kb-curator/. The MEMORY.md
 file there is auto-loaded into your prompt at startup (first 200 lines or
 25KB). Use it to accumulate institutional knowledge about this specific
 blueprint: naming conventions, recurring contradictions, the user's
@@ -127,10 +127,10 @@ preferences. Update it after each significant cycle.
 ### Why each frontmatter field
 
 - **`tools`** - explicit whitelist. Without this, the curator inherits *every* tool from the parent, including all MCP tools. The whitelist is the security boundary.
-- **`memory: project`** - Claude Code provides a persistent directory at `.claude/agent-memory/kb-curator/` that survives across conversations. The first 200 lines / 25 KB of `MEMORY.md` is auto-injected into the curator's prompt at startup, and Read/Write/Edit are auto-enabled so it can manage the file. This is a built-in feature - no hand-rolled "notes" pattern needed. Use `user` scope for cross-project learnings, `local` for gitignored personal notes.
+- **`memory: project`** - Claude Code provides a persistent directory at `.gemini/agent-memory/kb-curator/` that survives across conversations. The first 200 lines / 25 KB of `MEMORY.md` is auto-injected into the curator's prompt at startup, and Read/Write/Edit are auto-enabled so it can manage the file. This is a built-in feature - no hand-rolled "notes" pattern needed. Use `user` scope for cross-project learnings, `local` for gitignored personal notes.
 - **`skills: [bleu]`** - preloads the entire bleu skill content into the curator's context at startup. Subagents don't inherit skills from the parent, so this must be explicit. The curator now knows the workspace conventions without having to discover them.
 - **`hooks` in frontmatter** - scoped to the curator's lifecycle. When the curator finishes, the hooks are cleaned up. No pollution of project-wide settings. `Stop` hooks defined here are automatically converted to `SubagentStop` at runtime.
-- **`if: "Write(blueprint/**)"`** - uses [permission rule syntax](https://code.claude.com/docs/en/permissions) to filter on tool input declaratively. The hook only spawns when the write target matches the pattern. Cleaner than path-checking shell logic.
+- **`if: "Write(blueprint/**)"`** - uses [permission rule syntax](https://code.gemini.com/docs/en/permissions) to filter on tool input declaratively. The hook only spawns when the write target matches the pattern. Cleaner than path-checking shell logic.
 
 ### Alternative: `disallowedTools` instead of whitelist
 
@@ -158,7 +158,7 @@ Add `background: true` to the curator's frontmatter to make Claude always spawn 
 | `FileChanged` | Auto-compile when `blueprint/raw/` changes. Fires regardless of who wrote (Claude, MCP server, external script). The matcher is **basename only** - filter further inside the script. | Has access to `CLAUDE_ENV_FILE`. No decision control. |
 | `Stop` / `SubagentStop` | Git auto-commit. Both must be registered to catch both main-agent and subagent finishes. Check `stop_hook_active` to avoid loops. | Returns `additionalContext` to push messages back to the conversation. |
 | `PreCompact` | Back up the transcript before compaction so nothing is lost. | Matchers: `manual`, `auto`. |
-| `InstructionsLoaded` | Fires when `CLAUDE.md` or `.claude/rules/*.md` loads. Useful for telemetry / audit only - no decision control. | Used by schema-as-code (see `advanced-architecture.md`). |
+| `InstructionsLoaded` | Fires when `GEMINI.md` or `.gemini/rules/*.md` loads. Useful for telemetry / audit only - no decision control. | Used by schema-as-code (see `advanced-architecture.md`). |
 | `UserPromptSubmit` | Optionally inject the wiki health score into the user's first prompt of a session. | Plain stdout becomes context. |
 
 ### What I previously got wrong - `PreToolUse` decision format
@@ -191,7 +191,7 @@ I previously used `PostToolUse` matched on `Write|Edit`. That only fires when Cl
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/on-blueprint-file-changed.sh"
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/on-blueprint-file-changed.sh"
           }
         ]
       }
@@ -202,7 +202,7 @@ I previously used `PostToolUse` matched on `Write|Edit`. That only fires when Cl
 
 ```bash
 #!/usr/bin/env bash
-# .claude/hooks/on-blueprint-file-changed.sh
+# .gemini/hooks/on-blueprint-file-changed.sh
 INPUT=$(cat)
 FILE_PATH=$(echo "$INPUT" | jq -r '.file_path')
 EVENT=$(echo "$INPUT" | jq -r '.event')
@@ -235,7 +235,7 @@ If you only need to react to Claude's own edits and not external writes, `PostTo
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/load-blueprint-context.sh"
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/load-blueprint-context.sh"
           }
         ]
       }
@@ -246,7 +246,7 @@ If you only need to react to Claude's own edits and not external writes, `PostTo
 
 ```bash
 #!/usr/bin/env bash
-# .claude/hooks/load-blueprint-context.sh
+# .gemini/hooks/load-blueprint-context.sh
 PROJECT="$CLAUDE_PROJECT_DIR"
 
 if [ -f "$PROJECT/blueprint/index.md" ]; then
@@ -285,7 +285,7 @@ exit 0
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/git-autocommit.sh",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/git-autocommit.sh",
             "async": true
           }
         ]
@@ -296,7 +296,7 @@ exit 0
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/git-autocommit.sh",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.gemini/hooks/git-autocommit.sh",
             "async": true
           }
         ]
@@ -381,7 +381,7 @@ The curator is read/write within `blueprint/`. Don't give it:
 
 If the user installs the full agent team from `advanced-architecture.md` (Researcher / Curator / Linter / Auditor), constrain the main agent so it can only spawn those four:
 
-In `.claude/settings.json`:
+In `.gemini/settings.json`:
 
 ```json
 {
@@ -406,17 +406,17 @@ tools: Agent(researcher, kb-curator, kb-linter), Read, Write, Edit, WebFetch, We
 
 Two hook types I previously didn't surface - both supported on `PermissionRequest`, `PostToolUse`, `PostToolUseFailure`, `PreToolUse`, `Stop`, `SubagentStop`, `TaskCompleted`, `TaskCreated`, and `UserPromptSubmit`:
 
-- **Prompt hooks** (`type: "prompt"`) - instead of running a shell command, send the hook input + a prompt to a Claude model (Haiku by default) for a structured yes/no decision. Cheap, no script to maintain. Example: a prompt hook on `Stop` of the curator that reads the changed plan files and asks Haiku "do these files violate any rule in `.claude/rules/blueprint-schema.md`?"
+- **Prompt hooks** (`type: "prompt"`) - instead of running a shell command, send the hook input + a prompt to a Claude model (Haiku by default) for a structured yes/no decision. Cheap, no script to maintain. Example: a prompt hook on `Stop` of the curator that reads the changed plan files and asks Haiku "do these files violate any rule in `.gemini/rules/blueprint-schema.md`?"
 - **Agent hooks** (`type: "agent"`) - spawn a verification subagent with tool access (Read/Grep/Glob, plus Write scoped to `.reflection/` when it needs to record a verdict) to inspect the actual files before deciding. More expensive but grounded. This is what the **Auditor** from `advanced-architecture.md` should be: an agent hook on `SubagentStop` of the kb-linter that spawns the auditor to validate the linter's proposals.
 
 Where these matter for the blueprint workspace:
 
 - **The Auditor pattern from `advanced-architecture.md` should be an `agent` hook**, not a separately invoked subagent. When the Linter finishes, the agent hook fires, spawns the Auditor, the Auditor reads the proposals and returns approve/escalate/reject. No file-passing dance needed.
-- **Schema rule enforcement** can be a `prompt` hook on `SubagentStop` of the curator: "Read `.claude/rules/blueprint-schema.md`, check the changed plan files against the rules, return JSON with violations."
+- **Schema rule enforcement** can be a `prompt` hook on `SubagentStop` of the curator: "Read `.gemini/rules/blueprint-schema.md`, check the changed plan files against the rules, return JSON with violations."
 
 Not supported on: `SessionStart`, `FileChanged`, `PreCompact`, `InstructionsLoaded`, `Notification`, etc. (those are command-only or have no decision control at all).
 
-## 8. CLAUDE.md, `.claude/rules/`, and `InstructionsLoaded` - what the research actually shows
+## 8. GEMINI.md, `.gemini/rules/`, and `InstructionsLoaded` - what the research actually shows
 
 **This section reverses the previous version's advice.** A February 2026 ETH Zurich paper (Gloaguen et al., "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?", https://arxiv.org/abs/2602.11988) ran the first rigorous empirical test on repository-level context files. They built **AGENTbench** (138 real-world Python tasks from 12 less-popular repositories) and tested four agents (Claude Code with Sonnet 4.5, Codex with GPT-5.2 and GPT-5.1 Mini, Qwen Code) across three conditions: no context file, LLM-generated, human-written.
 
@@ -430,7 +430,7 @@ The findings, summarized:
 
 LLM-generated context files (the kind you get from `/init`) **actively hurt** task success. Human-written files give a marginal benefit but still cost 14-22% more reasoning tokens for the same outcome. **Stronger models do not produce better context files.** Context files do **not** help agents find relevant files faster - agents took roughly the same number of steps to reach target files regardless of whether a context file was present. GPT-5.1 Mini was caught spending extra steps re-reading context files already loaded into its context window - pure waste.
 
-Why does it backfire? The agent follows the instructions in the file faithfully (when AGENTS.md says `use uv`, agents use `uv` 1.6× per task instance vs <0.01× without). But that faithful following triggers broader exploration, deeper testing, more reasoning, without reliably improving the outcome. Compounding the problem, Anthropic's own implementation injects this with every CLAUDE.md load:
+Why does it backfire? The agent follows the instructions in the file faithfully (when AGENTS.md says `use uv`, agents use `uv` 1.6× per task instance vs <0.01× without). But that faithful following triggers broader exploration, deeper testing, more reasoning, without reliably improving the outcome. Compounding the problem, Anthropic's own implementation injects this with every GEMINI.md load:
 
 ```
 <system-reminder>
@@ -439,21 +439,21 @@ not respond to this context unless it is highly relevant to your task.
 </system-reminder>
 ```
 
-Translation: Anthropic is *telling Claude to ignore CLAUDE.md if it's not directly relevant*. The more bloated the file, the more likely it gets dropped entirely.
+Translation: Anthropic is *telling Claude to ignore GEMINI.md if it's not directly relevant*. The more bloated the file, the more likely it gets dropped entirely.
 
 ### The corrected recommendation
 
 For the bleu workspace specifically:
 
-1. **Start with no `CLAUDE.md`.** Let Claude work without one. It will read `blueprint/README.md` and `blueprint/index.md` on its own once you point it there in your first prompt. For most tasks, that's enough.
-2. **Add rules iteratively, only from observed friction.** Treat `CLAUDE.md` like `.gitignore`: it grows when you discover a *recurring* failure (not a one-off mistake), and it gets pruned when entries become irrelevant. A pattern is: "Claude keeps writing to `blueprint/plan/` directly instead of going through the curator." A one-off is: "Claude got the indentation wrong once."
-3. **Write for the gap, not the overview.** Encode what the repository doesn't already explain. Tool choices that diverge from defaults (`use uv, not pip`), non-obvious test invocations (`pnpm test:integration --run`), constraints not apparent from the code. Skip everything inferable from `package.json`, `pyproject.toml`, `README.md`, existing config files. **A `CLAUDE.md` that restates the README is probably hurting you.**
+1. **Start with no `GEMINI.md`.** Let Claude work without one. It will read `blueprint/README.md` and `blueprint/index.md` on its own once you point it there in your first prompt. For most tasks, that's enough.
+2. **Add rules iteratively, only from observed friction.** Treat `GEMINI.md` like `.gitignore`: it grows when you discover a *recurring* failure (not a one-off mistake), and it gets pruned when entries become irrelevant. A pattern is: "Claude keeps writing to `blueprint/plan/` directly instead of going through the curator." A one-off is: "Claude got the indentation wrong once."
+3. **Write for the gap, not the overview.** Encode what the repository doesn't already explain. Tool choices that diverge from defaults (`use uv, not pip`), non-obvious test invocations (`pnpm test:integration --run`), constraints not apparent from the code. Skip everything inferable from `package.json`, `pyproject.toml`, `README.md`, existing config files. **A `GEMINI.md` that restates the README is probably hurting you.**
 4. **Target under 150 lines** for the file as a whole. Frontier thinking models follow ~150-200 instructions reliably, and Claude Code's own system prompt has ~50, so you have ~100-150 instructions to spend wisely.
-5. **Use hooks instead of `CLAUDE.md` for things that must happen every time.** Hooks are deterministic; `CLAUDE.md` instructions are advisory. From Anthropic's own best-practices doc: "Use hooks for actions that must happen every time with zero exceptions. Hooks run scripts automatically. Unlike CLAUDE.md instructions which are advisory, hooks are deterministic and guarantee the action happens."
+5. **Use hooks instead of `GEMINI.md` for things that must happen every time.** Hooks are deterministic; `GEMINI.md` instructions are advisory. From Anthropic's own best-practices doc: "Use hooks for actions that must happen every time with zero exceptions. Hooks run scripts automatically. Unlike GEMINI.md instructions which are advisory, hooks are deterministic and guarantee the action happens."
 6. **If `/init` runs, delete most of what it generates.** The default file includes filler ("this is a TypeScript project") that competes for attention. Edit down from a draft instead of starting from a blank file - but be aggressive about deletion.
-7. **The hidden value isn't the tokens - it's the articulation.** Widely cited developer comment: "The actual token-level context CLAUDE.md provides matters less than the fact that writing it forces you to articulate things about your codebase that were previously just in your head." For the bleu, the same logic applies to `.claude/rules/blueprint-schema.md` - writing the rules down forces you to make implicit conventions explicit. Future Claudes benefit; future humans benefit too.
+7. **The hidden value isn't the tokens - it's the articulation.** Widely cited developer comment: "The actual token-level context GEMINI.md provides matters less than the fact that writing it forces you to articulate things about your codebase that were previously just in your head." For the bleu, the same logic applies to `.gemini/rules/blueprint-schema.md` - writing the rules down forces you to make implicit conventions explicit. Future Claudes benefit; future humans benefit too.
 
-### A research-informed `CLAUDE.md` for a project using this skill
+### A research-informed `GEMINI.md` for a project using this skill
 
 ```markdown
 # Project: <name>
@@ -474,9 +474,9 @@ owns it; do not modify files there directly. To ingest new info, write to
 
 That's it. ~15 lines. Everything else (architecture, test framework, language version, build commands) is inferable from the project's actual files.
 
-### `.claude/rules/*.md` - a different mechanism
+### `.gemini/rules/*.md` - a different mechanism
 
-`.claude/rules/*.md` is related but different from `CLAUDE.md`: rule files that load **conditionally** via the `InstructionsLoaded` event when Claude accesses certain paths. This is the natural home for **schema-as-code** rules from `advanced-architecture.md`. Rules with `paths:` frontmatter only load when relevant - they don't compete for attention on every session like `CLAUDE.md` does.
+`.gemini/rules/*.md` is related but different from `GEMINI.md`: rule files that load **conditionally** via the `InstructionsLoaded` event when Claude accesses certain paths. This is the natural home for **schema-as-code** rules from `advanced-architecture.md`. Rules with `paths:` frontmatter only load when relevant - they don't compete for attention on every session like `GEMINI.md` does.
 
 ```markdown
 ---
@@ -494,14 +494,14 @@ Every action point file at action-points/AP-*.md MUST have:
 
 When Claude accesses any file matching `paths`, this rule file loads into context. The Linter can then enforce these rules - they're already in scope. The `InstructionsLoaded` event fires when this happens; you can register a hook on it for telemetry (no decision control - it's observability only).
 
-The advantage of `.claude/rules/` over `CLAUDE.md` for blueprint-specific rules is that the rules are scoped to when they're relevant. They don't pay the always-loaded tax that `CLAUDE.md` does.
+The advantage of `.gemini/rules/` over `GEMINI.md` for blueprint-specific rules is that the rules are scoped to when they're relevant. They don't pay the always-loaded tax that `GEMINI.md` does.
 
 ### Symlink pattern for multi-tool teams
 
 If the user works in a project that ships with both Claude Code and Codex/Cursor/Copilot users, the cross-tool standard is `AGENTS.md` (donated to the Linux Foundation's Agentic AI Foundation in December 2025). A symlink keeps things in sync:
 
 ```bash
-ln -s AGENTS.md CLAUDE.md
+ln -s AGENTS.md GEMINI.md
 ```
 
 Both files are now the same file. No drift between formats.
@@ -579,10 +579,10 @@ When moving from Sonnet 4.5 → Opus 4.6, Rajasekaran specifically dropped conte
 
 - The user is on Claude.ai or another non-Claude-Code surface.
 - The blueprint is throwaway and won't be revisited.
-- The repo is shared with people who haven't agreed to `.claude/` config landing in their tree.
+- The repo is shared with people who haven't agreed to `.gemini/` config landing in their tree.
 - The user is on a Claude Code version older than the features used (the docs flag specific version requirements; the `defer` permissionDecision needs ≥ 2.1.89, the `Agent` rename of `Task` happened at 2.1.63, etc.). When in doubt, generate without the version-gated feature and tell the user what was skipped and why.
 - The user explicitly says "just give me the files, no automation."
-- The user wants this packaged as a Claude Code **plugin** - plugin subagents do **not** support `hooks`, `mcpServers`, or `permissionMode` frontmatter fields. If the user needs those, the agent file must live in `.claude/agents/` or `~/.claude/agents/`, not inside a plugin.
+- The user wants this packaged as a Claude Code **plugin** - plugin subagents do **not** support `hooks`, `mcpServers`, or `permissionMode` frontmatter fields. If the user needs those, the agent file must live in `.gemini/agents/` or `~/.gemini/agents/`, not inside a plugin.
 
 Fall back to the file-only workflow. The skill is fully usable without any of this.
 

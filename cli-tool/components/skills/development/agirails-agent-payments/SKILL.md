@@ -709,9 +709,9 @@ AGIRAILS works with any AI runtime:
 ### Claude Code
 
 ```bash
-mkdir -p ~/.claude/skills/agirails
+mkdir -p ~/.gemini/skills/agirails
 curl -sL https://market.agirails.io/skills/claude-code/skill.md \
-  -o ~/.claude/skills/agirails/skill.md
+  -o ~/.gemini/skills/agirails/skill.md
 ```
 
 Then use: `/agirails init`, `/agirails status`, `/agirails deliver`

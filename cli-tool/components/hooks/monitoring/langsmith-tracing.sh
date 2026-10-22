@@ -7,7 +7,7 @@
 set -e
 
 # Config (needed early for logging)
-LOG_FILE="$HOME/.claude/state/hook.log"
+LOG_FILE="$HOME/.gemini/state/hook.log"
 DEBUG="$(echo "$CC_LANGSMITH_DEBUG" | tr '[:upper:]' '[:lower:]')"
 
 # Logging functions
@@ -44,7 +44,7 @@ done
 API_KEY="${CC_LANGSMITH_API_KEY:-$LANGSMITH_API_KEY}"
 PROJECT="${CC_LANGSMITH_PROJECT:-claude-code}"
 API_BASE="https://api.smith.langchain.com"
-STATE_FILE="${STATE_FILE:-$HOME/.claude/state/langsmith_state.json}"
+STATE_FILE="${STATE_FILE:-$HOME/.gemini/state/langsmith_state.json}"
 
 # Global variables
 CURRENT_TURN_ID=""  # Track current turn run for cleanup on exit

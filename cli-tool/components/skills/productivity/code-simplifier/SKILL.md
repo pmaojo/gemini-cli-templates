@@ -22,7 +22,7 @@ Never change what the code does - only how it does it. All original features, ou
 
 ### 2. Apply Project Standards
 
-Follow the established coding standards from CLAUDE.md including:
+Follow the established coding standards from GEMINI.md including:
 
 - Use ES modules with proper import sorting and extensions
 - Prefer `function` keyword over arrow functions

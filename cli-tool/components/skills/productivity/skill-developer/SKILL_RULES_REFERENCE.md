@@ -1,6 +1,6 @@
 # skill-rules.json - Complete Reference
 
-Complete schema and configuration reference for `.claude/skills/skill-rules.json`.
+Complete schema and configuration reference for `.gemini/skills/skill-rules.json`.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Complete schema and configuration reference for `.claude/skills/skill-rules.json
 
 ## File Location
 
-**Path:** `.claude/skills/skill-rules.json`
+**Path:** `.gemini/skills/skill-rules.json`
 
 This JSON file defines all skills and their trigger conditions for the auto-activation system.
 
@@ -267,7 +267,7 @@ Complete example of a suggestion-based domain skill:
 ### Check JSON Syntax
 
 ```bash
-cat .claude/skills/skill-rules.json | jq .
+cat .gemini/skills/skill-rules.json | jq .
 ```
 
 If valid, jq will pretty-print the JSON. If invalid, it will show the error.

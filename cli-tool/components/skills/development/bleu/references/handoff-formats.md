@@ -26,7 +26,7 @@ Each phase requires explicit human approval before proceeding. The bleu maps ont
 
 | Spec Kit phase | bleu equivalent | Output file |
 |---|---|---|
-| **Constitution** | (encoded in `.claude/rules/blueprint-schema.md` if using Claude Code, otherwise mentioned in Phase 0 intake) | `.claude/rules/blueprint-schema.md` or similar |
+| **Constitution** | (encoded in `.gemini/rules/blueprint-schema.md` if using Claude Code, otherwise mentioned in Phase 0 intake) | `.gemini/rules/blueprint-schema.md` or similar |
 | **Specify** | Phase 0 intake + Phase 2 vision/architecture | `blueprint/raw/intake.md`, `blueprint/plan/00-vision.md` |
 | **Clarify** | Phase 0 questions + Phase 6 lint round-trip | `blueprint/plan/07-risks-open-questions.md` |
 | **Plan** | Phase 2 architecture + Phase 3 components + Phase 4 data/integrations | `blueprint/plan/01-architecture.md` through `06-non-functional.md` |
@@ -264,13 +264,13 @@ The blueprint produces three Spec Kit-compatible documents from existing files. 
 This blueprint maps directly onto GitHub Spec Kit's six-phase workflow.
 
 ## Constitution
-Source: `@.claude/rules/blueprint-schema.md`
-Or, if not using `.claude/rules/`: `@blueprint/plan/00-vision.md` (the
+Source: `@.gemini/rules/blueprint-schema.md`
+Or, if not using `.gemini/rules/`: `@blueprint/plan/00-vision.md` (the
 "non-goals" and "success criteria" sections function as constitution
 principles).
 
-To use with Spec Kit (if using `.claude/rules/`):
-  cp .claude/rules/blueprint-schema.md .specify/memory/constitution.md
+To use with Spec Kit (if using `.gemini/rules/`):
+  cp .gemini/rules/blueprint-schema.md .specify/memory/constitution.md
 Otherwise, seed it from the vision file:
   cp blueprint/plan/00-vision.md .specify/memory/constitution.md
 
@@ -329,8 +329,8 @@ This is the leanest handoff format because Spec Kit's slash commands do most of 
 
 Before asking the user, check what's actually installed if you can:
 
-- **GSD:** look for `.gsd/`, a `gsd.config.*`, or evidence in `CLAUDE.md`. If slash commands like `/gsd:quick` show up in the available command list, it's installed.
-- **Superpowers:** look for `.superpowers/`, evidence in `CLAUDE.md`, or `/superpowers:*` slash commands.
+- **GSD:** look for `.gsd/`, a `gsd.config.*`, or evidence in `GEMINI.md`. If slash commands like `/gsd:quick` show up in the available command list, it's installed.
+- **Superpowers:** look for `.superpowers/`, evidence in `GEMINI.md`, or `/superpowers:*` slash commands.
 
 If exactly one is installed, default to it but still confirm with the user. If both are installed, ask. If neither, default to raw Claude Code.
 

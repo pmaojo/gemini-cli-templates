@@ -6,7 +6,7 @@ hooks:
     - matcher: "Bash"
       hooks:
         - type: command
-          command: "echo \"[$(date)] Git Commit Helper: Analyzed git diff for commit message\" >> ~/.claude/git-commit-helper.log"
+          command: "echo \"[$(date)] Git Commit Helper: Analyzed git diff for commit message\" >> ~/.gemini/git-commit-helper.log"
 ---
 
 # Git Commit Helper

@@ -5,7 +5,7 @@ description: Search, analyze, and manage Claude Code session history. Use when t
 
 # Claude Code Sessions
 
-Session intelligence plugin for Claude Code. Reads the JSONL session files that Claude Code writes to `~/.claude/projects/` and makes them searchable and analyzable.
+Session intelligence plugin for Claude Code. Reads the JSONL session files that Claude Code writes to `~/.gemini/projects/` and makes them searchable and analyzable.
 
 ## What It Does
 

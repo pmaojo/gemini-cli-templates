@@ -20,14 +20,14 @@ from scripts.utils import parse_skill_md
 
 
 def find_project_root() -> Path:
-    """Find the project root by walking up from cwd looking for .claude/.
+    """Find the project root by walking up from cwd looking for .gemini/.
 
     Mimics how Claude Code discovers its project root, so the command file
     we create ends up where claude -p will look for it.
     """
     current = Path.cwd()
     for parent in [current, *current.parents]:
-        if (parent / ".claude").is_dir():
+        if (parent / ".gemini").is_dir():
             return parent
     return current
 
@@ -42,7 +42,7 @@ def run_single_query(
 ) -> bool:
     """Run a single query and return whether the skill was triggered.
 
-    Creates a command file in .claude/commands/ so it appears in Claude's
+    Creates a command file in .gemini/commands/ so it appears in Claude's
     available_skills list, then runs `claude -p` with the raw query.
     Uses --include-partial-messages to detect triggering early from
     stream events (content_block_start) rather than waiting for the
@@ -50,7 +50,7 @@ def run_single_query(
     """
     unique_id = uuid.uuid4().hex[:8]
     clean_name = f"{skill_name}-skill-{unique_id}"
-    project_commands_dir = Path(project_root) / ".claude" / "commands"
+    project_commands_dir = Path(project_root) / ".gemini" / "commands"
     command_file = project_commands_dir / f"{clean_name}.md"
 
     try:

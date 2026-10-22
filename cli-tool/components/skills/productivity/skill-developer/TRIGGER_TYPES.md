@@ -283,12 +283,12 @@ useState|useEffect              # React hooks
 **Test keyword/intent triggers:**
 ```bash
 echo '{"session_id":"test","prompt":"your test prompt"}' | \
-  npx tsx .claude/hooks/skill-activation-prompt.ts
+  npx tsx .gemini/hooks/skill-activation-prompt.ts
 ```
 
 **Test file path/content triggers:**
 ```bash
-cat <<'EOF' | npx tsx .claude/hooks/skill-verification-guard.ts
+cat <<'EOF' | npx tsx .gemini/hooks/skill-verification-guard.ts
 {
   "session_id": "test",
   "tool_name": "Edit",

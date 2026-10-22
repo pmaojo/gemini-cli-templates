@@ -19,7 +19,7 @@ Technical deep dive into how the UserPromptSubmit and PreToolUse hooks work.
 ```
 User submits prompt
     ↓
-.claude/settings.json registers hook
+.gemini/settings.json registers hook
     ↓
 skill-activation-prompt.sh executes
     ↓
@@ -86,7 +86,7 @@ Claude sees this output as additional context before processing the user's promp
 ```
 Claude calls Edit/Write tool
     ↓
-.claude/settings.json registers hook (matcher: Edit|Write)
+.gemini/settings.json registers hook (matcher: Edit|Write)
     ↓
 skill-verification-guard.sh executes
     ↓
@@ -216,7 +216,7 @@ Prevent repeated nagging in the same session - once Claude uses a skill, don't b
 
 ### State File Location
 
-`.claude/hooks/state/skills-used-{session_id}.json`
+`.gemini/hooks/state/skills-used-{session_id}.json`
 
 ### State File Structure
 

@@ -55,7 +55,7 @@ Invoke this skill when you need to:
 
 ## What Are Slash Commands?
 
-Slash commands are markdown files stored in `.claude/commands/` (project-level) or `~/.claude/commands/` (global/user-level) that get expanded into prompts when invoked.
+Slash commands are markdown files stored in `.gemini/commands/` (project-level) or `~/.gemini/commands/` (global/user-level) that get expanded into prompts when invoked.
 
 **Structure**:
 ```markdown
@@ -75,8 +75,8 @@ argument-hint: <placeholder> (optional, if command takes arguments)
 ```
 
 **Storage Locations**:
-- **Project-level**: `.claude/commands/my-command.md` (only available in this project)
-- **Global/User-level**: `~/.claude/commands/my-command.md` (available everywhere)
+- **Project-level**: `.gemini/commands/my-command.md` (only available in this project)
+- **Global/User-level**: `~/.gemini/commands/my-command.md` (available everywhere)
 
 ---
 
@@ -132,8 +132,8 @@ The Command Creator follows a structured 6-step workflow:
 
 **Auto-detection Logic**:
 1. Check if current directory is inside a git repository
-2. Default to project-level (`.claude/commands/`) if in git repo
-3. Default to global (`~/.claude/commands/`) if not in git repo
+2. Default to project-level (`.gemini/commands/`) if in git repo
+3. Default to global (`~/.gemini/commands/`) if not in git repo
 4. Allow user override for explicit location preference
 
 **User is informed** of the chosen location before proceeding.
@@ -273,7 +273,7 @@ Create agent-executable instructions using:
 
 ## Location Strategy
 
-### Project-Level Commands (`.claude/commands/`)
+### Project-Level Commands (`.gemini/commands/`)
 
 **When to Use**:
 - Command is specific to this project's workflow
@@ -291,7 +291,7 @@ Create agent-executable instructions using:
 - Shared across team
 - Project-specific customization
 
-### Global Commands (`~/.claude/commands/`)
+### Global Commands (`~/.gemini/commands/`)
 
 **When to Use**:
 - Command works across any project
@@ -376,7 +376,7 @@ This skill includes three comprehensive reference files in the `references/` dir
    - Arguments: None
    - Steps: Run tests → Parse failures → Fix issues → Repeat
 4. Generates command with Bash tool for pytest
-5. Creates `.claude/commands/ensure-ci.md`
+5. Creates `.gemini/commands/ensure-ci.md`
 6. User invokes: `/ensure-ci`
 
 ### Example 2: Create Global Code Review Command
@@ -392,7 +392,7 @@ This skill includes three comprehensive reference files in the `references/` dir
    - Arguments: `<files>` (required)
    - Steps: Run codex review → Present results
 4. Generates command with codex skill invocation
-5. Creates `~/.claude/commands/codex-review.md`
+5. Creates `~/.gemini/commands/codex-review.md`
 6. User invokes: `/codex-review src/app.py src/utils.py`
 
 ### Example 3: Create PR Submission Workflow
@@ -408,7 +408,7 @@ This skill includes three comprehensive reference files in the `references/` dir
    - Arguments: `[base-branch]` (optional, defaults to main)
    - Steps: Analyze commits → Create PRs → Report results
 4. Generates command with git analysis and gh CLI
-5. Creates `.claude/commands/submit-stack.md`
+5. Creates `.gemini/commands/submit-stack.md`
 6. User invokes: `/submit-stack` or `/submit-stack develop`
 
 ---
